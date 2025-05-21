@@ -1,0 +1,491 @@
+
+
+<td>
+	<table border="1" cellspacing="0" cellpadding="0" width="100%"
+		style="border-collapse: collapse;">
+		<tbody>
+			<tr>
+				<th colspan="3"
+					style="background-color: #003770; color: #fff; font-size: 9px; font-family: arial; padding: 2px 2px"
+					align="left">A. Personal Details</th>
+			</tr>
+			<tr>
+				<td width="30%"></td>
+				<td width="40%"
+					style="font-weight: bold; padding: 2px 2px; font-size: 9px; font-family: arial;">Proposer</td>
+				<td width="40%"
+					style="font-weight: bold; font-size: 9px; font-family: arial; padding: 2px 2px;">Life
+					to be Insured
+					<span style="font-weight: normal;">(if other
+						than proposer)</span>
+				</td>
+			</tr>
+			<tr>
+				<td width="30%"
+					style="font-weight: bold; padding: 2px 2px; font-size: 9px; font-family: arial;">1.
+					Title</td>
+				<td width="40%"
+					style="font-size: 9px; font-family: arial; padding: 2px 2px; text-transform: uppercase;"
+					th:text=${title}></td>
+				<td width="40%"
+					style="font-size: 9px; font-family: arial; padding: 2px 2px; text-transform: uppercase;"
+					th:text=${insuredtitle}></td>
+			</tr>
+			<tr>
+				<td width="30%"
+					style="font-weight: bold; font-size: 9px; font-family: arial;">
+					<table border="0" cellspacing="0" cellpadding="0" width="100%"
+						style="border-collapse: collapse;">
+						<tbody>
+							<tr>
+								<td width="60%"
+									style="font-weight: bold; padding: 2px 2px; font-size: 9px; border-right-color: #808080; border-right-style: solid; border-right-width: 1px; font-family: arial;">2.
+									Name</td>
+								<td width="40%"
+									style="font-weight: bold; font-size: 9px; font-family: arial;">
+									<table width="100%" cellspacing="0" border="0" cellpadding="5"
+										style="border-collapse: collapse;">
+										<tbody>
+											<tr>
+												<td height="25"
+													style="font-weight: bold; font-size: 9px; border-bottom-color: #808080; border-bottom-style: solid; border-bottom-width: 1px; font-family: arial;">First</td>
+											</tr>
+											<tr>
+												<td height="25"
+													style="font-weight: bold; font-size: 9px; border-bottom-color: #808080; border-bottom-style: solid; border-bottom-width: 1px; font-family: arial;">Middle
+												</td>
+											</tr>
+											<tr>
+												<td height="25"
+													style="font-weight: bold; font-size: 9px; border-bottom-color: #808080; border-bottom-style: solid; border-bottom-width: 1px; font-family: arial;">Last</td>
+											</tr>
+										</tbody>
+									</table>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</td>
+				<td width="40%" style="font-size: 9px; font-family: arial;">
+					<table width="100%" cellspacing="0" cellpadding="5" border="0"
+						style="border-collapse: collapse; vertical-align: top; text-transform: uppercase;">
+						<tbody>
+							<tr>
+								<td height="25"
+									style="font-size: 9px; border-bottom-color: #808080; border-bottom-style: solid; border-bottom-width: 1px; font-family: arial;"
+									th:text=${firstName}></td>
+							</tr>
+							<tr>
+								<td height="25"
+									style="font-size: 9px; border-bottom-color: #808080; border-bottom-style: solid; border-bottom-width: 1px; font-family: arial;"
+									th:text=${middleName}></td>
+							</tr>
+							<tr>
+								<td height="25" th:text=${lastName}></td>
+							</tr>
+						</tbody>
+					</table>
+				</td>
+				<td width="40%" style="font-size: 9px; font-family: arial;">
+					<table width="100%" cellspacing="0" cellpadding="5" border="0"
+						style="border-collapse: collapse; vertical-align: top; text-transform: uppercase;">
+						<tbody>
+							<tr>
+								<td height="25"
+									style="font-size: 9px; border-bottom-color: #808080; border-bottom-style: solid; border-bottom-width: 1px; font-family: arial;"
+									th:text=${insuredfirstName}></td>
+							</tr>
+							<tr>
+								<td height="25"
+									style="font-size: 9px; border-bottom-color: #808080; border-bottom-style: solid; border-bottom-width: 1px; font-family: arial;"
+									th:text=${insuredmiddleName}></td>
+							</tr>
+							<tr>
+								<td height="25" th:text=${insuredlastName}></td>
+							</tr>
+						</tbody>
+					</table>
+				</td>
+			</tr>
+			<tr>
+				<td width="20%"
+					style="font-weight: bold; font-size: 9px; font-family: arial;">
+					<table border="0" cellspacing="0" cellpadding="0" width="100%"
+						style="border-collapse: collapse;">
+						<tbody>
+							<tr>
+								<td width="60%"
+									style="font-weight: bold; padding: 2px 2px; font-size: 9px; border-right-color: #808080; border-right-style: solid; border-right-width: 1px; font-family: arial;">3.
+									Father's / Husband's Name</td>
+								<td width="40%"
+									style="font-weight: bold; font-size: 9px; font-family: arial;">
+									<table width="100%" cellspacing="0" border="0" cellpadding="5"
+										style="border-collapse: collapse;">
+										<tbody>
+											<tr>
+												<td height="25"
+													style="font-weight: bold; font-size: 9px; border-bottom-color: #808080; border-bottom-style: solid; border-bottom-width: 1px; font-family: arial;">First</td>
+											</tr>
+											<tr>
+												<td height="25"
+													style="font-weight: bold; font-size: 9px; border-bottom-color: #808080; border-bottom-style: solid; border-bottom-width: 1px; font-family: arial;">Last</td>
+											</tr>
+										</tbody>
+									</table>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</td>
+				<td width="40%" style="font-size: 9px; font-family: arial;">
+					<table width="100%" cellspacing="0" cellpadding="5" border="0"
+						style="border-collapse: collapse; vertical-align: top; text-transform: uppercase;">
+						<tbody>
+							<tr>
+								<td height="25"
+									style="font-size: 9px; border-bottom-color: #808080; border-bottom-style: solid; border-bottom-width: 1px; font-family: arial;"
+									th:text=${fatherFirstName}></td>
+							</tr>
+							<tr>
+								<td height="25" style="font-size: 9px; font-family: arial;"
+									th:text=${fatherLastName}></td>
+							</tr>
+						</tbody>
+					</table>
+				</td>
+				<td width="40%" style="font-size: 9px; font-family: arial;">
+					<table width="100%" cellspacing="0" cellpadding="5" border="0"
+						style="border-collapse: collapse; vertical-align: top; text-transform: uppercase;">
+						<tbody>
+							<tr>
+								<td height="25"
+									style="font-size: 9px; border-bottom-color: #808080; border-bottom-style: solid; border-bottom-width: 1px; font-family: arial;"
+									th:text=${insuredfatherFirstName}></td>
+							</tr>
+							<tr>
+								<td height="25" style="font-size: 9px; font-family: arial;"
+									th:text=${insuredfatherLastName}></td>
+							</tr>
+						</tbody>
+					</table>
+				</td>
+			</tr>
+			<tr>
+				<td width="30%"
+					style="font-weight: bold; padding: 2px 2px; font-size: 9px; font-family: arial;">4.
+					Gender</td>
+				<td width="40%"
+					style="font-size: 9px; font-family: arial; padding: 2px 2px; text-transform: uppercase"
+					th:text=${gender}></td>
+				<td width="40%"
+					style="font-size: 9px; font-family: arial; padding: 2px 2px; text-transform: uppercase;"
+					th:text=${insuredgender}></td>
+			</tr>
+			<tr>
+				<td width="30%"
+					style="font-weight: bold; padding: 2px 2px; font-size: 9px; font-family: arial;">5.
+					Date of Birth</td>
+				<td width="40%"
+					style="font-size: 9px; font-family: arial; padding: 2px 2px; text-transform: uppercase;"
+					th:text=${dob}></td>
+				<td width="40%"
+					style="font-size: 9px; font-family: arial; padding: 2px 2px; text-transform: uppercase;"
+					th:text=${insureddob}></td>
+			</tr>
+			<tr>
+				<td width="30%"
+					style="font-weight: bold; padding: 2px 2px; font-size: 9px; font-family: arial;">6.
+					Relationship with proposer</td>
+				<td width="40%"
+					style="font-size: 9px; font-family: arial; padding: 2px 2px; text-transform: uppercase;"
+					th:text=${relationShipWithProposer}></td>
+				<td width="40%"
+					style="font-size: 9px; font-family: arial; padding: 2px 2px; text-transform: uppercase;"
+					th:text=${insuredrelationShipWithProposer}></td>
+			</tr>
+			<tr>
+				<td width="30%"
+					style="font-weight: bold; padding: 2px 2px; font-size: 9px; font-family: arial;">7.
+					Nationality</td>
+				<td width="40%"
+					style="font-size: 9px; font-family: arial; padding: 2px 2px; text-transform: uppercase;"
+					th:text=${nationality}></td>
+				<td width="40%"
+					style="font-size: 9px; font-family: arial; padding: 2px 2px; text-transform: uppercase;"
+					th:text=${insurednationality}></td>
+			</tr>
+			<tr>
+				<td width="30%"
+					style="font-weight: bold; padding: 2px 2px; font-size: 9px; font-family: arial;">8.
+					Education Qualification</td>
+				<td width="40%"
+					style="font-size: 9px; font-family: arial; padding: 2px 2px; text-transform: uppercase;"
+					th:text=${education}></td>
+				<td width="40%"
+					style="font-size: 9px; font-family: arial; padding: 2px 2px; text-transform: uppercase;"
+					th:text=${insurededucation}></td>
+			</tr>
+			<tr>
+				<td width="30%"
+					style="font-weight: bold; padding: 2px 2px; font-size: 9px; font-family: arial;">9.
+					Occupation</td>
+				<td width="40%"
+					style="font-size: 9px; font-family: arial; padding: 2px 2px; text-transform: uppercase;"
+					th:text=${occupation}></td>
+				<td width="40%"
+					style="font-size: 9px; font-family: arial; padding: 2px 2px; text-transform: uppercase;"
+					th:text=${insuredoccupation}></td>
+			</tr>
+			<tr>
+				<td width="30%"
+					style="font-weight: bold; padding: 2px 2px; font-size: 9px; font-family: arial;">10.
+					Annual Income(Rs.)</td>
+				<td width="40%"
+					style="font-size: 9px; font-family: arial; padding: 2px 2px; text-transform: uppercase;"
+					th:text=${annualIncome}></td>
+				<td width="40%"
+					style="font-size: 9px; font-family: arial; padding: 2px 2px; text-transform: uppercase;"
+					th:text=${insuredannualIncome}></td>
+			</tr>
+			<tr>
+				<td width="70%" colspan="2"
+					style="font-size: 9px; font-family: arial;">
+					<span
+					style="padding: 2px 2px; display: inline-block;">
+						<strong>11.
+							Do you wish to hold for this policy electronically under e
+							-insurance ?</strong>
+					</span>
+				</td>
+				<td width="30%" colspan="1"
+					style="font-size: 9px; font-family: arial; padding-left: 9px;">
+					<span
+					style="padding: 2px 2px; display: inline-block;" th:text=${isEIA}></span>
+				</td>
+			</tr>
+			<tr th:if="${isEIA == 'YES'}">
+				<td width="100%" colspan="3"
+					style="font-size: 9px; font-family: arial; padding-left: 10px;">
+					<span style="padding: 5px; display: inline-block;">
+						<strong>a.
+							Provide existing E - insurance Account Number:</strong>
+					</span>
+					<span th:text=${EAccNumberExist}></span>
+				</td>
+			</tr>
+			<tr th:if="${isEIA == 'YES'}">
+				<td width="100%" colspan="3"
+					style="font-size: 9px; font-family: arial;">
+					<span
+					style="padding: 5px; display: inline-block;">
+						<strong>b.
+							e - insurance Account Number:</strong>
+					</span>
+					<span th:text=${insuranceRepositoryExist}></span>
+				</td>
+			</tr>
+			<tr th:if="${isEIA == 'YES' && EAccNumberExist == 'YES'}">
+				<td width="100%" colspan="3"
+					style="font-size: 9px; font-family: arial;">
+					<span
+					style="padding: 5px; display: inline-block;">
+						<strong>e-Insurance
+							Account No. (if available):</strong>
+					</span>
+					<span th:text=${EInsAccNumber}></span>
+				</td>
+			</tr>
+			<tr th:if="${isEIA == 'YES' && EAccNumberExist == 'NO'}">
+				<td width="100%" colspan="3"
+					style="font-size: 9px; font-family: arial;">
+					<span
+					style="padding: 5px; display: inline-block;">
+						<strong>Preferred
+							Insurance Repository you would like to have your e-lnsurance
+							Account.</strong>
+					</span>
+					<span th:text=${insuranceRepository}></span>
+				</td>
+			</tr>
+			<!-- Communication Address Start here-->
+			<tr>
+				<td width="100%" height="20px" colspan="3"
+					style="font-size: 9px; font-family: arial; padding: 5px">
+					<span
+					style="padding: 2px 2px; display: inline-block;">
+						<strong>12.
+							Current Residential Address</strong>
+					</span>
+				</td>
+			</tr>
+			<tr>
+				<td width="100%" colspan="3"
+					style="font-size: 9px; font-family: arial; padding: 5px">
+					<table width="100%" cellpadding="5" cellspacing="0" border="1"
+						style="border-collapse: collapse; vertical-align: top;">
+						<tbody>
+							<tr>
+								<td width="30%" colspan="1"
+									style="font-size: 9px; padding: 2px 2px; font-family: arial; padding-left: 9px">House
+									NO/Apt Name/Society:</td>
+								<td width="70%" colspan="1"
+									style="font-size: 9px; font-family: arial; padding-left: 9px; text-transform: uppercase;">
+									<span
+									th:text=${houseNumber}></span>
+								</td>
+							</tr>
+							<tr>
+								<td width="30%" colspan="1"
+									style="font-size: 9px; padding: 2px 2px; font-family: arial; padding-left: 9px">Road/Area/Sector:</td>
+								<td width="70%" colspan="1"
+									style="font-size: 9px; font-family: arial; padding-left: 9px; text-transform: uppercase;">
+									<span
+									th:text=${area}></span>
+								</td>
+							</tr>
+							<tr>
+								<td width="30%" colspan="1"
+									style="font-size: 9px; padding: 2px 2px; font-family: arial; padding-left: 9px">Village/Town:</td>
+								<td width="70%" colspan="1"
+									style="font-size: 9px; padding: 2px 2px; font-family: arial; padding-left: 9px; text-transform: uppercase;">
+									<span
+									th:text=${village}></span>
+								</td>
+							</tr>
+							<tr>
+								<td width="30%" colspan="1"
+									style="font-size: 9px; padding: 2px 2px; font-family: arial; padding-left: 9px">Landmark:</td>
+								<td width="70%" colspan="1"
+									style="font-size: 9px; padding: 2px 2px; font-family: arial; padding-left: 9px; text-transform: uppercase;">
+									<span
+									th:text=${landmark}></span>
+								</td>
+							</tr>
+							<tr>
+								<td width="30%" colspan="1"
+									style="font-size: 9px; padding: 2px 2px; font-family: arial; padding-left: 9px">City:</td>
+								<td width="70%" colspan="1"
+									style="font-size: 9px; font-family: arial; padding-left: 9px; text-transform: uppercase;">
+									<span
+									th:text=${city}></span>
+								</td>
+							</tr>
+							<tr>
+								<td width="30%" colspan="1"
+									style="font-size: 9px; padding: 2px 2px; font-family: arial; padding-left: 9px">Pin
+									Code:</td>
+								<td width="70%" colspan="1"
+									style="font-size: 9px; padding: 2px 2px; font-family: arial; padding: 0;">
+									<table width="100%" cellpadding="5" cellspacing="0" border="0"
+										style="border-collapse: collapse; vertical-align: top;">
+										<tbody>
+											<tr>
+												<td
+													style="font-size: 9px; padding: 2px 2px; font-family: arial; padding-left: 9px; border-right: 1px solid #000; text-transform: uppercase;">
+													<span
+													th:text=${pinCode}></span>
+												</td>
+												<td
+													style="font-size: 9px; padding: 2px 2px; font-family: arial; padding-left: 9px; border-right: 1px solid #000">
+													<span>State/UT:</span>
+												</td>
+												<td
+													style="font-size: 9px; padding: 2px 2px; font-family: arial; padding-left: 9px; border-right: 1px solid #000; text-transform: uppercase;">
+													<span
+													th:text=${state}></span>
+												</td>
+												<td
+													style="font-size: 9px; padding: 2px 2px; font-family: arial; padding-left: 9px; border-right: 1px solid #000">
+													<span>Country:</span>
+												</td>
+												<td
+													style="font-size: 9px; padding: 2px 2px; font-family: arial; padding-left: 9px; text-transform: uppercase;">
+													<span
+													th:text=${country}></span>
+												</td>
+											</tr>
+										</tbody>
+									</table>
+								</td>
+							</tr>
+							<tr>
+								<td width="30%" colspan="1"
+									style="font-size: 9px; padding: 2px 2px; font-family: arial; padding-left: 9px">Mobile
+									No. 1:</td>
+								<td width="70%" colspan="1"
+									style="font-size: 9px; padding: 2px 2px; font-family: arial; padding: 0;">
+									<table width="100%" cellpadding="5" cellspacing="0" border="0"
+										style="border-collapse: collapse; vertical-align: top;">
+										<tbody>
+											<tr>
+												<td
+													style="font-size: 9px; padding: 2px 2px; font-family: arial; padding-left: 9px; border-right: 1px solid #000;">
+													<span
+													th:text=${mobileNumber}></span>
+												</td>
+												<td
+													style="font-size: 9px; padding: 2px 2px; font-family: arial; padding-left: 9px; border-right: 1px solid #000">
+													<span>Mobile
+														No. 2:</span>
+												</td>
+												<td
+													style="font-size: 9px; padding: 2px 2px; font-family: arial; padding-left: 9px; border-right: 1px solid #000">
+													<span
+													th:text=${alternate}></span>
+												</td>
+												<td
+													style="font-size: 9px; padding: 2px 2px; font-family: arial; padding-left: 9px; border-right: 1px solid #000">
+													<span>STD
+														Code:</span>
+												</td>
+												<td width="100px"
+													style="font-size: 9px; padding: 2px 2px; font-family: arial; padding-left: 9px; border-right: 1px solid #000">
+													<span
+													th:text=${std}></span>
+												</td>
+												<td
+													style="font-size: 9px; padding: 2px 2px; font-family: arial; padding-left: 9px; border-right: 1px solid #000">
+													<span>Landline:</span>
+												</td>
+												<td
+													style="font-size: 9px; padding: 2px 2px; font-family: arial; padding-left: 9px;">
+													<span
+													th:text=${landline}></span>
+												</td>
+											</tr>
+										</tbody>
+									</table>
+								</td>
+							</tr>
+							<tr>
+								<td width="30%" colspan="1"
+									style="font-size: 9px; padding: 2px 2px; font-family: arial; padding-left: 9px">Email:</td>
+								<td width="70%" colspan="1"
+									style="font-size: 9px; padding: 2px 2px; font-family: arial; padding-left: 9px">
+									<span
+									th:text=${email}></span>
+								</td>
+								<!-- Communication Address End here-->
+							</tr>
+						</tbody>
+					</table>
+				</td>
+			</tr>
+			<tr>
+				<td width="70%" colspan="2"
+					style="font-size: 9px; font-family: arial;">
+					<span
+					style="padding: 2px 2px; display: inline-block;">
+						<strong>13.
+							What is your preferred mode of communication?</strong>
+					</span>
+				</td>
+				<td width="30%" colspan="1"
+					style="font-size: 9px; font-family: arial; padding-left: 10px">
+					<span>EMAIL</span>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</td>
+

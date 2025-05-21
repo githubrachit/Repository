@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        body {
+            font-size: 11pt;
+        }
+        * {
+            font-size: 11pt;
+        }
+    </style>
+</head>
+<body>
+<table width='100%' cellspacing='0' cellpadding='0'>
+    <tr>
+        <td align='left' width='50%'><img src='classpath:static/logo_ax_max.png' alt="Axis Max Life Insurance" width='100'></td>
+    </tr>
+    <tr>
+        <td height='10'></td>
+    </tr>
+    <tr>
+        <td bgcolor='#ccc' height='1'></td>
+    </tr>
+    <tr>
+        <td height='20'></td>
+    </tr>
+</table>
+
+<!-- start heading -->
+<table style="font-family: arial;width: 100%">
+    <tr>
+        <td style="width: 100%;text-align: center;font-size: 11pt;font-weight: 600;color: #111;padding-bottom:30px;font-weight: bold;"> Payment Acknowledgement</td>
+    </tr>
+</table>
+<!-- end heading -->
+
+
+<table width="100%" cellspacing="0" cellpadding="5" border="0" style="font-family: arial; font-size: 11pt;">
+    <tr>
+        <td colspan="1" width="50%" align="left"> <b>Ref. No.: </b><span style="padding-left: 6px"><span th:text="${policyNumber}"/></span></td>
+        <td colspan="1" align="right" width="50%"><b>Receipt Date:</b> <span style="text-align:left;padding-left: 6px;min-width: 146px;display: inline-block;"><span th:text="${docGenerationDate}"/></span></td>
+    </tr>
+    <tr>
+        <td colspan="2">
+            <div style="margin-bottom: 15px;">
+                <p>Dear <span th:text="${title}"></span> <span th:text="${firstName}"></span><span th:text="${middleName}"></span><span th:text="${lastName}"></span>,</p>
+                <p style="margin:0;">Greeting from Axis Max Life Insurance!</p>
+                <div>
+                    <div style="margin-bottom: 15px;line-height: normal;">
+                        <p>
+                            Thank  you  for  choosing  us  as  your  Life  Insurance  Partner.  Congratulations  on  financially  securing  the future for you and your family!
+                        </p>
+                        <p>This  is  to  acknowledge  that  we  have  received  the  initial  payment  towards  your  Axis Max  Life  Insurance proposal.</p>
+                    </div>
+                    <div class="TableWrapper">
+                        <table width="100%" cellspacing="0" cellpadding="5" border="1" style="font-family: arial; font-size: 11pt;border-color: #013878;">
+                            <tr>
+                                <td colspan="2" align="center" style="background-color: #013878;color: #fff;"> Policy Details</td>
+                            </tr>
+                            <tr>
+                                <td colspan="2">Plan Name: <span th:text="${planName}"/></td>
+                            </tr>
+                            <tr>
+                                <td style="width: 50%;">Policy No.: <span th:text="${policyNumber}"/></td>
+                                <td style="width: 50%;">Payment Received: <span th:text="${amount}"/></td>
+                            </tr>
+                            <tr>
+                                <td style="width: 50%;">Date & Time of Transaction: <span th:text="${paymentDate}"/></td>
+                                <td style="width: 50%;">Method of Payment: <span th:text="${paymentMethod}"/></td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div style="margin-bottom: 15px;line-height: normal;">
+                        <p>We request you to continue making timely renewal payments and keep enjoying the benefits of your policy. We look forward to serving you and assure you the best of our services always.</p>
+                    </div>
+                    <div style="margin-bottom: 20px;">
+                        <p style="margin: 0">Warm Regards,</p>
+                        <p>Axis Max Life Insurance Limited</p>
+                    </div>
+        </td>
+    </tr>
+    <tr>
+        <td height="20">&nbsp;</td>
+    </tr>
+    <tr>
+        <td colspan="2">
+            <p>Important Information:</p>
+            <ol>
+                <li th:if="${gstWaiver=='Yes'}" style="padding-bottom: 10px">The waiver of GST for subsequent premiums will be subject to submission of relevant documents at the time of renewal premium payment. </li>
+                <li style="padding-bottom: 10px">The receipt of the complete proposal form and the initial payment made by you, does not create any obligation on us to underwrite the risk. We will not be liable till the time we have underwritten the risk and issued the Policy. </li>
+                <li style="padding-bottom: 10px">This  is  only  an  interim  confirmation  and  not  a  receipt.  The  final  receipt  will  be  issued  by Axis Max Life Insurance Co. Ltd. along with the policy document. </li>
+                <li style="padding-bottom: 10px">The benefits if any under the Income Tax Act, 1961 would be applicable only after the Policy is issued. We request you to please consult with your tax consultant for more information.</li>
+                <li style="padding-bottom: 10px">Premium paid will be eligible for tax benefits (under section 80C/ 80CCC/ 80D/ 37(1) of income tax act 1961, as per applicability) subject to levies under prevailing tax laws. Your policy may been titled to  certain  tax  benefits  or  subject  to  deductions.  We  request  you  to  please  consult  with  your  tax consultant for more information.</li>
+                <li style="padding-bottom: 10px">This is payment acknowledgement and does not require revenue stamp.</li>
+                <li style="padding-bottom: 10px"> If the payment has been made other than cash, this acknowledgement is conditional upon the credit in Company's account post clearance of instrument/facility including electronic mode.</li>
+                <li style="padding-bottom: 10px">All applicable taxes, cesses or any other taxes, charges, levies as per prevailing laws, shall be borne by you.</li>
+            </ol>
+        </td>
+    </tr>
+    <tr>
+        <td height="30">&nbsp;</td>
+    </tr>
+    <tr>
+        <td colspan="2" align="center"><p>This acknowledgement is electronically generated and does not require signature.</p></td>
+    </tr>
+
+
+</table>
+
+<table width='100%'>
+    <tr>
+        <td height="20">&nbsp;</td>
+    </tr>
+    <tr>
+        <td align='left' width='100%'><img src='classpath:static/yblFooterBottomUpdated.png' alt="Axis Max Life Insurance" style="width: 100%; height: auto;"></td>
+    </tr>
+</table>
+
+
+</body>
+</html>

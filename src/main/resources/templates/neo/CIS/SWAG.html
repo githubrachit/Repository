@@ -1,0 +1,584 @@
+<style xmlns="http://www.w3.org/1999/html">
+    body {
+         display: flex;
+         justify-content: center;
+         align-items: center;
+         min-height: 100vh;
+         margin: 0;
+         font-family: sans-serif;
+     }
+    * {
+        font-size: 11pt;
+    }
+     .container {
+         display: flex;
+         flex-direction: column;
+         align-items: center;
+         margin: 20px;
+         padding: 20px;
+         border : none;
+         max-width: 210mm; /* A4 width */
+         box-sizing: border-box; /* Ensure padding and border are included in the width */
+         font-size:11pt;
+
+     }
+     .title {
+         font-size: 11pt;
+         font-weight: bold;
+         margin-bottom: 10px;
+         text-align: center;
+     }
+     .info-table {
+         max-width: 100%; /* Ensure the table does not exceed its container */
+         width: 100%;
+         border-collapse: collapse;
+         table-layout: fixed; /* Ensure columns fit within the table */
+         margin: auto; /* Center the table */
+     }
+     .info-table th,
+     .info-table td {
+         padding: 10px;
+         border: 1px solid #000;
+         text-align: left;
+         word-wrap: break-word; /* Ensure text wraps within cells */
+         overflow-wrap: break-word; /* Additional support for wrapping */
+         vertical-align: top;
+
+     }
+     .info-table th {
+         background-color: #f2f2f2;
+         font-weight: bold;
+     }
+     /* Apply thicker border to the second column */
+     .info-table th:nth-child(3),
+     .info-table td:nth-child(3) {
+      width: 55%; /* Adjust the percentage to your needs */
+    }
+    .info-table th:nth-child(1),
+     .info-table td:nth-child(1) {
+      width: 8%; /* Adjust the percentage to your needs */
+    }
+    .info-table th:nth-child(4),
+    .info-table td:nth-child(4) {
+        width: 15%;
+    }
+     .disclaimer {
+         font-size: 11pt;
+         margin-top: 10px;
+         text-align: center;
+     }
+     .roman-list {
+            list-style-type: lower-roman;
+            padding: 15px;
+     }
+     .alpha-list {
+            list-style-type: lower-alpha;
+            padding: 15px;
+     }
+</style>
+<body>
+<div class="container">
+    <h1 class="title"><u>CUSTOMER INFORMATION SHEET / KNOW YOUR POLICY</u></h1>
+    <p><strong>Customer Information Sheet reference no. </strong><span th:text="${policyNumber}"></span></p>
+    <p>This document provides key information about your policy. You are also advised to go through your policy
+        document.</p>
+    <table class="info-table">
+        <thead>
+        <tr>
+            <th>SI. no.</th>
+            <th>Title</th>
+            <th>Description in Simple Words<br><i>(Please refer to applicable Policy Clause Number in next column)</i>
+            </th>
+            <th>Policy Clause Number</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td>1</td>
+            <td>Name of the Insurance Product and Unique Identification Number (UIN)</td>
+            <td><strong><span th:text="${productName}"></span></strong><br>
+                <span style="text-align: center; display: block;" th:text="'UIN- ' + ${UIN}"></span></td>
+            <td>Policy Preamble</td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>Policy Number</td>
+            <td><span th:text="${policyNumber}"></span></td>
+            <td>Policy Schedule</td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td>Type of Insurance Policy</td>
+            <td><strong>Non-linked Non Participating Individual Life Insurance Savings Plan</strong></td>
+            <td>Policy Preamble</td>
+        </tr>
+        <tr>
+            <td>4</td>
+            <td>Basic Policy details</td>
+            <td>
+                <span style="font-weight: bold;"><span>&#8226;</span> Instalment Premium: </span>
+                <span th:text="${instalmentPremium}"></span><br>
+                <span style="font-weight: bold;"><span>&#8226;</span> Mode of Premium Payment: </span>
+                <span th:text="${premiumPaymentMode}"></span><br>
+                <span style="font-weight: bold;"><span>&#8226;</span> Sum Assured on Death: </span>
+                <span th:text="${sumAssuredOnDeath}"></span><br>
+                <span style="font-weight: bold;">&#8226; Maturity Benefit :</span>
+                <span th:text="${sumAssuredOnMaturity}"></span><br>
+                <span style="font-weight: bold;"><span>&#8226;</span> Policy Term: </span>
+                <span th:text="${policyTerm}"></span><br>
+                <span style="font-weight: bold;"><span>&#8226;</span> Premium Payment Term: </span>
+                <span th:text="${premiumPaymentTerm}"></span><br>
+            </td>
+            <td>Policy Schedule</td>
+        </tr>
+        <tr>
+            <td rowspan="3">5</td>
+            <td rowspan="3">Policy Coverage/benefits payable</td>
+            <td>
+                <span>&#8226;</span> <strong>Benefits payable on Death:</strong><br><br>
+                <span>&#10146;</span>If the Life Insured dies during the Policy Term, provided the Policy is in force
+                and is not a Lapsed Policy or in Reduced Paid Up Mode, and You have not opted for Policy Continuance
+                Benefit, We will pay a lump sum guaranteed Death Benefit as follows:<br><br><br>
+                <strong>For Single Premium Payment Variant, higher of:</strong><br>
+                <ol class="roman-list">
+                    <li>Sum Assured on Death </li>
+                    <li>125% of the Surrender Value applicable as on the date of death of the Life Insured. </li>
+                </ol>
+                <strong>For Regular Premium Payment Variant and Limited Premium Payment Variant, highest
+                    of:</strong><br>
+                <ol class="roman-list">
+                    <li>Sum Assured on Death</li>
+                    <li>105% (One Hundred Five percent) of sum of (Total Premiums Paid plus loadings for modal premiums
+                        plus Underwriting Extra Premium (if any)) received under the Policy, as on the date of death of
+                        the Life Insured; or
+                    </li>
+                    <li>125% of the Surrender Value applicable as on the date of death of the Life Insured.</li>
+                </ol>
+                <span>Plus any accrued Income Benefit and Loyalty Income Boosters, if not already paid.  </span>
+                <br><br>
+                <span>&#10146;</span><strong>Policy Continuance Benefit: </strong>If the Life Insured dies during the
+                Policy Term, provided the Policy is in force and is not a Lapsed Policy nor in Reduced Paid Up Mode, We
+                will pay the following: <br>
+                <ol class="roman-list">
+                    <li>Death Benefit being the higher of (i) Sum Assured on Death or (ii) 105% of (Total Premiums Paid
+                        plus Underwriting Extra Premium plus loadings for modal premiums) as on the date of death of
+                        Life Insured; plus
+                    </li>
+                    <li>Policy Continuance Benefit</li>
+                </ol>
+                <span>The above continuance benefit is subject to the conditions specified in the Policy.  </span><br><br>
+                <span><strong>Additional Accidental Death Benefit (only for Variant other than Single Premium Payment Policy): </strong> If the Life Insured dies due to Accident during the Additional Accidental Death Benefit Term after the end of Premium Payment Term, provided the Policy is in force, on the date of death of the Life Insured, We will pay the
+                    Additional Accidental Sum Assured on Death in addition to the Death Benefit payable under the Policy. However, if the Life Insured is minor, additional Accidental Death benefit will not be available under the Policy.</span>
+                <br>
+                <span> Additional Accidental Death benefit coverage shall cease on the Maturity Date or at the end of the Policy Year in which Life Insured attains the Age of 80 years, whichever is earlier.</span><br><br>
+                <span>&#10146;</span><strong>In the case this Policy is sourced as a point of sale Policy:</strong>
+                <ol class="roman-list">
+                    <li>In case of death of the Life Insured, Death Benefit will be payable as the Policy, as the case
+                        may be. However, in case the Life Insured dies during the Waiting Period due to any reason other
+                        than an Accident, We will refund 100% of the Total Premiums Paid till the date of death of the
+                        Life Insured excluding applicable taxes, cesses, levies, if any, and no other benefit will be
+                        payable and the Policy will terminate.
+                    </li>
+                    <li>In the event of death of Life Insured due to an Accident, the Waiting Period shall not be
+                        applicable and the Death Benefit shall be payable in accordance with the Policy.
+                    </li>
+                    <li>The Waiting Period is not applicable on Revival of the Policy.</li>
+                </ol>
+                <span>&#10146;</span><strong>Survival Benefit:</strong><br>
+                <span>During the Policy Term while the Life Insured is alive and upon expiry of the Income Benefit Deferment Period (if applicable), Survival Benefit shall be payable on the due date as specified in the Schedule, in arrears or advance (as chosen by You), provided the Policy is in-force and all due Premiums have been received. </span><br><br>
+            </td>
+            <td>Clause 1.1 of Part C <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>Clause 1.1.2 of Part C <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>Clause 1.1.3 of Part C <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>Clause 1.1.4 of Part C</td>
+        </tr>
+
+        <td>
+            <span>&#10146;</span><strong> Regular Wealth Option: </strong>In case You choose this Option, We will pay
+            the following Survival Benefit:
+            <ol class="alpha-list">
+                <li>Income Benefit, payable during the Income Benefit Period, as per chosen Income Payout Frequency;
+                    and
+                </li>
+                <li>Loyalty Income Boosters (equivalent to 10% of the Income Benefit) shall accrue after the completion
+                    of the Premium Payment Term and will be payable every year during the Income Benefit Period.
+                </li>
+            </ol>
+            <span>&#10146;</span><strong>Long Term Wealth Option:</strong> In case You choose this Option, We will pay
+            the following Survival Benefit:
+            <ol class="alpha-list">
+                <li>Income Benefit, payable during the Income Benefit Period as per chosen Income Payout Frequency;
+                    and,
+                </li>
+                <li>Loyalty Income Boosters (equivalent to 20% of the Income Benefit), shall accrue after the completion
+                    of the Premium Payment Term and will be payable every year during the Income Benefit Period.
+                </li>
+            </ol>
+            <span>&#10146;</span><strong>Early Wealth Option:</strong> In case You choose this Option, We will pay the
+            following Survival Benefit:
+            <ol class="alpha-list">
+            <li>Income Benefit, payable during the Income Benefit Period as per chosen Income Payout Frequency </li>
+            <li>The Income Benefit Period shall depend on the Income Benefit start year and Income Benefit Period shall be equal to the Policy Term less Income Benefit start year;</li>
+            </ol>
+            <span>&#10146;</span> <strong> Lifelong Wealth Option:</strong> In case You choose this Option, We will pay
+            the following Survival Benefit:
+            <ol class="alpha-list">
+                <li>Income Benefit, payable during the Income Benefit Period as per chosen Income Payout Frequency.
+                    Income Benefit Period shall start immediately after the Premium Payment Term and shall be equal to
+                    100 less Entry Age less Premium Payment Term. The Income Benefit Period shall depend on the entry
+                    Age, Premium Payment Term chosen;
+                </li>
+                <li>Loyalty Income Boosters (equivalent to 20% of the Income Benefit), shall accrue after the completion
+                    of the Premium Payment Term and will be payable every year during the Income Benefit Period; and,
+                </li>
+                <li>Money Back Benefit at the end of Policy Year in case the Life Insured has survived till the Age of
+                    85 years.
+                </li>
+            </ol>
+            <span>&#10146;</span><strong>Auto Debit Boosters:</strong>If the Policy is in-force and fully paid up and
+            all due Premiums have been received by Us and the Life Insured has survived until the end of the Premium
+            Payment Term, for all the Premiums received through Auto Debit mode, Auto Debit Booster equivalent to 1 %
+            (one percent) of the Premiums (including modal loadings) received through Auto Debit mode will be
+            paid.<br><br>
+        </td>
+        <td>Clause 1.2 of Part C <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>Clause 1.2.5 of Part C</td>
+        </tr>
+        <td>
+            <span>&#10146;</span><strong>Maturity Benefits</strong><br><br>
+            <span>&#10146;</span>If the Life Insured has survived until the Maturity Date, provided the Policy is
+            in-force and has been fully paid on the Maturity Date, We shall pay the Maturity Benefit as under:<br>
+            <ol class="roman-list">
+                <li>In case You have chosen Wealth For Milestones Variant, We will pay Sum Assured on Maturity and
+                    accrued Guaranteed Additions.
+                </li>
+                <li>In case You have chosen Regular Wealth Variant, We will not pay any Maturity Benefit.</li>
+                <li>In case You have chosen Long Term Wealth Variant, We will pay the Sum Assured on Maturity which will
+                    be equal to the Total Premiums Paid.
+                </li>
+                <li>In case You have chosen Early Wealth Variant, We will pay the Sum Assured on Maturity and accrued
+                    Guaranteed Additions.
+                </li>
+                <li>In case You have chosen Lifelong Wealth Variant, We will pay the Sum Assured on Maturity which will
+                    be equal to the 100% of the Total Premiums Paid but including the loadings for modal premiums
+                </li>
+            </ol>
+            <span>Plus any accrued income benefit and Loyalty Income Boosters, if not already paid.  </span><br><br>
+            <span>&#10146;</span><strong>Surrender benefits</strong><br><br>
+            <span>&#10146;</span>You may request in writing to Surrender the Policy at any time but You will get the Surrender Value only if the Policy has acquired the Surrender Value. On receipt of such request, the Surrender Value prevailing on the date of request for the surrender of this Policy shall be payable by Us and thereafter no other benefits under this Policy shall be payable and the Policy shall terminate.  If the Policy has not acquired Surrender Value, no amount shall be payable by Us.<br><br>
+            <span>&#10146;</span>The Surrender Value payable will be subject to the condition that there are no statutory or other restrictions to the contrary.<br><br>
+            <span>&#10146;</span>The Surrender Value will be equal to the higher of Guaranteed Surrender Value or Special Surrender Value.<br><br>
+            <span>&#10146;</span>Once You have surrendered the Policy, the same cannot be reinstated.<br><br>
+            <span>&#10146;</span>If option for accrual of Survival Benefits has been chosen, any accrued Survival Benefit, if not already paid, shall be paid in addition to the applicable Surrender Value.<br><br>
+            <span>&#10146;</span><strong>Options to policyholders for availing benefits, if any, covered under the
+            policy:</strong><br><br>
+            <span>&#10146;</span><strong>Settlement Option: </strong><br>
+            <span>The Claimant, may opt to exercise this option, by giving a written request to Us, to receive (a) Death Benefit and (b) Maturity Benefit in lump sum or in installment over a period of 5 years, either in monthly or annual mode, as detailed below </span><br><br>
+            <span>(1)<strong>Death Benefit: </strong>Claimant may opt Death Benefit as: </span><br>
+            <ol class="roman-list">
+                <li>Lump sum; or.</li>
+                <li>Regular monthly/annual income for 5 years wherein Claimant can take 22.10% of the Death Benefit as
+                    annual income payable for 5 years, or 1.88% of the Death Benefit as monthly income payable for 60
+                    months. The income (for both monthly and annual mode) will be payable from the monthly Policy
+                    Anniversary following the date of death of Life Insured. If the date of death is same as the monthly
+                    Policy Anniversary Date, then the monthly income will be payable from the date of death.
+                </li>
+            </ol>
+            <span>During the income phase, future remaining income payouts can be commuted by the Claimant at present value of all future payouts discounted at the rate of 5.25% per annum as commuted value. </span><br><br>
+            <span>(2) <strong>Maturity Benefit:</strong> Claimant, at least 15 days prior to the Maturity Date of the Policy, may opt Maturity Benefit as: </span><br>
+            <ol class="roman-list">
+                <li>Lump sum amount; or</li>
+                <li>Regular monthly/annual income for 5 years wherein monthly income is payable over 60 months or annual
+                    income payable over 5 years. The income (for both monthly and annual mode) will be payable from the
+                    monthly Policy Anniversary following the Maturity Date.
+                </li>
+            </ol>
+            <span>During the income phase under the Maturity Benefit, future remaining payouts may be commuted by You, wherein the present value of all future payouts discounted at the rate applicable at the time of exercising the settlement option shall be payable as commuted value. </span><br><br>
+            <span>Once the settlement option is exercised, the discount rate declared will become guaranteed. The same rate shall also get applicable in case commutation of remaining payouts is opted during the settlement period. </span><br><br>
+            <span>&#10146;</span><strong>Other benefits/options payable, specific to the policy, if any: NA </strong><br>
+        </td>
+        <td><br><br><br><br><br><br><br><br><br><br><br><br>Clause 1.3 of Part C <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>Clause 1 of Part D <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>Clause 2 of Part C
+            <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>Clause 2 of Part C</td>
+        </tr>
+        <tr>
+            <td>6</td>
+            <td>Options available (in case of Linked Insurance Products)</td>
+            <td>
+                <span>&#10146;</span> This is not applicable<br><br>
+            </td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>7</td>
+            <td>Option available (in case of Annuity product)</td>
+            <td>
+                <span>&#10146;</span> This is not applicable<br><br>
+            </td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>8</td>
+            <td>Riders opted, if any</td>
+            <td>
+                <span>&#8226;</span> <span> Axis Max Life Waiver of Premium Plus Rider (UIN: 104B029V04): If You opt this Rider, We will provide waiver of all future premiums in case of Critical Illness or dismemberment or Death subject to applicable terms and conditions of this Rider.</span><br><br>
+                <span>&#8226;</span> <span> Axis Max Life Accidental Death and Dismemberment Rider (UIN: 104B027V04): If You opt this Rider, We will provide additional benefits in case of death or dismemberment of the Life Insured due to an accident subject to applicable terms and conditions of this Rider.</span><br><br>
+                <span>&#8226;</span> <span> Axis Max Life Term Plus Rider (UIN:104B026V03): If You opt this Rider, We will provide additional lump sum benefit in case of death of the Life Insured subject to applicable terms and conditions of this Rider.</span><br><br>
+                <span>&#8226;</span> <span> Axis Max Life Critical Illness and Disability Rider (UIN: 104B033V02): In case You opt this Rider, We will provide additional lump sum benefit in case of critical illness diagnosis subject to applicable terms and conditions of this Rider.</span>
+            </td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>9</td>
+            <td>Exclusions (events where insurance coverage is not payable), if any.</td>
+            <td>
+                <strong>Brief list of the applicable exclusions, if any:</strong><br><br>
+                <span>&#8226;</span><strong> Suicide Exclusion </strong><br><br>
+                <span>&#10146;</span> If the Life Insured commits suicide, within 12 (Twelve) months from the Date of Commencement of Risk or from the date of Revival of this Policy, as applicable, all risks and benefits under this Policy shall cease and the Policy shall terminate immediately and We shall only pay the following to the Claimant, provided that the Policy is in force:<br>
+                <ol class="roman-list">
+                <li>Higher of the Surrender Value as on the date of death or the sum of (Total Premiums Paid plus loadings for modal premiums and Underwriting Extra Premium, if any, paid till the date of death), if the Policy has acquired a Surrender Value; or </li><br>
+                <li>Total Premiums Paid plus loadings for modal premiums and Underwriting Extra Premium, if any, received by Us till the date of death, if the Policy has not acquired a Surrender Value.</li><br><br>
+                </ol><br>
+            </td>
+            <td>Clause 5 of Part F</td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td>
+                <span>&#10146;</span><strong>Exclusions applicable to additional accidental death benefit: </strong><br>
+                <span>No benefit under the additional Accidental Death benefit will be payable if death occurs from or is caused by, either directly or indirectly, voluntarily or involuntarily due to or caused, occasioned, accelerated or aggravated by, any one of the following:</span><br>
+                <ol class="roman-list">
+                <li>Intentional self-inflicted Injury, or attempted suicide, while sane or insane; </li><br>
+                <li>Life Insured being under the influence of drugs, alcohol, narcotics or psychotropic substances, unless taken in accordance with the lawful directions and prescription of a Medical Practitioner; </li><br>
+                <li>War, invasion, act of foreign enemy, hostilities (whether war be declared or not), armed or unarmed truce, civil war, mutiny, rebellion, revolution, insurrection, military or usurped power, riot or civil commotion, strikes;</li><br>
+                <li>Taking part in any naval, military or air force operation during peace time or during service in any police, paramilitary or any similar organisation; </li><br>
+                <li>Participation by the Life Insured in any flying activity, except as a bona fide, fare-paying passenger of a recognized airline or a pilot and cabin crew of a commercial airline on regular routes and on a scheduled timetable; </li><br>
+                <li>Participation by the Life Insured in a criminal or unlawful act with illegal or criminal intent; </li><br>
+                <li>Any Injury incurred before the Date of Commencement of Risk; </li><br>
+                <li>Engaging in or taking part in professional sport(s) or any hazardous pursuits, including but not limited to, diving or riding or any kind of race; underwater activities involving the use of breathing apparatus or not; martial arts; hunting; mountaineering; parachuting; bungee-jumping; </li><br>
+                <li>Nuclear contamination; radioactive, explosive or hazardous nature of nuclear fuel materials or property contaminated by nuclear fuel materials or Accident arising from such nature. </li>
+                </ol>
+            </td>
+            <td>Clause 6 of Part F</td>
+        </tr>
+        <tr>
+            <td>10</td>
+            <td>Waiting /lien Period, if any</td>
+            <td>For point of sale policy - Period of 90 days from the Date of Commencement of Risk/Inception of the Policy.
+            </td>
+            <td>Clause 72 of Part B</td>
+        </tr>
+        <tr>
+            <td>11</td>
+            <td>Grace period</td>
+            <td><strong>Number of Days :</strong>
+                <span th:text="${gracePeriod}"></span><br>
+            </td>
+            <td>Clause 17 of Part B</td>
+        </tr>
+        <tr>
+            <td>12</td>
+            <td>Free Look Period</td>
+            <td><strong>Number of days:</strong>30 days beginning from the date of receipt of the Policy.</td>
+            <td>Clause 6 of Part D</td>
+        </tr>
+        <tr>
+            <td rowspan="5">13</td>
+            <td rowspan="5">Lapse, paid-up and revival of the Policy</td>
+            <td>
+                <span>&#8226;</span> <strong>Grace Period:</strong><br><br>
+                <span>&#10146;</span> A grace period of thirty (30) days (fifteen (15) days in case of monthly premium payment mode) from the due date for payment of each premium will be allowed to the Policyholder for payment of contractual premium. During the grace period, the Company will accept the premium without interest. The insurance coverage continues during the grace period but if the Life Insured dies during the grace period, the Company will deduct the due premium (if any) till the date of death from the benefits payable under the Policy.<br><br>
+            </td>
+            <td>Clause 8 of Part C</td>
+        </tr>
+        <tr>
+            <td>
+                <span>&#8226;</span> <strong>Lapse Period</strong><br><br>
+                <span>&#10146;</span> In case of non- receipt of first year’s full premium, the Policy will lapse, and no benefits shall be payable. <br><br>
+            </td>
+            <td>Clause 7 of Part D</td>
+        </tr>
+        <tr>
+            <td>
+                <span>&#8226;</span> <strong> Reduced Paid Up Benefits: </strong><br><br>
+                <span>&#10146;</span> If the Policy has acquired a Surrender Value and for other than Single Premium Payment Variant, in the event of non-payment of the due Premiums by You to Us on the expiry of the Grace Period this Policy, will not become a Lapsed Policy and will continue under Reduced Paid Up Mode unless revived and the reduced paid up benefits will be payable.<br><br>
+                <span>&#10146;</span><strong>Reduced Paid Up Surrender Value -</strong>  As per applicable Surrender Clause.<br>
+            </td>
+            <td>Clause 3 of Part C </td>
+        </tr>
+        <tr>
+            <td>
+                <span>&#8226;</span> <strong> Policy Renewal </strong><br><br>
+                <span>&#10146;</span> The Premium is due and payable by the due date as specified
+                in the Policy Schedule. The Policy will be renewed only upon
+                receipt of due Premium. <br><br>
+            </td>
+            <td>Policy
+                Schedule</td>
+        </tr>
+        <tr>
+            <td>
+                <span>&#8226;</span> <strong>Revival Period:</strong><br>
+                <span>&#10146;</span> It means the period of five consecutive complete years from the date of first unpaid Premium. </td><br>
+            <td>Clause 57 of Part B</td>
+        </tr>
+        <tr>
+            <td>14</td>
+            <td>Policy Loan, if applicable</td>
+            <td>
+                <span>Once this Policy has acquired the Surrender Value then, You will be eligible for grant of loans from Us wherein:  </span><br>
+                <ol class="roman-list">
+                    <li>The minimum amount of loan which can be granted by Us under this Policy is INR 10,000 (Rupees
+                        Ten Thousand);
+                    </li>
+                    <li>The maximum amount of loan which can be granted under this Policy during the Policy Term exceed
+                        80% (Eighty percent) of the Surrender Value payable under this Policy, subject to such terms and
+                        conditions as may be determined by Us from time to time.
+                    </li>
+                </ol>
+            </td>
+            <td>Clause 2 of Part D</td>
+        </tr>
+        <tr>
+            <td rowspan="2">15</td>
+            <td rowspan="2">Claims/Claims Procedure</td>
+            <td>
+                <span>&#8226;</span><strong>Turn Around Time (TAT) for claims settlement: Please refer to Annexure -B for details</strong><br><br>
+                <span>&#8226;</span> <strong> Brief procedure:</strong><br><br>
+                <span>&#10146;</span>Notice of Claim - All cases of death must be notified immediately to us in writing. However, We may
+                condone delay on merit for delayed claims where the reason for delay is proved to be for reasons beyond
+                the control of the Claimant.<br><br>
+                <span>&#10146;</span> Please note that all death claims will be payable to the nominee/legal heir of the
+                Policyholder.<br><br>
+                <span>&#10146;</span> Claim forms as required by us must be completed and furnished to us, at the
+                Claimant's expense, within 90 days after the date the insured event happens, unless specified otherwise.
+                A list of primary claim documents listing the normally required documents is attached to the Policy.
+                Submission of the listed documents, forms or other proof, however, shall not be construed as an
+                admission of liabilities by the Company. We reserve the right to require any additional proof and
+                documents in support of the claim.<br><br>
+                <span>&#8226;</span> <strong>Helpline number:</strong><br><br>
+                <span>&#10146;</span> 1860-120-5577 (Call charges apply) or 0124-4219090<br><br>
+                <span>&#8226;</span> <strong>Contact Details of the Insurer:</strong><br><br>
+                <span>&#10146;</span> Axis Max Life Insurance Company Limited, Plot No. 90C, Udyog Vihar, Sector 18,
+                Gurugram, 122015, Haryana, India. Website - <a href="https://www.axismaxlife.com" target="_blank">www.axismaxlife.com</a><br><br><br><br><br>
+            </td>
+            <td>Clause 2 of Part F </td>
+        </tr>
+        <tr>
+            <td>
+                <span>&#8226;</span> <strong>Link for downloading claim form and list of documents required including
+                bank account details:</strong><br><br>
+                <span>&#10146;</span> <a href="https://www.axismaxlife.com/downloads" target="_blank">https://www.axismaxlife.com/
+                <wbr>
+                downloads</a><br><br>
+                <span>&#10146;</span> We will require the following documents in case of claim under this Policy
+                regarding the death of the Life Insured:<br><br>
+                <span>&#8226;</span> claimant's statement in the prescribed form (death claim application form -form A);<br>
+                <span>&#8226;</span> original Policy document (if any);<br>
+                <span>&#8226;</span> In case of a medical/natural death of the Life Insured, the attending physician's
+                statement (Form C) and the medical records (admission notes, discharge/death summary, test reports,
+                etc.) are required;<br>
+                <span>&#8226;</span> In case of an accidental/unnatural death of the Life Insured, a copy of the first
+                information report (FIR)/ Police complaint, a copy of the postmortem report (PMR)/ Autopsy/Viscera
+                Report and a copy of the final police investigation report (FPIR)/charge sheet is required;<br>
+                <span>&#8226;</span> original/ attested copy of death certificate issued by the local/municipal
+                authority (only in the case of death of the Life Insured);<br>
+                <span>&#8226;</span> identity proofs (such as copy of Passport, PAN card, Voter identity card, Aadhar
+                (UID) card, etc.) of the Claimants (bearing their photographs and signatures (only in case of death of
+                the Life Insured);<br>
+                <span>&#8226;</span> NEFT mandate form attested by bank authorities, along with a cancelled cheque or
+                bank account passbook (only in the case of the death of the Life Insured);<br>
+                <span>&#8226;</span> any other documents or information required by Us for assessing and approving the
+                claim request;<br>
+                <span>&#8226;</span> employer certificate with complete leave records- Form E;<br>
+                <span>&#8226;</span> ITR for last 3 years / GST certificate in case of Self employed;<br>
+                <span>&#8226;</span> Other life / health insurance details with claim history details;<br>
+                <span>&#8226;</span> bank statement of last 2 years of the Life Insured;<br>
+                <span>&#8226;</span> body transfer certificate / embassy documents / postmortem report whichever
+                applicable in case of death in foreign country;<br>
+                <span>&#8226;</span> Complete Passport copy in case of death in foreign country;<br>
+                <span>&#8226;</span> medical booklet / CGHS card details in case of defence and central government
+                personnel; and<br>
+                <span>&#8226;</span> discharge Summary / indoor Case papers in case death happened due to medical
+                reasons in a hospital.<br><br>
+            </td>
+            <td>Clause 2.1.1 of Part F</td>
+        </tr>
+        <tr>
+            <td rowspan="2">16</td>
+            <td rowspan="2">Policy Servicing</td>
+            <td>
+                <span>&#8226;</span> <strong>Turn Around Time (TAT) : Please refer to Annexure-B for
+                details </strong><br><br>
+                <span>&#8226;</span> <strong>Helpline number:</strong><br><br>
+                <span>&#10146;</span> 1860-120-5577 (Call charges apply) or 0124-4219090<br><br>
+                <span>&#8226;</span> <strong>Contact Details of the Insurer:</strong><br><br>
+                <span>&#10146;</span> Axis Max Life Insurance Company Limited, Plot No. 90C, Udyog Vihar, Sector 18,
+                Gurugram, 122015, Haryana, India. Website - <a href="https://www.axismaxlife.com" target="_blank">www.axismaxlife.com</a><br><br>
+            </td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>
+                <span>&#8226;</span> <strong>Link for downloading applicable forms and list of documents required
+                including bank account details:</strong><br><br>
+                <span>&#10146;</span> <a href="https://www.axismaxlife.com/downloads" target="_blank">https://www.axismaxlife.com/
+                <wbr>
+                downloads</a><br><br>
+                <span>&#10146;</span> We will require the following documents in case of policy servicing: <br><br>
+                <span>&#8226;</span> Application in the prescribed form;<br>
+                <span>&#8226;</span> original Policy document (if any);<br>
+                <span>&#8226;</span> identity proofs (such as copy of Passport, PAN card, Voter identity card, Aadhar
+                (UID) card, etc.) of the Policyholder or Life Insured (bearing their photographs and signatures);<br>
+                <span>&#8226;</span> NEFT mandate form attested by bank authorities, along with a cancelled cheque or
+                bank account passbook;<br>
+                <span>&#8226;</span> any other documents or information required by Us for assessing and approving the
+                claim request;
+            </td>
+            <td></td>
+        </tr>
+        <tr>
+            <td rowspan="3">17</td>
+            <td rowspan="3">Grievances / Complaints</td>
+            <td>
+                <span>&#8226;</span> <strong>Contact Details of Grievance Redressal Officer of the insurer:</strong><br><br>
+                <span>&#8226;</span> Grievance Redressal Officer, Axis Max Life Insurance Limited, Plot No. 90C,
+                Udyog Vihar, Sector 18, Gurugram, 122015, Haryana, India<br><br>
+                <span>&#8226;</span> <strong>Link for registering the grievance with the insurer's
+                portal</strong><br><br>
+                <span>&#10146;</span> <a href="https://www.axismaxlife.com/customer-service/grievance-redressal"
+                                         target="_blank">https://www.axismaxlife.com/customer-service/grievance-redressal</a><br><br>
+                <span>&#8226;</span> <strong>Contact details of Ombudsman:</strong><br><br>
+                <span>&#10146;</span> Refer Annexure A for the Ombudsman details
+            </td>
+            <td>As per Annexure A</td>
+        </tr>
+        </tbody>
+    </table>
+    <div class="declaration">
+        <p><u>Declaration by the Policyholder</u></p>
+        <p>I have read the above and confirm having noted the details.</p>
+
+        <div class="signature-section">
+            <div class="left">
+                <p>Place:<span
+                        style="text-align: center;min-width: 100px;border-bottom-color: #000;border-bottom-style: solid;border-bottom-width: 1px;display: inline-block;padding: 0 18px;font-weight: bold;text-transform:uppercase;"><span
+                        th:text="${place}"></span></span></p>
+                <p>Date:<span
+                        style="text-align: center;min-width: 100px;border-bottom-color: #000;border-bottom-style: solid;border-bottom-width: 1px;display: inline-block;padding: 0 18px;font-weight: bold;text-transform:uppercase;"><span
+                        th:text="${date}"></span></span></p>
+            </div>
+            <div class="signature" style="text-align: right; margin-top: -45px;">
+                <p>(Signature of the Policyholder)</p>
+            </div>
+        </div>
+        <br>
+        <div class="note">
+            <p><b>Note:</b></p>
+            <p>i. For the product related documents including the Customer Information sheet please refer to the
+                <a href="https://www.axismaxlife.com/investment-plans/smart-wealth-advantage-guarantee-plan" target="_blank">https://www.axismaxlife.com/investment-plans/smart-wealth-advantage-guarantee-plan</a>
+            </p>
+            <p>ii. In case of any conflict, the terms and conditions mentioned in the Policy document shall prevail.</p>
+            <p>iii. Sum Assured on Death is subject to underwriting, for actual Sum Assured details & updated UIN number (in case of modification), please refer to the Policy document.</p>
+            <p>iv. In the event of any conflict or discrepancy between any translated version and the English language
+                version of this CIS, the English language version of this CIS shall prevail. </p>
+        </div>
+    </div>
+</div>
+</body>

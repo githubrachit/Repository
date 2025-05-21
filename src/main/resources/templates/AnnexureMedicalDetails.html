@@ -1,0 +1,194 @@
+<td style="width: 100%;">
+    <table cellspacing="0" cellpadding="0" width="100%" style="border-collapse: collapse;border-color: #ccc;border-style:solid;border-width:1px;">
+        <tbody>
+        <tr>
+            <th colspan="6" style="background-color: #003770;border-color: #ccc;border-style:solid;border-width:1px; color: #fff;font-size: 12px; font-family: arial; padding: 5px 5px 5px 15px" align="center">Annexure</th>
+        </tr>
+        <tr>
+            <td colspan="3" width="80%" style="padding: 5px 5px 5px 15px;border-color: #ccc;border-style:solid;border-width:1px; font-size:12px; font-family: arial; border-right:none;">Please provide exact Nature of Job/ Role :
+            <span th:text=${sspNatureOfDuties}></span>
+            </td>
+        </tr>
+        <tr>
+            <td style="padding: 5px 5px 5px 15px;border-color: #888;border-style:solid;border-width:1px; font-weight: bold;font-size:12px;" width="80%"></td>
+            <td style="padding: 2px 4px;text-align: center;border-color: #888;border-style:solid;border-width:1px;font-size: 12px;font-family: arial;" width="10%"><strong>Proposer</strong>
+            </td>
+            <td style="padding: 2px 4px;text-align: center;border-color: #888;border-style:solid;border-width:1px;font-size: 12px;font-family: arial;" width="10%">
+                <strong>Insured</strong>
+            </td>
+        </tr>
+        <tr>
+            <td width="80%" style="padding: 5px 5px 5px 15px;border-color: #ccc;border-style:solid;border-width:1px; font-size:12px; font-family: arial;">Please enter total sum assured of all active life insurance policies for your parents, spouse and children across all insurance companies.</td>
+            <td width="10%" style="padding: 2px 2px; font-size:12px; font-family: arial;text-transform:uppercase;text-align: center;border-color: #ccc;border-style:solid;border-width:1px;" th:text=${sumAssuredForSpouseAndChildProposer}>
+            </td>
+            <td width="10%" style="padding: 2px 2px; font-size:12px; font-family: arial;text-transform:uppercase;text-align: center;border-color: #ccc;border-style:solid;border-width:1px;" th:text=${sumAssuredForSpouseAndChildInsured}>
+            </td>
+        </tr>
+        <!-- start blank row -->
+        <tr>
+            <td width="80%" style="padding: 8px;border-color: #ccc;border-style:solid;border-width:1px;"></td>
+            <td width="10%" style="padding: 8px;border-color: #ccc;border-style:solid;border-width:1px;">
+            </td>
+            <td width="10%" style="padding: 8px;border-color: #ccc;border-style:solid;border-width:1px;">
+            </td>
+        </tr>
+        <!-- end blank row -->
+        <tr>
+            <td width="80%" style=" padding: 5px 5px 5px 15px;border-color: #ccc;border-style:solid;border-width:1px; font-size:12px; font-family: arial;">Has your weight Changed more than 5Kgs in past 1 year ?</td>
+            <td width="10%" style="padding: 2px 2px; font-size:12px; font-family: arial;text-transform:uppercase;text-align: center;border-color: #ccc;border-style:solid;border-width:1px;" th:text=${isProposerWeightChange}>
+            </td>
+            <td width="10%" style="padding: 2px 2px; font-size:12px; font-family: arial;text-transform:uppercase;text-align: center;border-color: #ccc;border-style:solid;border-width:1px;" th:text=${isInsuredWeightChange}>
+            </td>
+        </tr>
+        <tr>
+            <td width="80%" style=" padding: 5px 5px 5px 15px;border-color: #ccc;border-style:solid;border-width:1px; font-size:12px; font-family: arial;">Please Provide Details</td>
+            <td width="10%" style="padding: 2px 2px; font-size:12px; font-family: arial;text-transform:uppercase;text-align: center;border-color: #ccc;border-style:solid;border-width:1px;text-transform: uppercase;" th:text=${proposerWeightChangeReason}>
+            </td>
+            <td width="10%" style="padding: 2px 2px; font-size:12px; font-family: arial;text-transform:uppercase;text-align: center;border-color: #ccc;border-style:solid;border-width:1px;" th:text=${insuredWeightChangeReason}>
+            </td>
+        </tr>
+        <!-- start blank row -->
+        <tr>
+            <td width="80%" style="padding: 8px;border-color: #ccc;border-style:solid;border-width:1px;"></td>
+            <td width="10%" style="padding: 8px;border-color: #ccc;border-style:solid;border-width:1px;">
+            </td>
+            <td width="10%" style="padding: 8px;border-color: #ccc;border-style:solid;border-width:1px;">
+            </td>
+        </tr>
+        <!-- end blank row -->
+        <tr>
+            <td width="80%" style=" padding: 5px 5px 5px 15px;border-color: #ccc;border-style:solid;border-width:1px; font-size:12px; font-family: arial;">
+                <span style="display: inline-block;padding-right: 4px;">1.</span>Tobacco/Alcohol/Drug Consumptions: Do you consume any of the
+            </td>
+            <td th:if="${proposerFormFlag} == true" width="10%"  style="padding: 2px 2px; font-size:12px; font-family: arial;text-transform:uppercase;text-align: center;border-color: #ccc;border-style:solid;border-width:1px;text-transform: uppercase;" th:text=${annexureQuestions?.quesTobaccoAlcoholDrugAns}></td>
+            <td th:if="${proposerFormFlag} == true" width="10%" style="padding: 2px 2px; font-size:12px; font-family: arial;text-transform:uppercase;text-align: center;border-color: #ccc;border-style:solid;border-width:1px;text-transform: uppercase;" th:text=${annexureQuestions?.quesTobaccoAlcoholDrugAnsInsured}></td>
+            <td th:if="${proposerFormFlag} == false" width="10%" style="padding: 2px 2px; font-size:12px; font-family: arial;text-transform:uppercase;text-align: center;border-color: #ccc;border-style:solid;border-width:1px;text-transform: uppercase;">NA</td>
+            <td th:if="${proposerFormFlag} == false" width="10%" style="padding: 2px 2px; font-size:12px; font-family: arial;text-transform:uppercase;text-align: center;border-color: #ccc;border-style:solid;border-width:1px;text-transform: uppercase;" th:text=${annexureQuestions?.quesTobaccoAlcoholDrugAns}></td>
+        </tr>
+        <tr>
+            <td width="80%" style=" padding: 5px 5px 5px 36px;border-color: #ccc;border-style:solid;border-width:1px; font-size:12px; font-family: arial;">Smoking : Currently or even occasionally in last 2 years?</td>
+            <td th:if="${proposerFormFlag} == true" width="10%"  style="padding: 2px 2px; font-size:12px; font-family: arial;text-transform:uppercase;text-align: center;border-color: #ccc;border-style:solid;border-width:1px;text-transform: uppercase;" th:text=${annexureQuestions?.quesSmokingAns}></td>
+            <td th:if="${proposerFormFlag} == true" width="10%" style="padding: 2px 2px; font-size:12px; font-family: arial;text-transform:uppercase;text-align: center;border-color: #ccc;border-style:solid;border-width:1px;text-transform: uppercase;" th:text=${annexureQuestions?.quesSmokingAnsInsured}></td>
+            <td th:if="${proposerFormFlag} == false" width="10%" style="padding: 2px 2px; font-size:12px; font-family: arial;text-transform:uppercase;text-align: center;border-color: #ccc;border-style:solid;border-width:1px;text-transform: uppercase;">NA</td>
+            <td th:if="${proposerFormFlag} == false" width="10%" style="padding: 2px 2px; font-size:12px; font-family: arial;text-transform:uppercase;text-align: center;border-color: #ccc;border-style:solid;border-width:1px;text-transform: uppercase;" th:text=${annexureQuestions?.quesSmokingAns}></td>
+        </tr>
+        <tr>
+            <td width="80%" style=" padding: 5px 5px 5px 52px;border-color: #ccc;border-style:solid;border-width:1px; font-size:12px; font-family: arial;">Quantity</td>
+            <td th:if="${proposerFormFlag} == true" width="10%"  style="padding: 2px 2px; font-size:12px; font-family: arial;text-transform:uppercase;text-align: center;border-color: #ccc;border-style:solid;border-width:1px;text-transform: uppercase;" th:text=${annexureQuestions?.quesSmokingQtyAns}></td>
+            <td th:if="${proposerFormFlag} == true" width="10%" style="padding: 2px 2px; font-size:12px; font-family: arial;text-transform:uppercase;text-align: center;border-color: #ccc;border-style:solid;border-width:1px;text-transform: uppercase;" th:text=${annexureQuestions?.quesSmokingQtyAnsInsured}></td>
+            <td th:if="${proposerFormFlag} == false" width="10%" style="padding: 2px 2px; font-size:12px; font-family: arial;text-transform:uppercase;text-align: center;border-color: #ccc;border-style:solid;border-width:1px;text-transform: uppercase;"></td>
+            <td th:if="${proposerFormFlag} == false" width="10%" style="padding: 2px 2px; font-size:12px; font-family: arial;text-transform:uppercase;text-align: center;border-color: #ccc;border-style:solid;border-width:1px;text-transform: uppercase;" th:text=${annexureQuestions?.quesSmokingQtyAns}></td>
+        </tr>
+        <tr>
+            <td width="80%" style=" padding: 5px 5px 5px 52px;border-color: #ccc;border-style:solid;border-width:1px; font-size:12px; font-family: arial;">Frequency</td>
+            <td th:if="${proposerFormFlag} == true" width="10%"  style="padding: 2px 2px; font-size:12px; font-family: arial;text-transform:uppercase;text-align: center;border-color: #ccc;border-style:solid;border-width:1px;text-transform: uppercase;" th:text=${annexureQuestions?.quesSmokingFreqAns}></td>
+            <td th:if="${proposerFormFlag} == true" width="10%" style="padding: 2px 2px; font-size:12px; font-family: arial;text-transform:uppercase;text-align: center;border-color: #ccc;border-style:solid;border-width:1px;text-transform: uppercase;" th:text=${annexureQuestions?.quesSmokingFreqAnsInsured}></td>
+            <td th:if="${proposerFormFlag} == false" width="10%" style="padding: 2px 2px; font-size:12px; font-family: arial;text-transform:uppercase;text-align: center;border-color: #ccc;border-style:solid;border-width:1px;text-transform: uppercase;"></td>
+            <td th:if="${proposerFormFlag} == false" width="10%" style="padding: 2px 2px; font-size:12px; font-family: arial;text-transform:uppercase;text-align: center;border-color: #ccc;border-style:solid;border-width:1px;text-transform: uppercase;" th:text=${annexureQuestions?.quesSmokingFreqAns}></td>
+        </tr>
+        <tr>
+            <td width="80%" style=" padding: 5px 5px 5px 36px;border-color: #ccc;border-style:solid;border-width:1px; font-size:12px; font-family: arial;">Tobacco Sachet / Gutka / Falvoured Pan Masala</td>
+            <td th:if="${proposerFormFlag} == true" width="10%"  style="padding: 2px 2px; font-size:12px; font-family: arial;text-transform:uppercase;text-align: center;border-color: #ccc;border-style:solid;border-width:1px;text-transform: uppercase;" th:text=${annexureQuestions?.quesTobaccoGutkaPanMasalaAns}></td>
+            <td th:if="${proposerFormFlag} == true" width="10%" style="padding: 2px 2px; font-size:12px; font-family: arial;text-transform:uppercase;text-align: center;border-color: #ccc;border-style:solid;border-width:1px;text-transform: uppercase;" th:text=${annexureQuestions?.quesTobaccoGutkaPanMasalaAnsInsured}></td>
+            <td th:if="${proposerFormFlag} == false" width="10%" style="padding: 2px 2px; font-size:12px; font-family: arial;text-transform:uppercase;text-align: center;border-color: #ccc;border-style:solid;border-width:1px;text-transform: uppercase;">NA</td>
+            <td th:if="${proposerFormFlag} == false" width="10%" style="padding: 2px 2px; font-size:12px; font-family: arial;text-transform:uppercase;text-align: center;border-color: #ccc;border-style:solid;border-width:1px;text-transform: uppercase;" th:text=${annexureQuestions?.quesTobaccoGutkaPanMasalaAns}></td>
+        </tr>
+        <tr>
+            <td width="80%" style=" padding: 5px 5px 5px 52px;border-color: #ccc;border-style:solid;border-width:1px; font-size:12px; font-family: arial;">Quantity</td>
+            <td th:if="${proposerFormFlag} == true" width="10%"  style="padding: 2px 2px; font-size:12px; font-family: arial;text-transform:uppercase;text-align: center;border-color: #ccc;border-style:solid;border-width:1px;text-transform: uppercase;" th:text=${annexureQuestions?.quesTobaccoGutkaPanMasalaQtyAns}></td>
+            <td th:if="${proposerFormFlag} == true" width="10%" style="padding: 2px 2px; font-size:12px; font-family: arial;text-transform:uppercase;text-align: center;border-color: #ccc;border-style:solid;border-width:1px;text-transform: uppercase;" th:text=${annexureQuestions?.quesTobaccoGutkaPanMasalaQtyAnsInsured}></td>
+            <td th:if="${proposerFormFlag} == false" width="10%" style="padding: 2px 2px; font-size:12px; font-family: arial;text-transform:uppercase;text-align: center;border-color: #ccc;border-style:solid;border-width:1px;text-transform: uppercase;"></td>
+            <td th:if="${proposerFormFlag} == false" width="10%" style="padding: 2px 2px; font-size:12px; font-family: arial;text-transform:uppercase;text-align: center;border-color: #ccc;border-style:solid;border-width:1px;text-transform: uppercase;" th:text=${annexureQuestions?.quesTobaccoGutkaPanMasalaQtyAns}></td>
+        </tr>
+        <tr>
+            <td width="80%" style=" padding: 5px 5px 5px 52px;border-color: #ccc;border-style:solid;border-width:1px; font-size:12px; font-family: arial;">Frequency</td>
+            <td th:if="${proposerFormFlag} == true" width="10%"  style="padding: 2px 2px; font-size:12px; font-family: arial;text-transform:uppercase;text-align: center;border-color: #ccc;border-style:solid;border-width:1px;text-transform: uppercase;" th:text=${annexureQuestions?.quesTobaccoGutkaPanMasalaFreqAns}></td>
+            <td th:if="${proposerFormFlag} == true" width="10%" style="padding: 2px 2px; font-size:12px; font-family: arial;text-transform:uppercase;text-align: center;border-color: #ccc;border-style:solid;border-width:1px;text-transform: uppercase;" th:text=${annexureQuestions?.quesTobaccoGutkaPanMasalaFreqAnsInsured}></td>
+            <td th:if="${proposerFormFlag} == false" width="10%" style="padding: 2px 2px; font-size:12px; font-family: arial;text-transform:uppercase;text-align: center;border-color: #ccc;border-style:solid;border-width:1px;text-transform: uppercase;"></td>
+            <td th:if="${proposerFormFlag} == false" width="10%" style="padding: 2px 2px; font-size:12px; font-family: arial;text-transform:uppercase;text-align: center;border-color: #ccc;border-style:solid;border-width:1px;text-transform: uppercase;" th:text=${annexureQuestions?.quesTobaccoGutkaPanMasalaFreqAns}></td>
+        </tr>
+        <!-- start blank row -->
+        <tr>
+            <td width="80%" style="padding: 8px;border-color: #ccc;border-style:solid;border-width:1px;"></td>
+            <td width="10%" style="padding: 8px;border-color: #ccc;border-style:solid;border-width:1px;">
+            </td>
+            <td width="10%" style="padding: 8px;border-color: #ccc;border-style:solid;border-width:1px;">
+            </td>
+        </tr>
+        <!-- end blank row -->
+        <tr>
+            <td width="80%" style=" padding: 5px 5px 5px 15px;border-color: #ccc;border-style:solid;border-width:1px; font-size:12px; font-family: arial;">
+                <span style="display: inline-block;padding-right: 4px;">2.</span>Do you consume or have ever consumed Alcohol such as Beer / Wine / Hard Liquor?
+            </td>
+            <td th:if="${proposerFormFlag} == true" width="10%"  style="padding: 2px 2px; font-size:12px; font-family: arial;text-transform:uppercase;text-align: center;border-color: #ccc;border-style:solid;border-width:1px;text-transform: uppercase;" th:text=${annexureQuestions?.quesBeerWineHardLiquorAns}></td>
+            <td th:if="${proposerFormFlag} == true" width="10%" style="padding: 2px 2px; font-size:12px; font-family: arial;text-transform:uppercase;text-align: center;border-color: #ccc;border-style:solid;border-width:1px;text-transform: uppercase;" th:text=${annexureQuestions?.quesBeerWineHardLiquorAnsInsured}></td>
+            <td th:if="${proposerFormFlag} == false" width="10%" style="padding: 2px 2px; font-size:12px; font-family: arial;text-transform:uppercase;text-align: center;border-color: #ccc;border-style:solid;border-width:1px;text-transform: uppercase;">NA</td>
+            <td th:if="${proposerFormFlag} == false" width="10%" style="padding: 2px 2px; font-size:12px; font-family: arial;text-transform:uppercase;text-align: center;border-color: #ccc;border-style:solid;border-width:1px;text-transform: uppercase;" th:text=${annexureQuestions?.quesBeerWineHardLiquorAns}></td>
+        </tr>
+        <tr>
+            <td width="80%" style=" padding: 5px 5px 5px 36px;border-color: #ccc;border-style:solid;border-width:1px; font-size:12px; font-family: arial;text-transform: uppercase;">Beer</td>
+            <td th:if="${proposerFormFlag} == true" width="10%"  style="padding: 2px 2px; font-size:12px; font-family: arial;text-transform:uppercase;text-align: center;border-color: #ccc;border-style:solid;border-width:1px;text-transform: uppercase;" th:text=${annexureQuestions?.quesBeerAns}></td>
+            <td th:if="${proposerFormFlag} == true" width="10%" style="padding: 2px 2px; font-size:12px; font-family: arial;text-transform:uppercase;text-align: center;border-color: #ccc;border-style:solid;border-width:1px;text-transform: uppercase;" th:text=${annexureQuestions?.quesBeerAnsInsured}></td>
+            <td th:if="${proposerFormFlag} == false" width="10%" style="padding: 2px 2px; font-size:12px; font-family: arial;text-transform:uppercase;text-align: center;border-color: #ccc;border-style:solid;border-width:1px;text-transform: uppercase;">NA</td>
+            <td th:if="${proposerFormFlag} == false" width="10%" style="padding: 2px 2px; font-size:12px; font-family: arial;text-transform:uppercase;text-align: center;border-color: #ccc;border-style:solid;border-width:1px;text-transform: uppercase;" th:text=${annexureQuestions?.quesBeerAns}></td>
+        </tr>
+        <tr>
+            <td width="80%" style=" padding: 5px 5px 5px 52px;border-color: #ccc;border-style:solid;border-width:1px; font-size:12px; font-family: arial;">Quantity (ml)</td>
+            <td th:if="${proposerFormFlag} == true" width="10%"  style="padding: 2px 2px; font-size:12px; font-family: arial;text-transform:uppercase;text-align: center;border-color: #ccc;border-style:solid;border-width:1px;text-transform: uppercase;" th:text=${annexureQuestions?.quesBeerQtyAns}></td>
+            <td th:if="${proposerFormFlag} == true" width="10%" style="padding: 2px 2px; font-size:12px; font-family: arial;text-transform:uppercase;text-align: center;border-color: #ccc;border-style:solid;border-width:1px;text-transform: uppercase;" th:text=${annexureQuestions?.quesBeerQtyAnsInsured}></td>
+            <td th:if="${proposerFormFlag} == false" width="10%" style="padding: 2px 2px; font-size:12px; font-family: arial;text-transform:uppercase;text-align: center;border-color: #ccc;border-style:solid;border-width:1px;text-transform: uppercase;"></td>
+            <td th:if="${proposerFormFlag} == false" width="10%" style="padding: 2px 2px; font-size:12px; font-family: arial;text-transform:uppercase;text-align: center;border-color: #ccc;border-style:solid;border-width:1px;text-transform: uppercase;" th:text=${annexureQuestions?.quesBeerQtyAns}></td>
+        </tr>
+        <tr>
+            <td width="80%" style=" padding: 5px 5px 5px 52px;border-color: #ccc;border-style:solid;border-width:1px; font-size:12px; font-family: arial;">Frequency</td>
+            <td th:if="${proposerFormFlag} == true" width="10%"  style="padding: 2px 2px; font-size:12px; font-family: arial;text-transform:uppercase;text-align: center;border-color: #ccc;border-style:solid;border-width:1px;text-transform: uppercase;" th:text=${annexureQuestions?.quesBeerFreqAns}></td>
+            <td th:if="${proposerFormFlag} == true" width="10%" style="padding: 2px 2px; font-size:12px; font-family: arial;text-transform:uppercase;text-align: center;border-color: #ccc;border-style:solid;border-width:1px;text-transform: uppercase;" th:text=${annexureQuestions?.quesBeerFreqAnsInsured}> </td>
+            <td th:if="${proposerFormFlag} == false" width="10%" style="padding: 2px 2px; font-size:12px; font-family: arial;text-transform:uppercase;text-align: center;border-color: #ccc;border-style:solid;border-width:1px;text-transform: uppercase;"></td>
+            <td th:if="${proposerFormFlag} == false" width="10%" style="padding: 2px 2px; font-size:12px; font-family: arial;text-transform:uppercase;text-align: center;border-color: #ccc;border-style:solid;border-width:1px;text-transform: uppercase;" th:text=${annexureQuestions?.quesBeerFreqAns}></td>
+        </tr>
+        <tr>
+            <td width="80%" style=" padding: 5px 5px 5px 36px;border-color: #ccc;border-style:solid;border-width:1px; font-size:12px; font-family: arial;text-transform: uppercase;">Wine</td>
+            <td th:if="${proposerFormFlag} == true" width="10%"  style="padding: 2px 2px; font-size:12px; font-family: arial;text-transform:uppercase;text-align: center;border-color: #ccc;border-style:solid;border-width:1px;text-transform: uppercase;" th:text=${annexureQuestions?.quesWineAns}></td>
+            <td th:if="${proposerFormFlag} == true" width="10%" style="padding: 2px 2px; font-size:12px; font-family: arial;text-transform:uppercase;text-align: center;border-color: #ccc;border-style:solid;border-width:1px;text-transform: uppercase;" th:text=${annexureQuestions?.quesWineAnsInsured}></td>
+            <td th:if="${proposerFormFlag} == false" width="10%" style="padding: 2px 2px; font-size:12px; font-family: arial;text-transform:uppercase;text-align: center;border-color: #ccc;border-style:solid;border-width:1px;text-transform: uppercase;">NA</td>
+            <td th:if="${proposerFormFlag} == false" width="10%" style="padding: 2px 2px; font-size:12px; font-family: arial;text-transform:uppercase;text-align: center;border-color: #ccc;border-style:solid;border-width:1px;text-transform: uppercase;" th:text=${annexureQuestions?.quesWineAns}></td>
+        </tr>
+        <tr>
+            <td width="80%" style=" padding: 5px 5px 5px 52px;border-color: #ccc;border-style:solid;border-width:1px; font-size:12px; font-family: arial;">Quantity (ml)</td>
+            <td th:if="${proposerFormFlag} == true" width="10%"  style="padding: 2px 2px; font-size:12px; font-family: arial;text-transform:uppercase;text-align: center;border-color: #ccc;border-style:solid;border-width:1px;text-transform: uppercase;" th:text=${annexureQuestions?.quesWineQtyAns}></td>
+            <td th:if="${proposerFormFlag} == true" width="10%" style="padding: 2px 2px; font-size:12px; font-family: arial;text-transform:uppercase;text-align: center;border-color: #ccc;border-style:solid;border-width:1px;text-transform: uppercase;" th:text=${annexureQuestions?.quesWineQtyAnsInsured}></td>
+            <td th:if="${proposerFormFlag} == false" width="10%" style="padding: 2px 2px; font-size:12px; font-family: arial;text-transform:uppercase;text-align: center;border-color: #ccc;border-style:solid;border-width:1px;text-transform: uppercase;"></td>
+            <td th:if="${proposerFormFlag} == false" width="10%" style="padding: 2px 2px; font-size:12px; font-family: arial;text-transform:uppercase;text-align: center;border-color: #ccc;border-style:solid;border-width:1px;text-transform: uppercase;" th:text=${annexureQuestions?.quesWineQtyAns}></td>
+        </tr>
+        <tr>
+            <td width="80%" style=" padding: 5px 5px 5px 52px;border-color: #ccc;border-style:solid;border-width:1px; font-size:12px; font-family: arial;">Frequency</td>
+            <td th:if="${proposerFormFlag} == true" width="10%"  style="padding: 2px 2px; font-size:12px; font-family: arial;text-transform:uppercase;text-align: center;border-color: #ccc;border-style:solid;border-width:1px;text-transform: uppercase;" th:text=${annexureQuestions?.quesWineFreqAns}></td>
+            <td th:if="${proposerFormFlag} == true" width="10%" style="padding: 2px 2px; font-size:12px; font-family: arial;text-transform:uppercase;text-align: center;border-color: #ccc;border-style:solid;border-width:1px;text-transform: uppercase;" th:text=${annexureQuestions?.quesWineFreqAnsInsured}></td>
+            <td th:if="${proposerFormFlag} == false" width="10%" style="padding: 2px 2px; font-size:12px; font-family: arial;text-transform:uppercase;text-align: center;border-color: #ccc;border-style:solid;border-width:1px;text-transform: uppercase;"></td>
+            <td th:if="${proposerFormFlag} == false" width="10%" style="padding: 2px 2px; font-size:12px; font-family: arial;text-transform:uppercase;text-align: center;border-color: #ccc;border-style:solid;border-width:1px;text-transform: uppercase;" th:text=${annexureQuestions?.quesWineFreqAns}></td>
+        </tr>
+        <tr>
+            <td width="80%" style=" padding: 5px 5px 5px 36px;border-color: #ccc;border-style:solid;border-width:1px; font-size:12px; font-family: arial;">Hard liquor</td>
+            <td th:if="${proposerFormFlag} == true" width="10%"  style="padding: 2px 2px; font-size:12px; font-family: arial;text-transform:uppercase;text-align: center;border-color: #ccc;border-style:solid;border-width:1px;text-transform: uppercase;" th:text=${annexureQuestions?.quesHardLiquorAns}></td>
+            <td th:if="${proposerFormFlag} == true" width="10%" style="padding: 2px 2px; font-size:12px; font-family: arial;text-transform:uppercase;text-align: center;border-color: #ccc;border-style:solid;border-width:1px;text-transform: uppercase;" th:text=${annexureQuestions?.quesHardLiquorAnsInsured}></td>
+            <td th:if="${proposerFormFlag} == false" width="10%" style="padding: 2px 2px; font-size:12px; font-family: arial;text-transform:uppercase;text-align: center;border-color: #ccc;border-style:solid;border-width:1px;text-transform: uppercase;">NA</td>
+            <td th:if="${proposerFormFlag} == false" width="10%" style="padding: 2px 2px; font-size:12px; font-family: arial;text-transform:uppercase;text-align: center;border-color: #ccc;border-style:solid;border-width:1px;text-transform: uppercase;" th:text=${annexureQuestions?.quesHardLiquorAns}></td>
+        </tr>
+        <tr>
+            <td width="80%" style=" padding: 5px 5px 5px 52px;border-color: #ccc;border-style:solid;border-width:1px; font-size:12px; font-family: arial;">Quantity (ml)</td>
+            <td th:if="${proposerFormFlag} == true" width="10%"  style="padding: 2px 2px; font-size:12px; font-family: arial;text-transform:uppercase;text-align: center;border-color: #ccc;border-style:solid;border-width:1px;text-transform: uppercase;" th:text=${annexureQuestions?.quesHardLiquorQtyAns}></td>
+            <td th:if="${proposerFormFlag} == true" width="10%" style="padding: 2px 2px; font-size:12px; font-family: arial;text-transform:uppercase;text-align: center;border-color: #ccc;border-style:solid;border-width:1px;text-transform: uppercase;" th:text=${annexureQuestions?.quesHardLiquorQtyAnsInsured}></td>
+            <td th:if="${proposerFormFlag} == false" width="10%" style="padding: 2px 2px; font-size:12px; font-family: arial;text-transform:uppercase;text-align: center;border-color: #ccc;border-style:solid;border-width:1px;text-transform: uppercase;"></td>
+            <td th:if="${proposerFormFlag} == false" width="10%" style="padding: 2px 2px; font-size:12px; font-family: arial;text-transform:uppercase;text-align: center;border-color: #ccc;border-style:solid;border-width:1px;text-transform: uppercase;" th:text=${annexureQuestions?.quesHardLiquorQtyAns}></td>
+        </tr>
+        <tr>
+            <td width="80%" style=" padding: 5px 5px 5px 52px;border-color: #ccc;border-style:solid;border-width:1px; font-size:12px; font-family: arial;">Frequency</td>
+            <td th:if="${proposerFormFlag} == true" width="10%"  style="padding: 2px 2px; font-size:12px; font-family: arial;text-transform:uppercase;text-align: center;border-color: #ccc;border-style:solid;border-width:1px;text-transform: uppercase;" th:text=${annexureQuestions?.quesHardLiquorFreqAns}></td>
+            <td th:if="${proposerFormFlag} == true" width="10%" style="padding: 2px 2px; font-size:12px; font-family: arial;text-transform:uppercase;text-align: center;border-color: #ccc;border-style:solid;border-width:1px;text-transform: uppercase;" th:text=${annexureQuestions?.quesHardLiquorFreqAnsInsured}></td>
+            <td th:if="${proposerFormFlag} == false" width="10%" style="padding: 2px 2px; font-size:12px; font-family: arial;text-transform:uppercase;text-align: center;border-color: #ccc;border-style:solid;border-width:1px;text-transform: uppercase;"></td>
+            <td th:if="${proposerFormFlag} == false" width="10%" style="padding: 2px 2px; font-size:12px; font-family: arial;text-transform:uppercase;text-align: center;border-color: #ccc;border-style:solid;border-width:1px;text-transform: uppercase;" th:text=${annexureQuestions?.quesHardLiquorFreqAns}></td>
+        </tr>
+        </tbody>
+    </table>
+
+</td>

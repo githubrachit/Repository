@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="utf-8">
+    <style>
+        table,
+        th,
+        td {
+            border: 1px solid black;
+            border-collapse: collapse;
+        }
+    </style>
+</head>
+
+<body>
+
+<table width="100%" border="1" cellspacing="0" cellpadding="0" style="border-collapse: collapse;">
+    <tr>
+        <td width="50%" style="padding: 2px 4px; font-size: 15px; font-family: arial;">Policy Number</td>
+        <td width="50%" style="padding: 2px 4px; font-size: 15px; font-family: arial;">
+            <span style="" th:text=${PolicyNumber}></span></td>
+    </tr>
+    <tr>
+        <td width="50%" style="padding: 2px 4px; font-size: 15px; font-family: arial;">Customer Name</td>
+        <td width="50%" style="padding: 2px 4px; font-size: 15px; font-family: arial;">
+            <span style="" th:text="${customerName}"></span>
+        </td>
+    </tr>
+    <tr>
+        <td width="50%" style="padding: 2px 4px; font-size: 15px; font-family: arial;">Sum Assured</td>
+        <td width="50%" style="padding: 2px 4px; font-size: 15px; font-family: arial;">
+            <span style="" th:text="${sumAssured}"></span>
+        </td>
+    </tr>
+    <tr>
+        <td width="50%" style="padding: 2px 4px; font-size: 15px; font-family: arial;">PayU Income</td>
+        <td width="50%" style="padding: 2px 4px; font-size: 15px; font-family: arial;">
+            <span style="" th:text="${payUIncome}"></span>
+        </td>
+    </tr>
+    <tr>
+        <td width="50%" style="padding: 2px 4px; font-size: 15px; font-family: arial;">CIBIL Score</td>
+        <td width="50%" style="padding: 2px 4px; font-size: 15px; font-family: arial;">
+            <span style="" th:text="${cibilScore}"></span>
+        </td>
+    </tr>
+    <tr>
+        <td width="50%" style="padding: 2px 4px; font-size: 15px; font-family: arial;">CIBIL Status</td>
+        <td width="50%" style="padding: 2px 4px; font-size: 15px; font-family: arial;">
+            <span style="" th:text="${cibilStatus}"></span>
+        </td>
+    </tr>
+    <tr>
+        <td width="50%" style="padding: 2px 4px; font-size: 15px; font-family: arial;">CIBIL Income</td>
+        <td width="50%" style="padding: 2px 4px; font-size: 15px; font-family: arial;">
+            <span style="" th:text="${cibilIncome}"></span>
+        </td>
+    </tr>
+</table>
+</body>
+
+</html>

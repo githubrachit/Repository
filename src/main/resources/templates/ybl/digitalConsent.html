@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title></title>
+	</head>
+	<body>
+	<div>
+		<table>
+			<tbody>
+			<tr>
+				<td style="width:100%"><img src='classpath:static/logo-IRP.png'
+											alt="Axis Max Life Insurance"
+											width="100%" height="100"></td>
+				<td>&nbsp;</td>
+			</tr>
+			</tbody>
+		</table>
+	</div>
+		<table width="100%" cellspacing="0" cellpadding="5" style="border:0px;solid #ccc;">
+		<tbody>
+			<tr>
+				<td>
+					<table width="100%" cellspacing="0" cellpadding="5">
+					<tbody>
+					<tr>
+						<!--<td align="left" width="15%">
+							<img src="classpath:static/logo.png" alt="Max Life Insurance" width="100"/>
+						</td>-->
+						<td align="center" width="70%">
+							<h2 style="font-size: 20px !important;font-family: arial;color: #013873;">YBL – Digital Customer Consent</h2>
+						</td>
+						<td align="center" width="15%">
+						</td>
+					</tr>
+					<tr>
+						<td colspan="3" height="30">
+						</td>
+					</tr>
+					</tbody>
+					</table>
+					<table width="100%">
+					<tbody>
+						<tr>
+						<td style="font-weight: normal; font-size: 10px; font-family: arial;">
+						<span style="display: inline-block;padding-right:5px;"><b><i>Document Generation Date/Time:</i></b></span>
+						<span style="display: inline-block;text-transform:uppercase"><i th:text="${yblMap.get('documentGeneration')}"/></span>
+						</td>
+						</tr>
+						<tr align="center" height="15"/>
+						<tr>
+							<td style="font-weight: normal; font-size: 10px; font-family: arial;">
+							<span style="display: inline-block;padding-right:5px;"><b>Customer ID :</b></span>
+							<span style="display: inline-block;text-transform:uppercase"><i th:text="${yblMap.get('customerId')}"/></span>
+							</td>
+						</tr>
+						<tr align="center" height="15"/>
+						<tr>
+							<td style="font-weight: normal; font-size: 10px; font-family: arial;">
+							<span style="display: inline-block;padding-right:5px;"><b>Name of Customer:</b></span>
+							<span style="display: inline-block;text-transform:uppercase"><i th:text="${yblMap.get('fullName')}"/></span>
+							</td>
+						</tr>
+						<tr align="center" height="38"/>
+					</tbody>
+					</table>
+					<table width="100%" border="0" cellspacing="0" bordercolor="#ccc" cellpadding="10" style="font-weight: normal; font-size: 10px; font-family: arial;">
+					<tbody>
+						<tr>
+							<td style="font-weight: 600;font-size: 15px;padding-bottom: 10px">
+							 Fetching Customer Details
+							</td>
+						</tr>
+					</tbody>
+					</table>
+					<table width="100%" border="1" cellspacing="0" bordercolor="#ccc" cellpadding="10" style="font-weight: normal; font-size: 10px; font-family: arial;">
+					<tbody>
+						<tr>
+							<td align="left" width="33%" bgcolor="#f0f0f0"><b>Consent Message sent:</b>
+							</td>
+							<td align="left" width="33%">Date/Time:<span th:text="${yblMap.get('customerOtpSent')}"></span>
+							</td>
+						</tr>
+						<tr>
+							<td align="left" width="33%" bgcolor="#f0f0f0"><b>Consent Message:</b>
+							</td>
+							<td align="left" width="33%"><b><span>XXXXXX is your OTP for consent to YES Bank for sharing your information with Axis Max Life Insurance for purpose of processing issuance of Insurance policy</span></b>
+							</td>
+						</tr>
+						<tr>
+							<td align="left" width="33%" bgcolor="#f0f0f0">
+							 <b>Consent Message Validated:</b>
+							</td>
+							<td align="left" width="33%">Date/Time:<span th:text="${yblMap.get('customerOtpValidated')}"></span>
+							</td>
+						</tr>
+					</tbody>
+					</table>
+					<table width="100%" border="0" cellspacing="0">
+					<tbody>
+						<tr>
+							<td height="38px">
+							</td>
+						</tr>
+					</tbody>
+					</table>
+					<table th:if="${yblMap.get('directDebitFlag')}" width="100%" border="0" cellspacing="0" bordercolor="#ccc" cellpadding="10" style="font-weight: normal; font-size: 10px; font-family: arial;">
+					<tbody>
+						<tr>
+							<td style="width: 100%;font-weight: 600;font-size: 15px;padding-bottom: 10px">Direct Debit
+							</td>
+						</tr>
+					</tbody>
+					</table>
+					<table th:if="${yblMap.get('directDebitFlag')}" width="100%" border="1" cellspacing="0" bordercolor="#ccc" cellpadding="10" style="font-weight: normal; font-size: 10px; font-family: arial;">
+					<tbody>
+						<tr>
+							<td bgcolor="#f0f0f0" align="left" width="33%"><b>Consent Message Sent:</b>
+							</td>
+							<td align="left" width="33%">Date/Time:<span th:text="${yblMap.get('directDebitOtpSent')}"></span>
+							</td>
+						</tr>
+						<tr>
+							<td bgcolor="#f0f0f0" align="left" width="33%"><b>Consent Message:</b>
+							</td>
+							<td align="left" width="33%"><span><b>XXXXXX is your OTP for debiting your bank account with Rs.<span th:text="${yblMap.get('directDebitAmount')}"></span>/- for payment of premium related to your Insurance policy with Axis MAX Life Insurance</b></span>
+							</td>
+						</tr>
+						<tr>
+							<td bgcolor="#f0f0f0" align="left" width="33%"><b>Consent Message Validated:</b>
+							</td>
+							<td align="left" width="33%">Date/Time:<span th:text="${yblMap.get('directDebitOtpValidated')}"></span>
+							</td>
+						</tr>
+					</tbody>
+					</table>
+					<table width="100%" cellspacing="0">
+					<tbody>
+						<tr>
+							<td height="20">
+							</td>
+						</tr>
+					</tbody>
+					</table>
+					<table width="100%" cellspacing="0">
+					<tbody>
+						<tr>
+							<td height="20">
+							</td>
+						</tr>
+					</tbody>
+					</table>
+					<table width="100%" cellspacing="0">
+					<tbody>
+						<tr>
+							<td height="80">
+							</td>
+						</tr>
+					</tbody>
+					</table>
+					<table width="100%" cellspacing="0">
+					<tbody>
+						<tr>
+							<td style="font-weight: normal; font-size: 11px !important; font-family: arial;" align="center">This is a system generated document
+							</td>
+						</tr>
+					</tbody>
+					</table>
+					<table width="100%" cellspacing="0">
+					<tbody>
+						<tr>
+							<td height="30">
+							</td>
+						</tr>
+					</tbody>
+					</table>
+					<table width="100%">
+						<tbody>
+							<tr>
+								<td>
+									<!--<div th:if="${isNotYBLProposal}">
+										<img src="classpath:static/footer_updated.png" alt="Max Life Insurance" width="150"/>
+									</div>-->
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</td>
+			</tr>
+		</tbody>
+		</table>
+	</body>
+</html>

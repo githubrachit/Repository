@@ -1,0 +1,435 @@
+<style>
+    body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        margin: 0;
+        font-family: sans-serif;
+    }
+    * {
+        font-size: 11pt;
+    }
+    .container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 20px;
+        padding: 20px;
+        border : none;
+        max-width: 210mm; /* A4 width */
+        box-sizing: border-box; /* Ensure padding and border are included in the width */
+        font-size: 11pt
+    }
+    .title {
+        font-size: 11pt;
+        font-weight: bold;
+        margin-bottom: 10px;
+        text-align: center;
+    }
+    .info-table {
+        max-width: 100%; /* Ensure the table does not exceed its container */
+        width: 100%;
+        border-collapse: collapse;
+        table-layout: fixed; /* Ensure columns fit within the table */
+        margin: auto; /* Center the table */
+    }
+    .info-table th,
+    .info-table td {
+        padding: 10px;
+        border: 1px solid #000;
+        text-align: left;
+        word-wrap: break-word; /* Ensure text wraps within cells */
+        overflow-wrap: break-word; /* Additional support for wrapping */
+        vertical-align: top;
+    }
+    .info-table th {
+        background-color: #f2f2f2;
+        font-weight: bold;
+    }
+    /* Apply thicker border to the second column */
+    .info-table th:nth-child(3),
+    .info-table td:nth-child(3) {
+        width: 55%; /* Adjust the percentage to your needs */
+    }
+    .info-table th:nth-child(1),
+    .info-table td:nth-child(1) {
+      width: 8%; /* Adjust the percentage to your needs */
+    }
+    .info-table th:nth-child(4),
+    .info-table td:nth-child(4) {
+        width: 15%;
+    }
+    .disclaimer {
+        font-size: 11pt;
+        margin-top: 10px;
+        text-align: center;
+    }
+    ul.custom {
+        padding-left: 20px;
+    }
+</style>
+<body>
+<div class="container">
+    <h1 class="title"><u>CUSTOMER INFORMATION SHEET / KNOW YOUR POLICY</u></h1>
+    <p><strong>Customer Information Sheet reference no. </strong><span th:text="${policyNumber}"></span></p>
+    <p>This document provides key information about your policy. You are also advised to go through your policy document.</p>
+    <table class="info-table">
+        <thead>
+        <tr>
+            <th>SI. no.</th>
+            <th>Title</th>
+            <th>Description in Simple Words <br><i>(Please refer to applicable Policy Clause Number in next column)</i></th>
+            <th>Policy Clause Number</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td>1</td>
+            <td>Name of the Insurance Product and Unique Identification Number (UIN)</td>
+            <td><span th:text="${productName} + ' UIN: ' + ${UIN}"></span></td>
+            <td>Policy Preamble</td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>Policy Number</td>
+            <td><span th:text="${policyNumber}"></span></td>
+            <td>Policy Schedule</td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td>Type of Insurance Policy</td>
+            <td><span th:text="${typeOfInsurance}"></span></td>
+            <td>Policy Preamble</td>
+        </tr>
+        <tr>
+            <td>4</td>
+            <td>Basic Policy details</td>
+            <td>
+                <span style="font-weight: bold;">&#8226; Instalment Premium: </span>
+                <span th:text="${instalmentPremium}"></span><br>
+                <span style="font-weight: bold;">&#8226; Mode of Premium Payment: </span>
+                <span th:text="${premiumPaymentMode}"></span><br>
+                <span style="font-weight: bold;">&#8226; Sum Assured on Death: </span>
+                <span th:text="${sumAssuredOnDeath}"></span><br>
+                <span style="font-weight: bold;">&#8226; Sum Assured on Maturity: </span> Applicable fund value at the time of Maturity
+                <br>
+                <span style="font-weight: bold;">&#8226; Policy Term: </span>
+                <span th:text="${policyTerm}"></span><br>
+                <span style="font-weight: bold;">&#8226; Premium Payment Term: </span>
+                <span th:text="${premiumPaymentTerm}"></span><br>
+            </td>
+            <td>Policy Schedule</td>
+        </tr>
+        <tr>
+            <td rowspan="5">5</td>
+            <td rowspan="5">Policy Coverage/benefits payable</td>
+            <td>
+                <strong>&#8226; Benefits payable on Maturity:</strong> <br> <br> <span>&#10146;</span> We will pay the applicable Fund Value on the Maturity Date unless you have opted for the Settlement Option.</span><br><br>
+            </td>
+            <td>Clause 1.2 of Part C</td>
+        </tr>
+        <tr>
+            <td>
+                <strong>&#8226; Benefits payable on Death:</strong><br><br> <span>&#10146;</span>In case of death of the Life Insured during the Policy Term, provided the Policy is in force, we will pay the following Death Benefit as per your chosen variant:<br><br>
+
+                &ndash; Variant 1: The death benefit payable under this variant will be the highest of the following benefits:<br>
+                <ol type="i">
+                    <li>Sum Assured on Death equal to higher of Cover Multiple times the Annualised premium or 0.5 times the product of Policy Term and Annualised Premium (reduced by applicable partial withdrawals, if any), or</li><br>
+                    <li>105% of Total Premiums Paid until the date of death of Life Insured, or</li><br>
+                    <li>Total Fund Value (as on the date of death).</li><br>
+                </ol>
+                &ndash; Variant 2: The Death Benefit payable under this variant will be the sum of the following benefits:<br><br>
+                <span>&#10146;</span> <strong>Lump Sum Benefit:</strong> We will pay the higher of the following:
+                <ol type="i">
+                    <li>Sum assured on Death (equal to higher of Cover Multiple times the Annualised Premium or 0.5 times the product of Policy Term and Annualized premium), or </li><br>
+                    <li>105% of Total Premiums Paid upto the date of death of the Life Insured.</li><br>
+                </ol>
+                <span>&#10146;</span> <strong>Family Income Benefit:</strong> On Life Insured's death, We will pay a Family Income Benefit equal to 1% of the Sum Assured on Death per month till the end of the Policy Term. We shall pay a minimum of 36 instalments of the family income benefit and a maximum of 120 instalments of the family income benefit even if the Maturity Date has not occurred. If the Life Insured dies during the Policy Term, where less than 36 months are remaining till the end of Policy Term on the date of death, such remaining instalments will be paid by Us on the Maturity Date in lump sum.<br><br>
+                <span>&#10146;</span> <strong>Funding of Premium:</strong>On each Premium due date(s), after the death of the Life Insured, We will credit the Premium under the Policy to the Funds. The Fund Value will be payable on the Maturity Date.<br><br>Under the variant 2, following the Life Insured's death, no Switches, Partial Withdrawals, Premium Re-Direction, Settlement Option or Surrender of the Policy will be allowed. The Policy shall continue even after the death of the Life Insured till the end of the Policy Term.<br><br>
+            </td>
+            <td>Clause 1.1 of Part C</td>
+        </tr>
+        <tr>
+            <td>
+                &#8226; <strong>Survival Benefits excluding that payable on maturity:</strong><br><br>
+                <span>&#10146;</span> No survival benefits are payable in the Policy<br><br>
+            </td>
+            <td>Clause 1.3 of Part C</td>
+        </tr>
+        <tr>
+            <td>
+                &#8226; <strong>Surrender Benefits:</strong><br>
+                <span>&#10146;</span> Surrender Benefits are classified into two categories: <br>
+                <ol type="a">
+                    <li>Surrender within the Lock-in Period: In case of Surrender within the Lock-in Period, the Fund Value will be credited into the Discontinuance Policy Fund post deducting applicable Discontinuance/Surrender Charge and the applicable Fund Value shall be paid on the expiry of the said Lock-in Period. Upon Surrender, the risk cover under the Policy and applicable Riders (if any), will cease.</li><br>
+                    <li>Surrender after completion of the Lock-in Period: In case of Surrender post completion of the Lock-in Period, the applicable Fund Value prevailing on the date of receipt of a valid request for Surrender shall be paid.</li><br>
+                </ol>
+                &#8226; <strong>Options to policyholders for availing benefits, if any, covered under the policy.: </strong>Not Applicable<br><br>
+                &#8226; <strong>Other benefits/options payable, specific to the policy, if any: </strong>Not Applicable<br><br>
+                &#8226; <strong>Lock-in period for Linked Insurance products:</strong><br>
+                <span>&#10146;</span> 5 years from Date of Commencement of Risk.<br>
+            </td>
+            <td>Clause 2 of Part D</td>
+        </tr>
+        <tr>
+          <td>
+              &#8226; <strong>Options to policyholders for availing benefits, if any, covered under the policy.: </strong>Not Applicable<br><br>
+              &#8226; <strong>Other benefits/options payable, specific to the policy, if any: </strong>Not Applicable<br><br>
+              &#8226; <strong>Lock-in period for Linked Insurance products:</strong><br>
+              <span>&#10146;</span> 5 years from Date of Commencement of Risk.<br>
+          </td>
+            <td>
+                Clause 24 of Part B
+            </td>
+        </tr>
+        <!------- ------>
+        <tr>
+            <td rowspan="5">6</td>
+            <td rowspan="5">Options available <i>(in case of Linked Insurance Products)</i></td>
+            <td>
+                &#8226; <strong>Partial Withdrawal:</strong><br><br>
+                <span>&#10146;</span> You are entitled for the Partial Withdrawal under the Policy, subject to the following:<br>
+                <ol type="i">
+                    <i><li>The minimum withdrawal amount should be at least INR 5,000 and it will be made after the commencement of the 6th Policy Year.</li></i><br>
+                    <i><li>2 Partial Withdrawal(s) may be made in a Policy Year such that the total Fund Value withdrawn is not more than 50% of the Fund Value as on the date of the Partial Withdrawal(s) and subject to the Fund Value immediately after the Partial Withdrawal(s) being at least equal to one Annualised Premium.</li></i><br>
+                    <i><li>Under Variant 1: The Sum Assured on Death shall be reduced by all Partial Withdrawals during the 2 (Two) Policy Years immediately preceding the Life Insured's death.</li></i><br>
+                </ol>
+            </td>
+            <td>Clause 6 of Part D<br><br></td>
+        </tr>
+        <tr>
+            <td>
+                &#8226; <strong>Top-up Provision:</strong><br><br>
+                <span>&#10146;</span> Additional premium or top-up premium are not accepted under the Policy.<br><br>
+            </td>
+            <td>Clause 3.5 of Part C<br><br></td>
+        </tr>
+        <tr>
+            <td>
+                &#8226; <strong>Switches:</strong><br>
+                <span>&#10146;</span> You may switch Units from one Fund to another Fund by giving a written request to us, provided the minimum amount to be Switched is at least INR 5,000. There is no limit on the maximum number of Switches during the Policy Term and the settlement period thereafter (if applicable).<br><br>
+            </td>
+            <td>Clause 5 of Part D<br><br></td>
+        </tr>
+        <tr>
+            <td>
+                &#8226; <strong>Settlement Option:</strong><br><br>
+                <span>&#10146;</span> This option is available wherein maturity benefit may be received in instalments upon providing a written request to Us, specifying the proposed duration and frequency of payment. The period under the Settlement Option shall not exceed 5 (Five) years from the Maturity Date. During the period in which Settlement Option is in force, the Policy will continue and applicable Fund Management Charge, Switching charges and Mortality Charge on Death Benefit will be deducted. No Partial Withdrawals are allowed during such period.<br><br>
+                <strong>Any other option</strong><br><br>
+            </td>
+            <td>Clause 9 of Part D<br><br></td>
+        </tr>
+        <tr>
+            <td>
+                &#8226; <strong>Premium Redirection:</strong><br><br>
+                <span>&#10146;</span> You may redirect renewal Premium amongst available Funds by placing a written request, specifying the amount/ proportion of Premium to be paid into each Fund, before your Premium payment due date. You can request for maximum 6 (Six) Premium redirections in any Policy Year.<br><br>
+            </td>
+            <td>Clause 4 of Part D<br><br></td>
+        </tr>
+        <!------- ------>
+        <tr>
+            <td>7</td>
+            <td>Option available (in case of Annuity product)</td>
+            <td>
+                <span>&#8226;</span> Type of immediate annuity, for example Life annuity with Return of Purchase price etc. NA<br><br>
+                <span>&#8226;</span> Proportion of annuity amount guaranteed for variable pay-out option.</strong> NA<br><br>
+                <span>&#8226;</span> Any other option.</strong> NA
+            </td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>8</td>
+            <td>Riders opted, if any</td>
+            <td>
+                <span> &#8226;</span> <span style="font-weight: bold;">Summary of coverage:</span><br><br>
+                <span>&#10146;</span> No riders are offered under this plan
+            </td>
+            <td>Policy Schedule</td>
+        </tr>
+        <tr>
+            <td>9</td>
+            <td>Exclusions (events where insurance coverage is not payable), if any.</td>
+            <td>
+                <strong> Brief list of the applicable exclusions, if any <br><br>
+                &#8226; Suicide Exclusion</strong> - If the Life Insured commits suicide, whether sane or insane, within 12 (Twelve) months from the Date of Commencement of Risk or from the date of revival of the Policy, all risks and benefits under the Policy will immediately cease and no benefits will be payable. In such an event, we will terminate the Policy by paying only the Fund Value prevailing on the date of intimation of death of the Life Insured to Claimant.<br><br>
+                For exclusions under the Riders, please refer to the Rider's customer information sheet document.
+            </td>
+            <td>Clause 6 of Part F</td>
+        </tr>
+        <tr>
+            <td>10</td>
+            <td>Waiting /lien Period, if any</td>
+            <td>Number of Days : NA</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>11</td>
+            <td>Grace period</td>
+            <td>Number of Days :
+                <span th:text="${gracePeriod}"></span><br>
+            </td>
+            <td>Clause 4 of Part C</td>
+        </tr>
+        <tr>
+            <td>12</td>
+            <td>Free Look Period</td>
+            <td>Number of days: 30 days from the date of receipt of the Policy</td>
+            <td>Clause 8 of Part D</td>
+        </tr>
+        <tr>
+            <td rowspan="5">13</td>
+            <td rowspan="5">Lapse, paid-up and revival of the Policy</td>
+            <td>
+                &#8226; <strong>Grace Period:</strong><br><br>
+                <span>&#10146;</span> Premium is due and payable during the Premium Payment Term by the due date. If not paid, You may pay the same during the Grace Period. During the Grace Period the insurance cover will continue and all charges under the Policy will continue to apply<br><br>
+            </td>
+            <td>Clause 20 of Part B</td>
+        </tr>
+        <tr>
+            <td>
+                <span>&#8226;</span> <strong>Lapse Period</strong><br><br>
+                <span>&#10146;</span> Not Applicable<br><br>
+            </td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>
+                <span>&#8226;</span> <strong> Paid Up Period</strong><br><br>
+                <span>&#10146;</span> Not Applicable<br><br>
+            </td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>
+                <span>&#8226;</span> <strong> Policy Renewal </strong><br><br>
+                <span>&#10146;</span> The Premium is due and payable by the due date as specified
+                in the Policy Schedule. The Policy will be renewed only upon
+                receipt of due Premium. <br><br>
+            </td>
+            <td>Policy
+                Schedule</td>
+        </tr>
+        <tr>
+            <td>
+                &#8226; <strong>Revival Period:</strong><br><br>
+                <span>&#10146;</span> In case the Policy goes into discontinuous mode, You may request us in writing for Revival anytime within three consecutive years from the date of first unpaid premium. Upon receipt of all overdue Premiums and any applicable charges or late fees within the Revival Period, we will revive the Policy upon being satisfied as to the continued insurability of the Life Insured or Policyholder based on the information, documents and reports furnished by the Policyholder, in accordance with the Underwriting Policy.
+            </td>
+            <td>Clause 45 & 46 of Part B</td>
+        </tr>
+        <tr>
+            <td>14</td>
+            <td>Policy Loan, if applicable</td>
+            <td>
+                &#8226; Brief description<br><br>
+                <span>&#10146;</span> No loans are granted under the Policy.
+            </td>
+            <td>Clause 3 of Part D</td>
+        </tr>
+        <tr>
+            <td>15</td>
+            <td>Claims/Claims Procedure</td>
+            <td>
+                &#8226;<strong>Turn Around Time (TAT) for claims settlement: Please refer to Annexure -B for details</strong><br><br>
+                <span>&#8226;</span> <strong> Brief procedure:</strong><br><br>
+                Notice of Claim - All cases of death must be notified immediately to us in writing. However, We may condone delay on merit for delayed claims where the reason for delay is proved to be for reasons beyond the control of the Claimant.<br><br>
+                <span>&#10146;</span> Please note that all death claims will be payable to the nominee/legal heir of the Policyholder.<br><br>
+                <span>&#10146;</span> Claim forms as required by us must be completed and furnished to us, at the Claimant's expense, within 90 days after the date the insured event happens, unless specified otherwise. A list of primary claim documents listing the normally required documents is attached to the Policy. Submission of the listed documents, forms or other proof, however, shall not be construed as an admission of liabilities by the Company. We reserve the right to require any additional proof and documents in support of the claim.<br><br>
+                &#8226; <strong>Helpline number:</strong><br><br>
+                <span>&#10146;</span> 1860-120-5577 (Call charges apply) or 0124- 4219090<br><br>
+                &#8226; <strong>Contact Details of the Insurer:</strong><br><br>
+                <span>&#10146;</span> Axis Max Life Insurance Limited, Plot No. 90C, Udyog Vihar, Sector 18, Gurugram, 122015, Haryana, India. Website - <a href="https://www.axismaxlife.com" target="_blank">www.axismaxlife.com</a><br><br>
+                &#8226; <strong>Link for downloading claim form and list of documents required including bank account details:</strong><br><br>
+                <span>&#10146;</span> <a href="https://www.axismaxlife.com/downloads" target="_blank">https://www.axismaxlife.com/<wbr>downloads</a><br><br>
+                <span>&#10146;</span> We will require the following documents in case of claim under this Policy regarding the death of the Life Insured:<br><br>
+                &#8226; Claimant's statement in the prescribed form (death claim application form -form A);<br>
+                &#8226; original Policy document (if any);<br>
+                &#8226; In case of a Medical/Natural death of the Life Insured, the attending physician's statement (Form C) and the Medical records (admission notes, discharge/death summary, test reports, etc.) are required;<br>
+                &#8226; In case of an Accidental/Unnatural death of the Life Insured, a copy of the First Information Report (FIR)/ Police complaint, a copy of the Postmortem Report (PMR)/ Autopsy/Viscera Report and a copy of the Final Police Investigation report (FPIR)/Charge sheet is required;<br>
+                &#8226; original/ attested copy of death certificate issued by the local/municipal authority (only in the case of death of the Life Insured);<br>
+                &#8226; identity proofs (such as copy of Passport, PAN card, Voter identity card, Aadhar (UID) card, etc.) of the Claimants (bearing their photographs and signatures (only in case of death of the Life Insured);<br>
+                &#8226; NEFT mandate form attested by bank authorities, along with a cancelled cheque or bank account passbook (only in the case of the death of the Life Insured);<br>
+                &#8226; any other documents or information required by Us for assessing and approving the claim request;<br>
+                &#8226; Employer certificate with complete leave records - Form E;<br>
+                &#8226; ITR for last 3 years / GST certificate in case of Self employed;<br>
+                &#8226; Other life / health insurance details with claim history details;<br>
+                &#8226; Bank statement of last 2 years of the Life Insured;<br>
+                &#8226; Body transfer certificate / Embassy documents / Postmortem report whichever applicable in case of death in foreign country;<br>
+                &#8226; Complete Passport copy in case of death in foreign country;<br>
+                &#8226; Medical booklet / CGHS card details in case of Defence and Central Governmentt personnel; and<br>
+                &#8226; Discharge Summary / Indoor Case papers in case death happened due to medical reasons in a hospital.<br><br>
+                <span>&#10146;</span> We will require the following documents in case of claim under this Policy regarding the Maturity claim documents:<br><br>
+                &#8226; NEFT Form (if not provided earlier)<br>
+                &#8226; a cancelled cheque or copy of passbook with pre-printed name and bank account number, for payout through NEFT (if not provided earlier or in case of any change in details provided earlier)<br>
+                &#8226; a self-attested photo ID proof<br>
+            </td>
+            <td>Clause 3 of Part F<br><br></td>
+        </tr>
+        <tr>
+            <td>16</td>
+            <td>Policy Servicing</td>
+            <td>
+                <ul class="custom">
+                    <li> <strong>Turn Around Time (TAT) : Please refer to Annexure-B for
+                        details </strong><br><br> </li>
+                    <li> <strong>Helpline number:</strong><br><br><span>&#10146;</span> 1860-120-5577 (Call charges apply) or 0124- 4219090<br><br></li>
+                    <li><strong>Contact Details of the Insurer:</strong></li><br><br>
+                </ul>
+                <span>&#10146;</span>Axis Max Life Insurance Limited, Plot No. 90C, Udyog Vihar, Sector 18, Gurugram, 122015, Haryana, India. Website - <a href="https://www.axismaxlife.com" target="_blank">www.axismaxlife.com</a><br><br>
+                &#8226; <strong>Link for downloading applicable forms and list of documents required including bank account details:</strong><br><br>
+                <span>&#10146;</span><a href="https://www.axismaxlife.com/downloads" target="_blank">https://www.axismaxlife.com/<wbr>downloads</a><br><br>
+                <span>&#10146;</span> We will require the following documents in case of policy servicing under this Policy:<br><br>
+                &#8226; Application in the prescribed form;<br>
+                &#8226; original Policy document (if any);<br>
+                &#8226; identity proofs (such as copy of Passport, PAN card, Voter identity card, Aadhar (UID) card, etc.) of the Policyholder or Life Insured (bearing their photographs and signatures);<br>
+                &#8226; NEFT mandate form attested by bank authorities, along with a cancelled cheque or bank account passbook;<br><br>
+                &#8226; any other documents or information required by Us for assessing and approving the claim request;
+            </td>
+            <td>
+                Clause 1.1 (Dispute Redressal process under policy)– Part G <br><br>
+            </td>
+        </tr>
+        <tr>
+            <td rowspan="2">17</td>
+            <td rowspan="2">Grievances /Complaints</td>
+            <td>
+                &#8226; <strong>Contact Details of Grievance Redressal Officer of the insurer:</strong><br><br>
+                <span>&#10146;</span>Grievance Redressal Officer, Axis Max Life Insurance Limited, Plot No. 90C, Udyog Vihar, Sector 18, Gurugram, 122015, Haryana, India<br><br>
+                &#8226; <strong>Link for registering the grievance with the insurer's portal </strong><br>
+                <span>&#10146;</span> <a href="https://www.axismaxlife.com/customer-service/grievance-redressal" target="_blank">https://www.axismaxlife.com/customer-service/grievance-redressal</a>
+            </td>
+            <td>Clause 1.2.1 of Part G</td>
+        </tr>
+        <tr>
+            <td>
+                &#8226; <strong>Contact details of Ombudsman:</strong><br><br>
+                <span>&#10146;</span> Refer Annexure A for the Ombudsman details
+            </td>
+            <td>As per Annexure A</td>
+        </tr>
+    </table>
+    <div class="declaration">
+        <p><u>Declaration by the Policyholder</u></p>
+        <p>I have read the above and confirm having noted the details.</p>
+
+        <div class="signature-section">
+            <div class="left">
+                <p>Place:<span style="text-align: center;min-width: 100px;border-bottom-color: #000;border-bottom-style: solid;border-bottom-width: 1px;display: inline-block;padding: 0 18px;font-weight: bold;text-transform:uppercase;"><span th:text="${place}"></span></span></p>
+                <p>Date:<span style="text-align: center;min-width: 100px;border-bottom-color: #000;border-bottom-style: solid;border-bottom-width: 1px;display: inline-block;padding: 0 18px;font-weight: bold;text-transform:uppercase;"><span th:text="${date}"></span></span></p>
+            </div>
+            <div class="signature" style="text-align: right; margin-top: -45px;">
+                <p>(Signature of the Policyholder)</p>
+            </div>
+        </div><br>
+        <div class="note">
+            <p><b>Note:</b></p>
+            <ol type="i">
+                <li>For the product related documents including the Customer Information sheet please refer to <a href="https://www.axismaxlife.com/investment-plans/ulip-plans/child-investment-plan" target="_blank">https://www.axismaxlife.com/investment-plans/ulip-plans/child-investment-plan</a>.</li>
+                <li> In case of any conflict, the terms and conditions mentioned in the Policy document shall prevail.</li>
+                <li> * Sum Assured on Death is subject to underwriting, for actual Sum Assured details & updated UIN number (in case of modification), please refer to the Policy document.</li>
+                <li> In the event of any conflict or discrepancy between any translated version and the English language version of this CIS, the English language version of this CIS shall prevail.</li>
+            </ol>
+        </div>
+    </div>
+</div>
+</body>

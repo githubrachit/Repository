@@ -1,0 +1,491 @@
+<td>
+    <table border="1" cellspacing="0" cellpadding="0" width="100%" style="border-collapse: collapse;">
+        <tbody>
+            <tr>
+                <th colspan="2" style="background-color: #003770; color: #fff; font-size: 10px; font-family: arial; padding: 4px;" align="left">B. Expense Information</th>
+            </tr>
+            <!-- Nominee Details start tag -->
+            <tr style="width: 100%;">
+                <td colspan="3">
+                    <tr>
+                        <!-- <th colspan="0" style="background-color: #003770; color: #fff;font-size: 10px; font-family: arial; padding: 3px" align="left">B. Nominee Details</th> -->
+                        <th colspan="0" style="font-size: 10px; font-family: arial; padding: 3px;" align="left">1. Summary</th>
+                    </tr>
+
+                    <tr>
+                        <td style="padding: 3px;">
+                            <table border="0" cellspacing="0" cellpadding="0" width="100%" style="border-collapse: collapse;">
+                                <tbody>
+                                    <tr>
+                                        <td width="30%" style="font-weight: bold; padding: 4px; font-size: 10px; font-family: arial;">Total</td>
+                                        <td width="35%" style="font-size: 10px; font-family: arial; padding: 4px; text-transform: uppercase;" th:text="${expenseInfo.summary.total}"></td>
+                                    </tr>
+                                    <tr>
+                                        <td width="30%" style="font-weight: bold; padding: 4px; font-size: 10px; font-family: arial;">Monthly Average</td>
+                                        <td width="35%" style="font-size: 10px; font-family: arial; padding: 4px; text-transform: uppercase;" th:text="${expenseInfo.summary.avgMonthly}"></td>
+                                    </tr>
+                                    <tr>
+                                        <td width="30%" style="font-weight: bold; padding: 4px; font-size: 10px; font-family: arial;">Monthly Minimum</td>
+                                        <td width="35%" style="font-size: 10px; font-family: arial; padding: 4px; text-transform: uppercase;" th:text="${expenseInfo.summary.minMonthly}"></td>
+                                    </tr>
+                                    <tr>
+                                        <td width="30%" style="font-weight: bold; padding: 4px; font-size: 10px; font-family: arial;">Monthly Maximum</td>
+                                        <td width="35%" style="font-size: 10px; font-family: arial; padding: 4px; text-transform: uppercase;" th:text="${expenseInfo.summary.maxMonthly}"></td>
+                                    </tr>
+                                    <tr>
+                                        <td width="30%" style="font-weight: bold; padding: 4px; font-size: 10px; font-family: arial;">Total Transactions</td>
+                                        <td width="35%" style="font-size: 10px; font-family: arial; padding: 4px; text-transform: uppercase;" th:text="${expenseInfo.summary.totalTransactions}"></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+
+                            <!-- Nominee Details start tag -->
+                            <tr style="width: 100%;">
+                                <td colspan="3">
+                                    <tr>
+                                        <!-- <th colspan="0" style="background-color: #003770; color: #fff;font-size: 10px; font-family: arial; padding: 3px" align="left">B. Nominee Details</th> -->
+                                        <th colspan="0" style="font-size: 10px; font-family: arial; padding: 3px;" align="left">2. Health and Fitness</th>
+                                    </tr>
+
+                                    <tr>
+                                        <td style="padding: 3px;">
+                                            <table border="0" cellspacing="0" cellpadding="0" width="100%" style="border-collapse: collapse;">
+                                                <tbody>
+                                                    <tr>
+                                                        <td width="30%" style="font-weight: bold; padding: 4px; font-size: 10px; font-family: arial;">Total</td>
+                                                        <td width="35%" style="font-size: 10px; font-family: arial; padding: 4px; text-transform: uppercase;" th:text="${expenseInfo?.healthAndFitness?.total}"></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td width="30%" style="font-weight: bold; padding: 4px; font-size: 10px; font-family: arial;">Monthly Average</td>
+                                                        <td width="35%" style="font-size: 10px; font-family: arial; padding: 4px; text-transform: uppercase;" th:text="${expenseInfo?.healthAndFitness?.avgMonthly}"></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td width="30%" style="font-weight: bold; padding: 4px; font-size: 10px; font-family: arial;">Monthly Minimum</td>
+                                                        <td width="35%" style="font-size: 10px; font-family: arial; padding: 4px; text-transform: uppercase;" th:text="${expenseInfo?.healthAndFitness?.minMonthly}"></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td width="30%" style="font-weight: bold; padding: 4px; font-size: 10px; font-family: arial;">Monthly Maximum</td>
+                                                        <td width="35%" style="font-size: 10px; font-family: arial; padding: 4px; text-transform: uppercase;" th:text="${expenseInfo?.healthAndFitness?.maxMonthly}"></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td width="30%" style="font-weight: bold; padding: 4px; font-size: 10px; font-family: arial;">Total Transactions</td>
+                                                        <td width="35%" style="font-size: 10px; font-family: arial; padding: 4px; text-transform: uppercase;" th:text="${expenseInfo?.healthAndFitness?.totalTransactions}"></td>
+                                                    </tr>
+                                                    <!-- specific expenditure -->
+                                                    <tr style="width: 100%;">
+                                                        <td colspan="3">
+                                                            <tr>
+                                                                <!-- <th colspan="0" style="background-color: #003770; color: #fff;font-size: 10px; font-family: arial; padding: 3px" align="left">B. Nominee Details</th> -->
+                                                                <th colspan="0" style="font-size: 10px; font-family: arial; padding: 3px;" align="left">* Specific Expenditure</th>
+                                                            </tr>
+
+                                                            <tr>
+                                                                <td style="padding: 3px;">
+                                                                    <table border="0" cellspacing="0" cellpadding="0" width="100%" style="border-collapse: collapse;">
+                                                                        <tbody>
+                                                                            <tr>
+                                                                                <td width="30%" style="font-weight: bold; padding: 4px; font-size: 10px; font-family: arial;">Total Hospital and Medical</td>
+                                                                                <td
+                                                                                    width="35%"
+                                                                                    style="font-size: 10px; font-family: arial; padding: 4px; text-transform: uppercase;"
+                                                                                    th:text="${expenseInfo?.healthAndFitness?.specificExpenditure?.totalHospitalAndMedical}"
+                                                                                ></td>
+                                                                            </tr>
+                                                                            <tr>
+                                                                                <td width="30%" style="font-weight: bold; padding: 4px; font-size: 10px; font-family: arial;">Monthly Average Hospital and Medical</td>
+                                                                                <td
+                                                                                    width="35%"
+                                                                                    style="font-size: 10px; font-family: arial; padding: 4px; text-transform: uppercase;"
+                                                                                    th:text="${expenseInfo?.healthAndFitness?.specificExpenditure?.avgMonthlyHospitalAndMedical}"
+                                                                                >
+                                                                                    value
+                                                                                </td>
+                                                                            </tr>
+                                                                            <!-- end of specific expenditure-->
+                                                                        </tbody>
+                                                                    </table>
+                                                                    <tr style="width: 100%;">
+                                                                        <td colspan="3">
+                                                                            <table border="0" cellspacing="0" cellpadding="0" width="100%" style="border-collapse: collapse;">
+                                                                                <tbody>
+                                                                                    <tr>
+                                                                                        <!-- <th colspan="0" style="background-color: #003770; color: #fff;font-size: 10px; font-family: arial; padding: 3px" align="left">B. Nominee Details</th> -->
+                                                                                        <th colspan="1" style="font-size: 10px; font-family: arial; padding: 3px;" align="left">* Transactions</th>
+                                                                                    </tr>
+
+                                                                                    <tr>
+                                                                                        <td style="padding: 3px;">
+                                                                                            <table border="1" cellspacing="0" cellpadding="0" width="100%" style="border-collapse: collapse;">
+                                                                                                <th:block th:each="transaction : ${expenseInfo?.healthAndFitness?.transactions}">
+                                                                                                    <tbody>
+                                                                                                        <tr>
+                                                                                                            <td width="30%" style="font-weight: bold; padding: 3px; font-size: 10px; font-family: arial;">Linked Account Reference</td>
+                                                                                                            <td width="70%" style="font-size: 10px; font-family: arial; padding: 3px;" th:text="${transaction.linkedAccRef}"></td>
+                                                                                                        </tr>
+                                                                                                        <tr>
+                                                                                                            <td width="30%" style="font-weight: bold; padding: 3px; font-size: 10px; font-family: arial;">Masked Account Number</td>
+                                                                                                            <td width="70%" style="font-size: 10px; font-family: arial; padding: 3px;" th:text="${transaction.maskedAccNumber}"></td>
+                                                                                                        </tr>
+                                                                                                        <tr>
+                                                                                                            <td width="30%" style="font-weight: bold; padding: 3px; font-size: 10px; font-family: arial;">Account Type</td>
+                                                                                                            <td width="70%" style="font-size: 10px; font-family: arial; padding: 3px;" th:text="${transaction.accountType}"></td>
+                                                                                                        </tr>
+                                                                                                        <tr>
+                                                                                                            <td width="30%" style="font-weight: bold; padding: 3px; font-size: 10px; font-family: arial;">Transaction Timestamp</td>
+                                                                                                            <td width="70%" style="font-size: 10px; font-family: arial; padding: 3px;" th:text="${transaction.transactionTimestamp}"></td>
+                                                                                                        </tr>
+                                                                                                        <tr>
+                                                                                                            <td width="30%" style="font-weight: bold; padding: 3px; font-size: 10px; font-family: arial;">Value Date</td>
+                                                                                                            <td width="70%" style="font-size: 10px; font-family: arial; padding: 3px;" th:text="${transaction.valueDate}"></td>
+                                                                                                        </tr>
+                                                                                                        <tr>
+                                                                                                            <td width="30%" style="font-weight: bold; padding: 3px; font-size: 10px; font-family: arial;">Transaction Id</td>
+                                                                                                            <td width="70%" style="font-size: 10px; font-family: arial; padding: 3px;" th:text="${transaction.txnId}"></td>
+                                                                                                        </tr>
+                                                                                                        <tr>
+                                                                                                            <td width="30%" style="font-weight: bold; padding: 3px; font-size: 10px; font-family: arial;">Type</td>
+                                                                                                            <td width="70%" style="font-size: 10px; font-family: arial; padding: 3px;" th:text="${transaction.type}"></td>
+                                                                                                        </tr>
+                                                                                                        <tr>
+                                                                                                            <td width="30%" style="font-weight: bold; padding: 3px; font-size: 10px; font-family: arial;">Mode</td>
+                                                                                                            <td width="70%" style="font-size: 10px; font-family: arial; padding: 3px;" th:text="${transaction.mode}"></td>
+                                                                                                        </tr>
+                                                                                                        <tr>
+                                                                                                            <td width="30%" style="font-weight: bold; padding: 3px; font-size: 10px; font-family: arial;">Narration</td>
+                                                                                                            <td width="70%" style="font-size: 10px; font-family: arial; padding: 3px;" th:text="${transaction.narration}"></td>
+                                                                                                        </tr>
+                                                                                                        <tr>
+                                                                                                            <td width="30%" style="font-weight: bold; padding: 3px; font-size: 10px; font-family: arial;">Amount</td>
+                                                                                                            <td width="70%" style="font-size: 10px; font-family: arial; padding: 3px;" th:text="${transaction.amount}"></td>
+                                                                                                        </tr>
+                                                                                                        <tr>
+                                                                                                            <td width="30%" style="font-weight: bold; padding: 3px; font-size: 10px; font-family: arial;">Current Balance</td>
+                                                                                                            <td width="70%" style="font-size: 10px; font-family: arial; padding: 3px;" th:text="${transaction.currentBalance}"></td>
+                                                                                                        </tr>
+                                                                                                        <tr>
+                                                                                                            <td width="30%" style="font-weight: bold; padding: 3px; font-size: 10px; font-family: arial;">Reference</td>
+                                                                                                            <td width="70%" style="font-size: 10px; font-family: arial; padding: 3px;" th:text="${transaction.reference}"></td>
+                                                                                                        </tr>
+                                                                                                    </tbody>
+                                                                                                </th:block>
+                                                                                            </table>
+                                                                                        </td>
+                                                                                    </tr>
+                                                                                </tbody>
+                                                                            </table>
+                                                                        </td>
+
+                                                                        <!-- Investment and Insurance-->
+                                                                        <!-- Nominee Details start tag -->
+                                                                    </tr>
+
+                                                                    <tr style="width: 100%;">
+                                                                        <td colspan="3">
+                                                                            <tr>
+                                                                                <!-- <th colspan="0" style="background-color: #003770; color: #fff;font-size: 10px; font-family: arial; padding: 3px" align="left">B. Nominee Details</th> -->
+                                                                                <th colspan="0" style="font-size: 10px; font-family: arial; padding: 3px;" align="left">3. Investment and Insurance</th>
+                                                                            </tr>
+
+                                                                            <tr>
+                                                                                <td style="padding: 3px;">
+                                                                                    <table border="0" cellspacing="0" cellpadding="0" width="100%" style="border-collapse: collapse;">
+                                                                                        <tbody>
+                                                                                            <tr>
+                                                                                                <td width="30%" style="font-weight: bold; padding: 4px; font-size: 10px; font-family: arial;">Total</td>
+                                                                                                <td
+                                                                                                    width="35%"
+                                                                                                    style="font-size: 10px; font-family: arial; padding: 4px; text-transform: uppercase;"
+                                                                                                    th:text="${expenseInfo.investmentAndInsurance.total}"
+                                                                                                ></td>
+                                                                                            </tr>
+                                                                                            <tr>
+                                                                                                <td width="30%" style="font-weight: bold; padding: 4px; font-size: 10px; font-family: arial;">Monthly Average</td>
+                                                                                                <td
+                                                                                                    width="35%"
+                                                                                                    style="font-size: 10px; font-family: arial; padding: 4px; text-transform: uppercase;"
+                                                                                                    th:text="${expenseInfo.investmentAndInsurance.avgMonthly}"
+                                                                                                ></td>
+                                                                                            </tr>
+                                                                                            <tr>
+                                                                                                <td width="30%" style="font-weight: bold; padding: 4px; font-size: 10px; font-family: arial;">Monthly Minimum</td>
+                                                                                                <td
+                                                                                                    width="35%"
+                                                                                                    style="font-size: 10px; font-family: arial; padding: 4px; text-transform: uppercase;"
+                                                                                                    th:text="${expenseInfo.investmentAndInsurance.minMonthly}"
+                                                                                                ></td>
+                                                                                            </tr>
+                                                                                            <tr>
+                                                                                                <td width="30%" style="font-weight: bold; padding: 4px; font-size: 10px; font-family: arial;">Monthly Maximum</td>
+                                                                                                <td
+                                                                                                    width="35%"
+                                                                                                    style="font-size: 10px; font-family: arial; padding: 4px; text-transform: uppercase;"
+                                                                                                    th:text="${expenseInfo.investmentAndInsurance.maxMonthly}"
+                                                                                                ></td>
+                                                                                            </tr>
+                                                                                            <tr>
+                                                                                                <td width="30%" style="font-weight: bold; padding: 4px; font-size: 10px; font-family: arial;">Total Transactions</td>
+                                                                                                <td
+                                                                                                    width="35%"
+                                                                                                    style="font-size: 10px; font-family: arial; padding: 4px; text-transform: uppercase;"
+                                                                                                    th:text="${expenseInfo.investmentAndInsurance.totalTransactions}"
+                                                                                                ></td>
+                                                                                            </tr>
+                                                                                            <!-- specific expenditure -->
+                                                                                            <tr style="width: 100%;">
+                                                                                                <td colspan="3">
+                                                                                                    <tr>
+                                                                                                        <!-- <th colspan="0" style="background-color: #003770; color: #fff;font-size: 10px; font-family: arial; padding: 3px" align="left">B. Nominee Details</th> -->
+                                                                                                        <th colspan="0" style="font-size: 10px; font-family: arial; padding: 3px;" align="left">* Specific Expenditure</th>
+                                                                                                    </tr>
+
+                                                                                                    <tr>
+                                                                                                        <td style="padding: 3px;">
+                                                                                                            <table border="0" cellspacing="0" cellpadding="0" width="100%" style="border-collapse: collapse;">
+                                                                                                                <tbody>
+                                                                                                                    <tr>
+                                                                                                                        <td width="30%" style="font-weight: bold; padding: 4px; font-size: 10px; font-family: arial;">Total MFA Equity</td>
+                                                                                                                        <td
+                                                                                                                            width="35%"
+                                                                                                                            style="font-size: 10px; font-family: arial; padding: 4px; text-transform: uppercase;"
+                                                                                                                            th:text="${expenseInfo.investmentAndInsurance.specificExpenditure.totalMFAndEquity}"
+                                                                                                                        ></td>
+                                                                                                                    </tr>
+                                                                                                                    <tr>
+                                                                                                                        <td width="30%" style="font-weight: bold; padding: 4px; font-size: 10px; font-family: arial;">
+                                                                                                                            Monthly Average MFA Equity
+                                                                                                                        </td>
+                                                                                                                        <td
+                                                                                                                            width="35%"
+                                                                                                                            style="font-size: 10px; font-family: arial; padding: 4px; text-transform: uppercase;"
+                                                                                                                            th:text="${expenseInfo.investmentAndInsurance.specificExpenditure.avgMonthlyMFAndEquity}"
+                                                                                                                        >
+                                                                                                                            value
+                                                                                                                        </td>
+                                                                                                                    </tr>
+                                                                                                                    <tr>
+                                                                                                                        <td width="30%" style="font-weight: bold; padding: 4px; font-size: 10px; font-family: arial;">Total Insurance Paid</td>
+                                                                                                                        <td
+                                                                                                                            width="35%"
+                                                                                                                            style="font-size: 10px; font-family: arial; padding: 4px; text-transform: uppercase;"
+                                                                                                                            th:text="${expenseInfo.investmentAndInsurance.specificExpenditure.totalInsurancePaid}"
+                                                                                                                        ></td>
+                                                                                                                    </tr>
+                                                                                                                    <tr>
+                                                                                                                        <td width="30%" style="font-weight: bold; padding: 4px; font-size: 10px; font-family: arial;">
+                                                                                                                            Total Insurance Paid Transactions
+                                                                                                                        </td>
+                                                                                                                        <td
+                                                                                                                            width="35%"
+                                                                                                                            style="font-size: 10px; font-family: arial; padding: 4px; text-transform: uppercase;"
+                                                                                                                            th:text="${expenseInfo.investmentAndInsurance.specificExpenditure.totalInsurancePaidTransactions}"
+                                                                                                                        ></td>
+                                                                                                                    </tr>
+                                                                                                                    <!-- end of specific expenditure-->
+                                                                                                                </tbody>
+                                                                                                            </table>
+                                                                                                            <tr style="width: 100%;">
+                                                                                                                <td colspan="3">
+                                                                                                                    <table border="0" cellspacing="0" cellpadding="0" width="100%" style="border-collapse: collapse;">
+                                                                                                                        <tbody>
+                                                                                                                            <tr>
+                                                                                                                                <!-- <th colspan="0" style="background-color: #003770; color: #fff;font-size: 10px; font-family: arial; padding: 3px" align="left">B. Nominee Details</th> -->
+                                                                                                                                <th colspan="1" style="font-size: 10px; font-family: arial; padding: 3px;" align="left">* Transactions</th>
+                                                                                                                            </tr>
+
+                                                                                                                            <tr>
+                                                                                                                                <td style="padding: 3px;">
+                                                                                                                                    <table border="1" cellspacing="0" cellpadding="0" width="100%" style="border-collapse: collapse;">
+                                                                                                                                        <th:block th:each="transaction : ${expenseInfo.investmentAndInsurance.transactions}">
+                                                                                                                                            <tbody>
+                                                                                                                                                <tr>
+                                                                                                                                                    <td
+                                                                                                                                                        width="30%"
+                                                                                                                                                        style="font-weight: bold; padding: 3px; font-size: 10px; font-family: arial;"
+                                                                                                                                                    >
+                                                                                                                                                        Linked Account Reference
+                                                                                                                                                    </td>
+                                                                                                                                                    <td
+                                                                                                                                                        width="70%"
+                                                                                                                                                        style="font-size: 10px; font-family: arial; padding: 3px;"
+                                                                                                                                                        th:text="${transaction.linkedAccRef}"
+                                                                                                                                                    ></td>
+                                                                                                                                                </tr>
+                                                                                                                                                <tr>
+                                                                                                                                                    <td
+                                                                                                                                                        width="30%"
+                                                                                                                                                        style="font-weight: bold; padding: 3px; font-size: 10px; font-family: arial;"
+                                                                                                                                                    >
+                                                                                                                                                        Masked Account Number
+                                                                                                                                                    </td>
+                                                                                                                                                    <td
+                                                                                                                                                        width="70%"
+                                                                                                                                                        style="font-size: 10px; font-family: arial; padding: 3px;"
+                                                                                                                                                        th:text="${transaction.maskedAccNumber}"
+                                                                                                                                                    ></td>
+                                                                                                                                                </tr>
+                                                                                                                                                <tr>
+                                                                                                                                                    <td
+                                                                                                                                                        width="30%"
+                                                                                                                                                        style="font-weight: bold; padding: 3px; font-size: 10px; font-family: arial;"
+                                                                                                                                                    >
+                                                                                                                                                        Account Type
+                                                                                                                                                    </td>
+                                                                                                                                                    <td
+                                                                                                                                                        width="70%"
+                                                                                                                                                        style="font-size: 10px; font-family: arial; padding: 3px;"
+                                                                                                                                                        th:text="${transaction.accountType}"
+                                                                                                                                                    ></td>
+                                                                                                                                                </tr>
+                                                                                                                                                <tr>
+                                                                                                                                                    <td
+                                                                                                                                                        width="30%"
+                                                                                                                                                        style="font-weight: bold; padding: 3px; font-size: 10px; font-family: arial;"
+                                                                                                                                                    >
+                                                                                                                                                        Transaction Timestamp
+                                                                                                                                                    </td>
+                                                                                                                                                    <td
+                                                                                                                                                        width="70%"
+                                                                                                                                                        style="font-size: 10px; font-family: arial; padding: 3px;"
+                                                                                                                                                        th:text="${transaction.transactionTimestamp}"
+                                                                                                                                                    ></td>
+                                                                                                                                                </tr>
+                                                                                                                                                <tr>
+                                                                                                                                                    <td
+                                                                                                                                                        width="30%"
+                                                                                                                                                        style="font-weight: bold; padding: 3px; font-size: 10px; font-family: arial;"
+                                                                                                                                                    >
+                                                                                                                                                        Value Date
+                                                                                                                                                    </td>
+                                                                                                                                                    <td
+                                                                                                                                                        width="70%"
+                                                                                                                                                        style="font-size: 10px; font-family: arial; padding: 3px;"
+                                                                                                                                                        th:text="${transaction.valueDate}"
+                                                                                                                                                    ></td>
+                                                                                                                                                </tr>
+                                                                                                                                                <tr>
+                                                                                                                                                    <td
+                                                                                                                                                        width="30%"
+                                                                                                                                                        style="font-weight: bold; padding: 3px; font-size: 10px; font-family: arial;"
+                                                                                                                                                    >
+                                                                                                                                                        Transaction Id
+                                                                                                                                                    </td>
+                                                                                                                                                    <td
+                                                                                                                                                        width="70%"
+                                                                                                                                                        style="font-size: 10px; font-family: arial; padding: 3px;"
+                                                                                                                                                        th:text="${transaction.txnId}"
+                                                                                                                                                    ></td>
+                                                                                                                                                </tr>
+                                                                                                                                                <tr>
+                                                                                                                                                    <td
+                                                                                                                                                        width="30%"
+                                                                                                                                                        style="font-weight: bold; padding: 3px; font-size: 10px; font-family: arial;"
+                                                                                                                                                    >
+                                                                                                                                                        Type
+                                                                                                                                                    </td>
+                                                                                                                                                    <td
+                                                                                                                                                        width="70%"
+                                                                                                                                                        style="font-size: 10px; font-family: arial; padding: 3px;"
+                                                                                                                                                        th:text="${transaction.type}"
+                                                                                                                                                    ></td>
+                                                                                                                                                </tr>
+                                                                                                                                                <tr>
+                                                                                                                                                    <td
+                                                                                                                                                        width="30%"
+                                                                                                                                                        style="font-weight: bold; padding: 3px; font-size: 10px; font-family: arial;"
+                                                                                                                                                    >
+                                                                                                                                                        Mode
+                                                                                                                                                    </td>
+                                                                                                                                                    <td
+                                                                                                                                                        width="70%"
+                                                                                                                                                        style="font-size: 10px; font-family: arial; padding: 3px;"
+                                                                                                                                                        th:text="${transaction.mode}"
+                                                                                                                                                    ></td>
+                                                                                                                                                </tr>
+                                                                                                                                                <tr>
+                                                                                                                                                    <td
+                                                                                                                                                        width="30%"
+                                                                                                                                                        style="font-weight: bold; padding: 3px; font-size: 10px; font-family: arial;"
+                                                                                                                                                    >
+                                                                                                                                                        Narration
+                                                                                                                                                    </td>
+                                                                                                                                                    <td
+                                                                                                                                                        width="70%"
+                                                                                                                                                        style="font-size: 10px; font-family: arial; padding: 3px;"
+                                                                                                                                                        th:text="${transaction.narration}"
+                                                                                                                                                    ></td>
+                                                                                                                                                </tr>
+                                                                                                                                                <tr>
+                                                                                                                                                    <td
+                                                                                                                                                        width="30%"
+                                                                                                                                                        style="font-weight: bold; padding: 3px; font-size: 10px; font-family: arial;"
+                                                                                                                                                    >
+                                                                                                                                                        Amount
+                                                                                                                                                    </td>
+                                                                                                                                                    <td
+                                                                                                                                                        width="70%"
+                                                                                                                                                        style="font-size: 10px; font-family: arial; padding: 3px;"
+                                                                                                                                                        th:text="${transaction.amount}"
+                                                                                                                                                    ></td>
+                                                                                                                                                </tr>
+                                                                                                                                                <tr>
+                                                                                                                                                    <td
+                                                                                                                                                        width="30%"
+                                                                                                                                                        style="font-weight: bold; padding: 3px; font-size: 10px; font-family: arial;"
+                                                                                                                                                    >
+                                                                                                                                                        Current Balance
+                                                                                                                                                    </td>
+                                                                                                                                                    <td
+                                                                                                                                                        width="70%"
+                                                                                                                                                        style="font-size: 10px; font-family: arial; padding: 3px;"
+                                                                                                                                                        th:text="${transaction.currentBalance}"
+                                                                                                                                                    ></td>
+                                                                                                                                                </tr>
+                                                                                                                                                <tr>
+                                                                                                                                                    <td
+                                                                                                                                                        width="30%"
+                                                                                                                                                        style="font-weight: bold; padding: 3px; font-size: 10px; font-family: arial;"
+                                                                                                                                                    >
+                                                                                                                                                        Reference
+                                                                                                                                                    </td>
+                                                                                                                                                    <td
+                                                                                                                                                        width="70%"
+                                                                                                                                                        style="font-size: 10px; font-family: arial; padding: 3px;"
+                                                                                                                                                        th:text="${transaction.reference}"
+                                                                                                                                                    ></td>
+                                                                                                                                                </tr>
+                                                                                                                                            </tbody>
+                                                                                                                                        </th:block>
+                                                                                                                                    </table>
+                                                                                                                                </td>
+                                                                                                                            </tr>
+                                                                                                                        </tbody>
+                                                                                                                    </table>
+                                                                                                                </td>
+                                                                                                            </tr>
+                                                                                                        </td>
+                                                                                                    </tr>
+                                                                                                </td>
+                                                                                            </tr>
+                                                                                        </tbody>
+                                                                                    </table>
+                                                                                </td>
+                                                                            </tr>
+                                                                        </td>
+                                                                    </tr>
+                                                                </td>
+                                                            </tr>
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </td>
+                                    </tr>
+                                </td>
+                            </tr>
+                        </td>
+                    </tr>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</td>

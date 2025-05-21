@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title></title>
+    <style type="text/css">table,td,tr{
+        border-collapse: collapse;
+    }
+    </style>
+</head>
+<body style="margin: 0 auto;padding: 0;">
+<table width="100%" align="center" cellpadding="0" cellspacing="0" style="border-collapse: collapse;">
+    <tbody>
+    <tr>
+        <td width="65%" style="padding: 3px; font-size: 12px; font-family: arial;">Document Generated On - <span th:text="${timestamp}"></span></td>
+    </tr>
+    <br/>
+    <tr>
+        <td width="65%" style="padding: 3px; font-size: 12px; font-family: arial; text-transform:uppercase;"><strong>- CREDIT BUREAU 2.0 -</strong></td>
+    </tr>
+    <tr>
+        <td width="100"></td>
+    </tr>
+    </tbody>
+</table>
+<table>
+    <tbody>
+    <tr>
+        <td height="20"></td>
+    </tr>
+    </tbody>
+</table>
+<table>
+    <tbody>
+    <tr>
+        <td width="20%" style="padding: 3px; font-size: 10px; font-family: arial;">
+            <strong>APP NAME:</strong>
+        </td>
+        <td width="65%" style="padding: 3px; font-size: 10px; font-family: arial; text-transform:uppercase;" > &nbsp;</td>
+    </tr>
+    <tr>
+        <td width="20%" style="padding: 3px; font-size: 10px; font-family: arial;">
+            <strong>RESPONSE NAME:</strong>
+        </td>
+        <td width="65%" style="padding: 3px; font-size: 10px; font-family: arial; text-transform:uppercase;" th:text="${responseName}">
+    </tr>
+    </tbody>
+</table>
+<table>
+    <tbody>
+    <tr>
+        <td height="20"></td>
+    </tr>
+    <tr>
+        <td height="20"></td>
+    </tr>
+    </tbody>
+</table>
+<table width="100%" cellpadding="0" cellspacing="0" border = "1" style="border-collapse: collapse;">
+    <tbody>
+    <tr>
+        <td width="30%" style="padding: 3px; font-size: 12px; font-family: arial;">
+            <strong>Details</strong>
+        </td>
+        <td width="20%" style="padding: 3px; font-size: 12px; font-family: arial;">
+            <strong>Match (Y/N)</strong>
+        </td>
+        <td width="40%" style="padding: 3px; font-size: 12px; font-family: arial;">
+            <strong>Details as per CB</strong>
+        </td>
+    </tr>
+    <tr>
+        <td width="30%" style="padding: 3px; font-size: 10px; font-family: arial;">
+           Proposal Number
+        </td>
+        <td width="20%" style="padding: 3px; font-size: 10px; font-family: arial;"></td>
+        <td width="40%" style="padding: 3px; font-size: 10px; font-family: arial; text-transform:uppercase;" th:text="${proposalNumber}"></td>
+    </tr>
+    <tr>
+        <td width="30%" style="padding: 3px; font-size: 10px; font-family: arial;">
+            Name
+        </td>
+        <td width="20%" style="padding: 3px; font-size: 10px; font-family: arial;" th:if="${format!='CIBIL'}" th:text="${nameValidated}"></td>
+        <td width="20%" style="padding: 3px; font-size: 10px; font-family: arial;" th:if="${format=='CIBIL'}" ></td>
+        <td width="40%" style="padding: 3px; font-size: 10px; font-family: arial; text-transform:uppercase;" th:text="${name}"></td>
+    </tr>
+    <tr>
+        <td width="30%" style="padding: 3px; font-size: 10px; font-family: arial;">
+            DOB
+        </td>
+        <td width="20%" style="padding: 3px; font-size: 10px; font-family: arial;" th:if="${format!='CIBIL'}" th:text="${dobValidated}"></td>
+        <td width="20%" style="padding: 3px; font-size: 10px; font-family: arial;" th:if="${format=='CIBIL'}" ></td>
+        <td width="40%" style="padding: 3px; font-size: 10px; font-family: arial; text-transform:uppercase;" th:text="${dob}"></td>
+    </tr>
+    <tr>
+        <td width="30%" style="padding: 3px; font-size: 10px; font-family: arial;">
+            PAN
+        </td>
+        <td width="20%" style="padding: 3px; font-size: 10px; font-family: arial;" th:if="${format!='CIBIL'}" th:text="${panNumberValidated}"></td>
+        <td width="20%" style="padding: 3px; font-size: 10px; font-family: arial;" th:if="${format=='CIBIL'}" ></td>
+        <td width="40%" style="padding: 3px; font-size: 10px; font-family: arial; text-transform:uppercase;" th:text="${panNumber}"></td>
+    </tr>
+    <tr>
+        <td width="30%" style="padding: 3px; font-size: 10px; font-family: arial;">
+            Address
+        </td>
+        <td width="20%" style="padding: 3px; font-size: 10px; font-family: arial;" >&nbsp;</td>
+        <td width="40%" style="padding: 3px; font-size: 10px; font-family: arial; text-transform:uppercase;" >&nbsp;</td>
+    </tr>
+    <tr>
+        <td width="30%" style="padding: 3px; font-size: 10px; font-family: arial;">
+            Pincode
+        </td>
+        <td width="20%" style="padding: 3px; font-size: 10px; font-family: arial;" th:if="${format!='CIBIL'}" th:text="${pincodeValidated}"></td>
+        <td width="20%" style="padding: 3px; font-size: 10px; font-family: arial;" th:if="${format=='CIBIL'}" ></td>
+        <td width="40%" style="padding: 3px; font-size: 10px; font-family: arial; text-transform:uppercase;" th:text="${pincode}"></td>
+    </tr>
+    <tr>
+        <td width="30%" style="padding: 3px; font-size: 10px; font-family: arial;">
+            Mobile
+        </td>
+        <td width="20%" style="padding: 3px; font-size: 10px; font-family: arial;" th:if="${format!='CIBIL'}" th:text="${mobileNumberValidated}"></td>
+        <td width="20%" style="padding: 3px; font-size: 10px; font-family: arial;" th:if="${format=='CIBIL'}" ></td>
+        <td width="40%" style="padding: 3px; font-size: 10px; font-family: arial; text-transform:uppercase;" th:text="${mobileNumber}"></td>
+    </tr>
+    <tr>
+        <td width="30%" style="padding: 3px; font-size: 10px; font-family: arial;">
+            Email Id
+        </td>
+        <td width="20%" style="padding: 3px; font-size: 10px; font-family: arial;" th:if="${format!='CIBIL'}" th:text="${emailIdValidated}"></td>
+        <td width="20%" style="padding: 3px; font-size: 10px; font-family: arial;" th:if="${format=='CIBIL'}" ></td>
+        <td width="40%" style="padding: 3px; font-size: 10px; font-family: arial; text-transform:uppercase;" th:text="${emailId}"></td>
+    </tr>
+    <tr>
+        <td width="30%" style="padding: 3px; font-size: 10px; font-family: arial;">
+            Occupation Class
+        </td>
+        <td width="20%" style="padding: 3px; font-size: 10px; font-family: arial;" th:if="${format!='CIBIL'}" th:text="${occupationValidated}"></td>
+        <td width="20%" style="padding: 3px; font-size: 10px; font-family: arial;" th:if="${format=='CIBIL'}" ></td>
+        <td width="40%" style="padding: 3px; font-size: 10px; font-family: arial; text-transform:uppercase;" th:text="${occupation}"></td>
+    </tr>
+    <tr>
+        <td width="30%" style="padding: 3px; font-size: 10px; font-family: arial;">
+            Credit Score
+        </td>
+        <td width="20%" style="padding: 3px; font-size: 10px; font-family: arial;" th:text="${creditScoreValidated}"></td>
+        <td width="40%" style="padding: 3px; font-size: 10px; font-family: arial; text-transform:uppercase;" th:text="${creditScore}"></td>
+    </tr>
+    <tr>
+        <td width="30%" style="padding: 3px; font-size: 10px; font-family: arial;">
+            Estimated Income
+        </td>
+        <td width="20%" style="padding: 3px; font-size: 10px; font-family: arial;" th:text="${estimatedIncomeValidated}"></td>
+        <td width="40%" style="padding: 3px; font-size: 10px; font-family: arial; text-transform:uppercase;" th:text="${estimatedIncome}"></td>
+    </tr>
+    <tr th:if="${format=='CIBIL'}">
+        <td width="30%" style="padding: 3px; font-size: 10px; font-family: arial;">
+            TRL Score
+        </td>
+        <td width="20%" style="padding: 3px; font-size: 10px; font-family: arial;" th:text="${trlScoreValidated}"></td>
+        <td width="40%" style="padding: 3px; font-size: 10px; font-family: arial; text-transform:uppercase;" th:text="${trlScore}"></td>
+    </tr>
+    </tbody>
+</table>
+<table>
+    <tbody>
+    <tr>
+        <td height="20"></td>
+    </tr>
+    </tbody>
+</table>
+<table>
+    <tbody>
+    <tr>
+        <td height="20"></td>
+    </tr>
+    </tbody>
+</table>
+</body>
+</html>

@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title></title>
+		<style type="text/css">table,td,tr{
+border-collapse: collapse;
+}</style>
+	</head>
+	<body style="margin: 0 auto;padding: 0;">
+		<!-- Main Wrapper Start Here-->
+		<!-- Form 60 Section Start here-->
+		<div>
+			<table>
+				<tbody>
+				<tr>
+					<td style="width:100%"><img src='classpath:static/logo-IRP.png'
+												alt="Axis Max Life Insurance"
+												width="100%" height="100"></td>
+					<td>&nbsp;</td>
+				</tr>
+				</tbody>
+				</table>
+				</div>
+		<table width="100%" align="center" cellpadding="0" cellspacing="0" style="border-collapse: collapse;">
+			<tbody>
+				<!--<tr>
+					<td style="padding: 3px;border-bottom-width:1px;border-bottom-style:solid;border-bottom-color:#333">
+						<img src="classpath:static/Logo_Pathway_MaxIS.png" width="auto"/>
+						</td>
+					</tr>-->
+					<tr>
+						<td height="45"></td>
+					</tr>
+					<tr>
+						<td align="center" style="padding: 3px; font-size: 24px; font-family: arial;">
+							<strong>FORM NO. 60</strong>
+							<p style="font-size: 12px">Form for declaration to be filed by an individual or a person (not being a company or firm)
+								<br/> who does not have a permanent
+account number and who enters into any transaction specified in rule 114B
+								</p>
+							</td>
+						</tr>
+						<tr>
+							<td style="padding:5px;">
+								<table cellspacing="0" cellpadding="0" width="100%" style="border-collapse: collapse; border-width:1px;border-style:solid;border-color:#333;">
+									<tbody>
+										<tr>
+											<td width="350" style="font-weight: bold; border-bottom-width:1px;border-bottom-style:solid;border-bottom-color:#333;padding: 3px; font-size: 10px; font-family: arial;"></td>
+											<td style="padding: 3px;border-bottom-width:1px;border-bottom-style:solid;border-bottom-color:#333; font-size: 10px; font-family: arial;">
+												<table cellspacing="0" cellpadding="0" width="100%" style="border-collapse: collapse;">
+													<tbody>
+														<tr>
+															<td width="25%" style="font-weight: bold;">First Name</td>
+															<td width="25%" style="font-weight: bold;">Middle Name</td>
+															<td width="25%" style="font-weight: bold;">Last Name</td>
+														</tr>
+													</tbody>
+												</table>
+											</td>
+										</tr>
+										<tr>
+											<td colspan="2">
+												<table cellspacing="0" cellpadding="0" border="0" width="100%">
+													<tbody>
+														<tr>
+															<td width="50%" style="font-weight: bold; padding: 3px;border-bottom-width:1px;border-bottom-style:solid;border-bottom-color:#333; font-size: 10px; font-family: arial;">1) Name(Same as ID Proof):</td>
+															<td width="50%" style="padding: 3px; border-bottom-width:1px;border-bottom-style:solid;border-bottom-color:#333;font-size: 10px; font-family: arial;">
+																<table cellspacing="0" cellpadding="0" width="100%" style="border-collapse: collapse;">
+																	<tbody>
+																		<tr>
+																			<td width="25%" style="text-transform:uppercase;">
+																				<i th:text="${firstName}"></i>
+																			</td>
+																			<td width="25%" style="text-transform:uppercase;">
+																				<i th:text="${middleName}"></i>
+																			</td>
+																			<td width="25%" style="text-transform:uppercase;">
+																				<i th:text="${lastName}"></i>
+																			</td>
+																		</tr>
+																	</tbody>
+																</table>
+															</td>
+														</tr>
+														<tr>
+															<td width="350" style="font-weight: bold; padding: 3px;border-bottom-width:1px;border-bottom-style:solid;border-bottom-color:#333; font-size: 10px; font-family: arial;">2) Father's Name:</td>
+															<td style="padding: 3px; border-bottom-width:1px;border-bottom-style:solid;border-bottom-color:#333;font-size: 10px; font-family: arial;">
+																<table cellspacing="0" cellpadding="0" width="100%" style="border-collapse: collapse;">
+																	<tbody>
+																		<tr>
+																			<td width="25%" style="text-transform:uppercase;">
+																				<i th:text="${fatherName}">&nbsp;</i>
+																			</td>
+																			<td width="25%" style="text-transform:uppercase;">
+																				<i></i>
+																			</td>
+																			<td width="25%" style="text-transform:uppercase;">
+																				<i></i>
+																			</td>
+																		</tr>
+																	</tbody>
+																</table>
+															</td>
+														</tr>
+														<tr>
+															<td width="350" colspan="2" style="padding:0px; font-size: 10px; font-family: arial;">
+																<table cellspacing="0" border="0" cellpadding="5" width="100%" style="border-collapse: collapse;">
+																	<tbody>
+																		<tr>
+																			<td width="50%"><strong>3) Date of Birth/ Incorporation of declarant:</strong>
+																				<span style="padding-left:7px;text-transform:uppercase;">
+																				<i th:text="${dob}">&nbsp;</i>
+																				</span>
+																			</td>
+																		</tr>
+																	</tbody>
+																</table>
+															</td>
+														</tr>
+													</tbody>
+												</table>
+											</td>
+										</tr>
+									</tbody>
+								</table>
+							</td>
+						</tr>
+						<!-- Proof of Address Start-->
+						<tr>
+							<td style="padding: 2px 5px;">
+								<table cellspacing="0" cellpadding="0" width="100%" style="border-collapse: collapse; border-width:1px;border-style:solid;border-color:#333;">
+									<tbody>
+										<tr>
+											<td width="50%" style="padding: 3px;border-width:1px;border-style:solid;border-color:#333; font-size: 10px; font-family: arial;">
+												<strong>4) Flat /Room No. :</strong>
+												<span style="padding-left: 10px;text-transform:uppercase;">
+													<i th:text="${permanentAddress.get('houseNo')}">&nbsp;</i>
+												</span>
+											</td>
+											<td width="50%" style="padding: 3px;border-width:1px;border-style:solid;border-color:#333; font-size: 10px; font-family: arial;">
+												<strong>5) Floor No. :</strong>
+												<span style="padding-left: 10px;text-transform:uppercase;">
+													<i></i>
+												</span>
+											</td>
+										</tr>
+										<tr>
+											<td width="50%" style="padding: 3px;border-width:1px;border-style:solid;border-color:#333; font-size: 10px; font-family: arial;">
+												<strong>6) Name of premises:</strong>
+												<span style="padding-left: 10px;text-transform:uppercase;">
+													<i></i>
+												</span>
+											</td>
+											<td width="50%" style="padding: 3px;border-width:1px;border-style:solid;border-color:#333; font-size: 10px; font-family: arial;">
+												<strong>7) Block Name/No. :</strong>
+												<span style="padding-left: 10px;text-transform:uppercase;">
+													<i></i>
+												</span>
+											</td>
+										</tr>
+										<tr>
+											<td width="50%" style="padding: 3px;border-width:1px;border-style:solid;border-color:#333; font-size: 10px; font-family: arial;">
+												<strong>8) Road/ Street/ Lane:</strong>
+												<span style="padding-left: 10px;text-transform:uppercase;">
+													<i></i>
+												</span>
+											</td>
+											<td width="50%" style="padding: 3px;border-width:1px;border-style:solid;border-color:#333; font-size: 10px; font-family: arial;">
+												<strong>9) Area/ Locality:</strong>
+												<span style="padding-left: 10px;text-transform:uppercase;">
+													<i th:text="${permanentAddress.get('area')}">&nbsp;</i>
+												</span>
+											</td>
+										</tr>
+										<tr>
+											<td width="50%" style="padding: 3px;border-width:1px;border-style:solid;border-color:#333; font-size: 10px; font-family: arial;">
+												<strong>10) Town/ City:</strong>
+												<span style="padding-left: 10px;text-transform:uppercase;">
+													<i th:text="${permanentAddress.get('city')}">&nbsp;</i>
+												</span>
+											</td>
+											<td width="50%" style="padding: 3px;border-width:1px;border-style:solid;border-color:#333; font-size: 10px; font-family: arial;">
+												<strong>11) District:</strong>
+												<span style="padding-left: 10px;text-transform:uppercase;">
+													<i></i>
+												</span>
+											</td>
+										</tr>
+										<tr>
+											<td width="50%" style="padding: 3px;border-width:1px;border-style:solid;border-color:#333; font-size: 10px; font-family: arial;">
+												<strong>12) State:</strong>
+												<span style="padding-left: 10px;text-transform:uppercase;">
+													<i th:text="${permanentAddress.get('state')}">&nbsp;</i>
+												</span>
+											</td>
+											<td width="50%" style="padding: 3px;border-width:1px;border-style:solid;border-color:#333; font-size: 10px; font-family: arial;">
+												<strong>13) Pin code:</strong>
+												<span style="padding-left: 10px;text-transform:uppercase;">
+													<i th:text="${permanentAddress.get('pinCode')}">&nbsp;</i>
+												</span>
+											</td>
+										</tr>
+										<tr>
+											<td width="50%" style="padding: 3px;border-width:1px;border-style:solid;border-color:#333; font-size: 10px; font-family: arial;">
+												<strong>14) Telephone Number (with STD code):</strong>
+												<span style="padding-left: 10px;text-transform:uppercase;">
+													<i></i>
+												</span>
+											</td>
+											<td width="50%" style="padding: 3px;border-width:1px;border-style:solid;border-color:#333; font-size: 10px; font-family: arial;">
+												<strong>15) Mobile Number:</strong>
+												<span style="padding-left: 10px;text-transform:uppercase;">
+													<i th:text="${communicationAddress.get('mobileNumber1')}">&nbsp;</i>
+												</span>
+											</td>
+										</tr>
+									</tbody>
+								</table>
+							</td>
+						</tr>
+						<!-- Proof of Address End-->
+						<tr>
+							<td style="padding: 2px 5px;">
+								<table cellspacing="0" cellpadding="0" width="100%" style="border-collapse: collapse; border-width:1px;border-style:solid;border-color:#333;">
+									<tbody>
+										<tr>
+											<td width="50%" style="padding: 3px;border-width:1px;border-style:solid;border-color:#333; font-size: 10px; font-family: arial;">
+												<strong>16) Amount of transaction (Rs.) :</strong>
+												<span style="padding-left: 10px;text-transform:uppercase;">
+													<i th:text="${paymentDetails.get('amount')}">&nbsp;</i>
+												</span>
+											</td>
+											<td width="50%" style="padding: 3px;border-width:1px;border-style:solid;border-color:#333; font-size: 10px; font-family: arial;">
+												<strong>17) Date of transaction :</strong>
+												<span style="padding-left: 10px;text-transform:uppercase;">
+													<i th:text="${paymentDetails.get('paymentDate')}">&nbsp;</i>
+												</span>
+											</td>
+										</tr>
+										<tr>
+											<td width="50%" colspan="2" style="padding: 3px;border-width:1px;border-style:solid;border-color:#333; font-size: 10px; font-family: arial;">
+												<strong>18) In case of transaction in joint names,number of persons involved in the transaction:</strong>
+												<span style="padding-left: 10px;text-transform:uppercase;">
+													<i></i>
+												</span>
+											</td>
+										</tr>
+										<tr>
+											<td width="50%" style="padding: 3px;border-width:1px;border-style:solid;border-color:#333; font-size: 10px; font-family: arial;">
+												<strong>19) Mode of transaction:</strong>
+												<span style="padding-left: 10px;text-transform:uppercase;">
+													<i th:text="${paymentDetails.get('paymentMode')}">&nbsp;</i>
+												</span>
+											</td>
+											<td width="50%" style="padding: 3px;border-width:1px;border-style:solid;border-color:#333; font-size: 10px; font-family: arial;">
+												<strong>20) Aadhaar Number issued by UIDAI (if available):</strong>
+												<span style="padding-left: 10px;text-transform:uppercase;">
+													<i>&nbsp;</i>
+												</span>
+											</td>
+										</tr>
+									</tbody>
+								</table>
+							</td>
+						</tr>
+						<tr>
+							<td style="padding: 2px 5px;">
+								<table cellspacing="0" cellpadding="0" width="100%" style="border-collapse: collapse; border-width:1px;border-style:solid;border-color:#333;">
+									<tbody>
+										<tr>
+											<td width="50%" style="padding: 3px;border-width:1px;border-style:solid;border-color:#333; font-size: 10px; font-family: arial;">
+												<strong>21) If applied for PAN and it is not yet generated enter
+date of application and acknowledgement number :</strong>
+											</td>
+											<td width="50%" style="padding: 0px;border-width:1px;border-style:solid;border-color:#333; font-size: 10px; font-family: arial;">
+												<table cellspacing="0" border="0" cellpadding="0" width="100%" style="border-collapse: collapse;">
+													<tbody>
+														<tr>
+															<td height="20" style="border-bottom: 1px solid #333;text-transform:uppercase;">
+																<i th:text="${panAcknowledgementNo}">&nbsp;</i>
+															</td>
+														</tr>
+														<tr>
+															<td height="20" style="border-bottom: 1px solid #333;text-transform:uppercase;">
+																<i th:text="${panApplicationDate}"></i>
+															</td>
+														</tr>
+													</tbody>
+												</table>
+											</td>
+										</tr>
+									</tbody>
+								</table>
+							</td>
+						</tr>
+						<tr>
+							<td style="padding: 2px 5px;">
+								<table cellspacing="0" cellpadding="0" width="100%" style="border-collapse: collapse; border-width:1px;border-style:solid;border-color:#333;">
+									<tbody>
+										<tr>
+											<td width="50%" colspan="2" style="padding: 3px;border-width:1px;border-style:solid;border-color:#333; font-size: 10px; font-family: arial;">
+												<div style="margin-bottom:5px;">
+													<strong>22) If PAN not applied, fill estimated total income (including income of spouse,minor child etc. as per section 64 of Income-tax Act, 1961) for the financial year in which the above transaction is held:</strong>
+												</div>
+												<table cellspacing="0" cellpadding="5" border="1" width="100%" style="border-collapse: collapse;">
+													<tbody>
+														<tr>
+															<td width="400">
+																<strong>a)</strong> Agricultural income (Rs.)
+															</td>
+															<td th:if="${occupationFlag} == true" th:text="${annualIncome}">&nbsp;</td>
+															<td th:unless="${occupationFlag} == true">N/A</td>
+															
+														</tr>
+														<tr>
+															<td>
+																<strong>b)</strong> Other than agricultural income (Rs.)
+															</td>
+															<td th:if="${occupationFlag} == true">N/A</td>
+															<td th:unless="${occupationFlag} == true" th:text="${annualIncome}">&nbsp;</td>
+														</tr>
+													</tbody>
+												</table>
+											</td>
+										</tr>
+									</tbody>
+								</table>
+							</td>
+						</tr>
+						<tr>
+							<td style="padding: 2px 5px;">
+								<table cellspacing="0" cellpadding="0" width="100%" style="border-collapse: collapse; border-width:1px;border-style:solid;border-color:#333;">
+									<tbody>
+										<tr>
+											<td width="50%" colspan="2" style="padding: 3px;border-width:1px;border-style:solid;border-color:#333; font-size: 10px; font-family: arial;">
+												<div style="margin-bottom:5px;">
+													<strong>23) Details of document being produced
+in support of identify in Column 1
+(Refer Instruction overleaf):</strong>
+												</div>
+												<table cellspacing="0" cellpadding="5" border="1" width="100%" style="border-collapse: collapse;">
+													<tbody>
+														<tr>
+															<td>
+																<strong>Document Code</strong>
+															</td>
+															<td>
+																<strong>Document identification number</strong>
+															</td>
+															<td>
+																<strong>Name and address of the authority issuing the document</strong>
+															</td>
+														</tr>
+														<tr>
+															<td width="31%" style="text-transform:uppercase;">
+																<i th:text="${identityProofDetails.proofName}">&nbsp;</i>
+															</td>
+															<td width="31%" style="text-transform:uppercase;">
+																<i th:text="${identityProofDetails.proofNumber}">&nbsp;</i>
+															</td>
+															<td width="38%" style="text-transform:uppercase;">
+																<i th:text="${identityProofDetails.idProofAuthority}">&nbsp;</i>
+															</td>
+														</tr>
+													</tbody>
+												</table>
+											</td>
+										</tr>
+									</tbody>
+								</table>
+							</td>
+						</tr>
+						<tr>
+							<td style="padding: 2px 5px;">
+								<table cellspacing="0" cellpadding="0" width="100%" style="border-collapse: collapse; border-width:1px;border-style:solid;border-color:#333;">
+									<tbody>
+										<tr>
+											<td width="50%" colspan="2" style="padding: 3px;border-width:1px;border-style:solid;border-color:#333; font-size: 10px; font-family: arial;">
+												<div style="margin-bottom:5px;">
+													<strong>24) Details of document being produced
+in support of address in Columns 4 to
+13 (Refer Instruction overleaf):</strong>
+												</div>
+												<table cellspacing="0" cellpadding="5" border="1" width="100%" style="border-collapse: collapse;">
+													<tbody>
+														<tr>
+															<td>
+																<strong>Document Code</strong>
+															</td>
+															<td>
+																<strong>Document identification number</strong>
+															</td>
+															<td>
+																<strong>Name and address of the authority issuing the document</strong>
+															</td>
+														</tr>
+														<tr>
+															<td width="31%" style="text-transform:uppercase;">
+																<i th:text="${addressProofName}">&nbsp;</i>
+															</td>
+															<td width="31%" style="text-transform:uppercase;">
+																<i th:text="${addressProofNumber}">&nbsp;</i>
+															</td>
+															<td width="38%" style="text-transform:uppercase;">
+																<i th:text="${addressProofAuthority}">&nbsp;</i>
+															</td>
+														</tr>
+													</tbody>
+												</table>
+											</td>
+										</tr>
+									</tbody>
+								</table>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+				<!-- Form 60 Section End here-->
+			</body>
+		</html>

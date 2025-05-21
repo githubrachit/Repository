@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Aadhaar eKYC Document</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,700;1,300;1,500&display=swap" rel="stylesheet">
+    <style>
+        *{
+            margin:0;
+            padding:0;
+        }
+        *,:before,:after{
+            box-sizing:border-box;
+            -ms-box-sizing:border-box;
+            -webkit-box-sizing:border-box;
+            -moz-box-sizing:border-box;
+            -o-box-sizing:border-box;
+        }
+        body{
+            font-size: 16px;
+            line-height: 1;
+            color: #000;
+            background: #fff;
+            font-family: 'Roboto', sans-serif;
+        }
+        #template {
+            padding: 5px 30;
+            max-width: 1140px;
+            width: 100%;
+            margin: 0 auto;
+        }
+        .logo{
+            margin-bottom:20px;
+        }
+        .header-content{
+            padding:15px;
+            border:2px solid #f57e38;
+            text-align:center;
+        }
+        h1{
+            font-size:20px;
+        }
+        h2{
+            font-size:16px;
+        }
+        .details-section{
+            padding:20px 0;
+        }
+        .details-section > div{
+            padding-bottom:10px;
+        }
+        .details-section span{
+            font-size:14px;
+            display:inline-block;
+        }
+        .details-section p{
+            font-size:14px;
+        }
+        .details-section > div > span:first-child{
+            width:150px;
+        }
+        .details-section > div > span:last-child{
+            width:calc(100% - 155px);
+        }
+        .residence-details{
+            padding-top:10px;
+            padding-left:30px;
+            width:700px;
+        }
+        .residence-details > div{
+            padding-bottom: 10px;
+            display:inline-block;
+            width:330px;
+            vertical-align: top;
+        }
+        .details-section .authentication-section{
+            padding-top:10px;
+            padding-bottom: 0;
+        }
+        .authentication-section h2{
+            text-decoration: underline;
+            margin-bottom:10px;
+        }
+        .authentication-section p{
+            line-height: 1.4;
+            margin-bottom:10px;
+        }
+        .authentication-section > .image{
+            width:200px;
+            margin:0 auto;
+        }
+        .authentication-section > .image img{
+            width:100%;
+        }
+    </style>
+</head>
+<body>
+<div id="template">
+    <header>
+        <div class="logo">
+            <img src="classpath:static/logo_ax_max.png" alt="Axis Max Life Insurance" />
+        </div>
+        <div class="header-content">
+            <h1>Aadhaar eKYC Document</h1>
+        </div>
+    </header>
+    <div id="content">
+        <div class="details-section">
+            <div>
+                <span>Proposal No. - </span>
+                <span th:text="${proposalNumber}"></span>
+            </div>
+            <div>
+                <span>Name - </span>
+                <span th:text="${name}"></span>
+            </div>
+            <div>
+                <span>DOB - </span>
+                <span th:text="${dob}"></span>
+            </div>
+            <div>
+                <span>Gender - </span>
+                <span th:text="${gender}"></span>
+            </div>
+            <div>
+                <p>Current residential Address - </p>
+                <div class="residence-details">
+                    <div>
+                        <span>Care Of: </span>
+                        <span th:text="${careOf}"></span>
+                    </div>
+                    <div>
+                        <span>House: </span>
+                        <span th:text="${house}"></span>
+                    </div>
+                    <div>
+                        <span>Street: </span>
+                        <span th:text="${street}"></span>
+                    </div>
+                    <div>
+                        <span>Landmark: </span>
+                        <span th:text="${landmark}"></span>
+                    </div>
+                    <div>
+                        <span>Location: </span>
+                        <span th:text="${location}"></span>
+                    </div>
+                    <div>
+                        <span>Pin Code: </span>
+                        <span th:text="${pincode}"></span>
+                    </div>
+                    <div>
+                        <span>Vill/City: </span>
+                        <span th:text="${village}"></span>
+                    </div>
+                    <div>
+                        <span>Sub-Dist: </span>
+                        <span th:text="${subDist}"></span>
+                    </div>
+                    <div>
+                        <span>Dist: </span>
+                        <span th:text="${dist}"></span>
+                    </div>
+                    <div>
+                        <span>State: </span>
+                        <span th:text="${state}"></span>
+                    </div>
+                    <div>
+                        <span>Country: </span>
+                        <span>India</span>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <span>Email - </span>
+                <span th:text="${email}"></span>
+            </div>
+            <div>
+                <span>Mobile number - </span>
+                <span th:text="${mobile}"></span>
+            </div>
+            <div class="authentication-section">
+                <h2>e-Consent for Authentication:</h2>
+                <p>I, the holder of above Aadhaar number,hereby give my consent to Axis Max Life Insurance Ltd to obtain my Aadhaar number, name and Fingerprint/OTPfor authentication with UIDAI.Axis Max Life Insurance Co Ltd has informed me that my identity information would only be used for KYC purpose and also informed that my biometrics/OTPwill not be stored /shared and will be submitted to CIDR only for the purpose of authentication.</p>
+                <div class="image">
+                    <img th:src="${photograph}" alt=""/>
+                </div>
+            </div>
+        </div>
+    </div>
+<!--    <footer>-->
+<!--        <img src="classpath:static/max-life-footer.png" alt="Max Life Insurance footer" />-->
+<!--    </footer>-->
+</div>
+</body>
+</html>

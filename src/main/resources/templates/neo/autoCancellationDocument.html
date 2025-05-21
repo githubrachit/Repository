@@ -1,0 +1,162 @@
+<style type="text/css">
+    table,
+    td,
+    tr {
+        border-collapse: collapse;
+    }
+
+    table {
+        table-layout: fixed;
+    }
+
+    th {
+        font-size: 12px;
+    }
+
+    td {
+        font-size: 11px;
+    }
+
+    table td input {
+        margin: 0;
+    }
+
+    @media print {
+        * {
+            font-size: 6pt !important;
+        }
+
+        .printtext {
+            font-size: 11pt !important;
+        }
+    }
+
+    @page {
+        size: A4;
+        margin: 10px;
+        padding-top: 10px;
+    }
+</style>
+<body style="padding: 0;">
+<table width="100%" align="center" cellpadding="0" cellspacing="0" style="border-collapse: collapse;">
+    <tbody>
+    <tr>
+        <td style="width: 100%">
+            <table border="0" align="center" cellpadding="0" cellspacing="0"
+                   style="border-collapse: collapse;width: 100%;margin-top: 10px">
+                <tr>
+                    <td style="font-family: arial; font-size: 16px; text-align: center;padding: 5px;"><strong>
+                        <p style ="margin: auto;border:1px solid black; padding:20px; background-color: #C8C8C8"><u>Proposal Money Refund Request Form</u></p>
+                    </strong>
+                    </td>
+                </tr>
+            </table>
+        </td>
+    </tr>
+    <tr>
+        <table border="0" align="auto" cellpadding="0" cellspacing="0"
+               style="margin: auto;border: 1px solid black; width: 100%;margin-top: 10px ">
+            <tbody>
+            <tr>
+                <td align="left" style="padding: 8px 0; font-family: arial;font-size:12px;"> *Proposal Number: </td>
+                <td th:text="${proposalNumber}"></td>
+            </tr>
+            <tr>
+                <td align="left" style="padding: 8px 0; font-family: arial;font-size:12px;"> *Name of Proposer:</td>
+                <td th:text="${proposerName}"></td>
+            </tr>
+            <tr>
+                <td align="left " style="padding: 8px 0; font-family: arial;font-size:12px;"> *Nominee Name / DOB:</td>
+                <td th:text="${nomineeName}"></td>
+                </td>
+            </tr>
+            <tr>
+                <td align="left " style="padding: 8px 0; font-family: arial;font-size:12px;"> *Preferred Mailing Address:</td>
+                <td th:text="${address}"></td>
+                </td>
+            </tr>
+            <tr>
+                <td align="left " style="padding: 8px 0; font-family: arial;font-size:12px;"> *Contact number</td>
+                <td th:text="${contactNumber}"></td>
+                </td>
+            </tr>
+            <tr>
+                <td align="left " style="padding: 8px 0; font-family: arial;font-size:12px;"> *E mail address:</td>
+                <td th:text="${email}"></td>
+                </td>
+            </tr>
+            <tr>
+                <td align="left " style="padding: 8px 0; font-family: arial;font-size:12px;"> *Annual Income:</td>
+                <td th:text="${annualIncome}"></td>
+                </td>
+            </tr>
+            <tr>
+                <td align="left " style="padding: 8px 0; font-family: arial;font-size:12px;"> *Date of Birth of Proposer / L2BI:</td>
+                <td th:text="${dob}"></td>
+                </td>
+            </tr>
+            <tr>
+                <td align="left " style="padding: 8px 0; font-family: arial;font-size:12px;"> *Agent ID:</td>
+                <td th:text="${agentId}"></td>
+                </td>
+            </tr>
+            <tr>
+                <td align="left " style="padding: 8px 0; font-family: arial;font-size:12px;"> *Sum Assured with Plan details:</td>
+                <td th:text="${sum_Assured_With_Plan_Details}"></td>
+                </td>
+            </tr>
+            <tr>
+                <td align="left " style="padding: 8px 0; font-family: arial;font-size:12px;"> *Policy Term:</td>
+                <td th:text="${policyTerm}"></td>
+                </td>
+            </tr>
+            <tr>
+                <td align="left " style="padding: 8px 0; font-family: arial;font-size:12px;"> *Premium paying term:</td>
+                <td th:text="${premiumPayingTerm}"></td>
+                </td>
+            </tr>
+            <tr>
+                <td align="left " style="padding: 8px 0; font-family: arial;font-size:12px;"> *Variant Name:</td>
+                <td th:text="${variantName}"></td>
+                </td>
+            </tr>
+            <tr>
+                <td align="left " style="padding: 8px 0; font-family: arial;font-size:12px;"> *Premium Paid:</td>
+                <td th:text="${premiumPaid}"></td>
+                </td>
+            </tr>
+            <tr>
+                <td align="left " style="padding: 8px 0; font-family: arial;font-size:12px;"> Money Recd Date:</td>
+                <td th:text="${moneyReceivedDate}"></td>
+                </td>
+            </tr>
+            <tr>
+                <td style="padding: 20px 0; font-family: arial; font-size:14px">
+                    &bull; Customer Signature: </td>
+                <td style="padding: 12px 0; font-family: arial;font-size:12px;" th:text="${customerSignature}"></td>
+            </tr>
+            <tr>
+                <td style="padding: 12px 0;font-family: arial; font-size:13px;"> Date: &nbsp <span th:text="${date}"></span></td>
+            </tr>
+            <tr>
+                <td align="left " style="padding: 8px 0; font-family: arial;font-size:14px;"> All fields marked are Mandatory.</td>
+            </tr>
+            <tr>
+                <td align="left " style="padding: 8px 0; font-family: arial;font-size:14px;"> To be supported along with a customer ID proof</td>
+            </tr>
+            <tr>
+            <tr> <td style="padding: 8px 0; font-family: arial; font-weight: bold;font-size:14px;">Axis Max Life Insurance Limited
+                <br><tr><td style="padding: 8px 0;font-family: arial; font-size: 14px;">Regd. Office : 419, Bhai Mohan Singh Nagar, Railmajra, Tehsil Balachaur,
+                District Nawanshahr, Punjab, 144533
+                Head Office: 11th & 12th Floor, DLF Square, Jacaranda Marg, DLF City
+                Phase-II, Gurugram - Haryana, 122002</td></tr></td></tr>
+            <!-- <br><tr><td style="padding: 8px 0;font-family: arial; font-size: 14px;">Operation Center, 90-A, Udyog Vihar, Sector-18, Gurgaon-122015, Haryana</td></tr>
+             <br><tr><td style="padding: 8px 0;font-family: arial; font-size: 14px;">Registered Office: Max House, 1 Dr Jha Marg, Okhla, New Delhi-110020, India</td></tr>-->
+            </tr>
+            </tbody>
+        </table>
+    </tr>
+
+    </tbody>
+</table>
+</body>

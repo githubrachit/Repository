@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title></title>
+<style type="text/css">
+table, td, tr {
+	border-collapse: collapse;
+}
+</style>
+</head>
+<body style="padding: 0;">
+	<!-- Main Wrapper Start Here-->
+	<!-- Header Start here-->
+	<div>
+		<table>
+			<tbody>
+			<tr>
+				<td style="width:100%"><img src='classpath:static/logo-IRP.png'
+											alt="Axis Max Life Insurance"
+											width="100%" height="100"></td>
+				<td>&nbsp;</td>
+			</tr>
+			</tbody>
+		</table>
+	</div>
+	<table width="100%" align="center" cellpadding="0" cellspacing="0"
+		style="border-collapse: collapse;">
+		<tbody>
+			<!--<tr>
+				<td width="100" style="padding: 5px;"><img
+					src="classpath:static/Logo_Pathway_MaxIS.png" width="100"></td>
+				&lt;!&ndash;<td align="center" style="padding: 5px; font-size: 20px; font-family: arial;"><strong>NRI_Questionaire</strong></td>&ndash;&gt;
+				<td width="100"></td>
+			</tr>-->
+		</tbody>
+	</table>
+	<!-- Header End here-->
+	<table>
+		<tbody>
+			<tr>
+				<td height="20"></td>
+			</tr>
+		</tbody>
+	</table>
+	<table width="100%" cellpadding="5" cellspacing="0" border="1"
+		style="border-collapse: collapse; font-size: 14px; font-family: arial;">
+		<tbody>
+			<tr>
+				<td colspan="3" height="12px" style="background-color: #f0f0f0;">
+					<strong>If NRI/PIO/Foreign National is selected, provide
+						below details</strong>
+				</td>
+			</tr>
+			<tr>
+				<td width="30%" height="12px"
+					style="font-size: 14px; font-family: arial;"></td>
+				<td width="30%" align="center"
+					style="font-size: 14px; font-family: arial;"><strong>Proposer</strong>
+				</td>
+				<td width="30%" align="center" height="25px"
+					style="font-size: 14px; font-family: arial;"><strong>Insured</strong>
+				</td>
+			</tr>
+			<tr>
+				<td width="30%" height="12px"
+					style="font-size: 14px; font-family: arial;"><strong>Passport
+						Number:</strong></td>
+				<td width="30%"
+					style="font-size: 12px; font-family: arial; text-transform: uppercase"
+					th:text="${ProposerPassport}"></td>
+				<td width="30%"
+					style="font-size: 12px; font-family: arial; text-transform: uppercase" th:text=${InsuredPassport}></td>
+			</tr>
+			<tr>
+				<td width="30%" height="12px"
+					style="font-size: 14px; font-family: arial;"><strong>Type
+						of Visa:</strong></td>
+				<td width="30%"
+					style="font-size: 12px; font-family: arial; text-transform: uppercase" th:text=${ProposerTypeOfVisa}></td>
+				<td width="30%"
+					style="font-size: 12px; font-family: arial; text-transform: uppercase"th:text=${InsuredTypeOfVisa}></td>
+			</tr>
+			<tr>
+				<td width="30%" height="12px"
+					style="font-size: 14px; font-family: arial;"><strong>Visa
+						Valid Till:</strong></td>
+				<td width="30%"
+					style="font-size: 12px; font-family: arial; text-transform: uppercase" th:text=${ProposerVisaValid}></td>
+				<td width="30%"
+					style="font-size: 12px; font-family: arial; text-transform: uppercase" th:text=${InsuredVisaValid}></td>
+			</tr>
+			<tr>
+				<td width="30%" height="12px"
+					style="font-size: 14px; font-family: arial;"><strong>Current
+						Country of Residence:</strong></td>
+				<td width="30%"
+					style="font-size: 12px; font-family: arial; text-transform: uppercase" th:text=${ProposerCurrentCountry}></td>
+				<td width="30%"
+					style="font-size: 12px; font-family: arial; text-transform: uppercase" th:text=${InsuredCurrentCountry}></td>
+			</tr>
+			<tr>
+				<td width="30%" height="12px"
+					style="font-size: 14px; font-family: arial;"><strong>Date
+						of Latest Entry to india:</strong></td>
+				<td width="30%"
+					style="font-size: 12px; font-family: arial; text-transform: uppercase" th:text=${ProposerLatestEntry}></td>
+				<td width="30%"
+					style="font-size: 12px; font-family: arial; text-transform: uppercase" th:text=${InsuredLatestEntry}></td>
+			</tr>
+			<tr>
+				<td width="30%" height="12px"
+					style="font-size: 14px; font-family: arial;"><strong>Country/Countries
+						visited:</strong></td>
+				<td width="30%"
+					style="font-size: 12px; font-family: arial; text-transform: uppercase" th:text=${CountriesVisited}></td>
+				<td width="30%"
+					style="font-size: 12px; font-family: arial; text-transform: uppercase" th:text=${InsuredCountriesVisited}></td>
+			</tr>
+			<tr>
+				<td width="30%" height="12px"
+					style="font-size: 14px; font-family: arial;"><strong>Nationality:</strong>
+				</td>
+				<td width="30%"
+					style="font-size: 12px; font-family: arial; text-transform: uppercase" th:text=${ProposerNationality}></td>
+				<td width="30%"
+					style="font-size: 12px; font-family: arial; text-transform: uppercase" th:text=${InsuredNationality}></td>
+			</tr>
+			<tr>
+				<td width="30%" height="12px"
+					style="font-size: 14px; font-family: arial;"><strong>Country
+						of Birth:</strong></td>
+				<td width="30%"
+					style="font-size: 12px; font-family: arial; text-transform: uppercase"th:text=${ProposerCountry}></td>
+				<td width="30%"
+					style="font-size: 12px; font-family: arial; text-transform: uppercase" th:text=${InsuredCountry}></td>
+			</tr>
+			<tr>
+				<td width="30%" height="12px"
+					style="font-size: 14px; font-family: arial;"><strong>Passport
+						Issuing Country:</strong></td>
+				<td width="30%"
+					style="font-size: 12px; font-family: arial; text-transform: uppercase" th:text=${ProposerIssuing}></td>
+				<td width="30%"
+					style="font-size: 12px; font-family: arial; text-transform: uppercase" th:text=${InsuredIssuing}></td>
+			</tr>
+			<tr>
+				<td width="30%" height="12px"
+					style="font-size: 14px; font-family: arial;"><strong>Communication
+						Address:</strong></td>
+				<td width="30%"
+					style="font-size: 12px; font-family: arial; text-transform: uppercase" th:text=${CoummunicationAddress1}></td>
+				<td width="30%"
+					style="font-size: 12px; font-family: arial; text-transform: uppercase" th:text=${CoummunicationAddress2}></td>
+			</tr>
+			<tr>
+				<td width="30%" height="12px"
+					style="font-size: 14px; font-family: arial;"><strong>Permanent
+						Address:</strong></td>
+				<td width="30%"
+					style="font-size: 12px; font-family: arial; text-transform: uppercase" th:text=${PermanentAddress1}></td>
+				<td width="30%"
+					style="font-size: 12px; font-family: arial; text-transform: uppercase" th:text=${PermanentAddress2}></td>
+			</tr>
+			<tr>
+				<td width="30%" height="12px"
+					style="font-size: 14px; font-family: arial;"><strong>Primary
+						Mobile Number:</strong></td>
+				<td width="30%"
+					style="font-size: 12px; font-family: arial; text-transform: uppercase" th:text=${ProposerPrimary}></td>
+				<td width="30%"
+					style="font-size: 12px; font-family: arial; text-transform: uppercase" th:text=${InsuredPrimary}></td>
+			</tr>
+			<tr>
+				<td width="30%" height="12px"
+					style="font-size: 14px; font-family: arial;"><strong>Alternate
+						Mobile Number:</strong></td>
+				<td width="30%"
+					style="font-size: 12px; font-family: arial; text-transform: uppercase" th:text=${ProposerAlternative}></td>
+				<td width="30%"
+					style="font-size: 12px; font-family: arial; text-transform: uppercase" th:text=${InsuredAlternative}></td>
+			</tr>
+			<tr>
+				<td width="30%" height="12px"
+					style="font-size: 14px; font-family: arial;"><strong>PAN
+						(INDIA):</strong></td>
+				<td width="30%"
+					style="font-size: 12px; font-family: arial; text-transform: uppercase" th:text=${ProposerPAN}></td>
+				<td width="30%"
+					style="font-size: 12px; font-family: arial; text-transform: uppercase" th:text=${InsuredPAN}></td>
+			</tr>
+			<tr>
+				<td width="30%" height="12px"
+					style="font-size: 14px; font-family: arial;"><strong>Foreign
+						Tax Identification No (Indian Pan Equivalent) allotted by tax
+						resident country. (If filling tax in more than one country, Kindly
+						provide TIN of all countries of tax residence)</strong></td>
+				<td width="30%"
+					style="font-size: 14px; font-family: arial; text-transform: uppercase">
+					<table border="1" width="100%" cellpadding="5">
+					<th:block th:each="MultipleFTINDetailsForNRI : ${FTINLength}" >
+						<tbody>
+							<tr>
+								<td>
+									<div>
+										<strong>FTIN -</strong><th:value= "${MultipleFTINDetailsForNRI.ftinNumber}" th:text="${MultipleFTINDetailsForNRI.ftinNumber}"/>
+									</div>
+									<div>
+										<strong>FTIN Issuing country -</strong><th:value= "${MultipleFTINDetailsForNRI.ftinNumber}" th:text="${MultipleFTINDetailsForNRI.ftinIssuingCountry}"/>
+									</div>
+								</td>
+							</tr>
+						</tbody>
+						</th:block>
+					</table>
+					<table border="1" width="100%" cellpadding="5">
+						<tbody>
+							<tr>
+								<td th:if=${NONFTIN}>
+									<div>
+										<strong>Type of Foreign Identification:</strong><th:value="${IdentificationType}" th:text="${IdentificationType}"/>
+									</div>
+									<div>
+										<strong>Identification Number:</strong><th:value="${IdentificationNumber}" th:text="${IdentificationNumber}"/>
+									</div>
+									<div>
+										<strong>Issuing Country:</strong><th:value="${IssuingCountry}" th:text="${IssuingCountry}"/>
+									</div>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</td>
+				<td width="30%"
+					style="font-size: 14px; font-family: arial; text-transform: uppercase">
+					<table border="1" width="100%" cellpadding="5">
+					<th:block th:each="InsuredForNRI : ${FTINLengthInsured}" >
+						<tbody>
+							<tr>
+								<td>
+									<div>
+										<strong>FTIN -</strong><th:value= "${InsuredForNRI.ftinNumber}" th:text="${InsuredForNRI.ftinNumber}"/>
+									</div>
+									<div>
+										<strong>FTIN Issuing country -</strong><th:value= "${InsuredForNRI.ftinNumber}" th:text="${InsuredForNRI.ftinIssuingCountry}"/>
+									</div>
+								</td>
+							</tr>
+						</tbody>
+						</th:block>
+						<tbody>
+							<tr>
+								<td th:if=${InsuredNONFTIN}>
+									<div>
+										<strong>Type of Foreign Identification:</strong><th:value= "${InsuredIdentificationType}" th:text="${InsuredIdentificationType}"/>
+									</div>
+									<div>
+										<strong>Identification Number:</strong><th:value="${InsuredIdentificationNumber}" th:text=${InsuredIdentificationNumber}/>
+									</div>
+									<div>
+										<strong>Issuing Country:</strong><th:value="${InsuredIssuingCountry}" th:text=${InsuredIssuingCountry}/>
+									</div>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</td>
+			</tr>
+			<tr>
+				<td width="30%" height="12px"
+					style="font-size: 14px; font-family: arial;"><strong>Foreign
+						Identification No. (UID):</strong></td>
+				<td width="30%"
+					style="font-size: 12px; font-family: arial; text-transform: uppercase" th:text=${ProposerUID}></td>
+				<td width="30%"
+					style="font-size: 12px; font-family: arial; text-transform: uppercase" th:text=${InsuredUID}></td>
+			</tr>
+			<tr>
+				<td width="30%" height="12px"
+					style="font-size: 14px; font-family: arial;"><strong>UID
+						Issuing country:</strong></td>
+				<td width="30%"
+					style="font-size: 12px; font-family: arial; text-transform: uppercase" th:text=${ProposerUIDCountry}></td>
+				<td width="30%"
+					style="font-size: 12px; font-family: arial; text-transform: uppercase" th:text=${InsuredUIDCountry}></td>
+			</tr>
+			<tr>
+				<td width="30%" height="12px"
+					style="font-size: 14px; font-family: arial;"><strong>Country
+						of residence as per tax laws:</strong></td>
+				<td width="30%"
+					style="font-size: 12px; font-family: arial; text-transform: uppercase" th:text=${ProposerResidentCountry}></td>
+				<td width="30%"
+					style="font-size: 12px; font-family: arial; text-transform: uppercase"th:text=${InsuredResidentCountry}></td>
+			</tr>
+		</tbody>
+	</table>
+	<table>
+		<tbody>
+			<tr>
+				<td height="20"></td>
+			</tr>
+		</tbody>
+	</table>
+	<!-- Footer Start here-->
+	<table width="100%" cellpadding="5" cellspacing="0" border="0"
+		style="border-collapse: collapse;">
+		<tbody>
+			<tr>
+				<td align="left" width="300" valign="top">
+					<!--<div th:if="${isNotYBLProposal}">
+						<img src="classpath:static/footer_updated.png"/>
+					</div>-->
+				</td>
+				<td align="center" valign="top"
+					style="font-weight: bold; padding-top: 15px;"></td>
+				<td align="right" width="300"
+					style="font-size: 16px; font-family: arial;"></td>
+			</tr>
+		</tbody>
+	</table>
+	<!-- Footer End here-->
+</body>
+</html>

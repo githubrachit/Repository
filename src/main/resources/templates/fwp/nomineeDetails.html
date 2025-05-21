@@ -1,0 +1,148 @@
+               <td>
+                  <table border="0" cellspacing="0" cellpadding="0" width="100%" style="border-collapse: collapse;">
+                     <tbody>
+                        <tr>
+                           <!-- <th colspan="0" style="background-color: #003770; color: #fff;font-size: 10px; font-family: arial; padding: 3px" align="left">B. Nominee Details</th> -->
+                        	<th colspan="0" style="font-size: 10px; font-family: arial; padding: 3px" align="left">16. Nominee Details</th>
+                        </tr>
+                        <th:block th:each="NomineeDetails : ${nomineeDetails}">
+                        <tr>
+                           <td style="padding: 3px;">
+                              <table border="1" cellspacing="0" cellpadding="0" width="100%" style="border-collapse: collapse;">
+                                 <tbody>
+                                    <tr>
+                                       <td width="30%" style="font-weight: bold; padding: 3px; font-size: 10px; font-family: arial;">Title</td>
+                                       <td width="70%" style="font-size: 10px; font-family: arial;padding: 3px;" th:text="${NomineeDetails.title}"></td>
+                                    </tr>
+                                    <tr>
+                                       <td width="30%" style="font-weight: bold; font-size: 10px; font-family: arial;">
+                                          <table border="0" cellspacing="0" cellpadding="0" width="100%" style="border-collapse: collapse;">
+                                             <tbody>
+                                                <tr>
+                                                   <td width="60%" style="font-weight: bold;padding: 3px;font-size: 10px; border-right-color: #808080;border-right-style:solid;border-right-width:1px; font-family: arial;">Name</td>
+                                                   <td width="40%" style="font-weight: bold;font-size: 10px; font-family: arial;">
+                                                      <table width="100%" cellspacing="0" border="0" cellpadding="5" style="border-collapse: collapse;">
+                                                         <tbody>
+                                                            <tr>
+                                                               <td height="25" style="font-size: 10px;border-bottom-color: #808080;border-bottom-style:solid;border-bottom-width:1px;font-family: arial;">First</td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td height="25" style="font-size: 10px;border-bottom-color: #808080;border-bottom-style:solid;border-bottom-width:1px;font-family: arial;">Middle</td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td height="25">Last</td>
+                                                            </tr>
+                                                         </tbody>
+                                                      </table>
+                                                   </td>
+                                                </tr>
+                                             </tbody>
+                                          </table>
+                                       </td>
+                                       <td width="70%" style="font-size: 10px; font-family: arial;">
+                                          <table width="100%" cellspacing="0" cellpadding="5" border="0" style="border-collapse: collapse; vertical-align: top;">
+                                             <tbody>
+                                                <tr>
+                                                   <td height="25" style="font-size: 10px;border-bottom-color: #808080;border-bottom-style:solid;border-bottom-width:1px;font-family: arial;text-transform:uppercase;" th:text="${NomineeDetails.firstName}"></td>
+                                                </tr>
+                                                <tr>
+                                                   <td height="25" style="font-size: 10px;border-bottom-color: #808080;border-bottom-style:solid;border-bottom-width:1px;font-family: arial;text-transform:uppercase;" th:text="${NomineeDetails.middleName}"></td>
+                                                </tr>
+                                                <tr>
+                                                   <td height="25" style="font-size: 10px;border-bottom-color: #808080;border-bottom-style:solid;border-bottom-width:1px;font-family: arial;text-transform:uppercase;" th:text="${NomineeDetails.lastName}"></td>
+                                                </tr>
+                                             </tbody>
+                                          </table>
+                                       </td>
+                                    </tr>
+                                    <tr>
+                                       <td width="30%" style="font-weight: bold; font-size: 10px; font-family: arial;">
+                                          <table border="0" cellspacing="0" cellpadding="0" width="100%" style="border-collapse: collapse;">
+                                             <tbody>
+                                                <tr>
+                                                   <td width="60%" style="font-weight: bold;padding: 3px;font-size: 10px; border-right-color: #808080;border-right-style:solid;border-right-width:1px; font-family: arial;">Father's / Husband's Name</td>
+                                                   <td width="40%" style="font-weight: bold;font-size: 10px; font-family: arial;">
+                                                      <table width="100%" cellspacing="0" border="0" cellpadding="5" style="border-collapse: collapse;">
+                                                         <tbody>
+                                                            <tr>
+                                                               <td style="font-size: 10px;border-bottom-color: #808080;border-bottom-style:solid;border-bottom-width:1px;font-family: arial;">First</td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td>Last</td>
+                                                            </tr>
+                                                         </tbody>
+                                                      </table>
+                                                   </td>
+                                                </tr>
+                                             </tbody>
+                                          </table>
+                                       </td>
+                                       <td width="40%" style="font-size: 10px; font-family: arial;">
+                                          <table width="100%" cellspacing="0" cellpadding="5" border="0" style="border-collapse: collapse; vertical-align: top;">
+                                             <tbody>
+                                                <tr>
+                                                   <td style="font-size: 10px;border-bottom-color: #808080;border-bottom-style:solid;border-bottom-width:1px;font-family: arial;text-transform:uppercase;">&nbsp;</td>
+                                                </tr>
+                                                <tr>
+                                                   <td style="font-size: 10px;border-bottom-color: #808080;border-bottom-style:solid;border-bottom-width:1px;font-family: arial;text-transform:uppercase;">&nbsp;</td>
+                                                </tr>
+                                             </tbody>
+                                          </table>
+                                       </td>
+                                    </tr>
+                                    <tr>
+                                       <td width="30%" style="font-weight: bold; padding: 3px; font-size: 10px; font-family: arial;">Gender</td>
+                                       <td width="70%" style="font-size: 10px; font-family: arial;padding: 3px;text-transform:uppercase;" th:text="${NomineeDetails.gender}"></td>
+                                    </tr>
+                                    <tr>
+                                       <td width="30%" style="font-weight: bold; padding: 3px; font-size: 10px; font-family: arial;">Date of Birth</td>
+                                       <td width="70%" style="font-size: 10px; font-family: arial;padding: 3px;text-transform:uppercase;" th:text="${NomineeDetails.dob}"></td>
+                                    </tr>
+                                    <tr>
+                                       <td width="30%" style="font-weight: bold; padding: 3px; font-size: 10px; font-family: arial;">Percentage</td>
+                                       <td width="70%" style="font-size: 10px; font-family: arial;padding: 3px;text-transform:uppercase;" th:text="${NomineeDetails.percentageShare}"></td>
+                                    </tr>
+                                    <tr>
+                                       <td width="30%" style="font-weight: bold; padding: 3px; font-size: 10px; font-family: arial;">Relationship with Proposer</td>
+                                       <td width="70%" style="font-size: 10px; font-family: arial;padding: 3px;text-transform:uppercase;" th:text="${NomineeDetails.relation}"></td>
+                                    </tr>
+                                    <tr th:if="${showOther} == true">
+                                       <td width="30%" style="font-weight: bold; padding: 3px; font-size: 10px; font-family: arial;">Please Specify Relationship with Nominee</td>
+                                       <td width="70%" style="font-size: 10px; font-family: arial;padding: 3px;text-transform:uppercase;" th:text="${NomineeDetails.relationshipOthers}"></td>
+                                    </tr>
+                                    <tr th:if="${showOther} == true">
+                                       <td width="30%" style="font-weight: bold; padding: 3px; font-size: 10px; font-family: arial;">Reason for Nomination</td>
+                                       <td width="70%" style="font-size: 10px; font-family: arial;padding: 3px;text-transform:uppercase;" th:text="${NomineeDetails.reasonForNomination}"></td>
+                                    </tr>
+                                    <tr th:if="${minorFlag} == true">
+                                       <td width="30%" style="font-weight: bold; padding: 3px; font-size: 10px; font-family: arial;">Guardian Name (If nominee is under age 18)</td>
+                                       <td width="70%" style="font-size: 10px; font-family: arial;padding: 3px;text-transform:uppercase;" th:text="${NomineeDetails.guardianName}"></td>
+                                    </tr>
+                                    <tr th:if="${minorFlag} == true">
+                                       <td width="30%" style="font-weight: bold; padding: 3px; font-size: 10px; font-family: arial;">Guardian Relationship with Nominee</td>
+                                       <td width="70%" style="font-size: 10px; font-family: arial;padding: 3px;text-transform:uppercase;" th:text="${NomineeDetails.guardianRelation}"></td>
+                                    </tr>
+                                    <tr th:if="${showGuradianOther} == true">
+                                       <td width="30%" style="font-weight: bold; padding: 3px; font-size: 10px; font-family: arial;">Please Specify Relationship</td>
+                                       <td width="70%" style="font-size: 10px; font-family: arial;padding: 3px;text-transform:uppercase;" th:text="${NomineeDetails.guardianRelationshipWhenOther}"></td>
+                                    </tr>
+                                 </tbody>
+                              </table>
+                           </td>
+                        </th:block>
+                        </tr>
+                     </tbody>
+                  </table>
+                  <table border="1" cellspacing="0" cellpadding="0" width="100%" style="border-collapse: collapse;">
+                     <tbody>
+                        <tr>
+                           <th colspan="2" style="font-size: 10px; font-family: arial; padding: 3px" align="left">Child Details</th>
+                        </tr>
+                        <tr>
+                           <td style="font-size: 10px; font-family: arial; padding: 3px;"><span><strong>Child Name:</strong></span><span style="padding-left: 10px;text-transform:uppercase;" th:text=${childName}></span></td>
+                           <td style="font-size: 10px; font-family: arial; padding: 3px;"><span><strong>Child Dob:</strong></span><span style="padding-left: 10px;" th:text=${childDob}></span></td>
+                        </tr>
+                     </tbody>
+                  </table>
+               </td>
+           

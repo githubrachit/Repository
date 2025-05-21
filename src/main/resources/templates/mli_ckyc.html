@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title></title>
+	<style type="text/css">
+    table,
+    td,
+    tr {
+        border-collapse: collapse;
+    }
+
+    @page {
+        size: A4;
+        margin: 20px;
+        padding-top: 12px;
+    }
+
+    .pageBeakBefore {
+        page-break-before: always;
+    }
+
+    @media print {
+        .pageBeakBefore {
+            page-break-before: always;
+        }
+    }
+    </style>
+</head>
+
+<body style="margin: 0 auto;padding: 0;">
+<table border="0" align="center" cellpadding="0" cellspacing="0" style="border-collapse: collapse;width:100%;margin: 0 auto;">
+	<tr>
+		<td style="width:100%;padding: 10px;">
+			<table border="0" align="center" cellpadding="0" cellspacing="0" style="border-collapse: collapse;width: 100%;">
+				<tbody>
+				<tr>
+					<td height="15"></td>
+				</tr>
+				<tr>
+					<td>
+						<table cellspacing="0" cellpadding="0" width="100%" style="border-collapse: collapse;">
+							<tr>
+								<td width="100" style="padding: 6px 8px;"><img src="classpath:static/logo_ax_max.png" alt="Axis Max Life Insurance" width="100" /></td>
+								<td align="center" style="padding: 6px 8px; font-size: 16px; font-family: arial;">
+									<strong>Customer’s CKYC Registry Status</strong>
+								</td>
+								<td width="100"></td>
+							</tr>
+						</table>
+					</td>
+				</tr>
+				<tr>
+					<td height="15"></td>
+				</tr>
+				<tr>
+					<td>
+						<table cellspacing="0" cellpadding="0" width="100%" style="border-collapse: collapse;">
+							<tr>
+								<td style="padding: 6px 8px; font-size: 14px; font-family: arial;">
+									Policy Number- <span style="padding-left:12px;font-weight: bold;" th:text=${policyNumber}></span>
+								</td>
+								<td style="padding: 6px 8px; font-size: 14px; font-family: arial;">
+									CKYC Number – <span style="padding-left:12px;font-weight: bold;" th:text=${ckycNumber}></span>
+								</td>
+							</tr>
+						</table>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<table cellspacing="0" cellpadding="0" width="100%" style="border-collapse: collapse; border-width:1px; border-color:#333;border-style:solid;">
+							<tr>
+								<th align="left" style="background-color: #003770;border-width:1px; border-color:#333;border-style:solid; color: #fff;font-size: 12px; font-family: arial; padding: 6px 8px;width:36%;border-right-color: #fff;" >Personal Details</th>
+								<th align="center" style="background-color: #003770;border-width:1px; border-color:#333;border-style:solid; color: #fff;font-size: 12px; font-family: arial; padding: 6px 8px;width:16%;border-right-color: #fff;">Modification Status</th>
+								<th align="center" style="background-color: #003770;border-width:1px; border-color:#333;border-style:solid; color: #fff;font-size: 12px; font-family: arial; padding: 6px 8px;width:48%" >Details at MLI</th>
+							</tr>
+							<tr>
+								<td align="left" style="font-weight: bold; padding: 6px 8px;border-width:1px; border-color:#333;border-style:solid; font-size: 12px; font-family: arial;">Applicant Name</td>
+								<td align="center" style="padding: 6px 8px; font-size: 12px; font-family: arial;border-width:1px; border-color:#333;border-style:solid;" th:text=${applicantNameModificationStatus}></td>
+								<td align="center" style="padding: 6px 8px; font-size: 12px; font-family: arial;border-width:1px; border-color:#333;border-style:solid;"  th:text=${applicantName}></td>
+							</tr>
+							<tr>
+								<td align="left" style="font-weight: bold; padding: 6px 8px;border-width:1px; border-color:#333;border-style:solid; font-size: 12px; font-family: arial;">Father's Name</td>
+								<td align="center" style="padding: 6px 8px; font-size: 12px; font-family: arial;border-width:1px; border-color:#333;border-style:solid;"  th:text=${fatherNameModificationStatus}></td>
+								<td align="center" style="padding: 6px 8px; font-size: 12px; font-family: arial;border-width:1px; border-color:#333;border-style:solid;"  th:text=${fatherName}></td>
+							</tr>
+							<tr>
+								<td align="left" style="font-weight: bold; padding: 6px 8px;border-width:1px; border-color:#333;border-style:solid; font-size: 12px; font-family: arial;">Mother's Name</td>
+								<td align="center" style="padding: 6px 8px; font-size: 12px; font-family: arial;border-width:1px; border-color:#333;border-style:solid;" th:text=${motherNameModificationStatus}></td>
+								<td align="center" style="padding: 6px 8px; font-size: 12px; font-family: arial;border-width:1px; border-color:#333;border-style:solid;" th:text=${motherName}></td>
+							</tr>
+							<tr>
+								<td align="left" style="font-weight: bold; padding: 6px 8px;border-width:1px; border-color:#333;border-style:solid; font-size: 12px; font-family: arial;">Date of Birth</td>
+								<td align="center" style="padding: 6px 8px; font-size: 12px; font-family: arial;border-width:1px; border-color:#333;border-style:solid;" th:text=${dateOfBirthModificationStatus}>
+								</td>
+								<td align="center" style="padding: 6px 8px; font-size: 12px; font-family: arial;border-width:1px; border-color:#333;border-style:solid;" th:text=${dateOfBirth}>
+								</td>
+							</tr>
+							<tr>
+								<td align="left" style="font-weight: bold; padding: 6px 8px;border-width:1px; border-color:#333;border-style:solid; font-size: 12px; font-family: arial;">Gender</td>
+								<td align="center" style="padding: 6px 8px; font-size: 12px; font-family: arial;border-width:1px; border-color:#333;border-style:solid;"  th:text=${genderModificationStatus}>
+								</td>
+								<td align="center" style="padding: 6px 8px; font-size: 12px; font-family: arial;border-width:1px; border-color:#333;border-style:solid;"  th:text=${gender}>
+								</td>
+							</tr>
+							<tr>
+								<td align="left" style="font-weight: bold; padding: 6px 8px;border-width:1px; border-color:#333;border-style:solid; font-size: 12px; font-family: arial;">Marital Status</td>
+								<td align="center" style="padding: 6px 8px; font-size: 12px; font-family: arial;border-width:1px; border-color:#333;border-style:solid;" th:text=${maritalModificationStatus}>
+								</td>
+								<td align="center" style="padding: 6px 8px; font-size: 12px; font-family: arial;border-width:1px; border-color:#333;border-style:solid;" th:text=${maritalStatus}>
+								</td>
+							</tr>
+							<tr>
+								<td align="left" style="font-weight: bold; padding: 6px 8px;border-width:1px; border-color:#333;border-style:solid; font-size: 12px; font-family: arial;">Citizenship</td>
+								<td align="center" style="padding: 6px 8px; font-size: 12px; font-family: arial;border-width:1px; border-color:#333;border-style:solid;" th:text=${citizenshipModificationStatus}>
+								</td>
+								<td align="center" style="padding: 6px 8px; font-size: 12px; font-family: arial;border-width:1px; border-color:#333;border-style:solid;" th:text=${citizenship}>
+								</td>
+							</tr>
+							<tr>
+								<td align="left" style="font-weight: bold; padding: 6px 8px;border-width:1px; border-color:#333;border-style:solid; font-size: 12px; font-family: arial;">Occupation</td>
+								<td align="center" style="padding: 6px 8px; font-size: 12px; font-family: arial;border-width:1px; border-color:#333;border-style:solid;" th:text=${occupationModificationStatus}>
+								</td>
+								<td align="center" style="padding: 6px 8px; font-size: 12px; font-family: arial;border-width:1px; border-color:#333;border-style:solid;" th:text=${occupation}>
+								</td>
+							</tr>
+							<tr>
+								<td align="left" style="font-weight: bold; padding: 6px 8px;border-width:1px; border-color:#333;border-style:solid; font-size: 12px; font-family: arial;">Residential Status</td>
+								<td align="center" style="padding: 6px 8px; font-size: 12px; font-family: arial;border-width:1px; border-color:#333;border-style:solid;" th:text=${residentialModificationStatus}>
+								</td>
+								<td align="center" style="padding: 6px 8px; font-size: 12px; font-family: arial;border-width:1px; border-color:#333;border-style:solid;" th:text=${residentialStatus}>
+								</td>
+							</tr>
+							<tr>
+								<td align="left" style="font-weight: bold; padding: 6px 8px;border-width:1px; border-color:#333;border-style:solid; font-size: 12px; font-family: arial;">Mobile Number</td>
+								<td align="center" style="padding: 6px 8px; font-size: 12px; font-family: arial;border-width:1px; border-color:#333;border-style:solid;" th:text=${mobileNumberModificationStatus}>
+								</td>
+								<td align="center" style="padding: 6px 8px; font-size: 12px; font-family: arial;border-width:1px; border-color:#333;border-style:solid;" th:text=${mobileNumber}>
+								</td>
+							</tr>
+							<tr>
+								<td align="left" style="font-weight: bold; padding: 6px 8px;border-width:1px; border-color:#333;border-style:solid; font-size: 12px; font-family: arial;">Tel (off)</td>
+								<td align="center" style="padding: 6px 8px; font-size: 12px; font-family: arial;border-width:1px; border-color:#333;border-style:solid;" th:text=${TelNumberModificationStatus}>>
+								</td>
+								<td align="center" style="padding: 6px 8px; font-size: 12px; font-family: arial;border-width:1px; border-color:#333;border-style:solid;" th:text=${TelNumber}>>
+								</td>
+							</tr>
+							<tr>
+								<td align="left" style="font-weight: bold; padding: 6px 8px;border-width:1px; border-color:#333;border-style:solid; font-size: 12px; font-family: arial;">Residence Number</td>
+								<td align="center" style="padding: 6px 8px; font-size: 12px; font-family: arial;border-width:1px; border-color:#333;border-style:solid;" th:text=${residenceNumberModificationStatus}>
+								</td>
+								<td align="center" style="padding: 6px 8px; font-size: 12px; font-family: arial;border-width:1px; border-color:#333;border-style:solid;" th:text=${residenceNumber}>
+								</td>
+							</tr>
+							<tr>
+								<td align="left" style="font-weight: bold; padding: 6px 8px;border-width:1px; border-color:#333;border-style:solid; font-size: 12px; font-family: arial;">Fax Number</td>
+								<td align="center" style="padding: 6px 8px; font-size: 12px; font-family: arial;border-width:1px; border-color:#333;border-style:solid;" th:text=${faxNumberModificationStatus}>
+								</td>
+								<td align="center" style="padding: 6px 8px; font-size: 12px; font-family: arial;border-width:1px; border-color:#333;border-style:solid;" th:text=${faxNumber}>
+								</td>
+							</tr>
+							<tr>
+								<td align="left" style="font-weight: bold; padding: 6px 8px;border-width:1px; border-color:#333;border-style:solid; font-size: 12px; font-family: arial;">Email id</td>
+								<td align="center" style="padding: 6px 8px; font-size: 12px; font-family: arial;border-width:1px; border-color:#333;border-style:solid;" th:text=${emailIdModificationStatus}>
+								</td>
+								<td align="center" style="padding: 6px 8px; font-size: 12px; font-family: arial;border-width:1px; border-color:#333;border-style:solid;" th:text=${emailId}>
+								</td>
+							</tr>
+						</table>
+					</td>
+				</tr>
+				<!-- end Personal Details -->
+				<tr>
+					<td height="20"></td>
+				</tr>
+				<!-- start proof of identity -->
+				<tr>
+					<td>
+						<table cellspacing="0" cellpadding="0" width="100%" style="border-collapse: collapse; border-width:1px; border-color:#333;border-style:solid;">
+							<tr>
+								<th align="left" style="background-color: #003770;border-width:1px; border-color:#333;border-style:solid; color: #fff;font-size: 12px; font-family: arial; padding: 6px 8px;width:36%;border-right-color: #fff;">Proof of Identity</th>
+								<th align="center" style="background-color: #003770;border-width:1px; border-color:#333;border-style:solid; color: #fff;font-size: 12px; font-family: arial; padding: 6px 8px;width:16%;border-right-color: #fff;" >Modification Status</th>
+								<th align="center" style="background-color: #003770;border-width:1px; border-color:#333;border-style:solid; color: #fff;font-size: 12px; font-family: arial; padding: 6px 8px;width:48%;" >Details at MLI</th>
+							</tr>
+							<tr>
+								<td align="left" style="font-weight: bold; padding: 6px 8px;border-width:1px; border-color:#333;border-style:solid; font-size: 12px; font-family: arial;" th:text=${pfiDocType}></td>
+								<td align="center" style="padding: 6px 8px; font-size: 12px; font-family: arial;border-width:1px; border-color:#333;border-style:solid;" th:text=${pfiDocModificationStatus}>
+								</td>
+								<td align="center" style="padding: 6px 8px; font-size: 12px; font-family: arial;border-width:1px; border-color:#333;border-style:solid;" th:text=${pfiIdNumber}>
+								</td>
+							</tr>
+						</table>
+					</td>
+				</tr>
+				<!-- end proof of identity -->
+				<tr>
+					<td height="20"></td>
+				</tr>
+				<!-- start Permanent Address -->
+				<tr>
+					<td>
+						<table cellspacing="0" cellpadding="0" width="100%" style="border-collapse: collapse; border-width:1px; border-color:#333;border-style:solid;">
+							<tr>
+								<th align="left" style="background-color: #003770;border-width:1px; border-color:#333;border-style:solid; color: #fff;font-size: 12px; font-family: arial; padding: 6px 8px;width:36%;border-right-color: #fff;" >Permanent Address</th>
+								<th align="center" style="background-color: #003770;border-width:1px; border-color:#333;border-style:solid; color: #fff;font-size: 12px; font-family: arial; padding: 6px 8px;width:16%;border-right-color: #fff;" >Modification Status</th>
+								<th align="center" style="background-color: #003770;border-width:1px; border-color:#333;border-style:solid; color: #fff;font-size: 12px; font-family: arial; padding: 6px 8px;width:48%;">Details at MLI</th>
+							</tr>
+							<tr>
+								<td align="left" style="font-weight: bold; padding: 6px 8px;border-width:1px; border-color:#333;border-style:solid; font-size: 12px; font-family: arial;" th:text=${permanentAddrDocType}></td>
+								<td align="center" style="padding: 6px 8px; font-size: 12px; font-family: arial;border-width:1px; border-color:#333;border-style:solid;" th:text=${permanentAddrDocTypeModificationStatus}>
+								</td>
+								<td align="left" style="padding: 6px 8px; font-size: 12px; font-family: arial;border-width:1px; border-color:#333;border-style:solid;">
+									<div style="margin-bottom: 6px;" ><strong style="padding-right: 2px">Line 1:</strong><span th:text=${permanentAddrLine1}></span></div>
+									<div style="margin-bottom: 6px;" ><strong style="padding-right: 2px">Line 2:</strong><span th:text=${permanentAddrLine2}></span> </div>
+									<div style="margin-bottom: 6px;" ><strong style="padding-right: 2px">Line 3:</strong ><span th:text=${permanentAddrLine3}></span> </div>
+									<div style="margin-bottom: 6px;" ><strong style="padding-right: 2px">City/Town/Village:</strong><span th:text=${permanentAddrCityTownVillage}></span></div>
+									<div style="margin-bottom: 6px;" ><strong style="padding-right: 2px">Pin code:</strong><span th:text=${permanentAddrPincode}></span></div>
+									<div style="margin-bottom: 6px;" ><strong style="padding-right: 2px">District:</strong><span th:text=${permanentAddrDistrict}></span></div>
+									<div style="margin-bottom: 6px;" ><strong style="padding-right: 2px">State/UT:</strong><span th:text=${permanentAddrState}></span></div>
+									<div ><strong style="padding-right: 2px">Country:</strong><span th:text=${permanentAddrCountry}></span></div>
+								</td>
+							</tr>
+						</table>
+					</td>
+				</tr>
+				<!-- end Permanent Address -->
+				<tr>
+					<td height="20"></td>
+				</tr>
+				<!-- start Correspondence Address -->
+				<tr>
+					<td>
+						<table cellspacing="0" cellpadding="0" width="100%" style="border-collapse: collapse; border-width:1px; border-color:#333;border-style:solid;">
+							<tr>
+								<th align="left" style="background-color: #003770;border-width:1px; border-color:#333;border-style:solid; color: #fff;font-size: 12px; font-family: arial; padding: 6px 8px;width:36%;border-right-color: #fff;">Correspondence Address</th>
+								<th align="center" style="background-color: #003770;border-width:1px; border-color:#333;border-style:solid; color: #fff;font-size: 12px; font-family: arial; padding: 6px 8px;width:16%;border-right-color: #fff;" >Modification Status</th>
+								<th align="center" style="background-color: #003770;border-width:1px; border-color:#333;border-style:solid; color: #fff;font-size: 12px; font-family: arial; padding: 6px 8px;width:48%;" >Details at MLI</th>
+							</tr>
+							<tr>
+								<td align="left" style="font-weight: bold; padding: 6px 8px;border-width:1px; border-color:#333;border-style:solid; font-size: 12px; font-family: arial;" th:text=${currentAddrDocType}></td>
+								<td align="center" style="padding: 6px 8px; font-size: 12px; font-family: arial;border-width:1px; border-color:#333;border-style:solid;"  th:text=${currentAddrDocTypeModificationStatus}>
+								</td>
+								<td align="left" style="padding: 6px 8px; font-size: 12px; font-family: arial;border-width:1px; border-color:#333;border-style:solid;">
+									<div style="margin-bottom: 6px;"  ><strong style="padding-right: 2px" >Line 1:</strong><span th:text=${currentAddrLine1}></span></div>
+									<div style="margin-bottom: 6px;"  ><strong style="padding-right: 2px" >Line 2:</strong><span th:text=${currentAddrLine2}></span></div>
+									<div style="margin-bottom: 6px;"  ><strong style="padding-right: 2px">Line 3:</strong><span th:text=${currentAddrLine3}></span></div>
+									<div style="margin-bottom: 6px;" ><strong style="padding-right: 2px">City/Town/Village:</strong><span th:text=${currentAddrCityTownVillage}></span></div>
+									<div style="margin-bottom: 6px;"  ><strong style="padding-right: 2px">District:</strong> <span th:text=${currentAddrDistrict}></span></div>
+									<div style="margin-bottom: 6px;"  ><strong style="padding-right: 2px">State/UT:</strong> <span th:text=${currentAddrState}></span></div>
+									<div ><strong style="padding-right: 2px">Country:</strong> <span th:text=${currentAddrCountry}></span></div>
+								</td>
+							</tr>
+						</table>
+					</td>
+				</tr>
+				<!-- end Correspondence Address -->
+				<tr>
+					<td height="20"></td>
+				</tr>
+				<!-- start Document Status -->
+				<tr>
+					<td>
+						<table cellspacing="0" cellpadding="0" width="100%" style="border-collapse: collapse; border-width:1px; border-color:#333;border-style:solid;">
+							<tr>
+								<th align="left" style="background-color: #003770;border-width:1px; border-color:#333;border-style:solid; color: #fff;font-size: 12px; font-family: arial; padding: 6px 8px;width:36%;border-right-color: #fff;" >Document Status</th>
+								<th align="center" style="background-color: #003770;border-width:1px; border-color:#333;border-style:solid; color: #fff;font-size: 12px; font-family: arial; padding: 6px 8px;width:64%;" >Is Doc. Passed by CERSAI</th>
+							</tr>
+							<tr>
+								<td align="left" style="font-weight: bold; padding: 6px 8px;border-width:1px; border-color:#333;border-style:solid; font-size: 12px; font-family: arial;"  th:text=${idProofDocType}></td>
+								<td align="center" style="padding: 6px 8px; font-size: 12px; font-family: arial;border-width:1px; border-color:#333;border-style:solid;" th:text=${idProofDocTypeModificationStatus}>
+								</td>
+							</tr>
+							<tr>
+								<td align="left" style="font-weight: bold; padding: 6px 8px;border-width:1px; border-color:#333;border-style:solid; font-size: 12px; font-family: arial;"  th:text=${addrProofDocType}></td>
+								<td align="center" style="padding: 6px 8px; font-size: 12px; font-family: arial;border-width:1px; border-color:#333;border-style:solid;" th:text=${addrProofDocTypeModificationStatus}>
+								</td>
+							</tr>
+							<tr>
+								<td align="left" style="font-weight: bold; padding: 6px 8px;border-width:1px; border-color:#333;border-style:solid; font-size: 12px; font-family: arial;"  th:text=${photoDocType}></td>
+								<td align="center" style="padding: 6px 8px; font-size: 12px; font-family: arial;border-width:1px; border-color:#333;border-style:solid;" th:text=${photoDocTypeModificationStatus}>
+								</td>
+							</tr>
+						</table>
+					</td>
+				</tr>
+				<tr>
+					<td height="20"></td>
+				</tr>
+				<tr>
+					<td align="left" style="padding: 6px 8px;font-size: 14px; font-family: arial;" >
+						<strong>Date & Time: <span th:text=${timeStamp}></span></strong>
+						<span style="padding-left: 6px;font-weight: bold;">Version – 1.0</span>
+					</td>
+				</tr>
+				<!-- end Document Status -->
+				</tbody>
+			</table>
+</table>
+</td>
+</tr>
+</table>
+</body>
+
+</html>

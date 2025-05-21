@@ -1,0 +1,163 @@
+<td style="font-family: arial;">
+    <!-- Medical Details Start here-->
+    <table cellspacing="0" cellpadding="0" width="100%" style="border-collapse: collapse; border-color: #ccc;border-style:solid;border-width:1px;">
+        <tbody>
+        <tr>
+            <td colspan="6" style="padding: 0px; font-family: arial; font-size:9px; background-color: #000000; border-color: #ccc;border-style:solid;border-width:1px;">
+                <table border="1" cellspacing="0" cellpadding="0" width="100%" style="border-collapse: collapse;">
+                    <tbody>
+                    <tr>
+                        <td colspan="3" style="padding: 2px 4px; font-size: 14px; font-weight: bold; text-align: center; color: #FFFFFF">COVID-19 (Coronavirus) Exposure Questionnaire</td>
+                    </tr>
+                    </tbody>
+                </table>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="6" style="padding: 0px; font-family: Arial;">
+                <table width="100%" cellpadding="0" cellspacing="0" border="0" style="border-color: #ccc;border-style:solid;border-width:1px;">
+                    <tbody>
+                    <tr>
+                        <td width="100%" style="padding: 5px 5px 5px 15px; font-size: 12px;">Thank you for applying for a policy from Axis Max Life Insurance Limited. To enable us to assess your application, send this
+                            questionnaire duly answered and signed by the Life to be Assured and Proposed Policy Holder, if any.</td>
+                    </tr>
+                    <tr>
+                        <td width="100%" style="padding: 10px 5px 5px 15px; font-size: 12px;">(All questions to be acknowledged, sections which are not relevant should be mentioned NA (Not applicable)</td>
+                    </tr>
+                    </tbody>
+                </table>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="6" style="padding: 0px; font-family: Arial;">
+                <table width="100%" cellpadding="0" cellspacing="0" border="0" style="border-color: #000000;border-style:solid;border-width:1px;">
+                    <tbody>
+                    <tr>
+                        <td width="30%" style="padding: 5px 5px 5px 15px; font-size: 12px; border-right: 1px solid #000000; border-bottom: 1px solid #000000;">Application No.</td>
+                        <td width="70%" style="padding: 5px 5px 5px 15px; font-size: 12px; border-bottom: 1px solid #000000;" th:text="${applicationNumber}"></td>
+                    </tr>
+                    <tr>
+                        <td width="30%" style="padding: 5px 5px 5px 15px; font-size: 12px; border-right: 1px solid #000000; border-bottom: 1px solid #000000;">Name of Life to be Assured</td>
+                        <td width="70%" style="padding: 5px 5px 5px 15px; font-size: 12px; border-bottom: 1px solid #000000;" th:text="${lifeInsuredName}"></td>
+                    </tr>
+                    <tr>
+                        <td width="30%" style="padding: 5px 5px 5px 15px; font-size: 12px; border-right: 1px solid #000000;">Name of Proposed Policyholder
+                            <br><br>
+                            (if different from Life to be Assured)
+                        </td>
+                        <td width="70%" style="padding: 5px 5px 5px 15px; font-size: 12px;"></td>
+                    </tr>
+                    </tbody>
+                </table>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="6" style="padding: 0px; font-family: Arial;">
+                <table width="100%" cellpadding="0" cellspacing="0" border="0" style="border-color: #ccc;border-style:solid;border-width:1px;">
+                    <tbody>
+                    <tr>
+                        <td width="100%" style="padding: 10px 5px 5px 15px; font-size: 12px;"></td>
+                    </tr>
+                    </tbody>
+                </table>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="6" style="padding: 0px; font-family: Arial;">
+                <table width="100%" cellpadding="0" cellspacing="0" border="0" style="border-color: #000000;border-style:solid;border-width:1px;">
+                    <tbody>
+                    <tr>
+                        <td width="50%" style="padding: 5px 5px 5px 15px; font-size: 12px; border-right: 1px solid #000000;"><strong>1.</strong> Have you ever tested positive for the coronavirus (SARS-CoV-2/COVID-19)?</td>
+                        <td width="50%" style="padding: 5px 5px 5px 15px; font-size: 12px;">
+                            <table width="100%" cellpadding="0" cellspacing="0" border="0">
+                                <tbody>
+                                <tr>
+                                    <td width="50%" style="font-weight: bold; text-align: center; font-size: 10px;">
+                                        <input type="checkbox" th:checked="${everTestedPositiveForCovid=='YES'}">Yes</td>
+                                    </td>
+                                    <td width="50%" style="font-weight: bold; text-align: center; font-size: 10px;">
+                                        <input type="checkbox" th:checked="${everTestedPositiveForCovid=='NO'}">No</td>
+                                    </td>
+                                </tr>
+                                <tr th:if="${everTestedPositiveForCovid=='YES'}">
+                                    <td colspan="2" style="padding: 4px 5px 5px 15px; font-size: 12px;">a. Have you made full-functional recovery <br> &nbsp;
+                                        Yes <input type="checkbox" th:checked="${madeFullFunctionalRecovery=='YES'}"> &nbsp; &nbsp;
+                                        No <input type="checkbox" th:checked="${madeFullFunctionalRecovery=='NO'}">
+                                    </td>
+                                </tr>
+                                <tr th:if="${everTestedPositiveForCovid=='YES'}">
+                                    <td colspan="2" style="padding: 5px 5px 5px 15px; font-size: 12px;">b. Date of last positive diagnosis MM/YYYY -
+                                        <span style="padding-left: 5px;" th:text="${lastDateOfPositiveDiagnosisMonth}"></span>
+                                        <span style="padding-left: 5px;" th:text="${lastDateOfPositiveDiagnosisYear}"></span>
+                                    </td>
+                                </tr>
+                                <tr th:if="${everTestedPositiveForCovid=='YES'}">
+                                    <td colspan="2" style="padding: 4px 5px 5px 15px; font-size: 12px;">c. Mode of treatment:<br>
+                                        Hospitalized <input type="checkbox" th:checked="${modeOfTreatmentCovid=='Hospitalized'}">&nbsp; &nbsp;
+                                        Home Quarantine/ Asymptomatic <input type="checkbox" th:checked="${modeOfTreatmentCovid=='Home Quarantine/ Asymptomatic'}">
+                                    </td>
+                                </tr>
+                                <tr th:if="${everTestedPositiveForCovid=='YES'}">
+                                    <td colspan="2" style="padding: 4px 5px 5px 15px; font-size: 12px;">Were you admitted in ICU and/ Or was on ventilator? <br> &nbsp;
+                                        Yes <input type="checkbox" th:checked="${isMechanicalVentilatorRequired=='YES'}"> &nbsp; &nbsp;
+                                        No <input type="checkbox" th:checked="${isMechanicalVentilatorRequired=='NO'}">
+                                    </td>
+                                </tr>
+                                <tr th:if="${everTestedPositiveForCovid=='YES'}">
+                                    <td colspan="2" style="padding: 5px 5px 5px 15px; font-size: 12px;">d. Recovery Period:
+                                        <span style="padding-left: 5px;" th:text="${covidRecoveryPeriod}"></span></td>
+                                </tr>
+                                <tr th:if="${everTestedPositiveForCovid=='YES'}">
+                                    <td colspan="2" style="padding: 4px 5px 5px 15px; font-size: 12px;">e. Did you suffer / are you suffering from any COVID-19 related Complications#?<br>
+                                        #For e.g (complications involving organs like Lungs, Heart, Liver, Kidney, Brain / <br>Stroke / Hypertension / Diabetes (Newly diagnosed) / Neurological symptoms / <br>Mental issues / Septic shock / Any other) &nbsp;
+                                        Yes <input type="checkbox" th:checked="${haveCovid19RelatedComplications=='YES'}"> &nbsp;&nbsp;
+                                        No <input type="checkbox" th:checked="${haveCovid19RelatedComplications=='NO'}">
+                                    </td>
+                                </tr>
+                                <tr th:if="${haveCovid19RelatedComplications=='YES'}">
+                                    <td colspan="2" style="padding: 10px 5px 5px 15px; font-size: 12px;"> Please provide details:
+                                        <span style="padding-left: 5px;" th:text="${covidComplicationDetails}"></span></td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td width="50%" style="padding: 5px 5px 5px 15px; font-size: 12px; border-top: 1px solid #000000; border-right: 1px solid #000000;"><strong>2.</strong> Have you been fully vaccinated for COVID-19? (two doses)</td>
+                        <td width="50%" style="padding: 5px 5px 5px 15px; font-size: 12px; border-top: 1px solid #000000;">
+                            <table width="100%" cellpadding="0" cellspacing="0" border="0">
+                                <tbody>
+                                <tr>
+                                    <td width="50%" style="font-weight: bold; text-align: center; font-size: 10px;">
+                                        <input type="checkbox" th:checked="${haveYouBeenVaccinatedForCovid=='YES'}">Yes</td>
+                                    </td>
+                                    <td width="50%" style="font-weight: bold; text-align: center; font-size: 10px;">
+                                        <input type="checkbox" th:checked="${haveYouBeenVaccinatedForCovid=='NO'}">No</td>
+                                    </td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="6" style="padding: 0px; font-family: Arial;">
+                <table width="100%" cellpadding="0" cellspacing="0" border="0" style="border-color: #ccc;border-style:solid;border-width:1px;">
+                    <tbody>
+                    <tr>
+                        <td width="100%" style="padding: 15px 5px 5px 15px; font-size: 12px; font-weight: normal;">#Please share all past medical records including Hospital discharge report / Investigation reports (HRCT / Blood test)
+                            / treatment and up to date follow up reports / consultation papers and date of complete recovery</td>
+                    </tr>
+                    <tr>
+                        <td width="100%" style="padding: 15px 5px 5px 15px; font-size: 12px; font-style: initial;"><center>This is a system generated document, hence signature not required.</center></td>
+                    </tr>
+                    </tbody>
+                </table>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+</td>

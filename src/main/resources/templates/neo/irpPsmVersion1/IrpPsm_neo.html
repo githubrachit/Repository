@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.w3.org/1999/xhtml">
+
+<head>
+    <title>PSM</title>
+    <style type="text/css">
+        img {
+            max-width: 100%;
+        }
+
+        table,
+        td,
+        tr {
+            border-collapse: collapse;
+            font-family: "calibri", sans-serif;
+        }
+
+        .page-break-after {
+            page-break-after: always;
+            page-break-inside: avoid;
+            clear: both;
+        }
+
+        .page-break-before {
+            page-break-before: always;
+            page-break-inside: avoid;
+            clear: both;
+        }
+
+        @media print {
+            * {
+                font-size: 6pt !important;
+            }
+
+            .printtext {
+                font-size: 11pt !important;
+            }
+        }
+    </style>
+</head>
+
+<body style="margin: 0 auto;padding: 0;">
+    <table border="0" align="center" cellpadding="0" cellspacing="0"
+        style="border-collapse: collapse;width: 98%;margin-top: 10px">
+        <tbody>
+            <!-- Main Wrapper Start Here-->
+            <tr>
+                <td><img src='classpath:static/Logo_Pathway_MaxIS.png' width="100%"></td>
+                <td>&nbsp;</td>
+            </tr>
+            <tr>
+                <td height="20">
+                    &nbsp;
+                </td>
+            </tr>
+            <tr>
+                <td align='left'
+                    style="width: 100%;text-align: center;font-weight: bold;text-decoration: underline;font-size: 11pt;">
+                    Product Suitability</td>
+            </tr>
+            <tr>
+                <td style="padding: 10px 0; font-size: 11pt;  width: 100%;border:none;">
+                    <table border="1" width="100%" cellspacing="0" style="border-collapse: collapse;">
+                        <tr>
+                            <td style="padding: 4px 8px;font-size: 11pt;width: 20%;">Customer Name</td>
+                            <td style="padding: 4px 8px;font-size: 11pt;" th:text="${customerName}"></td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+            <tr>
+                <td style="padding: 10px 0; font-size: 11pt;  width: 100%;border:none;">
+                    <table border="1" width="100%" cellspacing="0" style="border-collapse: collapse;">
+                        <tr>
+                            <td style="padding: 4px 8px;font-size: 11pt;width: 20%;">Proposal No(s)
+                                <div>(If proposal is applied)</div>
+                            </td>
+                            <td>
+                                <span style="padding: 4px 8px;font-size: 11pt;word-break: break-all;white-space: pre-wrap;" th:text="${policyNumber}"></span>
+                            </td>
+                            <td style="padding: 4px 8px;font-size: 11pt;">Date</td>
+                            <td style="padding: 4px 8px;font-size: 11pt;" th:text="${date}"></td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+            <tr>
+                <td style="padding: 20px 0 10px; font-size: 11pt;  width: 100%;border:none;font-weight: bold;">
+                    Suitability Analysis:
+                </td>
+            </tr>
+            <tr>
+                <td style="padding: 0; font-size: 11pt;  width: 100%;border:none;">
+                    <table border="1" width="100%" cellspacing="0" style="border-collapse: collapse;">
+                        <tr>
+                            <td style="padding: 4px 8px;font-size: 11pt;width: 20%;">Age</td>
+                            <td th:style="${age == '1'} ? 'padding: 4px 8px;font-size: 11pt;background-color: #DEEAF6;' : 'padding: 4px 8px;font-size: 11pt;'">18-25</td>
+                            <td th:style="${age == '2'} ? 'padding: 4px 8px;font-size: 11pt;background-color: #DEEAF6;' : 'padding: 4px 8px;font-size: 11pt;'">25-35</td>
+                            <td th:style="${age == '3'} ? 'padding: 4px 8px;font-size: 11pt;background-color: #DEEAF6;' : 'padding: 4px 8px;font-size: 11pt;'">35-45</td>
+                            <td th:style="${age == '4'} ? 'padding: 4px 8px;font-size: 11pt;background-color: #DEEAF6;' : 'padding: 4px 8px;font-size: 11pt;'">45-60</td>
+                        </tr>
+                        <tr>
+                            <td style="padding: 4px 8px;font-size: 11pt;width: 20%;">Buying For</td>
+                            <td th:style="${buyingFor == '1'} ? 'padding: 4px 8px;font-size: 11pt;background-color: #DEEAF6;' : 'padding: 4px 8px;font-size: 11pt;'">Self</td>
+                            <td th:style="${buyingFor == '2'} ? 'padding: 4px 8px;font-size: 11pt;background-color: #DEEAF6;' : 'padding: 4px 8px;font-size: 11pt;'">Spouse</td>
+                            <td colspan="2" th:style="${buyingFor == '3'} ? 'padding: 4px 8px;font-size: 11pt;text-align: center;background-color: #DEEAF6;' : 'padding: 4px 8px;font-size: 11pt;text-align: center;'">Child</td>
+                        </tr>
+                        <tr>
+                            <td style="padding: 4px 8px;font-size: 11pt;width: 20%;">Annual Income</td>
+                            <td th:style="${annualIncome == '1'} ? 'padding: 4px 8px;font-size: 11pt;background-color: #DEEAF6;' : 'padding: 4px 8px;font-size: 11pt;'">0-5 lacs</td>
+                            <td th:style="${annualIncome == '2'} ? 'padding: 4px 8px;font-size: 11pt;background-color: #DEEAF6;' : 'padding: 4px 8px;font-size: 11pt;'">5-10 lacs</td>
+                            <td th:style="${annualIncome == '3'} ? 'padding: 4px 8px;font-size: 11pt;background-color: #DEEAF6;' : 'padding: 4px 8px;font-size: 11pt;'">10-15 lacs</td>
+                            <td style="padding: 4px 8px;font-size: 11pt;" th:style="${annualIncome == '4'} ? 'padding: 4px 8px;font-size: 11pt;background-color: #DEEAF6;' : 'padding: 4px 8px;font-size: 11pt;'">15 lacs+</td>
+                        </tr>
+                        <tr>
+                            <td style="padding: 4px 8px;font-size: 11pt;width: 20%;">Financial & Family Goals</td>
+                            <td th:style="${saving} ? 'padding: 4px 8px;font-size: 11pt;background-color: #DEEAF6;' : 'padding: 4px 8px;font-size: 11pt;'">Savings</td>
+                            <td th:style="${child} ? 'padding: 4px 8px;font-size: 11pt;background-color: #DEEAF6;' : 'padding: 4px 8px;font-size: 11pt;'">Child</td>
+                            <td th:style="${retirement} ? 'padding: 4px 8px;font-size: 11pt;background-color: #DEEAF6;' : 'padding: 4px 8px;font-size: 11pt;'">Retirement</td>
+                            <td style="padding: 4px 8px;font-size: 11pt;"></td>
+                        </tr>
+                        <tr>
+                            <td style="padding: 4px 8px;font-size: 11pt;width: 20%;">Goal Horizon</td>
+                            <td th:style="${goalHorizon == '1'} ? 'padding: 4px 8px;font-size: 11pt;background-color: #DEEAF6;' : 'padding: 4px 8px;font-size: 11pt;'"> &lt;=10 year</td>
+                            <td th:style="${goalHorizon == '2'} ? 'padding: 4px 8px;font-size: 11pt;background-color: #DEEAF6;' : 'padding: 4px 8px;font-size: 11pt;'">11-20 years</td>
+                            <td colspan="2" style="padding: 4px 8px;font-size: 11pt;text-align: center;" th:style="${goalHorizon == '3'} ? 'padding: 4px 8px;font-size: 11pt;text-align: center;background-color: #DEEAF6;' : 'padding: 4px 8px;font-size: 11pt;text-align: center;'"> &gt;20 years
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="padding: 4px 8px;font-size: 11pt;width: 20%;">Payment Preference</td>
+                            <td colspan="2"
+                                style="" th:style="${paymentPreference == '1'} ? 'padding: 4px 8px;font-size: 11pt;text-align: center;background-color: #DEEAF6;' : 'padding: 4px 8px;font-size: 11pt;text-align: center;'">
+                                Limited/Regular</td>
+                            <td colspan="2" style="" th:style="${paymentPreference == '2'} ? 'padding: 4px 8px;font-size: 11pt;text-align: center;background-color: #DEEAF6;' : 'padding: 4px 8px;font-size: 11pt;text-align: center;'"> One-Time </td>
+                        </tr>
+                        <tr>
+                            <td style="padding: 4px 8px;font-size: 11pt;width: 20%;">Risk Appetite</td>
+                            <td style="" th:style="${riskAppetite == '1'} ? 'padding: 4px 8px;font-size: 11pt;text-align: center;background-color: #DEEAF6;' : 'padding: 4px 8px;font-size: 11pt;text-align: center;'"> Very High</td>
+                            <td style="" th:style="${riskAppetite == '2'} ? 'padding: 4px 8px;font-size: 11pt;text-align: center;background-color: #DEEAF6;' : 'padding: 4px 8px;font-size: 11pt;text-align: center;'">High</td>
+                            <td style="" th:style="${riskAppetite == '3'} ? 'padding: 4px 8px;font-size: 11pt;text-align: center;background-color: #DEEAF6;' : 'padding: 4px 8px;font-size: 11pt;text-align: center;'">Medium</td>
+                            <td style="" th:style="${riskAppetite == '4'} ? 'padding: 4px 8px;font-size: 11pt;text-align: center;background-color: #DEEAF6;' : 'padding: 4px 8px;font-size: 11pt;text-align: center;'">Low</td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+            <tr>
+                <td
+                    style="padding: 20px 0 10px; font-size: 11pt;  width: 100%;border:none;text-decoration: underline;font-weight: bold;">
+                    Recommended Products:
+                </td>
+            </tr>
+            <tr>
+                <td style="padding: 0; font-size: 11pt;  width: 100%;border:none;">
+                    <table border="1" width="100%" cellspacing="0" style="border-collapse: collapse;">
+                        <tr th:if="${child}">
+                            <td style="padding: 4px 8px;font-size: 11pt;height: 18px;width: 33%;">Child</td>
+                            <td style="padding: 4px 8px;font-size: 11pt;height: 18px;width: 33%;">
+                                <img src="classpath:static/neo/cgs.png" alt="cgs-logo">
+                            </td>
+                            <td style="padding: 4px 8px;font-size: 11pt;height: 18px;width: 33%;">
+                                <img src='classpath:static/neo/osp.png' alt="cgs-logo">
+                            </td>
+                        </tr>
+                        <tr th:if="${retirement}">
+                            <td style="padding: 4px 8px;font-size: 11pt;height: 18px;width: 33%;">Retirement</td>
+                            <td style="padding: 4px 8px;font-size: 11pt;height: 18px;width: 33%;"><img src='classpath:static/neo/cgs.png' alt="cgs-logo"></td>
+                            <td style="padding: 4px 8px;font-size: 11pt;height: 18px;width: 33%;"><img src='classpath:static/neo/fwap.png' alt="cgs-logo"></td>
+                        </tr>
+                        <tr th:if="${saving}">
+                            <td style="padding: 4px 8px;font-size: 11pt;height: 18px;width: 33%;">Savings:</td>
+                            <td style="padding: 4px 8px;font-size: 11pt;height: 18px;width: 33%;"></td>
+                            <td style="padding: 4px 8px;font-size: 11pt;height: 18px;width: 33%;"></td>
+                        </tr>
+                        <tr th:if="${saving}">
+                            <td style="padding: 4px 8px;font-size: 11pt;height: 18px;width: 33%;">Market-Linked</td>
+                            <td style="padding: 4px 8px;font-size: 11pt;height: 18px;width: 33%;"><img src='classpath:static/neo/cgs.png' alt="cgs-logo"></td>
+                            <td style="padding: 4px 8px;font-size: 11pt;height: 18px;width: 33%;"><img src='classpath:static/neo/osp.png' alt="cgs-logo"></td>
+                        </tr>
+                        <tr th:if="${saving}">
+                            <td style="padding: 4px 8px;font-size: 11pt;height: 18px;width: 33%;">Guaranteed</td>
+                            <td style="padding: 4px 8px;font-size: 11pt;height: 18px;width: 33%;"><img src='classpath:static/neo/sfrd.png' alt="cgs-logo"></td>
+                            <td style="padding: 4px 8px;font-size: 11pt;height: 18px;width: 33%;"><img src='classpath:static/neo/swp.png' alt="cgs-logo"></td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+            <tr>
+                <td style="padding: 20px 0; font-size: 11pt;  width: 100%;border:none;">
+                    I / We are aware that suitability information has been collected from me/us and recommendation on
+                    purchase of life insurance product has been made only basis such information and any product
+                    selected by me/us that differs from such recommendation is on the basis of my/our personal choice.
+                </td>
+            </tr>
+            <tr>
+                <td style="padding: 10px 0 0 0; font-size: 11pt;  width: 100%;border:none;">
+                    <table border="1" width="100%" cellspacing="0" style="border-collapse: collapse;">
+                        <tr>
+                            <td style="padding: 4px 8px;font-size: 11pt;width: 25%;vertical-align: top;font-weight: bold;">Customer signature
+                                <div> (OTP confirmation date / / Electronic signature of prospect/ policyholder )</div>
+                                <div class="signature" style="min-height: 20px;"></div>
+                            </td>
+                            <td style="padding: 4px 8px;font-size: 11pt;width: 25%;vertical-align: top;">
+                                Digitally verified by OTP* (Time & Date stamp)
+                                <div class="signature" style="min-height: 20px;" th:text="${otpDate}"></div>
+                            </td>
+                            <td style="padding: 4px 8px;font-size: 11pt;width: 25%;vertical-align: top;">Seller
+                                signature
+                                (This is the online journey done by the prospect without any involvement of the seller
+                                therefore does not require any seller signature)</td>
+                            <td style="padding: 4px 8px;font-size: 11pt;width: 25%;vertical-align: top;"></td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+            <tr>
+                <td style="padding: 0 0 0 10px; font-size: 11pt;  width: 100%;border:none;">
+                    *same OTP as captured in Proposal form
+                </td>
+            </tr>
+            <tr th:if="${isUlip}">
+                <td style="padding: 20px 0 10px; font-size: 11pt;  width: 100%;border:none;font-weight: bold;">
+                    Investor Risk Profile:
+                </td>
+            </tr>
+            <tr th:if="${isUlip}">
+                <td style="padding: 10px 0 10px; font-size: 11pt;  width: 100%;border:none;">
+                    Fund/s Selected:
+                </td>
+            </tr>
+            <tr th:if="${isUlip}">
+                <td style="padding: 10px 0 0 0; font-size: 11pt;  width: 100%;border:none;">
+                    <table border="1" width="100%" cellspacing="0" style="border-collapse: collapse;">
+                        <tr>
+                            <td rowspan="2" style="padding: 4px 8px;font-size: 11pt;width: 120px;">Fund Name</td>
+                            <td rowspan="2" style="padding: 4px 8px;font-size: 11pt;width: 120px;">Category</td>
+                            <td colspan="3" style="padding: 4px 8px;font-size: 11pt;text-align: center;">Returns</td>
+                            <td style="padding: 4px 8px;font-size: 11pt;text-align: center;">% Allocation</td>
+                        </tr>
+                        <tr>
+                            <td style="padding: 4px 8px;font-size: 11pt;">1 year</td>
+                            <td style="padding: 4px 8px;font-size: 11pt;">3 years</td>
+                            <td style="padding: 4px 8px;font-size: 11pt;">5 years</td>
+                            <td style="padding: 4px 8px;font-size: 11pt;"></td>
+                        </tr>
+                        <th:block th:each="fund : ${funds}">
+                            <tr>
+                                <td style="padding: 4px 8px;font-size: 11pt;" th:text="${fund.name}"></td>
+                                <td style="padding: 4px 8px;font-size: 11pt;" th:text="${fund.category}"></td>
+                                <td style="padding: 4px 8px;font-size: 11pt;" th:text="${fund.returns.yrs1}"></td>
+                                <td style="padding: 4px 8px;font-size: 11pt;" th:text="${fund.returns.yrs3}"></td>
+                                <td style="padding: 4px 8px;font-size: 11pt;" th:text="${fund.returns.yrs5}"></td>
+                                <td style="padding: 4px 8px;font-size: 11pt;"><span th:text="${fund.allocation}"></span>%</td>
+                            </tr>
+                        </th:block>
+                    </table>
+                </td>
+            </tr>
+            <tr>
+                <td height="10">
+                    &nbsp;
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+
+</html>

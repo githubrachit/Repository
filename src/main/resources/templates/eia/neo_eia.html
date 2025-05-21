@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<body>
+<div><br/></div>
+<div>
+    <div class="heading" style="text-decoration-line: underline;"><b>e INSURANCE ACCOUNT FORM</b>&nbsp;(For Individuals)
+    </div>
+    <div class="formbody">
+        <div class="labelheading floatL" style="float: left;">
+            <div style="padding-top: 5px; margin-top: 5px;">Insurance Repository</div>
+            <div class="" style="padding-top: 5px; margin-top: 23px;">Type of eIA</div>
+            <div style="padding-top: 5px;">Application No.</div>
+            <div style="padding-top: 5px;">Insurance Co</div>
+            <div class="" style="padding-top: 5px;">AP Code</div>
+            <div style="padding-top: 5px;">PAN Number *</div>
+            <div style="padding-top: 5px;">UID Number *</div>
+            <div style="padding-top: 5px;">Mobile No. *</div>
+            <div style="padding-top: 5px;">Date of Birth *</div>
+            <div style="padding-top: 5px;">ID Proof *</div>
+            <div style="padding-top: 5px;">Email *</div>
+            <div class="detailLabel" style="margin-top: 8px; padding-top: 5px;">Applicant Details</div>
+            <div class="marg35" style="margin-top: 35px; padding-top: 5px;">First Name *</div>
+            <div style="padding-top: 5px;">Middle Name</div>
+            <div style="padding-top: 5px;">Last Name</div>
+            <div style="padding-top: 5px; margin-top: 14px;">Gender *</div>
+            <div style="padding-top: 5px; margin-top: 9px;">Father / Spouse</div>
+            <div class="corAddress" style="width: 171px; margin-top: 5px; padding-top: 5px;">Correspondence Address
+            </div>
+            <div class="" style="padding-top: 15px;">Address Line 1 *</div>
+            <div style="padding-top: 5px;">Address Line 2</div>
+            <div style="padding-top: 5px;">Landmark</div>
+            <div style="padding-top: 5px;">City *</div>
+            <div style="padding-top: 5px;">Pin Code *</div>
+            <div style="padding-top: 5px;">Address Proof *</div>
+        </div>
+        <div class="labelinputform" style="margin-top: 10px;">
+            <div class="inputrow1 inputrows" style="height: 35px;">
+                <ul class="listInput" style="list-style: none; margin: 0px; padding: 10px 0px 0px;">
+                    <li style="float: left; min-width: 20px;" th:text="${repositoryName}"></li>
+                </ul>
+            </div>
+            <div class="inputrow2 inputrows" style="margin-top: -6px; height: 35px;">
+                <ul class="listInput" style="list-style: none; margin: 0px; padding: 10px 0px 0px;">
+                    <li class="checkType borderBlack"
+                        style="height: 33px; border: 1px solid rgb(0, 0, 0); float: left; min-width: 20px;"><span
+                            style="color: rgb(84, 84, 84); font-family: arial, sans-serif; font-size: small; line-height: 18.2px; background-color: rgb(255, 255, 255);">?</span>
+                    </li>
+                    <li style="float: left; min-width: 20px;"><label style="padding: 0px 15px 0px 4px;">Basic&nbsp;<br/>&nbsp;Services</label>
+                    </li>
+                    <li class="checkType marleft75 borderBlack"
+                        style="margin-left: 75px; height: 33px; border: 1px solid rgb(0, 0, 0); float: left; min-width: 20px;">
+                        <span style="font-size: 14pt;">&nbsp;</span>
+                    </li>
+                    <li class="" style="float: left; min-width: 20px;"><label style="padding: 0px 15px 0px 4px;">&nbsp;
+                        Minimum&nbsp;<br/>&nbsp; Services</label>
+                    </li>
+                    <li style="float: left; min-width: 20px;"></li>
+                    <li class="checkType marleft48 borderBlack"
+                        style="margin-left: 48px; height: 33px; border: 1px solid rgb(0, 0, 0); float: left; min-width: 20px;"></li>
+                    <li style="float: left; min-width: 20px;"><label style="padding: 0px 15px 0px 4px;">&nbsp;Premium&nbsp;<br/>&nbsp;
+                        Services</label></li>
+                    <li style="float: left; min-width: 20px;"></li>
+                </ul>
+            </div>
+            <div class="inputrow3 inputrows" style="height: 35px;">
+                <ul class="listInput appNo" style="list-style: none; margin: 0px; padding: 10px 0px 0px;">
+                    <li class="insuranceCom borderBlack"
+                        style="border-top: 1px solid rgb(0, 0, 0); border-right: 1px solid rgb(0, 0, 0); border-bottom: none; border-left: 1px solid rgb(0, 0, 0); border-image: initial; width: 260px !important; height: 18px; float: left; min-width: 20px; margin-top: 1px;"
+                        th:text="${repositoryNumber}">
+                    </li>
+                </ul>
+                <div class="imageBox" style="float: right;">
+                    <ul class="listInput" style="list-style: none; margin: 0px; padding: 10px 0px 0px;">
+                        <li class="borderBlack photoBox"
+                            style="height: 145px; width: 145px; border: 1px solid rgb(0, 0, 0); float: left; min-width: 20px;">
+                            <label class="signlabel"
+                                   style="position: relative; left: 8px; top: 100px; padding: 0px 15px 0px 4px;">Paste
+                                your recentcolour photo
+                                (Not mandatory)</label></li>
+                        <li class="borderBlack sigBox"
+                            style="height: 145px; width: 70px; border: 1px solid rgb(0, 0, 0); float: left; min-width: 20px;">
+                            <div class="signImg" style="transform: rotate(-90deg); margin-top: 98px;">Sign here</div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="inputrow4 inputrows" style="margin-top: -15px; height: 35px;">
+                <ul class="listInput" style="list-style: none; margin: 0px; padding: 10px 0px 0px;">
+                    <li class="insuranceCom borderBlack"
+                        style="border: 1px solid rgb(0, 0, 0); width: 300px; height: 18px; float: left; min-width: 20px;">
+                        Max
+                        Life Insurance Company Limited
+                    </li>
+                </ul>
+            </div>
+            <div class="inputrow5 padd10 inputrows" style="margin-top: -25px; padding: 10px; height: 35px;">
+                <ul class="listInput " style="list-style: none; margin: 0px; padding: 10px 0px 0px;">
+                    <li class="appCode borderBlack"
+                        style="width: 100px; height: 18px; border: 1px solid rgb(0, 0, 0); float: left; min-width: 20px;"></li>
+                    <li style="float: left; min-width: 20px;">&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;<label
+                            style="padding: 0px 15px 0px 4px;">Employee</label></li>
+                    <li class="appCode borderBlack"
+                        style="width: 100px; height: 18px; border: 1px solid rgb(0, 0, 0); float: left; min-width: 20px;"
+                        th:text="${occupation}"></li>
+                </ul>
+            </div>
+            <div class="inputrow6 inputrows" style="margin-top: -25px; height: 35px;">
+                <ul class="listInput numberBox" style="list-style: none; margin: 0px; padding: 10px 0px 0px;">
+                    <li class="borderBlack"
+                        style="border: 1px solid rgb(0, 0, 0); width: 200px; height: 18px; float: left; min-width: 20px;"
+                        th:text="${panNumber}">
+                    </li>
+                </ul>
+            </div>
+            <div class="inputrow7 inputrows" style="margin-top: -15px; height: 35px;">
+                <ul class="listInput appNo" style="list-style: none; margin: 0px; padding: 10px 0px 0px;">
+                    <li class="insuranceCom borderBlack"
+                        style="border: 1px solid rgb(0, 0, 0); width: 260px !important; height: 18px; float: left; min-width: 20px;"
+                        th:text="${uidNumber}">
+                    </li>
+                </ul>
+            </div>
+            <div class="inputrow7 inputrows" style="margin-top: -15px; height: 35px;">
+                <ul class=" padd10 listInput numberBox" style="padding: 10px 0px 0px; list-style: none; margin: 0px;">
+                    <li class="borderBlack"
+                        style="border: 1px solid rgb(0, 0, 0); width: 200px; height: 18px; float: left; min-width: 20px;"
+                        th:text="${currentAddress.get('mobileNumber1')}">
+                    </li>
+                </ul>
+            </div>
+            <div class="inputrow7 inputrows" style="margin-top: -15px; height: 35px;">
+                <ul class=" listInput numberBox" style="list-style: none; margin: 0px; padding: 10px 0px 0px;">
+                    <li class="borderBlack"
+                        style="border: 1px solid rgb(0, 0, 0); width: 200px; height: 18px; float: left; min-width: 20px;"
+                        th:text="${dob}"></li>
+                    <li class="dobInput borderBlack"
+                        style="margin-left: 15px; width: 200px !important; border: 1px solid rgb(0, 0, 0); height: 18px; float: left; min-width: 20px;">
+                        As
+                        submitted with Documents
+                    </li>
+                </ul>
+            </div>
+            <div class="inputrow7 inputrows" style="margin-top: -15px; height: 35px;">
+                <ul class="listInput" style="list-style: none; margin: 0px; padding: 10px 0px 0px;">
+                    <li class="insuranceCom borderBlack"
+                        style="border: 1px solid rgb(0, 0, 0); width: 300px; height: 18px; float: left; min-width: 20px;"
+                        th:text="${currentAddress.get('communicationAddressProofType')}">
+                    </li>
+                </ul>
+            </div>
+            <div class="inputrow11 inputrows" style="margin-top: -15px; height: 35px;">
+                <ul class="listInput" style="list-style: none; margin: 0px; padding: 10px 0px 0px;">
+                    <li class="emailBox borderBlack"
+                        style="width: 500px; height: 18px; border: 1px solid rgb(0, 0, 0); float: left; min-width: 20px;"
+                        th:text="${email}">
+                    </li>
+                </ul>
+            </div>
+            <div class="inputrow11 inputrows" style="margin-top: -15px; height: 35px;">
+                <ul class="listInput info"
+                    style="color: gray; text-align: center; list-style: none; margin: 0px; padding: 10px 0px 0px;">
+                    <li style="margin-top: 15px; float: left; min-width: 20px;"><label
+                            style="padding: 0px 15px 0px 4px;">(Please fill this form in ENGLISH and
+                        in BLOCK LETTERS. Fields marked with asterisk</label></li>
+                    <li class="marg10" style="margin-top: 15px; float: left; min-width: 20px; width: 480px;"><label
+                            style="padding: 0px 15px 0px 4px; margin-left: -355px;">(*) are compulsory)</label></li>
+                </ul>
+            </div>
+            <div class="inputrow12 inputrows" style="margin-top: 35px; height: 35px;">
+                <ul class=" padd10 listInput numberinputbox"
+                    style="padding: 10px 0px 0px; list-style: none; margin: 0px;">
+                    <li style="width: 330px; border: 1px solid; height: 18px; float: left; min-width: 20px;"
+                        th:text="${firstName}"></li>
+                </ul>
+            </div>
+            <div class="inputrow7 inputrows" style="margin-top: -15px; height: 35px;">
+                <ul class=" padd10 listInput numberinputbox"
+                    style="padding: 10px 0px 0px; list-style: none; margin: 0px;">
+                    <li style="width: 330px; border: 1px solid; height: 18px; float: left; min-width: 20px;"
+                        th:text="${middleName}"></li>
+                </ul>
+            </div>
+            <div class="inputrow7 inputrows" style="margin-top: -15px; height: 35px;">
+                <ul class=" padd10 listInput numberinputbox"
+                    style="padding: 10px 0px 0px; list-style: none; margin: 0px;">
+                    <li style="width: 330px; border: 1px solid; height: 18px; float: left; min-width: 20px;"
+                        th:text="${lastName}"></li>
+                </ul>
+            </div>
+            <div class="inputrow7 inputrows marTop14" style="margin-top: -15px; height: 35px;">
+                <ul class="listInput" style="list-style: none; margin: 16px 0px 0px; padding: 10px 0px 0px;">
+                    <li style="float: left; min-width: 20px; width: 230px; height: 16px;" th:text="${gender}"></li>
+                    <li style="float: left; min-width: 20px;" th:text="${residentialStatus}"></li>
+                </ul>
+            </div>
+            <div class="inputrow16 inputrows" style="margin-top: -19px; height: 35px;">
+                <ul class="listInput numberinputbox" style="list-style: none; margin: 0px; padding: 10px 0px 0px;">
+                    <li style="width: 330px; border: 1px solid; height: 18px; float: left; min-width: 20px; margin-top: 14px;"
+                        th:text="${fatherName}"></li>
+                </ul>
+            </div>
+            <div class="inputrow7 inputrows" style="margin-top: -15px; height: 35px;"></div>
+            <div class="inputrow18 inputrows" style="height: 35px; margin-top: 17px;">
+                <ul class=" padd10 listInput numberinputbox"
+                    style="padding: 10px 0px 0px; list-style: none; margin: 0px;">
+                    <li style="width: 330px; border: 1px solid; height: 18px; float: left; min-width: 20px;"
+                        th:text="${currentAddress.get('houseNo')}"></li>
+                </ul>
+            </div>
+<!--            <div class="inputrow7 inputrows" style="margin-top: -15px; height: 35px;">-->
+<!--                <ul class=" padd10 listInput numberinputbox"-->
+<!--                    style="padding: 10px 0px 0px; list-style: none; margin: 0px;">-->
+<!--                    <li style="width: 330px; border: 1px solid; height: 18px; float: left; min-width: 20px;"-->
+<!--                        th:text="${currentAddress.get('area')}"></li>-->
+<!--                </ul>-->
+<!--            </div>-->
+<!--            <div class="inputrow7 inputrows" style="margin-top: -15px; height: 35px;">-->
+<!--                <ul class=" padd10 listInput numberinputbox"-->
+<!--                    style="padding: 10px 0px 0px; list-style: none; margin: 0px;">-->
+<!--                    <li style="width: 330px; border: 1px solid; height: 18px; float: left; min-width: 20px;"-->
+<!--                        th:text="${currentAddress.get('landmark')}"></li>-->
+<!--                </ul>-->
+<!--            </div>-->
+<!--            <div class="inputrow7 inputrows" style="margin-top: -15px; height: 35px;">-->
+<!--                <ul class="padd10 listInput numberinputbox"-->
+<!--                    style="padding: 10px 0px 0px; list-style: none; margin: 0px;">-->
+<!--                    <li style="width: 330px; border: 1px solid; height: 18px; float: left; min-width: 20px;"-->
+<!--                        th:text="${currentAddress.get('city')}"></li>-->
+<!--                </ul>-->
+<!--            </div>-->
+<!--            <div class="inputrow7 inputrows " style="margin-top: -15px; height: 35px;">-->
+<!--                <ul class="listInput" style="list-style: none; margin: 0px; padding: 10px 0px 0px;">-->
+<!--                    <li style="float: left; min-width: 20px;">-->
+<!--                        <ul class="InnerlistInput" style="list-style: none; margin: 0px; padding: 0px;">-->
+<!--                            <li class="pinBox borderBlack largerBox"-->
+<!--                                style="width: 167px !important; height: 18px; border: 1px solid rgb(0, 0, 0); float: left; min-width: 20px;">-->
+<!--                                <label-->
+<!--                                        style="padding: 0px;" th:text="${currentAddress.get('pinCode')}"></label></li>-->
+<!--                        </ul>-->
+<!--                    </li>-->
+<!--                    <li style="float: left; min-width: 20px;"><b>State * &nbsp;</b></li>-->
+<!--                    <li class="borderBlack stateBox largerBox"-->
+<!--                        style="width: 105px; height: 18px; margin-left: 4px; border: 1px solid rgb(0, 0, 0); float: left; min-width: 20px;"-->
+<!--                        th:text="${currentAddress.get('state')}"></li>-->
+<!--                    <li style="float: left; min-width: 20px;"><b>Country * &nbsp;</b></li>-->
+<!--                    <li class="borderBlack stateBox"-->
+<!--                        style="width: 105px; height: 18px; margin-left: 4px; border: 1px solid rgb(0, 0, 0); float: left; min-width: 20px;"-->
+<!--                        th:text="${currentAddress.get('country')}">-->
+<!--                    </li>-->
+<!--                </ul>-->
+<!--            </div>-->
+<!--            <div class="inputrow7 inputrows" style="margin-top: -15px; height: 35px;">-->
+<!--                <ul class="listInput" style="list-style: none; margin: 0px; padding: 10px 0px 0px;">-->
+<!--                    <li class="emailBox borderBlack"-->
+<!--                        style="width: 500px; height: 18px; border: 1px solid rgb(0, 0, 0); float: left; min-width: 20px;"-->
+<!--                        th:text="${currentAddress.get('communicationAddressProofType')}">-->
+<!--                    </li>-->
+<!--                </ul>-->
+<!--            </div>-->
+        </div>
+    </div>
+<!--    <div class="clear" style="clear: both;"><br/><label>Policy Details for Electronic Conversion</label>&nbsp;<br/><br/><label-->
+<!--            class="marg10"-->
+<!--            style="margin-top: 10px !important;">Please-->
+<!--        find here with my Insurance Policy numbers under various Insurance Companies for conversion.</label></div>-->
+<!--    <div class="floatL" style="float: left;">-->
+<!--        <div class="compNameBox"><label><b>Insurance Company</b></label>-->
+<!--            <ul class="listInput marTop0" style="margin: 0px; list-style: none; padding: 10px 0px 0px;">-->
+<!--                <li style="float: none; min-width: 20px; width: 160px; border: 1px solid rgb(0, 0, 0); height: 18px;"></li>-->
+<!--                <li style="float: none; min-width: 20px; width: 160px; border: 1px solid rgb(0, 0, 0); height: 18px;"></li>-->
+<!--                <li style="float: none; min-width: 20px; width: 160px; border: 1px solid rgb(0, 0, 0); height: 18px;"></li>-->
+<!--                <li style="float: none; min-width: 20px; width: 160px; border: 1px solid rgb(0, 0, 0); height: 18px;"></li>-->
+<!--                <li style="float: none; min-width: 20px; width: 160px; border: 1px solid rgb(0, 0, 0); height: 18px;"></li>-->
+<!--                <li style="float: none; min-width: 20px; width: 160px; border: 1px solid rgb(0, 0, 0); height: 18px;"></li>-->
+<!--            </ul>-->
+<!--        </div>-->
+<!--        <div class="CompBox"></div>-->
+<!--    </div>-->
+<!--    <div class="marLeft10 floatL" style="margin-left: 10px; float: left;">-->
+<!--        <div class="compnumberBox"><label class="marLeft50" style="margin-left: 50px;"><b>Policy Number</b></label>-->
+<!--            <ul class="listInput marTop0" style="margin: 0px; list-style: none; padding: 10px 0px 0px;">-->
+<!--                <li style="float: left; min-width: 20px; border: 1px solid rgb(0, 0, 0); width: 218px; height: 18px;"></li>-->
+<!--            </ul>-->
+<!--            <ul class="listInput" style="list-style: none; margin: 0px; padding: 10px 0px 0px;">-->
+<!--                <li style="float: left; min-width: 20px; border: 1px solid rgb(0, 0, 0); width: 218px; height: 18px;"></li>-->
+<!--            </ul>-->
+<!--            <ul class="listInput" style="list-style: none; margin: 0px; padding: 10px 0px 0px;">-->
+<!--                <li style="float: left; min-width: 20px; border: 1px solid rgb(0, 0, 0); width: 218px; height: 18px;"></li>-->
+<!--            </ul>-->
+<!--            <ul class="listInput" style="list-style: none; margin: 0px; padding: 10px 0px 0px;">-->
+<!--                <li style="float: left; min-width: 20px; border: 1px solid rgb(0, 0, 0); width: 218px; height: 18px;"></li>-->
+<!--            </ul>-->
+<!--            <ul class="listInput" style="list-style: none; margin: 0px; padding: 10px 0px 0px;">-->
+<!--                <li style="float: left; min-width: 20px; border: 1px solid rgb(0, 0, 0); width: 218px; height: 18px;"></li>-->
+<!--            </ul>-->
+<!--            <ul class="listInput" style="list-style: none; margin: 0px; padding: 10px 0px 0px;">-->
+<!--                <li style="float: left; min-width: 20px; border: 1px solid rgb(0, 0, 0); width: 218px; height: 18px;"></li>-->
+<!--            </ul>-->
+<!--        </div>-->
+<!--    </div>-->
+<!--    <div class="margtop17 marLeft10 floatL" style="margin-top: 17px; margin-left: 10px; float: left;">-->
+<!--        <div class="compnumberBox">-->
+<!--            <ul class="listInput marTop0" style="margin: 0px; list-style: none; padding: 10px 0px 0px;">-->
+<!--                <li style="float: left; min-width: 20px; border: 1px solid rgb(0, 0, 0); width: 218px; height: 18px;"></li>-->
+<!--            </ul>-->
+<!--            <ul class="listInput" style="list-style: none; margin: 0px; padding: 10px 0px 0px;">-->
+<!--                <li style="float: left; min-width: 20px; border: 1px solid rgb(0, 0, 0); width: 218px; height: 18px;"></li>-->
+<!--            </ul>-->
+<!--            <ul class="listInput" style="list-style: none; margin: 0px; padding: 10px 0px 0px;">-->
+<!--                <li style="float: left; min-width: 20px; border: 1px solid rgb(0, 0, 0); width: 218px; height: 18px;"></li>-->
+<!--            </ul>-->
+<!--            <ul class="listInput" style="list-style: none; margin: 0px; padding: 10px 0px 0px;">-->
+<!--                <li style="float: left; min-width: 20px; border: 1px solid rgb(0, 0, 0); width: 218px; height: 18px;"></li>-->
+<!--            </ul>-->
+<!--            <ul class="listInput" style="list-style: none; margin: 0px; padding: 10px 0px 0px;">-->
+<!--                <li style="float: left; min-width: 20px; border: 1px solid rgb(0, 0, 0); width: 218px; height: 18px;"></li>-->
+<!--            </ul>-->
+<!--            <ul class="listInput" style="list-style: none; margin: 0px; padding: 10px 0px 0px;">-->
+<!--                <li style="float: left; min-width: 20px; border: 1px solid rgb(0, 0, 0); width: 218px; height: 18px;"></li>-->
+<!--            </ul>-->
+<!--        </div>-->
+<!--    </div>-->
+<!--    <div class="clear" style="clear: both;"></div>-->
+<!--    <div class="bottomSign floatL" style="float: left;">-->
+<!--        <div class="paddtop10" style="padding-top: 10px !important;">Name</div>-->
+<!--        <div class="paddtop30" style="padding-top: 30px;">Place</div>-->
+<!--        <div class="paddtop5" style="padding-top: 5px;">Date</div>-->
+<!--    </div>-->
+<!--    <div class="floatL marLeft50 bottomSign" style="margin-left: 50px; float: left;">-->
+<!--        <ul class="listInput btmbox" style="width: 200px; list-style: none; margin: 0px; padding: 10px 0px 0px;">-->
+<!--            <li class="nameBox borderBlack"-->
+<!--                style="height: 30px; border: 1px solid rgb(0, 0, 0); float: none; min-width: 20px;"-->
+<!--                th:text="${fullName}"></li>-->
+<!--            <li class="borderBlack nameboxbtm"-->
+<!--                style="height: 30px; border: 1px solid rgb(0, 0, 0); float: none; min-width: 20px;"-->
+<!--                th:text="${currentAddress.get('city')}"></li>-->
+<!--            <li class="borderBlack nameboxbtm"-->
+<!--                style="height: 30px; border: 1px solid rgb(0, 0, 0); float: none; min-width: 20px;" th:text="${date}">-->
+<!--            </li>-->
+<!--        </ul>-->
+<!--    </div>-->
+<!--    <div class="floatL marLeft50" style="margin-left: 50px; float: left;">-->
+<!--        <ul class="listInput" style="list-style: none; margin: 0px; padding: 10px 0px 0px;">-->
+<!--            <li class="paddtop30" style="padding-top: 30px; float: left; min-width: 20px; font-size: 13px;">-->
+<!--                <b>Signature</b></li>-->
+<!--            <li></li>-->
+<!--        </ul>-->
+<!--    </div>-->
+</div>
+</body>
+</html>
+

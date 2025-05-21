@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Shield Pro Risk Document</title>
+    <style type="text/css">
+        table, td, tr {
+            border-collapse: collapse;
+        }
+        table, tr{
+            padding-bottom: 8px;
+
+        }
+        @media print {
+            * {
+                font-size: 6pt !important;
+            }
+
+            .printtext {
+                font-size: 11pt !important;
+            }
+        }
+    </style>
+</head>
+<body style="margin: 0 auto;padding: 7px;">
+<td>
+
+    <table width="80%" border="0" cellspacing="0" align="center" cellpadding="0" style="border-collapse: collapse;">
+        <tbody>
+        <tr>
+            <td width="60%" colspan="3" style="font-size: 15px; font-family: arial; padding: 2px 4px 5px" align="center">Shield Pro Risk Document</td>
+
+            <td  width="40%"><img src="classpath:static/logo_ax_max.png" width='120'/></td>
+
+        </tr>
+
+        </tbody>
+    </table>
+
+    <table width="80%" border="1" align="center" cellspacing="0" style="border-collapse: collapse;margin-top: 5px;">
+        <tbody>
+        <tr>
+            <td width="30%" style="font-weight: bold; padding: 2px 4px 5px; font-size: 10px; font-family: arial;">
+                Policy Number:
+            </td>
+            <td width="70%" style="font-size: 10px; font-family: arial;padding: 2px 4px;;"
+                th:text=${policyNo}></td>
+
+        </tr>
+        <tr>
+            <td width="30%" style="font-weight: bold; padding: 2px 4px; font-size: 10px; font-family: arial;">
+                Plan:
+            </td>
+            <td width="70%" style="font-size: 10px; font-family: arial;padding: 2px 4px;"
+                th:text=${plan}></td>
+        </tr>
+        <tr>
+            <td width="30%" style="font-weight: bold; padding: 2px 4px; font-size: 10px; font-family: arial;">Variant</td>
+            <td width="70%" colspan="1" style="font-size: 10px;padding: 2px 4px; font-family: arial;" th:text="${variant}">
+            </td>
+        </tr>
+        <tr>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+        </tr>
+        <tr>
+            <td width="30%" style="font-weight: bold; padding: 2px 4px; font-size: 10px; font-family: arial;">Annual Income</td>
+            <td width="70%" style="font-size: 10px; font-family: arial;padding: 2px 4px;;" th:text="${annualIncome}"></td>
+        </tr>
+        <tr>
+            <td width="30%" style="font-weight: bold; padding: 2px 4px; font-size: 10px; font-family: arial;">Cibil Score</td>
+            <td width="70%" style="font-size: 10px; font-family: arial;padding: 2px 4px;" th:text="${cibilScore}"></td>
+        </tr>
+        <tr>
+            <td width="30%" style="font-weight: bold; padding: 2px 4px; font-size: 10px; font-family: arial;">Crif Score</td>
+            <td width="70%" colspan="1" style="font-size: 10px;padding: 2px 4px; font-family: arial;" th:text="${crifScore}"></td>
+        </tr>
+        <tr>
+            <td width="30%" style="font-weight: bold; padding: 2px 4px; font-size: 10px; font-family: arial;">Shield Pro Risk Score</td>
+            <td width="70%" style="font-size: 10px; font-family: arial;padding: 2px 4px;;" th:text="${shieldProRiskScore}"></td>
+        </tr>
+        <tr>
+            <td width="30%" style="font-weight: bold; padding: 2px 4px; font-size: 10px; font-family: arial;">Shield Pro Risk Category</td>
+            <td width="70%" style="font-size: 10px; font-family: arial;padding: 2px 4px;;" th:text="${shieldProRiskCategory}"></td>
+        </tr>
+
+        </tbody>
+    </table>
+
+
+</td>
+</body>
+</html>

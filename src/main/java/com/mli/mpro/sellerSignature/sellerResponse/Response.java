@@ -1,0 +1,46 @@
+package com.mli.mpro.sellerSignature.sellerResponse;
+
+import com.mli.mpro.utils.Utility;
+
+public class Response {
+
+    private Header header ;
+    private MsgInfo msginfo;
+    private Payload payload;
+
+    public Header getHeader() {
+        return header;
+    }
+
+    public void setHeader(Header header) {
+        this.header = header;
+    }
+
+    public MsgInfo getMsginfo() {
+        return msginfo;
+    }
+
+    public void setMsginfo(MsgInfo msginfo) {
+        this.msginfo = msginfo;
+    }
+
+    public Payload getPayload() {
+        return payload;
+    }
+
+    public void setPayload(Payload payload) {
+        this.payload = payload;
+    }
+
+    @Override
+    public String toString() {
+        if(Utility.isCalledFromLogs(Thread.currentThread())){
+            return Utility.toString(this);
+        }
+        return "Response{" +
+                "header=" + header +
+                ", msginfo=" + msginfo +
+                ", payload=" + payload +
+                '}';
+    }
+}

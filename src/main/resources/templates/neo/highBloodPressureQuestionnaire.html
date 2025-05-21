@@ -1,0 +1,49 @@
+<td style="font-family: arial;">
+    <!-- High blood pressure reflexive questions start here-->
+    <table cellspacing="0" cellpadding="0" width="100%" style="border-collapse: collapse; border-color: #ccc;border-style:solid;border-width:1px;">
+        <tbody>
+        <tr>
+            <td colspan="6" style="padding: 0px; font-family: arial; font-size:9px; background-color: #000000; border-color: #ccc;border-style:solid;border-width:1px;">
+                <table border="1" cellspacing="0" cellpadding="0" width="100%" style="border-collapse: collapse;">
+                    <tbody>
+                    <tr>
+                        <td colspan="3" style="padding: 2px 4px; font-size: 14px; font-weight: bold; color: #FFFFFF">High blood pressure reflexive questions</td>
+                    </tr>
+                    </tbody>
+                </table>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="6" style="padding: 0px; font-family: Arial;">
+                <table width="100%" cellpadding="0" cellspacing="0" border="0" style="border-color: #000000;border-style:solid;border-width:1px;">
+                    <tbody>
+                    <tr>
+                        <th style="padding: 5px 5px 5px 10px; font-size: 12px; border-right: 1px solid #000000; border-bottom: 1px solid #000000; text-align: center;">Information Required</th>
+                        <th style="padding: 5px 5px 5px 10px; font-size: 12px; border-bottom: 1px solid #000000; text-align: center;">Insured's Information</th>
+                    </tr>
+                    <tr>
+                        <td width="50%" style="padding: 5px 5px 5px 10px; font-size: 12px; border-right: 1px solid #000000; border-bottom: 1px solid #000000;">1) When was High Blood Pressure Diagnosed?</td>
+                        <td width="50%" style="padding: 5px 5px 5px 10px; font-size: 12px; border-bottom: 1px solid #000000;" th:text="${highBloodPressureDiagnosedDate}"></td>
+                    </tr>
+                    <tr>
+                        <td width="50%" style="padding: 5px 5px 5px 10px; font-size: 12px; border-right: 1px solid #000000; border-bottom: 1px solid #000000;">2) Please provide the details of the medication?</td>
+                        <td width="50%" style="padding: 5px 5px 5px 10px; font-size: 12px; border-bottom: 1px solid #000000;" th:text="${medicationDetails}"></td>
+                    </tr>
+                    <tr>
+                        <td width="50%" style="padding: 5px 5px 5px 10px; font-size: 12px; border-right: 1px solid #000000; border-bottom: 1px solid #000000;">3) How often do you attend for follow ups and when was your last consultation?</td>
+                        <td width="50%" style="padding: 5px 5px 5px 10px; font-size: 12px; border-bottom: 1px solid #000000;">
+                            <span th:if="${followUps == 'others'}" th:text="${followUpsOther}"></span>
+                            <span th:unless="${followUps == 'others'}" th:text="${followUps}"></span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td width="50%" style="padding: 5px 5px 5px 10px; font-size: 12px; border-right: 1px solid #000000;">4) What was your last Blood Pressure Reading?</td>
+                        <td width="50%" style="padding: 5px 5px 5px 10px; font-size: 12px;" th:text="${lastBloodPressureReading}"></td>
+                    </tr>
+                    </tbody>
+                </table>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+</td>

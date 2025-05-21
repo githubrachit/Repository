@@ -1,0 +1,64 @@
+{
+    "keys": [
+      {
+        "label": "Max Life Whole Life Super 10 pay",
+        "value": "Reduced Paid-up (RPU)"
+      },
+      {
+        "label": "Max Life Whole Life Super 15 pay",
+        "value": "Reduced Paid-up (RPU)"
+      },
+      {
+        "label": "Max Life Whole Life Super 20 pay",
+        "value": "Reduced Paid-up (RPU)"
+      },
+      {
+        "label": "Max Life Fast Track Super (5 Pay)",
+        "value": "Lapse (No cash value)"
+      },
+      {
+        "label": "Max Life Fast Track Super (Single Pay)",
+        "value": "Lapse (No cash value)"
+      },
+      {
+        "label": "Max Life Fast Track Super Regular Pay",
+        "value": "Lapse (No cash value)"
+      },
+      {
+        "label": "Max Life Super Term Plan",
+        "value": "Lapse (No cash value)"
+      },
+      {
+        "label": "Max Life Super Term Plan-Increasing SA",
+        "value": "Lapse (No cash value)"
+      },
+      {
+        "label": "Max Life Monthly Income Advantage Plan – 12 pay",
+        "value": "Reduced Paid-up (RPU)"
+      },
+      {
+        "label": "Max Life Monthly Income Advantage Plan – 15 pay",
+        "value": "Reduced Paid-up (RPU)"
+      },
+      {
+        "label": "Max Life Complete Cancer Care Plan",
+        "value": "Lapse (No cash value)"
+      },
+      {
+        "label": "Max Life Savings Advantage Single Pay Plan-CO",
+        "value": "Reduced Paid-up (RPU)"
+      },
+      {
+        "label": "Max Life Savings Advantage Limited Pay Short Term Plan-CO",
+        "value": "Reduced Paid-up (RPU)"
+      },
+      {
+        "label": "Max Life Savings Advantage Limited Pay Long Term Plan-CO",
+        "value": "Reduced Paid-up (RPU)"
+      },
+      {
+        "label": "Max Life Savings Advantage Regular Pay Plan-CO",
+        "value": "Reduced Paid-up (RPU)"
+      }
+    ]
+  }

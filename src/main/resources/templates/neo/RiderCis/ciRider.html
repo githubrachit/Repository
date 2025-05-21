@@ -1,0 +1,1111 @@
+<style xmlns="http://www.w3.org/1999/html">
+    body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        margin: 0;
+        font-family: sans-serif;
+    }
+    * {
+        font-size: 11pt;
+    }
+    .container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 20px;
+        padding: 20px;
+        border : none;
+        max-width: 210mm; /* A4 width */
+        box-sizing: border-box; /* Ensure padding and border are included in the width */
+        font-size:11pt;
+
+    }
+    .title {
+        font-size: 11pt;
+        font-weight: bold;
+        margin-bottom: 10px;
+        text-align: center;
+    }
+    .info-table {
+        max-width: 100%; /* Ensure the table does not exceed its container */
+        width: 100%;
+        border-collapse: collapse;
+        table-layout: fixed; /* Ensure columns fit within the table */
+        margin: auto; /* Center the table */
+    }
+    .info-table th,
+    .info-table td {
+        padding: 10px;
+        border: 1px solid #000;
+        text-align: left;
+        word-wrap: break-word; /* Ensure text wraps within cells */
+        overflow-wrap: break-word; /* Additional support for wrapping */
+        vertical-align: top;
+
+    }
+    .info-table th {
+        background-color: #f2f2f2;
+        font-weight: bold;
+    }
+    /* Apply thicker border to the second column */
+    .info-table th:nth-child(3),
+    .info-table td:nth-child(3) {
+        width: 55%; /* Adjust the percentage to your needs */
+    }
+    .info-table th:nth-child(1),
+    .info-table td:nth-child(1) {
+        width: 8%; /* Adjust the percentage to your needs */
+    }
+    .info-table th:nth-child(4),
+    .info-table td:nth-child(4) {
+        width: 15%;
+    }
+    .disclaimer {
+        font-size: 11pt;
+        margin-top: 10px;
+        text-align: center;
+    }
+    .small-table {
+        border: 1px solid black;
+        border-collapse: collapse;
+    }
+    .small-table th,
+    .small-table td {
+        padding: 10px;
+        border: 1px solid #000;
+        text-align: left;
+        word-wrap: break-word; /* Ensure text wraps within cells */
+        overflow-wrap: break-word; /* Additional support for wrapping */
+        vertical-align: top;
+
+    }
+    .small-table th {
+        background-color: #dcf6ff;
+        font-weight: bold;
+        text-align: center;
+    }
+    .dot {
+        height: 5px;
+        width: 5px;
+        background-color: skyblue;
+        border-radius: 50%;
+        display: inline-block;
+    }
+    .annexure{
+        font-size:11pt;
+        font-family: sans-serif;
+        page-break-before: always;
+    }
+     .alpha-list {
+            list-style-type: lower-alpha;
+            padding: 15px;
+     }
+</style>
+<body>
+<div class="container">
+    <h1 class="title">CUSTOMER INFORMATION SHEET(CIS) /KNOW YOUR RIDER</h1>
+    <p><strong>Customer Information Sheet reference no. </strong><span th:text="${policyNumber}"></span></p>
+    <strong>This document provides key information about your Rider. You are also advised to go through your Rider document.</strong>
+    <table class="info-table">
+        <tr>
+            <th>SI. no.</th>
+            <th>Title</th>
+            <th>Description<br>(Please refer to applicable Rider Clause Number in next column)
+            </th>
+            <th>Rider Document Clause Number</th>
+        </tr>
+        <tbody>
+        <tr>
+            <td><strong>1</strong></td>
+            <td>Name of Insurance Product / Rider</td>
+            <td><span th:utext="${ciRider}"></span></td>
+            <td>Rider Preamble</td>
+        </tr>
+        <tr>
+            <td><strong>2</strong></td>
+            <td>Rider Number</td>
+            <td><span th:text="${ciRiderNumber}"></span></td>
+            <td>Cover page of the Rider</td>
+        </tr>
+        <tr>
+            <td><strong>3</strong></td>
+            <td>Type of Insurance Product / Policy/ Rider</td>
+            <td>Benefit Rider (where an insurance policy pays a fixed amount under the Policy on the occurrence of the covered event)</td>
+            <td>Cover page of the  Rider</td>
+        </tr>
+        <tr>
+            <td><strong>4</strong></td>
+            <td>Sum Insured (Basis) (Along with amount)</td>
+            <td> <span th:text="'Individual Sum Assured - ' + ${ciRiderSumAssured}"></span></td>
+            <td>Rider schedule</td>
+        </tr>
+        <tr>
+            <td><strong>5</strong></td>
+            <td>Policy Coverage (What the policy covers)
+                (Rider Clause Number/s)</td>
+            <td>
+                <span></span>The Benefit under the Rider will be paid on happening of any of the below mentioned Insured events, subject to exclusions:<br><br>
+                <span></span><br>
+                1.<strong>Critical Illness</strong><i>(Applicable only for Gold Variant, Gold Plus Variant, Platinium Variant and Platinum Plus Variant)</i>:
+                offers Coverage against listed Critical Illnesses and in case the Life Insured is Diagnosed with a Major Critical Illness after completion of the Waiting Period during the Rider Term, the Rider Sum Assured will be payable in accordance with the Rider T&C. However, in case of Diagnosis of a Minor Critical Illness, We will pay the lower of 25% of the Rider Sum Assured Or Rs.5 lacs, upon the Life Insured surviving through the Survival Period (refer Annexure 2 for details) <br><br>
+                2.<strong>Total & Permanent Disability Benefit</strong><i>(Applicable only if You have chosen either Gold Plus Variant, Platinum Plus Variant or Total and Permanent Disability Variant)</i>:
+                offers coverage against the total and permanent disability as a result of accidental bodily injury, sickness or disease whereby the Life Insured (a) Has the inability to perform at least 3 of the Activities of Daily Living, either with or without the use of mechanical equipment, special devices or other aids and adaptations in use for disabled persons for a continuous period of at least 6 months: or (b) Suffers physical impairment causing: (i) Total and irrecoverable loss of sight of both eyes. The blindness must be confirmed by a Medical Practitioner; or (ii) Loss of use or loss by severance of two or more limbs at or above wrists or ankles; or (iii) The total and irrecoverable loss of sight of one eye and loss of use or loss by severance of one limb at or above wrist or ankle. <br><br>
+                The above disability must have lasted, without interruption, for at least 6 (six) consecutive months from the date of Diagnosis or Accident and must, in the opinion of a qualified Medical Practitioner, be deemed permanent.<br><br>
+                3.<strong>Max Fit Program:</strong> To promote good health and wellbeing of the Life Insured under the Rider, a wellness program is offered to the Life Insured wherein a subscription will be available to the Life Insured only for the first 5 years of Rider Term from the Date of Commencement of Risk under Rider for calculation number of steps completed by the Life Insured to arive at the Healthy Weeks.
+            </td>
+            <td>Clause 1 of Part C, Rider Benefits</td>
+        </tr>
+        <tr>
+            <td rowspan="3"><strong>6</strong></td>
+            <td rowspan="3">Exclusions
+                (what the Policy does not cover)</td>
+            <td>Exclusions for Critical Illness benefit <br><br>
+                <span></span>
+                1. No benefit of Critical Illness shall be payable:<br>
+                <dd>a) If the Life Insured dies within the Survival Period. </dd><br>
+                <dd>b) If any Major Critical Illness is Diagnosed within the Waiting Period.</dd><br>
+                <dd>c) If Critical Illness that was Diagnosed before the Date of Commencement of Risk under Rider.</dd>
+            </td>
+            <td>Clause 1 (A) b of Part C</td><br><br>
+        </tr>
+        <tr>
+            <td style="border: none">
+                <strong>For Other exclusions to Critical Illness benefit:</strong> Please refer to Annexure 3 <br><br>
+                <span></span>
+            </td>
+            <td style="border-bottom-style: hidden">Clause 1(A)c of Part C</td><br><br>
+        </tr>
+        <tr>
+            <td style="border: none">
+                2.<strong>Exclusions to Total and Permanent Disability Benefit:</strong>Please refer to Annexure 4<br><br>
+                <span></span>
+            </td>
+            <td>Clause 1(B) of Part C</td><br><br>
+        </tr>
+        <tr>
+            <td><strong>7</strong></td>
+            <td>Waiting period<br>
+                &#8226; Time period during which specified diseases/treatments are not covered<br>
+                &#8226; It is counted from the beginning of the Policy coverage.
+            </td>
+            <td>
+                <span><strong>Waiting Period:</strong>It is the period of 90 (Ninety) days from the Date of Issuance of Rider / Revival of this Rider in case of Major Critical Illness/ Total and Permanent Disability claim or 180 (One Hundred Eighty) from the Date of Issuance of Rider / Revival of this Rider in case of a Minor Critical Illness claim.</span><br>
+            </td>
+            <td>Part B, Definitions and Clause 1 of Part C</td>
+        </tr>
+        <tr>
+            <td><strong>8</strong></td>
+            <td>Financial limits of coverage<br>
+                i. Sub-limit
+                (It is a pre-defined limit and the insurance company will not pay any amount in excess of this limit)</td>
+            <td><strong>Sub- Limit:</strong><br>
+                The Policy will pay only up to the limits specified hereunder for the following diseases/procedures.<br><br>
+                A. <strong>Critical Illness Benefit: </strong><br><br>
+                i) In case the Life Insured is Diagnosed with a Major Critical Illness after completion of the Waiting Period during the Rider Term, shall pay the applicable Rider Sum Assured.<br><br>
+                ii) In case of Diagnosis of a Minor Critical Illness, We will pay the lower of 25% of the Rider Sum Assured Or Rs.5 lacs, upon the Life Insured surviving through the Survival Period.<br><br>
+                iii) In case of Gold Variant or Gold Plus Variant, only the claim for Angioplasty under Minor Critical Illness conditions shall be allowed. In case of Platinium Variant and Platinum Plus Variant, maximum of three claims towards five different Minor Critical Illness conditions can be made under this Rider. However, in case of Platinium Variant and Platinum Plus Variant for multiple Minor Critical Illness claims, the cooling off period of one year must have elapsed between the date of the Diagnosis of two (2) Minor Critical Illness. It is clarified that no cooling off period is applicable in case of the Major Critical Illness claim.<br><br>
+                iv) For any Critical Illness claim to be valid under this Rider, the incidence of the Critical Illness must be the first occurrence in the lifetime of the Life Insured and conform to Survival Period.<br><br>
+                v) Multiple claims against the same Critical Illness are not allowed.<br><br>
+                B. <strong>Total & Permanent Disability Benefit:</strong> Rider Sum Assured shall be payable on a valid Total and Permanent Disability claim during the Rider Term, subject to Rider benefit being in force.
+            </td>
+            <td>Clause 1 of Part C </td>
+        </tr>
+        <tr>
+            <td></td>
+            <td>ii. Co-payment<br><br>
+                (It is a specified amount/percentage of the admissible claim amount to be paid by Policyholder /insured).</td>
+            <td><strong>Co-payment: NA</strong></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td>iii. Deductible<br><br>
+                (It is a specified amount:<br><br>
+                &#8211; up to which an insurance company will not pay any claim, and<br><br>
+                &#8211; which will be deducted from total claim amount (if claim amount is more than the specified amount)</td>
+            <td><strong>Deductible: NA</strong></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td>iv. Any other limit (as applicable)<br><br></td>
+            <td><strong>Any Other Limit: NA</strong></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td><strong>9</strong></td>
+            <td>Claims/Claims Procedure</td>
+            <td>
+                <strong>Turn Around Time (TAT) for claims settlement: Please refer to Annexure -B for details</strong><br><br>
+                <strong>Brief procedure</strong><br>
+                A Claimant claiming benefits under this Rider shall endeavor to notify Us of the same, in writing, within 90 (Ninety) days from the Diagnosis of the Critical Illness.
+                <ol class="alpha-list">
+                    <li>claimant's statement in the prescribed form (form AA);</li>
+                    <li>original Rider document;</li>
+                    <li>discharge summary / indoor case papers from where Life Assured;</li>
+                    <li>First consultation records (where Life Assured went with initial signs/symptoms)</li>
+                    <li>attending physician's statement from treating Doctor;</li>
+                    <li>employer's certificate with complete leave records (Form E); </li>
+                    <li>copy of bank passbook / cancelled cheque of the claimant;</li>
+                    <li>ITR for last 3 years / GST certificate in case of self-employed;</li>
+                    <li>NEFT mandate form attested by bank authorities; </li>
+                    <li>Bank statement of last 2 years of the Life Insured;</li>
+                    <li>certificate by a Medical Practitioner confirming Diagnosis of Critical Illness of the Life Insured;</li>
+                    <li>All medical/ hospital records (including diagnostic records) pertaining to Critical illness/ Total and Permanent Disability Diagnosis and treatment. </li>
+                    <li>a self-attested copy of identity proof of the Claimant including Nominee(s), if any bearing their photographs and signatures; and</li>
+                    <li>any other documents/information required by Us for assessing and approving the claim request.</li>
+                </ol>
+                A Claimant can download the claim request documents from Our website <a href="https://www.axismaxlife.com" target="_blank">www.axismaxlife.com</a> or can obtain the same from any of Our branches.
+            </td>
+            <td>Clause 4 of Part F</td>
+        </tr>
+        <tr>
+            <td><strong>10</strong></td>
+            <td>Policy Servicing</td>
+            <td>Helpline No. - 1860 120 5577 or (0124) 4219090
+                Email:<a href="service.helpdesk@axismaxlife.com" target="_blank">service.helpdesk@axismaxlife.com</a><br>
+                Chief Customer Officer<br>
+                Axis Max Life Insurance Limited, Plot No. 90C, Udyog Vihar, Sector 18, Gurugram-122015, Haryana, India. Website - www.axismaxlife.com
+            </td>
+            <td></td>
+        </tr>
+        <tr>
+            <td><strong>11</strong></td>
+            <td>Grievances/ Complaints</td>
+            <td>Grievance Redressal Officer, Axis Max Life Insurance Limited, Plot No. 90C, Udyog Vihar, Sector 18, Gurugram, 122015, Haryana, India
+                Helpline No. – 1860 120 5577 or (0124) 4219090
+                Email:<a href="manager.services@axismaxlife.com" target="_blank">manager.services@axismaxlife.com;</a><br><br>
+                <dd><strong>Contact details of Ombudsman</strong></dd><br>
+                Ombudsman : Please Refer to Annexure A
+            </td>
+            <td>Part G</td>
+        </tr>
+        <tr>
+            <td rowspan="2"><strong>12</strong></td>
+            <td rowspan="2">Things To remember</td>
+            <td style="border: none"><strong>a. Free Look cancellation: </strong>You may cancel the insurance Rider, if you do not want it, within 30 days from the beginning of the date of receipt of Rider. <br><br>
+                If You disagree to any of those terms and conditions of the Rider document or otherwise, and have not made any claim, You have the option to cancel the Rider by sending a written request to Us, by stating the reasons for the same. Upon receipt of Your request and if no claim has been made under the Rider, the Rider will terminate immediately and all rights, benefits and interests under the Rider will cease immediately. You shall be entitled to a refund of the Rider Premiums received by Us after deducting the proportionate risk premium for the period of cover, charges of stamp duty paid and the expenses incurred by Us on medical examination of the Life Insured, if any, irrespective of the reasons mentioned.<br><br>
+            </td>
+            <td>Clause 6 of Part D,</td>
+        </tr>
+        <tr>
+            <td><strong>b. Rider Revival: </strong>Except on grounds of fraud, moral hazard or misrepresentation or non-cooperation, renewal of your rider shall not be denied, provided the Rider is not withdrawn. Revival of the Policy will be as specified in the Base Policy.
+            </td>
+            <td>Clause 3 of Part D</td>
+        </tr>
+        <tr>
+            <td rowspan="5"><strong>13</strong></td>
+            <td rowspan="5">Your Obligations</td>
+            <td >
+                <span>&#8226; </span>Please disclose all Pre-existing disease/s or condition/s before buying a Policy. Non-disclosure may affect the claim settlement. Disclosure of other material information during the Policy period.
+            </td>
+            <td >Definition- Part B and Clause 1.A(c)(2) and Clause 1.B (II)2 of Part C</td>
+        </tr>
+        <tr>
+            <td>
+                <span>&#8226; </span>If the Premium is not received by the expiry of the Grace Period, the rider will automatically lapse and no benefits will be payable under the rider.<br>
+            </td>
+            <td style="border-bottom-style: hidden">Clause 5 Part C (Lapsation of Rider)</td>
+        </tr>
+        <tr>
+            <td>
+                <span>&#8226; </span>Fraud, mis-statement and forfeiture would be dealt with in accordance with provisions of Section 45 of the Insurance Act, 1938 as amended from time to time.<br><br>
+            </td>
+            <td style="border-bottom-style: hidden">Clause 6 of Part F</td>
+        </tr>
+        <tr>
+            <td>
+                <span>&#8226; </span>Nomination is allowed as per Section 39 of the Insurance Act, 1938 as amended from time to time.<br><br>
+            </td>
+            <td style="border-bottom-style: hidden">Clause 7 of Part F</td>
+        </tr>
+        <tr>
+            <td>
+                <span>&#8226; </span>Assignment is allowed as per Section 38 of the Insurance Act, 1938 as amended from time to time<br><br>
+            </td>
+            <td>Clause 8 of Part F</td>
+        </tr>
+        </tbody>
+    </table> <br><br>
+    <div class="declaration">
+        <p><u>Declaration by the Policyholder</u></p>
+        <p>I have read the above and confirm having noted the details.</p>
+
+        <div class="signature-section">
+            <div class="left">
+                <p>Place:<span
+                        style="text-align: center;min-width: 100px;border-bottom-color: #000;border-bottom-style: solid;border-bottom-width: 1px;display: inline-block;padding: 0 18px;font-weight: bold;text-transform:uppercase;"><span
+                        th:text="${place}"></span></span></p>
+                <p>Date:<span
+                        style="text-align: center;min-width: 100px;border-bottom-color: #000;border-bottom-style: solid;border-bottom-width: 1px;display: inline-block;padding: 0 18px;font-weight: bold;text-transform:uppercase;"><span
+                        th:text="${date}"></span></span></p>
+            </div>
+            <div class="signature" style="text-align: right; margin-top: -45px;">
+                <p>(Signature of the Policyholder)</p>
+            </div>
+        </div>
+        <br>
+        <div class="note">
+            <p><b>Note:</b></p>
+            <p>i. For the rider related documents including the Customer Information sheet please refer to the <a href="https://www.axismaxlife.com " target="_blank">https://www.axismaxlife.com </a></p>
+            <p>ii. In case of any conflict, the terms and conditions mentioned in the Rider document shall prevail.</p>
+            <p>iii. Base Sum Assured is subject to underwriting, for actual Sum Assured details & updated UIN number (in case of modification), please refer to the Policy document.</p>
+            <p> iv. In the event of any conflict or discrepancy between any translated version and the English language version of this CIS, the English language version of this CIS shall prevail.</p>
+        </div> <br>
+    </div>
+    <div class="annexure">
+        <tr style="width: 100%">
+        <p style="text-align: center;"><u><b>Annexure A: List of Insurance Ombudsman</b></u></p>
+        <div class="ombudsman-list">
+            <div class="ombudsman">
+                <b>AHMEDABAD</b> - Office of the Insurance Ombudsman, 6<sup>th</sup> Floor, Jeevan Prakash Bldg, Tilak Marg, Relief Road, Ahmedabad-380 001. Tel.:- 079-25501201/02/05/06 Email: <a href="mailto:bimalokpal.ahmedabad@cioins.co.in">bimalokpal.ahmedabad@cioins.co.in</a> (State of Gujarat and Union Territories of Dadra & Nagar Haveli and Daman and Diu.)
+            </div>
+            <div class="ombudsman">
+                <b>BENGALURU</b> - Office of the Insurance Ombudsman, Jeevan Soudha Bldg., PID No. 57-27-N-19, Ground Floor, 19/19, 24<sup>th</sup> Main Road, JP Nagar, 1<sup>st</sup> Phase, Bengaluru – 560 078. Tel.: 080-26652049/26652048 Email: <a href="mailto:bimalokpal.bengaluru@cioins.co.in">bimalokpal.bengaluru@cioins.co.in</a> (State of Karnataka).
+            </div>
+            <div class="ombudsman">
+                <b>BHOPAL</b> - Office of the Insurance Ombudsman, 1<sup>st</sup> Floor, Jeevan Shikha, 60-B, Hoshangabad Road, Opp. Gayatri Mandir, Bhopal-462 011. Tel.:- 0755-2769201/2769202 Email: <a href="mailto:bimalokpal.bhopal@cioins.co.in">bimalokpal.bhopal@cioins.co.in</a> (States of Madhya Pradesh and Chhattisgarh.)
+            </div>
+            <div class="ombudsman">
+                <b>BHUBANESHWAR</b> - Office of the Insurance Ombudsman, 62, Forest Park, Bhubaneswar - 751 009. Tel.:- 0674-2596461/2596455 Email: <a href="mailto:bimalokpal.bhubaneswar@cioins.co.in">bimalokpal.bhubaneswar@cioins.co.in</a> (State of Odisha.)
+            </div>
+            <div class="ombudsman">
+                <b>CHANDIGARH</b> - Office of the Insurance Ombudsman, S.C.O. No. 20-27, Ground Floor, Jeevan Deep Building, Sector 17-A, Chandigarh-160017. Tel.:- 0172-4646394/2706468 Email: <a href="mailto:bimalokpal.chandigarh@cioins.co.in">bimalokpal.chandigarh@cioins.co.in</a> [States of Punjab, Haryana (excluding 4 districts viz, Gurugram, Faridabad, Sonepat and Bahadurgarh) Himachal Pradesh, Union Territories of Jammu & Kashmir, Ladakh and Chandigarh]
+            </div>
+            <div class="ombudsman">
+                <b>CHENNAI</b> - Office of the Insurance Ombudsman, Fatima Akhtar Court, 4<sup>th</sup> Floor, 453, Anna Salai, Teynampet, Chennai-600 018. Tel.:- 044-24333668 / 24333678 Email: <a href="mailto:bimalokpal.chennai@cioins.co.in">bimalokpal.chennai@cioins.co.in</a> [State of Tamil Nadu and Union Territories - Puducherry Town and Karaikal (which are part of Union Territory of Puducherry).]
+            </div>
+            <div class="ombudsman">
+                <b>DELHI</b> - Office of the Insurance Ombudsman, 2/2 A, Universal Insurance Building, Asaf Ali Road, New Delhi-110 002. Tel.:- 011-23237539 Email: <a href="mailto:bimalokpal.delhi@cioins.co.in">bimalokpal.delhi@cioins.co.in</a> (State of Delhi, 4 districts of Haryana viz, Gurugram, Faridabad, Sonepat and Bahadurgarh)
+            </div>
+            <div class="ombudsman">
+                <b>KOCHI</b> - Office of the Insurance Ombudsman, 10<sup>th</sup> Floor, Jeevan Prakash, LIC Building, Opp. to Maharaja’s College Ground, M.G. Road, Kochi 682011. Tel : 0484-2358759 Email: <a href="mailto:bimalokpal.ernakulam@cioins.co.in">bimalokpal.ernakulam@cioins.co.in</a> (State of Kerala and Union Territory of (a) Lakshadweep (b) Mahe-a part of Union Territory of Puducherry.)
+            </div>
+            <div class="ombudsman">
+                <b>GUWAHATI</b> - Office of the Insurance Ombudsman, “Jeevan Nivesh”, 5<sup>th</sup> Floor, Nr. Panbazar over bridge, S. Road, Guwahati-781 001(ASSAM) Tel.:- 0361-2632204/2602205 Email: <a href="mailto:bimalokpal.guwahati@cioins.co.in">bimalokpal.guwahati@cioins.co.in</a> (States of Assam, Meghalaya, Manipur, Mizoram, Arunachal Pradesh, Nagaland and Tripura.)
+            </div>
+            <div class="ombudsman">
+                <b>HYDERABAD</b> - Office of the Insurance Ombudsman, 6-2-46, 1<sup>st</sup> Floor, Moin Court, Lane Opp. Saleem Function Palace,A.C. Guards, Lakdi-Ka-Pool, Hyderabad-500 004. Tel : 040-23312122 Email: <a href="mailto:bimalokpal.hyderabad@cioins.co.in">bimalokpal.hyderabad@cioins.co.in</a> (State of Andhra Pradesh, Telangana and Yanam and part of the Union Territory of Puducherry.)
+            </div>
+            <div class="ombudsman">
+                <b>JAIPUR</b> - Office of the Insurance Ombudsman, Ground Floor, Jeevan Nidhi II Bldg, Bhawani Singh Marg, Jaipur – 302005 Tel : 0141-2740363/2740798 Email: <a href="mailto:bimalokpal.jaipur@cioins.co.in">bimalokpal.jaipur@cioins.co.in</a> (State of Rajasthan)
+            </div>
+            <div class="ombudsman">
+                <b>KOLKATA</b> - Office of the Insurance Ombudsman, Hindustan Building. Annexe, 7<sup>th</sup>  Floor, 4, C.R. Avenue, Kolkata-700 072. Tel : 033-22124339/22124341 Email: <a href="mailto:bimalokpal.kolkata@cioins.co.in">bimalokpal.kolkata@cioins.co.in</a> (States of West Bengal, Sikkim, and Union Territories of Andaman and Nicobar Islands.)
+            </div>
+            <div class="ombudsman">
+                <b>LUCKNOW</b> - Office of the Insurance Ombudsman, 6<sup>th</sup> Floor, Jeevan Bhawan, Phase-2, Nawal Kishore Road, Hazratganj, Lucknow-226 001. Tel.: 0522-4002082/3500613 Email: <a href="mailto:bimalokpal.lucknow@cioins.co.in">bimalokpal.lucknow@cioins.co.in</a> (Following Districts of Uttar Pradesh: Lalitpur, Jhansi, Mahoba, Hamirpur, Banda, Chitrakoot, Allahabad, Mirzapur, Sonbhabdra, Fatehpur, Pratapgarh, Jaunpur, Varanasi, Gazipur, Jalaun, Kanpur, Lucknow, Unnao, Sitapur, Lakhimpur, Bahraich, Barabanki, Raebareli, Sravasti, Gonda, Faizabad, Amethi, Kaushambi, Balrampur, Basti, Ambedkarnagar, Sultanpur, Maharajgang, Santkabirnagar, Azamgarh, Kushinagar, Gorkhpur, Deoria, Mau, Ghazipur, Chandauli, Ballia, Sidharathnagar.)
+            </div>
+            <div class="ombudsman">
+                <b>MUMBAI</b> - Office of the Insurance Ombudsman, 3<sup>rd</sup> Floor, Jeevan Seva Annexe, S.V. Road, Santacruz(W), Mumbai 400054. Tel : 022-69038800/27/29/31/32/33 Email: <a href="mailto:bimalokpal.mumbai@cioins.co.in">bimalokpal.mumbai@cioins.co.in</a> (State of Goa and Mumbai Metropolitan Region excluding areas of Navi Mumbai and Thane)
+            </div>
+            <div class="ombudsman">
+                <b>NOIDA</b> - Office of the Insurance Ombudsman, 4<sup>th</sup> Floor, Bhagwan Sahai Palace, Main Road, Naya Bans, Sector-15, Distt: Gautam Buddh Nagar, U.P. - 201301. Tel: 0120-2514252/2514253 Email: <a href="mailto:bimalokpal.noida@cioins.co.in">bimalokpal.noida@cioins.co.in</a> (State of Uttarakhand and the following Districts of Uttar Pradesh: Agra, Aligarh, Bagpat, Bareilly, Bijnor, Budaun, Bulandshehar, Etah, Kannauj, Mainpuri, Mathura, Meerut, Moradabad, Muzaffarnagar, Oraiyya, Pilibhit, Etawah, Farrukhabad, Firozbad, Gautam Buddh nagar, Ghaziabad, Hardoi, Shahjahanpur, Hapur, Shamli, Rampur, Kashganj, Sambhal, Amroha, Hathras, Kanshiramnagar, Saharanpur.)
+            </div>
+            <div class="ombudsman">
+                <b>PATNA</b> - Office of the Insurance Ombudsman, 2<sup>nd</sup> floor, Lalit Bhawan, Bailey Road, Patna - 800001 Tel No: 0612-2547068, Email: <a href="mailto:bimalokpal.patna@cioins.co.in">bimalokpal.patna@cioins.co.in</a> (State of Bihar, Jharkhand.)
+            </div>
+            <div class="ombudsman">
+                <b>PUNE</b> - Office of the Insurance Ombudsman, 3<sup>rd</sup> Floor, Jeevan Darshan Bldg, C.T.S. Nos. 195 to 198, N.C. Kelkar Road, Narayan Peth, Pune – 411030. Tel.: 020-24471175 Email: <a href="mailto:bimalokpal.pune@cioins.co.in">bimalokpal.pune@cioins.co.in</a> (State of Maharashtra including Navi Mumbai and Thane and excluding Mumbai Metropolitan Region.)
+            </div>
+        </div>
+        </tr>
+    </div>
+    <div class="annexure">
+        <tr style="width: 100%">
+        <p><u><strong>Annexure 2:</u> Definitions of Critical Illnesses and exclusions applicable for the Critical Illness benefit:</strong></p>
+        <dd>a. Subject to applicable exclusions and Waiting Period, the Critical Illness benefit would be paid only if the Diagnosed Critical Illness condition falls within the definition as laid down below for each Critical Illness.</dd>
+        <div class="info-table">
+        </div>
+        </tr>
+    </div>
+    <div class="container">
+        <table class="info-table" style="background-color: #f9f9f9">
+            <tr>
+                <th style="background-color: #f9f9f9">SI. no.</th>
+                <th style="background-color: #f9f9f9">Name of the Illness</th>
+                <th style="background-color: #f9f9f9">Details</th>
+            </tr>
+            <tbody>
+            <tr>
+                <th style="background-color: #f9f9f9" colspan="3">MINOR CRITICAL ILLNESS</th>
+            </tr>
+            <tr>
+                <td><strong>1.</strong></td>
+                <td><strong><center>Angioplasty</center></strong></td>
+                <td>Coronary Angioplasty is defined as percutaneous coronary intervention by way of balloon angioplasty with or without stenting for treatment of the narrowing or blockage of minimum 50 % of one or more major coronary arteries. The intervention must be determined to be medically necessary by a cardiologist and supported by a coronary angiogram (CAG).
+                    Coronary arteries herein refer to left main stem, left anterior descending, circumflex and right coronary artery.<br>
+                    <i>Diagnostic angiography or investigation procedures without Angioplasty/stent insertion are excluded.</i>
+                </td>
+            </tr>
+            <tr>
+                <td><strong>2.</strong></td>
+                <td><center><strong>Carcinoma in-situ / Early Stage Cancer</strong></center></td>
+                <td><strong>Carcinoma in-situ (CiS)- </strong>Carcinoma-in-Situ shall mean first ever histologically proven, localized pre-invasion lesion where cancer cells have not yet penetrated the basement membrane or invaded (in the sense of infiltrating and / or actively destroying) the surrounding tissues or stroma in any of the following covered organ groups, and subject to any classification stated:<br>
+                    i. Breast,where the tumor is classified as Tis according to the TNM Staging method<br>
+                    ii. Corpus uteri, vagina, vulva or fallopian tubes where the tumor is classified as Tis according to the TNM Staging method or FIGO (staging method of the Federation Internationale de Gynecologie et d'Obstetrique) Stage 0<br>
+                    iii. Cervix uteri, classified as cervical intraepithelial neoplasia grade III (CIN III) or as Tis according to the TNM staging method or FIGO Stage 0<br>
+                    iv. Ovary –include borderline ovarian tumors with intact capsule, no tumor on the ovarian surface, classified as T1aN0M0, T1bN0M0 (TNM Staging) or FIGO 1A, FIGO 1B<br>
+                    v. Colon and rectum; penis; testis; lung; liver; stomach, nasopharynx and oesophagus<br>
+                    vi. Urinary tract, for the purpose of in-situ cancers of the bladder, stage Ta of papillary Carcinoma is included.<br>
+                    The Diagnosis of the Carcinoma in situ must always be supported by a histopathological report. Furthermore, the Diagnosis of Carcinoma in-situ must always be positively Diagnosed upon the basis of a microscopic examination of the fixed tissue, supported by a biopsy result. Clinical Diagnosis does not meet this standard.
+                    <i>Pre-malignant lesion and Carcinoma in Situ of any organ, unless listed above, are excluded.</i>
+                    <strong>b. Specified Early Stage Cancers </strong>- Specified Early Cancers shall mean first ever presence of one of the following malignant conditions:<br>
+                    i. Prostate Cancer that is histologically described using the TNM Classification as T1N0M0 or Prostate cancers described using another equivalent classification.<br>
+                    ii. Thyroid Cancer that is histologically described using the TNM Classification as T1N0M0.<br>
+                    iii. Tumors of the Urinary Bladder histologically classified as T1N0M0 (TNM Classification).<br>
+                    iv. Chronic Lymphocytic Leukaemia (CLL) RAI Stage 1 or 2. CLL RAI Stage 0 or lower is excluded.<br>
+                    v. Malignant melanoma that has not caused invasion beyond the epidermis.<br>
+                    vi. Hodgkin's lymphoma Stage I by the Cotswold's classification staging system.<br>
+                    vii. The Diagnosis must be based on histopathological features and confirmed by a Pathologist.<br>
+                    <i>Pre - malignant lesions and conditions, unless listed above, are excluded.</i>
+                </td>
+            </tr>
+            <tr>
+                <td><strong>3.</strong></td>
+                <td><strong><center>Small Bowel Transplant</center></strong></td>
+                <td>The receipt of a transplant of small bowel with its own blood supply via a laparotomy resulting from intestinal failure.
+                </td>
+            </tr>
+            <tr>
+                <td><strong>4.</strong></td>
+                <td><strong><center>Brain Aneurysm Surgery or Cerebral Shunt Insertion</center></strong></td>
+                <td>a) The actual undergoing of surgical repair of an intracranial aneurysm or surgical removal of an arterio-venous malformation via craniotomy. The surgical intervention must be certified to be absolutely necessary by a specialist in the relevant field. Endovascular repair or procedures are not covered, or<br>
+                    b) The actual undergoing of surgical implantation of a shunt from the ventricles of the brain to relieve raised pressure in the cerebrospinal fluid. The need of a shunt must be certified to be absolutely necessary by a specialist in the relevant field.
+                </td>
+            </tr>
+            <tr>
+                <td><strong>5.</strong></td>
+                <td><strong><center>Severe Osteoporosis</center></strong></td>
+                <td> The occurrence of osteoporosis with fractures must be confirmed by a specialist in the relevant medical field and all of the following conditions are met:<br>
+                    i.   At least fracture of neck of femur or two (2) vertebral body fractures, due to or in the presence of Osteoporosis; and<br>
+                    ii.  Bone mineral density measured in at least two (2) sites by dual-energy x-ray densitometry (DEXA) or quantitative CT scanning is consistent with severe Osteoporosis (T-score of less than -2.5)<br>
+                    Actual undergoing of internal fixation or replacement of fractured bone is required.<br>
+                    Coverage for Osteoporosis with Fracture will automatically cease after the Life Insured attains seventy (70) years of age.
+                </td>
+            </tr>
+            <tr>
+                <th style="background-color: #f9f9f9" colspan="3">
+                    MAJOR CRITICAL ILLNESS
+                </th>
+            </tr>
+            <tr>
+                <td><strong>6.</strong></td>
+                <td><strong><center>Cancer of Specified Severity</center></strong></td>
+                <td>A malignant tumor characterised by the uncontrolled growth & spread of malignant cells with invasion & destruction of normal tissues. This Diagnosis must be supported by histological evidence of malignancy. The term cancer includes leukemia, lymphoma and sarcoma.<br>
+                    <i>The following are excluded -</i><br>
+                    <i> a. All tumors which are histologically described as carcinoma in situ, benign, pre-malignant, borderline malignant, low malignant potential, neoplasm of unknown behavior, or non-invasive, including but not limited to: Carcinoma in situ of breasts, Cervical dysplasia CIN-1, CIN -2 and CIN-3.<br>
+                        b. Any non-melanoma skin carcinoma unless there is evidence of metastases to lymph nodes or beyond;<br>
+                        c. Malignant melanoma that has not caused invasion beyond the epidermis;<br>
+                        d. All tumors of the prostate unless histologically classified as having a Gleason score greater than 6 or having progressed to at least clinical TNM classification T2N0M0<br>
+                        e. All Thyroid cancers histologically classified as T1N0M0 (TNM Classification) or below;<br>
+                        f. Chronic lymphocytic leukaemia less than RAI stage 3<br>
+                        g. Non-invasive papillary cancer of the bladder histologically described as TaN0M0 or of a lesser classification,<br>
+                        h. All Gastro-Intestinal Stromal Tumors histologically classified as T1N0M0 (TNM Classification) or below and with mitotic count of less than or equal to 5/50 HPFs;<br>
+                    </i>
+                </td>
+            </tr>
+            <tr>
+                <td><strong>7.</strong></td>
+                <td><strong><center>Myocardial Infarction (First Heart Attack of Specific Severity)</center></strong></td>
+                <td>The first occurrence of heart attack or myocardial infarction, which means the death of a portion of the heart muscle as a result of inadequate blood supply to the relevant area. The Diagnosis for Myocardial Infarction should be evidenced by all of the following criteria: <br>
+                    i. A history of typical clinical symptoms consistent with the Diagnosis of acute myocardial infarction (for e.g. typical chest pain)<br>
+                    ii. New characteristic electrocardiogram changes<br>
+                    iii. Elevation of infarction specific enzymes, Troponins or other specific biochemical markers.<br>
+                    <i> The following are excluded:<br>
+                        i. Other acute Coronary Syndromes<br>
+                        ii. Any type of angina pectoris<br>
+                        iii. A rise in cardiac biomarkers or Troponin T or I in absence of overt ischemic heart disease OR following an intra-arterial cardiac procedure<br>                   </i>
+                </td>
+            </tr>
+            <tr>
+                <td><strong>8.</strong></td>
+                <td><strong><center>Open Chest CABG</center></strong></td>
+                <td>The actual undergoing of heart surgery to correct blockage or narrowing in one or more coronary artery(s), by coronary artery bypass grafting done via a sternotomy (cutting through the breast bone) or minimally invasive keyhole coronary artery bypass procedures. The Diagnosis must be supported by a coronary angiography and the realization of surgery has to be confirmed by a cardiologist<br>
+                    <i> The following are excluded:<br>
+                        Angioplasty and/or any other intra-arterial procedures<br>
+                    </i>
+                </td>
+            </tr>
+            <tr>
+                <td><strong>9.</strong></td>
+                <td><strong><center>Open Heart Replacement or Repair of Heart Valves </center></strong></td>
+                <td>The actual undergoing of open-heart valve surgery to replace or repair one or more heart valves, as a consequence of defects in, abnormalities of, or disease-affected cardiac valve(s). The Diagnosis of the valve abnormality must be supported by an echocardiography and the realization of surgery has to be confirmed by a specialist Medical Practitioner.
+                    <i> Catheter based techniques including but not limited to, balloon valvotomy/valvuloplasty are excluded.
+                    </i>
+                </td>
+            </tr>
+            <tr>
+                <td><strong>10.</strong></td>
+                <td><strong><center>Coma of specified Severity </center></strong></td>
+                <td>A state of unconsciousness with no reaction or response to external stimuli or internal needs. This Diagnosis must be supported by evidence of all of the following:<br>
+                    i. No response to external stimuli continuously for at least 96 hours;<br>
+                    ii. Life support measures are necessary to sustain life; and<br>
+                    iii. Permanent neurological deficit which must be assessed at least 30 days after the onset of the coma.<br>
+                    The condition has to be confirmed by a specialist Medical Practitioner.<br>
+                    <i> Coma resulting from alcohol or drug abuse is excluded.<br>
+                    </i>
+                </td>
+            </tr>
+            <tr>
+                <td><strong>11.</strong></td>
+                <td><strong><center>Kidney Failure Requiring Regular Dialysis</center></strong></td>
+                <td>End stage renal disease presenting as chronic irreversible failure of both kidneys to function, as a result of which either regular renal dialysis (haemodialysis or peritoneal dialysis) is instituted or renal transplantation is carried out. Diagnosis has to be confirmed by a specialist Medical Practitioner.
+                </td>
+            </tr>
+            <tr>
+                <td><strong>12.</strong></td>
+                <td><strong><center>Stroke resulting in permanent symptoms</center></strong></td>
+                <td>Any cerebrovascular incident producing permanent neurological sequelae. This includes infarction of brain tissue, thrombosis in an intracranial vessel, haemorrhage and embolisation from an extracranial source. Diagnosis has to be confirmed by a specialist Medical Practitioner and evidenced by typical clinical symptoms as well as typical findings in CT Scan or MRI of the brain. Evidence of permanent neurological deficit lasting for at least 3 months has to be produced.<br>
+                    <i>The following are excluded:<br>
+                        a. Transient ischemic attacks (TIA)<br>
+                        b. Traumatic injury of the brain<br>
+                        c. Vascular disease affecting only the eye or optic nerve or vestibular functions.<br>
+                    </i>
+                </td>
+            </tr>
+            <tr>
+                <td><strong>13.</strong></td>
+                <td><strong><center>Major Organ /Bone Marrow Transplant</center></strong></td>
+                <td>The actual undergoing of a transplant of:<br>
+                    i. One of the following human organs: heart, lung, liver, kidney, pancreas, that resulted from irreversible end-stage failure of the relevant organ, or<br>
+                    ii. Human bone marrow using haematopoietic stem cells. The undergoing of a transplant has to be confirmed by a specialist Medical Practitioner.<br>
+                    <i>The following are excluded:<br>
+                        i. Other stem-cell transplants<br>
+                        ii. Where only Islets of Langerhans are transplanted<br>
+                    </i>
+                </td>
+            </tr>
+            <tr>
+                <td><strong>14.</strong></td>
+                <td><strong><center>Permanent Paralysis of Limbs</center></strong></td>
+                <td>Total and irreversible loss of use of two or more limbs as a result of injury or disease of the brain or spinal cord. A specialist Medical Practitioner must be of the opinion that the paralysis will be permanent with no hope of recovery and must be present for more than 3 months.<br>
+                </td>
+            </tr>
+            <tr>
+                <td><strong>15.</strong></td>
+                <td><strong><center>Motor Neuron Disease with Permanent Symptoms</center></strong></td>
+                <td>Motor neuron disease Diagnosed by a specialist Medical Practitioner as spinal muscular atrophy, progressive bulbar palsy, amyotrophic lateral sclerosis or primary lateral sclerosis. There must be progressive degeneration of corticospinal tracts and anterior horn cells or bulbar efferent neurons. There must be current significant and permanent functional neurological impairment with objective evidence of motor dysfunction that has persisted for a continuous period of at least 3 months.<br>
+                </td>
+            </tr>
+            <tr>
+                <td><strong>16.</strong></td>
+                <td><strong><center>Multiple Sclerosis with Persisting Symptoms</center></strong></td>
+                <td>The unequivocal Diagnosis of definite multiple sclerosis confirmed and evidenced by all of the following:<br>
+                    i. investigations including typical MRI findings which unequivocally confirm the Diagnosis to be multiple sclerosis and<br>
+                    ii. there must be current clinical impairment of motor or sensory function, which must have persisted for a continuous period of at least 6 months.<br>
+
+                    <i>Neurological damage due to SLE is excluded.</i>
+                </td>
+            </tr>
+            <tr>
+                <td><strong>17.</strong></td>
+                <td><strong><center>Benign Brain Tumor </center></strong></td>
+                <td>Benign brain tumor is defined as a life threatening, non-cancerous tumor in the brain, cranial nerves or meninges within the skull. The presence of the underlying tumor must be confirmed by imaging studies such as CT scan or MRI.
+                    This brain tumor must result in at least one of the following and must be confirmed by the relevant medical specialist:<br>
+                    i. Permanent Neurological deficit with persisting clinical symptoms for a continuous period of at least 90 consecutive days or<br>
+                    ii. Undergone surgical resection or radiation therapy to treat the brain tumor.<br>
+
+                    <i>The following conditions are excluded:<br>
+                        a. Cysts, Granulomas, malformations in the arteries or veins of the brain, hematomas, abscesses, pituitary tumors, tumors of skull bones and tumors of the spinal cord.<br>
+                    </i>
+                </td>
+            </tr>
+            <tr>
+                <td><strong>18.</strong></td>
+                <td><strong><center>Blindness </center></strong></td>
+                <td>Total, permanent and irreversible loss of all vision in both eyes as a result of illness or accident.<br>
+                    The Blindness is evidenced by:<br>
+                    <dd>a. corrected visual acuity being 3/60 or less in both eyes or;<br>
+                        b. the field of vision being less than 10 degrees in both eyes.</dd><br>
+                    The Diagnosis of blindness must be confirmed and must not be correctable by aids or surgical procedure
+                </td>
+            </tr>
+            <tr>
+                <td><strong>19.</strong></td>
+                <td><strong><center>Deafness</center></strong></td>
+                <td>Total and irreversible loss of hearing in both ears as a result of illness or accident. This Diagnosis must be supported by pure tone audiogram test and certified by an Ear, Nose and Throat (ENT) specialist. Total means “the loss of hearing to the extent that the loss is greater than 90decibels across all frequencies of hearing” in both ears.              </td>
+            </tr>
+            <tr>
+                <td><strong>20.</strong></td>
+                <td><strong><center>End Stage Lung Failure</center></strong></td>
+                <td>End stage lung disease, causing chronic respiratory failure, as confirmed and evidenced by all of the following:<br>
+                    i. FEV1 test results consistently less than 1 litre measured on 3 occasions 3 months apart; and<br>
+                    ii. Requiring continuous permanent supplementary oxygen therapy for hypoxemia; and<br>
+                    iii. Arterial blood gas analysis with partial oxygen pressures of 55mmHg or less (PaO2 < 55 mmHg); and<br>
+                    iv. Dyspnea at rest.
+                </td>
+            </tr>
+            <tr>
+                <td><strong>21.</strong></td>
+                <td><strong><center>End Stage Liver Failure</center></strong></td>
+                <td>Permanent and irreversible failure of liver function that has resulted in all three of the following:<br>
+                    i. permanent jaundice; and<br>
+                    ii. ascites; and<br>
+                    iii. hepatic encephalopathy.<br>
+                    <i>Liver failure secondary to drug or alcohol abuse is excluded.</i>
+                </td>
+            </tr>
+            <tr>
+                <td><strong>22.</strong></td>
+                <td><strong><center>Loss of speech</center></strong></td>
+                <td>Total and irrecoverable loss of the ability to speak as a result of injury or disease to the vocal cords. The inability to speak must be established for a continuous period of 12 months. This Diagnosis must be supported by medical evidence furnished by an Ear, Nose, Throat (ENT) specialist.
+                </td>
+            </tr>
+            <tr>
+                <td><strong>23.</strong></td>
+                <td><strong><center>Loss of Limbs</center></strong></td>
+                <td>The physical separation of two or more limbs, at or above the wrist or ankle level limbs as a result of injury or disease. This will include medically necessary amputation necessitated by injury or disease. The separation has to be permanent without any chance of surgical correction.
+                    <i>Loss of Limbs resulting directly or indirectly from self-inflicted injury, alcohol or drug abuse is excluded.</i>
+                </td>
+            </tr>
+            <tr>
+                <td><strong>24.</strong></td>
+                <td><strong><center>Major Head Trauma </center></strong></td>
+                <td>Accidental Injury of Head, resulting in permanent Neurological deficit to be assessed no sooner than 3 months from the date of the accident. This Diagnosis must be supported by unequivocal findings on Magnetic Resonance Imaging, Computerized Tomography, or other reliable imaging techniques. The accident must be caused solely and directly by accidental, violent, external and visible means and independently of all other causes.
+                    The Accidental Injury of head must result in an inability to perform at least three (3) of the Activities of Daily Living either with or without the use of mechanical equipment, special devices or other aids and adaptations in use for disabled persons. For the purpose of this benefit, the word "permanent" shall mean beyond the scope of recovery with current medical knowledge and technology.<br>
+                    <i>Spinal cord injury is excluded</i>
+                </td>
+            </tr>
+            <tr>
+                <td><strong>25.</strong></td>
+                <td><strong><center>Primary (Idiopathic) Pulmonary Hypertension</center></strong></td>
+                <td>An unequivocal diagnosis of Primary (Idiopathic) Pulmonary Hypertension by a Cardiologist or specialist in respiratory medicine with evidence of right ventricular enlargement and the pulmonary artery pressure above 30 mm of Hg on Cardiac Cauterization. There must be permanent irreversible physical impairment to the degree of at least Class IV of the New York Heart Association Classification (NYHA) of cardiac impairment.<br>
+                    The NYHA Classification of Cardiac Impairment are as follows:<br>
+                    i. Class III: Marked limitation of physical activity. Comfortable at rest, but less than ordinary activity causes symptoms.<br>
+                    ii. Class IV: Unable to engage in any physical activity without discomfort. Symptoms may be present even at rest.<br>
+                    <i>Pulmonary hypertension associated with lung disease, chronic hypoventilation, pulmonary thromboembolic disease, drugs and toxins, diseases of the left side of the heart, congenital heart disease and any secondary cause are specifically excluded.</i>
+                </td>
+            </tr>
+            <tr>
+                <td><strong>26.</strong></td>
+                <td><strong><center>Third Degree Burns</center></strong></td>
+                <td>There must be third-degree burns with scarring that cover at least 20% of the body’s surface area. The Diagnosis must confirm the total area involved using standardized, clinically accepted, body surface area charts covering 20% of the body surface area                </td>
+            </tr>
+            <tr>
+                <td><strong>27.</strong></td>
+                <td><strong><center>Alzheimer's Disease</center></strong></td>
+                <td>Alzheimer's (presenile dementia) disease is a progressive degenerative disease of the brain, characterised by diffuse atrophy throughout the cerebral cortex with distinctive histopathological changes. It affects the brain, causing symptoms like memory loss, confusion, communication problems, and general impairment of mental function, which gradually worsens leading to changes in personality.<br>
+                    Deterioration or loss of intellectual capacity, as confirmed by clinical evaluation and imaging tests, arising from Alzheimer’s disease, resulting in progressive significant reduction in mental and social functioning, requiring the continuous supervision of the Life Insured. The Diagnosis must be supported by the clinical confirmation of a Neurologist and supported by our appointed Medical Practitioner.<br>
+                    The disease must result in a permanent inability to perform three or more of the Activities of Daily Living with Loss of Independent Living or must require the need of supervision and permanent presence of care staff due to the disease. This must be medically documented for a period of at least 90 days<br>
+                    The following conditions are however not covered:
+                    <ul style="list-style-type: circle">
+                        <li> non-organic diseases such as neurosis;</li>
+                        <li> alcohol related brain damage; and</li>
+                        <li> any other type of irreversible organic disorder/dementia</li>
+                    </ul>
+
+                </td>
+            </tr>
+            <tr>
+                <td><strong>28.</strong></td>
+                <td><strong><center>Parkinson's disease</center></strong></td>
+                <td>The unequivocal Diagnosis of progressive, degenerative idiopathic Parkinson’s disease by a Neurologist acceptable to us.<br>
+                    The Diagnosis must be supported by all of the following conditions:<br>
+                    &#8226; the disease cannot be controlled with medication;<br>
+                    &#8226; signs of progressive impairment; and<br>
+                    &#8226; inability of the Life Insured to perform at least 3 of the Activities of Daily Living (either with or without the use of mechanical equipment, special devices or other aids and adaptations in use for disabled persons) for a continuous period of at least 6 months:<br>
+               <i>Parkinson's disease secondary to drug and/or alcohol abuse is excluded.</i>
+                </td>
+            </tr>
+            <tr>
+                <td><strong>29.</strong></td>
+                <td><strong><center>Aorta Graft Surgery</center></strong></td>
+                <td>The actual undergoing of major Surgery to repair or correct aneurysm, narrowing, obstruction or dissection of the Aorta through surgical opening of the chest or abdomen. For the purpose of this cover the definition of <strong>"Aorta"</strong> shall mean the thoracic and abdominal aorta but not its branches.<br>
+                    <i>You understand and agree that we will not cover:<br>
+                    &#8226; Surgery performed using only minimally invasive or intra-arterial techniques.<br>
+                        &#8226; Angioplasty and all other intra-arterial, catheter based techniques, "keyhole" or laser procedures.<br></i>
+                    Aorta graft surgery benefit covers Surgery to the aorta wherein part of it is removed and replaced with a graft.
+                </td>
+            </tr>
+            <tr>
+                <td><strong>30.</strong></td>
+                <td><strong><center>Amputation of feet due to complications from Diabetes </center></strong></td>
+                <td>Diabetic neuropathy and vasculitis resulting in the amputation of both feet at or above ankle as advised by a Medical Practitioner who is a specialist as the only means to maintain life.<br>
+                <i>Amputation of toe or toes, or any other causes for amputation shall not be covered.</i>
+                </td>
+            </tr>
+            <tr>
+                <td><strong>31.</strong></td>
+                <td><strong><center>Apallic Syndrome or Persistent Vegetative State (PVS)</center></strong></td>
+                <td>Apallic Syndrome or Persistent vegetative state (PVS) or unresponsive wakefulness syndrome (UWS) is a Universal necrosis of the brain cortex with the brainstem remaining intact. The Diagnosis must be confirmed by a Neurologist acceptable to Us and the patient should be documented to be in a vegetative state for a minimum of at least one month in order to be classified as UWS, PVS, Apallic Syndrome.                </td>
+            </tr>
+            <tr>
+                <td><strong>32.</strong></td>
+                <td><strong><center>Aplastic Anaemia </center></strong></td>
+                <td>Chronic persistent bone marrow failure which results in anaemia, neutropenia and thrombocytopenia requiring treatment with at least one of the following:<br>
+                    a. Blood product transfusion.<br>
+                    b. Marrow stimulating agents.<br>
+                    c. Immunosuppressive agents; or<br>
+                    d. Bone marrow transplantation.<br>
+                    The Diagnosis must be confirmed by a haematologist using relevant laboratory investigations including Bone Marrow Biopsy resulting in bone marrow cellularity of less than 25% which is evidenced by any two of the following:<br>
+                    a. Absolute neutrophil count of less than 500/mm<sup style="font-size: 7pt">3</sup> or less<br>
+                    b. Platelets count less than 20,000/mm<sup style="font-size: 7pt">3</sup> or less<br>
+                    c. Reticulocyte count of less than 20,000/mm<sup style="font-size: 7pt">3</sup> or less<br>
+                    <i>Temporary or reversible Aplastic Anaemia is excluded.</i>
+                </td>
+            </tr>
+            <tr>
+                <td><strong>33.</strong></td>
+                <td><strong><center>Bacterial Meningitis</center></strong></td>
+                <td>Bacterial infection resulting in severe inflammation of the membranes of the brain or spinal cord resulting in significant, irreversible and permanent neurological deficit. The neurological deficit must persist for at least 6 weeks resulting in permanent inability to perform three or more of the Activities of Daily Living. This Diagnosis must be confirmed by:<br>
+                    a.   The presence of bacterial infection in cerebrospinal fluid by lumbar puncture; and<br>
+                    b.   A consultant neurologist.<br>
+                </td>
+            </tr>
+            <tr>
+                <td><strong>34.</strong></td>
+                <td><strong><center>Brain Surgery</center></strong></td>
+                <td>The actual undergoing of surgery to the brain under general anaesthesia during which a craniotomy is performed. Keyhole surgery is included <i>however, minimally invasive treatment where no surgical incision is performed to expose the target, such as irradiation by gamma knife or endovascular neuroradiological interventions such as embolizations, thrombolysis and stereotactic biopsy are all excluded. Brain surgery as a result of an Accident is also excluded.
+                </i> The procedure must be considered medically necessary by a Medical Practitioner who is a qualified specialist.<br>
+                </td>
+            </tr>
+            <tr>
+                <td><strong>35.</strong></td>
+                <td><strong><center>Cardiomyopathy </center></strong></td>
+                <td>An impaired function of the heart muscle, unequivocally Diagnosed as Cardiomyopathy by a Medical Practitioner who is a cardiologist, and which results in permanent physical impairment to the degree of New York Heart Association (NYHA) Classification Class IV, or its equivalent, for at least six (6) months based on the following classification criteria:<br>
+                    &#8226; NYHA Class IV - inability to carry out an activity without discomfort. Symptoms of congestive cardiac failure are present even at rest. With any increase in physical activity, discomfort will be experienced.
+                    The Diagnosis of Cardiomyopathy has to be supported by echocardiographic findings of compromised ventricular performance.<br>
+                    <i>Irrespective of the above, Cardiomyopathy directly related to alcohol or drug abuse is excluded.</i>
+                </td>
+            </tr>
+            <tr>
+                <td><strong>36.</strong></td>
+                <td><strong><center>Chronic Adrenal Insufficiency (Addison's Disease)</center></strong></td>
+                <td>An autoimmune disorder causing a gradual destruction of the adrenal gland resulting in the need for lifelong glucocorticoid and mineral corticoid replacement therapy. The disorder must be confirmed by a Medical Practitioner who is a specialist in endocrinology through one of the following:<br>
+                    &#8226; ACTH simulation tests<br>
+                    &#8226; Insulin-induced hypoglycemia test<br>
+                    &#8226; Plasma ACTH level measurement<br>
+                    &#8226; Plasma Renin Activity (PRA) level measurement.<br>
+                    <i>Only autoimmune cause of primary adrenal insufficiency is included. All other causes of adrenal insufficiency are excluded.</i>
+                </td>
+            </tr>
+            <tr>
+                <td><strong>37.</strong></td>
+                <td><strong><center>Chronic Relapsing Pancreatitis</center></strong></td>
+                <td>An unequivocal Diagnosis of chronic relapsing pancreatitis made by a Medical Practitioner who is a specialist in gastroenterology and confirmed as a continuing inflammatory disease of the pancreas characterised by irreversible morphological change and typically causing pain and/or permanent impairment of function. The condition must be confirmed by pancreatic function tests and radiographic and imaging evidence.<br>
+                    <i>Relapsing Pancreatitis caused directly or indirectly, wholly or partly, by alcohol is excluded.</i>
+                </td>
+            </tr>
+            <tr>
+                <td><strong>38.</strong></td>
+                <td><strong><center>Creutzfeldt-Jacob Disease (CJD)</center></strong></td>
+                <td>Creutzfeldt-Jacob disease is an incurable brain infection that causes rapidly progressive deterioration of mental function and movement. A Medical Practitioner, who is a neurologist, must make a definite Diagnosis of Creutzfeldt-Jacob disease based on clinical assessment, EEG and imaging. There must be objective neurological abnormalities on examination along with severe progressive dementia.                </td>
+            </tr>
+            <tr>
+                <td><strong>39.</strong></td>
+                <td><strong><center>Severe Crohn's Disease</center></strong></td>
+                <td>Crohn's Disease is a chronic, transmural inflammatory disorder of the bowel. To be considered as severe, there must be evidence of continued inflammation in spite of optimal therapy, with all of the following having occurred:<br>
+                    &#8226; Stricture formation causing intestinal obstruction requiring admission to hospital, and<br>
+                    &#8226; Fistula formation between loops of bowel, and<br>
+                    &#8226; At least one bowel segment resection.<br>
+                    The Diagnosis must be made by a Medical Practitioner who is a specialist Gastroenterologist and be proven histologically on a pathology report and/or the results of sigmoidoscopy or colonoscopy.
+                </td>
+            </tr>
+            <tr>
+                <td><strong>40.</strong></td>
+                <td><strong><center>Dissecting Aortic Aneurysm</center></strong></td>
+                <td>A condition where the inner lining of the aorta (intima layer) is interrupted so that blood enters the wall of the aorta and separates its layers. For the purpose of this definition, aorta shall mean the thoracic and abdominal aorta but not its branches. The Diagnosis must be made by a Medical Practitioner who is a specialist with computed tomography (CT) scan, magnetic resonance imaging (MRI), magnetic resonance angiograph (MRA) or angiogram. Emergency surgical repair is required.
+                </td>
+            </tr>
+            <tr>
+                <td><strong>41.</strong></td>
+                <td><strong><center>Eisenmenger's Syndrome</center></strong></td>
+                <td>Development of severe pulmonary hypertension and shunt reversal resulting from heart condition. The Diagnosis must be made by a Medical Practitioner who is a specialist with echocardiography and cardiac catheterisation and supported by the following criteria:<br>
+                    &#8226; Mean pulmonary artery pressure > 40 mm Hg<br>
+                    &#8226; Pulmonary vascular resistance > 3mm/L/min (Wood units); and
+                    Normal pulmonary wedge pressure < 15 mm Hg.<br>
+                </td>
+            </tr>
+            <tr>
+                <td><strong>42.</strong></td>
+                <td><strong><center>Elephantiasis</center></strong></td>
+                <td>Massive swelling in the tissues of the body as a result of destroyed regional lymphatic circulation by chronic filariasis infection. The unequivocal Diagnosis of elephantiasis must be confirmed by a Medical Practitioner who is a specialist physician. There must be clinical evidence of permanent massive swelling of legs, arms, scrotum, vulva, or breasts. There must also be laboratory confirmation of microfilariae infection.<br>
+                    <i>Swelling or lymphedema caused by infection with a sexually transmitted disease, trauma, post-operative scarring, congestive heart failure, or congenital lymphatic system abnormalities is excluded.</i><br>
+                </td>
+            </tr>
+            <tr>
+                <td><strong>43.</strong></td>
+                <td><strong><center>Encephalitis</center></strong></td>
+                <td>Severe inflammation of brain substance (cerebral hemisphere, brainstem or cerebellum) caused by viral infection and resulting in permanent neurological deficit. This Diagnosis must be certified by a Medical Practitioner who is a consultant neurologist and the permanent neurological deficit must be documented for at least 6 weeks. The permanent deficit should result in permanent inability to perform three or more of the Activities of Daily Living.                 </td>
+            </tr>
+            <tr>
+                <td><strong>44.</strong></td>
+                <td><strong><center>Fulminant Viral Hepatitis</center></strong></td>
+                <td>A sub-massive to massive necrosis of the liver by the Hepatitis virus, leading precipitously to liver failure. This Diagnosis must be supported by all of the following:<br>
+                    i. Rapid decreasing of liver size<br>
+                    ii. Necrosis involving entire lobules, leaving only a collapsed reticular framework<br>
+                    iii. Rapid deterioration of liver function tests<br>
+                    iv. Deepening jaundice; and<br>
+                    v. Hepatic encephalopathy.<br>
+                    Acute Hepatitis infection or carrier status alone does not meet the diagnostic criteria.
+                </td>
+            </tr>
+            <tr>
+                <td><strong>45.</strong></td>
+                <td><strong><center>Hemiplegia</center></strong></td>
+                <td>The total and permanent loss of the use of one side of the body through paralysis persisting for a period of at least 6 weeks and with no foreseeable possibility of recovery caused by illness or injury.
+                <i>Self-inflicted injuries are excluded.</i>
+                </td>
+            </tr>
+            <tr>
+                <td><strong>46.</strong></td>
+                <td><strong><center>HIV due to Blood transfusion and occupationally acquired HIV</center></strong></td>
+                <td>A. Infection with the Human Immunodeficiency Virus (HIV) through a blood transfusion, provided that all of the following conditions are met:<br>
+                    <dd> &#8226; The blood transfusion was medically necessary or given as part of a medical treatment<br>
+                        &#8226; The blood transfusion was received in India after the Policy Date, Date of endorsement or Date of reinstatement, whichever is the later<br>
+                        &#8226; The source of the infection is established to be from the Institution that provided the blood transfusion and the Institution is able to trace the origin of the HIV tainted blood; and<br>
+                        &#8226; The Life Insured does not suffer from Thalassaemia Major or Haemophilia. </dd><br>
+                    B.  Infection with the Human Immunodeficiency Virus (HIV) which resulted from an Accident occurring after the Policy Date, date of endorsement or date of reinstatement, whichever is the later whilst the Life Insured was carrying out the normal professional duties of his or her occupation in India, provided that all of the following are proven to Our satisfaction:<br>
+                    <dd>
+                        &#8226; Proof that the Accident involved a definite source of the HIV infected fluids;<br>
+                        &#8226; Proof of sero-conversion from HIV negative to HIV positive occurring during the 180 days after the documented Accident. This proof must include a negative HIV antibody test conducted within 5 days of the Accident; and<br>
+                    </dd><br>
+                    This benefit is only payable when the occupation of the Life Insured is a Medical Practitioner, housemen, medical student, registered nurse, medical laboratory technician, dentist (surgeon and nurse) or paramedical worker, working in medical centre or clinic in India.
+                    <i>This benefit will not apply under either section A or B where a cure has become available prior to the infection. "Cure" means any treatment that renders the HIV inactive or non-infectious.</i>
+                </td>
+            </tr>
+            <tr>
+                <td><strong>47.</strong></td>
+                <td><strong><center>Infective Endocarditis</center></strong></td>
+                <td>Inflammation of the inner lining of the heart caused by infectious organisms, where all of the following criteria are met:<br>
+                    &#8226; Positive result of the blood culture proving presence of the infectious organism(s);<br>
+                    &#8226; Presence of at least moderate heart valve incompetence (meaning regurgitant fraction of 20% or above) or moderate heart valve stenosis (resulting in heart valve area of 30% or less of normal value) attributable to Infective Endocarditis; and<br>
+                    &#8226; The Diagnosis of Infective Endocarditis and the severity of valvular impairment are confirmed by a Medical Practitioner who is a cardiologist.<br>
+                </td>
+            </tr>
+            <tr>
+                <td><strong>48.</strong></td>
+                <td><strong><center>Loss of Independent Existence (cover up to age 74)</center></strong></td>
+                <td>The Life Insured is physically incapable of performing at least three (3) of the Activities of Daily Living (either with or without the use of mechanical equipment, special devices or other aids or adaptations in use for disabled persons) for a continuous period of at least six (6) months and signifying a permanent and irreversible inability to perform the same. For the purpose of this definition, the word "permanent" shall mean beyond the hope of recovery with current medical knowledge and technology. The Diagnosis of Loss of Independent Existence must be confirmed by a specialist Medical Practitioner.<br>
+                    Only Life Insured with Age between 18 and 74 on first Diagnosis is eligible to receive a benefit under this illness.
+                </td>
+            </tr>
+            <tr>
+                <td><strong>49.</strong></td>
+                <td><strong><center>Loss of One Limb and One Eye</center></strong></td>
+                <td>Total, permanent and irrecoverable loss of sight of one eye and loss by severance of one limb at or above the elbow or knee.<br>
+                    The loss of sight of one eye must be clinically confirmed by a Medical Practitioner who is an eye specialist and must not be correctable by aides or surgical procedures.
+                </td>
+            </tr>
+            <tr>
+                <td><strong>50.</strong></td>
+                <td><strong><center>Medullary Cystic Disease</center></strong></td>
+                <td>Medullary Cystic Disease where the following criteria are met:<br>
+                    &#8226; the presence in the kidney of multiple cysts in the renal medulla accompanied by the presence of tubular atrophy and interstitial fibrosis<br>
+                    &#8226; clinical manifestations of anaemia, polyuria, and progressive deterioration in kidney function; and<br>
+                    &#8226; the Diagnosis of Medullary Cystic Disease is confirmed by renal biopsy.<br>
+                    <i>Isolated or benign kidney cysts are specifically excluded from this benefit.</i>
+                </td>
+            </tr>
+            <tr>
+                <td><strong>51.</strong></td>
+                <td><strong><center>Muscular Dystrophy</center></strong></td>
+                <td>A group of hereditary degenerative diseases of muscle characterised by weakness and atrophy of muscle. The Diagnosis of muscular dystrophy must be unequivocal and made by a Medical Practitioner who is a consultant neurologist. The condition must result in the inability of the Life Insured to perform (whether aided or unaided) at least 3 of the Activities of Daily Living for a continuous period of at least 6 months.
+                </td>
+            </tr>
+            <tr>
+                <td><strong>52.</strong></td>
+                <td><strong><center>Myasthenia Gravis</center></strong></td>
+                <td>An acquired autoimmune disorder of neuromuscular transmission leading to fluctuating muscle weakness and fatigability, where all of the following criteria are met:<br>
+                    &#8226;   Presence of permanent muscle weakness categorized as Class IV or V according to the Myasthenia Gravis Foundation of America Clinical Classification (given below); and<br>
+                    &#8226;   The Diagnosis of Myasthenia Gravis and categorization are confirmed by a Medical Practitioner who is a neurologist.<br><br>
+                    Myasthenia Gravis Foundation of America Clinical Classification:<br>
+                    Class I: Any eye muscle weakness, possible ptosis, no other evidence of muscle weakness elsewhere.<br>
+                    Class II: Eye muscle weakness of any severity, mild weakness of other muscles.<br>
+                    Class III: Eye muscle weakness of any severity, moderate weakness of other muscles.<br>
+                    Class IV: Eye muscle weakness of any severity, severe weakness of other muscles.<br>
+                    Class V: Intubation needed to maintain airway.<br>
+                </td>
+            </tr>
+            <tr>
+                <td><strong>53.</strong></td>
+                <td><strong><center>Myelofibrosis</center></strong></td>
+                <td>A disorder which can cause fibrous tissue to replace the normal bone marrow and results in anaemia, low levels of white blood cells and platelets and enlargement of the spleen. The condition must have progressed to the point that it is permanent, and the severity is such that the Life Insured requires a blood transfusion at least monthly. The Diagnosis of myelofibrosis must be supported by bone marrow biopsy and confirmed by a Medical Practitioner who is a specialist.
+                </td>
+            </tr>
+            <tr>
+                <td><strong>54.</strong></td>
+                <td><strong><center>Necrotising Fasciitis</center></strong></td>
+                <td>Necrotizing fasciitis is a progressive, rapidly spreading, infection located in the deep fascia causing necrosis of the subcutaneous tissues. An unequivocal Diagnosis of necrotizing fasciitis must be made by a Medical Practitioner who is a specialist and the Diagnosis must be supported with laboratory evidence of the presence of bacteria that is a known cause of necrotising fasciitis. There must also be widespread destruction of muscle and other soft tissues that results in a total and permanent loss or function of the affected body part.
+                </td>
+            </tr>
+            <tr>
+                <td><strong>55.</strong></td>
+                <td><strong><center>Other Serious Coronary Artery Disease</center></strong></td>
+                <td>The narrowing of the lumen of at least one coronary artery by a minimum of 75% and of two others by a minimum of 60%, as proven by coronary angiography, regardless of whether or not any form of coronary artery intervention or surgery has been performed.
+                    Coronary arteries herein refer to left main stem, left anterior descending, circumflex and right coronary artery (but not including their branches).
+                </td>
+            </tr>
+            <tr>
+                <td><strong>56.</strong></td>
+                <td><strong><center>Pheochromocytoma</center></strong></td>
+                <td>Presence of a neuroendocrine tumour of the adrenal or extra-chromaffin tissue that secretes excess catecholamines requiring the actual undergoing of surgery to remove the tumour.
+                    The Diagnosis of Pheochromocytoma must be confirmed by a Medical Practitioner who is an endocrinologist.
+                </td>
+            </tr>
+            <tr>
+                <td><strong>57.</strong></td>
+                <td><strong><center>Poliomyelitis</center></strong></td>
+                <td>The occurrence of Poliomyelitis where the following conditions are met:<br>
+                    i. Poliovirus is identified as the cause,<br>
+                    ii. Paralysis of the limb muscles or respiratory muscles must be present and persist for at least 3 months.<br>
+                </td>
+            </tr>
+            <tr>
+                <td><strong>58.</strong></td>
+                <td><strong><center>Progressive Scleroderma</center></strong></td>
+                <td>A systemic collagen-vascular disease causing progressive diffuse fibrosis in the skin, blood vessels and visceral organs. This Diagnosis must be unequivocally supported by biopsy and serological evidence and the disorder must have reached systemic proportions to involve the heart, lungs or kidneys.<br>
+                <i>The following are excluded:<br>
+                    i. Localised scleroderma (linear scleroderma or morphea);<br>
+                    ii. Eosinophilic fasciitis; and<br>
+                    iii. CREST syndrome.</i>
+                </td>
+            </tr>
+            <tr>
+                <td><strong>59.</strong></td>
+                <td><strong><center>Progressive Supranuclear Palsy</center></strong></td>
+                <td>Confirmed by a Medical Practitioner who is a specialist in neurology of a definite Diagnosis of progressive supranuclear palsy. There must be permanent clinical impairment of motor function, eye movement disorder and postural instability.<br>
+                </td>
+            </tr>
+            <tr>
+                <td><strong>60.</strong></td>
+                <td><strong><center>Severe Rheumatoid Arthritis</center></strong></td>
+                <td>Unequivocal Diagnosis of systemic immune disorder of rheumatoid arthritis where all of the following criteria are met:<br>
+                    &#8226; Diagnostic criteria of the American College of Rheumatology for Rheumatoid Arthritis;<br>
+                    &#8226; Permanent inability to perform at least two (2) of the Activities of Daily Living;<br>
+                    &#8226; Widespread joint destruction and major clinical deformity of three (3) or more of the following joint areas: hands, wrists, elbows, knees, hips, ankle, cervical spine or feet; and<br>
+                    &#8226; The foregoing conditions have been present for at least six (6) months.<br>
+                </td>
+            </tr>
+            <tr>
+                <td><strong>61.</strong></td>
+                <td><strong><center>Severe Ulcerative Colitis</center></strong></td>
+                <td>Acute fulminant ulcerative colitis with life threatening electrolyte disturbances.
+                    All of the following criteria must be met:<br>
+                    &#8226; the entire colon is affected, with severe bloody diarrhoea; and<br>
+                    &#8226; the necessary treatment is total colectomy and ileostomy; and<br>
+                    &#8226; the Diagnosis must be based on histopathological features and confirmed by a Medical Practitioner who is a specialist in gastroenterology.<br>
+                </td>
+            </tr>
+            <tr>
+                <td><strong>62.</strong></td>
+                <td><strong><center>Systemic Lupus Erythematosus with Lupus Nephritis</center></strong></td>
+                <td>A multi-system autoimmune disorder characterised by the development of autoantibodies directed against various self-antigens. In respect of this Policy, systemic lupus erythematosus will be restricted to those forms of systemic lupus erythematosus which involve the kidneys (Class III to Class V Lupus Nephritis, established by renal biopsy, and in accordance with the WHO Classification). The final Diagnosis must be confirmed by a Medical Practitioner specialising in Rheumatology and Immunology.
+                    The WHO Classification of Lupus Nephritis:<br>
+                    Class I Minimal Change Lupus Glomerulonephritis<br>
+                    Class II Mesangial Lupus Glomerulonephritis<br>
+                    Class III Focal Segmental Proliferative Lupus Glomerulonephritis<br>
+                    Class IV Diffuse Proliferative Lupus Glomerulonephritis<br>
+                    Class V Membranous Lupus Glomerulonephritis<br>
+                </td>
+            </tr>
+            <tr>
+                <td><strong>63.</strong></td>
+                <td><strong><center>Terminal Illness</center></strong></td>
+                <td>The conclusive Diagnosis of an illness, which in the opinion of a Medical Practitioner who is an attending Consultant and agreed by our appointed Medical Practitioner, life expectancy is no greater than twelve (12) months from the date of notification of claim, regardless of any treatment that might be undertaken.<br>
+                </td>
+            </tr>
+            <tr>
+                <td><strong>64.</strong></td>
+                <td><strong><center>Tuberculosis Meningitis</center></strong></td>
+                <td>Meningitis caused by tubercle bacilli, resulting in permanent neurological deficit. Such a Diagnosis must be confirmed by a Medical Practitioner who is a specialist in neurology.<br>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="annexure">
+        <tr style="width: 100%">
+        <p><u><b>Annexure 3: </u>Other exclusions to Critical Illness benefit</b></p>
+        If the covered Critical Illness of the Life Insured results directly or indirectly caused by, based on, arising out of or howsoever attributable to from any one of the following clauses:<br>
+        1. Any illness, sickness or disease other than those specified as Critical Illnesses under this Rider.<br>
+        2. Any Pre-Existing Diseases. However, coverage under the Rider after the expiry of 36 months for any Pre-Existing Disease is subject to the same being declared at the time of application and accepted by Us.<br>
+        3. Any Critical Illness directly or indirectly caused due to treatment for, alcoholism, drug or substance abuse or any addictive condition and consequences thereof.<br>
+        4. Narcotics used by the Life Insured unless taken as prescribed by a Medical Practitioner.<br>
+        5. Any Critical Illness directly or indirectly caused due to intentional self-injury, suicide or attempted suicide, whether the person is medically sane or insane.<br>
+        6. Any Critical Illness directly or indirectly, caused by or arising from or attributable to a foreign invasion, act of foreign enemies, hostilities, warlike operations (whether war be declared or not or while performing duties in the armed forces of any country during war or at peace time), civil war, public defense, rebellion, revolution, insurrection, military or usurped power.<br>
+        7. Any Critical Illness caused by ionizing radiation or contamination by radioactivity from any nuclear fuel (explosive or hazardous form) or from any nuclear waste from the combustion of nuclear fuel, nuclear, chemical or biological attack.<br>
+        8. Working in underground mines, tunneling or involving electrical installations with high tension supply, or as race jockeys or circus personnel.<br>
+        9. Congenital external diseases, defects or anomalies or consequences thereof.<br>
+        10. Any Critical Illness directly or indirectly caused by any treatment necessitated due to participation as a professional in hazardous or adventure sport, including but not limited to, para jumping, rock climbing, mountaineering, rafting, motor racing, horse racing or scuba diving, hand gliding, sky diving, deep sea diving and selfie accident.<br>
+        11. Participation by the Life Insured in any flying activity, except as a bona fide, fare paying passenger of a recognized airline on regular routes and on a scheduled timetable.<br>
+        12. Any Critical Illness directly or indirectly, caused by Medical treatment traceable to childbirth (including complicated deliveries and caesarean sections incurred during hospitalization) except ectopic pregnancy. Any Critical Illness due to miscarriages (unless due to an accident) and lawful medical termination of pregnancy during the Rider Term.<br>
+        13. Any Critical Illness directly or indirectly, caused by any unproven/ experimental treatment, service and supplies for or in connection with any treatment. Unproven/ experimental treatments are treatments, procedures or supplies that lack significant medical documentation to support their effectiveness.<br>
+        14. Any Critical Illness based on certification/Diagnosis/treatment from persons not registered as Medical Practitioners, or from a Medical Practitioner who is practicing outside the discipline that he/she is licensed for.<br>
+        15. Any Critical Illness directly or indirectly, caused due to any treatment, including surgical management, to change characteristics of the body to those of opposite sex.<br>
+        16. Any Critical Illness directly or indirectly, caused due to cosmetic or plastic surgery or any treatment to change the appearance unless for reconstruction following an Accident, Burn(s), or Cancer or as part of medically necessary treatment to remove a direct and immediate health risk to the insured. For this to be considered a medical necessity, it must be certified by the attending Medical Practitioner.<br>
+        17. Any Critical Illness directly or indirectly, caused due to surgical treatment of obesity that does not fulfil all the below conditions:<br>
+        a. Surgery to be conducted is upon the advice of the Doctor<br>
+        b. The Surgery / Procedure conducted should be supported by clinical protocols<br>
+        c. The Life Insured is 18 years of age or older and<br>
+        d. Body Mass Index (BMI):<br>
+       <dd> &#8226; &nbsp;greater than or equal to 40 or<br>
+           &#8226; &nbsp;greater than or equal to 35 in conjunction with any of the following severe co-morbidities following failure of less invasive methods of weight loss:</dd>
+        <dd>&nbsp;i. &nbsp;&nbsp;Obesity related cardiomyopathy<br>
+            &nbsp;ii. &nbsp;&nbsp;Coronary heart disease<br>
+            &nbsp;iii. &nbsp;&nbsp;Severe Sleep apnea<br>
+            &nbsp;iv. &nbsp;&nbsp;Uncontrolled Type 2 Diabetes despite optimal therapy</dd><br>
+        18. Any Critical Illness directly or indirectly, caused due to treatments received in health hydros, nature cure clinics, spas or similar establishments or private beds registered as a nursing home attached to such establishments or where admission is arranged wholly or partly for domestic reason.<br>
+        19. Any Critical Illness directly or indirectly, caused by treatment directly arising from or consequent upon any Life Insured committing or attempting to commit a breach of law with criminal intent.<br>
+        20. In the event of the death of the Life Insured within the stipulated Survival Period as set out above.<br>
+        21. Any Critical Illness directly or indirectly, caused by sterility and infertility. This includes:<br>
+        a. Any type of contraception, sterilization<br>
+        b. Assisted Reproductive services including artificial insemination and advanced reproductive technologies such as IVF, ZIFT, GIFT, ICSI<br>
+        c. Gestational Surrogacy<br>
+        d. Reversal of sterilization<br>
+        </tr>
+    </div>
+    <div class="annexure">
+        <tr style="width: 100%">
+        <p><u><b>Annexure 4: Total and Permanent Disability benefit Exclusions </u></b></p>
+        We shall not be liable to make any payment under this Rider towards the Total and Permanent benefit, directly or indirectly caused by, based on, arising out of or howsoever attributable to any of the following:<br>
+        1. No benefit towards Total and Permanent Disability benefit shall be payable if any Total and Permanent Disability occurs within the Waiting Period. In such case this Rider will terminate and We will refund the Rider Premium paid corresponding to the Rider benefit. However, no Waiting Period will be applicable in case of any Total and Permanent Disability occurring solely due to an Accident.<br>
+        2. Any Pre-Existing Diseases. However, coverage under the Rider after the expiry of 36 months for any Pre-Existing Disease is subject to the same being declared at the time of application and accepted by Us.<br>
+        3. Any disability directly or indirectly caused due to treatment for alcoholism, drug or substance abuse or any addictive condition and consequences thereof.<br>
+        4. Narcotics used by the Life Insured unless taken as prescribed by a Medical Practitioner.<br>
+        5. Any disability directly or indirectly caused due to intentional self-injury, suicide or attempted suicide, whether the person is medically sane or insane.<br>
+        6. Any disability directly or indirectly, caused by or arising from or attributable to a foreign invasion, act of foreign enemies, hostilities, warlike operations (whether war be declared or not or while performing duties in the armed forces of any country during war or at peace time), civil war, public defense, rebellion, revolution, insurrection, military or usurped power.<br>
+        7. Service in any military, air-force, naval, paramilitary or similar organization.<br>
+        8. Any disability caused by ionizing radiation or contamination by radioactivity from any nuclear fuel (explosive or hazardous form) or from any nuclear waste from the combustion of nuclear fuel, nuclear, chemical or biological attack.<br>
+        9. Working in underground mines, tunneling or involving electrical installations with high tension supply, or as race jockeys or circus personnel.<br>
+        10. Congenital external diseases, defects or anomalies or consequences thereof.<br>
+        11. Any disability directly or indirectly caused by any treatment necessitated due to participation as a professional in hazardous or adventure sport, including but not limited to, para jumping rock climbing, mountaineering, rafting, motor racing, horse racing or scuba diving, hand gliding, sky diving, deep sea diving and selfie accidents.<br>
+        12. Participation by the Life Insured in any flying activity, except as a bona fide, fare-paying passenger of a recognized airline on regular routes and on a scheduled timetable.<br>
+        13. Any disability directly or indirectly, caused by medical treatment traceable to childbirth (including complicated deliveries and caesarean sections incurred during hospitalization) except ectopic pregnancy. Any disability due to miscarriages (unless due to an accident) and lawful medical termination of pregnancy during the Rider Term.<br>
+        14. Any disability directly or indirectly, caused by any unproven/ experimental treatment, service and supplies for or in connection with any treatment. Unproven/ experimental treatments are treatments, procedures or supplies that lack significant medical documentation to support their effectiveness.<br>
+        15. Any disability based on certification/Diagnosis/treatment from persons not registered as Medical Practitioners, or from a Medical Practitioner who is practicing outside the discipline that he/ she is licensed for.<br>
+        16. Any disability directly or indirectly, caused due to any treatment, including surgical management, to change characteristics of the body to those of opposite sex.<br>
+        17. Any disability directly or indirectly, caused due to cosmetic or plastic surgery or any treatment to change the appearance unless for reconstruction following an Accident, burn(s), or cancer or as part of medically necessary treatment to remove a direct and immediate health risk to the insured. For this to be considered a medical necessity, it must be certified by the attending Medical Practitioner.<br>
+        18. Any disability directly or indirectly, caused due to surgical treatment of obesity that does not fulfil all the below conditions:<br>
+       <dd> a. Surgery to be conducted is upon the advice of the Doctor<br>
+        b. The surgery / procedure conducted should be supported by clinical protocols<br>
+        c. The Life Insured has to be 18 years of age or older and<br>
+           d. Body Mass Index (BMI):</dd>
+        <dd><ul>
+            <li>
+                greater than or equal to 40 or
+            </li>
+            <li>greater than or equal to 35 in conjunction with any of the following severe co-morbidities following failure of less invasive methods of weight loss:</li>
+            i. Obesity related cardiomyopathy<br>
+            ii. Coronary heart disease<br>
+            iii. Severe sleep apnea<br>
+            iv. Uncontrolled type 2 Diabetes despite optimal therapy
+        </ul></dd><br>
+        19. Any disability directly or indirectly, caused due to treatments received in health hydros, nature cure clinics, spas or similar establishments or private beds registered as a nursing home attached to such establishments or where admission is arranged wholly or partly for domestic reason.<br>
+        20. Any disability directly or indirectly, caused by treatment directly arising from or consequent upon any Life Insured committing or attempting to commit a breach of law with criminal intent.<br>
+        21. In the event of the death of the Life Insured within a period of 6 (Six) consecutive months from the date of Diagnosis or Accident.<br>
+        22. Any disability directly or indirectly, caused by sterility and infertility. This includes:<br>
+        <dd>
+            a. &nbsp;Any type of contraception, sterilization<br>
+            b.&nbsp;Assisted Reproductive services including artificial insemination and advanced reproductive technologies such as IVF, ZIFT, GIFT, ICSI<br>
+            c. &nbsp;Gestational Surrogacy<br>
+            d. &nbsp;Reversal of sterilization<br>
+        </dd><br>
+        If any of the exclusions stated above is/are found at the underwriting stage, then the Rider will not be offered. However, if any exclusion is accepted as substandard as per board approved Underwriting Policy, then the claim will not be rejected on ground of that exclusion.
+        </tr>
+    </div>
+</div>
+</body>

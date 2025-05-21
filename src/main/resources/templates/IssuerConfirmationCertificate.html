@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <title>Issuer Confirmation Certificate</title>
+      <style type="text/css">table,td,tr{
+         border-collapse: collapse;
+         }
+         
+         @media print{
+         *{
+         font-size: 6pt !important;
+         }
+         .printtext{
+         font-size: 11pt !important;
+         }
+         }
+      </style>
+   </head>
+   <body style="margin: 0 auto;padding: 0;">
+   <div>
+      <table>
+         <tbody>
+         <tr>
+            <td style="width:100%"><img src='classpath:static/logo-IRP.png'
+                                        alt="Axis Max Life Insurance"
+                                        width="100%" height="100"></td>
+            <td>&nbsp;</td>
+         </tr>
+         </tbody>
+      </table>
+   </div>
+      <table border="0" align="center" cellpadding="0" cellspacing="0" style="border-collapse: collapse;width: 98%;margin-top: 10px">
+         <tbody>
+            <!-- Main Wrapper Start Here-->
+            <tr>
+               <td width="100%">
+                  <table border="0" width="100%" cellspacing="0" style="border-collapse: collapse;">
+                     <tbody>
+                     <!-- <tr>
+                         <td align='left' width="40%"><img src="classpath:static/Logo_Pathway_MaxIS.png" width='120'/></td>
+                         <td style="font-weight: bold;font-family: arial;">
+                            <span style="font-size:16px;border-bottom: 1px solid #222;font-weight: bold;">Issuer Confirmation Certificate</span>
+                         </td>
+                      </tr>-->
+                      <tr>
+                         <td height="60">
+                            &nbsp;
+                         </td>
+                      </tr>
+                   <tr>
+                      <td colspan="2" style="padding: 5px; font-size: 14px; font-family: arial;"><b>Document Generation Date/Time:</b><i th:text=${todaysDate}></i></td>
+                   </tr>
+                   <tr>
+                         <td height="20">
+                            &nbsp;
+                         </td>
+                      </tr>
+                   <tr>
+                      <td colspan="2" style="padding: 5px; font-size: 14px; font-family: arial;">
+                         <p><i th:text=${title}></i></p>
+                         <p>This is to certify that <i th:text=${customerName}></i> with previous policy number: <i th:text=${previousPolicy}></i>, is an existing customer since <i th:text=${previousPolicydate}></i> and has all the details validated, as per our records.</p>
+                         <p>We certify that as per the account records, following are the particulars of the customer</p>
+                      </td>
+                   </tr>
+                   </tbody>
+                </table>
+             </td>
+          </tr>
+          <tr>
+             <td style="padding: 5px; font-size: 14px; font-family: arial; width: 100%; ">
+                <table border="1" width="700px" cellspacing="0" style="border-collapse: collapse;margin-top: 5px;">
+                   <tbody>
+                      <tr>
+                         <td style="padding: 5px; font-size: 14px; font-family: arial;font-weight: bold;background:#efefef;width:50%;">
+                            Title of the Customer
+                         </td>
+                         <td style="padding: 5px; font-size: 14px; font-family: arial;text-align: center;width:50%;">
+                           <i th:text=${tagName}></i>
+                         </td>
+                      </tr>
+                      <tr>
+                         <td style="padding: 5px; font-size: 14px; font-family: arial;font-weight: bold;background:#efefef;width:50%;">
+                            Name of the Customer
+                         </td>
+                         <td style="padding: 5px; font-size: 14px; font-family: arial;text-align: center;width:50%;">
+                            <i th:text=${customerName}></i>
+                         </td>
+                      </tr>
+                      <tr>
+                         <td style="padding: 5px; font-size: 14px; font-family: arial;font-weight: bold;background:#efefef;width:50%;">
+                           DOB
+                         </td>
+                         <td style="padding: 5px; font-size: 14px; font-family: arial;text-align: center;width:50%;">
+                            <i th:text=${customerDob}></i>
+                         </td>
+                      </tr>
+                      <tr>
+                         <td style="padding: 5px; font-size: 14px; font-family: arial;font-weight: bold;background:#efefef;width:50%;">
+                            Gender
+                         </td>
+                         <td style="padding: 5px; font-size: 14px; font-family: arial;text-align: center;width:50%;">
+                           <i th:text=${customergender}></i>
+                         </td>
+                      </tr>
+                      <tr>
+                         <td style="padding: 5px; font-size: 14px; font-family: arial;font-weight: bold;background:#efefef;width:50%;">
+                           Communication Address
+                         </td>
+                         <td style="padding: 5px; font-size: 14px; font-family: arial;text-align: center;width:50%;">
+                            <i th:text=${commuAddress}></i>
+                         </td>
+                      </tr>
+                      <tr>
+                         <td style="padding: 5px; font-size: 14px; font-family: arial;font-weight: bold;background:#efefef;width:50%;">
+                            PAN
+                         </td>
+                         <td style="padding: 5px; font-size: 14px; font-family: arial;text-align: center;width:50%;">
+                            <i th:text=${customerPan}></i>
+                         </td>
+                      </tr>
+
+
+
+
+                   </tbody>
+                </table>
+             </td>
+          </tr>
+           <tr>
+             <td width="100%">
+                <table border="0" width="100%" cellspacing="0" style="border-collapse: collapse;">
+                   <tbody>
+
+                   <tr>
+                         <td height="20">
+                            &nbsp;
+                         </td>
+                      </tr>
+                   <tr>
+                      <td colspan="2" style="padding: 5px; font-size: 14px; font-family: arial;">
+                        <p>The supporting documents for the above information will be provided as and when requested.</p>
+                        <p>This is a system generated document &amp; suffices for both Proof of Identity and Proof of Address</p>
+                      </td>
+                   </tr>
+                   <tr>
+             <td height="60">
+                &nbsp;
+             </td>
+          </tr>
+          <tr>
+             <td>
+                <!--<div th:if="${isNotYBLProposal}">
+                   <img src="classpath:static/footer_updated.png"/>
+                </div>-->
+               </td>
+            </tr>
+                     </tbody>
+                  </table>
+               </td>
+            </tr>
+            
+         </tbody>
+      </table>
+   </body>
+</html>

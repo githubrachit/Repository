@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title></title>
+	<style type="text/css">
+		body {
+			margin: 0;
+			padding: 0;
+		}
+
+		table,
+		td,
+		tr {
+			border-collapse: collapse;
+		}
+	</style>
+</head>
+
+<body>
+	<table cellpadding="10" width="100%" style="margin: auto;background: #f9f9f9;padding: 20px">
+		<tr>
+			<td height="10"> </td>
+		</tr>
+		<tr>
+			<td style="font-size: 16px; font-family: arial;text-align: center;"><strong> Sales Personnel Confidential
+					Report</strong></td>
+		</tr>
+
+		<tr>
+			<td height="20"> </td>
+		</tr>
+		<tr>
+			<td style="font-size: 14px; font-family: arial;">
+				<table border="1" cellpadding="10" width="100%" style="margin: auto;">
+					<tr>
+						<td style="font-size: 14px; font-family: arial;width: 50%">
+							Proposal Number: <strong th:text="${proposalNumber}"></strong>
+						</td>
+						<td style="font-size: 14px; font-family: arial;width: 50%">
+							Customer Name: <strong th:text="${customerNumber}"></strong>
+						</td>
+					</tr>
+
+				</table>
+			</td>
+		</tr>
+		<tr>
+			<td style="font-size: 14px; font-family: arial;">
+				<table border="1" cellpadding="10" width="100%" style="margin: auto;">
+					<tr>
+						<td style="font-size: 14px; font-family: arial;width: 88%">
+							<strong>Q1</strong>- Have you met the Proposer & Life to be Assured face to face/met via
+							digitally enabled interactions (i.e. via Video MER etc)?
+						</td>
+
+					</tr>
+					<tr>
+						<td style="font-size: 14px; font-family: arial;width: 88%">
+							<strong>Q2</strong>- Have you explained the Product features, benefits, premium paying term
+							& other relevant terms and conditions specified for the proposed product?
+						</td>
+						<td>
+						</td>
+					</tr>
+					<div th:if="${isAxisOrThanosChannel}">
+						<tr>
+							<td style="font-size: 14px; font-family: arial;width: 88%">
+								<strong>Q3</strong>- Does the L2BI have existing Life/Health/Critical illness cover from
+								other insurance companies. If yes, please provide the details?
+								<p><span
+										style="text-align: left;min-width: 80%;border-bottom-color: #000;border-bottom-style: solid;border-bottom-width: 1px;display: inline-block;padding: 0 18px;font-weight: bold;text-transform:uppercase;"></span>
+								</p>
+							</td>
+							<td>
+							</td>
+						</tr>
+					</div>
+					<div th:unless="${isAxisOrThanosChannel}">
+						<tr>
+							<td style="font-size: 14px; font-family: arial;width: 88%">
+								<strong>Q3</strong>- Does the L2BI have existing Life/Health/Critical illness cover from
+								other insurance companies. If yes, please provide the details?
+								<table border="1" cellpadding="4" width="100%" style="margin-top:10px">
+									<tr>
+										<td width="80%">Does the proposer/life to be insured have any life or Critical
+											Illness insurance policy issued or pending approval from any insurance
+											compay or has the proposer/L2BI's application for Life/Health/Critical
+											Illness insurance or its reinstatement ever been refered </td>
+										<td weidth="10%" style="text-align:center;">
+											<div style="font-weight:600">Proposer/Joint Life</div>
+										</td>
+										<td weidth="10%" style="text-align:center;">
+											<div style="font-weight:600">Life to be Insured</div>
+										</td>
+									</tr>
+									<tr>
+										<td>Policy Status</td>
+
+									</tr>
+									<tr>
+										<td colspan="3" style="padding: 4px;width:80%">
+											<p>Please provide details if applicable:</p>
+											<p>Total Sum Assured for Life Insurance Cover: <span
+													style="text-align: center;min-width: 100px;border-bottom-color: #000;border-bottom-style: solid;border-bottom-width: 1px;display: inline-block;padding: 0 18px;font-weight: bold;text-transform:uppercase;"></span>
+												(Number up to 12 digits)</p>
+											<p>Total Sum Assured for CI/DD Cover: <span
+													style="text-align: center;min-width: 100px;border-bottom-color: #000;border-bottom-style: solid;border-bottom-width: 1px;display: inline-block;padding: 0 18px;font-weight: bold;text-transform:uppercase;"></span>
+												(Number up to 12 digits)</p>
+									
+										</td>
+									</tr>
+
+								</table>
+							</td>
+
+						</tr>
+
+					</div>
+					<tr>
+						<td style="font-size: 14px; font-family: arial;width: 88%">
+							<strong>Q4</strong>- Is there any adverse habit of the prospect or other significant
+							findings regarding insurability (Age; health; personal habits; Occupation; hazardous
+							avocation; premium paying capacity or other material information that may adversely affect
+							the underwriting decision?
+							<p><span
+									style="text-align: left;min-width: 80%;border-bottom-color: #000;border-bottom-style: solid;border-bottom-width: 1px;display: inline-block;padding: 0 18px;font-weight: bold;text-transform:uppercase;"></span>
+							</p>
+						</td>
+						<td>
+						</td>
+					</tr>
+					<tr>
+						<td style="font-size: 14px; font-family: arial;width: 88%">
+							<strong>Q5</strong>- Did you observe any suspicious behavior or questions from the L2BI or
+							proposer that you would like to disclose to the underwriter?
+							<p><strong>Some Examples-</strong></p>
+							<ul>
+								<li>The insured was extremely inquisitive about the Claim Process.</li>
+								<li>Although the stated income in the Proposal form is “ x” but during my visit I found
+									standard of living contrary to the lifestyle declared in the proposal.</li>
+								<li>Suspicious third party accompanying customers.</li>
+								<li>Customer dominating the discussions on buying insurance</li>
+								<li>Customer entering into transactions that do not make commercial sense</li>
+								<li>The Proposer was not keen in allowing me to meet the L2BI.</li>
+							</ul>
+							<p><span
+									style="text-align: left;min-width: 80%;border-bottom-color: #000;border-bottom-style: solid;border-bottom-width: 1px;display: inline-block;padding: 0 18px;font-weight: bold;text-transform:uppercase;"></span>
+							</p>
+						</td>
+						<td>
+						</td>
+					</tr>
+					<tr>
+						<td style="font-size: 14px; font-family: arial;width: 100%">
+							<strong>Q6</strong>- General health details of Life to be insured as observed?
+							<ul>
+								<li>Physical handicap/ Deformity </li>
+								<li>Mental Retardation </li>
+								<li>History of current medical illness/ Surgery/hospitalization. </li>
+							</ul>
+						</td>
+						<td style="font-size: 14px; font-family: arial;width: 100%">
+							<strong> </strong>
+							<ul style="list-style-type: none;padding-inline-start: 0px;">
+
+							</ul>
+						</td>
+
+					</tr>
+					<tr>
+						<td style="font-size: 14px; font-family: arial;width: 88%">
+							<strong>Q7</strong>- Do you want to make any other disclosure that may impact the
+							underwriting decision?
+							<p><span
+									style="text-align: left;min-width: 80%;border-bottom-color: #000;border-bottom-style: solid;border-bottom-width: 1px;display: inline-block;padding: 0 18px;font-weight: bold;text-transform:uppercase;"></span>
+							</p>
+
+						</td>
+						<td>
+						</td>
+					</tr>
+
+				</table>
+			</td>
+		</tr>
+		<tr>
+			<td style="font-size: 14px; font-family: arial;width: 100%">
+				<input type="checkbox"> I confirm having verified the existence; identity and address of
+				the Life to be insured/ proposer & proofs have been submitted for the same. I hereby declare that the
+				above statements are true to the best of my knowledge and belief.
+			</td>
+		</tr>
+		<tr>
+			<td height="20"> </td>
+		</tr>
+		<tr>
+			<td style="font-size: 14px; font-family: arial;width: 100%">
+				<table border="0" cellpadding="10" width="100%" style="margin: auto;">
+					<tr>
+						<td style="font-size: 14px; font-family: arial;width: 50%">
+							<span style="padding-left: 10px;">Name of SP/Agent</span><br>
+							<span style="padding-left: 10px;font-weight:
+                            600;font-weight: bold;text-transform:uppercase;" th:text="${spAgentName}"></span>
+						</td>
+						<td style="font-size: 14px; font-family: arial;width: 50%;">
+							<span style="padding-left: 10px;">Date/Time</span><br>
+							<span style="padding-left: 10px;font-weight: bold;text-transform:uppercase;font-weight:
+                            600" th:text="${currentDate}"> </span>
+						</td>
+					</tr>
+					<tr>
+						<td height="10"> </td>
+					</tr>
+					<tr>
+						<td style="font-size: 14px; font-family: arial;width: 50%;">
+							<span style="padding-left: 10px;">Place</span><br>
+							<span style="padding-left: 10px;font-weight: bold;text-transform:uppercase;font-weight:
+                            600" th:text="${place}"></span>
+						</td>
+						<td style="font-size: 14px; font-family: arial;width: 50%;">
+							<span style="padding-left: 10px;">Code of SP/Agent</span><br>
+							<span style="padding-left: 10px;font-weight: bold;font-weight:
+                            600" th:text="${spAgentCode}"></span>
+						</td>
+					</tr>
+				</table>
+			</td>
+		</tr>
+
+		<tr>
+			<td height="10"> </td>
+		</tr>
+	</table>
+</body>
+
+</html>

@@ -1,0 +1,876 @@
+               <td style="font-family: arial;">
+                  <!-- Medical Details Start here-->
+                  <table cellspacing="0" cellpadding="0" width="100%" style="border-collapse: collapse; border-color: #ccc;border-style:solid;border-width:1px;">
+                     <tbody>
+                        <tr>
+                           <td colspan="6" style="padding: 0px; font-family: arial; font-size:9px; background-color: #000000; border-color: #ccc;border-style:solid;border-width:1px;">
+                              <table border="1" cellspacing="0" cellpadding="0" width="100%" style="border-collapse: collapse;">
+                                 <tbody>
+                                 <tr>
+                                    <td colspan="3" style="padding: 2px 4px; font-size: 14px; font-weight: bold; text-align: center; color: #FFFFFF">COVID-19 (Corona virus) Exposure Questionnaire</td>
+                                 </tr>
+                                 </tbody>
+                              </table>
+                           </td>
+                        </tr>
+                        <tr>
+                           <td colspan="6" style="padding: 0px; font-family: Arial;">
+                              <table width="100%" cellpadding="0" cellspacing="0" border="0" style="border-color: #ccc;border-style:solid;border-width:1px;">
+                                 <tbody>
+                                 <tr>
+                                    <td width="100%" style="padding: 5px 5px 5px 15px; font-size: 12px;">Thank you for applying for a policy from Axis Max Life Insurance Limited. To enable us to assess your application, send this
+                                       questionnaire duly answered and signed by the Life to be Assured and Proposed Policy Holder, if any.</td>
+                                 </tr>
+                                 <tr>
+                                    <td width="100%" style="padding: 10px 5px 5px 15px; font-size: 12px;">(All questions to be acknowledged, sections which are not relevant should be mentioned NA (Not applicable)</td>
+                                 </tr>
+                                 </tbody>
+                              </table>
+                           </td>
+                        </tr>
+                        <tr>
+                           <td colspan="6" style="padding: 0px; font-family: Arial;">
+                              <table width="100%" cellpadding="0" cellspacing="0" border="0" style="border-color: #000000;border-style:solid;border-width:1px;">
+                                 <tbody>
+                                    <tr>
+                                       <td width="30%" style="padding: 5px 5px 5px 15px; font-size: 12px; border-right: 1px solid #000000; border-bottom: 1px solid #000000;">Application No.</td>
+                                       <td width="70%" style="padding: 5px 5px 5px 15px; font-size: 12px; border-bottom: 1px solid #000000;" th:text="${applicationNumber}"></td>
+                                    </tr>
+                                    <tr>
+                                       <td width="30%" style="padding: 5px 5px 5px 15px; font-size: 12px; border-right: 1px solid #000000; border-bottom: 1px solid #000000;">Name of Life to be Assured</td>
+                                       <td width="70%" style="padding: 5px 5px 5px 15px; font-size: 12px; border-bottom: 1px solid #000000;" th:text="${lifeInsuredName}"></td>
+                                    </tr>
+                                    <tr>
+                                       <td width="30%" style="padding: 5px 5px 5px 15px; font-size: 12px; border-right: 1px solid #000000;">Name of Proposed Policyholder
+                                          <br><br>
+                                          (if different from Life to be Assured)
+                                       </td>
+                                       <td width="70%" style="padding: 5px 5px 5px 15px; font-size: 12px;" th:text="${proposerName}"></td>
+                                    </tr>
+                                 </tbody>
+                              </table>
+                           </td>
+                        </tr>
+                        <tr>
+                           <td colspan="6" style="padding: 0px; font-family: Arial;">
+                              <table width="100%" cellpadding="0" cellspacing="0" border="0" style="border-color: #ccc;border-style:solid;border-width:1px;">
+                                 <tbody>
+                                 <tr>
+                                    <td width="100%" style="padding: 10px 5px 5px 15px; font-size: 12px;"></td>
+                                 </tr>
+                                 </tbody>
+                              </table>
+                           </td>
+                        </tr>
+                        <tr>
+                           <td style="padding: 0px; font-family: Arial;">
+                              <table width="100%" cellpadding="0" cellspacing="0" border="0" style="border-color: #000000;border-style:solid;border-width:1px;">
+                                 <tbody>
+                                 <tr>
+                                    <td width="40%" style="padding: 5px 5px 5px 10px; font-size: 12px; border-right: 1px solid #000000;  text-align: center;">Information Required</td>
+                                    <td width="30%" style="padding: 5px 5px 5px 10px; font-size: 12px; border-right: 1px solid #000000;  text-align: center;">Proposer/Joint Life</td>
+                                    <td width="30%" style="padding: 5px 5px 5px 10px; font-size: 12px; border-right: 1px solid #000000;  text-align: center;"> Insured's Information
+                                 </tr>
+                                 </tbody>
+                              </table>
+                           </td>
+                        </tr>
+                        <tr>
+                           <td style="padding: 0px; font-family: Arial;">
+                              <table width="100%" cellpadding="0" cellspacing="0" border="0" style="border-color: #000000;border-style:solid;border-width:1px;">
+                                 <tbody>
+                                 <tr>
+                                    <td width="40%" style="padding: 5px 5px 5px 15px; font-size: 12px; border-right: 1px solid #000000;"><strong>1.</strong> Have you or your family member(s) traveled abroad since
+                                       01/01/2020?</td>
+                                    <td width="30%" style="padding: 5px 5px 5px 15px; font-size: 12px; border-right: 1px solid #000000;">
+                                       <table width="100%" cellpadding="0" cellspacing="0" border="0">
+                                          <tbody>
+                                          <tr>
+                                             <td width="50%" style="font-weight: bold; text-align: center; font-size: 10px;">
+                                                <input type="checkbox" th:checked="${traveledAbroad=='YES'}">Yes</td>
+                                             </td>
+                                             <td width="50%" style="font-weight: bold; text-align: center; font-size: 10px;">
+                                                <input type="checkbox" th:checked="${traveledAbroad=='NO'}">No</td>
+                                             </td>
+                                          </tr>
+                                          <tr>
+                                             <td colspan="2" style="padding: 5px 5px 5px 15px; font-size: 12px;">Date of return:
+                                                <span style="padding-left: 5px;" th:text="${dateOfReturn}"></span></td>
+                                          </tr>
+                                          <tr>
+                                             <td colspan="2" style="padding: 10px 5px 5px 15px; font-size: 12px;">If YES,
+                                                Mention name of the country/countries travelled to:
+                                                <span style="padding-left: 5px;" th:text="${countryTravelled}"></span></td>
+                                          </tr>
+                                          </tbody>
+                                       </table>
+                                    </td>
+                                    <td width="30%" style="padding: 5px 5px 5px 15px; font-size: 12px;">
+                                       <table width="100%" cellpadding="0" cellspacing="0" border="0">
+                                          <tbody>
+                                          <tr>
+                                             <td width="50%" style="font-weight: bold; text-align: center; font-size: 10px;">
+                                                <input type="checkbox" th:checked="${lIDataMap.traveledAbroad=='YES'}">Yes</td>
+                                             </td>
+                                             <td width="50%" style="font-weight: bold; text-align: center; font-size: 10px;">
+                                                <input type="checkbox" th:checked="${lIDataMap.traveledAbroad=='NO'}">No</td>
+                                             </td>
+                                          </tr>
+                                          <tr>
+                                             <td colspan="2" style="padding: 5px 5px 5px 15px; font-size: 12px;">Date of return:
+                                                <span style="padding-left: 5px;" th:text="${lIDataMap.dateOfReturn}"></span></td>
+                                          </tr>
+                                          <tr>
+                                             <td colspan="2" style="padding: 10px 5px 5px 15px; font-size: 12px;">If YES,
+                                                Mention name of the country/countries travelled to:
+                                                <span style="padding-left: 5px;" th:text="${lIDataMap.countryTravelled}"></span></td>
+                                          </tr>
+                                          </tbody>
+                                       </table>
+                                    </td>
+                                 </tr>
+                                 </tbody>
+                              </table>
+                           </td>
+                        </tr>
+                        <tr>
+                           <td style="padding: 0px; font-family: Arial;">
+                              <table width="100%" cellpadding="0" cellspacing="0" border="0" style="border-color: #000000;border-style:solid;border-width:1px;">
+                                 <tbody>
+                                 <tr>
+                                    <td width="40%" style="padding: 5px 5px 5px 15px; font-size: 12px; border-top: 1px solid #000000; border-right: 1px solid #000000;"><strong>2.</strong> Do you intend to travel abroad within the next 6 months?</td>
+                                    <td width="30%" style="padding: 5px 5px 5px 15px; font-size: 12px; border-top: 1px solid #000000; border-right: 1px solid #000000;">
+                                       <table width="100%" cellpadding="0" cellspacing="0" border="0">
+                                          <tbody>
+                                          <tr>
+                                             <td width="50%" style="font-weight: bold; text-align: center; font-size: 10px;">
+                                                <input type="checkbox" th:checked="${isTravelOverseas=='YES'}">Yes</td>
+                                             </td>
+                                             <td width="50%" style="font-weight: bold; text-align: center; font-size: 10px;">
+                                                <input type="checkbox" th:checked="${isTravelOverseas=='NO'}">No</td>
+                                             </td>
+                                          </tr>
+                                          <tr>
+                                             <td colspan="2" style="padding: 10px 5px 5px 15px; font-size: 12px;">If YES, mention name of the country/ countries:
+                                                <span style="padding-left: 5px;" th:text="${countryPlanningToTravel}"></span></td>
+                                          </tr>
+                                          <tr>
+                                             <td colspan="2" style="padding: 5px 5px 5px 15px; font-size: 12px;">Intended date of travel:
+                                                <span style="padding-left: 5px;" th:text="${dateOfTravel}"></span></td>
+                                          </tr>
+                                          <tr>
+                                             <td colspan="2" style="padding: 5px 5px 5px 15px; font-size: 12px;">Duration of stay:
+                                                <span style="padding-left: 5px;" th:text="${durationOfStay}"></span></td>
+                                          </tr>
+                                          </tbody>
+                                       </table>
+                                    </td>
+                                    <td width="30%" style="padding: 5px 5px 5px 15px; font-size: 12px; border-top: 1px solid #000000;">
+                                       <table width="100%" cellpadding="0" cellspacing="0" border="0">
+                                          <tbody>
+                                          <tr>
+                                             <td width="50%" style="font-weight: bold; text-align: center; font-size: 10px;">
+                                                <input type="checkbox" th:checked="${lIDataMap.isTravelOverseas=='YES'}">Yes</td>
+                                             </td>
+                                             <td width="50%" style="font-weight: bold; text-align: center; font-size: 10px;">
+                                                <input type="checkbox" th:checked="${lIDataMap.isTravelOverseas=='NO'}">No</td>
+                                             </td>
+                                          </tr>
+                                          <tr>
+                                             <td colspan="2" style="padding: 10px 5px 5px 15px; font-size: 12px;">If YES, mention name of the country/ countries:
+                                                <span style="padding-left: 5px;" th:text="${lIDataMap.countryPlanningToTravel}"></span></td>
+                                          </tr>
+                                          <tr>
+                                             <td colspan="2" style="padding: 5px 5px 5px 15px; font-size: 12px;">Intended date of travel:
+                                                <span style="padding-left: 5px;" th:text="${lIDataMap.dateOfTravel}"></span></td>
+                                          </tr>
+                                          <tr>
+                                             <td colspan="2" style="padding: 5px 5px 5px 15px; font-size: 12px;">Duration of stay:
+                                                <span style="padding-left: 5px;" th:text="${lIDataMap.durationOfStay}"></span></td>
+                                          </tr>
+                                          </tbody>
+                                       </table>
+                                    </td>
+                                 </tr>
+                                 </tbody>
+                              </table>
+                           </td>
+                        </tr>
+                        <tr>
+                           <td style="padding: 0px; font-family: Arial;">
+                              <table width="100%" cellpadding="0" cellspacing="0" border="0" style="border-color: #000000;border-style:solid;border-width:1px;">
+                                 <tbody>
+                                 <tr>
+                                    <td width="40%" style="padding: 5px 5px 5px 15px; font-size: 12px; border-top: 1px solid #000000; border-right: 1px solid #000000;"><strong>3.</strong> In the last 3 months, are you currently or your family
+                                       member(s) suffering from or have suffered from -flu like
+                                       symptoms, fever, sore throat, runny nose, persistent cough,
+                                       sore throat, shortness of breath, breathing difficulties,
+                                       malaise, gastro-intestinal symptoms such as nausea,
+                                       vomiting, diarrhea, advised to undergo test or awaiting test
+                                       results for SARS-CoV-2/COVID-19*?</td>
+                                    <td width="30%" style="padding: 5px 5px 5px 15px; font-size: 12px; border-top: 1px solid #000000; border-right: 1px solid #000000;">
+                                       <table width="100%" cellpadding="0" cellspacing="0" border="0">
+                                          <tbody>
+                                          <tr>
+                                             <td width="50%" style="font-weight: bold; text-align: center; font-size: 10px;">
+                                                <input type="checkbox" th:checked="${familyMemberSymptomsCovid=='YES'}">Yes</td>
+                                             </td>
+                                             <td width="50%" style="font-weight: bold; text-align: center; font-size: 10px;">
+                                                <input type="checkbox" th:checked="${familyMemberSymptomsCovid=='NO'}">No</td>
+                                             </td>
+                                          </tr>
+                                          <tr>
+                                             <td colspan="2" style="padding: 10px 5px 5px 15px; font-size: 12px;">If YES, mention details: tick appropriately</td>
+                                          </tr>
+                                          <tr>
+                                             <td colspan="2" style="padding: 5px 5px 5px 15px; font-size: 12px;">
+                                                Self <input type="checkbox" th:checked="${selfOrFamilyMember=='Self'}"> &nbsp;&nbsp;
+                                                Family Member <input type="checkbox" th:checked="${selfOrFamilyMember=='Family Member'}">
+                                             </td>
+                                          </tr>
+                                          <tr>
+                                             <td colspan="2" style="padding: 5px 5px 5px 15px; font-size: 12px;">Exact diagnosis:
+                                                <span style="padding-left: 5px;" th:text="${exactDiagnosis}"></span></td>
+                                          </tr>
+                                          <tr>
+                                             <td colspan="2" style="padding: 5px 5px 5px 15px; font-size: 12px;">Date of diagnosis:
+                                                <span style="padding-left: 5px;" th:text="${dateOfDiagnosis}"></span></td>
+                                          </tr>
+                                          <tr>
+                                             <td colspan="2" style="padding: 4px 5px 5px 15px; font-size: 12px;">Recovery (tick appropriately) &nbsp;
+                                                Yes <input type="checkbox" th:checked="${isRecoveredFromCovid=='YES'}"> &nbsp;&nbsp;
+                                                No <input type="checkbox" th:checked="${isRecoveredFromCovid=='NO'}">
+                                             </td>
+                                          </tr>
+                                          <tr>
+                                             <td colspan="2" style="padding: 5px 5px 5px 15px; font-size: 12px;">Date of Recovery:
+                                                <span style="padding-left: 5px;" th:text="${dateOfRecovery}"></span></td>
+                                          </tr>
+                                          </tbody>
+                                       </table>
+                                    </td>
+                                    <td width="30%" style="padding: 5px 5px 5px 15px; font-size: 12px; border-top: 1px solid #000000;">
+                                       <table width="100%" cellpadding="0" cellspacing="0" border="0">
+                                          <tbody>
+                                          <tr>
+                                             <td width="50%" style="font-weight: bold; text-align: center; font-size: 10px;">
+                                                <input type="checkbox" th:checked="${lIDataMap.familyMemberSymptomsCovid=='YES'}">Yes</td>
+                                             </td>
+                                             <td width="50%" style="font-weight: bold; text-align: center; font-size: 10px;">
+                                                <input type="checkbox" th:checked="${lIDataMap.familyMemberSymptomsCovid=='NO'}">No</td>
+                                             </td>
+                                          </tr>
+                                          <tr>
+                                             <td colspan="2" style="padding: 10px 5px 5px 15px; font-size: 12px;">If YES, mention details: tick appropriately</td>
+                                          </tr>
+                                          <tr>
+                                             <td colspan="2" style="padding: 5px 5px 5px 15px; font-size: 12px;">
+                                                Self <input type="checkbox" th:checked="${lIDataMap.selfOrFamilyMember=='Self'}"> &nbsp;&nbsp;
+                                                Family Member <input type="checkbox" th:checked="${lIDataMap.selfOrFamilyMember=='Family Member'}">
+                                             </td>
+                                          </tr>
+                                          <tr>
+                                             <td colspan="2" style="padding: 5px 5px 5px 15px; font-size: 12px;">Exact diagnosis:
+                                                <span style="padding-left: 5px;" th:text="${lIDataMap.exactDiagnosis}"></span></td>
+                                          </tr>
+                                          <tr>
+                                             <td colspan="2" style="padding: 5px 5px 5px 15px; font-size: 12px;">Date of diagnosis:
+                                                <span style="padding-left: 5px;" th:text="${lIDataMap.dateOfDiagnosis}"></span></td>
+                                          </tr>
+                                          <tr>
+                                             <td colspan="2" style="padding: 4px 5px 5px 15px; font-size: 12px;">Recovery (tick appropriately) &nbsp;
+                                                Yes <input type="checkbox" th:checked="${lIDataMap.isRecoveredFromCovid=='YES'}"> &nbsp;&nbsp;
+                                                No <input type="checkbox" th:checked="${lIDataMap.isRecoveredFromCovid=='NO'}">
+                                             </td>
+                                          </tr>
+                                          <tr>
+                                             <td colspan="2" style="padding: 5px 5px 5px 15px; font-size: 12px;">Date of Recovery:
+                                                <span style="padding-left: 5px;" th:text="${lIDataMap.dateOfRecovery}"></span></td>
+                                          </tr>
+                                          </tbody>
+                                       </table>
+                                    </td>
+                                 </tr>
+                                 </tbody>
+                              </table>
+                           </td>
+                        </tr>
+                        <tr>
+                           <td style="padding: 0px; font-family: Arial;">
+                              <table width="100%" cellpadding="0" cellspacing="0" border="0" style="border-color: #000000;border-style:solid;border-width:1px;">
+                                 <tbody>
+                                 <tr>
+                                    <td width="40%" style="padding: 5px 5px 5px 15px; font-size: 12px; border-top: 1px solid #000000; border-right: 1px solid #000000;">
+                                       <strong>4.</strong> Have you had direct contact with someone who has
+                                       been confirmed or is suspected to SARS-CoV-2/COVID-
+                                       19* positive? <br><br>
+                                       Or <br><br>
+                                       Have you Tested positive for the novel coronavirus
+                                       (SARS-CoV-2/COVID-19)?
+                                    </td>
+                                    <td width="30%" style="padding: 5px 5px 5px 15px; font-size: 12px; border-top: 1px solid #000000; border-right: 1px solid #000000;">
+                                       <table width="100%" cellpadding="0" cellspacing="0" border="0">
+                                          <tbody>
+                                          <tr>
+                                             <td width="50%" style="font-weight: bold; text-align: center; font-size: 10px;">
+                                                <input type="checkbox" th:checked="${isSuspectedCovid=='YES'}">Yes</td>
+                                             </td>
+                                             <td width="50%" style="font-weight: bold; text-align: center; font-size: 10px;">
+                                                <input type="checkbox" th:checked="${isSuspectedCovid=='NO'}">No</td>
+                                             </td>
+                                          </tr>
+                                          <tr>
+                                             <td colspan="2" style="padding: 10px 5px 5px 15px; font-size: 12px;">If YES, mention details:</td>
+                                          </tr>
+                                          <tr>
+                                             <td colspan="2" style="padding: 5px 5px 5px 15px; font-size: 12px;">Date of positive diagnosis for SARS-CoV-2/COVID-
+                                                19* (please mention NA if not applicable) -
+                                                <span style="padding-left: 5px;" th:text="${dateOfCovidPositive}"></span></td>
+                                          </tr>
+                                          <tr>
+                                             <td colspan="2" style="padding: 5px 5px 5px 15px; font-size: 12px;">Specify the name of test done: (please mention NA
+                                                if not applicable) -
+                                                <span style="padding-left: 5px;" th:text="${nameOfCovidTest}"></span></td>
+                                          </tr>
+                                          <tr>
+                                             <td colspan="2" style="padding: 5px 5px 5px 15px; font-size: 12px;">Details of subsequent tests (please mention NA if
+                                                not applicable) -
+                                                <span style="padding-left: 5px;" th:text="${detailOfSubsequentTest}"></span></td>
+                                          </tr>
+                                          <tr>
+                                             <td colspan="2" style="padding: 4px 5px 5px 15px; font-size: 12px;">Did you require admission to hospital? &nbsp;
+                                                <br>
+                                                Yes <input type="checkbox" th:checked="${hospitalAdmission=='YES'}"> &nbsp;&nbsp;
+                                                No <input type="checkbox" th:checked="${hospitalAdmission=='NO'}">
+                                             </td>
+                                          </tr>
+                                          <tr>
+                                             <td colspan="2" style="padding: 10px 5px 5px 15px; font-size: 12px;">If YES, mention did you require stay in:</td>
+                                          </tr>
+                                          <tr>
+                                             <td colspan="2" style="padding: 4px 5px 5px 15px; font-size: 12px;">
+                                                <input type="checkbox" th:checked="${requiredMedicalUnit=='High-dependency unit (HDU)'}"> High-dependency Unit (HDU)
+                                             </td>
+                                          </tr>
+                                          <tr>
+                                             <td colspan="2" style="padding: 4px 5px 5px 15px; font-size: 12px;">
+                                                <input type="checkbox" th:checked="${requiredMedicalUnit=='Intensive care unit (ICU)'}"> Intensive Care Unit (ICU)</td>
+                                          </tr>
+                                          <tr>
+                                             <td colspan="2" style="padding: 4px 5px 5px 15px; font-size: 12px;">
+                                                <input type="checkbox" th:checked="${requiredMedicalUnit=='Intensive treatment unit (ITU)'}"> Intensive Treatment Unit (ITU)</td>
+                                          </tr>
+                                          <tr>
+                                             <td colspan="2" style="padding: 4px 5px 5px 15px; font-size: 12px;">
+                                                <input type="checkbox" th:checked="${requiredMedicalUnit=='Critical care unit (CCU) admission'}"> Critical Care Unit (CCU)</td>
+                                          </tr>
+                                          <tr>
+                                             <td colspan="2" style="padding: 4px 5px 5px 15px; font-size: 12px;">
+                                                <input type="checkbox" th:checked="${requiredMedicalUnit=='Other'}"> Others:
+                                                &nbsp;<span style="padding-left: 5px;" th:text="${requireMedicalOtherUnit}"></span></td>
+                                             </td>
+                                          </tr>
+                                          <tr>
+                                             <td colspan="2" style="padding: 4px 5px 5px 15px; font-size: 12px;">Support of a ventilator? &nbsp;
+                                                <br>
+                                                Yes <input type="checkbox" th:checked="${supportOfVentilator=='YES'}"> &nbsp;&nbsp;
+                                                No <input type="checkbox" th:checked="${supportOfVentilator=='NO'}">
+                                             </td>
+
+                                          </tr>
+                                          <tr>
+                                             <td colspan="2" style="padding: 4px 5px 5px 15px; font-size: 12px;">Have you made a full physical function recovery, able to
+                                                perform your normal occupational or daily duties, without
+                                                any ongoing symptoms or restrictions (i.e. shortness of
+                                                breath or fatigue)? &nbsp;
+                                                <br>
+                                                Yes <input type="checkbox" th:checked="${fullPhysicalFunctionRecovery=='YES'}"> &nbsp;&nbsp;
+                                                No <input type="checkbox" th:checked="${fullPhysicalFunctionRecovery=='NO'}">
+                                             </td>
+                                          </tr>
+                                          <tr>
+                                             <td colspan="2" style="padding: 5px 5px 5px 15px; font-size: 12px;">Date of Recovery:
+                                                <span style="padding-left: 5px;" th:text="${whenDidFullRecovery}"></span></td>
+                                          </tr>
+                                          </tbody>
+                                       </table>
+                                    </td>
+                                    </td>
+                                    <td width="30%" style="padding: 5px 5px 5px 15px; font-size: 12px; border-top: 1px solid #000000;">
+                                       <table width="100%" cellpadding="0" cellspacing="0" border="0">
+                                          <tbody>
+                                          <tr>
+                                             <td width="50%" style="font-weight: bold; text-align: center; font-size: 10px;">
+                                                <input type="checkbox" th:checked="${lIDataMap.isSuspectedCovid=='YES'}">Yes</td>
+                                             </td>
+                                             <td width="50%" style="font-weight: bold; text-align: center; font-size: 10px;">
+                                                <input type="checkbox" th:checked="${lIDataMap.isSuspectedCovid=='NO'}">No</td>
+                                             </td>
+                                          </tr>
+                                          <tr>
+                                             <td colspan="2" style="padding: 10px 5px 5px 15px; font-size: 12px;">If YES, mention details:</td>
+                                          </tr>
+                                          <tr>
+                                             <td colspan="2" style="padding: 5px 5px 5px 15px; font-size: 12px;">Date of positive diagnosis for SARS-CoV-2/COVID-
+                                                19* (please mention NA if not applicable) -
+                                                <span style="padding-left: 5px;" th:text="${lIDataMap.dateOfCovidPositive}"></span></td>
+                                          </tr>
+                                          <tr>
+                                             <td colspan="2" style="padding: 5px 5px 5px 15px; font-size: 12px;">Specify the name of test done: (please mention NA
+                                                if not applicable) -
+                                                <span style="padding-left: 5px;" th:text="${lIDataMap.nameOfCovidTest}"></span></td>
+                                          </tr>
+                                          <tr>
+                                             <td colspan="2" style="padding: 5px 5px 5px 15px; font-size: 12px;">Details of subsequent tests (please mention NA if
+                                                not applicable) -
+                                                <span style="padding-left: 5px;" th:text="${lIDataMap.detailOfSubsequentTest}"></span></td>
+                                          </tr>
+                                          <tr>
+                                             <td colspan="2" style="padding: 4px 5px 5px 15px; font-size: 12px;">Did you require admission to hospital? &nbsp;
+                                                <br>
+                                                Yes <input type="checkbox" th:checked="${lIDataMap.hospitalAdmission=='YES'}"> &nbsp;&nbsp;
+                                                No <input type="checkbox" th:checked="${lIDataMap.hospitalAdmission=='NO'}">
+                                             </td>
+                                          </tr>
+                                          <tr>
+                                             <td colspan="2" style="padding: 10px 5px 5px 15px; font-size: 12px;">If YES, mention did you require stay in:</td>
+                                          </tr>
+                                          <tr>
+                                             <td colspan="2" style="padding: 4px 5px 5px 15px; font-size: 12px;">
+                                                <input type="checkbox" th:checked="${lIDataMap.requiredMedicalUnit=='High-dependency unit (HDU)'}"> High-dependency Unit (HDU)</td>
+                                          </tr>
+                                          <tr>
+                                             <td colspan="2" style="padding: 4px 5px 5px 15px; font-size: 12px;">
+                                                <input type="checkbox" th:checked="${lIDataMap.requiredMedicalUnit=='Intensive care unit (ICU)'}"> Intensive Care Unit (ICU)</td>
+                                          </tr>
+                                          <tr>
+                                             <td colspan="2" style="padding: 4px 5px 5px 15px; font-size: 12px;">
+                                                <input type="checkbox" th:checked="${lIDataMap.requiredMedicalUnit=='Intensive treatment unit (ITU)'}"> Intensive Treatment Unit (ITU)</td>
+                                          </tr>
+                                          <tr>
+                                             <td colspan="2" style="padding: 4px 5px 5px 15px; font-size: 12px;">
+                                                <input type="checkbox" th:checked="${lIDataMap.requiredMedicalUnit=='Critical care unit (CCU) admission'}"> Critical Care Unit (CCU)</td>
+                                          </tr>
+                                          <tr>
+                                             <td colspan="2" style="padding: 4px 5px 5px 15px; font-size: 12px;">
+                                                <input type="checkbox" th:checked="${lIDataMap.requiredMedicalUnit=='Other'}"> Others:
+                                                &nbsp;<span style="padding-left: 5px;" th:text="${lIDataMap.requireMedicalOtherUnit}"></span></td>
+                                             </td>
+                                          </tr>
+                                          <tr>
+                                             <td colspan="2" style="padding: 4px 5px 5px 15px; font-size: 12px;">Support of a ventilator? &nbsp;
+                                                <br>
+                                                Yes <input type="checkbox" th:checked="${lIDataMap.supportOfVentilator=='YES'}"> &nbsp;&nbsp;
+                                                No <input type="checkbox" th:checked="${lIDataMap.supportOfVentilator=='NO'}">
+                                             </td>
+
+                                          </tr>
+                                          <tr>
+                                             <td colspan="2" style="padding: 4px 5px 5px 15px; font-size: 12px;">Have you made a full physical function recovery, able to
+                                                perform your normal occupational or daily duties, without
+                                                any ongoing symptoms or restrictions (i.e. shortness of
+                                                breath or fatigue)? &nbsp;
+                                                <br>
+                                                Yes <input type="checkbox" th:checked="${lIDataMap.fullPhysicalFunctionRecovery=='YES'}"> &nbsp;&nbsp;
+                                                No <input type="checkbox" th:checked="${lIDataMap.fullPhysicalFunctionRecovery=='NO'}">
+                                             </td>
+                                          </tr>
+                                          <tr>
+                                             <td colspan="2" style="padding: 5px 5px 5px 15px; font-size: 12px;">Date of Recovery:
+                                                <span style="padding-left: 5px;" th:text="${lIDataMap.whenDidFullRecovery}"></span></td>
+                                          </tr>
+                                          </tbody>
+                                       </table>
+                                    </td>
+                                    </td>
+                                 </tr>
+                                 </tbody>
+                              </table>
+                           </td>
+                        </tr>
+                        <tr>
+                           <td colspan="6" style="padding: 0px; font-family: Arial;">
+                              <table width="100%" cellpadding="0" cellspacing="0" border="0" style="border-color: #000000;border-style:solid;border-width:1px;">
+                                 <tbody>
+                                    <td width="40%" style="padding: 5px 5px 5px 15px; font-size: 12px; border-top: 1px solid #000000; border-right: 1px solid #000000;">
+                                       <strong>5.</strong> Are you serving a notice of quarantine in any form imposed by
+                                       local health authorities or government or airport authority for
+                                       possible exposure to novel coronavirus (SARS- CoV2/COVID-
+                                       19)?</td>
+                                    <td width="30%" style="padding: 5px 5px 5px 15px; font-size: 12px; border-top: 1px solid #000000; border-right: 1px solid #000000;">
+                                       <table width="100%" cellpadding="0" cellspacing="0" border="0">
+                                          <tbody>
+                                             <tr>
+                                                <td width="50%" style="font-weight: bold; text-align: center; font-size: 10px;">
+                                                   <input type="checkbox" th:checked="${servingQuarantineNotice=='YES'}">Yes</td>
+                                                </td>
+                                                <td width="50%" style="font-weight: bold; text-align: center; font-size: 10px;">
+                                                   <input type="checkbox" th:checked="${servingQuarantineNotice=='NO'}">No</td>
+                                                </td>
+                                             </tr>
+                                             <tr>
+                                                <td colspan="2" style="padding: 10px 5px 5px 15px; font-size: 12px;">If YES, mention details:</td>
+                                             </tr>
+                                             <tr>
+                                                <td colspan="2" style="padding: 5px 5px 5px 15px; font-size: 12px;">Location:
+                                                   <span style="padding-left: 5px;" th:text="${detailLocation}"></span></td>
+                                             </tr>
+                                             <tr>
+                                                <td colspan="2" style="padding: 5px 5px 5px 15px; font-size: 12px;">Quarantine period:
+                                                   From <span style="padding-left: 5px; font-weight: bold;" th:text="${quarantineStartDate}"></span>
+                                                   to <span style="padding-left: 5px; font-weight: bold;" th:text="${quarantineEndDate}"></span>
+                                                </td>
+                                             </tr>
+                                          </tbody>
+                                       </table>
+                                    </td>
+                                    <td width="30%" style="padding: 5px 5px 5px 15px; font-size: 12px; border-top: 1px solid #000000;">
+                                       <table width="100%" cellpadding="0" cellspacing="0" border="0">
+                                          <tbody>
+                                          <tr>
+                                             <td width="50%" style="font-weight: bold; text-align: center; font-size: 10px;">
+                                                <input type="checkbox" th:checked="${lIDataMap.servingQuarantineNotice=='YES'}">Yes</td>
+                                             </td>
+                                             <td width="50%" style="font-weight: bold; text-align: center; font-size: 10px;">
+                                                <input type="checkbox" th:checked="${lIDataMap.servingQuarantineNotice=='NO'}">No</td>
+                                             </td>
+                                          </tr>
+                                          <tr>
+                                             <td colspan="2" style="padding: 10px 5px 5px 15px; font-size: 12px;">If YES, mention details:</td>
+                                          </tr>
+                                          <tr>
+                                             <td colspan="2" style="padding: 5px 5px 5px 15px; font-size: 12px;">Location:
+                                                <span style="padding-left: 5px;" th:text="${lIDataMap.detailLocation}"></span></td>
+                                          </tr>
+                                          <tr>
+                                             <td colspan="2" style="padding: 5px 5px 5px 15px; font-size: 12px;">Quarantine period:
+                                                From <span style="padding-left: 5px; font-weight: bold;" th:text="${lIDataMap.quarantineStartDate}"></span>
+                                                to <span style="padding-left: 5px; font-weight: bold;" th:text="${lIDataMap.quarantineEndDate}"></span>
+                                             </td>
+                                          </tr>
+                                          </tbody>
+                                       </table>
+                                    </td>
+                                 </tr>
+                                 </tbody>
+                              </table>
+                           </td>
+                        </tr>
+                        <tr>
+                           <td colspan="6" style="padding: 0px; font-family: Arial;">
+                              <table width="100%" cellpadding="0" cellspacing="0" border="0" style="border-color: #ccc;border-style:solid;border-width:1px;">
+                                 <tbody>
+                                 <tr>
+                                    <td width="100%" style="padding: 20px 5px 5px 15px; font-size: 17px; text-align: center; font-weight: bold; text-decoration: underline;">
+                                       If answer to Question 3 - 5 is yes please provide all related prescriptions, records and medical reports</td>
+                                 </tr>
+                                 <tr>
+                                    <td width="100%" style="padding: 30px 5px 5px 15px; font-size: 15px; text-align: center; font-weight: bold; text-decoration: underline;">
+                                       COVID-19 (Coronavirus) Exposure Questionnaire for Health Care Workers</td>
+                                 </tr>
+                                 </tbody>
+                              </table>
+                           </td>
+                        </tr>
+                        <tr>
+                           <td style="padding: 0px; font-family: Arial;">
+                              <table width="100%" cellpadding="0" cellspacing="0" border="0" style="border-color: #000000;border-style:solid;border-width:1px;">
+                                 <tbody>
+                                 <tr>
+                                    <td width="50%" style="padding: 5px 5px 5px 10px; font-size: 12px; border-right: 1px solid #000000;  text-align: center;">Information Required</td>
+                                    <td width="25%" style="padding: 5px 5px 5px 10px; font-size: 12px; border-right: 1px solid #000000;  text-align: center;">Proposer/Joint Life</td>
+                                    <td width="25%" style="padding: 5px 5px 5px 10px; font-size: 12px; border-right: 1px solid #000000;  text-align: center;"> Insured's Information
+                                 </tr>
+                                 </tbody>
+                              </table>
+                           </td>
+                        </tr>
+                        <tr>
+                           <td style="padding: 0px; font-family: Arial;">
+                              <table width="100%" cellpadding="0" cellspacing="0" border="0" style="border-color: #000000;border-style:solid;border-width:1px;">
+                                 <tbody>
+                                 <tr>
+                                    <td width="50%" style="padding: 5px 5px 5px 10px; font-size: 12px; border-right: 1px solid #000000;  text-align: left;">1. Occupation</td>
+                                    <td width= "25%" style="padding: 5px 5px 5px 10px; font-size: 12px; border-right: 1px solid #000000;  text-align: center;" th:text="${occupation}"></td>
+                                    <td width="25%" style="padding: 5px 5px 5px 10px; font-size: 12px; border-right: 1px solid #000000;  text-align: center;" th:text="${lIDataMap.occupation}"></td>
+                                 </tr>
+                                 </tbody>
+                              </table>
+                           </td>
+                        </tr>
+                        <tr>
+                           <td style="padding: 0px; font-family: Arial;">
+                              <table width="100%" cellpadding="0" cellspacing="0" border="0" style="border-color: #000000;border-style:solid;border-width:1px;">
+                                 <tbody>
+                                 <tr>
+                                    <td width="50%" style="padding: 5px 5px 5px 10px; font-size: 12px; border-right: 1px solid #000000;  text-align: left;">2. Medical Specialty (if applicable)</td>
+                                    <td width= "25%" style="padding: 5px 5px 5px 10px; font-size: 12px; border-right: 1px solid #000000;  text-align: center;" th:text="${medicalSpecialty}"></td>
+                                    <td width="25%" style="padding: 5px 5px 5px 10px; font-size: 12px; border-right: 1px solid #000000;  text-align: center;" th:text="${lIDataMap.medicalSpecialty}"></td>
+                                 </tr>
+                                 </tbody>
+                              </table>
+                           </td>
+                        </tr>
+                        <tr>
+                           <td style="padding: 0px; font-family: Arial;">
+                              <table width="100%" cellpadding="0" cellspacing="0" border="0" style="border-color: #000000;border-style:solid;border-width:1px;">
+                                 <tbody>
+                                 <tr>
+                                    <td width="50%" style="padding: 5px 5px 5px 10px; font-size: 12px; border-right: 1px solid #000000;  text-align: left;">3. Exact nature of duties (including procedural or non-procedural duties)</td>
+                                    <td width= "25%" style="padding: 5px 5px 5px 10px; font-size: 12px; border-right: 1px solid #000000;  text-align: center;" th:text="${natureOfDuties}"></td>
+                                    <td width="25%" style="padding: 5px 5px 5px 10px; font-size: 12px; border-right: 1px solid #000000;  text-align: center;" th:text="${lIDataMap.natureOfDuties}"></td>
+                                 </tr>
+                                 </tbody>
+                              </table>
+                           </td>
+                        </tr>
+                        <tr>
+                           <td style="padding: 0px; font-family: Arial;">
+                              <table width="100%" cellpadding="0" cellspacing="0" border="0" style="border-color: #000000;border-style:solid;border-width:1px;">
+                                 <tbody>
+                                 <tr>
+                                    <td width="50%" style="padding: 5px 5px 5px 10px; font-size: 12px; border-right: 1px solid #000000;  text-align: left;">4. Name and address of the healthcare facility or facilities
+                                       in which you work.</td>
+                                    <td width= "25%" style="padding: 5px 5px 5px 10px; font-size: 12px; border-right: 1px solid #000000;  text-align: center;" th:text="${healthCareNameAndAddress}"></td>
+                                    <td width="25%" style="padding: 5px 5px 5px 10px; font-size: 12px; border-right: 1px solid #000000;  text-align: center;" th:text="${lIDataMap.healthCareNameAndAddress}"></td>
+                                 </tr>
+                                 </tbody>
+                              </table>
+                           </td>
+                        </tr>
+                        <tr>
+                           <td style="padding: 0px; font-family: Arial;">
+                              <table width="100%" cellpadding="0" cellspacing="0" border="0" style="border-color: #000000;border-style:solid;border-width:1px;">
+                                 <tbody>
+                                 <tr>
+                                    <td width="50%" style="padding: 5px 5px 5px 10px; font-size: 12px; border-right: 1px solid #000000;  text-align: left;">5. Name of the Health Authority under which you are
+                                       registered.</td>
+                                    <td width= "25%" style="padding: 5px 5px 5px 10px; font-size: 12px; border-right: 1px solid #000000;  text-align: center;" th:text="${healthAuthorityName}"></td>
+                                    <td width="25%" style="padding: 5px 5px 5px 10px; font-size: 12px; border-right: 1px solid #000000;  text-align: center;" th:text="${lIDataMap.healthAuthorityName}"></td>
+                                 </tr>
+                                 </tbody>
+                              </table>
+                           </td>
+                        </tr>
+                        <tr>
+                           <td style="padding: 0px; font-family: Arial;">
+                              <table width="100%" cellpadding="0" cellspacing="0" border="0" style="border-color: #000000;border-style:solid;border-width:1px;">
+                                 <tbody>
+                                 <tr>
+                                    <td width="50%" style="padding: 5px 5px 5px 10px; font-size: 12px; border-right: 1px solid #000000;  text-align: left;">6. Does your healthcare facility have sufficient personal
+                                       protective equipment (PPE) to provide to its workforce?</td>
+                                    <td width= "25%" style="padding: 5px 5px 5px 10px; font-size: 12px; border-right: 1px solid #000000;  text-align: center;">
+                                       <table width="100%" cellpadding="0" cellspacing="0" border="0">
+                                          <tbody>
+                                          <tr>
+                                             <td width="50%" style="font-weight: bold; text-align: center; font-size: 10px;">
+                                                <input type="checkbox" th:checked="${healthCareFacilityPPE=='YES'}">Yes</td>
+                                             </td>
+                                             <td width="50%" style="font-weight: bold; text-align: center; font-size: 10px;">
+                                                <input type="checkbox" th:checked="${healthCareFacilityPPE=='NO'}">No</td>
+                                             </td>
+                                          </tr>
+                                          </tbody>
+                                       </table>
+                                    </td>
+                                    <td width="25%" style="padding: 5px 5px 5px 10px; font-size: 12px; border-right: 1px solid #000000;  text-align: center;">
+                                       <table width="100%" cellpadding="0" cellspacing="0" border="0">
+                                          <tbody>
+                                          <tr>
+                                             <td width="50%" style="font-weight: bold; text-align: center; font-size: 10px;">
+                                                <input type="checkbox" th:checked="${lIDataMap.healthCareFacilityPPE=='YES'}">Yes</td>
+                                             </td>
+                                             <td width="50%" style="font-weight: bold; text-align: center; font-size: 10px;">
+                                                <input type="checkbox" th:checked="${lIDataMap.healthCareFacilityPPE=='NO'}">No</td>
+                                             </td>
+                                          </tr>
+                                          </tbody>
+                                       </table>
+                                    </td>
+                                 </tr>
+                                 </tbody>
+                              </table>
+                           </td>
+                        </tr>
+                        <tr>
+                           <td style="padding: 0px; font-family: Arial;">
+                              <table width="100%" cellpadding="0" cellspacing="0" border="0" style="border-color: #000000;border-style:solid;border-width:1px;">
+                                 <tbody>
+                                 <tr>
+                                    <td width="50%" style="padding: 5px 5px 5px 10px; font-size: 12px; border-right: 1px solid #000000;  text-align: left;">7. Have you been or do your work duties involve close contact
+                                       with anyone who has been quarantined or who has been
+                                       diagnosed with novel coronavirus (SARS-CoV-2/COVID-19)?</td>
+                                    <td width= "25%" style="padding: 5px 5px 5px 10px; font-size: 12px; border-right: 1px solid #000000;  text-align: center;">
+                                       <table width="100%" cellpadding="0" cellspacing="0" border="0">
+                                          <tbody>
+                                          <tr>
+                                             <td width="50%" style="font-weight: bold; text-align: center; font-size: 10px;">
+                                                <input type="checkbox" th:checked="${closeContactWithQuarantined=='YES'}">Yes</td>
+                                             </td>
+                                             <td width="50%" style="font-weight: bold; text-align: center; font-size: 10px;">
+                                                <input type="checkbox" th:checked="${closeContactWithQuarantined=='NO'}">No</td>
+                                             </td>
+                                          </tr>
+                                          <tr>
+                                             <td colspan="2" style="padding: 10px 5px 5px 15px; font-size: 12px;">If yes, please provide details including nature of work for
+                                                patients with novel coronavirus (SARS-CoV-2/COVID-19):
+                                                <span style="padding-left: 5px;" th:text="${natureOfWorkForPatients}"></span></td>
+                                          </tr>
+                                          </tbody>
+                                       </table>
+                                    </td>
+                                    <td width="25%" style="padding: 5px 5px 5px 10px; font-size: 12px; border-right: 1px solid #000000;  text-align: center;" >
+                                       <table width="100%" cellpadding="0" cellspacing="0" border="0">
+                                          <tbody>
+                                          <tr>
+                                             <td width="50%" style="font-weight: bold; text-align: center; font-size: 10px;">
+                                                <input type="checkbox" th:checked="${lIDataMap.closeContactWithQuarantined=='YES'}">Yes</td>
+                                             </td>
+                                             <td width="50%" style="font-weight: bold; text-align: center; font-size: 10px;">
+                                                <input type="checkbox" th:checked="${lIDataMap.closeContactWithQuarantined=='NO'}">No</td>
+                                             </td>
+                                          </tr>
+                                          <tr>
+                                             <td colspan="2" style="padding: 10px 5px 5px 15px; font-size: 12px;">If yes, please provide details including nature of work for
+                                                patients with novel coronavirus (SARS-CoV-2/COVID-19):
+                                                <span style="padding-left: 5px;" th:text="${lIDataMap.natureOfWorkForPatients}"></span></td>
+                                          </tr>
+                                          </tbody>
+                                       </table>
+                                    </td>
+                                 </tr>
+                                 </tbody>
+                              </table>
+                           </td>
+                        </tr>
+                        <tr>
+                           <td style="padding: 0px; font-family: Arial;">
+                              <table width="100%" cellpadding="0" cellspacing="0" border="0" style="border-color: #000000;border-style:solid;border-width:1px;">
+                                 <tbody>
+                                 <tr>
+                                    <td width="50%" style="padding: 5px 5px 5px 10px; font-size: 12px; border-right: 1px solid #000000;  text-align: left;">8. Have you ever been on voluntary leave, or placed on
+                                       compulsory leave of absence/sick leave, due to a possible
+                                       exposure to novel coronavirus (SARS-CoV-2/COVID-19)?</td>
+                                    <td width= "25%" style="padding: 5px 5px 5px 10px; font-size: 12px; border-right: 1px solid #000000;  text-align: center;" >
+                                       <table width="100%" cellpadding="0" cellspacing="0" border="0">
+                                          <tbody>
+                                          <tr>
+                                             <td width="50%" style="font-weight: bold; text-align: center; font-size: 10px;">
+                                                <input type="checkbox" th:checked="${voluntaryOrCompulsoryLeave=='YES'}">Yes</td>
+                                             </td>
+                                             <td width="50%" style="font-weight: bold; text-align: center; font-size: 10px;">
+                                                <input type="checkbox" th:checked="${voluntaryOrCompulsoryLeave=='NO'}">No</td>
+                                             </td>
+                                          </tr>
+                                          <tr>
+                                             <td colspan="2" style="padding: 10px 5px 5px 15px; font-size: 12px;">If yes, please provide relevant period/dates:
+                                                <span style="padding-left: 5px;" th:text="${dateOfLeave}"></span></td>
+                                          </tr>
+                                          <tr>
+                                             <td colspan="2" style="padding: 5px 5px 5px 15px; font-size: 12px;">and details:
+                                                <span style="padding-left: 5px;" th:text="${detailLeaveInformation}"></span></td>
+                                          </tr>
+                                          </tbody>
+                                       </table>
+                                    </td>
+                                    <td width="25%" style="padding: 5px 5px 5px 10px; font-size: 12px; border-right: 1px solid #000000;  text-align: center;" >
+                                       <table width="100%" cellpadding="0" cellspacing="0" border="0">
+                                          <tbody>
+                                          <tr>
+                                             <td width="50%" style="font-weight: bold; text-align: center; font-size: 10px;">
+                                                <input type="checkbox" th:checked="${lIDataMap.voluntaryOrCompulsoryLeave=='YES'}">Yes</td>
+                                             </td>
+                                             <td width="50%" style="font-weight: bold; text-align: center; font-size: 10px;">
+                                                <input type="checkbox" th:checked="${lIDataMap.voluntaryOrCompulsoryLeave=='NO'}">No</td>
+                                             </td>
+                                          </tr>
+                                          <tr>
+                                             <td colspan="2" style="padding: 10px 5px 5px 15px; font-size: 12px;">If yes, please provide relevant period/dates:
+                                                <span style="padding-left: 5px;" th:text="${lIDataMap.dateOfLeave}"></span></td>
+                                          </tr>
+                                          <tr>
+                                             <td colspan="2" style="padding: 5px 5px 5px 15px; font-size: 12px;">and details:
+                                                <span style="padding-left: 5px;" th:text="${lIDataMap.detailLeaveInformation}"></span></td>
+                                          </tr>
+                                          </tbody>
+                                       </table>
+                                    </td>
+                                 </tr>
+                                 </tbody>
+                              </table>
+                           </td>
+                        </tr>
+                        <tr>
+                           <td style="padding: 0px; font-family: Arial;">
+                              <table width="100%" cellpadding="0" cellspacing="0" border="0" style="border-color: #000000;border-style:solid;border-width:1px;">
+                                 <tbody>
+                                 <tr>
+                                    <td width="50%" style="padding: 5px 5px 5px 10px; font-size: 12px; border-right: 1px solid #000000;  text-align: left;">9. Are you currently in good health?</td>
+                                    <td width= "25%" style="padding: 5px 5px 5px 10px; font-size: 12px; border-right: 1px solid #000000;  text-align: center;" >
+                                       <table width="100%" cellpadding="0" cellspacing="0" border="0">
+                                          <tbody>
+                                          <tr>
+                                             <td width="50%" style="font-weight: bold; text-align: center; font-size: 10px;">
+                                                <input type="checkbox" th:checked="${currentlyGoodHealth=='YES'}">Yes</td>
+                                             </td>
+                                             <td width="50%" style="font-weight: bold; text-align: center; font-size: 10px;">
+                                                <input type="checkbox" th:checked="${currentlyGoodHealth=='NO'}">No</td>
+                                             </td>
+                                          </tr>
+                                          <tr>
+                                             <td colspan="2" style="padding: 10px 5px 5px 15px; font-size: 12px;">If No, please share details:
+                                                <span style="padding-left: 5px;" th:text="${healthDetails}"></span></td>
+                                          </tr>
+                                          </tbody>
+                                       </table>
+                                    </td>
+                                    <td width="25%" style="padding: 5px 5px 5px 10px; font-size: 12px; border-right: 1px solid #000000;  text-align: center;">
+                                       <table width="100%" cellpadding="0" cellspacing="0" border="0">
+                                          <tbody>
+                                          <tr>
+                                             <td width="50%" style="font-weight: bold; text-align: center; font-size: 10px;">
+                                                <input type="checkbox" th:checked="${lIDataMap.currentlyGoodHealth=='YES'}">Yes</td>
+                                             </td>
+                                             <td width="50%" style="font-weight: bold; text-align: center; font-size: 10px;">
+                                                <input type="checkbox" th:checked="${lIDataMap.currentlyGoodHealth=='NO'}">No</td>
+                                             </td>
+                                          </tr>
+                                          <tr>
+                                             <td colspan="2" style="padding: 10px 5px 5px 15px; font-size: 12px;">If No, please share details:
+                                                <span style="padding-left: 5px;" th:text="${lIDataMap.healthDetails}"></span></td>
+                                          </tr>
+                                          </tbody>
+                                       </table>
+                                    </td>
+                                 </tr>
+                                 </tbody>
+                              </table>
+                           </td>
+                        </tr>
+                        <tr>
+                           <td colspan="6" style="padding: 0px; font-family: Arial;">
+                              <table width="100%" cellpadding="0" cellspacing="0" border="0" style="border-color: #ccc;border-style:solid;border-width:1px;">
+                                 <tbody>
+                                 <tr>
+                                    <td width="100%" style="padding: 15px 5px 5px 15px; font-size: 12px; font-weight: normal;">I hereby declare and agree that the above particulars and answers are complete and true, that I have not held back any relevant
+                                       facts or details, and that the answers to questionnaire will form part of the application for the desired insurance on my life.</td>
+                                 </tr>
+                                 <tr>
+                                    <td width="100%" style="padding: 20px 5px 5px 15px; font-size: 12px; font-weight: normal;">Date:
+                                       <span style="padding-left: 5px;" th:text="${currentDate}"></span></td>
+                                    </td>
+                                 </tr>
+                                 <tr>
+                                    <td width="100%" style="padding: 25px 5px 5px 15px; font-size: 12px;">____________________</td>
+                                 </tr>
+                                 <tr>
+                                    <td width="100%" style="padding: 15px 5px 5px 15px; font-size: 12px; font-style: italic;">Health care Workers shall mean all registered health care professionals (doctors, nurses, allied health professionals including
+                                       physiotherapists, pharmacists, phlebotomists etc.) involved in direct patient care</td>
+                                 </tr>
+                                 </tbody>
+                              </table>
+                           </td>
+                        </tr>
+                     </tbody>
+                  </table>
+               </td>

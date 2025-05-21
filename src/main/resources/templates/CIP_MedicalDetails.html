@@ -1,0 +1,339 @@
+<td style="font-family: arial;">
+						<!-- Medical Details Start here-->
+						<table cellspacing="0" cellpadding="0" width="100%" style="border-collapse: collapse; border-color: #ccc;border-style:solid;border-width:1px;">
+							<tbody>
+								<tr>
+									<th colspan="6" style="background-color: #003770;border-color: #ccc;border-style:solid;border-width:1px; color: #fff;font-size: 9px; font-family: arial; padding: 2px 2px" align="left">E. Medical Information</th>
+								</tr>
+								<tr>
+									<td>
+										<table width="100%" cellspacing="0" cellpadding="0" style="border-collapse: collapse; border-color: #ccc;border-style:solid;border-width:1px;">
+											<tbody>
+												<tr>
+													<td style="padding: 5px 5px 5px 15px;border-color: #888;border-style:solid;border-width:1px; font-weight: bold;font-size:10px;" width="80%">
+														<strong>1.Family Details</strong>
+													</td>
+													<td width="10%" style="padding: 2px 2px;text-align: center;border-color: #ccc;border-style:solid;border-width:1px;font-weight: bold;font-size:9px;">
+														<strong>Proposer</strong>
+													</td>
+													<td width="10%" style="padding: 2px 2px;text-align: center;border-color: #ccc;border-style:solid;border-width:1px;font-weight: bold;font-size:9px;">
+														<strong>Life to be Insured</strong>
+													</td>
+												</tr>
+												<tr>
+													<td style="padding:5px 5px 5px 15px;border-color: #ccc;border-style:solid;border-width:1px;font-weight: bold;font-size:10px;" width="80%">
+														<strong>Has any two (2) or more of your family members (parents &amp; Siblings) ever been diagnosed with diabetes or hypertension or kidney failure or cancer or heart Attack or any Hereditory Disorder before the age of 60 ?</strong>
+													</td>
+													<td th:if="${proposerFormFlag} == true" style="padding: 2px 2px;text-align: center;border-color: #ccc;border-style:solid;border-width:1px;font-size:9px;text-transform:uppercase;" th:text="${diseaseBefor60}"></td>
+													<td th:if="${proposerFormFlag} == true" style="padding: 2px 2px;text-align: center;border-color: #ccc;border-style:solid;border-width:1px;font-size:9px;text-transform:uppercase;">NA &nbsp;</td>
+													<td th:if="${proposerFormFlag} == false" style="padding: 2px 2px;text-align: center;border-color: #ccc;border-style:solid;border-width:1px;font-size:9px;text-transform:uppercase;">NA &nbsp;</td>
+													<td th:if="${proposerFormFlag} == false" style="padding: 2px 2px;text-align: center;border-color: #ccc;border-style:solid;border-width:1px;font-size:9px;text-transform:uppercase;" th:text="${diseaseBefor60}"></td>
+												
+												</tr>
+											</tbody>
+										</table>
+									</td>
+								</tr>
+								<!-- Weight and Height start-->
+								<tr>
+									<td style="padding: 2px 2px;border-color: #ccc;border-style:solid;border-width:1px; font-size: 9px; font-family: arial;">
+										<strong style="padding-left: 10px;">2.</strong>
+									</td>
+								</tr>
+								<tr>
+									<td>
+										<table width="100%" cellspacing="0" cellpadding="0" style="border-collapse: collapse; border-color: #ccc;border-style:solid;border-width:1px;">
+											<tbody>
+												<tr>
+													<td align="center" style="padding: 2px 2px;border-color: #ccc;border-style:solid;border-width:1px; font-size: 9px; font-family: arial;"></td>
+													<td align="center" style="padding: 2px 2px;border-color: #ccc;border-style:solid;border-width:1px; font-size: 9px; font-family: arial;">
+														<strong>Proposer</strong>
+													</td>
+													<td align="center" style="padding: 2px 2px;border-color: #ccc;border-style:solid;border-width:1px; font-size: 9px; font-family: arial;">
+														<strong>Life to be Insured</strong>
+													</td>
+												</tr>
+												<tr>
+													<td align="center" style="padding: 2px 2px;border-color: #ccc;border-style:solid;border-width:1px; font-size: 9px; font-family: arial;">Height</td>
+													<td align="center" style="padding: 2px 2px;border-color: #ccc;border-style:solid;border-width:1px; font-size: 9px; font-family: arial;"th:text="${proposerHeight}"></td>
+													<td align="center" style="padding: 2px 2px;border-color: #ccc;border-style:solid;border-width:1px; font-size: 9px; font-family: arial;"th:text="${insuredHeight}"></td>
+												</tr>
+												<tr>
+													<td align="center" style="padding: 2px 2px;border-color: #ccc;border-style:solid;border-width:1px; font-size: 9px; font-family: arial;">Weight</td>
+													<td align="center" style="padding: 2px 2px;border-color: #ccc;border-style:solid;border-width:1px; font-size: 9px; font-family: arial;"th:text="${proposerWeight}"></td>
+													<td align="center" style="padding: 2px 2px;border-color: #ccc;border-style:solid;border-width:1px; font-size: 9px; font-family: arial;"th:text="${insuredWeight}"></td>
+												</tr>
+												<tr>
+													<td align="center" style="padding: 2px 2px;border-color: #ccc;border-style:solid;border-width:1px; font-size: 9px; font-family: arial;">ABHA Number</td>
+													<td align="center" style="padding: 2px 2px;border-color: #ccc;border-style:solid;border-width:1px; font-size: 9px; font-family: arial;"th:text="${proposerAbhaNumber}"></td>
+													<td align="center" style="padding: 2px 2px;border-color: #ccc;border-style:solid;border-width:1px; font-size: 9px; font-family: arial;"th:text="${insurerAbhaNumber}"></td>
+												</tr>
+											</tbody>
+										</table>
+									</td>
+								</tr>
+								<!-- Weight and Height end-->
+								<tr>
+									<td colspan="2" height="20px"></td>
+								</tr>
+								<tr>
+									<td colspan="2" style="padding: 0px;font-family: arial;font-size:9px;">
+										<table width="100%" cellpadding="0" cellspacing="0" border="0" style="border-color: #ccc;border-style:solid;border-width:1px;">
+											<tbody>
+												<tr>
+													<td style="padding: 5px 5px 5px 15px;border-color: #ccc;border-style:solid;border-width:1px;" width="80%">
+														<strong>3. Have you ever been investigated/diagnosed or treated for any of the following?</strong>
+													</td>
+													<td width="10%" style="padding: 2px 2px;text-align: center;border-color: #ccc;border-style:solid;border-width:1px;">
+														<strong>Proposer</strong>
+													</td>
+													<td width="10%" style="padding: 2px 2px;text-align: center;border-color: #ccc;border-style:solid;border-width:1px;">
+														<strong>Life to be Insured</strong>
+													</td>
+												</tr>
+												<tr>
+													<td style="padding: 5px 5px 5px 15px;border-color: #ccc;border-style:solid;border-width:1px;" width="80%">a) Have you suffered from or received investigation or treatment for any form of Cancer, sarcoma, tumor or pre-cancerous conditions?</td>
+													<td th:if="${proposerFormFlag} == true" style="padding: 2px 2px;text-align: center;border-color: #ccc;border-style:solid;border-width:1px;"th:text=${medicalQuestions.question1Answer}></td>
+													<td th:if="${proposerFormFlag} == true" style="padding: 2px 2px;text-align: center;border-color: #ccc;border-style:solid;border-width:1px;">NA &nbsp;</td>
+													<td th:if="${proposerFormFlag} == false" style="padding: 2px 2px;text-align: center;border-color: #ccc;border-style:solid;border-width:1px;">NA &nbsp;</td>
+													<td th:if="${proposerFormFlag} == false" style="padding: 2px 2px;text-align: center;border-color: #ccc;border-style:solid;border-width:1px;"th:text=${medicalQuestions.question1Answer}></td>
+												</tr>
+												<!-- Reflexive for Q1-->
+												<tr th:if="${medicalQuestions.question1Answer =='YES'}">
+													<td style="padding: 5px 5px 5px 15px;border-color: #ccc;border-style:solid;border-width:1px;" width="80%">a. 1)  Any other please specify....</td>
+													<td th:if="${proposerFormFlag} == true" style="padding: 2px 2px;text-align: center;border-color: #ccc;border-style:solid;border-width:1px;"th:text=${medicalQuestions.question2Answer}></td>
+													<td th:if="${proposerFormFlag} == true" style="padding: 2px 2px;text-align: center;border-color: #ccc;border-style:solid;border-width:1px;">NA &nbsp;</td>
+													<td th:if="${proposerFormFlag} == false" style="padding: 2px 2px;text-align: center;border-color: #ccc;border-style:solid;border-width:1px;">NA &nbsp;</td>
+													<td th:if="${proposerFormFlag} == false" style="padding: 2px 2px;text-align: center;border-color: #ccc;border-style:solid;border-width:1px;"th:text=${medicalQuestions.question2Answer}></td>
+												</tr>
+												<tr>
+													<td style="padding: 5px 5px 5px 15px;border-color: #ccc;border-style:solid;border-width:1px;" width="80%">b) Have any of your parents (below age 60 years), sisters or brothers suffered from any form cancer or tumors?.</td>
+													<td th:if="${proposerFormFlag} == true" style="padding: 2px 2px;text-align: center;border-color: #ccc;border-style:solid;border-width:1px;"th:text=${medicalQuestions.question3Answer}></td>
+													<td th:if="${proposerFormFlag} == true" style="padding: 2px 2px;text-align: center;border-color: #ccc;border-style:solid;border-width:1px;">NA &nbsp;</td>
+													<td th:if="${proposerFormFlag} == false" style="padding: 2px 2px;text-align: center;border-color: #ccc;border-style:solid;border-width:1px;">NA &nbsp;</td>
+													<td th:if="${proposerFormFlag} == false" style="padding: 2px 2px;text-align: center;border-color: #ccc;border-style:solid;border-width:1px;"th:text=${medicalQuestions.question3Answer}></td>
+												</tr>
+												<!-- Reflexive for Q2-->
+												<tr th:if="${medicalQuestions.question3Answer =='YES'}">
+													<td style="padding: 5px 5px 5px 15px;border-color: #ccc;border-style:solid;border-width:1px;" width="80%">b. 1) If yes, please give details</td>
+													<td th:if="${proposerFormFlag} == true" style="padding: 2px 2px;text-align: center;border-color: #ccc;border-style:solid;border-width:1px;"th:text=${medicalQuestions.question3AChoice}></td>
+													<td th:if="${proposerFormFlag} == true" style="padding: 2px 2px;text-align: center;border-color: #ccc;border-style:solid;border-width:1px;">NA &nbsp;</td>
+													<td th:if="${proposerFormFlag} == false" style="padding: 2px 2px;text-align: center;border-color: #ccc;border-style:solid;border-width:1px;">NA&nbsp;</td>
+													<td th:if="${proposerFormFlag} == false" style="padding: 2px 2px;text-align: center;border-color: #ccc;border-style:solid;border-width:1px;"th:text=${medicalQuestions.question3AChoice}></td>
+												
+												</tr>
+												<tr>
+													<td style="padding: 5px 5px 5px 15px;border-color: #ccc;border-style:solid;border-width:1px;" width="80%">c) Are you suffering from or ever suffered from Hepatitis B, Hepatitis C, Liver disease, fatty liver due to alcohol, Barretts Esophagus, Crohns Disease, Peptic Ulcer, Ulcerative Colitis, HIV/AIDS, Chronic Glomerulonephritis, Chronic kidney Disease, Polycystic Kidney Disease, Anemia? If yes please give details?</td>
+													<td th:if="${proposerFormFlag} == true" style="padding: 2px 2px;text-align: center;border-color: #ccc;border-style:solid;border-width:1px;"th:text=${medicalQuestions.question3BChoice}></td>
+													<td th:if="${proposerFormFlag} == true" style="padding: 2px 2px;text-align: center;border-color: #ccc;border-style:solid;border-width:1px;">NA &nbsp;</td>
+													<td th:if="${proposerFormFlag} == false" style="padding: 2px 2px;text-align: center;border-color: #ccc;border-style:solid;border-width:1px;">NA &nbsp;</td>
+													<td th:if="${proposerFormFlag} == false" style="padding: 2px 2px;text-align: center;border-color: #ccc;border-style:solid;border-width:1px;"th:text=${medicalQuestions.question3BChoice}></td>
+												
+												</tr>
+												<!-- Reflexive for Q3-->
+												<tr th:if="${medicalQuestions.question3BChoice =='YES'}">
+													<td style="padding: 5px 5px 5px 15px;border-color: #ccc;border-style:solid;border-width:1px;" width="80%">c. 1) Any other please specify....</td>
+													<td th:if="${proposerFormFlag} == true" style="padding: 2px 2px;text-align: center;border-color: #ccc;border-style:solid;border-width:1px;"th:text=${medicalQuestions.question3CChoice}></td>
+													<td th:if="${proposerFormFlag} == true" style="padding: 2px 2px;text-align: center;border-color: #ccc;border-style:solid;border-width:1px;">NA &nbsp;</td>
+													<td th:if="${proposerFormFlag} == false" style="padding: 2px 2px;text-align: center;border-color: #ccc;border-style:solid;border-width:1px;">NA &nbsp;</td>
+													<td th:if="${proposerFormFlag} == false"style="padding: 2px 2px;text-align: center;border-color: #ccc;border-style:solid;border-width:1px;"th:text=${medicalQuestions.question3CChoice}></td>
+												
+												</tr>
+												<tr>
+													<td style="padding: 5px 5px 5px 15px;border-color: #ccc;border-style:solid;border-width:1px;" width="80%">d) Have you suffered from or been investigated for any of the following in past 12 months?
+														<p>1) Recurrent cough, hoarseness of voice, or difficulty in swallowing for continuous period of 15 days?</p>
+														<p>2) Any persistent loss of blood or unusual discharge from any part of body?</p>
+														<p>3) Weight loss more than 5 kg within 6 months?</p>
+														<p>4) Any ulceration, growth, nodule, cyst or lump in any part of the body?</p>
+													</td>
+													<td th:if="${proposerFormFlag} == true" style="padding: 2px 2px;text-align: center;border-color: #ccc;border-style:solid;border-width:1px;" th:text=${medicalQuestions.question3DChoice}></td>
+													<td th:if="${proposerFormFlag} == true" style="padding: 2px 2px;text-align: center;border-color: #ccc;border-style:solid;border-width:1px;">NA &nbsp;</td>
+													<td th:if="${proposerFormFlag} == false" style="padding: 2px 2px;text-align: center;border-color: #ccc;border-style:solid;border-width:1px;">NA &nbsp;</td>
+													<td th:if="${proposerFormFlag} == false" style="padding: 2px 2px;text-align: center;border-color: #ccc;border-style:solid;border-width:1px;" th:text=${medicalQuestions.question3DChoice}></td>
+												</tr>
+												<!-- Reflexive for Q4-->
+												<tr th:if="${medicalQuestions.question3DChoice =='YES'}">
+													<td style="padding: 5px 5px 5px 15px;border-color: #ccc;border-style:solid;border-width:1px;" width="80%">d. 1) Any other please specify....</td>
+													<td th:if="${proposerFormFlag} == true" style="padding: 2px 2px;text-align: center;border-color: #ccc;border-style:solid;border-width:1px;"th:text=${medicalQuestions.question4Answer}></td>
+													<td th:if="${proposerFormFlag} == true" style="padding: 2px 2px;text-align: center;border-color: #ccc;border-style:solid;border-width:1px;">NA &nbsp;</td>
+													<td th:if="${proposerFormFlag} == false" style="padding: 2px 2px;text-align: center;border-color: #ccc;border-style:solid;border-width:1px;">NA &nbsp;</td>
+													<td th:if="${proposerFormFlag} == false" style="padding: 2px 2px;text-align: center;border-color: #ccc;border-style:solid;border-width:1px;"th:text=${medicalQuestions.question4Answer}></td>
+												</tr>
+												<tr>
+													<td style="padding: 5px 5px 5px 15px;border-color: #ccc;border-style:solid;border-width:1px;" width="80%">e) Have you undergone any of the listed investigations below or have had abnormal findings in the last 12 months ?</td>
+													<td th:if="${proposerFormFlag} == true" style="padding: 2px 2px;text-align: center;border-color: #ccc;border-style:solid;border-width:1px;"th:text=${medicalQuestions.question4AChoice}></td>
+													<td th:if="${proposerFormFlag} == true" style="padding: 2px 2px;text-align: center;border-color: #ccc;border-style:solid;border-width:1px;">NA &nbsp;</td>
+													<td th:if="${proposerFormFlag} == false" style="padding: 2px 2px;text-align: center;border-color: #ccc;border-style:solid;border-width:1px;">NA &nbsp;</td>
+													<td th:if="${proposerFormFlag} == false" style="padding: 2px 2px;text-align: center;border-color: #ccc;border-style:solid;border-width:1px;"th:text=${medicalQuestions.question4AChoice}></td>
+												
+												</tr>
+												<!-- Reflexive for Q5-->
+												<tr th:if="${medicalQuestions.question4AChoice =='YES'}">
+													<td style="padding: 5px 5px 5px 15px;border-color: #ccc;border-style:solid;border-width:1px;" width="80%">e. 1) Any other please specify....</td>
+													<td th:if="${proposerFormFlag} == true" style="padding: 2px 2px;text-align: center;border-color: #ccc;border-style:solid;border-width:1px;"th:text=${medicalQuestions.question4BChoice}></td>
+													<td th:if="${proposerFormFlag} == true" style="padding: 2px 2px;text-align: center;border-color: #ccc;border-style:solid;border-width:1px;">NA &nbsp;</td>
+													<td th:if="${proposerFormFlag} == false" style="padding: 2px 2px;text-align: center;border-color: #ccc;border-style:solid;border-width:1px;">NA &nbsp;</td>
+													<td th:if="${proposerFormFlag} == false" style="padding: 2px 2px;text-align: center;border-color: #ccc;border-style:solid;border-width:1px;"th:text=${medicalQuestions.question4BChoice}></td>
+												
+												</tr>
+												<tr>
+													<td style="padding: 5px 5px 5px 15px;border-color: #ccc;border-style:solid;border-width:1px;" width="80%">f) Have you ever been referred for treatment for alcohol withdrawal?</td>
+													<td th:if="${proposerFormFlag} == true" style="padding: 2px 2px;text-align: center;border-color: #ccc;border-style:solid;border-width:1px;"th:text=${medicalQuestions.question6EChoice}></td>
+													<td th:if="${proposerFormFlag} == true" style="padding: 2px 2px;text-align: center;border-color: #ccc;border-style:solid;border-width:1px;">NA &nbsp;</td>
+													<td th:if="${proposerFormFlag} == false" style="padding: 2px 2px;text-align: center;border-color: #ccc;border-style:solid;border-width:1px;">NA &nbsp;</td>
+													<td th:if="${proposerFormFlag} == false" style="padding: 2px 2px;text-align: center;border-color: #ccc;border-style:solid;border-width:1px;"th:text=${medicalQuestions.question6EChoice}></td>
+												
+												</tr>
+												<!-- Reflexive for Q6-->
+												<tr th:if="${medicalQuestions.question6EChoice =='YES'}">
+													<td style="padding: 5px 5px 5px 15px;border-color: #ccc;border-style:solid;border-width:1px;" width="80%">f. 1) Any other please specify....</td>
+													<td th:if="${proposerFormFlag} == true" style="padding: 2px 2px;text-align: center;border-color: #ccc;border-style:solid;border-width:1px;"th:text=${medicalQuestions.question7Answer}></td>
+													<td th:if="${proposerFormFlag} == true" style="padding: 2px 2px;text-align: center;border-color: #ccc;border-style:solid;border-width:1px;">NA &nbsp;</td>
+													<td th:if="${proposerFormFlag} == false" style="padding: 2px 2px;text-align: center;border-color: #ccc;border-style:solid;border-width:1px;">NA &nbsp;</td>
+													<td th:if="${proposerFormFlag} == false" style="padding: 2px 2px;text-align: center;border-color: #ccc;border-style:solid;border-width:1px;"th:text=${medicalQuestions.question7Answer}></td>
+												
+												</tr>
+							
+											</tbody>
+										</table>
+									</td>
+								</tr>
+								<tr>
+									<td style="padding: 2px 2px;border-color: #ccc;border-style:solid;border-width:1px; font-size: 9px; font-family: arial;">
+										<table cellpadding="0" cellspacing="0" width="100%">
+											<tbody>
+												<tr>
+													<td width="4%" align="center" style="padding:5px 5px 5px 15px;">
+														<strong>4.</strong>
+													</td>
+													<td width="78%" style="font-weight: bold;">Are you attaching any medical reports along with this form?</td>
+													<td width="18%" style="padding: 2px 4px; font-size: 9px; font-family: arial;">NA</td>
+												</tr>
+											</tbody>
+										</table>
+									</td>
+								</tr>
+								<tr>
+									<td style="padding:  2px 2px;border-color: #ccc;border-style:solid;border-width:1px; font-size: 9px; font-family: arial;">
+										<table cellpadding="0" cellspacing="0">
+											<tbody>
+												<tr>
+													<td width="4%" align="center" style="padding:5px 5px 5px 15px;">
+														<strong>5.</strong>
+													</td>
+													<td width="25%" style="font-weight: bold;">Tobacco/Alcohol/Drugs Consumption:</td>
+													<td width="71%" style="padding: 2px 2px; font-size: 9px; font-family: arial;"></td>
+												</tr>
+											</tbody>
+										</table>
+									</td>
+								</tr>
+								<tr>
+									<td>
+										<table width="100%" cellspacing="0" cellpadding="0" style="border-collapse: collapse; border-color: #ccc;border-style:solid;border-width:1px;">
+											<tbody>
+												<tr>
+													<td width="80%" style="padding: 5px 5px 5px 15px;border-color: #ccc;border-style:solid;border-width:1px; font-size: 9px; font-family: arial;">
+														<strong>Substance</strong>
+													</td>
+													<td width="10%" align="center" style="padding: 2px 4px;border-color: #ccc;border-style:solid;border-width:1px; font-size: 9px; font-family: arial;">
+														<strong>Proposer</strong>
+													</td>
+													<td width="10%" align="center" style="padding: 2px 4px;border-color: #ccc;border-style:solid;border-width:1px; font-size: 9px; font-family: arial;">
+														<strong>Life to be Insured</strong>
+													</td>
+												</tr>
+												<tr>
+													<td style="padding: 5px 5px 5px 15px;border-color: #ccc;border-style:solid;border-width:1px; font-size: 9px; font-family: arial;">Tobacco/Alcohol/Drugs Consumption: (In case you consume or have ever consumed)</td>
+													<td th:if="${proposerFormFlag} == true" align="center" style="padding: 2px 2px;border-color: #ccc;border-style:solid;border-width:1px; font-size: 9px; font-family: arial;"th:text=${medicalQuestions.question4CChoice}></td>
+													<td th:if="${proposerFormFlag} == true" align="center" style="padding: 2px 2px;border-color: #ccc;border-style:solid;border-width:1px; font-size: 9px; font-family: arial;">NA &nbsp;</td>
+													<td th:if="${proposerFormFlag} == false" align="center" style="padding: 2px 2px;border-color: #ccc;border-style:solid;border-width:1px; font-size: 9px; font-family: arial;">NA &nbsp;</td>
+													<td th:if="${proposerFormFlag} == false" align="center" style="padding: 2px 2px;border-color: #ccc;border-style:solid;border-width:1px; font-size: 9px; font-family: arial;"th:text=${medicalQuestions.question4CChoice}></td>
+												
+												</tr>
+												<tr>
+													<td style="padding: 2px 2px;border-color: #ccc;border-style:solid;border-width:1px; font-size: 9px; font-family: arial;">a) Do you consume or have ever consumed Tobacco/Nicotine Products in the last 12 Months</td>
+													<td th:if="${proposerFormFlag} == true" align="center" style="padding: 2px 2px;border-color: #ccc;border-style:solid;border-width:1px; font-size: 9px; font-family: arial;"th:text=${medicalQuestions.question4DChoice}></td>
+													<td th:if="${proposerFormFlag} == true" align="center" style="padding: 2px 2px;border-color: #ccc;border-style:solid;border-width:1px; font-size: 9px; font-family: arial;">NA &nbsp;</td>
+													<td th:if="${proposerFormFlag} == false" align="center" style="padding: 2px 2px;border-color: #ccc;border-style:solid;border-width:1px; font-size: 9px; font-family: arial;">NA &nbsp;</td>
+													<td th:if="${proposerFormFlag} == false" align="center" style="padding: 2px 2px;border-color: #ccc;border-style:solid;border-width:1px; font-size: 9px; font-family: arial;"th:text=${medicalQuestions.question4DChoice}></td>
+												
+												</tr>
+												<tr th:if="${medicalQuestions.question4DChoice =='YES'}">
+													<td style="padding: 2px 2px;border-color: #ccc;border-style:solid;border-width:1px; font-size: 9px; font-family: arial;">i) Type</td>
+													<td th:if="${proposerFormFlag} == true" align="center" style="padding: 2px 2px;border-color: #ccc;border-style:solid;border-width:1px; font-size: 9px; font-family: arial;"th:text=${medicalQuestions.question5Answer}></td>
+													<td th:if="${proposerFormFlag} == true" align="center" style="padding: 2px 2px;border-color: #ccc;border-style:solid;border-width:1px; font-size: 9px; font-family: arial;">NA &nbsp;</td>
+													<td th:if="${proposerFormFlag} == false"align="center" style="padding: 2px 2px;border-color: #ccc;border-style:solid;border-width:1px; font-size: 9px; font-family: arial;">NA &nbsp;</td>
+													<td th:if="${proposerFormFlag} == false" align="center" style="padding: 2px 2px;border-color: #ccc;border-style:solid;border-width:1px; font-size: 9px; font-family: arial;"th:text=${medicalQuestions.question5Answer}></td>
+												
+												</tr>
+												<tr th:if="${medicalQuestions.question4DChoice =='YES'}">
+													<td style="padding: 2px 2px;border-color: #ccc;border-style:solid;border-width:1px; font-size: 9px; font-family: arial;">ii) Quantity</td>
+													<td th:if="${proposerFormFlag} == true" align="center" style="padding: 2px 2px;border-color: #ccc;border-style:solid;border-width:1px; font-size: 9px; font-family: arial;"th:text=${medicalQuestions.question5AChoice}></td>
+													<td th:if="${proposerFormFlag} == true" align="center" style="padding: 2px 2px;border-color: #ccc;border-style:solid;border-width:1px; font-size: 9px; font-family: arial;">NA &nbsp;</td>
+													<td th:if="${proposerFormFlag} == false" align="center" style="padding: 2px 2px;border-color: #ccc;border-style:solid;border-width:1px; font-size: 9px; font-family: arial;">NA &nbsp;</td>
+													<td th:if="${proposerFormFlag} == false" align="center" style="padding: 2px 2px;border-color: #ccc;border-style:solid;border-width:1px; font-size: 9px; font-family: arial;"th:text=${medicalQuestions.question5AChoice}></td>
+												
+												</tr>
+												<tr th:if="${medicalQuestions.question4DChoice =='YES'}">
+													<td style="padding: 2px 2px;border-color: #ccc;border-style:solid;border-width:1px; font-size: 9px; font-family: arial;">iii) Frequency</td>
+													<td th:if="${proposerFormFlag} == true" align="center" style="padding: 2px 2px;border-color: #ccc;border-style:solid;border-width:1px; font-size: 9px; font-family: arial;"th:text=${medicalQuestions.question5BChoice}></td>
+													<td th:if="${proposerFormFlag} == true" align="center" style="padding: 2px 2px;border-color: #ccc;border-style:solid;border-width:1px; font-size: 9px; font-family: arial;">NA &nbsp;</td>
+													<td th:if="${proposerFormFlag} == false" align="center" style="padding: 2px 2px;border-color: #ccc;border-style:solid;border-width:1px; font-size: 9px; font-family: arial;">NA &nbsp;</td>
+													<td th:if="${proposerFormFlag} == false" align="center" style="padding: 2px 2px;border-color: #ccc;border-style:solid;border-width:1px; font-size: 9px; font-family: arial;"th:text=${medicalQuestions.question5BChoice}></td>
+												
+												</tr>
+												<tr th:if="${medicalQuestions.question4DChoice =='YES'}">
+													<td style="padding: 2px 2px;border-color: #ccc;border-style:solid;border-width:1px; font-size: 9px; font-family: arial;">iv) Quit smoking since -------------------- months/Year</td>
+													<td th:if="${proposerFormFlag} == true" align="center" style="padding: 2px 2px;border-color: #ccc;border-style:solid;border-width:1px; font-size: 9px; font-family: arial;"th:text=${medicalQuestions.question5CChoice}></td>
+													<td th:if="${proposerFormFlag} == true" align="center" style="padding: 2px 2px;border-color: #ccc;border-style:solid;border-width:1px; font-size: 9px; font-family: arial;">NA &nbsp;</td>
+													<td th:if="${proposerFormFlag} == false"align="center" style="padding: 2px 2px;border-color: #ccc;border-style:solid;border-width:1px; font-size: 9px; font-family: arial;">NA &nbsp;</td>
+													<td th:if="${proposerFormFlag} == false" align="center" style="padding: 2px 2px;border-color: #ccc;border-style:solid;border-width:1px; font-size: 9px; font-family: arial;"th:text=${medicalQuestions.question5CChoice}></td>
+												
+												</tr>
+												<tr>
+													<td style="padding: 2px 2px;border-color: #ccc;border-style:solid;border-width:1px; font-size: 9px; font-family: arial;">b) Do you consume or have ever consumedAlcohol; Such as Beer/Wine/Hard Liquor?</td>
+													<td th:if="${proposerFormFlag} == true" align="center" style="padding: 2px 2px;border-color: #ccc;border-style:solid;border-width:1px; font-size: 9px; font-family: arial;"th:text=${medicalQuestions.question6Answer}></td>
+													<td th:if="${proposerFormFlag} == true" align="center" style="padding: 2px 2px;border-color: #ccc;border-style:solid;border-width:1px; font-size: 9px; font-family: arial;">NA &nbsp;</td>
+													<td th:if="${proposerFormFlag} == false" align="center" style="padding: 2px 2px;border-color: #ccc;border-style:solid;border-width:1px; font-size: 9px; font-family: arial;">NA &nbsp;</td>
+													<td th:if="${proposerFormFlag} == false" align="center" style="padding: 2px 2px;border-color: #ccc;border-style:solid;border-width:1px; font-size: 9px; font-family: arial;"th:text=${medicalQuestions.question6Answer}></td>
+												
+												</tr>
+												<tr th:if="${medicalQuestions.question6Answer =='YES'}">
+													<td style="padding: 2px 2px;border-color: #ccc;border-style:solid;border-width:1px; font-size: 9px; font-family: arial;">i) Type</td>
+													<td th:if="${proposerFormFlag} == true" align="center" style="padding: 2px 2px;border-color: #ccc;border-style:solid;border-width:1px; font-size: 9px; font-family: arial;"th:text=${medicalQuestions.question6AChoice}></td>
+													<td th:if="${proposerFormFlag} == true" align="center" style="padding: 2px 2px;border-color: #ccc;border-style:solid;border-width:1px; font-size: 9px; font-family: arial;">NA &nbsp;</td>
+													<td th:if="${proposerFormFlag} == false" align="center" style="padding: 2px 2px;border-color: #ccc;border-style:solid;border-width:1px; font-size: 9px; font-family: arial;">NA &nbsp;</td>
+													<td th:if="${proposerFormFlag} == false" align="center" style="padding: 2px 2px;border-color: #ccc;border-style:solid;border-width:1px; font-size: 9px; font-family: arial;"th:text=${medicalQuestions.question6AChoice}></td>
+												
+												</tr>
+												<tr th:if="${medicalQuestions.question6Answer =='YES'}">
+													<td style="padding: 2px 2px;border-color: #ccc;border-style:solid;border-width:1px; font-size: 9px; font-family: arial;">ii) Quantity in ml</td>
+													<td th:if="${proposerFormFlag} == true" align="center" style="padding: 2px 2px;border-color: #ccc;border-style:solid;border-width:1px; font-size: 9px; font-family: arial;"th:text=${medicalQuestions.question6BChoice}></td>
+													<td th:if="${proposerFormFlag} == true" align="center" style="padding: 2px 2px;border-color: #ccc;border-style:solid;border-width:1px; font-size: 9px; font-family: arial;">NA &nbsp;</td>
+													<td th:if="${proposerFormFlag} == false"align="center" style="padding: 2px 2px;border-color: #ccc;border-style:solid;border-width:1px; font-size: 9px; font-family: arial;">NA &nbsp;</td>
+													<td th:if="${proposerFormFlag} == false" align="center" style="padding: 2px 2px;border-color: #ccc;border-style:solid;border-width:1px; font-size: 9px; font-family: arial;"th:text=${medicalQuestions.question6BChoice}></td>
+												
+												</tr>
+												<tr th:if="${medicalQuestions.question6Answer =='YES'}">
+													<td style="padding: 2px 2px;border-color: #ccc;border-style:solid;border-width:1px; font-size: 9px; font-family: arial;">iii) Frequency</td>
+													<td th:if="${proposerFormFlag} == true" align="center" style="padding: 2px 2px;border-color: #ccc;border-style:solid;border-width:1px; font-size: 9px; font-family: arial;"th:text=${medicalQuestions.question6CChoice}></td>
+													<td th:if="${proposerFormFlag} == true" align="center" style="padding: 2px 2px;border-color: #ccc;border-style:solid;border-width:1px; font-size: 9px; font-family: arial;">NA &nbsp;</td>
+													<td th:if="${proposerFormFlag} == false"align="center" style="padding: 2px 2px;border-color: #ccc;border-style:solid;border-width:1px; font-size: 9px; font-family: arial;">NA &nbsp;</td>
+													<td th:if="${proposerFormFlag} == false" align="center" style="padding: 2px 2px;border-color: #ccc;border-style:solid;border-width:1px; font-size: 9px; font-family: arial;"th:text=${medicalQuestions.question6CChoice}></td>
+												</tr>
+												<tr th:if="${medicalQuestions.question6Answer =='YES'}">
+													<td style="padding: 2px 2px;border-color: #ccc;border-style:solid;border-width:1px; font-size: 9px; font-family: arial;">iv) Quit Alcohol since -------------------- months/Year</td>
+													<td th:if="${proposerFormFlag} == true" align="center" style="padding: 2px 2px;border-color: #ccc;border-style:solid;border-width:1px; font-size: 9px; font-family: arial;"th:text=${medicalQuestions.question6DChoice}></td>
+													<td th:if="${proposerFormFlag} == true" align="center" style="padding: 2px 2px;border-color: #ccc;border-style:solid;border-width:1px; font-size: 9px; font-family: arial;">NA &nbsp;</td>
+													<td th:if="${proposerFormFlag} == false" align="center" style="padding: 2px 2px;border-color: #ccc;border-style:solid;border-width:1px; font-size: 9px; font-family: arial;">NA &nbsp;</td>
+													<td th:if="${proposerFormFlag} == false" align="center" style="padding: 2px 2px;border-color: #ccc;border-style:solid;border-width:1px; font-size: 9px; font-family: arial;"th:text=${medicalQuestions.question6DChoice}></td>
+												
+												</tr>
+											</tbody>
+										</table>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</td>

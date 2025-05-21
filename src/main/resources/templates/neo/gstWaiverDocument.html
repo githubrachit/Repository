@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>GST Document</title>
+    <style>
+        *{
+            margin:0;
+            padding:0;
+        }
+        *,:before,:after{
+            box-sizing:border-box;
+            -ms-box-sizing:border-box;
+            -webkit-box-sizing:border-box;
+            -moz-box-sizing:border-box;
+            -o-box-sizing:border-box;
+        }
+        body{
+            font-size: 16px;
+            line-height: 1;
+            color: #000;
+            background: #fff;
+            font-family: 'Roboto', sans-serif;
+        }
+        #template {
+            padding: 5px 30;
+            max-width: 1140px;
+            width: 100%;
+            margin: 0 auto;
+        }
+        .logo{
+            padding-top: 50px;
+            margin-bottom:10px;
+            float:right;
+        }
+        .logo2{
+            padding-top: 200px;
+            margin-bottom:10px;
+            float:right;
+        }
+        .header-content{
+            padding:15px;
+            border:2px solid #f57e38;
+            text-align:center;
+        }
+        h1{
+            font-size:20px;
+        }
+        h2{
+            font-size:16px;
+        }
+        .details-section{
+            padding:20px 0;
+        }
+        .details-section > div{
+            padding-bottom:10px;
+        }
+        .details-section span{
+            font-size:14px;
+            display:inline-block;
+        }
+        .details-section p{
+            padding-top: 200px;
+            font-size:14px;
+        }
+        
+        .residence-details{
+            padding-top:10px;
+            padding-left:30px;
+            width:700px;
+        }
+        .residence-details > div{
+            padding-bottom: 10px;
+            display:inline-block;
+            width:330px;
+            vertical-align: top;
+        }
+        .details-section .authentication-section{
+            padding-top:10px;
+            padding-bottom: 0;
+        }
+        .authentication-section h2{
+            text-decoration: underline;
+            margin-bottom:10px;
+        }
+        .authentication-section p{
+            line-height: 1.4;
+            margin-bottom:10px;
+        }
+        .authentication-section > .image{
+            width:200px;
+            margin:0 auto;
+        }
+        .authentication-section > .image img{
+            width:100%;
+        }
+    </style>
+</head>
+<body>
+<div id="template">
+
+        <div class="logo">
+            <img  src="https://www.axismaxlife.com/content/dam/corporate/images/max-life-logo.png" />
+            <br>
+            <img  src="https://neouat.maxlifeinsurance.com/content/dam/neo/emailImages/Capital-Guarantee/paymentSuccess/footer.png " width="100" height="auto"/>
+          
+        </div >
+        
+       
+    <div id="content">
+       
+        <div class="details-section">
+            <div class="authentication-section">
+    
+                <p>I <span th:text="${name}"></span>, resident of <span th:text="${completeAddress}"></span>
+                    confirm that I will intimate Axis Max Life Insurance Ltd. in case my residential status changes from Non-resident
+                    to resident Indian during the year. I will be responsible to indemnify Axis Max Life Insurance Ltd. in case of any
+                    loss arises in relation to above.</p>
+            </div>
+            <div>
+                <span>Signature, Name of Customer - </span>
+                <span th:text="${name}"></span>
+            </div>
+            <div>
+                <span>GST Rate - </span>
+                <span th:text="${gstRate}"></span>
+            </div>
+            <div>
+                <span>DOB - </span>
+                <span th:text="${dob}"></span>
+            </div>
+            <div>
+                <span>Proposal Number - </span>
+                <span th:text="${proposalNumber}"></span>
+            </div>
+            <div>
+                <span>Verified by OTP - (One time password) through customer’s</span>
+            </div>
+            <div>
+                <span>Registered Mobile No - </span>
+                <span th:text="${mobileNumber}"></span>
+            </div>
+            <div>
+                <span>Date & Time Stamp - </span>
+                <span th:text="${dateTimeStamp}"></span>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

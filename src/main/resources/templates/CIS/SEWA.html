@@ -1,0 +1,620 @@
+<style>
+    body {
+         display: flex;
+         justify-content: center;
+         align-items: center;
+         min-height: 100vh;
+         margin: 0;
+         font-family: sans-serif;
+     }
+     .container {
+         display: flex;
+         flex-direction: column;
+         align-items: center;
+         margin: 5pt 40pt 40pt 40pt;
+         padding: 20px;
+         border : none;
+         max-width: 210mm; /* A4 width */
+         box-sizing: border-box; /* Ensure padding and border are included in the width */
+         font-size:14px;
+
+     }
+     .title {
+         font-size: 14px;
+         font-weight: bold;
+         margin-bottom: 10px;
+         text-align: center;
+     }
+     .info-table {
+         max-width: 100%; /* Ensure the table does not exceed its container */
+         width: 100%;
+         border-collapse: collapse;
+         table-layout: fixed; /* Ensure columns fit within the table */
+         margin: auto; /* Center the table */
+     }
+     .info-table th,
+     .info-table td {
+         padding: 10px;
+         border: 1px solid #000;
+         text-align: left;
+         word-wrap: break-word; /* Ensure text wraps within cells */
+         overflow-wrap: break-word; /* Additional support for wrapping */
+         vertical-align: top;
+     }
+     .info-table th {
+         font-weight: bold;
+         text-align: center;
+     }
+     /* Apply thicker border to the second column */
+     .info-table th:nth-child(3),
+     .info-table td:nth-child(3) {
+      width: 55%; /* Adjust the percentage to your needs */
+    }
+    .info-table th:nth-child(1),
+     .info-table td:nth-child(1) {
+      width: 8%; /* Adjust the percentage to your needs */
+    }
+    .info-table th:nth-child(4),
+    .info-table td:nth-child(4) {
+        width: 15%;
+    }
+     .disclaimer {
+         font-size: 12px;
+         margin-top: 10px;
+         text-align: center;
+     }
+</style>
+<body>
+<div class="container">
+    <h1 class="title"><u>CUSTOMER INFORMATION SHEET / KNOW YOUR POLICY</u></h1>
+    <p>This document provides key information about your policy. You are also advised to go through your policy document.</p>
+    <table class="info-table">
+        <tbody>
+        <tr>
+            <td style="text-align: center;"><strong>SI. no.</strong></td>
+            <td style="text-align: center;"><strong>Title</strong></td>
+            <td style="text-align: center;">
+                <span style="font-weight: bold;">Description in Simple Words</span><br>
+                <span style="font-weight: normal;"><i>(Please refer to applicable Policy Clause Number in next column)</i></span>
+            </td>
+            <td style="text-align: center;"><strong>Policy Clause Number</strong></td>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td >Name of the Insurance Product and Unique Identification Number (UIN)</td>
+            <td style="text-align: center;"> <span><strong th:text="${productName}"></strong></span><br>
+                 UIN: <span th:text="${UIN}"></span>
+            </td>
+            <td>Policy Preamble</td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>Policy Number</td>
+            <td style="text-align: center;"><span th:text="${policyNumber}"></span></td>
+            <td>Policy Schedule</td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td>Type of Insurance Policy</td>
+            <td style="text-align: center;"><b>(A Non-Linked Non-Participating Individual Life Insurance Savings Plan)</b></td>
+            <td>Policy Preamble</td>
+        </tr>
+        <tr>
+            <td>4</td>
+            <td>Basic Policy details</td>
+            <td>
+                <span style="font-weight: bold;">&#8226; Instalment Premium: </span>
+                <span th:text="${instalmentPremium}"></span><br>
+                <span style="font-weight: bold;">&#8226; Mode of Premium Payment: </span>
+                <span th:text="${premiumPaymentMode}"></span><br>
+                <span style="font-weight: bold;">&#8226; Plan Variant: </span>
+                <span th:text="${variant}"></span><br>
+                <span style="font-weight: bold;">&#8226; Sum Assured: </span>
+                <span th:text="${sumAssuredOnDeath}"></span><br>
+                <span style="font-weight: bold;">&#8226; Maturity Benefit: </span>
+                <span th:text="${sumAssuredOnMaturity}"></span><br>
+                <span style="font-weight: bold;">&#8226; Policy Term: </span>
+                <span th:text="${policyTerm}"></span><br>
+                <span style="font-weight: bold;">&#8226; First Year Wellness Discount: </span>
+                <span th:text="${customerDiscount}"></span><br>
+                <span style="font-weight: bold;">&#8226; Premium Payment Term: </span>
+                <span th:text="${premiumPaymentTerm}"></span><br>
+            </td>
+            <td>Policy Schedule</td>
+        </tr>
+        <tr>
+            <td rowspan="4">5</td>
+            <td rowspan="4">Policy Coverage/benefits payable</td>
+            <td>
+                <strong>&#10146; Benefits:</strong><br><br>
+            </td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>
+                <span>&#8226;</span><strong> Death Benefit</strong> <br><br>
+                <span>&#10146;</span> If the Life Insured dies during the Policy Term, provided all due Premiums have been paid and the Policy is in force and is not a Lapsed Policy or in Reduced Paid Up Mode, on the date of Death of the Life Insured, We will pay the lump sum death benefit as follows:
+                <ol type="a">
+                    <!-- Point 1: For Elite Variant -->
+                    <th:block th:if="${variant == 'Elite'}">
+                    <li>
+                            <strong>For Elite Variant, higher of:</strong>
+                            <ul>
+                                <li>Sum Assured on Death;</li>
+                                <li>105% (One Hundred Five percent) of (Total Premiums Paid plus loadings for modal premiums plus Underwriting Extra Premium (if any) plus discount (if any)) under the Policy, as on the date of death of the Life Insured; or</li>
+                                <li>Accrued Benefit as on the date of death of the Life Insured.</li>
+                            </ul>
+                        </li>
+                    </th:block>
+
+                    <!-- Point 2: For Lite Variant -->
+                    <th:block th:if="${variant == 'Lite'}">
+                        <li>
+                            <strong>For Lite Variant, higher of:</strong>
+                            <ul>
+                                <li>Sum Assured on Death;</li>
+                                <li>105% (One Hundred Five percent) of (Total Premiums Paid plus loadings for modal premiums plus Underwriting Extra Premium (if any) plus discount (if any)) under the Policy, as on the date of death of the Life Insured; or</li>
+                                <li>100% (Hundred percent) of (Total Premiums Paid plus loadings for modal premiums plus Underwriting Extra Premium (if any)) plus discount (if any) as on the date of death of Life Insured plus accrued Wellness Booster (if any) plus accrued Loyalty Booster.</li>
+                            </ul>
+                        </li>
+                    </th:block>
+                </ol>
+            </td>
+            <td>Clause 1.1 of Part C</td>
+        </tr>
+        <tr>
+            <td>
+                <span>&#8226;</span><strong> Maturity Benefit:</strong> <br><br>
+                <span>&#10146;</span> If the Life Insured has survived until the Maturity Date, provided the Policy is in-force and has been fully paid and is not a Lapsed Policy on the Maturity Date, we will pay the following applicable Maturity benefit to You:
+                <ol type="a">
+                    <th:block th:if="${variant == 'Elite'}">
+                    <li><strong>For Elite Variant -</strong> Maturity benefit payable shall be equal to Sum Assured on Maturity. Additionally, an amount equal to the following shall be payable on maturity:
+                        <ol type="i">
+                            <li>Accrued Loyalty Booster (if any), plus</li>
+                            <li>Accumulated Saving Boosters (if any), plus</li>
+                            <li>Accrued Wellness Booster (if any), less</li>
+                            <li>Total withdrawals availed under the Health Care Benefit option, (if any).</li>
+                        </ol><br>
+                        Note: Loyalty Booster shall be added to the maturity benefit post payment of each Premium as per the chosen Premium payment frequency.<br>
+                    </li>
+                    </th:block>
+                    <th:block th:if="${variant == 'Lite'}">
+                    <li><strong>For Lite Variant - </strong> Maturity benefit payable shall be equal to:
+                        <ol type="i">
+                            <li>Sum Assured on Maturity, plus </li>
+                            <li>Accrued Loyalty Booster (if any), plus</li>
+                            <li>Accrued Wellness Booster, if any.</li>
+                        </ol><br>
+                        Note: At the end of each Policy Year during the Premium Payment Term, if all due Premiums have been paid, an annual Loyalty Booster shall be added to the maturity benefit.<br>
+                    </li>
+                    </th:block>
+                </ol>
+            </td>
+            <td>Clause 1.2 Of Part C</td>
+        </tr>
+        <tr>
+            <td>
+                <span>&#8226;</span><strong> Other benefits</strong> <br><br>
+                <span>&#10146;</span> During the Premium Payment Term and provided the Policy is in-force and the Life Insured is alive, if the Life Insured is hospitalised, following benefits shall be payable to You depending on the type of the Hospitalisation:<br>
+                <ol type="i">
+                    <li><strong>Fixed Daily Hospitalisation Cash Benefit:</strong>
+                        Subject to the conditions as specified below, if the Life Insured is hospitalised during the Premium Payment Term for Elite Variant and during Policy Term for Lite Variant for a minimum, continuous and complete period of 24 hours, We will pay the following Fixed Daily Hospitalisation Cash Benefit amount for each day of Hospitalisation from the first day of Hospitalisation, provided all due Premiums have been paid:<br><br>
+                        <table>
+                            <thead>
+                            <tr>
+                                <th style="background-color: #d9e2f3;">Hospitalisation Type</th>
+                                <th style="background-color: #d9e2f3;">Benefit Payable</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td>Non - ICU (Intensive Care Unit)</td>
+                                <td>Benefit amount shall be equal to 1% of the Sum Assured for each day of Hospitalisation</td>
+                            </tr>
+                            <tr>
+                                <td>ICU (Intensive Care Unit)</td>
+                                <td>Benefit amount shall be equal to 2% of the Sum Assured for each day of Hospitalisation in the Intensive Care Unit (ICU)</td>
+                            </tr>
+                            </tbody>
+                        </table><br>
+                        <span>&#10146;</span> The Conditions for the Fixed Daily Hospitalisation Cash Benefit:
+                        <ol type="a">
+                            <li>The Fixed Daily Hospitalisation Cash Benefit amount per day shall be 1% percentage of the Sum Assured as on the Date of Commencement of the Risk, and shall remain constant throughout the Premium Payment Term for Elite Variant and during Policy Term for Lite Variant. </li>
+                            <li>Fixed Daily Hospitalisation Cash Benefit is payable with a maximum limit of 30 days per Policy Year.</li>
+                            <li>The specified number of days per Policy Year is inclusive of days hospitalised in non-ICU and ICU.</li>
+                            <li>The Fixed Daily Hospitalisation Cash Benefit for Elite variant will cease on the earlier of (i) claiming total of 300 days of Hospitalization or (2) at the end of Premium Payment Term; and for Lite variant it will cease on the earlier of (i) claiming total of 300 days of Hospitalization or (2) at the end of Policy Term.</li>
+                            <li>This Fixed Daily Hospitalisation Cash Benefit shall be payable subject to the following:
+                                <ol type="i">
+                                    <li>This Benefit is payable only after a continuous and complete 24 hours of Hospitalization during the Premium Payment Term  for Elite variant and during the Policy Term for Lite variant of the Life Insured for each claim.</li>
+                                    <li>The Hospitalization must be for the Medically Necessary Treatment for an Illness/Accident and is commenced and continued on the written advice of the treating Medical Practitioner. </li>
+                                    <li>We will not be liable to pay the daily Fixed Daily Hospitalisation Cash Benefit amount for more than the maximum number of days as specified, during the Premium Payment Term for Elite Variant and during Policy Term for Lite Variant.</li>
+                                    <li>A Waiting Period for Fixed Daily Hospitalisation Cash Benefit has been completed prior to the Hospitalization related to Illness. No benefit shall be payable for any Hospitalisation due to Illness during the Waiting Period for Fixed Daily Hospitalisation Cash Benefit. Such a Waiting Period for Fixed Daily Hospitalisation Cash Benefit is not applicable to claims arising due to Accident provided the Accident occurs after the Date of Commencement of Risk or Policy Revival date as the case may be.</li>
+                                    <li>More than one claim can be considered in respect of the Life Insured under the Fixed Daily Hospitalisation Cash Benefit during the Premium Payment Term for Elite Variant and during Policy Term for Lite Variant, subject to the maximum number of days specified. On exhaustion of the maximum number of days allowed, the cover under the Fixed Daily Hospitalisation Cash Benefit will terminate in relation to such Life Insured.</li>
+                                    <li>Once claim is considered admissible as per the terms and condition under the Fixed Daily Hospitalisation Cash Benefit, You will be eligible for the fixed daily amount from the first day of Hospitalisation, provided that the Life Insured is hospitalised for a continuous period of 24 hours.</li>
+                                    <li>Fixed Daily Hospitalisation Cash Benefit amount is a fixed per-day benefit and will be calculated on the basis of the number of continuous and completed days of Hospitalization. Fixed Daily Hospitalisation Cash Benefit will be paid as a lumpsum amount, irrespective of actual Hospitalisation expenses.</li>
+                                    <li>Any procedure / treatment which leads to Hospitalisation of less than 24 hours is not covered.</li>
+                                </ol>
+                            </li>
+                            <li>The applicable exclusions to the Fixed Daily Hospitalisation Cash Benefit are as detailed in Annexure B. </li>
+                        </ol>
+                    </li>
+                    <li><strong>Fixed Surgical Care Benefit:</strong>
+                        Subject to the conditions as specified below, if the Life Insured is hospitalised during the Premium Payment Term for Elite Variant and during the Policy Term for Lite Variant for a minimum continuous and complete period of 24 hours for undergoing Medically Necessary Treatment through surgery in India and actually undergoes that surgery while Hospitalised, We will pay the following Fixed Surgical Care Benefit amount to You for the following types of surgery, provided all due Premiums have been paid:<br><br>
+                        <table >
+                            <thead>
+                            <tr>
+                                <th style="background-color: #d9e2f3;">Surgery Type</th>
+                                <th style="background-color: #d9e2f3;">Benefit payable</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td>Major Surgery</td>
+                                <td>Benefit amount shall be equal to the 10% of the Sum Assured </td>
+                            </tr>
+                            <tr>
+                                <td>Minor Surgery</td>
+                                <td>Benefit amount shall be equal to the 5% of the Sum Assured </td>
+                            </tr>
+                            </tbody>
+                        </table><br>
+                        <span>&#10146;</span> This Fixed Surgical Care Benefit shall be payable subject to the following:
+                        <ol type="a">
+                            <li>You can claim multiple times under this Policy during the Premium Payment Term irrespective of any previous claims paid by Us. However, in no circumstance shall We pay more than the following limits:
+                                <ul>
+                                    <li>20% of Sum Assured in any one Policy Year; and </li>
+                                    <li>100% of Sum Assured during the Premium Payment Term for Elite Variant and during Policy Term for Lite Variant.</li>
+                                </ul>
+                            </li>
+                            <li>The Fixed Surgical Care Benefit for Elite Variant will cease to be available on the earlier of (i) claiming 100% of the Sum Assured; or (ii) at the end of Premium Payment Term and for Lite Variant it will cease on the earlier of (i) claiming 100% of chosen Sum Assured or (ii) at the end of Policy Term.</li>
+                            <li>Liability to make any payment under the Surgical Care Benefit shall commence only after a continuous and completed 24 hours of Hospitalization of the Life Insured for each claim. </li>
+                            <li>The surgery must be for Medically Necessary Treatment of any Illness or Injury due to an Accident and is commenced and continued on the written advice of the treating Medical Practitioner. </li>
+                            <li>We will not be liable to pay the daily Fixed Surgical Care Benefit amount for more than the maximum limit as specified, during the Premium Payment Term for Elite Variant and during Policy Term for Lite Variant. </li>
+                            <li>A Waiting Period for Fixed Surgical Care Benefit has been completed prior to the Hospitalization for surgery related to Illness. No benefit shall be payable for any Fixed Surgical Care Benefit claim due to Illness during the Waiting Period for Fixed Surgical Care Benefit. The Waiting Period for Fixed Surgical Care Benefit will not be applicable to claims arising due to Accident provided the Accident occurs after the Date of Commencement of Risk of the Policy or Policy Revival date, as the case may be.</li>
+                            <li>More than one claim can be considered in respect of the Life Insured under this Fixed Surgical Care Benefit during the Premium Payment Term for Elite Variant and during Policy Term for Lite Variant, subject to the maximum limit specified. On exhaustion of the maximum limit allowed, the cover under the Fixed Surgical Care Benefit will terminate in relation to such Life Insured.</li>
+                            <li>The Fixed Surgical Care Benefit amount shall be paid based on the surgery resulting in highest claim amount in case of more than one surgery is performed on the Life Insured during the same Hospitalisation. </li>
+                            <li>The Fixed Surgical Care Benefit is a fixed lumpsum benefit, irrespective of actual surgery expenses.</li>
+                            <li>Any procedure / treatment which leads to Hospitalisation of less than 24 hours is not covered.</li>
+                            <li>The applicable exclusions to the Fixed Surgical Care Benefit are as detailed in Annexure C.</li>
+                        </ol>
+                    </li>
+                </ol>
+                <span>&#10146;</span> <strong>Lock-in period for Linked Insurance products:</strong><br><br>
+                <span style="display: block; text-align: center;">This is not applicable.</span>
+            </td>
+            <td>Clause 1.3 Of Part C</td>
+        </tr>
+        <tr>
+            <td>6</td>
+            <td>Options available <i>(in case of Linked Insurance Products)</i></td>
+            <td style="text-align: center;">
+                This is not applicable
+            </td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>7</td>
+            <td>Option available (in case of Annuity product)</td>
+            <td style="text-align: center;">
+                This is not applicable
+            </td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>8</td>
+            <td>Riders opted, if any</td>
+            <td>
+                <div th:if="${riderOpted}">
+                    <div th:if="${addRiderOpted}">
+                        <strong>Axis Max Life Accidental Death and Dismemberment Rider (UIN:<span th:text="${addRiderUin}"></span>)</strong>: which provides additional benefits in case of death or dismemberment of the Life Insured due to an accident.<br><br>
+                    </div>
+                    <div th:if="${termPlusRiderOpted}">
+                        <strong> Axis Max Life Term Plus Rider (UIN:<span th:text="${termplusRiderUin}"></span>)</strong>: which provides additional lump sum benefit in case of death of the Life Insured.<br><br>
+                    </div>
+                    <div th:if="${criticalIllnessAndDisabilityRiderOpted}">
+                        <strong> Axis Max Life Critical Illness and Disability Rider (UIN: <span th:text="${cidrRiderUin}"></span>)</strong>: which provides additional lump sum benefit in case of critical illness diagnosis.<br><br>
+                    </div>
+                </div>
+                <div th:unless="${riderOpted}">
+                    <span>&#10146;</span> No riders are opted
+                </div>
+            </td>
+            <td></td>
+        </tr>
+        <tr>
+            <td rowspan="4">9</td>
+            <td rowspan="4">Exclusions (events where insurance coverage is not payable), if any.</td>
+            <td>
+                <strong>Brief list of the applicable exclusions, if any:</strong><br><br>
+            </td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>
+                <span>&#10146;</span> <b>SUICIDE EXCLUSION</b><br><br>
+                <span>&#8226;</span> In case of death due to suicide of the Life Insured whether minor/major within 12 (Twelve) months from the Date of Commencement of Risk under the Policy or from the date of Revival of this Policy, as applicable, all risks and benefits under this Policy shall cease and the Policy shall terminate immediately and We shall only pay the following to the Claimant, provided that the Policy is in force:<br>
+                <span>&#8226;</span> Higher of the Surrender Value as on the date of death or the sum of (Total Premiums Paid plus loadings for modal premiums and Underwriting Extra Premium, if any, exclusive of taxes, cesses and levies, paid to Us till the date of death), if the Policy has acquired a Surrender Value; or<br>
+                <span>&#8226;</span> Total Premiums Paid plus loadings for modal premiums and Underwriting Extra Premium, if any exclusive of taxes, cesses and levies. Received by Us on the date of death, if the Policy has not acquired a Surrender Value.<br><br>
+            </td>
+            <td>Clause 5 under Part F</td>
+        </tr>
+        <tr>
+            <td><span>&#10146;</span><strong> EXCLUSIONS APPLICABLE TO FIXED DAILY HOSPITALISATION CASH BENEFIT </strong><br> As per Annexure B<br><br></td>
+            <td>Clause 6A of Part F</td>
+        </tr>
+        <tr>
+            <td><span>&#10146;</span><strong> EXCLUSIONS APPLICABLE TO FIXED SURGICAL CARE BENEFIT: </strong><br> As per Annexure C<br><br></td>
+            <td>Clause 6B of Part F</td>
+        </tr>
+        <tr>
+            <td>10</td>
+            <td>Waiting /lien Period, if any</td>
+            <td>No waiting period applicable</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>11</td>
+            <td>Grace period</td>
+            <td><strong>Number of Days :</strong>
+                <span th:text="${numberOfDays}"></span><br>
+            </td>
+            <td>Clause 17 of Part B</td>
+        </tr>
+        <tr>
+            <td>12</td>
+            <td>Free Look Period</td>
+            <td><strong>Number of days:</strong> 30 days beginning from the date of receipt of the Policy document.</td>
+            <td>Clause 8 of Part D</td>
+        </tr>
+        <tr>
+            <td rowspan="8">13</td>
+            <td rowspan="8">Lapse, paid-up and revival of the Policy</td>
+            <td>
+                <span>&#8226;</span> <strong>Grace Period:</strong><br><br>
+                <span>&#10146;</span> the time granted by Us from the due date for the payment of Premium, without any penalty or late fee or interest, during which time the Policy is considered to be in force with risk cover without any interruption, as per the terms and conditions of the Policy. The Grace Period is a period of 15 (Fifteen) days from the due date of the first unpaid Premium for monthly Premium payment mode and 30 (Thirty) days from the due date of the first unpaid Premium for annual, semi-annual or quarterly premium payment modes<br><br>
+            <td>Clause 17 of Part B</td>
+        </tr>
+        <tr>
+            <td><span>&#8226;</span> <strong>Lapse Period:</strong><br><br>
+                <span>&#10146;</span>The Policy which has not acquired the Surrender Value and where due Premium has not been received for at least the first Full Policy Year will be considered as Lapsed Policy<br><br></td>
+            <td>Clause 9 of Part D</td>
+        </tr>
+        <tr>
+            <td><span>&#8226;</span> <strong>Revival Period:</strong><br><br>
+                <span>&#10146;</span> It means a period of 5 (Five) consecutive years from the due date of the first unpaid Premium.<br><br></td>
+            <td>Clause 58 of Part B </td>
+        </tr>
+        <tr>
+            <td><span>&#8226;</span> <strong>Reduced Paid Up Benefits: </strong><br><br>
+                <span>&#10146;</span> If this Policy has acquired a Surrender Value as specified under Clause 1 of Part D, in the event of non-payment of the due Premiums by You to Us and on the expiry of the Grace Period, this Policy will not become a Lapsed Policy and will continue under Reduced Paid Up Mode unless revived. If this Policy is under Reduced Paid Up Mode, the benefits payable shall be as follows:<br><br></td>
+            <td>Clause 2 of Part C</td>
+        </tr>
+        <tr>
+            <td><span>&#8226;</span> <strong>Reduced Paid Up Death Benefit</strong><br><br>
+                <span>&#10146;</span> If the Life Insured dies during Policy Term, We will pay the applicable Reduced Paid Up Death Benefit to the Claimant which will be: <br><br>
+                <ol type="i">
+                    <th:block th:if="${variant == 'Elite'}">
+                    <li><strong>For Elite Variant:</strong> Equal to higher of the following:
+                        <ul>
+                            <li>Reduced Paid Up Factor multiplied by Sum Assured on Death; or </li>
+                            <li>105% (One Hundred Five percent) of sum of Total Premiums Paid plus Underwriting Extra Premiums plus loadings for modal premiums (if any) plus discount (if any) as on the date of death of Life Insured</li>
+                            <li>Accrued Benefit as on date of death of Life Insured</li>
+                        </ul>
+                    </li>
+                    </th:block>
+                    <th:block th:if="${variant == 'Lite'}">
+                    <li><strong>For Lite Variant:</strong>  Equal to higher of the following:
+                        <ul>
+                            <li>Reduced Paid Up Factor multiplied by Sum Assured on Death; or </li>
+                            <li>105% (One Hundred Five percent) of sum of Total Premiums Paid plus Underwriting Extra Premiums plus loadings for modal premiums (if any) plus discount (if any) as on the date of death of Life Insured</li>
+                            <li>100% (Hundred percent) of (Total Premiums Paid plus loadings for modal premiums plus Underwriting Extra Premium (if any) plus discount (if any)) plus Accrued Wellness Booster (if any) plus accrued Loyalty Booster (if any) as on the date of death of life insured.</li>
+                        </ul>
+                    </li>
+                    </th:block>
+                </ol>
+                <span>&#10146;</span> The Death Benefit during the entire Policy Term when the Policy is under Reduced Paid Up Mode will not be less than 105% of sum of Total Premiums Paid, Underwriting Extra Premium paid (if any) and loadings for modal premiums paid (If any) as on the date of death of the Life Insured
+            </td>
+            <td>Clause 2.1 of Part C</td>
+        </tr>
+        <tr>
+            <td><span>&#8226;</span> <strong>Reduced Paid Up Maturity Benefit:</strong><br><br>
+                <span>&#10146;</span> If the Life Insured has survived until the Maturity Date, We will pay the applicable Reduced Paid Up Sum Assured on Maturity which will be:
+                <ol type="i">
+                    <th:block th:if="${variant == 'Elite'}">
+                    <li><strong>For Elite Variant:</strong>  it will be equal to:<br><br>
+                        <ul>
+                            <li>Reduced Paid Up Factor multiplied by Sum Assured on Maturity; plus</li>
+                            <li>Accrued Loyalty Booster (if any); plus</li>
+                            <li>Applicable Saving Boosters (if any); plus</li>
+                            <li>Accrued Wellness Booster (if any).</li>
+                        </ul><br>
+                        Note - Growth Rate applicable under the Savings Booster shall be equivalent to the Growth Rate multiplied with the Reduced Paid Up Factor.<br><br>
+                    </li>
+                    </th:block>
+                    <th:block th:if="${variant == 'Lite'}">
+                    <li><strong>For Lite Variant:</strong> it will be equal to<br><br>
+                        <ul>
+                            <li>Reduced Paid Up Factor multiplied by Sum Assured on Maturity; plus </li>
+                            <li>Accrued Loyalty Booster (if any); plus</li>
+                            <li>Accrued Wellness Booster (if any).</li>
+                        </ul>
+                    </li>
+                    </th:block>
+                </ol>
+                </td>
+            <td>Clause 2.2 of Part C</td>
+        </tr>
+        <tr>
+            <td><span>&#8226;</span> <strong>Reduced Paid Up Surrender Benefit </strong><br><br>
+                <span>&#10146;</span> The Surrender Value of Reduced Paid Up Policy will be determined using the methodology and Special Surrender Value scales as
+                mentioned in Clause 1 of Part D.<br><br>
+                The Surrender Value of Reduced Paid Up Mode Policy will also be determined using the methodology mentioned in Clause 1 of Part D of Policy document. The Policy which has acquired the Surrender Value shall lapse if the Reduced Paid Up benefit under the Policy is less than Rs. 2500/-. In case the Reduced Paid Up benefit of the Policy is less than Rs. 2500/-, the Policy may be terminated after expiry of Revival Period by paying the applicable Surrender Value.<br><br></td>
+            <td>Clause 2.3 of Part C</td>
+        </tr>
+        <tr>
+            <td><span>&#8226;</span><strong> Reduced Paid Up Fixed Daily Hospitalisation Cash Benefit and Reduced Paid Up Fixed Surgical Care Benefit</strong><br><br>
+                <span>&#10146;</span> After the Policy has become the Reduced Paid Up Mode Policy, the applicable Reduced Paid Up Fixed Daily Hospitalisation Cash Benefit and Reduced Paid Up Fixed Surgical Care Benefit will be applicable.</td>
+            <td>Clause 2.4 of Part C</td>
+        </tr>
+        <tr>
+            <td>14</td>
+            <td>Policy Loan, if applicable</td>
+            <td>
+                <span>&#10146;</span> Once this Policy has acquired the Surrender Value, then, You will be eligible for grant of loans from Us wherein:<br><br>
+                Once the Policy acquires a Surrender Value, you are eligible for a loan.
+                <ol type="1">
+                    <li>Loans are available only during the Policy Term.</li>
+                    <li>The minimum loan amount is INR 10,000, with a maximum of 75% of the Surrender Value.</li>
+                    <li>Upon loan approval, the Policy will be assigned to us until the loan, including interest and fees, is repaid. Upon repayment, the Policy will be reassigned to you.</li>
+                    <li>All benefits and withdrawals under the Health Care Benefit Option will first be adjusted to any outstanding loan and accrued interest. Payouts from the Fixed Daily Hospitalization Cash Benefit and Fixed Surgical Care Benefit will not be adjusted against the loan.</li>
+                    <li>Loan interest will be compounded annually at the rates set by us at the time of the loan.</li>
+                    <li>The loan interest rate is the applicable RBI Bank Rate plus 3.0 % (currently 9.75% p.a.), based on the RBI Bank Rate of 6.75% as of March 31, 2024. This rate is reviewed annually and is effective from July 1 to June 30. Any changes will require IRDAI approval.</li>
+                    <li>Inforce or fully paid-up policies will not be foreclosed for non-payment of the loan, even if the outstanding balance exceeds the Surrender Value.</li>
+                    <li>For Reduced Paid-Up Mode Policies, if the outstanding loan and interest exceed the Surrender Value, the Policy will terminate immediately. If the outstanding loan exceeds 95% of the Surrender Value or if the remaining Policy Term is 6 months or less, we will notify you for repayment.</li>
+                </ol>
+            </td>
+            <td>Clause 2 of Part D</td>
+        </tr>
+        <tr>
+            <td rowspan="3">15</td>
+            <td rowspan="3">Claims/Claims Procedure</td>
+            <td>
+                <span style="padding-right: 4px;">&#10146;</span><strong>Turn Around Time (TAT) for claims settlement: <span
+                    th:text="${tatDays}"></span> days after receipt of entire documents or completion of investigations, if any, whichever is later and brief procedure. </strong>
+                <div style="padding-top: 10px;"><span style="padding-right: 4px;">&#10146;</span> Notice of Claim – All cases of death claim must be notified immediately to us in writing. However, We may condone delay on merit for delayed claims where the reason for delay is proved to be for reasons beyond the control of the Claimant.</div><br>
+                <span>&#10146;</span> Please note that all claims will be payable to the nominee/legal heir of the Policyholder.<br><br>
+                <span>&#10146;</span> Claim forms as required by us must be completed and furnished to us, at the Claimant’s expense, within 90 days after the date the insured event happens, unless specified otherwise. A list of primary claim documents listing the normally required documents is attached to the Policy. Submission of the listed documents, forms or other proof, however, shall not be construed as an admission of liabilities by the Company. We reserve the right to require any additional proof and documents in support of the claim.<br><br>
+
+            </td>
+            <td></td>
+        </tr>
+        <tr>
+            <td><span>&#8226;</span> <strong>Helpline number:</strong><br><br>
+                <span>&#10146;</span> 1860-120-5577 (Call charges apply) or 0124-4219090<br><br>
+                <span>&#8226;</span> <strong>Contact Details of the Insurer:</strong><br><br>
+                <span>&#10146;</span> Axis Max Life Insurance Ltd., Plot No. 90C, Udyog Vihar, Sector 18,
+                Gurugram-122015, Haryana, India. Website - <a href="https://www.maxlifeinsurance.com"
+                                                              target="_blank">www.axismaxlifeinsurance.com</a><br><br>
+            </td>
+            <td>Clause 1.1 of Part G</td>
+        </tr>
+        <tr>
+            <td>
+                <span>&#8226;</span> <strong>Link for downloading claim form and list of documents required
+                including bank account details:</strong><br><br>
+                <span>&#10146;</span> <a href="https://www.maxlifeinsurance.com/downloads"
+                                         target="_blank">https://www.maxlifeinsurance.com/<wbr>downloads</a><br><br>
+                <span>&#10146;</span> We will require the following documents in case of claim request under this Policy:
+                <br><br>
+                <strong><span>&#10146;</span> Death Claim documents </strong><br><br>
+                <ol type="a">
+                    <li>Claimant’s statement in the prescribed form (death claim application form - Form A);</li>
+                    <li>Original Policy document;</li>
+                    <li>Copy of police complaint / first information report (in case of death by Accident or unnatural death or suicidal death of the Life Insured);</li>
+                    <li>All medical / hospital records, in case of hospitalization (including diagnostic records);</li>
+                    <li>copy of duly certified post mortem report , autopsy / viscera report and a copy of the final police investigation report / charge sheet (in the case of death by Accident or unnatural death or suicidal death of the Life Insured);</li>
+                    <li>Original / attested copy of death certificate issued by the local / municipal authority (only in case of death of the Life Insured);</li>
+                    <li>Discharge summary / indoor case papers in case death occurred due to medical reasons in a hospital;</li>
+                    <li>Medical booklet / CGHS card details in case of defense and central government personnel;</li>
+                    <li>Body transfer certificate / embassy documents / postmortem report (whichever applicable in case of death in a foreign country);</li>
+                    <li>Complete passport copy in case of death in a foreign country;</li>
+                    <li>Identity proof of the Claimants bearing their photographs and signatures (only in case of death of the Life Insured);</li>
+                    <li>Other life / health insurance details with claim history details;</li>
+                    <li>Employer certificate with complete leave records (Form E);</li>
+                    <li>Copy of bank passbook / cancelled cheque of the Claimant;</li>
+                    <li>ITR for last 3 years' / GST certificate in case of self-employed;</li>
+                    <li>In case of a medical / natural death of the Life Insured, the attending physician’s statement (Form C) and the medical records (admission notes, discharge/death summary, test reports, etc.);</li>
+                    <li>NEFT mandate form attested by bank authorities</li>
+                    <li>Bank statement of last 2 years of the Life Insured and; and</li>
+                    <li>any other document or information on required by Us for assessing and approving the claim request.</li>
+                </ol>
+                <strong><span>&#10146;</span> Maturity Benefit claim documents: </strong><br>
+                <ol type="a">
+                    <li>NEFT Form (if not provided earlier); </li>
+                    <li>cancelled cheque or copy of passbook with pre-printed name and bank account number, for payout through NEFT (if not provided earlier);</li>
+                    <li>self-attested copy of identity proof of the Claimants bearing their photographs and signatures; and </li>
+                    <li>any other document or information required by Us.</li>
+                </ol>
+                <strong><span>&#10146;</span> Fixed Daily Hospitalisation Cash Benefit or Fixed Surgical Care benefit documents:</strong><br>
+                <ol type="a">
+                    <li>NEFT Form (if not provided earlier); </li>
+                    <li>cancelled cheque or copy of passbook with pre-printed name and bank account number, for payout through NEFT (if not provided earlier);</li>
+                    <li>copy of discharge summary; </li>
+                    <li>Id proof of Claimant;</li>
+                    <li>copy of claim settlement letter (from other insurer) (If available);</li>
+                    <li>copy of Hospital bill receipt; </li>
+                    <li>additional document such as indoor case papers, first consultation paper and Hospital registration certificate; </li>
+                    <li>any other document or information required by Us.
+                        <ul>
+                            <li>A Claimant can download the claim request documents from Our website <a href="https://www.maxlifeinsurance.com" target="_blank">www.maxlifeinsurance.com</a> or can obtain the same from any of Our branches or offices.</li>
+                            <li>A Claimant may contact the TPA at the details mentioned on Our website <a href="https://www.maxlifeinsurance.com" target="_blank">www.maxlifeinsurance.com</a> for any claims relating to Fixed Daily Hospitalisation Cash Benefit and Fixed Surgical Care Benefit</li>
+                        </ul>
+                    </li>
+                </ol>
+            </td>
+            <td>Clause 2 of Part F</td>
+        </tr>
+        <tr>
+            <td>16</td>
+            <td>Policy Servicing</td>
+            <td>
+                <span>&#8226;</span> <strong>Turn Around Time (TAT) : Up to <span th:text="${turnAroundTime}"></span> days</strong><br><br>
+                <span>&#8226;</span> <strong>Helpline number:</strong><br><br>
+                <span>&#10146;</span> 1860-120-5577 (Call charges apply) or 0124- 4219090<br><br>
+                <span>&#8226;</span> <strong>Contact Details of the Insurer:</strong><br><br>
+                <span>&#10146;</span> Axis Max Life Insurance Ltd., Plot No. 90C, Udyog Vihar, Sector 18, Gurugram-122015, Haryana, India. Website - <a href="https://www.maxlifeinsurance.com" target="_blank">www.axismaxlifeinsurance.com</a><br><br>
+                <span>&#8226;</span> <strong>Link for downloading applicable forms and list of documents required including bank account details:</strong><br><br>
+                <span>&#10146;</span> <a href="https://www.maxlifeinsurance.com/downloads" target="_blank">https://www.maxlifeinsurance.com/<wbr>downloads</a><br><br>
+                <span>&#10146;</span> We will require the following documents in case of policy servicing under this Policy regarding the servicing of the Life Insured: <br><br>
+                <span>&#8226;</span> Application in the prescribed form;<br>
+                <span>&#8226;</span> original Policy document (if any);<br>
+                <span>&#8226;</span> identity proofs (such as copy of Passport, PAN card, Voter identity card, Aadhar (UID) card, etc.) of the Policyholder or Life Insured (bearing their photographs and signatures);<br>
+                <span>&#8226;</span> NEFT mandate form attested by bank authorities, along with a cancelled cheque or bank account passbook;<br>
+                <span>&#8226;</span> any other documents or information required by Us for assessing and approving the claim request;
+            </td>
+            <td></td>
+        </tr>
+        <tr>
+            <td rowspan="2">17</td>
+            <td rowspan="2">Grievances /Complaints</td>
+            <td>
+                <span>&#8226;</span> <strong>Contact Details of Grievance Redressal Officer of the insurer:</strong><br><br>
+                <span>&#8226;</span> Grievance Redressal Officer, Axis Max Life Insurance Ltd., Plot No. 90C, Udyog Vihar, Sector 18, Gurugram-122015, Haryana, India<br><br>
+                <span>&#8226;</span> <strong>Link for registering the grievance with the insurer’s portal </strong><br><br>
+                <span>&#10146;</span> <a href="https://www.maxlifeinsurance.com/customer-service/grievance-redressal" target="_blank">https://www.maxlifeinsurance.com/customer-service/grievance-redressal</a><br><br>
+            </td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>
+                <span>&#8226;</span> <strong>Contact details of Ombudsman:</strong><br><br>
+                <span>&#10146;</span> Refer Annexure A for the Ombudsman details
+            </td>
+            <td>As per Annexure A</td>
+        </tr>
+    </table>
+    <div class="declaration">
+        <p><u>Declaration by the Policyholder</u></p>
+        <p>I have read the above and confirm having noted the details.</p>
+
+        <div class="signature-section">
+            <div class="left">
+                <p>Place:<span style="text-align: center;min-width: 100px;border-bottom-color: #000;border-bottom-style: solid;border-bottom-width: 1px;display: inline-block;padding: 0 18px;font-weight: bold;text-transform:uppercase;"><span th:text="${place}"></span></span></p>
+                <p>Date:<span style="text-align: center;min-width: 100px;border-bottom-color: #000;border-bottom-style: solid;border-bottom-width: 1px;display: inline-block;padding: 0 18px;font-weight: bold;text-transform:uppercase;"><span th:text="${date}"></span></span></p>
+            </div>
+            <div class="signature" style="text-align: right; margin-top: -45px;">
+                <p>(Signature of the Policyholder)</p>
+            </div>
+        </div><br>
+        <div class="note">
+            <p><b>Note:</b></p>
+            <ol type="i">
+            <li>For the product related documents including the Customer Information sheet please refer to the <a href="https://www.maxlifeinsurance.com/health-insurance-plans/secure-earnings-wellness-advantage-plan" target="_blank">https://www.maxlifeinsurance.com/health-insurance-plans/secure-earnings-wellness-advantage-plan</a>.</li>
+            <li>In case of any conflict, the terms and conditions mentioned in the Policy document shall prevail. </li>
+            <li><strong>For Axis Max Life Secure Earnings & Wellness Advantage Plan</strong> please refer to the Policy document.</li>
+            <li> In the event of any conflict or discrepancy between any translated version and the English language version of this CIS, the English language version of this CIS shall prevail. </li>
+            </ol>
+        </div>
+    </div>
+</div>
+</body>

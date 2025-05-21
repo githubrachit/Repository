@@ -1,0 +1,343 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "properties": {
+    "request": {
+      "type": "object",
+      "properties": {
+        "metadata": {
+          "type": "null"
+        },
+        "requestData": {
+          "type": "object",
+          "properties": {
+            "requestPayload": {
+              "type": "object",
+              "properties": {
+                "productRestrictionPayload": {
+                  "type": "object",
+                  "properties": {
+                    "education": {
+                      "type": "string",
+                      "enum": [
+                        "Senior School",
+                        "High School",
+                        "Graduate",
+                        "Post Graduate",
+                        "Professional",
+                        "Diploma",
+                        "Illiterate",
+                        "Primary School"
+                      ]
+                    },
+                    "insurerEducation": {
+                      "type": [
+                        "string",
+                        "null"
+                      ]
+                    },
+                    "income": {
+                      "type": "string",
+                      "pattern": "^[1-9][0-9]{0,8}$"
+                    },
+                    "insurerAnnualIncome": {
+                      "type": [
+                        "string",
+                        "null"
+                      ]
+                    },
+                    "occupation": {
+                      "type": "string",
+                      "enum": [
+                        "Salaried",
+                        "Self Employed",
+                        "Housewife",
+                        "Professional",
+                        "Student",
+                        "Self Employed From Home",
+                        "Agriculture",
+                        "Retired",
+                        "Others"
+                      ]
+                    },
+                    "insurerOccupation": {
+                      "type": [
+                        "string",
+                        "null"
+                      ]
+                    },
+                    "sumAssured": {
+                      "type": "string",
+                      "pattern": "^[1-9][0-9]{0,8}$"
+                    },
+                    "objectiveOfInsurance": {
+                      "type": [
+                        "string",
+                        "null"
+                      ]
+                    },
+                    "isJointLife": {
+                      "type": "string"
+                    },
+                    "premiumType": {
+                      "type": "string",
+                      "enum": [
+                        "Single Pay",
+                        "Annual Pay",
+                        "Limited Pay",
+                        "Pay Till 60",
+                        "Regular Pay"
+                      ]
+                    },
+                    "spouseAnnualIncome": {
+                      "type": [
+                        "string",
+                        "null"
+                      ]
+                    },
+                    "spouseTotalInsuranceCover": {
+                      "type": [
+                        "string",
+                        "null"
+                      ]
+                    },
+                    "customerCode": {
+                      "type": [
+                        "string",
+                        "null"
+                      ]
+                    },
+                    "industryType": {
+                      "type": [
+                        "string",
+                        "null"
+                      ]
+                    },
+                    "productId": {
+                      "type": "string"
+                    },
+                    "agentId": {
+                      "type": "string"
+                    },
+                    "panNumber": {
+                      "type": [
+                        "string",
+                        "null"
+                      ]
+                    },
+                    "gender": {
+                      "type": "string",
+                      "enum": [
+                        "Male",
+                        "Female",
+                        "Transgender"
+                      ]
+                    },
+                    "formType": {
+                      "type": "string",
+                      "pattern": "^(?!\\s)(?!.*\\s{2})[^\\s].*[^\\s](?!\\s)$"
+                    },
+                    "isCIRider": {
+                      "type": "boolean"
+                    },
+                    "communicationPinCode": {
+                      "type": "string"
+                    },
+                    "communicationCountry": {
+                      "type": "string",
+                      "pattern": "^(?!\\s)(?!.*\\s{2})[^\\s].*[^\\s](?!\\s)$"
+                    },
+                    "agentRole": {
+                      "type": "string"
+                    },
+                    "communicationCity": {
+                      "type": "string",
+                      "minLength": 1,
+                      "maxLength": 50,
+                      "pattern": "^(?!\\s)(?!.*\\s{2})[^\\s].*[^\\s](?!\\s)$"
+                    },
+                    "isSmoker": {
+                      "type": "boolean"
+                    },
+                    "nationality": {
+                      "type": "string",
+                      "enum": [
+                        "Indian",
+                        "NRI",
+                        "PIO/OCI"
+                      ]
+                    },
+                    "dateOfBirth": {
+                      "type": "string",
+                      "pattern": "(((19|20)([2468][048]|[13579][26]|0[48])|2000)[/-]02[/-]29|((19|20)[0-9]{2}[/-](0[469]|11)[/-](0[1-9]|[12][0-9]|30)|(19|20)[0-9]{2}[/-](0[13578]|1[02])[/-](0[1-9]|[12][0-9]|3[01])|(19|20)[0-9]{2}[/-]02[/-](0[1-9]|1[0-9]|2[0-8])))"
+                    },
+                    "channel": {
+                      "type": "string"
+                    },
+                    "residentialStatus": {
+                      "type": "string"
+                    },
+                    "isDedupeValidated": {
+                      "type": "string"
+                    },
+                    "isWOPPlusRider": {
+                      "type": "boolean"
+                    },
+                    "isCIRider": {
+                      "type": "boolean"
+                    },
+                    "isACORider": {
+                      "type": "boolean"
+                    },
+                    "isACIRider": {
+                      "type": "boolean"
+                    },
+                    "currentCIRiderSumAssured" : {
+                      "type": [
+                        "string",
+                        "null"
+                      ]
+                    },
+                    "currentACIRiderSumAssured" : {
+                      "type": [
+                        "string",
+                        "null"
+                      ]
+                    },
+                    "currentACORiderSumAssured" : {
+                      "type": [
+                        "string",
+                        "null"
+                      ]
+                    },
+                    "permanentCountry": {
+                      "type": "string",
+                      "enum": [
+                        "AUSTRALIA",
+                        "AUSTRIA",
+                        "BAHRAIN",
+                        "BELGIUM",
+                        "BRUNEI",
+                        "CANADA",
+                        "CYPRUS",
+                        "DENMARK",
+                        "FINLAND",
+                        "FRANCE",
+                        "FRENCH GUIANA",
+                        "GERMANY",
+                        "GIBRALTAR",
+                        "GREECE",
+                        "HONG KONG",
+                        "ICELAND",
+                        "INDIA",
+                        "IRELAND",
+                        "ITALY",
+                        "JAPAN",
+                        "JORDAN",
+                        "KUWAIT",
+                        "LIECHTENSTEIN",
+                        "LUXEMBOURG",
+                        "MALDIVES",
+                        "MALTA",
+                        "MAURITIUS",
+                        "MONACO",
+                        "NETHERLAND ANTILLES",
+                        "NETHERLANDS",
+                        "NEW ZEALAND",
+                        "NORWAY",
+                        "OMAN",
+                        "PORTUGAL",
+                        "QATAR",
+                        "SAUDI ARABIA",
+                        "SEYCHELLES",
+                        "SINGAPORE",
+                        "SOUTH KOREA",
+                        "SPAIN",
+                        "SWEDEN",
+                        "SWITZERLAND",
+                        "TAIWAN",
+                        "UAE",
+                        "UK",
+                        "UNITED ARAB EMIRATES",
+                        "UNITED KINGDOM",
+                        "UNITED STATES OF AMERICA",
+                        "USA"
+                      ]
+                    },
+                    "isDiabetic": {
+                      "type": "boolean"
+                    },
+                    "transactionId": {
+                      "type": [
+                        "integer",
+                        "null"
+                      ]
+                    },
+                    "policyTerm" : {
+                      "type": [
+                        "string",
+                        "null"
+                      ]
+                    },
+                    "isPosSeller" : {
+                      "type": [
+                        "boolean",
+                        "null"
+                        ]
+                    },
+                    "premiumPaymentTerm" : {
+                      "type": [
+                        "string",
+                        "null"
+                      ]
+                    }
+                  },
+                  "required": [
+                    "education",
+                    "income",
+                    "occupation",
+                    "sumAssured",
+                    "productId",
+                    "agentId",
+                    "formType",
+                    "isCIRider",
+                    "isWOPPlusRider",
+                    "isACORider",
+                    "isACIRider",
+                    "communicationPinCode",
+                    "communicationCountry",
+                    "agentRole",
+                    "communicationCity",
+                    "isSmoker",
+                    "nationality",
+                    "dateOfBirth",
+                    "isJointLife",
+                    "premiumType",
+                    "channel",
+                    "residentialStatus",
+                    "isDedupeValidated",
+                    "permanentCountry",
+                    "isDiabetic"
+                  ]
+                }
+              },
+              "required": [
+                "productRestrictionPayload"
+              ]
+            }
+          },
+          "required": [
+            "requestPayload"
+          ]
+        }
+      },
+      "required": [
+        "metadata",
+        "requestData"
+      ]
+    }
+  },
+    "required": [
+      "request"
+    ]
+  }

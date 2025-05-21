@@ -1,0 +1,215 @@
+<td>
+                  <table cellspacing="0" cellpadding="0" width="100%" style="border-collapse: collapse;border-color: #ccc;border-style:solid;border-width:1px;">
+                     <tbody>
+                        <tr>
+                           <th colspan="6" style="background-color: #003770;border-color: #ccc;border-style:solid;border-width:1px; color: #fff;font-size: 10px; font-family: arial; padding: 4px" align="left">C. Information of Life Insured</th>
+                        </tr>
+                        <tr>
+                           <td style="font-weight: bold; padding: 4px;border-color: #ccc;border-style:solid;border-width:1px; font-size: 10px; font-family: arial;">1. Do you have any life or Critical Illness insurance policy issued, pending approval from any other insurance companies or has your application for Life/Health/Critical illness insurance or its reinstatement ever been offered at modified terms,rejected or postponed ?</td>
+                           <td style="padding: 4px; font-size: 10px; font-family: arial;text-transform:uppercase;text-align: center;" width="100" th:text=${ciPolicy}></td>
+                        </tr>
+                        <tr th:if="${isLIExist == 'YES'}">
+									<td colspan="2" style="padding: 4px;border-color: #ccc;border-style:solid;border-width:1px; font-size: 10px; font-family: arial;">
+										<span>
+											<strong>Issued or Pending:</strong>
+										</span>
+										<span style="padding-left: 10px;text-transform:uppercase;" th:text=${isLiIssued}></span>
+									</td>
+						</tr>
+						<tr th:if="${isLIExist == 'YES'}">
+									<td colspan="2" style="padding: 4px;border-color: #ccc;border-style:solid;border-width:1px; font-size: 10px; font-family: arial;">
+										<span>
+											<strong>Offered at modified terms, rejected or postponed:</strong>
+										</span>
+										<span style="padding-left: 10px;text-transform:uppercase;" th:text=${isLiRejected}></span>
+									</td>
+						</tr>
+						<tr th:if="${isLiIssued == 'YES'}">
+									<td colspan="2" style="padding: 4px;border-color: #ccc;border-style:solid;border-width:1px; font-size: 10px; font-family: arial;">
+										<span>
+											<strong>Total Sum Assured for Life Insurance:</strong>
+										</span>
+										<span style="padding-left: 10px;text-transform:uppercase;"th:text=${totalSumAssured}></span>
+									</td>
+						</tr>
+						<tr th:if="${isLiIssued == 'YES'}">
+									<td colspan="2" style="padding: 4px;border-color: #ccc;border-style:solid;border-width:1px; font-size: 10px; font-family: arial;">
+										<span>
+											<strong>Total Sum Assured for Critical illness:</strong>
+										</span>
+										<span style="padding-left: 10px;text-transform:uppercase;"th:text=${totalSumAssuredCI}></span>
+									</td>
+						</tr>
+                        <tr>
+                           <td colspan="2" style="padding: 4px;font-family: arial;font-size:10px;">
+                              <table width="100%" cellpadding="0" cellspacing="0" border="1" style="border-color: #ccc;">
+                                 <tbody>
+                                    <tr>
+                                       <td style="padding: 4px;" width="80%"></td>
+                                       <td style="padding: 4px;text-align: center;"><strong>Proposer</strong></td>
+                                       <td style="padding: 4px;text-align: center;"><strong>Life to be Insured</strong></td>
+                                    </tr>
+                                    <!-- <tr>
+                                       <td style="padding: 4px;" width="80%"><strong>2. Has any proposal/reinstatement for life or health Insurance ever been refused, modified, postponed or offered with extra premium (Reason, Month, Year and Name of the Insurance Company)?</strong></td>
+                                       <td th:if="${proposerFormFlag} == true" style="padding: 4px;text-align: center;text-transform:uppercase;" th:text=${isLiRejected}></td>
+                                       <td th:if="${proposerFormFlag} == true" style="padding: 4px;text-align: center;text-transform:uppercase;">NA</td>
+                                       <td th:if="${proposerFormFlag} == false" style="padding: 4px;text-align: center;text-transform:uppercase;">NA</td>
+                                       <td th:if="${proposerFormFlag} == false" style="padding: 4px;text-align: center;text-transform:uppercase;" th:text=${isLiRejected}></td>
+                                    </tr> -->
+                                    <tr>
+                                       <td style="padding: 4px;" width="80%">
+                                          <strong>
+                                             2. In the next 12 months do you intend to travel or reside abroad other than on holiday of less than 4 weeks?</strong></td>
+                                       <td style="padding: 4px;text-align: center;text-transform:uppercase;" th:text=${travelAbroad}></td>
+                                       <td style="padding: 4px;text-align: center;text-transform:uppercase;" th:text=${insuredtravelAbroad}></td>
+                                    </tr>
+                                    <tr th:if="${travelAbroad} == 'YES' or ${insuredtravelAbroad} == 'YES'">
+             	              				<td style="font-weight: bold; padding: 2px 4px; border-color: #ccc;border-style:solid;border-width:1px; font-size: 10px; font-family: arial;">2. i) Visited Countries</td>
+                		           				<td th:if="${proposerFormFlag} == true"  width="100" style="padding: 5px; font-size: 10px; font-family: arial;text-transform:uppercase;text-align: center">
+                        		   				<span style="padding-left: 8px;text-transform:uppercase;" th:text="${visitedCountries}"></span>
+                           						</td>
+                           						<td th:if="${proposerFormFlag} == true" style="padding: 2px 4px;  font-size: 10px; font-family: arial;text-transform:uppercase;" width="100">
+		                           				<span style="padding-left: 8px;text-transform:uppercase;">NA</span></td>
+        		                   				<td th:if="${proposerFormFlag} == false"  width="100" style="padding: 5px; font-size: 10px; font-family: arial;text-transform:uppercase;text-align: center">
+                		           				<span style="padding-left: 8px;text-transform:uppercase;">NA</span>
+                        		   				</td>
+                           						<td th:if="${proposerFormFlag} == false"  width="100" style="padding: 5px; font-size: 10px; font-family: arial;text-transform:uppercase;text-align: center">
+                           						<span style="padding-left: 8px;text-transform:uppercase;" th:text="${insuredvisitedCountries}"></span>
+                           					</td>
+                        			</tr>
+                                    <tr>
+                                       <td style="padding: 4px;" width="80%"><strong>3. Do you participate or do you intend to participate in any hazardous activities as part of your Occupation/ Sports/ Hobby?</strong>
+										   <!--                               //FUL2-98622 hazardous activity details-->
+										   <br>
+										   <span style="padding-left: 10px; padding-top: 5px; font-weight: bold;" th:if="${hazardousActivity=='YES'}">Proposer Details:
+                           <span style="padding-top: 5px;" th:text="${hazardousActivitesDetails}"></span></span>
+										   <span style="padding-left: 10px; padding-top: 5px; font-weight: bold;" th:if="${insuredhazardousActivity=='YES'}">Insured Details:
+                           <span style="padding-top: 5px;" th:text="${insuredhazardousActivitesDetails}"></span></span></td>
+                                       <td style="padding: 4px;text-align: center;text-transform:uppercase;" th:text=${hazardousActivity}></td>
+                                       <td style="padding: 4px;text-align: center;text-transform:uppercase;" th:text=${insuredhazardousActivity}></td>
+                                    </tr>
+                                    
+                                    <tr>
+                                       <td style="padding: 4px;" width="80%"><strong>4. Have you ever been convicted or are you under investigation for any criminal charges ?</strong>
+										   <!--										   FUL2-103414 criminal charges Details-->
+										   <br>
+										   <span style="padding-left: 10px; padding-top: 5px; font-weight: bold;" th:if="${criminalCharges=='YES'}">Proposer Details:
+                                        <span style="padding-top: 5px;" th:text="${criminalChargesDetails}"></span></span>
+										   <span style="padding-left: 10px; padding-top: 5px; font-weight: bold;" th:if="${insuredcriminalCharges=='YES'}">Insured Details:
+                                        <span style="padding-top: 5px;" th:text="${insuredCriminalChargesDetails}"></span></span>
+
+									   </td>
+                                       <td style="padding: 4px;text-align: center;text-transform:uppercase;" th:text=${criminalCharges}></td>
+                                       <td style="padding: 4px;text-align: center;text-transform:uppercase;" th:text=${insuredcriminalCharges}></td>
+                                    </tr>
+                                 </tbody>
+                              </table>
+                           </td>
+                        </tr>
+                        <!-- <tr th:if=${isLiMinor}>
+                        	<td style="padding: 4px; font-size: 10px; font-family: arial;font-weight: bold;">a. Insurance amount on family members?</td>
+                        	<table width="100%" cellpadding="0" cellspacing="0" border="1" style="border-collapse: collapse; border-color: #ccc;border-style:solid;border-width:1px;">
+                        	<tbody>
+                        		<tr>
+                        			<td style="padding: 4px;border-color: #ccc;border-style:solid;border-width:1px; font-size: 10px; font-family: arial;">
+                        				<span>
+											<strong>Family:</strong>
+										</span>
+										<span style="padding-left: 10px;text-transform:uppercase;" th:text=${familyCover}></span>
+                        			</td>
+                        		</tr>
+                        	</tbody>
+                        	</table>
+                        	<td></td>
+                        </tr> -->
+                        <tr>
+                           <td style="font-weight: bold; padding: 4px;border-color: #ccc;border-style:solid;border-width:1px; font-size: 10px; font-family: arial;"> 5. For Female Life Insured </td>
+                           <td style="padding: 4px;text-align: center;font-family: arial;font-size: 10px;" th:text=${isFemaleInsured}></td>
+                        </tr>
+                        <tr th:if=${isFemale}>
+                        	<td colspan="2" style="padding: 4px;font-family: arial;font-size:10px;">
+										<table width="100%" cellpadding="0" cellspacing="0" border="1" style="border-color: #ccc;">
+											<tbody>
+												<tr>
+													<td style="padding: 4px;" width="80%"></td>
+													<td width="10%" style="padding: 4px;text-align: center;">
+														<strong>Proposer</strong>
+													</td>
+													<td width="10%" style="padding: 4px;text-align: center;">
+														<strong>Life to be Insured</strong>
+													</td>
+												</tr>
+												<tr>
+													<td style="padding: 4px;" width="80%">
+														<strong>a. Spouse Occupation</strong>
+													</td>
+													<td style="padding: 4px;text-align: center;text-transform:uppercase;"th:text=${spouseOccupation}></td>
+													<td style="padding: 4px;text-align: center;text-transform:uppercase;"th:text=${insuredspouseOccupation}></td>
+												</tr>
+												<tr>
+													<td style="padding: 4px;" width="80%">
+														<strong>b. Spouse Annual Income</strong>
+													</td>
+													<td style="padding: 4px;text-align: center;text-transform:uppercase;"th:text=${spouseAnnualIncome}></td>
+													<td style="padding: 4px;text-align: center;text-transform:uppercase;"th:text=${insuredspouseAnnualIncome}></td>
+												</tr>
+												<tr>
+													<td style="padding: 4px;" width="80%">
+														<strong>c. Spouse Insurance Amount</strong>
+													</td>
+													<td style="padding: 4px;text-align: center;text-transform:uppercase;"th:text=${spouseInsurance}></td>
+													<td style="padding: 4px;text-align: center;text-transform:uppercase;"`th:text=${insuredspouseInsurance}>;</td>
+												</tr>
+												<tr>
+													<td style="padding: 4px;" width="80%">
+														<strong>e. Full Name Prior to Marriage (If there is a name change post marriage):</strong>
+													</td>
+													<td style="padding: 4px;text-align: center;text-transform:uppercase;">NA</td>
+													<td style="padding: 4px;text-align: center;text-transform:uppercase;">NA</td>
+												</tr>
+												<tr>
+													<td style="padding: 4px;" width="80%">
+														<strong>f.  Are you pregnant?</strong>
+													</td>
+													<td style="padding: 4px;text-align: center;text-transform:uppercase;"th:text=${proposerPregnant}></td>
+													<td style="padding: 4px;text-align: center;text-transform:uppercase;"th:text=${insuredPregnant}></td>
+												</tr>
+												<tr th:if=${isPregnant}>
+													<td style="padding: 4px;" width="80%">
+														<strong>i) If yes,how many months</strong>
+													</td>
+													<td style="padding: 4px;text-align: center;text-transform:uppercase;"th:text=${pregnantSince}></td>
+													<td style="padding: 4px;text-align: center;text-transform:uppercase;"th:text=${insuredPregnantSince}></td>
+												</tr>
+												<tr th:if=${isPregnant}>
+													<td style="padding: 4px;" width="80%">
+														<strong>ii) Do you have any complications related to pregnancy?</strong>
+													</td>
+													<td style="padding: 4px;text-align: center;text-transform:uppercase;"th:text=${isPregnancyComplicated}></td>
+													<td style="padding: 4px;text-align: center;text-transform:uppercase;"th:text=${isinsuredPregnancyComplicated}></td>
+												</tr>
+												<tr th:if="${isPregnancyComplicated == 'YES' or isinsuredPregnancyComplicated == 'YES'}">
+													<td style="padding: 4px;" width="80%">
+														<strong>ii.a) If yes, Pregnancy Complication Details:</strong>
+													</td>
+													<td style="padding: 4px;text-align: center;text-transform:uppercase;"th:text=${pregnancyComplications}></td>
+													<td style="padding: 4px;text-align: center;text-transform:uppercase;"th:text=${insuredPregnancyComplications}></td>
+												</tr>
+											</tbody>
+										</table>
+									</td>
+                        	</tr>
+                        <tr>
+                           <td style="font-weight: bold; padding: 4px;border-color: #ccc;border-style:solid;border-width:1px; font-size: 10px; font-family: arial;">  6. For Minor Life To Be Insured (Age &lt; 18 yrs.) </td>
+                           <td style="padding: 4px;text-align: center;font-family: arial;font-size: 10px;text-transform:uppercase;border-color: #ccc;border-style: solid;border-width: 1px;" th:text=${liMinorStatus}></td>
+                        </tr>
+                        <tr th:if=${isLiMinor}>
+                           <td style="padding: 2px 4px; border-color: #ccc;border-style:solid;border-width:1px; font-size: 10px; font-family: arial;width: 50%;">Parent's Annual Income:-   <span style="padding-left: 10px;text-transform:uppercase;" th:text=${familyAnnualIncome}></span></td>
+                           <td style="padding: 2px 4px; border-color: #ccc;border-style:solid;border-width:1px; font-size: 10px; font-family: arial;width: 50%;">Parent's - Total insurance cover:-   <span style="padding-left: 10px;text-transform:uppercase;" th:text=${familyCover}></span></td>
+                           <!-- <td style="padding: 2px 4px; text-align: left;font-family: arial;font-size: 10px;text-transform:uppercase;border-color: #ccc;border-style: solid;border-width: 1px;">Parent's - Total insurance cover:-     <span style="padding-left: 10px;text-transform:uppercase;" th:text=${familyCover}></span></td> -->
+                        </tr>
+                        
+                     </tbody>
+                  </table>
+                  <!-- Information of Life Insured End here-->
+               </td>

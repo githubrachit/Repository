@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>EBCC AU Ebcc Document</title>
+    <style type="text/css">table, td, tr {
+        border-collapse: collapse;
+    }
+
+    @media print {
+        * {
+            font-size: 6pt !important;
+        }
+
+        .printtext {
+            font-size: 11pt !important;
+        }
+    }
+    </style>
+</head>
+<body style="margin: 0 auto;padding: 0;">
+<table border="0" align="center" cellpadding="0" cellspacing="0"
+       style="border-collapse: collapse;width: 98%;margin-top: 10px">
+    <tbody>
+    <!-- Main Wrapper Start Here-->
+    <tr>
+        <td width="100%">
+            <table border="0" width="100%" cellspacing="0" style="border-collapse: collapse;">
+                <tbody>
+                <tr>
+                    <td align='left' width="40%"><img src="classpath:static/logo_ax_max.png" width='120'/></td>
+                    <td style="font-weight: bold;font-family: arial;">
+                        <span style="font-size:16px;border-bottom: 1px solid #222;font-weight: bold;">Third Party KYC document</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td height="60">
+                        &nbsp;
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2" style="padding: 5px; font-size: 14px; font-family: arial;"><b>Document Generation
+                        Date/Time:</b><i th:text=${todaysDate}></i></td>
+                </tr>
+                <tr>
+                    <td height="20">
+                        &nbsp;
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2" style="padding: 5px; font-size: 14px; font-family: arial;">
+                        Following details have been provided by AU Small Finance Bank as per Customer's account details -
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+        </td>
+    </tr>
+    <tr>
+        <td style="padding: 5px; font-size: 14px; font-family: arial; width: 100%; ">
+            <table border="1" width="700px" cellspacing="0" style="border-collapse: collapse;margin-top: 5px;">
+                <tbody>
+                <tr>
+                    <td style="padding: 5px; font-size: 14px; font-family: arial;font-weight: bold;background:#efefef;width:50%;">
+                        KYC Flag
+                    </td>
+                    <td style="padding: 5px; font-size: 14px; font-family: arial;text-align: center;width:50%;">
+                        <i th:text=${kyc}></i>
+                    </td>
+                    <td> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+                </tr>
+                <tr>
+                    <td style="padding: 5px; font-size: 14px; font-family: arial;font-weight: bold;background:#efefef;width:50%;">
+                        Title of Customer
+                    </td>
+                    <td style="padding: 5px; font-size: 14px; font-family: arial;text-align: center;width:50%;">
+                        <i th:text=${tagName}></i>
+                    </td>
+                    <td><i th:text=${ebccGenderModify}></i>
+                    </td>
+
+                </tr>
+                <tr>
+                    <td style="padding: 5px; font-size: 14px; font-family: arial;font-weight: bold;background:#efefef;width:50%;">
+                        Name of Customer
+                    </td>
+                    <td style="padding: 5px; font-size: 14px; font-family: arial;text-align: center;width:50%;">
+                        <i th:text=${customerName}></i>
+                    </td>
+                    <td><i th:text=${ebccNameModify}></i>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="padding: 5px; font-size: 14px; font-family: arial;font-weight: bold;background:#efefef;width:50%;">
+                        Customer ID
+                    </td>
+                    <td style="padding: 5px; font-size: 14px; font-family: arial;text-align: center;width:50%;">
+                        <i th:text=${customerId}></i>
+                    </td>
+                    <td>&nbsp;</i>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="padding: 5px; font-size: 14px; font-family: arial;font-weight: bold;background:#efefef;width:50%;">
+                        Date of Birth/Date of Incorporation
+                    </td>
+                    <td style="padding: 5px; font-size: 14px; font-family: arial;text-align: center;width:50%;">
+                        <i th:text=${customerDob}></i>
+                    </td>
+                    <td><i th:text=${ebccDobModify}></i>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="padding: 5px; font-size: 14px; font-family: arial;font-weight: bold;background:#efefef;width:50%;">
+                        Communication Address
+                    </td>
+                    <td style="padding: 5px; font-size: 14px; font-family: arial;text-align: center;width:50%;">
+                        <i th:text=${commuAddress}></i>
+                    </td>
+                    <td><i th:text=${ebccAddModify}></i>
+                    </td>
+                </tr>
+                <tr th:if="${permanentAddressPresent == 'YES'}">
+                    <td style="padding: 5px; font-size: 14px; font-family: arial;font-weight: bold;background:#efefef;width:50%;">
+                        Permanent Address
+                    </td>
+                    <td style="padding: 5px; font-size: 14px; font-family: arial;text-align: center;width:50%;">
+                        <i th:text=${permaAddress}></i>
+                    </td>
+                    <td><i th:text=${ebccAddModify}></i>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="padding: 5px; font-size: 14px; font-family: arial;font-weight: bold;background:#efefef;width:50%;">
+                        PAN Card Number
+                    </td>
+                    <td style="padding: 5px; font-size: 14px; font-family: arial;text-align: center;width:50%;">
+                        <i th:text=${customerPan}></i>
+                    </td>
+                    <td><i th:text=${ebccPanModify}></i>
+                    </td>
+                </tr>
+
+
+                </tbody>
+            </table>
+        </td>
+    </tr>
+    <tr>
+        <td width="100%">
+            <table border="0" width="100%" cellspacing="0" style="border-collapse: collapse;">
+                <tbody>
+
+                <tr>
+                    <td height="20">
+                        &nbsp;
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2" style="padding: 5px; font-size: 14px; font-family: arial;">
+                        <p>The supporting documents for the above information will be provided by AU Small Finance Bank as and when
+                            requested including copy of PAN Card.</p>
+                        <p>This document is generated basis KYC flag provided by AU Small Finance Bank. It suffices as proof for
+                            Date of Birth / Identity, Address & PAN (If passed from AU Small Finance Bank).</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td height="60">
+                        &nbsp;
+                    </td>
+                </tr>
+                <tr>
+                   <!-- <td>
+                        <img src="classpath:static/footer.png"/>
+                    </td>-->
+                </tr>
+                </tbody>
+            </table>
+        </td>
+    </tr>
+
+    </tbody>
+</table>
+</body>
+</html>

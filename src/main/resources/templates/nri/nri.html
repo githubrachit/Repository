@@ -1,0 +1,251 @@
+<style type="text/css">
+    table,
+    td,
+    tr {
+        border-collapse: collapse;
+    }
+
+    table {
+        table-layout: fixed;
+    }
+
+    th {
+        font-size: 12px;
+    }
+
+    td {
+        font-size: 11px;
+    }
+
+    table td input {
+        margin: 0;
+    }
+
+    @media print {
+        * {
+            font-size: 6pt !important;
+        }
+
+        .printtext {
+            font-size: 11pt !important;
+        }
+    }
+
+    @page {
+        size: A4;
+        margin: 10px;
+        padding-top: 10px;
+    }
+</style>
+<body style="padding: 0;">
+<table width="100%" align="center" cellpadding="0" cellspacing="0" style="border-collapse: collapse;">
+    <tbody>
+    <tr>
+        <td style="width: 100%">
+            <table border="0" align="center" cellpadding="0" cellspacing="0"
+                   style="border-collapse: collapse;width: 100%;margin-top: 10px">
+                <tr>
+                    <td width="100" align='left' style="padding: 5px 0 0 5%;"><img
+                            src="classpath:static/logo_ax_max.png"
+                            alt="Axis Max Life Insurance" width='90'></td>
+                    <td style="font-family: arial; font-size: 16px; text-align: center;padding: 5px;"><strong>
+                        <p style ="margin-left: -5%">AXIS MAX LIFE
+                            INSURANCE LTD</p>
+                    </strong>
+                        <p style=" font-size: 11px; padding-top: 10px;font-weight:  400;margin-left: -5%">
+                            <strong>Annexure A‐NRI/PIO/Foreign National Questionnaire</strong>
+                        </p>
+                    </td>
+                </tr>
+            </table>
+        </td>
+    </tr>
+    <tr>
+        <table width='80%' align="center">
+            <td colspan="3"></td>
+            <tr>
+                <td align="left" style="padding: 8px 0; font-family: arial;font-size:12px;"> Proposal No. </td>
+                <td th:text="${proposalNumber}"></td>
+            </tr>
+            <tr>
+                <td align="left" style="padding: 8px 0; font-family: arial;font-size:12px;"> Name of the Insured:</td>
+                <td th:text="${insuredName}"></td>
+            </tr>
+            <tr>
+                <td align="left " style="padding: 8px 0; font-family: arial;font-size:12px;"> Name of the Proposer (if different):</td>
+                <td th:text="${proposerName}"></td>
+                </td>
+            </tr>
+        </table>
+    </tr>
+
+    <tr>
+        <table width='80%' border="1" align="center" style="padding: 0; font-weight: normal;text-align: left;">
+            <tr>
+                <th style="font-family: arial;padding:4px 4px;text-align: center;">Information required</th>
+                <th style="font-family: arial;padding:4px 4px;text-align: center;"> Proposer Information</th>
+                <th style="font-family: arial;padding:4px 4px;text-align: center;">Insured Information</th>
+            </tr>
+            <tr>
+                <td style="font-family: arial; font-weight: bold; padding:4px 4px;text-align: left;">Your Nationality:
+                </td>
+                <td style="font-family: arial; padding:4px 4px;text-align: left;" th:text="${proposerNationality}"></td>
+                <td style="font-family: arial; padding:4px 4px;text-align: left;" th:text="${insuredNationality}"></td>
+            </tr>
+        </table>
+    </tr>
+    <tr>
+        <table align="center" width='80%'
+               style=" border:1px solid black; padding: 0; font-weight: normal;text-align: left;">
+            <tr>
+                <td style="font-family: arial; padding:4px 4px;text-align: left;" >Passport details:</td>
+                <td style="border-left: 1px solid" ></td>
+                <td style="border-left: 1px solid"></td>
+            </tr>
+            <tr>
+                <td style="font-family: arial; font-weight: bold; padding:4px 4px;text-align: left;">1. Passport Number:
+                </td>
+                <td style="border-left: 1px solid #000;font-family: arial; padding:4px 4px;text-align: left;" th:text="${proposerPassportNumber}"></td>
+                <td style="border-left: 1px solid #000;font-family: arial; padding:4px 4px;text-align: left;" th:text="${insuredPassportNumber}"></td>
+            </tr>
+            <tr>
+                <td style="font-family: arial; font-weight: bold; padding:4px 4px;text-align: left;">2. Issue Date:</td>
+                <td style="border-left: 1px solid #000;font-family: arial; padding:4px 4px;text-align: left;" th:text="${proposerIssueDate}"></td>
+                <td style="border-left: 1px solid #000;font-family: arial; padding:4px 4px;text-align: left;" th:text="${insuredIssueDate}"></td>
+            </tr>
+            <tr>
+                <td style="font-family: arial; font-weight: bold; padding:4px 4px;text-align: left;">3. Place of
+                    Issue:
+                </td>
+                <td style="border-left: 1px solid #000;font-family: arial; padding:4px 4px;text-align: left;" th:text="${proposerPlaceOfIssue}"></td>
+                <td style="border-left: 1px solid #000;font-family: arial; padding:4px 4px;text-align: left;" th:text="${insuredPlaceOfIssue}"></td>
+            </tr>
+            <tr>
+                <td style="font-family: arial; padding:4px 4px;text-align: left;">(Kindly attach attested copy of
+                    passport
+                    showing latest entry to India)
+                </td>
+                <td style="border-left: 1px solid"></td>
+                <td style="border-left: 1px solid"></td>
+            </tr>
+        </table>
+    </tr>
+    <tr>
+        <table align="center" width='80%'
+               style=" border:1px solid black; padding: 0; font-weight: normal;text-align: left;">
+            <tr>
+                <td style="font-family: arial; font-weight: bold; padding:4px 4px;text-align: left;">Type of Visa:</td>
+                <td style="border-left: 1px solid #000;font-family: arial; padding:4px 4px;text-align: left;" th:text="${proposerTypeOfVisa}"></td>
+                <td style="border-left: 1px solid #000;font-family: arial; padding:4px 4px;text-align: left;" th:text="${insuredTypeOfVisa}"></td>
+            </tr>
+            <tr>
+                <td style="font-family: arial; padding:4px 4px;text-align: left;">(Dependent/Working/visiting)</td>
+                <td style="border-left: 1px solid"></td>
+                <td style="border-left: 1px solid">
+            </tr>
+            <tr>
+                <td style="font-family: arial; font-weight: bold; padding:4px 4px;text-align: left;">Visa Valid till:
+                </td>
+                <td style="border-left: 1px solid #000;font-family: arial; padding:4px 4px;text-align: left;" th:text="${proposerVisaValidTill}"></td>
+                <td style="border-left: 1px solid #000;font-family: arial; padding:4px 4px;text-align: left;" th:text="${insuredVisaValidTill}"></td>
+            </tr>
+        </table>
+        <table width='80%' border="1" align="center" style="padding: 0; font-weight: normal;text-align: left;">
+            <tr>
+                <td style="font-family: arial; font-weight: bold; padding:4px 4px;text-align: left;">Citizenship:
+                </td>
+                <td style="border-left: 1px solid #000;font-family: arial; padding:4px 4px;text-align: left;" th:text="${proposerCitizenship}"></td>
+                <td style="border-left: 1px solid #000;font-family: arial; padding:4px 4px;text-align: left;" th:text="${insuredCitizenship}"></td>
+            </tr>
+            <tr>
+                <td style="font-family: arial; font-weight: bold; padding:4px 4px;text-align: left;">Birth City:
+                </td>
+                <td style="border-left: 1px solid #000;font-family: arial; padding:4px 4px;text-align: left;" th:text="${proposerCityOfBirth}"></td>
+                <td style="border-left: 1px solid #000;font-family: arial; padding:4px 4px;text-align: left;" th:text="${insuredCityOfBirth}"></td>
+            </tr>
+        </table>
+        </table>
+    </tr>
+    <tr>
+        <table width='80%' border="1" align="center" style="padding: 0; font-weight: normal;text-align: left;">
+            <tr>
+                <td style="font-family: arial; font-weight: bold; padding:4px 4px;text-align: left;">Current Country of
+                    Residence:
+                </td>
+                <td style="font-family: arial; padding:4px 4px;text-align: left;" th:text="${proposerCountryOfResidence}"></td>
+                <td style="font-family: arial; padding:4px 4px;text-align: left;" th:text="${insuredCountryOfResidence}"></td>
+            </tr>
+            <tr>
+                <td style="font-family: arial; font-weight: bold; padding:4px 4px;text-align: left;">Date of latest
+                    entry to
+                    India:
+                </td>
+                <td style="font-family: arial; padding:4px 4px;text-align: left;" th:text="${proposerLatestVisitToIndia}"></td>
+                <td style="font-family: arial; padding:4px 4px;text-align: left;" th:text="${insuredLatestVisitToIndia}"></td>
+            </tr>
+            <tr>
+                <td style="font-family: arial; font-weight: bold; padding:4px 4px;text-align: left;">Country/Countries
+                    visited frequently:
+                </td>
+                <td style="font-family: arial; padding:4px 4px;text-align: left;" th:text="${proposerFrequentlyVisitedCountry}"></td>
+                <td style="font-family: arial; padding:4px 4px;text-align: left;" th:text="${insuredFrequentlyVisitedCountry}"></td>
+            </tr>
+            <tr>
+                <td style="font-family: arial; font-weight: bold; padding:4px 4px;text-align: left;">If you hold an
+                    Indian
+                    Bank account,
+                    please provide details :
+                </td>
+                <td style="font-family: arial; padding:4px 4px;text-align: left;" th:text="${proposerBankDetails}"></td>
+                <td style="font-family: arial; padding:4px 4px;text-align: left;" th:text="${insuredBankDetails}"></td>
+            </tr>
+        </table>
+    </tr>
+
+    <tr>
+        <table width='80%' align="center">
+            <tr>
+                <td style="padding: 8px 0; font-weight: bold; font-family: arial;font-size:12px;"> Declaration:</td>
+            </tr>
+            <tr>
+                <td colspan="3" style="padding: 8px 0; font-family: arial;font-size:12px;"> I/We hereby declare that the
+                    above statements and answers are true in every respect and I/We agree for treating this to
+                    be part of the Proposal Form.<br><br>
+                </td>
+            </tr>
+            <tr>
+                <td style="padding: 12px 0; font-weight: bold; font-family: arial;font-size:14px;">
+                    Signature of Proposer: </td>
+                <td colspan="2" style="padding: 20px 0; font-family: arial;font-size:14px;" th:text="${proposerSignature}"></td>
+            </tr>
+            <tr>
+                <td style="padding: 12px 0; font-weight: bold; font-family: arial;font-size:14px;"> Signature of Insured:<br>
+                    <p style="font-family: arial; font-weight:normal; font-size:11px;"> (If major and different from Proposer)</p>
+                </td>
+                <td colspan="2" style="vertical-align:top; padding: 20px 0; font-family: arial;font-size:14px;" th:text="${insuredSignature}"></td>
+            </tr>
+            <tr>
+            </tr>
+            <tr>
+                <td colspan="2" style="font-family: arial; font-size:14px;">Place: &nbsp <span th:text="${place}"></span></td>
+            </tr>
+            <tr>
+                <td height="35">
+                    &nbsp;
+                </td>
+            </tr>
+        </table>
+        <table align="center" width="90%">
+            <tr>
+<!--                <td style="font-family: arial; font-size:12px;">-->
+<!--                    <img src="classpath:static/footer_updated.png">-->
+<!--                </td>-->
+                <td align="right" style="font-family: arial; font-size:10px;"> Axis Max Life Insurance - AS_082023_VER1.4
+                </td>
+            </tr>
+        </table>
+        </td>
+    </tr>
+    </tbody>
+</table>
+</body>

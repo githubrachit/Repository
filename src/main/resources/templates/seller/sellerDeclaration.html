@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title></title>
+    <style type="text/css">
+        table,
+        td,
+        tr {
+            border-collapse: collapse;
+        }
+
+        body {
+            padding: 0;
+            margin: 0;
+        }
+    </style>
+</head>
+
+<body>
+<table width="100%" cellspacing="10" cellpadding="0">
+    <tbody>
+    <tr>
+        <td height="20"></td>
+    </tr>
+    <tr>
+        <td style="font-size: 14px; font-family: arial;padding: 10px 4px;">
+            <h4 style="font-size: 22px;text-align: center;text-decoration: underline;">Seller Declaration</h4>
+        </td>
+    </tr>
+    <tr th:if="${isTraditionalAndNonCIPProduct} == true" >
+    <td style="font-size: 14px; font-family: arial;padding: 10px 4px;">
+      I   <span style="text-align:center;min-width:120px;border-bottom-color:#000;border-bottom-style: solid;border-bottom-width:1px;display:inline-block;padding: 0 18px;font-weight: bold;text-transform:uppercase;" th:text="${spName}"></span>
+     do declare and confirm that I have met and explained the Product features, benefits, premium paying term, nature of the questions contained in this Proposal form and other relevant terms and conditions to the Proposer and the Life Insured. I have also explained that the answers to the questions forms the basis of the contract of the Insurance between the Company and the Proposer / Life Insured, and if any untrue statement is contained therein and / or any information that may be relevant to enable the Company make an informed decision, the Company shall have the right to vary the benefits which may be payable and / or treat the policy voidable at the option of the Company subject to section 45 of the Insurance Act, 1938 as amended from time to time. I confirm that to the best of my knowledge the Life Insured does not suffer from any physical or mental abnormality or handicap or has / had been hospitalised, undergone any surgery or treatment, or he /she is involved in activities including any hazardous avocation or occupation or any other information material for underwriting this proposal form, unless expressly stated in this Proposal. I also declare and represent to the Company that I am in full compliance with the regulatory requirements applicable to agent / corporate agent / specified person / broker prescribed by the Insurance Act 1938, as amended from time to time and any other regulation, circular, instruction issued by IRDAI from time to time. I confirm that I have verified the identity, current / permanent residential address of the Proposer/ Life Insured, the nature of his/her business and his / her financial status basis the Axis Max Life AML moral hazard checklist.
+    </td>
+  </tr>
+    <tr th:if="${isTraditionalAndNonCIPProduct} == false">
+        <td style="font-size: 14px; font-family: arial;padding: 10px 4px;">
+            I   <span style="text-align:center;min-width:120px;border-bottom-color:#000;border-bottom-style: solid;border-bottom-width:1px;display:inline-block;padding: 0 18px;font-weight: bold;text-transform:uppercase;" th:text="${spName}"></span>
+            having known the Proposer/Life Insured for a period of
+            <span style="text-align: center;min-width: 180px;border-bottom-color: #000;border-bottom-style: solid;border-bottom-width: 1px;display: inline-block;padding: 0 18px;font-weight: bold;text-transform:uppercase;"  th:text="${periodDuration}"></span>
+            do declare that I have explained the nature of the questions contained in this Proposal form to him / her. I have also explained that the answers to the questions form the basis of the contract of the Insurance between the Company and the Proposer / Life Insured and if any untrue statement is contained
+            therein and / or any information that may be relevant to enable the Company make an informed decision, the Company shall have the right to vary the benefits which may be payable and / or treat the policy voidable at the option of the company subject to section 45 of the Insurance Act, 1938 as amended from time to time.
+            I confirm that to the best of my knowledge the Life Insured does not suffer from any physical or mental abnormality or handicap or has / had been hospitalised, undergone any surgery or treatment, or he /she is involved in activities including any hazardous avocation or occupation or any other information material for
+            underwriting this proposal form, unless expressly stated in this Proposal. I also declare and represent to the Company that I am in full compliance with the regulatory requirements applicable to agent / corporate agent / specified person / broker prescribed by the Insurance Act 1938, as amended from time to time and
+            any other regulation, circular, instruction issued by IRDAI from time to time. I confirm that I have verified the identity, current / permanent residential address of the proposer/Insured, the nature of his/her business and his / her financial status basis the AML Axis Max Life moral hazard checklist.
+        </td>
+    </tr>
+    <tr>
+        <td style="font-size: 14px; font-family: arial;padding: 10px 4px;">
+            <input type="checkbox" th:checked="${sellerDisclosure}"> In case you wish to disclose anything in addition to what has been disclosed by the prospect in the proposal form.
+        </td>
+    </tr>
+    <tr>
+        <td style="font-size: 14px; font-family: arial;padding: 10px 4px;">
+            <input type="checkbox" th:checked="${!sellerDisclosure}">  Agree with the declaration mentioned above and do not wish to disclose in addition to what is been disclosed by the prospect in the proposal form.
+        </td>
+    </tr>
+    <tr>
+        <td height="20"></td>
+    </tr>
+    <tr>
+        <td style="font-size: 14px; font-family: arial;padding: 10px 4px;">
+            Seller Name: - <span style="text-align: center;min-width: 180px;border-bottom-color: #000;border-bottom-style: solid;border-bottom-width: 1px;display: inline-block;padding: 0 18px;font-weight: bold;text-transform:uppercase;" th:text="${sellerName}"></span>
+        </td>
+    </tr>
+    <tr>
+        <td style="font-size: 14px; font-family: arial;padding: 10px 4px;">
+            Seller Code: -  <span style="text-align: center;min-width: 180px;border-bottom-color: #000;border-bottom-style: solid;border-bottom-width: 1px;display: inline-block;padding: 0 18px;font-weight: bold;text-transform:uppercase;" th:text="${sellerCode}"></span>
+        </td>
+    </tr>
+    <tr>
+        <td style="font-size: 14px; font-family: arial;padding: 10px 4px;">
+            Date/Time: - <span style="text-align: center;min-width: 180px;border-bottom-color: #000;border-bottom-style: solid;border-bottom-width: 1px;display: inline-block;padding: 0 18px;font-weight: bold;text-transform:uppercase;" th:text="${dateTime}"></span>
+        </td>
+    </tr>
+    </tbody>
+</table>
+
+</body>
+
+</html>

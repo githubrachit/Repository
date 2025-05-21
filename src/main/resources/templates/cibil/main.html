@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+</head>
+<body>
+<table border="0" align="center" cellpadding="0" cellspacing="0" style="border-collapse: collapse;">
+    <tr>
+        <td width="15%"></td>
+        <td width="70%">
+            <h2 style="text-align: center;"><u>CIBIL Document</u></h2>
+        </td>
+        <td width="15%">
+            <img width="75px" style="padding: 2px" src="classpath:static/logo_ax_max.png" alt="Axis Max Life Insurance"/>
+        </td>
+    </tr>
+    <tr>
+        <td colspan="3"></td>
+    </tr>
+    <tr>
+        <td width="15%"></td>
+        <td width="70%">
+            <table width="100%" border="1" cellpadding="0" cellspacing="0" style="border-collapse: collapse;">
+                <tbody>
+                <tr>
+                    <td style="padding: 0px; font-family: Arial;">
+                        <table width="100%" cellpadding="0" cellspacing="0" border="0" style="border-color: #000000;border-style:solid;border-width:1px;">
+                            <tbody>
+                            <tr>
+                                <th width="40%" style="padding: 5px 5px 5px 15px; font-size: 12px; border-right: 1px solid #000000;"></th>
+                                <th width="25%" style="padding: 5px 5px 5px 15px; font-size: 12px; border-right: 1px solid #000000;">Match (Y/N)</th>
+                                <th width="35%" style="padding: 5px 5px 5px 15px; font-size: 12px;">Details as per CIBIL</th>
+                            </tr>
+                            <tr>
+                                <td width="40%" style="padding: 5px 5px 5px 15px; font-size: 12px; border-top: 1px solid #000000; border-right: 1px solid #000000;">Consumer</td>
+                                <td width="25%" align="center" style="padding: 5px 5px 5px 15px; font-size: 12px; border-top: 1px solid #000000; border-right: 1px solid #000000;">-</td>
+                                <td width="35%" align="center" style="padding: 5px 5px 5px 15px; font-size: 12px; border-top: 1px solid #000000;" th:text="${name}"></td>
+                            </tr>
+                            <tr>
+                                <td width="40%" style="padding: 5px 5px 5px 15px; font-size: 12px; border-top: 1px solid #000000; border-right: 1px solid #000000;">Name</td>
+                                <td width="25%" align="center" style="padding: 5px 5px 5px 15px; font-size: 12px; border-top: 1px solid #000000; border-right: 1px solid #000000;" th:text="${nameValidatedcibil}"></td>
+                                <td width="35%" align="center" style="padding: 5px 5px 5px 15px; font-size: 12px; border-top: 1px solid #000000;" th:text="${name}"></td>
+                            </tr>
+                            <tr>
+                                <td width="40%" style="padding: 5px 5px 5px 15px; font-size: 12px; border-top: 1px solid #000000; border-right: 1px solid #000000;">Date Of Birth</td>
+                                <td width="25%" align="center" style="padding: 5px 5px 5px 15px; font-size: 12px; border-top: 1px solid #000000; border-right: 1px solid #000000;" th:text="${dobValidatedcibil}"></td>
+                                <td width="35%" align="center" style="padding: 5px 5px 5px 15px; font-size: 12px; border-top: 1px solid #000000;" th:text="${dob}"></td>
+                            </tr>
+                            <tr>
+                                <td width="40%" style="padding: 5px 5px 5px 15px; font-size: 12px; border-top: 1px solid #000000; border-right: 1px solid #000000;">PAN</td>
+                                <td width="25%" align="center" style="padding: 5px 5px 5px 15px; font-size: 12px; border-top: 1px solid #000000; border-right: 1px solid #000000;" th:text="${panNumberValidatedcibil}"></td>
+                                <td width="35%" align="center" style="padding: 5px 5px 5px 15px; font-size: 12px; border-top: 1px solid #000000;" th:text="${panNumber}"></td>
+                            </tr>
+                            <tr>
+                                <td width="40%" style="padding: 5px 5px 5px 15px; font-size: 12px; border-top: 1px solid #000000; border-right: 1px solid #000000;">Any Other proof - Proof Name</td>
+                                <td width="25%" align="center" style="padding: 5px 5px 5px 15px; font-size: 12px; border-top: 1px solid #000000; border-right: 1px solid #000000;"></td>
+                                <td width="35%" align="center" style="padding: 5px 5px 5px 15px; font-size: 12px; border-top: 1px solid #000000;"></td>
+                            </tr>
+                            <tr>
+                                <td width="40%" style="padding: 5px 5px 5px 15px; font-size: 12px; border-top: 1px solid #000000; border-right: 1px solid #000000;">Proof Number</td>
+                                <td width="25%" align="center" style="padding: 5px 5px 5px 15px; font-size: 12px; border-top: 1px solid #000000; border-right: 1px solid #000000;"></td>
+                                <td width="35%" align="center" style="padding: 5px 5px 5px 15px; font-size: 12px; border-top: 1px solid #000000;"></td>
+                            </tr>
+                            <tr>
+                                <td width="40%" style="padding: 5px 5px 5px 15px; font-size: 12px; border-top: 1px solid #000000; border-right: 1px solid #000000;">Mobile Phone</td>
+                                <td width="25%" align="center" style="padding: 5px 5px 5px 15px; font-size: 12px; border-top: 1px solid #000000; border-right: 1px solid #000000;"></td>
+                                <td width="35%" align="center" style="padding: 5px 5px 5px 15px; font-size: 12px; border-top: 1px solid #000000;"></td>
+                            </tr>
+                            <tr>
+                                <td width="40%" style="padding: 5px 5px 5px 15px; font-size: 12px; border-top: 1px solid #000000; border-right: 1px solid #000000;">Home Phone</td>
+                                <td width="25%" align="center" style="padding: 5px 5px 5px 15px; font-size: 12px; border-top: 1px solid #000000; border-right: 1px solid #000000;"></td>
+                                <td width="35%" align="center" style="padding: 5px 5px 5px 15px; font-size: 12px; border-top: 1px solid #000000;"></td>
+                            </tr>
+                            <tr>
+                                <td width="40%" style="padding: 5px 5px 5px 15px; font-size: 12px; border-top: 1px solid #000000; border-right: 1px solid #000000;">Address</td>
+                                <td width="25%" align="center" style="padding: 5px 5px 5px 15px; font-size: 12px; border-top: 1px solid #000000; border-right: 1px solid #000000;">-</td>
+                                <td width="35%" align="center" style="padding: 5px 5px 5px 15px; font-size: 12px; border-top: 1px solid #000000;" th:text="${address}"></td>
+                            </tr>
+                            <tr>
+                                <td width="40%" style="padding: 5px 5px 5px 15px; font-size: 12px; border-top: 1px solid #000000; border-right: 1px solid #000000;">Pin code</td>
+                                <td width="25%" align="center" style="padding: 5px 5px 5px 15px; font-size: 12px; border-top: 1px solid #000000; border-right: 1px solid #000000;">-</td>
+                                <td width="35%" align="center" style="padding: 5px 5px 5px 15px; font-size: 12px; border-top: 1px solid #000000;" th:text="${pincode}"></td>
+                            </tr>
+                            <tr>
+                                <td width="40%" style="padding: 5px 5px 5px 15px; font-size: 12px; border-top: 1px solid #000000; border-right: 1px solid #000000;">Estimated Income Band</td>
+                                <td width="25%" align="center" style="padding: 5px 5px 5px 15px; font-size: 12px; border-top: 1px solid #000000; border-right: 1px solid #000000;">-</td>
+                                <td width="35%" align="center" style="padding: 5px 5px 5px 15px; font-size: 12px; border-top: 1px solid #000000;" th:text="${estimatedIncome}"></td>
+                            </tr>
+                            <tr>
+                                <td width="40%" style="padding: 5px 5px 5px 15px; font-size: 12px; border-top: 1px solid #000000; border-right: 1px solid #000000;">CIBIL Score</td>
+                                <td width="25%" align="center" style="padding: 5px 5px 5px 15px; font-size: 12px; border-top: 1px solid #000000; border-right: 1px solid #000000;">-</td>
+                                <td width="35%" align="center" style="padding: 5px 5px 5px 15px; font-size: 12px; border-top: 1px solid #000000;" th:text="${creditScore}"></td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+        </td>
+        <td width="15%"></td>
+    </tr>
+</table>
+</body>
+</html>
+
+
+

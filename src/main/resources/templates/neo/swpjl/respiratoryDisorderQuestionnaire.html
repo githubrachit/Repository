@@ -1,0 +1,107 @@
+<td style="font-family: arial;">
+    <!-- Respiratory disorder reflexive questions start here-->
+    <table cellspacing="0" cellpadding="0" width="100%" style="border-collapse: collapse; border-color: #ccc;border-style:solid;border-width:1px;">
+        <tbody>
+        <tr>
+            <td colspan="9" style="padding: 0px; font-family: arial; font-size:9px; background-color: #000000; border-color: #ccc;border-style:solid;border-width:1px;">
+                <table border="1" cellspacing="0" cellpadding="0" width="100%" style="border-collapse: collapse;">
+                    <tbody>
+                    <tr>
+                        <td colspan="3" style="padding: 2px 4px; font-size: 14px; font-weight: bold; color: #FFFFFF ;text-align: center">Respiratory disorder reflexive questions</td>
+                    </tr>
+                    </tbody>
+                </table>
+            </td>
+        </tr>
+        <tr>
+            <td style="padding: 0px; font-family: Arial;">
+                <table width="100%" cellpadding="0" cellspacing="0" border="0" style="border-color: #000000;border-style:solid;border-width:1px;">
+                    <tbody>
+                    <tr>
+                        <td width="35%" style="padding: 5px 5px 5px 10px; font-size: 12px; border-right: 1px solid #000000;  text-align: center;">Information Required</td>
+                        <td width="30%" style="padding: 5px 5px 5px 10px; font-size: 12px; border-right: 1px solid #000000;  text-align: center;">Proposer/Joint Life</td>
+                        <td width="30%" style="padding: 5px 5px 5px 10px; font-size: 12px; border-right: 1px solid #000000;  text-align: center;"> Insured's Information
+                    </tr>
+                    </tbody>
+                </table>
+            </td>
+        </tr>
+        <tr>
+            <td style="padding: 0px; font-family: Arial;">
+                <table width="100%" cellpadding="0" cellspacing="0" border="0" style="border-color: #000000;border-style:solid;border-width:1px;">
+                    <tbody>
+                    <tr>
+                        <td width="35%" style="padding: 5px 5px 5px 10px; font-size: 12px; border-right: 1px solid #000000;  text-align: left;">1) When was this condition diagnosed?</td>
+                        <td width="30%" style="padding: 5px 5px 5px 10px; font-size: 12px; border-right: 1px solid #000000;  text-align: center;" th:text="${respiratoryDisorderDiagnosedDate}"></td>
+                        <td width="30%" style="padding: 5px 5px 5px 10px; font-size: 12px; border-right: 1px solid #000000;  text-align: center;" th:text="${lIDataMap.respiratoryDisorderDiagnosedDate}"></td>
+                    </tr>
+                    </tbody>
+                </table>
+            </td>
+        </tr>
+        <tr>
+            <td style="padding: 0px; font-family: Arial;">
+                <table width="100%" cellpadding="0" cellspacing="0" border="0" style="border-color: #000000;border-style:solid;border-width:1px;">
+                    <tbody>
+                    <tr>
+                        <td width="35%" style="padding: 5px 5px 5px 10px; font-size: 12px; border-right: 1px solid #000000;  text-align: left;">2) Please describe your symptoms and do your symptoms make you wake up at night?</td>
+                        <td width="30%" style="padding: 5px 5px 5px 10px; font-size: 12px; border-right: 1px solid #000000;  text-align: center;" th:text="${symptomsDescription}"></td>
+                        <td width="30%" style="padding: 5px 5px 5px 10px; font-size: 12px; border-right: 1px solid #000000;  text-align: center;" th:text="${lIDataMap.symptomsDescription}"></td>
+                    </tr>
+                    </tbody>
+                </table>
+            </td>
+        </tr>
+        <tr>
+            <td style="padding: 0px; font-family: Arial;">
+                <table width="100%" cellpadding="0" cellspacing="0" border="0" style="border-color: #000000;border-style:solid;border-width:1px;">
+                    <tbody>
+                    <tr>
+                        <td width="35%" style="padding: 5px 5px 5px 10px; font-size: 12px; border-right: 1px solid #000000;  text-align: left;">3) How frequently do the symptoms occur and when was the last occurrence of the symptom?</td>
+                        <td width="30%" style="padding: 5px 5px 5px 10px; font-size: 12px; border-right: 1px solid #000000;  text-align: center;">
+                            <span th:if="${followUpsForRespiratoryDisorder == 'others'}" th:text="${followUpsOtherForRespiratoryDisorder}"></span>
+                            <span th:unless="${followUpsForRespiratoryDisorder == 'others'}" th:text="${followUpsForRespiratoryDisorder}"></span></td>
+                        <td width="30%" style="padding: 5px 5px 5px 10px; font-size: 12px; border-right: 1px solid #000000;  text-align: center;">
+                            <span th:if="${lIDataMap.followUpsForRespiratoryDisorder == 'others'}" th:text="${lIDataMap.followUpsOtherForRespiratoryDisorder}"></span>
+                            <span th:unless="${lIDataMap.followUpsForRespiratoryDisorder == 'others'}" th:text="${lIDataMap.followUpsForRespiratoryDisorder}"></span></td>
+                    </tr>
+                    </tbody>
+                </table>
+            </td>
+        </tr>
+        <tr>
+            <td style="padding: 0px; font-family: Arial;">
+                <table width="100%" cellpadding="0" cellspacing="0" border="0" style="border-color: #000000;border-style:solid;border-width:1px;">
+                    <tbody>
+                    <tr>
+                        <td width="35%" style="padding: 5px 5px 5px 10px; font-size: 12px; border-right: 1px solid #000000;  text-align: left;">4) Please provide medication details (currently and in past)</td>
+                        <td width="30%" style="padding: 5px 5px 5px 10px; font-size: 12px; border-right: 1px solid #000000;  text-align: center;" th:text="${medicationDetails}"></td>
+                        <td width="30%" style="padding: 5px 5px 5px 10px; font-size: 12px; border-right: 1px solid #000000;  text-align: center;" th:text="${lIDataMap.medicationDetails}"></td>
+                    </tr>
+                    </tbody>
+                </table>
+            </td>
+        </tr>
+        <tr>
+            <td style="padding: 0px; font-family: Arial;">
+                <table width="100%" cellpadding="0" cellspacing="0" border="0" style="border-color: #000000;border-style:solid;border-width:1px;">
+                    <tbody>
+                    <tr>
+                        <td width="35%" style="padding: 5px 5px 5px 10px; font-size: 12px; border-right: 1px solid #000000;  text-align: left;">5) Have you ever taken steroids? If Yes, then please provide details</td>
+                        <td width="30%" style="padding: 5px 5px 5px 10px; font-size: 12px; border-right: 1px solid #000000;  text-align: center;" >
+                            <span th:if="${steroidsTaken == 'YES'}" th:text="${steroidsTakenDetail}"></span>
+                            <span th:unless="${steroidsTaken == 'YES'}" th:text="${steroidsTaken}"></span>
+                        </td>
+                        <td width="30%" style="padding: 5px 5px 5px 10px; font-size: 12px; border-right: 1px solid #000000;  text-align: center;" >
+                            <span th:if="${lIDataMap.steroidsTaken == 'YES'}" th:text="${lIDataMap.steroidsTakenDetail}"></span>
+                            <span th:unless="${lIDataMap.steroidsTaken == 'YES'}" th:text="${lIDataMap.steroidsTaken}"></span>
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+            </td>
+        </tr>
+
+        </tbody>
+    </table>
+</td>

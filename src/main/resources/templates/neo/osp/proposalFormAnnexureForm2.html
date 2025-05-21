@@ -1,0 +1,1252 @@
+<td xmlns:th="http://www.w3.org/1999/xhtml">
+    <table width="100%" border="1" cellspacing="0" cellpadding="0" style="border-collapse: collapse;">
+        <tbody>
+        <tr>
+            <th width="100%" colspan="3" style="background-color: #000000; color: #fff;font-size: 14px; font-family: arial; padding: 2px 4px; text-align: center;">Proposal Form Annexure- Additional Questions Annexure</th>
+        </tr>
+        </tbody>
+        <tbody>
+        <tr>
+            <td width="35%"></td>
+            <td width="30%" style="padding: 2px 4px; font-size: 10px; font-family: arial;">Proposer</td>
+            <td width="30%" style="font-size: 10px; font-family: arial; padding: 2px 4px; ">Life to be Insured</span></td>
+        </tr>
+        <tr>
+            <td width="35%" style="padding: 2px 4px; font-size: 10px; font-family: arial;"><strong>Industry Type</strong></td>
+            <td width="30%" style="font-size: 10px; font-family: arial;padding: 2px 4px;">
+                <span th:text=${industryType}></span>
+                <br>
+                <span th:if="${industryType=='Others'}">
+                             <span th:text="${industryTypeOthers}"></span>
+                    </span>&nbsp;
+            </td>
+            <td width="30%" style="font-size: 10px; font-family: arial;padding: 2px 4px;">
+                <span th:text=${lIDataMap.industryType}></span>
+                <br>
+                <span th:if="${lIDataMap.industryType=='Others'}">
+                             <span th:text="${lIDataMap.industryTypeOthers}"></span>
+                    </span>&nbsp;
+            </td>
+        </tr>
+        <!-- Defence -->
+        <tr>
+            <td width="35%" style="padding: 2px 4px; font-size: 10px; font-family: arial;"><strong>Defence/CRPF</strong></td>
+            <td width="30%" style="font-size: 10px; font-family: arial;padding: 2px 4px;"></td>
+            <td width="30%" style="font-size: 10px; font-family: arial;padding: 2px 4px;"></td>
+        </tr>
+        <tr>
+            <td width="35%" style="padding: 2px 4px; font-size: 10px; font-family: arial;">a. Are you currently posted in any sensitive/border location</td>
+            <td width="30%" style="font-size: 10px; font-family: arial;padding: 2px 4px;">
+                <span style="" th:text=${defenceReflexive1}></span>
+            </td>
+            <td width="30%" style="font-size: 10px; font-family: arial;padding: 2px 4px;">
+                <span style="" th:text=${lIDataMap.defenceReflexive1}></span>
+            </td>
+        </tr>
+        <tr>
+            <td width="35%" style="padding: 2px 4px; font-size: 10px; font-family: arial;">b. Your nature of job/role</td>
+            <td width="30%" style="font-size: 10px; font-family: arial;padding: 2px 4px;">
+                <span style="" th:text=${defenceReflexive2}></span>
+            </td>
+            <td width="30%" style="font-size: 10px; font-family: arial;padding: 2px 4px;">
+                <span style="" th:text=${lIDataMap.defenceReflexive2}></span>
+            </td>
+        </tr>
+
+        <!-- Aviation -->
+        <tr>
+            <td width="35%" style="padding: 2px 4px; font-size: 10px; font-family: arial;"><strong>Aviation</strong></td>
+            <td width="30%" style="font-size: 10px; font-family: arial;padding: 2px 4px;"></td>
+            <td width="30%" style="font-size: 10px; font-family: arial;padding: 2px 4px;"></td>
+        </tr>
+        <tr>
+            <td width="35%" style="padding: 2px 4px; font-size: 10px; font-family: arial;">a. Exact Nature of duties</td>
+            <td width="30%" style="font-size: 10px; font-family: arial;padding: 2px 4px;">
+                <span style="font-size: 10px; font-family: arial;padding: 2px 4px;"th:if=${aviationReflexive1=='YES'}>Flying Role</span>
+                <span style="font-size: 10px; font-family: arial;padding: 2px 4px;"th:if=${aviationReflexive1=='NO'}>Non-Flying Role</span>
+            </td>
+            <td width="30%" style="font-size: 10px; font-family: arial;padding: 2px 4px;">
+                <span style="font-size: 10px; font-family: arial;padding: 2px 4px;"th:if=${lIDataMap.aviationReflexive1=='YES'}>Flying Role</span>
+                <span style="font-size: 10px; font-family: arial;padding: 2px 4px;"th:if=${lIDataMap.aviationReflexive1=='NO'}>Non-Flying Role</span>
+            </td>
+        </tr>
+        <tr>
+            <td width="35%" style="padding: 2px 4px; font-size: 10px; font-family: arial;">b. If in Flying role what do you fly?</td>
+            <td width="30%" style="font-size: 10px; font-family: arial;padding: 2px 4px;">
+                <span style="" th:text=${aviationReflexive2}></span>
+            </td>
+            <td width="30%" style="font-size: 10px; font-family: arial;padding: 2px 4px;">
+                <span style="" th:text=${lIDataMap.aviationReflexive2}></span>
+            </td>
+        </tr>
+
+        <!-- Diving -->
+        <tr>
+            <td width="35%" style="padding: 2px 4px; font-size: 10px; font-family: arial;"><strong>Diving</strong></td>
+            <td width="30%" style="font-size: 10px; font-family: arial;padding: 2px 4px;"></td>
+            <td width="30%" style="font-size: 10px; font-family: arial;padding: 2px 4px;"></td>
+        </tr>
+        <tr>
+            <td width="35%" style="padding: 2px 4px; font-size: 10px; font-family: arial;">a. Are you a professional diver?</td>
+            <td width="30%" style="font-size: 10px; font-family: arial;padding: 2px 4px;">
+                <span style="" th:text=${divingReflexive1}></span>
+            </td>
+            <td width="30%" style="font-size: 10px; font-family: arial;padding: 2px 4px;">
+                <span style="" th:text=${lIDataMap.divingReflexive1}></span>
+            </td>
+        </tr>
+        <tr>
+            <td width="35%" style="padding: 2px 4px; font-size: 10px; font-family: arial;">Where do you dive?</td>
+            <td width="30%" style="font-size: 10px; font-family: arial;padding: 2px 4px;">
+                <span style="" th:text=${divingReflexive2}></span>
+            </td>
+            <td width="30%" style="font-size: 10px; font-family: arial;padding: 2px 4px;">
+                <span style="" th:text=${lIDataMap.divingReflexive2}></span>
+            </td>
+        </tr>
+
+        <!-- Oil and Natural Gas -->
+        <tr>
+            <td width="35%" style="padding: 2px 4px; font-size: 10px; font-family: arial;"><strong>Oil and Natural Gas</strong></td>
+            <td width="30%" style="font-size: 10px; font-family: arial;padding: 2px 4px;"></td>
+            <td width="30%" style="font-size: 10px; font-family: arial;padding: 2px 4px;"></td>
+        </tr>
+        <tr>
+            <td width="35%" style="padding: 2px 4px; font-size: 10px; font-family: arial;">a. Are you based at offshore or your job involves travelling to offshore?</td>
+            <td width="30%" style="font-size: 10px; font-family: arial;padding: 2px 4px;">
+                <span style="" th:text=${oilReflexive1}></span>
+            </td>
+            <td width="30%" style="font-size: 10px; font-family: arial;padding: 2px 4px;">
+                <span style="" th:text=${lIDataMap.oilReflexive1}></span>
+            </td>
+        </tr>
+
+        <!-- Merchant Marine -->
+        <tr>
+            <td width="35%" style="padding: 2px 4px; font-size: 10px; font-family: arial;"><strong>Merchant Marine</strong></td>
+            <td width="30%" style="font-size: 10px; font-family: arial;padding: 2px 4px;"></td>
+            <td width="30%" style="font-size: 10px; font-family: arial;padding: 2px 4px;"></td>
+        </tr>
+        <tr>
+            <td width="35%" style="padding: 2px 4px; font-size: 10px; font-family: arial;">a. Type of vessel where working?</td>
+            <td width="30%" style="font-size: 10px; font-family: arial;padding: 2px 4px;">
+                <span style="" th:text=${navyReflexive1}></span>
+            </td>
+            <td width="30%" style="font-size: 10px; font-family: arial;padding: 2px 4px;">
+            </td>
+        </tr>
+
+        <!-- Mining -->
+        <tr>
+            <td width="35%" style="padding: 2px 4px; font-size: 10px; font-family: arial;"><strong>Mining</strong></td>
+            <td width="30%" style="font-size: 10px; font-family: arial;padding: 2px 4px;"></td>
+            <td width="30%" style="font-size: 10px; font-family: arial;padding: 2px 4px;"></td>
+        </tr>
+        <tr>
+            <td width="35%" style="padding: 2px 4px; font-size: 10px; font-family: arial;">a. Does your role involves going
+                inside any kind of mine?</td>
+            <td width="30%" style="font-size: 10px; font-family: arial;padding: 2px 4px;">
+                <span style="" th:text=${miningReflexive1}></span>
+            </td>
+            <td width="30%" style="font-size: 10px; font-family: arial;padding: 2px 4px;">
+                <span style="" th:text=${lIDataMap.miningReflexive1}></span>
+            </td>
+        </tr>
+        <tr>
+            <td width="35%" style="padding: 2px 4px; font-size: 10px; font-family: arial;">Have you ever had any illness
+                related to your occupation?</td>
+            <td width="30%" style="font-size: 10px; font-family: arial;padding: 2px 4px;">
+                <span style="" th:text=${miningReflexive2}></span>
+            </td>
+            <td width="30%" style="font-size: 10px; font-family: arial;padding: 2px 4px;">
+                <span style="" th:text=${lIDataMap.miningReflexive2}></span>
+            </td>
+        </tr>
+        <tr>
+            <td width="35%" style="padding: 2px 4px; font-size: 10px; font-family: arial;"><strong>Nature of Duties/Business</strong></td>
+            <td width="30%" style="font-size: 10px; font-family: arial;padding: 2px 4px;">
+                <span style="" th:text=${natureOfDuties}></span>
+            </td>
+            <td width="30%" style="font-size: 10px; font-family: arial;padding: 2px 4px;">
+                <span style="" th:text=${lIDataMap.natureOfDuties}></span>
+            </td>
+        </tr>
+        <tr>
+            <td width="30%" style="padding: 2px 4px; font-size: 10px; font-family: arial;"><strong>Job Type</strong></td>
+            <td width="35%" style="font-size: 10px; font-family: arial;padding: 2px 4px;">
+                <span style="" th:text=${jobType}></span>
+            </td>
+            <td width="35%" style="font-size: 10px; font-family: arial;padding: 2px 4px;">
+                <span style="" th:text=${lIDataMap.jobType}></span>
+            </td>
+        </tr>
+        <tr>
+            <td width="30%" style="padding: 2px 4px; font-size: 10px; font-family: arial;"><strong>Work/Official Email ID</strong></td>
+            <td width="35%" style="font-size: 10px; font-family: arial;padding: 2px 4px;">
+                <span style="" th:text=${officialEmail}></span>
+            </td>
+            <td width="35%" style="font-size: 10px; font-family: arial;padding: 2px 4px;">
+                <span style="" th:text=${lIDataMap.officialEmail}></span>
+            </td>
+        </tr>
+        <tr>
+            <td width="30%" style="padding: 2px 4px; font-size: 10px; font-family: arial;"><strong>Tenure of Job in Months</strong></td>
+            <td width="35%" style="font-size: 10px; font-family: arial;padding: 2px 4px;">
+                <span style="" th:text=${tenureOfJob}></span>
+            </td>
+            <td width="35%" style="font-size: 10px; font-family: arial;padding: 2px 4px;">
+                <span style="" th:text=${lIDataMap.tenureOfJob}></span>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+    <table width="100%" border="1" cellspacing="0" cellpadding="0" style="border-collapse: collapse;">
+        <tbody>
+        <tr >
+            <td width="35" style="font-size: 10px; font-family: arial;padding: 2px 4px;">
+                <strong>Are you/your Nominee a Politically Exposed Person (PEP)?</strong>
+            </td >
+            <td width="30%" style="font-size: 10px; font-family: arial;padding: 2px 4px;">
+                <input type="checkbox" th:checked="${lIDataMap.politicallyExposed==true}">Yes</input>
+                <input type="checkbox" th:checked="${lIDataMap.politicallyExposed==false}">No</input>
+            </td >
+            <td width="30%" style="font-size: 10px; font-family: arial;padding: 2px 4px;">
+                <input type="checkbox">Yes</input>
+                <input type="checkbox">No</input>
+            </td>
+        </tr>
+        <tr >
+            <td width="35" style="font-size: 10px; font-family: arial;padding: 2px 4px;">
+                <strong>If above Question "Yes" then answer below:</strong>
+            </td >
+            <td width="30%" style="font-size: 10px; font-family: arial;padding: 2px 4px;">
+
+            </td >
+            <td width="30%" style="font-size: 10px; font-family: arial;padding: 2px 4px;">
+
+            </td>
+        </tr>
+        <tr >
+            <td width="35" style="font-size: 10px; font-family: arial;padding: 2px 4px;">
+                <strong>a. Which of the following persons is PEP (Tick as applicable)</strong>
+            </td >
+            <td width="30%" style="font-size: 10px; font-family: arial;padding: 2px 4px;">
+                <input type="checkbox" th:checked="${isLIPep==true}">Life insured</input>
+                <input type="checkbox" th:checked="${isFamilyPep==true}">Family member of life insured</input>
+            </td >
+            <td width="30%" style="font-size: 10px; font-family: arial;padding: 2px 4px;">
+                <input type="checkbox" th:checked="${lIDataMap.isLIPep==true}">Life insured</input>
+                <input type="checkbox" th:checked="${lIDataMap.isFamilyPep==true}">Family member of life insured</input>
+            </td>
+        </tr>
+        <tr >
+            <td width="35" style="font-size: 10px; font-family: arial;padding: 2px 4px;">
+                <strong>Specify: </strong>
+            </td >
+            <td width="30%" style="font-size: 10px; font-family: arial;padding: 2px 4px;"  th:text="${specifyFamilyMembers}"></td >
+            <td width="30%" style="font-size: 10px; font-family: arial;padding: 2px 4px;"  th:text="${lIDataMap.specifyFamilyMembers}"></td>
+        </tr>
+        <tr>
+            <td width="35%" style="font-size: 10px; font-family: arial;padding: 2px 4px;"><strong>b. Please specify the extent of Political involvement:</strong></td>
+        </tr>
+        <tr >
+            <td width="35" style="font-size: 10px; font-family: arial;padding: 2px 4px;">
+                <strong>i. Political Experience (Years) :</strong>
+            </td >
+            <td width="30%" style="font-size: 10px; font-family: arial;padding: 2px 4px;"  th:text="${politicalExperience}"></td >
+            <td width="30%" style="font-size: 10px; font-family: arial;padding: 2px 4px;"  th:text="${lIDataMap.politicalExperience}"></td>
+        </tr>
+        <tr >
+            <td width="35" style="font-size: 10px; font-family: arial;padding: 2px 4px;">
+                <strong>ii. Affiliation to Political Party :</strong>
+            </td >
+            <td width="30%" style="font-size: 10px; font-family: arial;padding: 2px 4px;"  th:text="${partyAffilations}"></td >
+            <td width="30%" style="font-size: 10px; font-family: arial;padding: 2px 4px;"  th:text="${lIDataMap.partyAffilations}"></td>
+        </tr>
+        <tr >
+            <td width="35" style="font-size: 10px; font-family: arial;padding: 2px 4px;">
+                <strong>iii. Role in Political Party : </strong>
+            </td >
+            <td width="30%" style="font-size: 10px; font-family: arial;padding: 2px 4px;">
+                <input type="checkbox" th:checked="${roleInParty=='01' && politicallyExposed==true}">Social Worker</input>
+                <input type="checkbox" th:checked="${roleInParty=='02' && politicallyExposed==true}">MLA</input>
+                <input type="checkbox" th:checked="${roleInParty=='03' && politicallyExposed==true}">MP</input>
+                <input type="checkbox" th:checked="${roleInParty=='04' && politicallyExposed==true}">Others</input>
+            </td >
+            <td width="30%" style="font-size: 10px; font-family: arial;padding: 2px 4px;" >
+                <input type="checkbox" th:checked="${lIDataMap.roleInParty=='01' && lIDataMap.politicallyExposed==true}">Social Worker</input>
+                <input type="checkbox" th:checked="${lIDataMap.roleInParty=='02' && lIDataMap.politicallyExposed==true}">MLA</input>
+                <input type="checkbox" th:checked="${lIDataMap.roleInParty=='03' && lIDataMap.politicallyExposed==true}">MP</input>
+                <input type="checkbox" th:checked="${lIDataMap.roleInParty=='04' && lIDataMap.politicallyExposed==true}">Others</input>
+            </td>
+        </tr>
+        <tr >
+            <td width="35" style="font-size: 10px; font-family: arial;padding: 2px 4px;">
+                <strong>iv. Portfolio Handled : </strong>
+            </td >
+            <td width="30%" style="font-size: 10px; font-family: arial;padding: 2px 4px;"  th:text="${pepPortfolioHandled}"></td >
+            <td width="30%" style="font-size: 10px; font-family: arial;padding: 2px 4px;"  th:text="${lIDataMap.pepPortfolioHandled}"></td>
+        </tr>
+        <tr >
+            <td width="35" style="font-size: 10px; font-family: arial;padding: 2px 4px;">
+                <strong>v. Whether Party in Power : </strong>
+            </td >
+            <td width="30%" style="font-size: 10px; font-family: arial;padding: 2px 4px;" >
+                <input type="checkbox" th:checked="${partyInPower=='YES' && politicallyExposed==true}">Yes</input>
+                <input type="checkbox" th:checked="${partyInPower=='NO' && politicallyExposed==true}">No</input>
+            </td >
+            <td width="30%" style="font-size: 10px; font-family: arial;padding: 2px 4px;" >
+                <input type="checkbox" th:checked="${lIDataMap.partyInPower=='YES' && lIDataMap.politicallyExposed==true}">Yes</input>
+                <input type="checkbox" th:checked="${lIDataMap.partyInPower=='NO' && lIDataMap.politicallyExposed==true}">No</input>
+            </td>
+        </tr>
+        <tr >
+            <td width="35" style="font-size: 10px; font-family: arial;padding: 2px 4px;">
+                <strong>c. Whether the concerned PEP has ever been posted in foreign office/portfolio?</strong>
+            </td >
+            <td width="30%" style="font-size: 10px; font-family: arial;padding: 2px 4px;" >
+                <input type="checkbox" th:checked="${pepPostedInForeignOffice=='YES' && politicallyExposed==true}">Yes</input>
+                <input type="checkbox" th:checked="${pepPostedInForeignOffice=='NO' && politicallyExposed==true}">No</input>
+            </td >
+            <td width="30%" style="font-size: 10px; font-family: arial;padding: 2px 4px;" >
+                <input type="checkbox" th:checked="${lIDataMap.pepPostedInForeignOffice=='YES' && lIDataMap.politicallyExposed==true}">Yes</input>
+                <input type="checkbox" th:checked="${lIDataMap.pepPostedInForeignOffice=='NO' && lIDataMap.politicallyExposed==true}">No</input>
+            </td>
+        </tr>
+        <tr >
+            <td width="35" style="font-size: 10px; font-family: arial;padding: 2px 4px;">
+                <strong>Specify:</strong>
+            </td >
+            <td width="30%" style="font-size: 10px; font-family: arial;padding: 2px 4px;" th:text="${pepPostedForeignOfficeDetails}">
+            </td >
+            <td width="30%" style="font-size: 10px; font-family: arial;padding: 2px 4px;" th:text="${lIDataMap.pepPostedForeignOfficeDetails}">
+            </td>
+        </tr>
+        <tr >
+            <td width="35" style="font-size: 10px; font-family: arial;padding: 2px 4px;">
+                <strong>d. Please specify all sources of income of concerned PEP? : </strong>
+            </td >
+            <td width="30%" style="font-size: 10px; font-family: arial;padding: 2px 4px;" th:text="${pepIncomeSources}">
+            </td >
+            <td width="30%" style="font-size: 10px; font-family: arial;padding: 2px 4px;" th:text="${lIDataMap.pepIncomeSources}">
+            </td>
+        </tr>
+        <tr >
+            <td width="35" style="font-size: 10px; font-family: arial;padding: 2px 4px;">
+                <strong>e. Has the concerned PEP ever been convicted or is under any investigation for any crime punishable by 3 or more years of imprisonment? :</strong>
+            </td >
+            <td width="30%" style="font-size: 10px; font-family: arial;padding: 2px 4px;" >
+                <input type="checkbox" th:checked="${pepEverConvicted=='YES' && politicallyExposed==true}">Yes</input>
+                <input type="checkbox" th:checked="${pepEverConvicted=='NO' && politicallyExposed==true}">No</input>
+            </td >
+            <td width="30%" style="font-size: 10px; font-family: arial;padding: 2px 4px;" >
+                <input type="checkbox" th:checked="${lIDataMap.pepEverConvicted=='YES' && lIDataMap.politicallyExposed==true}">Yes</input>
+                <input type="checkbox" th:checked="${lIDataMap.pepEverConvicted=='NO' && lIDataMap.politicallyExposed==true}">No</input>
+            </td>
+        </tr>
+        <tr >
+            <td width="35" style="font-size: 10px; font-family: arial;padding: 2px 4px;">
+                <strong>Specify: </strong>
+            </td >
+            <td width="30%" style="font-size: 10px; font-family: arial;padding: 2px 4px;" th:text="${pepConvictedDetails}">
+            </td >
+            <td width="30%" style="font-size: 10px; font-family: arial;padding: 2px 4px;"  th:text="${lIDataMap.pepConvictedDetails}">
+            </td>
+        </tr>
+        </tbody>
+    </table>
+    <table width="100%" border="1" cellspacing="0" cellpadding="0" style="border-collapse: collapse;">
+        <tbody>
+        <tr>
+            <th width="100%" colspan="3"
+                style="background-color: #000000; color: #fff;font-size: 14px; font-family: arial; padding: 2px 4px"
+                align="left">Insurance History Annexure
+            </th>
+        </tr>
+        <tr>
+            <td width="100%" style="font-size: 10px; font-family: arial;padding: 2px 4px;"><strong>Do you
+                have any Life, Disability, Critical Illness or Health Insurance policy issued/pending/lapsed
+                with or any other insurance company?
+            </strong>
+                <input type="checkbox" th:checked="${lIDataMap.everLIIssuedPendingLapsed=='YES'}">Yes</input>
+                <input type="checkbox" th:checked="${lIDataMap.everLIIssuedPendingLapsed=='NO'}">No</input>
+            </td>
+        </tr>
+        <table width="100%" border="1" cellspacing="0" cellpadding="0"
+               style="border-collapse: collapse;">
+      <span th:if=${lIDataMap.everLIIssuedPendingLapsed=='YES'}>
+      <tr>
+        <td width="20%"
+            style="font-size: 10px; font-family: arial;padding: 2px 4px; text-align: center;">Name of Insurance Company T
+        </td>
+        <td width="20%"
+            style="font-size: 10px; font-family: arial;padding: 2px 4px; text-align: center;">Total Sum Assured
+        </td>
+        <td width="20%"
+            style="font-size: 10px; font-family: arial;padding: 2px 4px; text-align: center;">Policy Number</td>
+        <td width="20%"
+            style="font-size: 10px; font-family: arial;padding: 2px 4px; text-align: center;">Status: Pending/Issued/Lapsed
+        </td>
+        <td width="20%"
+            style="font-size: 10px; font-family: arial;padding: 2px 4px; text-align: center;">Status: Type of Policy (Life, Health, CI, Disability)</td>
+      </tr>
+      <tr th:each="lapsedDetail: ${lIDataMap.insuranceDetails.everLIIssuedPendingLapsedDetails}">
+        <td width="20%"
+            style="font-size: 10px; font-family: arial;padding: 2px 4px; text-align: center;" th:text="${lapsedDetail.nameOfInsuranceCompany}"></td>
+        <td width="20%"
+            style="font-size: 10px; font-family: arial;padding: 2px 4px; text-align: center;" th:text="${lapsedDetail.totalSumAssured}"></td>
+         <td width="20%"
+             style="font-size: 10px; font-family: arial;padding: 2px 4px; text-align: center;" th:text="${lapsedDetail.policyNumber}"></td>
+        <td width="20%"
+            style="font-size: 10px; font-family: arial;padding: 2px 4px; text-align: center;" th:text="${lapsedDetail.policyStatus}"></td>
+        <td width="20%"
+            style="font-size: 10px; font-family: arial;padding: 2px 4px; text-align: center;" th:text="${lapsedDetail.typeOfPolicy}"></td>
+      </tr>
+      </span>
+            <tr>
+                <td colspan="5" width="100%" style="font-size: 10px; font-family: arial;padding: 2px 4px;">
+                    <strong>Has any proposal/reinstatement for life or health Insurance ever been refused,
+                        modified, postponed or offered with extra premium ?
+                    </strong>
+                    <input type="checkbox" th:checked="${lIDataMap.everLIRejectedPostponed=='YES'}">Yes</input>
+                    <input type="checkbox" th:checked="${lIDataMap.everLIRejectedPostponed=='NO'}">No</input>
+                </td>
+            </tr>
+            <span th:if=${lIDataMap.everLIRejectedPostponed=='YES'}>
+      <tr>
+        <td width="20%"
+            style="font-size: 10px; font-family: arial;padding: 2px 4px; text-align: center;">Name of Insurance Company T
+        </td>
+        <td width="20%"
+            style="font-size: 10px; font-family: arial;padding: 2px 4px; text-align: center;">Total Sum Assured
+        </td>
+        <td width="20%"
+            style="font-size: 10px; font-family: arial;padding: 2px 4px; text-align: center;">Policy Number
+        </td>
+        <td width="20%"
+            style="font-size: 10px; font-family: arial;padding: 2px 4px; text-align: center;">Status: Pending/Issued/Lapsed
+        </td>
+        <td width="20%"
+            style="font-size: 10px; font-family: arial;padding: 2px 4px; text-align: center;">Status: Type of Policy (Life, Health, CI, Disability)
+        </td>
+      </tr>
+      <tr th:each="rejectedDetails: ${lIDataMap.insuranceDetails.everLIRejectedPostponedDetails}">
+        <td width="20%"
+            style="font-size: 10px; font-family: arial;padding: 2px 4px; text-align: center;" th:text="${rejectedDetails.nameOfInsuranceCompany}"></td>
+        <td width="20%"
+            style="font-size: 10px; font-family: arial;padding: 2px 4px; text-align: center;" th:text="${rejectedDetails.totalSumAssured}"></td>
+        <td width="20%"
+            style="font-size: 10px; font-family: arial;padding: 2px 4px; text-align: center;" th:text="${rejectedDetails.policyNumber}"></td>
+        <td width="20%"
+            style="font-size: 10px; font-family: arial;padding: 2px 4px; text-align: center;" th:text="${rejectedDetails.policyStatus}"></td>
+        <td width="20%"
+            style="font-size: 10px; font-family: arial;padding: 2px 4px; text-align: center;" th:text="${rejectedDetails.typeOfPolicy}"></td>
+      </tr>
+      </span>
+            </tr>
+        </table>
+        </tbody>
+    </table>
+    <table width="100%" border="1" cellspacing="0" cellpadding="0" style="border-collapse: collapse;">
+        <tbody>
+        <tr>
+            <th width="100%" colspan="3" style="background-color: #000000; color: #fff;font-size: 14px; font-family: arial; padding: 2px 4px" align="left">Medical and Travel Questions Annexure</th>
+        </tr>
+        <tr>
+            <td width="60%" style="font-size: 10px; font-family: arial;padding: 2px 4px;"></td>
+            <td width="20%" style="font-size: 10px; font-family: arial;padding: 2px 4px; text-align: center;"><strong>Proposer/Joint Life</strong></td>
+            <td width="20%" style="font-size: 10px; font-family: arial;padding: 2px 4px;text-align: center;"><strong>Life to be Insured</strong></td>
+        </tr>
+        <tr>
+            <td width="60%" style="font-size: 10px; font-family: arial;padding: 2px 4px;"><strong>In next 12 months you intend to travel or reside abroad other than on holiday of more than 4 weeks ?
+            </strong>
+            </td>
+            <td width="20%" style="font-size: 10px; font-family: arial;padding: 2px 4px; text-align: center;">NA</td>
+            <td width="20%" style="font-size: 10px; font-family: arial;padding: 2px 4px;text-align: center;">
+                <input type="checkbox" th:checked="${lIDataMap.travelOrResideAbroad=='YES'}">Yes</input>
+                <input type="checkbox" th:checked="${lIDataMap.travelOrResideAbroad=='NO'}">No</input>
+            </td>
+        </tr>
+        <tr>
+            <td style="font-size: 10px; font-family: arial;padding: 2px 4px;">Countries to be visited:</td>
+            <td width="20%" style="font-size: 10px; font-family: arial;padding: 2px 4px; text-align: center;">NA</td>
+            <td style="font-size: 10px; font-family: arial;padding: 2px 4px;">
+                <span style="padding-left: 5px;" th:text="${lIDataMap.countriesToBeVisited}"></span>
+            </td>
+        </tr>
+        <tr>
+            <td style="font-size: 10px; font-family: arial;padding: 2px 4px;">City: </td>
+            <td width="20%" style="font-size: 10px; font-family: arial;padding: 2px 4px; text-align: center;">NA</td>
+            <td width="20%" style="font-size: 10px; font-family: arial;padding: 2px 4px;text-align: center;" th:text="${lIDataMap.city}"></td>
+        </tr>
+        <tr>
+            <td style="font-size: 10px; font-family: arial;padding: 2px 4px;">Duration in Weeks: </td>
+            <td width="20%" style="font-size: 10px; font-family: arial;padding: 2px 4px; text-align: center;">NA</td>
+            <td width="20%" style="font-size: 10px; font-family: arial;padding: 2px 4px;text-align: center;" th:text="${lIDataMap.durationInWeek}"></td>
+        </tr>
+        <tr>
+            <td style="font-size: 10px; font-family: arial;padding: 2px 4px;">Purpose: </td>
+            <td width="20%" style="font-size: 10px; font-family: arial;padding: 2px 4px; text-align: center;">NA</td>
+            <td width="20%" style="font-size: 10px; font-family: arial;padding: 2px 4px;text-align: center;" th:text="${lIDataMap.purpose}"></td>
+        </tr>
+        </tbody>
+    </table>
+    <table width="100%" border="1" cellspacing="0" cellpadding="0" style="border-collapse: collapse;">
+        <tr>
+            <td width="60%" style="font-size: 10px; font-family: arial;padding: 2px 4px;"><strong>Has any two (2) or
+                more of your family members (Parents & Siblings) ever been diagnosed with Diabetes or Hypertension
+                or Kidney Failure or Cancer or Heart Attack or any Hereditary Disorder before the age of 60 ?
+            </strong>
+            </td>
+            <td width="20%" style="font-size: 10px; font-family: arial;padding: 2px 4px;text-align: center;">NA
+            </td>
+            <td width="20%" style="font-size: 10px; font-family: arial;padding: 2px 4px;text-align: center;">
+                <input type="checkbox" th:checked="${lIDataMap.familyDiagnosedWithDiseases60=='YES'}">Yes</input>
+                <input type="checkbox" th:checked="${lIDataMap.familyDiagnosedWithDiseases60=='NO'}">No</input>
+            </td>
+        </tr>
+    </table>
+    <span th:if=${lIDataMap.isNewFamilyHisApplicable=='YES'}>
+            <table width="100%" border="1" cellspacing="0" cellpadding="0" style="border-collapse: collapse;">
+      <tr style="background-color: #b3b8c1; color: #000000;">
+        <td width="20%"
+            style="font-size: 10px; font-family: arial;padding: 2px 4px; text-align: center;">Family Details
+        </td>
+        <td colspan="3" width="80%"
+            style="font-size: 10px; font-family: arial;padding: 2px 4px; text-align: center;">Life Insured
+        </td>
+      </tr>
+      <tr>
+        <td width="25%"
+            style="font-size: 10px; font-family: arial;padding: 2px 4px; text-align: center;">Family Member
+        </td>
+        <td width="25%"
+            style="font-size: 10px; font-family: arial;padding: 2px 4px; text-align: center;">Age of diagnosis
+        </td>
+        <td width="25%"
+            style="font-size: 10px; font-family: arial;padding: 2px 4px; text-align: center;">Disease/Medical Problem</td>
+        <td width="25%"
+            style="font-size: 10px; font-family: arial;padding: 2px 4px; text-align: center;">status</td>
+      </tr>
+      <tr th:each="DiagnoseDetail: ${lIDataMap.familyDiagnosedWithDiseasesDetails}">
+        <td width="25%"
+            style="font-size: 10px; font-family: arial;padding: 2px 4px; text-align: center;"
+            th:text="${DiagnoseDetail.familyMember}"></td>
+        <td width="25%"
+            style="font-size: 10px; font-family: arial;padding: 2px 4px; text-align: center;"
+            th:text="${DiagnoseDetail.ageAtDiagnosis}"></td>
+         <td width="25%"
+             style="font-size: 10px; font-family: arial;padding: 2px 4px; text-align: center;"
+             th:text="${DiagnoseDetail.medicalProblem}"></td>
+        <td width="25%"
+            style="font-size: 10px; font-family: arial;padding: 2px 4px; text-align: center;
+            " th:text="${DiagnoseDetail.deceasedStatus}"></td>
+      </tr>
+    </table>
+    </span>
+    <table width="100%" border="1" cellspacing="0" cellpadding="0" style="border-collapse: collapse;">
+        <tr>
+            <td width="60%" style="font-size: 10px; font-family: arial;padding: 2px 4px;"><strong>Have you ever been
+                investigated/diagnosed or treated for any of the following?</strong>
+            </td>
+            <td width="20%" style="font-size: 10px; font-family: arial;padding: 2px 4px;text-align: center;">NA
+            </td>
+            <td width="20%" style="font-size: 10px; font-family: arial;padding: 2px 4px;text-align: center;">
+                <input type="checkbox" th:checked="${lIDataMap.neverBeenDiagnosed=='NO'}">Yes</input>
+                <input type="checkbox" th:checked="${lIDataMap.neverBeenDiagnosed=='YES'}">No</input>
+            </td>
+        </tr>
+    </table>
+    <span th:if="${neverBeenDiagnosed=='NO' or lIDataMap.neverBeenDiagnosed=='NO'}">
+       <table width="100%" border="1" cellspacing="0" cellpadding="0" style="border-collapse: collapse;">
+            <tr>
+                <td width="60%" style="font-size: 10px; font-family: arial;padding: 2px 4px;"><strong>1. Diabetes /High blood sugar levels</strong></td>
+                <td width="20%" style="font-size: 10px; font-family: arial;padding: 2px 4px; text-align: center;">NA</td>
+                <td width="20%" style="font-size: 10px; font-family: arial;padding: 2px 4px; text-align: center;">
+                    <input type="checkbox" th:checked="${lIDataMap.medicalQuestions.question1Answer=='YES'}">Yes</input>
+                    <input type="checkbox" th:checked="${lIDataMap.medicalQuestions.question1Answer=='NO'}">No</input>
+                </td>
+            </tr>
+        </table>
+        <table width="100%" border="1" cellspacing="0" cellpadding="0" style="border-collapse: collapse;" th:if="${(medicalQuestions.question1Answer=='YES' or lIDataMap.medicalQuestions.question1Answer=='YES') and (lIDataMap.newDiabeticQuestion=='NO' or newDiabeticQuestion=='NO')}">
+            <tr>
+                <td width="60%" style="font-size: 10px; font-family: arial;padding: 2px 4px; text-align: left;">You are managing diabetes through</td>
+                <td width="20%" style="font-size: 10px; font-family: arial;padding: 2px 4px; text-align: center;">NA</td>
+                <td width="20%" style="font-size: 10px; font-family: arial;padding: 2px 4px; text-align: center;" th:text="${lIDataMap.medicalQuestions.question2AChoice}"></td>
+            </tr>
+            <tr>
+                <td width="60%" style="font-size: 10px; font-family: arial;padding: 2px 4px; text-align: left;">You are diabetic for</td>
+                <td width="20%" style="font-size: 10px; font-family: arial;padding: 2px 4px; text-align: center;">NA</td>
+                 <td width="20%" style="font-size: 10px; font-family: arial;padding: 2px 4px; text-align: center;" th:text="${lIDataMap.medicalQuestions.question2BChoice}"></td>
+            </tr>
+             <tr>
+                <td width="60%" style="font-size: 10px; font-family: arial;padding: 2px 4px; text-align: left;">Any history of diabetes related complications</td>
+                <td width="20%" style="font-size: 10px; font-family: arial;padding: 2px 4px; text-align: center;">NA</td>
+                 <td width="20%" style="font-size: 10px; font-family: arial;padding: 2px 4px; text-align: center;" th:text="${lIDataMap.medicalQuestions.question2CChoice}"></td>
+            </tr>
+            <tr>
+                <td width="60%" style="font-size: 10px; font-family: arial;padding: 2px 4px; text-align: left;">Any other details</td>
+                <td width="20%" style="font-size: 10px; font-family: arial;padding: 2px 4px; text-align: center;">NA</td>
+                <td width="20%" style="font-size: 10px; font-family: arial;padding: 2px 4px; text-align: center;" th:text="${lIDataMap.medicalQuestions.question2DChoice}"></td>
+            </tr>
+        </table>
+        <table width="100%" border="1" cellspacing="0" cellpadding="0" style="border-collapse: collapse;" th:if="${(medicalQuestions.question1Answer=='YES' or lIDataMap.medicalQuestions.question1Answer=='YES') and (lIDataMap.newDiabeticQuestion=='YES' or newDiabeticQuestion=='YES')}">
+            <tr>
+                <td width="60%" style="font-size: 10px; font-family: arial;padding: 2px 4px; text-align: left;">When was Diabetes/ High Blood Sugar first diagnosed?</td>
+                <td width="20%" style="font-size: 10px; font-family: arial;padding: 2px 4px; text-align: center;">NA</td>
+                <td width="20%" style="font-size: 10px; font-family: arial;padding: 2px 4px; text-align: center;" th:text="${lIDataMap.diabetesDiagnosedDate}"></td>
+            </tr>
+            <tr>
+                <td width="60%" style="font-size: 10px; font-family: arial;padding: 2px 4px; text-align: left;">Please specify the type of diabetes</td>
+                <td width="20%" style="font-size: 10px; font-family: arial;padding: 2px 4px; text-align: center;">NA</td>
+                 <td width="20%" style="font-size: 10px; font-family: arial;padding: 2px 4px; text-align: center;" th:text="${lIDataMap.typeOfDiabetes}"></td>
+            </tr>
+            <tr>
+                <td width="60%" style="font-size: 10px; font-family: arial;padding: 2px 4px; text-align: left;">You are managing diabetes through</td>
+                <td width="20%" style="font-size: 10px; font-family: arial;padding: 2px 4px; text-align: center;">NA</td>
+                <td width="20%" style="font-size: 10px; font-family: arial;padding: 2px 4px; text-align: center;" th:text="${lIDataMap.medicalQuestions.question2AChoice}"></td>
+            </tr>
+            <tr>
+                <td width="60%" style="font-size: 10px; font-family: arial;padding: 2px 4px; text-align: left;">Any complications</td>
+                <td width="20%" style="font-size: 10px; font-family: arial;padding: 2px 4px; text-align: center;">NA</td>
+                <td width="20%" style="font-size: 10px; font-family: arial;padding: 2px 4px; text-align: center;" th:text="${lIDataMap.diabeticComplications}"></td>
+            </tr>
+        </table>
+        <table width="100%" border="1" cellspacing="0" cellpadding="0" style="border-collapse: collapse;">
+            <tr>
+                <td width="60%" style="font-size: 10px; font-family: arial;padding: 2px 4px;"><strong>2. Hypertension/ High Blood Pressure, High Cholesterol or Thyroid disorder</strong></td>
+                <td width="20%" style="font-size: 10px; font-family: arial;padding: 2px 4px; text-align: center;">NA</td>
+                <td width="20%" style="font-size: 10px; font-family: arial;padding: 2px 4px; text-align: center;">
+                    <input type="checkbox" th:checked="${lIDataMap.medicalQuestions.question2Answer=='YES'}">Yes</input>
+                    <input type="checkbox" th:checked="${lIDataMap.medicalQuestions.question2Answer=='NO'}">No</input>
+                </td>
+            </tr>
+
+        </table>
+        <table width="100%" border="1" cellspacing="0" cellpadding="0" style="border-collapse: collapse;" th:if="${(medicalQuestions.question2Answer=='YES' or lIDataMap.medicalQuestions.question2Answer=='YES') and (lIDataMap.newHypertensionQuestion=='NO' or newHypertensionQuestion=='NO')}">
+            <tr>
+                <td width="60%" style="font-size: 10px; font-family: arial;padding: 2px 4px; text-align: left;">HTN/high blood pressure but under control through medication</td>
+                <td width="20%" style="font-size: 10px; font-family: arial;padding: 2px 4px; text-align: center;">NA</td>
+                <td width="20%" style="font-size: 10px; font-family: arial;padding: 2px 4px; text-align: center;" th:text="${lIDataMap.medicalQuestions.question3AChoice}"></td>
+            </tr>
+            <tr>
+                <td width="60%" style="font-size: 10px; font-family: arial;padding: 2px 4px; text-align: left;">History high cholesterol but under control through medication</td>
+                <td width="20%" style="font-size: 10px; font-family: arial;padding: 2px 4px; text-align: center;">NA</td>
+                <td width="20%" style="font-size: 10px; font-family: arial;padding: 2px 4px; text-align: center;" th:text="${lIDataMap.medicalQuestions.question3BChoice}"></td>
+            </tr>
+            <tr>
+                <td width="60%" style="font-size: 10px; font-family: arial;padding: 2px 4px; text-align: left;">History of Thyroid disorder but under control through medication</td>
+                <td width="20%" style="font-size: 10px; font-family: arial;padding: 2px 4px; text-align: center;">NA</td>
+                <td width="20%" style="font-size: 10px; font-family: arial;padding: 2px 4px; text-align: center;" th:text="${lIDataMap.medicalQuestions.question3CChoice}"></td>
+            </tr>
+            <tr>
+                <td width="60%" style="font-size: 10px; font-family: arial;padding: 2px 4px; text-align: left;">Any other details</td>
+                <td width="20%" style="font-size: 10px; font-family: arial;padding: 2px 4px; text-align: center;">NA</td>
+                <td width="20%" style="font-size: 10px; font-family: arial;padding: 2px 4px; text-align: center;" th:text="${lIDataMap.medicalQuestions.question3DChoice}"></td>
+            </tr>
+        </table>
+        <table width="100%" border="1" cellspacing="0" cellpadding="0" style="border-collapse: collapse;" th:if="${(medicalQuestions.question2Answer=='YES' or lIDataMap.medicalQuestions.question2Answer=='YES') and (lIDataMap.newHypertensionQuestion=='YES' or newHypertensionQuestion=='YES')}">
+            <tr>
+                <td width="60%" style="font-size: 10px; font-family: arial;padding: 2px 4px; text-align: left;">HTN/high blood pressure but under control through medication</td>
+                <td width="20%" style="font-size: 10px; font-family: arial;padding: 2px 4px; text-align: center;">NA</td>
+                <td width="20%" style="font-size: 10px; font-family: arial;padding: 2px 4px; text-align: center;" th:text="${lIDataMap.medicalQuestions.question3AChoice}"></td>
+            </tr>
+            <tr>
+                <td width="60%" style="font-size: 10px; font-family: arial;padding: 2px 4px; text-align: left;">When was Hypertension / High Blood Pressure first Diagnosed ? </td>
+                <td width="20%" style="font-size: 10px; font-family: arial;padding: 2px 4px; text-align: center;">NA</td>
+                <td width="20%" style="font-size: 10px; font-family: arial;padding: 2px 4px; text-align: center;" th:text="${lIDataMap.diagnosedDate}"></td>
+            </tr>
+            <tr>
+                <td width="60%" style="font-size: 10px; font-family: arial;padding: 2px 4px; text-align: left;">Are you on treatment </td>
+                <td width="20%" style="font-size: 10px; font-family: arial;padding: 2px 4px; text-align: center;">NA</td>
+                <td width="20%" style="font-size: 10px; font-family: arial;padding: 2px 4px; text-align: center;" th:text="${lIDataMap.areYouOnTreatment}"></td>
+            </tr>
+            <tr>
+                <td width="60%" style="font-size: 10px; font-family: arial;padding: 2px 4px; text-align: left;">In the last 2 years have you had E.C.G, X-Ray, ECHO ,blood lipid test or other investigations</td>
+                <td width="20%" style="font-size: 10px; font-family: arial;padding: 2px 4px; text-align: center;">NA</td>
+                <td width="20%" style="font-size: 10px; font-family: arial;padding: 2px 4px; text-align: center;" th:text="${lIDataMap.medicalTestApplicable}"></td>
+            </tr>
+            <tr>
+                <td width="60%" style="font-size: 10px; font-family: arial;padding: 2px 4px; text-align: left;">What were you investigated for?</td>
+                <td width="20%" style="font-size: 10px; font-family: arial;padding: 2px 4px; text-align: center;">NA</td>
+                <td width="20%" style="font-size: 10px; font-family: arial;padding: 2px 4px; text-align: center;" th:text="${lIDataMap.medicalTestDetails}"></td>
+            </tr>
+            <tr>
+                <td width="60%" style="font-size: 10px; font-family: arial;padding: 2px 4px; text-align: left;">When did you last consulted doctor for treatment?</td>
+                <td width="20%" style="font-size: 10px; font-family: arial;padding: 2px 4px; text-align: center;">NA</td>
+                <td width="20%" style="font-size: 10px; font-family: arial;padding: 2px 4px; text-align: center;" th:text="${lIDataMap.medicalTestDocConsultationDate}"></td>
+            </tr>
+            <tr>
+                <td width="60%" style="font-size: 10px; font-family: arial;padding: 2px 4px; text-align: left;">Any complications </td>
+                <td width="20%" style="font-size: 10px; font-family: arial;padding: 2px 4px; text-align: center;">NA</td>
+                <td width="20%" style="font-size: 10px; font-family: arial;padding: 2px 4px; text-align: center;" th:text="${lIDataMap.highBloodPressureComplications}"></td>
+            </tr>
+            <tr>
+                <td width="60%" style="font-size: 10px; font-family: arial;padding: 2px 4px; text-align: left;">History high cholesterol but under control through medication</td>
+                <td width="20%" style="font-size: 10px; font-family: arial;padding: 2px 4px; text-align: center;">NA</td>
+                <td width="20%" style="font-size: 10px; font-family: arial;padding: 2px 4px; text-align: center;" th:text="${lIDataMap.medicalQuestions.question3BChoice}"></td>
+            </tr>
+            <tr>
+                <td width="60%" style="font-size: 10px; font-family: arial;padding: 2px 4px; text-align: left;">History of Thyroid disorder but under control through medication</td>
+                <td width="20%" style="font-size: 10px; font-family: arial;padding: 2px 4px; text-align: center;">NA</td>
+                <td width="20%" style="font-size: 10px; font-family: arial;padding: 2px 4px; text-align: center;" th:text="${lIDataMap.medicalQuestions.question3CChoice}"></td>
+            </tr>
+            <tr>
+                <td width="60%" style="font-size: 10px; font-family: arial;padding: 2px 4px; text-align: left;">Any other details</td>
+                <td width="20%" style="font-size: 10px; font-family: arial;padding: 2px 4px; text-align: center;">NA</td>
+                <td width="20%" style="font-size: 10px; font-family: arial;padding: 2px 4px; text-align: center;" th:text="${lIDataMap.medicalQuestions.question3DChoice}"></td>
+            </tr>
+        </table>
+        <table width="100%" border="1" cellspacing="0" cellpadding="0" style="border-collapse: collapse;">
+            <tr>
+                <td width="60%" style="font-size: 10px; font-family: arial;padding: 2px 4px;"><strong>3. Heart or vascular disorder including chest pain, stroke, heart attack or Angioplasty, CABG or any other heart surgery</strong></td>
+                <td width="20%" style="font-size: 10px; font-family: arial;padding: 2px 4px; text-align: center;">NA</td>
+                <td width="20%" style="font-size: 10px; font-family: arial;padding: 2px 4px; text-align: center;">
+                    <input type="checkbox" th:checked="${lIDataMap.medicalQuestions.question3Answer=='YES'}">Yes</input>
+                    <input type="checkbox" th:checked="${lIDataMap.medicalQuestions.question3Answer=='NO'}">No</input>
+                </td>
+            </tr>
+        </table>
+         <table width="100%" border="1" cellspacing="0" cellpadding="0" style="border-collapse: collapse;" th:if="${medicalQuestions.question3Answer=='YES' or lIDataMap.medicalQuestions.question3Answer=='YES'}">
+            <tr>
+                <td width="60%" style="font-size: 10px; font-family: arial;padding: 2px 4px; text-align: left;">History of chest pain due to muscular or gastritis problem</td>
+                <td width="20%" style="font-size: 10px; font-family: arial;padding: 2px 4px; text-align: center;">NA</td>
+                <td width="20%" style="font-size: 10px; font-family: arial;padding: 2px 4px; text-align: center;" th:text="${lIDataMap.medicalQuestions.question1AChoice}"></td>
+            </tr>
+            <tr>
+                <td width="60%" style="font-size: 10px; font-family: arial;padding: 2px 4px; text-align: left;">Any other Details</td>
+                <td width="20%" style="font-size: 10px; font-family: arial;padding: 2px 4px; text-align: center;">NA</td>
+                <td width="20%" style="font-size: 10px; font-family: arial;padding: 2px 4px; text-align: center;" th:text="${lIDataMap.medicalQuestions.question1BChoice}"></td>
+            </tr>
+        </table>
+       <table width="100%" border="1" cellspacing="0" cellpadding="0" style="border-collapse: collapse;">
+            <tr>
+                <td width="60%" style="font-size: 10px; font-family: arial;padding: 2px 4px;"><strong>4. Breathing or lung disorders including asthma, emphysema, tuberculosis</strong></td>
+                <td width="20%" style="font-size: 10px; font-family: arial;padding: 2px 4px; text-align: center;">NA</td>
+                <td width="20%" style="font-size: 10px; font-family: arial;padding: 2px 4px; text-align: center;">
+                    <input type="checkbox" th:checked="${lIDataMap.medicalQuestions.question4Answer=='YES'}">Yes</input>
+                    <input type="checkbox" th:checked="${lIDataMap.medicalQuestions.question4Answer=='NO'}">No</input>
+                </td>
+            </tr>
+        </table>
+         <table width="100%" border="1" cellspacing="0" cellpadding="0" style="border-collapse: collapse;" th:if="${(medicalQuestions.question4Answer=='YES' or lIDataMap.medicalQuestions.question4Answer=='YES') and (lIDataMap.newRespiratoryQuestion=='NO' or newRespiratoryQuestion=='NO')}">
+            <tr>
+                <td width="60%" style="font-size: 10px; font-family: arial;padding: 2px 4px; text-align: left;">History of any tuberculosis prior to 2 yrs with no relapse</td>
+               <td width="20%" style="font-size: 10px; font-family: arial;padding: 2px 4px; text-align: center;">NA</td>
+                <td width="20%" style="font-size: 10px; font-family: arial;padding: 2px 4px; text-align: center;" th:text="${lIDataMap.medicalQuestions.question4AChoice}"></td>
+            </tr>
+            <tr>
+                <td width="60%" style="font-size: 10px; font-family: arial;padding: 2px 4px; text-align: left;">Allergic bronchitis with use of inhaler sometimes</td>
+                <td width="20%" style="font-size: 10px; font-family: arial;padding: 2px 4px; text-align: center;">NA</td>
+                <td width="20%" style="font-size: 10px; font-family: arial;padding: 2px 4px; text-align: center;" th:text="${lIDataMap.medicalQuestions.question4BChoice}"></td>
+            </tr>
+            <tr>
+                <td width="60%" style="font-size: 10px; font-family: arial;padding: 2px 4px; text-align: left;">History of asthma with no symptoms in last 1-2 years</td>
+                <td width="20%" style="font-size: 10px; font-family: arial;padding: 2px 4px; text-align: center;">NA</td>
+                <td width="20%" style="font-size: 10px; font-family: arial;padding: 2px 4px; text-align: center;" th:text="${lIDataMap.medicalQuestions.question4CChoice}"></td>
+            </tr>
+            <tr>
+                <td width="60%" style="font-size: 10px; font-family: arial;padding: 2px 4px; text-align: left;">Any other details</td>
+                <td width="20%" style="font-size: 10px; font-family: arial;padding: 2px 4px; text-align: center;">NA</td>
+                <td width="20%" style="font-size: 10px; font-family: arial;padding: 2px 4px; text-align: center;" th:text="${lIDataMap.medicalQuestions.question4DChoice}"></td>
+            </tr>
+        </table>
+        <table width="100%" border="1" cellspacing="0" cellpadding="0" style="border-collapse: collapse;" th:if="${(medicalQuestions.question4Answer=='YES' or lIDataMap.medicalQuestions.question4Answer=='YES') and (lIDataMap.newRespiratoryQuestion=='YES' or newRespiratoryQuestion=='YES')}">
+            <tr>
+                <td width="60%" style="font-size: 10px; font-family: arial;padding: 2px 4px; text-align: left;">History of any tuberculosis prior to 2 yrs with no relapse</td>
+               <td width="20%" style="font-size: 10px; font-family: arial;padding: 2px 4px; text-align: center;">NA</td>
+                <td width="20%" style="font-size: 10px; font-family: arial;padding: 2px 4px; text-align: center;" th:text="${lIDataMap.medicalQuestions.question4AChoice}"></td>
+            </tr>
+            <tr>
+                <td width="60%" style="font-size: 10px; font-family: arial;padding: 2px 4px; text-align: left;">Allergic bronchitis with use of inhaler sometimes</td>
+                <td width="20%" style="font-size: 10px; font-family: arial;padding: 2px 4px; text-align: center;">NA</td>
+                <td width="20%" style="font-size: 10px; font-family: arial;padding: 2px 4px; text-align: center;" th:text="${lIDataMap.medicalQuestions.question4BChoice}"></td>
+            </tr>
+            <tr>
+                <td width="60%" style="font-size: 10px; font-family: arial;padding: 2px 4px; text-align: left;">History of asthma</td>
+                <td width="20%" style="font-size: 10px; font-family: arial;padding: 2px 4px; text-align: center;">NA</td>
+                <td width="20%" style="font-size: 10px; font-family: arial;padding: 2px 4px; text-align: center;" th:text="${lIDataMap.medicalQuestions.question4CChoice}"></td>
+            </tr>
+            <tr>
+                <td width="60%" style="font-size: 10px; font-family: arial;padding: 2px 4px; text-align: left;">What is the frequency and severity?</td>
+                <td width="20%" style="font-size: 10px; font-family: arial;padding: 2px 4px; text-align: center;">NA</td>
+                <td width="20%" style="font-size: 10px; font-family: arial;padding: 2px 4px; text-align: center;" th:text="${lIDataMap.frequencyAndSeverity}"></td>
+            </tr>
+            <tr>
+                <td width="60%" style="font-size: 10px; font-family: arial;padding: 2px 4px; text-align: left;">Type of treatment undergoing</td>
+                <td width="20%" style="font-size: 10px; font-family: arial;padding: 2px 4px; text-align: center;">NA</td>
+                <td width="20%" style="font-size: 10px; font-family: arial;padding: 2px 4px; text-align: center;" th:text="${lIDataMap.typeOfTreatment}"></td>
+            </tr>
+            <tr>
+                <td width="60%" style="font-size: 10px; font-family: arial;padding: 2px 4px; text-align: left;">Have you ever been admitted to hospital for your condition?</td>
+                <td width="20%" style="font-size: 10px; font-family: arial;padding: 2px 4px; text-align: center;">NA</td>
+                <td width="20%" style="font-size: 10px; font-family: arial;padding: 2px 4px; text-align: center;" th:text="${lIDataMap.everAdmittedToHospital}"></td>
+            </tr>
+            <tr>
+                <td width="60%" style="font-size: 10px; font-family: arial;padding: 2px 4px; text-align: left;">Have you ever smoked cigarettes or any other form of tobacco?</td>
+                <td width="20%" style="font-size: 10px; font-family: arial;padding: 2px 4px; text-align: center;">NA</td>
+                <td width="20%" style="font-size: 10px; font-family: arial;padding: 2px 4px; text-align: center;" th:text="${lIDataMap.everSmokedCigOrTobacco}"></td>
+            </tr>
+            <tr>
+                <td width="60%" style="font-size: 10px; font-family: arial;padding: 2px 4px; text-align: left;">Any other details</td>
+                <td width="20%" style="font-size: 10px; font-family: arial;padding: 2px 4px; text-align: center;">NA</td>
+                <td width="20%" style="font-size: 10px; font-family: arial;padding: 2px 4px; text-align: center;" th:text="${lIDataMap.medicalQuestions.question4DChoice}"></td>
+            </tr>
+        </table>
+         <table width="100%" border="1" cellspacing="0" cellpadding="0" style="border-collapse: collapse;">
+            <tr>
+                <td width="60%" style="font-size: 10px; font-family: arial;padding: 2px 4px;"><strong>5. Liver or digestive system related disorder including jaundice ,gall bladder, pancreas or Hepatitis B/C</strong></td>
+                <td width="20%" style="font-size: 10px; font-family: arial;padding: 2px 4px; text-align: center;">NA</td>
+                <td width="20%" style="font-size: 10px; font-family: arial;padding: 2px 4px; text-align: center;">
+                    <input type="checkbox" th:checked="${lIDataMap.medicalQuestions.question5Answer=='YES'}">Yes</input>
+                    <input type="checkbox" th:checked="${lIDataMap.medicalQuestions.question5Answer=='NO'}">No</input>
+                </td>
+            </tr>
+        </table>
+        <table width="100%" border="1" cellspacing="0" cellpadding="0" style="border-collapse: collapse;" th:if="${medicalQuestions.question5Answer=='YES' or lIDataMap.medicalQuestions.question5Answer=='YES'}">
+            <tr>
+                <td width="60%" style="font-size: 10px; font-family: arial;padding: 2px 4px; text-align: left;">History of jaundice and cured after treatment</td>
+                <td width="20%" style="font-size: 10px; font-family: arial;padding: 2px 4px; text-align: center;">NA</td>
+                <td width="20%" style="font-size: 10px; font-family: arial;padding: 2px 4px; text-align: center;" th:text="${lIDataMap.medicalQuestions.question6AChoice}"></td>
+            </tr>
+            <tr>
+                <td width="60%" style="font-size: 10px; font-family: arial;padding: 2px 4px; text-align: left;">Indigestion or constipation</td>
+                <td width="20%" style="font-size: 10px; font-family: arial;padding: 2px 4px; text-align: center;">NA</td>
+                <td width="20%" style="font-size: 10px; font-family: arial;padding: 2px 4px; text-align: center;" th:text="${lIDataMap.medicalQuestions.question6BChoice}"></td>
+            </tr>
+            <tr>
+                <td width="60%" style="font-size: 10px; font-family: arial;padding: 2px 4px; text-align: left;">History of gall bladder removed or cholesystectomy</td>
+                <td width="20%" style="font-size: 10px; font-family: arial;padding: 2px 4px; text-align: center;">NA</td>
+                <td width="20%" style="font-size: 10px; font-family: arial;padding: 2px 4px; text-align: center;" th:text="${lIDataMap.medicalQuestions.question6CChoice}"></td>
+            </tr>
+            <tr>
+                <td width="60%" style="font-size: 10px; font-family: arial;padding: 2px 4px; text-align: left;">History of stones in GB but now no complication</td>
+                <td width="20%" style="font-size: 10px; font-family: arial;padding: 2px 4px; text-align: center;">NA</td>
+                <td width="25%" style="font-size: 10px; font-family: arial;padding: 2px 4px; text-align: center;" th:text="${lIDataMap.medicalQuestions.question6DChoice}"></td>
+            </tr>
+            <tr>
+                <td width="60%" style="font-size: 10px; font-family: arial;padding: 2px 4px; text-align: left;">Any other Details</td>
+                <td width="20%" style="font-size: 10px; font-family: arial;padding: 2px 4px; text-align: center;">NA</td>
+                <td width="20%" style="font-size: 10px; font-family: arial;padding: 2px 4px; text-align: center;" th:text="${lIDataMap.medicalQuestions.question6EChoice}"></td>
+            </tr>
+        </table>
+        <table width="100%" border="1" cellspacing="0" cellpadding="0" style="border-collapse: collapse;">
+            <tr>
+                <td width="60%" style="font-size: 10px; font-family: arial;padding: 2px 4px;"><strong>6. Any abnormal growth like tumour, lump, cancer or blood disorder,
+                    including anemia or thalassaemia or <br> Sexually transmitted disease (STD) including HIV or AIDS.</br></strong></td>
+                <td width="20%" style="font-size: 10px; font-family: arial;padding: 2px 4px; text-align: center;">NA</td>
+                <td width="20%" style="font-size: 10px; font-family: arial;padding: 2px 4px; text-align: center;">
+                    <input type="checkbox" th:checked="${lIDataMap.medicalQuestions.question6Answer=='YES'}">Yes</input>
+                    <input type="checkbox" th:checked="${lIDataMap.medicalQuestions.question6Answer=='NO'}">No</input>
+                </td>
+            </tr>
+
+        </table>
+        <table width="100%" border="1" cellspacing="0" cellpadding="0" style="border-collapse: collapse;" th:if="${(medicalQuestions.question6Answer=='YES' or lIDataMap.medicalQuestions.question6Answer=='YES') and (isHivCancerHistoryApplicable=='NO' or lIDataMap.isHivCancerHistoryApplicable=='NO')}">
+            <tr>
+                <td width="60%" style="font-size: 10px; font-family: arial;padding: 2px 4px; text-align: left;">History of iron deficiency anemia and now normal</td>
+                <td width="20%" style="font-size: 10px; font-family: arial;padding: 2px 4px; text-align: center;">NA</td>
+                <td width="20%" style="font-size: 10px; font-family: arial;padding: 2px 4px; text-align: center;" th:text="${lIDataMap.medicalQuestions.question5AChoice}"></td>
+            </tr>
+            <tr>
+                <td width="60%" style="font-size: 10px; font-family: arial;padding: 2px 4px; text-align: left;">History of lipoma or any non-malignant tumor</td>
+                <td width="20%" style="font-size: 10px; font-family: arial;padding: 2px 4px; text-align: center;">NA</td>
+                <td width="20%" style="font-size: 10px; font-family: arial;padding: 2px 4px; text-align: center;" th:text="${lIDataMap.medicalQuestions.question5BChoice}"></td>
+            </tr>
+            <tr>
+                <td width="60%" style="font-size: 10px; font-family: arial;padding: 2px 4px; text-align: left;">Any other Details</td>
+                <td width="20%" style="font-size: 10px; font-family: arial;padding: 2px 4px; text-align: center;">NA</td>
+                <td width="20%" style="font-size: 10px; font-family: arial;padding: 2px 4px; text-align: center;" th:text="${lIDataMap.medicalQuestions.question5CChoice}"></td>
+            </tr>
+        </table>
+        <table width="100%" border="1" cellspacing="0" cellpadding="0" style="border-collapse: collapse;" th:if="${(medicalQuestions.question6Answer=='YES' or lIDataMap.medicalQuestions.question6Answer=='YES') and (isHivCancerHistoryApplicable=='YES' or lIDataMap.isHivCancerHistoryApplicable=='YES')}">
+            <tr>
+                <td width="60%" style="font-size: 10px; font-family: arial;padding: 2px 4px; text-align: left;">History of iron deficiency anemia and now normal</td>
+                <td width="20%" style="font-size: 10px; font-family: arial;padding: 2px 4px; text-align: center;">NA</td>
+                <td width="20%" style="font-size: 10px; font-family: arial;padding: 2px 4px; text-align: center;" th:text="${lIDataMap.medicalQuestions.question5AChoice}"></td>
+            </tr>
+            <tr>
+                <td width="60%" style="font-size: 10px; font-family: arial;padding: 2px 4px; text-align: left;">History of lipoma or any non-malignant tumor</td>
+                <td width="20%" style="font-size: 10px; font-family: arial;padding: 2px 4px; text-align: center;">NA</td>
+                <td width="20%" style="font-size: 10px; font-family: arial;padding: 2px 4px; text-align: center;" th:text="${lIDataMap.medicalQuestions.question5BChoice}"></td>
+            </tr>
+            <tr>
+                <td width="60%" style="font-size: 10px; font-family: arial;padding: 2px 4px; text-align: left;">History of HIV OR STD / Cancer/ Malignant Tumor</td>
+                <td width="20%" style="font-size: 10px; font-family: arial;padding: 2px 4px; text-align: center;">NA</td>
+                <td width="20%" style="font-size: 10px; font-family: arial;padding: 2px 4px; text-align: center;" th:text="${lIDataMap.hivCancerTumorHistory}"></td>
+            </tr>
+            <tr>
+                <td width="60%" style="font-size: 10px; font-family: arial;padding: 2px 4px; text-align: left;">Any other Details</td>
+                <td width="20%" style="font-size: 10px; font-family: arial;padding: 2px 4px; text-align: center;">NA</td>
+                <td width="20%" style="font-size: 10px; font-family: arial;padding: 2px 4px; text-align: center;" th:text="${lIDataMap.medicalQuestions.question5CChoice}"></td>
+            </tr>
+        </table>
+        <table width="100%" border="1" cellspacing="0" cellpadding="0" style="border-collapse: collapse;">
+            <tr>
+                <td width="60%" style="font-size: 10px; font-family: arial;padding: 2px 4px;"><strong>7. Any kind of Kidney or bladder disorder, including kidney failure, renal stone, nephritis or prostate disorder</strong></td>
+                <td width="20%" style="font-size: 10px; font-family: arial;padding: 2px 4px; text-align: center;">NA</td>
+                <td width="20%" style="font-size: 10px; font-family: arial;padding: 2px 4px; text-align: center;">
+                    <input type="checkbox" th:checked="${lIDataMap.medicalQuestions.question7Answer=='YES'}">Yes</input>
+                    <input type="checkbox" th:checked="${lIDataMap.medicalQuestions.question7Answer=='NO'}">No</input>
+                </td>
+            </tr>
+        </table>
+        <table width="100%" border="1" cellspacing="0" cellpadding="0" style="border-collapse: collapse;" th:if="${medicalQuestions.question7Answer=='YES' or lIDataMap.medicalQuestions.question7Answer=='YES'}">
+            <tr>
+                <td width="60%" style="font-size: 10px; font-family: arial;padding: 2px 4px; text-align: left;">History of any UTI (Urinary tract Infection), recovered</td>
+                <td width="20%" style="font-size: 10px; font-family: arial;padding: 2px 4px; text-align: center;">NA</td>
+                <td width="20%" style="font-size: 10px; font-family: arial;padding: 2px 4px; text-align: center;" th:text="${lIDataMap.medicalQuestions.question9AChoice}"></td>
+            </tr>
+            <tr>
+                <td width="60%" style="font-size: 10px; font-family: arial;padding: 2px 4px; text-align: left;">History of surgery of kidney/Ureteric stone, no complications now.</td>
+                <td width="20%" style="font-size: 10px; font-family: arial;padding: 2px 4px; text-align: center;">NA</td>
+                <td width="20%" style="font-size: 10px; font-family: arial;padding: 2px 4px; text-align: center;" th:text="${lIDataMap.medicalQuestions.question9BChoice}"></td>
+            </tr>
+            <tr>
+                <td width="25%" style="font-size: 10px; font-family: arial;padding: 2px 4px; text-align: left;">History of stone in kidney, surgey not done, flushed out or still there but no problem</td>
+                <td width="20%" style="font-size: 10px; font-family: arial;padding: 2px 4px; text-align: center;">NA</td>
+                <td width="25%" style="font-size: 10px; font-family: arial;padding: 2px 4px; text-align: center;" th:text="${lIDataMap.medicalQuestions.question9CChoice}"></td>
+            </tr>
+            <tr>
+                <td width="25%" style="font-size: 10px; font-family: arial;padding: 2px 4px; text-align: left;">Any other details</td>
+                <td width="20%" style="font-size: 10px; font-family: arial;padding: 2px 4px; text-align: center;">NA</td>
+                <td width="25%" style="font-size: 10px; font-family: arial;padding: 2px 4px; text-align: center;" th:text="${lIDataMap.medicalQuestions.question9DChoice}"></td>
+            </tr>
+        </table>
+         <table width="100%" border="1" cellspacing="0" cellpadding="0" style="border-collapse: collapse;">
+            <tr>
+                <td width="60%" style="font-size: 10px; font-family: arial;padding: 2px 4px;"><strong>8. Any neurological or mental health problem like paralysis, multiple sclerosis, Parkinson's, epilepsy, depression or anxiety</strong></td>
+                <td width="20%" style="font-size: 10px; font-family: arial;padding: 2px 4px; text-align: center;">NA</td>
+                <td width="20%" style="font-size: 10px; font-family: arial;padding: 2px 4px; text-align: center;">
+                    <input type="checkbox" th:checked="${lIDataMap.medicalQuestions.question8Answer=='YES'}">Yes</input>
+                    <input type="checkbox" th:checked="${lIDataMap.medicalQuestions.question8Answer=='NO'}">No</input>
+                </td>
+            </tr>
+             <tr th:if="${medicalQuestions.question8Answer=='YES' or lIDataMap.medicalQuestions.question8Answer=='YES'}">
+                <td width="60%" style="font-size: 10px; font-family: arial;padding: 2px 4px; text-align: left;">Give details :</td>
+                <td width="20%" style="font-size: 10px; font-family: arial;padding: 2px 4px; text-align: center;">NA</td>
+                <td width="20%" style="font-size: 10px; font-family: arial;padding: 2px 4px; text-align: center;" th:text="${lIDataMap.medicalQuestions.question7AChoice}"></td>
+            </tr>
+        </table>
+        <table width="100%" border="1" cellspacing="0" cellpadding="0" style="border-collapse: collapse;">
+            <tr>
+                <td width="60%" style="font-size: 10px; font-family: arial;padding: 2px 4px;"><strong>9. Muscular-skeletal or joint disorders, including any kind of arthritis, gout, osteoporosis</strong></td>
+                <td width="20%" style="font-size: 10px; font-family: arial;padding: 2px 4px; text-align: center;">NA</td>
+                <td width="20%" style="font-size: 10px; font-family: arial;padding: 2px 4px; text-align: center;">
+                    <input type="checkbox" th:checked="${lIDataMap.medicalQuestions.question9Answer=='YES'}">Yes</input>
+                    <input type="checkbox" th:checked="${lIDataMap.medicalQuestions.question9Answer=='NO'}">No</input>
+                </td>
+            </tr>
+        </table>
+        <table width="100%" border="1" cellspacing="0" cellpadding="0" style="border-collapse: collapse;" th:if="${medicalQuestions.question9Answer=='YES' or lIDataMap.medicalQuestions.question9Answer=='YES'}">
+            <tr>
+                <td width="60%" style="font-size: 10px; font-family: arial;padding: 2px 4px; text-align: left;">Back pain due to slip disc, operated no complication</td>
+                <td width="20%" style="font-size: 10px; font-family: arial;padding: 2px 4px; text-align: center;">NA</td>
+                <td width="20%" style="font-size: 10px; font-family: arial;padding: 2px 4px; text-align: center;" th:text="${lIDataMap.medicalQuestions.question12AChoice}"></td>
+            </tr>
+            <tr>
+            <td width="60%" style="font-size: 10px; font-family: arial;padding: 2px 4px; text-align: left;">Back pain/any sprain suggested physiotherapy/exercise</td>
+                <td width="20%" style="font-size: 10px; font-family: arial;padding: 2px 4px; text-align: center;">NA</td>
+                <td width="20%" style="font-size: 10px; font-family: arial;padding: 2px 4px; text-align: center;" th:text="${lIDataMap.medicalQuestions.question12BChoice}"></td>
+            </tr>
+            <tr>
+                <td width="60%" style="font-size: 10px; font-family: arial;padding: 2px 4px; text-align: left;">History of hairline fracture,or any ligament tear, now no problem</td>
+                <td width="20%" style="font-size: 10px; font-family: arial;padding: 2px 4px; text-align: center;">NA</td>
+                <td width="20%" style="font-size: 10px; font-family: arial;padding: 2px 4px; text-align: center;" th:text="${lIDataMap.medicalQuestions.question12CChoice}"></td>
+            </tr>
+            <tr>
+                <td width="60%" style="font-size: 10px; font-family: arial;padding: 2px 4px; text-align: left;">History/currently having Osteoarthritis/gout on medication</td>
+                <td width="20%" style="font-size: 10px; font-family: arial;padding: 2px 4px; text-align: center;">NA</td>
+                <td width="20%" style="font-size: 10px; font-family: arial;padding: 2px 4px; text-align: center;" th:text="${lIDataMap.medicalQuestions.question12DChoice}"></td>
+            </tr>
+            <tr>
+                <td width="60%" style="font-size: 10px; font-family: arial;padding: 2px 4px; text-align: left;">Histoy of any fracture but recovered now</td>
+                <td width="20%" style="font-size: 10px; font-family: arial;padding: 2px 4px; text-align: center;">NA</td>
+                <td width="20%" style="font-size: 10px; font-family: arial;padding: 2px 4px; text-align: center;" th:text="${lIDataMap.medicalQuestions.question12EChoice}"></td>
+            </tr>
+            <tr>
+                <td width="60%" style="font-size: 10px; font-family: arial;padding: 2px 4px; text-align: left;">Any other details</td>
+                <td width="20%" style="font-size: 10px; font-family: arial;padding: 2px 4px; text-align: center;">NA</td>
+                <td width="20%" style="font-size: 10px; font-family: arial;padding: 2px 4px; text-align: center;" th:text="${lIDataMap.medicalQuestions.question12FChoice}"></td>
+            </tr>
+        </table>
+        <table width="100%" border="1" cellspacing="0" cellpadding="0" style="border-collapse: collapse;">
+            <tr>
+                <td width="60%" style="font-size: 10px; font-family: arial;padding: 2px 4px;"><strong>10. Are you having history of any hospitalization, treatment or investigation</strong></td>
+                <td width="20%" style="font-size: 10px; font-family: arial;padding: 2px 4px; text-align: center;">NA</td>
+                <td width="20%" style="font-size: 10px; font-family: arial;padding: 2px 4px; text-align: center;">
+                    <input type="checkbox" th:checked="${lIDataMap.medicalQuestions.question15Answer=='YES'}">Yes</input>
+                    <input type="checkbox" th:checked="${lIDataMap.medicalQuestions.question15Answer=='NO'}">No</input>
+                </td>
+            </tr>
+        </table>
+         <table width="100%" border="1" cellspacing="0" cellpadding="0" style="border-collapse: collapse;" th:if="${medicalQuestions.question15Answer=='YES' or lIDataMap.medicalQuestions.question15Answer=='YES'}">
+            <tr>
+                <td width="60%" style="font-size: 10px; font-family: arial;padding: 2px 4px; text-align: left;">Hospitalization for any fever and now normal</td>
+                <td width="20%" style="font-size: 10px; font-family: arial;padding: 2px 4px; text-align: center;">NA</td>
+                <td width="20%" style="font-size: 10px; font-family: arial;padding: 2px 4px; text-align: center;" th:text="${lIDataMap.medicalQuestions.question15AAnswer}"></td>
+            </tr>
+            <tr>
+                <td width="60%" style="font-size: 10px; font-family: arial;padding: 2px 4px; text-align: left;">Hospitalization of food poisoning and now normal</td>
+                <td width="20%" style="font-size: 10px; font-family: arial;padding: 2px 4px; text-align: center;">NA</td>
+                <td width="20%" style="font-size: 10px; font-family: arial;padding: 2px 4px; text-align: center;" th:text="${lIDataMap.medicalQuestions.question15BAnswer}"></td>
+            </tr>
+            <tr>
+                <td width="60%" style="font-size: 10px; font-family: arial;padding: 2px 4px; text-align: left;">Hospitalization after an accident and now alright</td>
+                <td width="20%" style="font-size: 10px; font-family: arial;padding: 2px 4px; text-align: center;">NA</td>
+                <td width="20%" style="font-size: 10px; font-family: arial;padding: 2px 4px; text-align: center;" th:text="${lIDataMap.medicalQuestions.question15CAnswer}"></td>
+            </tr>
+            <tr>
+                <td width="60%" style="font-size: 10px; font-family: arial;padding: 2px 4px; text-align: left;">Hospitalized for C-Section, stone removal, appendicectomy, Piles, Hernia</td>
+                <td width="20%" style="font-size: 10px; font-family: arial;padding: 2px 4px; text-align: center;">NA</td>
+                <td width="20%" style="font-size: 10px; font-family: arial;padding: 2px 4px; text-align: center;" th:text="${lIDataMap.medicalQuestions.question15DAnswer}"></td>
+            </tr>
+            <tr>
+                <td width="60%" style="font-size: 10px; font-family: arial;padding: 2px 4px; text-align: left;">Hospitalized for treatment of malaria/typhoid/dengue/gastroenteritis/dehydartion and now normal</td>
+                <td width="20%" style="font-size: 10px; font-family: arial;padding: 2px 4px; text-align: center;">NA</td>
+                <td width="20%" style="font-size: 10px; font-family: arial;padding: 2px 4px; text-align: center;" th:text="${lIDataMap.medicalQuestions.question15EAnswer}"></td>
+            </tr>
+            <tr>
+                <td width="60%" style="font-size: 10px; font-family: arial;padding: 2px 4px; text-align: left;">History of treatment for cold, cough, sinus and sore throat currently no complication</td>
+                <td width="20%" style="font-size: 10px; font-family: arial;padding: 2px 4px; text-align: center;">NA</td>
+                <td width="20%" style="font-size: 10px; font-family: arial;padding: 2px 4px; text-align: center;" th:text="${lIDataMap.medicalQuestions.question15FAnswer}"></td>
+            </tr>
+             <tr>
+                <td width="60%" style="font-size: 10px; font-family: arial;padding: 2px 4px; text-align: left;">Any other Details</td>
+                <td width="20%" style="font-size: 10px; font-family: arial;padding: 2px 4px; text-align: center;">NA</td>
+                <td width="20%" style="font-size: 10px; font-family: arial;padding: 2px 4px; text-align: center;" th:text="${lIDataMap.medicalQuestions.question15GAnswer}"></td>
+            </tr>
+        </table>
+         <table width="100%" border="1" cellspacing="0" cellpadding="0" style="border-collapse: collapse;">
+            <tr>
+                <td width="60%" style="font-size: 10px; font-family: arial;padding: 2px 4px;"><strong>11. Have you advised now or in last 5 yrs tests like X-Ray/CT scan/MRI/Ultrasonography/ECG/Blood test or any other investigatory or diagnostic tests,or any
+                    type of surgery.</strong></td>
+                <td width="20%" style="font-size: 10px; font-family: arial;padding: 2px 4px; text-align: center;">NA</td>
+                <td width="20%" style="font-size: 10px; font-family: arial;padding: 2px 4px; text-align: center;">
+                    <input type="checkbox" th:checked="${lIDataMap.medicalQuestions.question11Answer=='YES'}">Yes</input>
+                    <input type="checkbox" th:checked="${lIDataMap.medicalQuestions.question11Answer=='NO'}">No</input>
+                </td>
+            </tr>
+        </table>
+        <table width="100%" border="1" cellspacing="0" cellpadding="0" style="border-collapse: collapse;" th:if="${medicalQuestions.question11Answer=='YES' or lIDataMap.medicalQuestions.question11Answer=='YES'}">
+            <tr>
+                <td width="60%" style="font-size: 10px; font-family: arial;padding: 2px 4px; text-align: left;">History of surgery after accident now no problem</td>
+                <td width="20%" style="font-size: 10px; font-family: arial;padding: 2px 4px; text-align: center;">NA</td>
+                <td width="20%" style="font-size: 10px; font-family: arial;padding: 2px 4px; text-align: center;" th:text="${lIDataMap.medicalQuestions.question13AAnswer}"></td>
+            </tr>
+            <tr>
+                <td width="60%" style="font-size: 10px; font-family: arial;padding: 2px 4px; text-align: left;">History of appendix surgery</td>
+                <td width="20%" style="font-size: 10px; font-family: arial;padding: 2px 4px; text-align: center;">NA</td>
+                <td width="20%" style="font-size: 10px; font-family: arial;padding: 2px 4px; text-align: center;" th:text="${lIDataMap.medicalQuestions.question13BAnswer}"></td>
+            </tr>
+            <tr>
+                <td width="60%" style="font-size: 10px; font-family: arial;padding: 2px 4px; text-align: left;">History of surgery of piles or hemorrhoids</td>
+               <td width="20%" style="font-size: 10px; font-family: arial;padding: 2px 4px; text-align: center;">NA</td>
+                <td width="20%" style="font-size: 10px; font-family: arial;padding: 2px 4px; text-align: center;" th:text="${lIDataMap.medicalQuestions.question13CAnswer}"></td>
+            </tr>
+            <tr>
+            <td width="60%" style="font-size: 10px; font-family: arial;padding: 2px 4px; text-align: left;">History of surgery for gall stone/kidney stone/Hernia surgery</td>
+                <td width="20%" style="font-size: 10px; font-family: arial;padding: 2px 4px; text-align: center;">NA</td>
+                <td width="20%" style="font-size: 10px; font-family: arial;padding: 2px 4px; text-align: center;" th:text="${lIDataMap.medicalQuestions.question13DAnswer}"></td>
+            </tr>
+            <tr>
+                <td width="60%" style="font-size: 10px; font-family: arial;padding: 2px 4px; text-align: left;">Surgery for insertion/removal of rods/screws</td>
+                <td width="20%" style="font-size: 10px; font-family: arial;padding: 2px 4px; text-align: center;">NA</td>
+                <td width="20%" style="font-size: 10px; font-family: arial;padding: 2px 4px; text-align: center;" th:text="${lIDataMap.medicalQuestions.question13EAnswer}"></td>
+            </tr>
+            <tr>
+                <td width="60%" style="font-size: 10px; font-family: arial;padding: 2px 4px; text-align: left;">Sight related correction through glass or LASIK</td>
+                <td width="20%" style="font-size: 10px; font-family: arial;padding: 2px 4px; text-align: center;">NA</td>
+                <td width="20%" style="font-size: 10px; font-family: arial;padding: 2px 4px; text-align: center;" th:text="${lIDataMap.medicalQuestions.question13FAnswer}"></td>
+            </tr>
+            <tr>
+                <td width="60%" style="font-size: 10px; font-family: arial;padding: 2px 4px; text-align: left;">History of cataract surgery</td>
+                <td width="20%" style="font-size: 10px; font-family: arial;padding: 2px 4px; text-align: center;">NA</td>
+                <td width="25%" style="font-size: 10px; font-family: arial;padding: 2px 4px; text-align: center;" th:text="${lIDataMap.medicalQuestions.question13GAnswer}"></td>
+            </tr>
+            <tr>
+                <td width="60%" style="font-size: 10px; font-family: arial;padding: 2px 4px; text-align: left;">Surgery for DNS ( deviated nasal septum )</td>
+                <td width="20%" style="font-size: 10px; font-family: arial;padding: 2px 4px; text-align: center;">NA</td>
+                <td width="20%" style="font-size: 10px; font-family: arial;padding: 2px 4px; text-align: center;" th:text="${lIDataMap.medicalQuestions.question13HAnswer}"></td>
+            </tr>
+            <tr>
+                <td width="60%" style="font-size: 10px; font-family: arial;padding: 2px 4px; text-align: left;">History of MRI scan for back pain and now normal</td>
+                <td width="20%" style="font-size: 10px; font-family: arial;padding: 2px 4px; text-align: center;">NA</td>
+                <td width="20%" style="font-size: 10px; font-family: arial;padding: 2px 4px; text-align: center;" th:text="${lIDataMap.medicalQuestions.question13IAnswer}"></td>
+            </tr>
+            <tr>
+                <td width="60%" style="font-size: 10px; font-family: arial;padding: 2px 4px; text-align: left;">Test done during annual preventive health check up, reports were normal</td>
+                <td width="20%" style="font-size: 10px; font-family: arial;padding: 2px 4px; text-align: center;">NA</td>
+                <td width="20%" style="font-size: 10px; font-family: arial;padding: 2px 4px; text-align: center;" th:text="${lIDataMap.medicalQuestions.question13JAnswer}"></td>
+            </tr>
+            <tr>
+                <td width="60%" style="font-size: 10px; font-family: arial;padding: 2px 4px; text-align: left;">Blood investigations for fever/FLU/Viral fever/Malaria/Typhoid/Dengue, now no complication</td>
+                <td width="20%" style="font-size: 10px; font-family: arial;padding: 2px 4px; text-align: center;">NA</td>
+                <td width="20%" style="font-size: 10px; font-family: arial;padding: 2px 4px; text-align: center;" th:text="${lIDataMap.medicalQuestions.question13KAnswer}"></td>
+            </tr>
+            <tr>
+                <td width="60%" style="font-size: 10px; font-family: arial;padding: 2px 4px; text-align: left;">Blood test/USG during pregnancy and no abnormal findings</td>
+                <td width="20%" style="font-size: 10px; font-family: arial;padding: 2px 4px; text-align: center;">NA</td>
+                <td width="20%" style="font-size: 10px; font-family: arial;padding: 2px 4px; text-align: center;" th:text="${lIDataMap.medicalQuestions.question13LAnswer}"></td>
+            </tr>
+            <tr>
+                <td width="60%" style="font-size: 10px; font-family: arial;padding: 2px 4px; text-align: left;">History of blood test for blood donation</td>
+                <td width="20%" style="font-size: 10px; font-family: arial;padding: 2px 4px; text-align: center;">NA</td>
+                <td width="20%" style="font-size: 10px; font-family: arial;padding: 2px 4px; text-align: center;" th:text="${lIDataMap.medicalQuestions.question13MAnswer}"></td>
+            </tr>
+            <tr>
+                <td width="60%" style="font-size: 10px; font-family: arial;padding: 2px 4px; text-align: left;">Any other details</td>
+                <td width="20%" style="font-size: 10px; font-family: arial;padding: 2px 4px; text-align: center;">NA</td>
+                <td width="20%" style="font-size: 10px; font-family: arial;padding: 2px 4px; text-align: center;" th:text="${lIDataMap.medicalQuestions.question13NAnswer}"></td>
+            </tr>
+        </table>
+
+        <table width="100%" border="1" cellspacing="0" cellpadding="0" style="border-collapse: collapse;">
+            <tr>
+                <td width="60%" style="font-size: 10px; font-family: arial;padding: 2px 4px;"></strong>12. Have you had any genetic testing before?
+                </td>
+                <td width="20%" style="font-size: 10px; font-family: arial;padding: 2px 4px; text-align: center;">NA</td>
+                <td width="20%" style="font-size: 10px; font-family: arial;padding: 2px 4px; text-align: center;">
+                    <input type="checkbox" th:checked="${lIDataMap.medicalQuestions.Question16Answer=='YES'}">Yes</input>
+                    <input type="checkbox" th:checked="${lIDataMap.medicalQuestions.Question16Answer=='NO'}">No</input>
+                </td>
+            </tr>
+            <tr  th:if="${medicalQuestions.question13Answer=='YES' or lIDataMap.medicalQuestions.question13Answer=='YES'}">
+                <td width="60%" style="font-size: 10px; font-family: arial;padding: 2px 4px;">Give Details :</td>
+                <td width="20%" style="font-size: 10px; font-family: arial;padding: 2px 4px; text-align: center;">NA</td>
+                <td width="20%" style="font-size: 10px; font-family: arial;padding: 2px 4px; text-align: center;" th:text=${lIDataMap.medicalQuestions.Question16AChoice}></td>
+            </tr>
+        </table>
+    </span>
+    <table width="100%" border="1" cellspacing="0" cellpadding="0" style="border-collapse: collapse;">
+        <tr>
+            <td width="60%" style="font-size: 10px; font-family: arial;padding: 2px 4px;"><strong>Tobacco/Alcohol/Drugs Consumption: (In case you consume or have ever consumed)</strong>
+            </td>
+            <td width="20%" style="font-size: 10px; font-family: arial;padding: 2px 4px; text-align: center;">NA</td>
+            <td width="20%" style="font-size: 10px; font-family: arial;padding: 2px 4px; text-align: center;">
+                <input type="checkbox" th:checked="${lIDataMap.isTobaccoAlcoholDrugsConsumed=='YES'}">Yes</input>
+                <input type="checkbox" th:checked="${lIDataMap.isTobaccoAlcoholDrugsConsumed=='NO'}">No</input>
+            </td>
+        </tr>
+        <tr>
+            <td width="60%" style="font-size: 10px; font-family: arial;padding: 2px 4px;">Give Details : </td>
+            <td width="20%" style="font-size: 10px; font-family: arial;padding: 2px 4px; text-align: center;">NA</td>
+            <td width="20%" style="font-size: 10px; font-family: arial;padding: 2px 4px; text-align: center;" th:text=${lIDataMap.specifyConsDetails}></td>
+        </tr>
+    </table>
+    <table width="100%" border="1" cellspacing="0" cellpadding="0" style="border-collapse: collapse;" th:if="${isTobaccoAlcoholDrugsConsumed=='YES' or lIDataMap.isTobaccoAlcoholDrugsConsumed}">
+        <tr>
+            <td width="30%" style="font-weight: bold; padding: 2px 4px; font-size: 10px; font-family: arial;"></td>
+            <td width="30%" style="font-weight: bold; padding: 2px 4px; font-size: 10px; font-family: arial;">Proposer</td>
+            <td width="30%" style="font-weight: bold; padding: 2px 4px; font-size: 10px; font-family: arial;">Life to be Insured</td>
+        </tr>
+        <tr>
+            <td width="30%" style="font-weight: bold; padding: 2px 4px; font-size: 10px; font-family: arial;">Substance</td>
+            <td width="35%">
+                <table width="100%" border="1" cellspacing="0" cellpadding="0" style="border-collapse: collapse; border-bottom: none; border-top: none; border-left: none;">
+                    <tr>
+                        <td width="25%" style="font-weight: bold; padding: 2px 4px; font-size: 10px; font-family: arial;">Type</td>
+                        <td width="25%" style="font-weight: bold; padding: 2px 4px; font-size: 10px; font-family: arial;">Frequency</td>
+                        <td width="25%" style="font-weight: bold; padding: 2px 4px; font-size: 10px; font-family: arial;">Qty</td>
+                        <td width="25%" style="font-weight: bold; padding: 2px 4px; font-size: 10px; font-family: arial;">No.Of Years</td>
+                    </tr>
+                </table>
+            </td>
+            <td width="35%">
+                <table width="100%" border="1" cellspacing="0" cellpadding="0" style="border-collapse: collapse; border-bottom: none; border-top: none; border-left: none;">
+                    <tr>
+                        <td width="25%" style="font-weight: bold; padding: 2px 4px; font-size: 10px; font-family: arial;">Type</td>
+                        <td width="25%" style="font-weight: bold; padding: 2px 4px; font-size: 10px; font-family: arial;">Frequency</td>
+                        <td width="25%" style="font-weight: bold; padding: 2px 4px; font-size: 10px; font-family: arial;">Qty</td>
+                        <td width="25%" style="font-weight: bold; padding: 2px 4px; font-size: 10px; font-family: arial;">No.Of Years</td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+        <tr>
+            <td width="30%" style="font-weight: bold; padding: 2px 4px; font-size: 10px; font-family: arial;">Tobacco/Nicotine products (in the last 1 year (sticks/gms))Cigarettes/Beedis/Cigars/Gutkha/Flavored PanMasala etc.</td>
+            <td width="35%">
+                <table width="100%" cellpadding="0" cellspacing="0" border="1" style="border-color: #ccc;">
+                    <th:block th:each="tobaccoConsumptionDetails : ${tobaccoConsumptionDetailsList}" >
+                        <tr>
+                            <td width="25%" style="font-weight: bold; padding: 2px 4px; font-size: 10px; font-family: arial;">NA</td>
+                            <td width="25%" style="font-weight: bold; padding: 2px 4px; font-size: 10px; font-family: arial;">NA</td>
+                            <td width="25%" style="font-weight: bold; padding: 2px 4px; font-size: 10px; font-family: arial;">NA</td>
+                            <td width="25%" style="font-weight: bold; padding: 2px 4px; font-size: 10px; font-family: arial;">NA</td>
+                        </tr>
+                    </th:block>
+                </table>
+            </td>
+            <td width="35%">
+                <table width="100%" cellpadding="0" cellspacing="0" border="1" style="border-color: #ccc;">
+                    <th:block th:each="tobaccoConsumptionDetails : ${lIDataMap.tobaccoConsumptionDetailsList}" >
+                        <tr>
+                            <td width="25%" style="font-weight: bold; padding: 2px 4px; font-size: 10px; font-family: arial;" th:text="${tobaccoConsumptionDetails.type}"></td>
+                            <td width="25%" style="font-weight: bold; padding: 2px 4px; font-size: 10px; font-family: arial;" th:text="${tobaccoConsumptionDetails.frequency}"></td>
+                            <td width="25%" style="font-weight: bold; padding: 2px 4px; font-size: 10px; font-family: arial;" th:text="${tobaccoConsumptionDetails.quantity}"></td>
+                            <td width="25%" style="font-weight: bold; padding: 2px 4px; font-size: 10px; font-family: arial;" th:text="${tobaccoConsumptionDetails.numberOfYears}"></td>
+                        </tr>
+                    </th:block>
+                </table>
+            </td>
+            <td width="35%"></td>
+        </tr>
+        <tr>
+            <td width="30%" style="font-weight: bold; padding: 2px 4px; font-size: 10px; font-family: arial;">Alcohol (ML) - Beer/Wine/Hard Liquor</td>
+            <td width="35%">
+                <table width="100%" cellpadding="0" cellspacing="0" border="1" style="border-color: #ccc;">
+                    <th:block th:each="alcoholConsumptionDetails : ${alcoholConsumptionDetailsList}" >
+                        <tr>
+                            <td width="25%" style="font-weight: bold; padding: 2px 4px; font-size: 10px; font-family: arial;">NA</td>
+                            <td width="25%" style="font-weight: bold; padding: 2px 4px; font-size: 10px; font-family: arial;">NA</td>
+                            <td width="25%" style="font-weight: bold; padding: 2px 4px; font-size: 10px; font-family: arial;">NA</td>
+                            <td width="25%" style="font-weight: bold; padding: 2px 4px; font-size: 10px; font-family: arial;">NA</td>
+                        </tr>
+                    </th:block>
+                </table>
+            </td>
+            <td width="35%">
+                <table width="100%" cellpadding="0" cellspacing="0" border="1" style="border-color: #ccc;">
+                    <th:block th:each="alcoholConsumptionDetails : ${lIDataMap.alcoholConsumptionDetailsList}" >
+                        <tr>
+                            <td width="25%" style="font-weight: bold; padding: 2px 4px; font-size: 10px; font-family: arial;" th:text="${alcoholConsumptionDetails.type}"></td>
+                            <td width="25%" style="font-weight: bold; padding: 2px 4px; font-size: 10px; font-family: arial;" th:text="${alcoholConsumptionDetails.frequency}"></td>
+                            <td width="25%" style="font-weight: bold; padding: 2px 4px; font-size: 10px; font-family: arial;" th:text="${alcoholConsumptionDetails.quantity}"></td>
+                            <td width="25%" style="font-weight: bold; padding: 2px 4px; font-size: 10px; font-family: arial;" th:text="${alcoholConsumptionDetails.numberOfYears}"></td>
+                        </tr>
+                    </th:block>
+                </table>
+            </td>
+            <td width="35%"></td>
+        </tr>
+        <tr>
+            <td width="30%" style="font-weight: bold; padding: 2px 4px; font-size: 10px; font-family: arial;">Drugs other thanprescribed by Doctors -Cannabis, Marijuana,Ecstacy, Heroin, LSD,Amphetamines or otherillegal drugs</td>
+            <td width="35%">
+                <table width="100%" cellpadding="0" cellspacing="0" border="1" style="border-color: #ccc;">
+                    <th:block th:each="drugsConsumptionDetails : ${drugsConsumptionDetailsList}" >
+                        <tr>
+                            <td width="25%" style="font-weight: bold; padding: 2px 4px; font-size: 10px; font-family: arial;">NA</td>
+                            <td width="25%" style="font-weight: bold; padding: 2px 4px; font-size: 10px; font-family: arial;">NA</td>
+                            <td width="25%" style="font-weight: bold; padding: 2px 4px; font-size: 10px; font-family: arial;">NA</td>
+                            <td width="25%" style="font-weight: bold; padding: 2px 4px; font-size: 10px; font-family: arial;">NA</td>
+                        </tr>
+                    </th:block>
+                </table>
+            </td>
+            <td width="35%">
+                <table width="100%" cellpadding="0" cellspacing="0" border="1" style="border-color: #ccc;">
+                    <th:block th:each="drugsConsumptionDetails : ${lIDataMap.drugsConsumptionDetailsList}" >
+                        <tr>
+                            <td width="25%" style="font-weight: bold; padding: 2px 4px; font-size: 10px; font-family: arial;" th:text="${drugsConsumptionDetails.type}"></td>
+                            <td width="25%" style="font-weight: bold; padding: 2px 4px; font-size: 10px; font-family: arial;" th:text="${drugsConsumptionDetails.frequency}"></td>
+                            <td width="25%" style="font-weight: bold; padding: 2px 4px; font-size: 10px; font-family: arial;" th:text="${drugsConsumptionDetails.quantity}"></td>
+                            <td width="25%" style="font-weight: bold; padding: 2px 4px; font-size: 10px; font-family: arial;" th:text="${drugsConsumptionDetails.numberOfYears}"></td>
+                        </tr>
+                    </th:block>
+                </table>
+            </td>
+            <td width="35%"></td>
+        </tr>
+        </td>
+    </table>
+</td>

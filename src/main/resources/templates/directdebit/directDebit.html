@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>DIRECT DEBIT FOR RENEWALS</title>
+    <style type="text/css">
+        table,
+        td,
+        tr {
+            border-collapse: collapse;
+        }
+        
+        .page-break-after {
+            page-break-after: always;
+            page-break-inside: avoid;
+            clear: both;
+        }
+        
+        .page-break-before {
+            page-break-before: always;
+            page-break-inside: avoid;
+            clear: both;
+        }
+        
+        @media print {
+            * {
+                font-size: 6pt !important;
+            }
+            .printtext {
+                font-size: 11pt !important;
+            }
+        }
+    </style>
+</head>
+
+<body style="margin: 0 auto;padding: 0;">
+<div>
+    <table>
+        <tbody>
+        <tr>
+            <td style="width:100%"><img src='classpath:static/logo-IRP.png'
+                                        alt="Axis Max Life Insurance"
+                                        width="100%" height="100"></td>
+            <td>&nbsp;</td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+    <table border="0" align="center" cellpadding="0" cellspacing="0" style="border-collapse: collapse;width: 92%;margin-top: 26px">
+        <tbody>
+            <!-- Main Wrapper Start Here-->
+            <!--<tr>
+                <td align='left'><img src='classpath:static/logo.png' width='100'></td>
+                <td>&nbsp;</td>
+            </tr>-->
+            <tr>
+                <td height="32">
+                    &nbsp;
+                </td>
+            </tr>
+            <tr>
+                <td style="padding: 10px; font-size: 20px; font-family: arial;text-align: center;width: auto;color: #222;font-weight: 600;text-decoration: underline;padding-bottom: 4px">DIRECT DEBIT FOR RENEWALS – CONSENT FORM</td>
+            </tr>
+              <tr>
+                <td height="10">
+                    &nbsp;
+                </td>
+            </tr>
+            <tr>
+                <td height="20">
+                    &nbsp;
+                </td>
+            </tr>
+            <tr>
+                <td style="padding: 10px; font-size: 18px; font-family: arial;font-weight: 600;">Direct debit was chosen as the renewal payment option by the customer with the below details.</td>
+            </tr>
+            <tr>
+                <td style="padding: 10px; font-size: 14px; font-family: arial; width: 100%;">
+                    <table border="1" width="100%" cellspacing="0" style="border-collapse: collapse;">
+                        <tbody>
+                            <tr>
+                                <td style="padding: 10px;width:30%; font-size: 14px; font-family: arial;font-weight: bold;background:#efefef;">
+                                    Account number
+                                </td>
+                                <td style="padding: 10px; font-size: 14px; font-family: arial;text-align: left;"th:text=${AccountNumber}>
+                                    
+                                </td>
+                            </tr>
+                            <tr>
+                                <td style="padding: 10px;width:30%; font-size: 14px; font-family: arial;font-weight: bold;background:#efefef;">
+                                    Channel
+                                </td>
+                                <td style="padding: 10px; font-size: 14px; font-family: arial;text-align: left;"th:text=${Channel}>
+                                    
+                                </td>
+                            </tr>
+                            <tr>
+                                <td style="padding: 10px;width:30%; font-size: 14px; font-family: arial;font-weight: bold;background:#efefef;">
+                                    Policy No./ Application No.
+                                </td>
+                                <td style="padding: 10px; font-size: 14px; font-family: arial;text-align: left;"th:text=${PolicyNumber}>
+                                    
+                                </td>
+                            </tr>
+                            <tr>
+                                <td style="padding: 10px;width:30%; font-size: 14px; font-family: arial;font-weight: bold;background:#efefef;">
+                                    Consent Date
+                                </td>
+                                <td style="padding: 10px; font-size: 14px; font-family: arial;text-align: left;"th:text=${ConsentDate}>
+                                    
+                                </td>
+                            </tr>
+                            <tr>
+                                <td style="padding: 10px;width:30%; font-size: 14px; font-family: arial;font-weight: bold;background:#efefef;">
+                                    IFSC Code
+                                </td>
+                                <td style="padding: 10px; font-size: 14px; font-family: arial;text-align: left;"th:text=${IfscCode}>
+                                    
+                                </td>
+                            </tr>
+                            <tr>
+                                <td style="padding: 10px;width:30%; font-size: 14px; font-family: arial;font-weight: bold;background:#efefef;">
+                                    MICR Code
+                                </td>
+                                <td style="padding: 10px; font-size: 14px; font-family: arial;text-align: left;"th:text=${MicrCode}>
+                                    
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </td>
+            </tr>
+            <tr>
+                <td height="50">
+                    &nbsp;
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <div th:if="${isNotYBLProposal}">
+                        <img src="classpath:static/footer_updated.png"/>
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+
+</html>

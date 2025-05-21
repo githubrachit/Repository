@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title></title>
+	</head>
+	<body>
+
+	<div>
+		<table>
+			<tbody>
+			<tr>
+				<td style="width:100%"><img src='classpath:static/logo-IRP.png'
+											alt="Axis Max Life Insurance"
+											width="100%" height="100"></td>
+				<td>&nbsp;</td>
+			</tr>
+			</tbody>
+		</table>
+	</div>
+
+				<!--<table width="100%" align="center" cellpadding="0" cellspacing="0">-->
+			<tbody>
+			<!--<tr>
+                <td width="30%" align="left">
+                    <img src="classpath:static/Logo_Pathway_MaxIS.png" alt="Axis Max Life Insurance" width="100"/>
+                </td>
+                <td align="right" width="60%" style="font-size: 5; font-family: arial; font-weight: bold;color=Blue">
+                    Online PAN &amp; DOB validation Document
+                </td>
+            </tr>-->
+            <tr>
+                <td colspan="2" height="10"></td>
+            </tr>
+            <tr>
+                <td colspan="2" bgcolor="#ccc" height="1"></td>
+            </tr>
+            <tr>
+                <td colspan="2" height="10"></td>
+            </tr>
+        </tbody>
+    </table>
+    <table>
+        <tbody>
+            <tr>
+                <td style="vertical-align:top;">
+                    <table width="100%">
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <font face="arial" size="2">
+                                        <b>Document Generation Date/Time: </b>
+                                        <i th:text="${timeStamp}"></i>
+                                    </font>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <font face="arial" size="2">
+                                        <b>App Name: </b>
+                                        <i th:text="${appName}"></i>
+                                    </font>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <font face="arial" size="2">
+                                        <b>Response From: </b>
+                                        <i th:text="${responseFrom}"></i>
+                                    </font>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </td>
+            </tr>
+            <tr>
+                <td height="10"></td>
+            </tr>
+        </tbody>
+    </table>
+    <table width="100%" border="1" cellspacing="0" bordercolor="#ccc" cellpadding="7">
+        <thead>
+            <tr style="color: #fff;background-color:#000">
+                <th th:if="${isPayor != false}" align="left">
+                    <font size="2" face="arial">
+                        <i>Details of Proposer</i>
+                    </font>
+                </th>
+                <th th:if="${isPayor == false} AND ${isInsured == false}" align="left">
+                    <font size="2" face="arial">
+                        <i>Details of Proposer</i>
+                    </font>
+                </th>
+                <th th:if="${isInsured == true}" align="left">
+                    <font size="2" face="arial">
+                        <i>Details of Insured</i>
+                    </font>
+                </th>
+                <th align="center">
+                    <font size="2" face="arial">
+                        <i>Status</i>
+                    </font>
+                </th>
+                <th align="left">
+                    <font size="2" face="arial">
+                        <i>Details as per CB</i>
+                    </font>
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td bgcolor="#f0f0f0" align="left" width="20%">
+                    <font size="2" face="arial">
+                        <b>Proposal Number:</b>
+                    </font>
+                </td>
+                <td align="center">
+                    <font size="2" face="arial">
+                        <i>- &nbsp;  </i>
+                    </font>
+                </td>
+                <td align="left">
+                    <span style="display: inline-block;text-transform:uppercase">
+                        <font size="2" face="arial">
+                            <i th:text="${proposalNumber}"></i>
+                        </font>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td bgcolor="#f0f0f0" align="left" width="20%">
+                    <font size="2" face="arial">
+                        <b>Name:</b>
+                    </font>
+                </td>
+                <td align="center">
+                    <font size="2" face="arial">
+                        <i>- &nbsp;</i>
+                    </font>
+                </td>
+                <td align="left">
+                    <span style="display: inline-block;text-transform:uppercase">
+                        <font size="2" face="arial">
+                            <i th:text="${panName}"></i>
+                        </font>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td bgcolor="#f0f0f0" align="left" width="20%">
+                    <font size="2" face="arial">
+                        <b>DOB:</b>
+                    </font>
+                </td>
+                <td align="center">
+                    <font size="2" face="arial">
+                        <i th:text="${dobFlag}"></i>
+                    </font>
+                </td>
+                <td align="left">
+                    <font size="2" face="arial">
+                        <i th:text="${dob}"></i>
+                    </font>
+                </td>
+            </tr>
+            <tr>
+                <td bgcolor="#f0f0f0" align="left" width="20%">
+                    <font size="2" face="arial">
+                        <b>PAN:</b>
+                    </font>
+                </td>
+                <td align="center">
+                    <font size="2" face="arial">
+                        <i th:text="${panValidated}"></i>
+                    </font>
+                </td>
+                <td align="left">
+                    <font size="2" face="arial" style="text-transform:uppercase">
+                        <i th:text="${panNumber}"></i>
+                    </font>
+                </td>
+            </tr>
+            <tr>
+                <td bgcolor="#f0f0f0" align="left" width="20%">
+                    <font size="2" face="arial">
+                        <b>PAN Aadhaar linking status:</b>
+                    </font>
+                </td>
+                <td align="center">
+                    <font size="2" face="arial">
+                        <i th:text="${panAadhaarLinkStatus}"></i>
+                    </font>
+                </td>
+                <td align="left">
+                    <font size="2" face="arial" style="text-transform:uppercase">
+                        <i>- &nbsp;  </i>
+                    </font>
+                </td>
+            </tr>
+            <tr th:if="${creditScore} != ''">
+                <td bgcolor="#f0f0f0" align="left" width="20%">
+                    <font size="2" face="arial">
+                        <b>Credit Score:</b>
+                    </font>
+                </td>
+                <td align="center">
+                    <font size="2" face="arial">
+                        <i>Validated &nbsp;    </i>
+                    </font>
+                </td>
+                <td align="left">
+                    <font size="2" face="arial" style="text-transform:uppercase">
+                        <i th:text="${creditScore}"></i>
+                    </font>
+                </td>
+            </tr>
+            <tr th:if="${incomeRange} != ''">
+                <td bgcolor="#f0f0f0" align="left" width="20%">
+                    <font size="2" face="arial">
+                        <b>Estimated Income:</b>
+                    </font>
+                </td>
+                <td align="center">
+                    <font size="2" face="arial">
+                        <i>Validated &nbsp;    </i>
+                    </font>
+                </td>
+                <td align="left">
+                    <font size="2" face="arial" style="text-transform:uppercase">
+                        <i th:text="${incomeRange}"></i>
+                    </font>
+                </td>
+            </tr>
+            <tr th:if="${trlScore} != '' and ${responseFrom}=='CIBIL'">
+                <td bgcolor="#f0f0f0" align="left" width="20%">
+                    <font size="2" face="arial">
+                        <b>TRL Score:</b>
+                    </font>
+                </td>
+                <td align="center">
+                    <font size="2" face="arial">
+                        <i>Validated &nbsp;    </i>
+                    </font>
+                </td>
+                <td align="left">
+                    <font size="2" face="arial" style="text-transform:uppercase">
+                        <i th:text="${trlScore}"></i>
+                    </font>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table width="100%">
+        <tbody>
+            <tr>
+                <td height="180"></td>
+            </tr>
+        </tbody>
+    </table>
+    <table width="100%">
+        <tbody>
+            <tr>
+                <td style="font-size: 8px; font-family: arial;">
+                    This is a system generated document basis credit bureau validation and suffices for PAN copy and DOB/ID proof requirement.
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table width="100%">
+        <tbody>
+            <tr>
+                <td height="20"></td>
+            </tr>
+        </tbody>
+    </table>
+    <table width="100%">
+        <tbody>
+            <tr>
+                <td>
+                <!--	<div th:if="${isNotYBLProposal}">
+                        <img src="classpath:static/footer_updated.png" alt="Max Life Insurance" width="150"/>
+                    </div>-->
+					</td>
+				</tr>
+			</tbody>
+		</table>
+	</body>
+</html>   

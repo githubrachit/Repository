@@ -1,0 +1,66 @@
+<td>
+	<table border="1" cellspacing="0" cellpadding="0" width="100%" style="border-collapse: collapse;">
+		<tbody>
+		<tr>
+			<td colspan="6" style=" background-color: #FFFFFF;border-color: #000000;border-style:solid;border-width:1px; color: #000000; font-family: arial; padding: 2px 2px; font-weight: bold;">C. INFORMATION OF LIFE INSURED</td>
+		</tr>
+		</tbody>
+	</table>
+	<table border="1" cellspacing="0" cellpadding="0" width="100%" style="border-collapse: collapse;">
+		<tbody>
+		<tr>
+			<td width="80%" style="padding: 2px 4px; border-color: #ccc;border-style:solid;border-width:1px; font-size: 10px; font-family: arial;"><span style="font-weight: bold;">1.</span> Do you have any life and Critical Illness insurance plans/riders that is active or has ever been declined/postponed or accepted with modified terms?
+				If answer "Yes" please provide details below</td>
+			<td width="10%" style="padding: 2px 4px; font-size: 10px; font-family: arial;text-align: center">
+				<table width="100%" cellpadding="5" cellspacing="0" border="0" style="border-collapse: collapse; vertical-align: top;">
+					<tbody>
+					<tr>
+						<td width="50%" style="font-weight: bold; text-align: center; font-size: 10px;">
+							<input type="checkbox" th:checked="${everLIIssuedPendingLapsed=='YES' || everLIRejectedPostponed=='YES'}">Yes</td>
+						</td>
+						<td width="50%" style="font-weight: bold; text-align: center; font-size: 10px;">
+							<input type="checkbox" th:checked="${everLIIssuedPendingLapsed!='YES' && everLIRejectedPostponed!='YES'}">No</td>
+						</td>
+					</tr>
+					</tbody>
+				</table>
+			</td>
+		</tr>
+		<tr>
+			<td colspan="2">
+				<table border="1" cellspacing="0" cellpadding="0" width="100%">
+					<tr>
+						<td width="20%" style="font-weight: bold; font-family: arial; font-size: 11px; padding-left: 5px;">Policy Number</td>
+						<td width="20%" style="font-weight: bold; font-family: arial; font-size: 11px; padding-left: 5px;">Name of Insurance Company</td>
+						<td width="20%" style="font-weight: bold; font-family: arial; font-size: 11px; padding-left: 5px;">Type of Policy</td>
+						<td width="20%" style="font-weight: bold; font-family: arial; font-size: 11px; padding-left: 5px;">Sum Assured Availed</td>
+						<td width="20%" style="font-weight: bold; font-family: arial; font-size: 11px; padding-left: 5px;">Status of Policy</td>
+					</tr>
+					<tr th:each="lapsedPolicy: ${everLIIssuedPendingLapsedDetailsList}">
+						<td width="20%" style="padding: 2px 4px; font-size: 10px;" th:text="${lapsedPolicy.policyNumber}"></td>
+						<td width="20%" style="padding: 2px 4px; font-size: 10px;" th:text="${lapsedPolicy.nameOfInsuranceCompany}"></td>
+						<td width="20%" style="padding: 2px 4px; font-size: 10px;" th:text="${lapsedPolicy.typeOfPolicy}"></td>
+						<td width="20%" style="padding: 2px 4px; font-size: 10px;" th:text="${lapsedPolicy.totalSumAssured}"></td>
+						<td width="20%" style="padding: 2px 4px; font-size: 10px;" th:text="${lapsedPolicy.policyStatus}"></td>
+					</tr>
+					<tr th:each="rejectedPolicy: ${everLIRejectedPostponedDetailsList}">
+						<td width="20%" style="padding: 2px 4px; font-size: 10px;" th:text="${rejectedPolicy.policyNumber}"></td>
+						<td width="20%" style="padding: 2px 4px; font-size: 10px;" th:text="${rejectedPolicy.nameOfInsuranceCompany}"></td>
+						<td width="20%" style="padding: 2px 4px; font-size: 10px;" th:text="${rejectedPolicy.typeOfPolicy}"></td>
+						<td width="20%" style="padding: 2px 4px; font-size: 10px;" th:text="${rejectedPolicy.totalSumAssured}"></td>
+						<td width="20%" style="padding: 2px 4px; font-size: 10px;" th:text="${rejectedPolicy.policyStatus}"></td>
+					</tr>
+					<tr>
+						<td width="20%" height="20px;" style="padding: 2px 4px; font-size: 10px;"></td>
+						<td width="20%" height="20px;" style="padding: 2px 4px; font-size: 10px;"></td>
+						<td width="20%" height="20px;" style="padding: 2px 4px; font-size: 10px;"></td>
+						<td width="20%" height="20px;" style="padding: 2px 4px; font-size: 10px;"></td>
+						<td width="20%" height="20px;" style="padding: 2px 4px; font-size: 10px;"></td>
+					</tr>
+				</table>
+			</td>
+		</tr>
+		</tbody>
+	</table>
+  	<!-- Information of Life to be InsuredEnd here-->
+</td>

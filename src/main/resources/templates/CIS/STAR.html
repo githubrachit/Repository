@@ -1,0 +1,429 @@
+<style>
+    body {
+         display: flex;
+         justify-content: center;
+         align-items: center;
+         min-height: 100vh;
+         margin: 0;
+         font-family: sans-serif;
+     }
+     .container {
+         display: flex;
+         flex-direction: column;
+         align-items: center;
+         margin: 5pt 40pt 40pt 40pt;
+         padding: 20px;
+         border : none;
+         max-width: 210mm; /* A4 width */
+         box-sizing: border-box; /* Ensure padding and border are included in the width */
+         font-size:14px;
+
+     }
+     .title {
+         font-size: 14px;
+         font-weight: bold;
+         margin-bottom: 10px;
+         text-align: center;
+     }
+     .info-table {
+         max-width: 100%; /* Ensure the table does not exceed its container */
+         width: 100%;
+         border-collapse: collapse;
+         table-layout: fixed; /* Ensure columns fit within the table */
+         margin: auto; /* Center the table */
+     }
+     .info-table th,
+     .info-table td {
+         padding: 10px;
+         border: 1px solid #000;
+         text-align: left;
+         word-wrap: break-word; /* Ensure text wraps within cells */
+         overflow-wrap: break-word; /* Additional support for wrapping */
+         vertical-align: top;
+
+     }
+     .info-table th {
+         background-color: #f2f2f2;
+         font-weight: bold;
+     }
+     /* Apply thicker border to the second column */
+     .info-table th:nth-child(3),
+     .info-table td:nth-child(3) {
+      width: 55%; /* Adjust the percentage to your needs */
+    }
+    .info-table th:nth-child(1),
+     .info-table td:nth-child(1) {
+      width: 8%; /* Adjust the percentage to your needs */
+    }
+    .info-table th:nth-child(4),
+    .info-table td:nth-child(4) {
+        width: 15%;
+    }
+     .disclaimer {
+         font-size: 12px;
+         margin-top: 10px;
+         text-align: center;
+     }
+
+     /* Style for Roman numerals with parentheses */
+     .roman { list-style-type: none;
+             counter-reset: roman-counter;
+            }
+     .roman li { counter-increment: roman-counter;
+               }
+     .roman li::before { content: "(" counter(roman-counter, lower-roman) ") ";
+                       }
+      /* Style for Roman numerals with parentheses bold */
+    .romanbold { list-style-type: none;
+             counter-reset: roman-counter;
+            }
+     .romanbold li { counter-increment: roman-counter;
+               }
+     .romanbold li::before { content: "(" counter(roman-counter, lower-roman) ") ";
+                          font-weight: bold;
+                       }
+</style>
+<body>
+<div class="container">
+    <h1 class="title"><u>CUSTOMER INFORMATION SHEET / KNOW YOUR POLICY</u></h1>
+    <h3 style="text-align: center;">Customer Information Sheet reference no. <span style="text-align: center;min-width: 100px;border-bottom-color: #000;border-bottom-style: solid;border-bottom-width: 1px;display: inline-block;padding: 0 18px;font-weight: bold;text-transform:uppercase;"></span></h3>
+    <p>This document provides key information about your Policy. You are also advised to go through your Policy document.</p>
+    <table class="info-table">
+        <tbody>
+        <tr>
+            <td><div align="center"><strong>Sl. no.</strong></div></td>
+            <td><div align="center"><strong>Title</strong></div></td>
+            <td>
+                <div align="center"><span style="font-weight: bold;">Description in Simple Words</span></div><br>
+                <div align="center"><span style="font-weight: normal;"><i>(Please refer to applicable Policy Clause Number in next column)</i></span></div>
+            </td>
+            <td><div align="center"><strong>Policy Clause Number</strong></div></td>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>Name of the Insurance Product and Unique Identification Number (UIN) </td>
+            <td><div align="center"><span style="font-weight: bold;" th:text="${productName}"></span></div><br>
+                <div align="center">UIN: <span th:text="${UIN}"></span></div>
+            </td>
+            <td>Policy Preamble</td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>Policy Number</td>
+            <td><div align="center"><span th:text="${policyNumber}"></span></div></td>
+            <td>Policy Schedule</td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td>Type of Insurance Policy </td>
+            <td><div align="center">A Unit Linked Non-Participating Individual Life Insurance Plan</div><br></td>
+            <td>Policy Preamble</td>
+        </tr>
+        <tr>
+            <td>4</td>
+            <td>Basic Policy details</td>
+            <td>
+                <span style="font-weight: bold;"><span>&#8226;</span> Instalment Premium: </span>
+                <span th:text="${instalmentPremium}"></span><br>
+                <span style="font-weight: bold;"><span>&#8226;</span> Mode of Premium payment: </span>
+                <span th:text="${premiumPaymentMode}"></span><br>
+                <span style="font-weight: bold;"><span>&#8226;</span> Sum Assured on Inception:</span>
+                <span th:text="${sumAssuredOnDeath}"></span><br>
+                <span style="font-weight: bold;"><span>&#8226;</span> Sum Assured on Maturity: </span>
+                <span>Not Applicable</span><br>
+                <span style="font-weight: bold;"><span>&#8226;</span> Policy Term: </span>
+                <span th:text="${policyTerm}"></span><br>
+                <span style="font-weight: bold;"><span>&#8226;</span> Premium Payment Term: </span>
+                <span th:text="${premiumPaymentTerm}"></span><br>
+            </td>
+            <td>Policy Schedule</td>
+        </tr>
+        <tr>
+            <td rowspan="12">5</td>
+            <td rowspan="12">Policy Coverage/benefits payable
+            </td>
+            <td>
+                <span>&#8226;</span> <strong>Benefits payable on Maturity:</strong><br><br>
+                <span>&#10146;</span> If the Life Insured is alive (except for 3D Life Secure Variant) and the Policy is in force or if the Policy is a Paid Up Policy, then, We will pay the Fund Value applicable on the Maturity Date to You, unless You have opted for the Settlement Option. For more details, please refer Policy document.<br><br>
+            </td>
+            <td>Clause 1.3 of Part C</td>
+        </tr>
+        <tr>
+            <td>
+                <strong><span>&#8226;</span> Benefits payable on Death:</strong><br><br>
+                <span>&#10146;</span> In case of death of Life Insured during the Policy Term, provided the Policy is in force, the Death Benefit payable by Us will as per the variant chosen by You. For more details, please refer Policy document.
+            </td>
+            <td>Clause 1.1 of Part C</td>
+        </tr>
+        <tr>
+            <td>
+                <strong><span>&#8226;</span> Survival Benefits excluding that payable on maturity: </strong><br><br>
+                <span>&#10146;</span> There is no Survival Benefit.
+            </td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>
+                <strong><span>&#8226;</span> Surrender Benefits: </strong><br><br>
+                <span>&#10146;</span> At any time during the Policy Term, You have the right to Surrender the Policy by giving Us a written notice. For more details, please refer Policy Document.<br><br>
+            </td>
+            <td>Clause 1 of Part D</td>
+        </tr>
+        <tr>
+            <td>
+                <span>&#8226;</span><b> Options to policyholders for availing benefits, if any, covered under the Policy:</b> Not Applicable<br><br>
+            </td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>
+                <span>&#8226;</span><b> Other benefits/options payable, specific to the Policy, if any:</b><br><br>
+            </td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>
+                <span>&#10146;</span> <b>Guaranteed Loyalty Additions:</b>  Additional Units will be added to the Fund which shall be credited only if the Policy is in force and all due Premiums have been received by Us. For more details, please refer Policy Document. </td>
+            <td>Clause 1.5 Part C</td>
+        </tr>
+        <tr>
+            <td>
+                <span>&#10146;</span> <b> Guaranteed Wealth Booster:</b> Additional Units will be added to the Fund Value which shall be made available only if the Policy is in force and all due Premiums have been received by Us. For more details, please refer Policy Document.
+            </td>
+            <td>Clause 1.6 of Part C</td>
+        </tr>
+        <tr>
+            <td>
+                <span>&#10146;</span> <b>Cover Continuance Booster: </b> Additional Units will be added to the Fund Value which shall be made available only if the Policy is in force and all due Premiums have been received by Us, provided 1st Annualised Premium has been received by Us. For more details, please refer Policy Document.
+            </td>
+            <td>Clause 1.7 of Part C</td>
+        </tr>
+        <tr>
+            <td>
+                <span>&#10146;</span> <b>Critical Illness and/ or Dismemberment Benefit:</b> In case of 3D Life Secure Variant and the Policy is in force, if the Life Insured suffers from the Critical Illness and/or Dismemberment, We will fund three (3) times of all future outstanding Premiums as and when due under the Policy. For more details, please refer Policy Document.
+            </td>
+            <td>Clause 1.2 of Part C</td>
+        </tr>
+        <tr>
+            <td>
+                <span>&#10146;</span> <b> Return of Charges</b><br>
+                If the Policy is-in force and all the due Premiums have been received, we will return the following charges as per Policy terms and conditions: -
+                <ol type="i">
+                    <li>Return of Mortality Charge on Death Benefit and return of Morbidity Charge on Critical Illness or/ Dismemberment benefit.</li>
+                    <li>Return of Premium allocation charges.</li>
+                    <li>Return of Policy Administration </li>
+                </ol>
+                For more details, please refer Policy Document.
+            </td>
+            <td>Clause 1.4 of Part C</td>
+        </tr>
+        <tr>
+            <td> <span>&#8226;</span> <b>Lock-in period for Linked Insurance products:</b>
+                5 years from Date of Commencement of Risk.
+            </td>
+            <td></td>
+        </tr>
+        <tr>
+            <td rowspan="5">6</td>
+            <td rowspan="5">Options available <i>(in case of Linked Insurance Products)</i></td>
+            <td>
+                <span>&#8226;</span><b> Partial Withdrawal:</b>You are entitled for the Partial Withdrawal under the Policy subject to terms & conditions under the Policy. For more details, please refer Policy Document.
+            </td>
+            <td>Clause 6 of Part D</td>
+        </tr>
+        <tr>
+            <td><span>&#8226;</span><b> Smart Withdrawals:</b> You are entitled for the Smart Withdrawal under the Policy subject to terms & conditions under the Policy. For more details, please refer Policy Document.
+            </td>
+            <td>Clause 7 of Part D</td>
+        </tr>
+        <tr>
+            <td><span>&#8226;</span><b> Switches: </b> You may Switch Units from one Fund to another Fund by giving Us a written request. The minimum amount to be Switched is at least Rs. 500 (Rupees Five Hundred). For more details, please refer Policy Document.
+            </td>
+            <td>Clause 5 of Part D</td>
+        </tr>
+        <tr>
+            <td>
+                <span>&#8226;</span><b> Premium Redirection:</b> You may redirect the Premium between available Funds by giving Us written notice before Premium due date. For more details, please refer Policy Document.
+            </td>
+            <td>Clause 4 of Part D</td>
+        </tr>
+        <tr>
+            <td>
+                <span>&#8226;</span><b> Settlement Option:</b> You may opt to exercise the Settlement Option by giving a written request to Us. Upon receipt of the Your request for the Settlement Option. For more details, please refer Policy Document.
+            </td>
+            <td>Clause 11 of Part D</td>
+        </tr>
+        <tr>
+            <td>7</td>
+            <td>Riders opted, if any</td>
+            <td>
+                    <div th:if="${supRiderOpted}">
+                    <span> &#10146;</span> <span style="font-weight: bold;">Axis Max Life Smart Ultra Protect Rider (UIN:<span th:text="${suprRiderUin}"></span>) :</span> This rider provides following variants:
+                    <ol type="1">
+                        <li th:if="${termBoosterOpted}">
+                            <span style="font-weight: bold;">Term Booster with Accelerated Terminal Illness</span><br>
+                        </li>
+                        <li th:if="${accidentalDeathBenefitOpted}">
+                            <span style="font-weight: bold;">Accidental Death Benefit</span><br>
+                        </li>
+                        <li th:if="${accidentalDisabilityOpted}">
+                            <span style="font-weight: bold;">Accidental Total and Permanent Disability</span> <br>
+                        </li>
+                        <li th:if="${payorBenefitOpted}">
+                            <span style="font-weight: bold;">Payor Benefit</span> <br><br>
+                        </li>
+                    </ol>
+                </div>
+                <div th:unless="${riderOpted}">
+                    <span>&#10146;</span> No riders are opted
+                </div>
+            </td>
+            <td>Policy Schedule</td>
+        </tr>
+        <tr>
+            <td rowspan="3">8</td>
+            <td rowspan="3">Exclusions (events where insurance coverage is not payable), if any.</td>
+            <td>
+                <strong>Brief list of the applicable exclusions, if any:</strong><br><br>
+            </td>
+            <td></td>
+        </tr>
+        <tr>
+            <td><span>&#8226;</span><strong> Suicide Exclusion </strong><br><br>
+                <span>&#10146;</span> If the life insured commits suicide within 12 months from the Date of Commencement of Risk or from the Date of Revival of this Policy, as applicable, the claimant shall be entitled to the Fund Value, as available on the date of intimation of death of the Life Insured and the Policy will terminate. <br></td>
+            <td>Clause 6 of Part F </td>
+        </tr>
+        <tr>
+            <td><span>&#8226;</span><strong> Critical Illness and Dismemberment Benefit</strong><br><br>
+                In case of Critical Illness and/or Dismemberment Benefit, the Policyholder will not be entitled to any benefits directly or indirectly by any of the following:<br>
+            <ul>
+                <li>Suicide or attempted suicide or self-inflicted injury, whether the Life Insured is medically sane or insane;</li>
+                <li>Committing an assault, a criminal offence, an illegal activity or any breach of law with criminal intent;</li>
+                <li>Any congenital condition;</li>
+                <li>Alcohol or solvent abuse or taking of drugs, narcotics or psychotropic substances unless taken in accordance with the lawful directions and prescription of a registered Medical Practitioner;</li>
+                <li>War, invasion, act of foreign enemy, hostilities (whether war be declared or not), armed or unarmed truce, civil war, mutiny, rebellion, revolution, insurrection, military or usurped power, riot or civil commotion, strikes;</li>
+                <li>Participation by the Life Insured in any flying activity other than as a bona fide passenger (whether paying or not), Pilots and Cabin Crew in a licensed scheduled aircraft;</li>
+                <li>Engaging in or taking part in professional sport(s) or any hazardous pursuits, including but not limited to, diving or riding or any kind of race; underwater activities involving the use of breathing apparatus or not; martial arts; hunting; mountaineering; parachuting; bungee-jumping;</li>
+                <li>Nuclear contamination; the radioactive, explosive or hazardous nature of nuclear fuel materials or property contaminated by nuclear fuel materials or accident arising from such nature.</li>
+            </ul>
+                For exclusions under the Riders, please refer to the Rider’s customer information sheet document.
+            </td>
+            <td>Clause 1.2 of Part C </td>
+        </tr>
+
+        <tr>
+            <td>9</td>
+            <td>Waiting /lien Period, if any</td>
+            <td>
+                <strong>Number of Days: </strong>90 (Ninety) days in case of Critical Illness and Dismemberment benefit.</strong>
+            </td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>10</td>
+            <td>Grace period</td>
+            <td><strong>Number of Days :</strong>
+                <span th:text="${numberOfDays}"></span><br>
+            </td>
+            <td>Point no.27 of Part B</td>
+        </tr>
+        <tr>
+            <td>11</td>
+            <td>Free Look Period</td>
+            <td><strong>Number of days:</strong> 30 days beginning from the date of receipt of the Policy.</td>
+            <td>Clause 10 of Part D</td>
+        </tr>
+        <tr>
+            <td rowspan="4">12</td>
+            <td rowspan="4">Lapse, paid-up and revival of the Policy</td>
+            <td>
+                <span>&#8226;</span> <strong>Lapse Policy:</strong> Not Applicable.<br><br>
+            </td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>
+                <span>&#8226;</span> <strong>Paid Up Period: </strong> Not Applicable.<br><br>
+            </td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>
+                <span>&#8226;</span> <strong> Policy Renewal: </strong> The Policy will be renewed upon payment of due Premium on or before due date.<br><br>
+            </td>
+            <td>Policy Schedule</td>
+        </tr>
+        <tr>
+            <td>
+                <span>&#8226;</span> <strong>Revival Period:</strong> The period of three consecutive complete years from the date of first unpaid Premium. <br><br>
+            </td>
+            <td>Point No. 60 of Part B</td>
+        </tr>
+        <tr>
+            <td>13</td>
+            <td>Policy 	Loan</td>
+            <td>
+                <span>&#8226;</span> <strong>Brief description</strong> Not Applicable under the Policy. <br><br>
+            </td>
+            <td>Clause 3 of Part D</td>
+        </tr>
+        <tr>
+            <td>14</td>
+            <td>Claims/Claims Procedure </td>
+            <td>
+                <span>&#8226;</span> Turn Around Time (TAT) for claims settlement: and brief procedure. For details, refer to <a href="https://www.maxlifeinsurance.com/customer-servicing/service-tats?fromCampaign=true" target="_blank">"Service TATs in Insurance - Axis Max Life Insurance" </a><br><br>
+                <span>&#8226;</span> Helpline number: 1860-120-5577 (Call charges apply) or 0124- 4219090.<br><br>
+                <span>&#8226;</span> Contact Details of the Insurer: Axis Max Life Insurance Ltd., Plot No. 90C, Udyog Vihar, Sector 18, Gurugram-122015, Haryana, India. Website - <a href="https://www.maxlifeinsurance.com" target="_blank">www.axismaxlifeinsurance.com</a><br><br>
+                <span>&#8226;</span> Link for downloading claim form and list of documents required including bank account details: <a href="https://www.maxlifeinsurance.com/downloads" target="_blank">https://www.maxlifeinsurance.com/downloads</a> <br><br>
+            </td>
+            <td>Clause 3 of Part F</td>
+        </tr>
+        <tr>
+            <td>15</td>
+            <td>Policy Servicing</td>
+            <td>
+                <span>&#8226;</span> Turn Around Time (TAT)  For details, refer to <a href="https://www.maxlifeinsurance.com/customer-servicing/service-tats?fromCampaign=true" target="_blank"> Service TATs in Insurance - Axis Max Life Insurance </a><br><br>
+                <span>&#8226;</span> Helpline number - 1860-120-5577 (Call charges apply) or 0124- 4219090.<br><br>
+                <span>&#8226;</span> Contact Details of the Insurer: Axis Max Life Insurance Ltd., Plot No. 90C, Udyog Vihar, Sector 18, Gurugram-122015, Haryana, India. Website -<a href="https://www.maxlifeinsurance.com" target="_blank">www.axismaxlifeinsurance.com</a><br><br>
+                <span>&#8226;</span> Link for downloading applicable forms and list of documents required including bank account details: <a href="https://www.maxlifeinsurance.com/downloads" target="_blank">https://www.maxlifeinsurance.com/downloads</a> <br><br>
+            </td>
+            <td></td>
+        </tr>
+        <tr>
+            <td rowspan="2">16</td>
+            <td rowspan="2">Grievances / Complaints</td>
+            <td>
+                <span> &#10146;</span> Contact Details of   Grievance Redressal Officer of the insurer: Grievance Redressal Officer, Axis Max Life Insurance Ltd., Plot No. 90C, Udyog Vihar, Sector 18, Gurugram-122015, Haryana, India.<br><br>
+                <span> &#10146;</span> Helpline number: 1860-120-5577 (Call charges apply) or 0124- 4219090<br><br>
+                <span> &#10146;</span> Link for registering the grievance with the insurer’s portal: <a href="https://www.maxlifeinsurance.com/customer-service/grievance-redressal " target="_blank">https://www.maxlifeinsurance.com/customer-service/grievance-redressal </a> <br><br>
+                <span> &#10146;</span> Contact details of Ombudsman: Find your nearest Ombudsman office at <a href="http://www.cioins.co.in/ombudsman" target="_blank"> http://www.cioins.co.in/ombudsman </a><br><br>
+            </td>
+            <td>Part G</td>
+        </tr>
+        </tbody>
+    </table>
+    <div class="declaration">
+        <p><u>Declaration by the Policyholder</u></p>
+        <p>I have read the above and confirm having noted the details.</p>
+
+        <div class="signature-section">
+            <div class="left">
+                <p>Place:<span style="text-align: center;min-width: 100px;border-bottom-color: #000;border-bottom-style: solid;border-bottom-width: 1px;display: inline-block;padding: 0 18px;font-weight: bold;text-transform:uppercase;"><span th:text="${place}"></span></span></p>
+                <p>Date:<span style="text-align: center;min-width: 100px;border-bottom-color: #000;border-bottom-style: solid;border-bottom-width: 1px;display: inline-block;padding: 0 18px;font-weight: bold;text-transform:uppercase;"><span th:text="${date}"></span></span></p>
+            </div>
+            <div class="signature" style="text-align: right; margin-top: -45px;">
+                <p>(Signature of the Policyholder)</p>
+            </div>
+        </div><br>
+        <div class="note">
+            <p><b>Note:</b></p>
+            <ol type="i">
+                <li>For the product related documents including the Customer Information sheet please refer to the <a href="https://www.maxlifeinsurance.com/investment-plans/smart-term-with-additional-returns" target="_blank">https://www.maxlifeinsurance.com/investment-plans/smart-term-with-additional-returns</a></li>
+                <li>In case of any conflict, the terms and conditions mentioned in the Policy document shall prevail. </li>
+                <li>*Sum Assured and Premium is subject to underwriting, for actual Sum Assured, Premium details & updated UIN number (in case of modification). Please refer to the Policy document.</li>
+                <li>In the event of any conflict or discrepancy between any translated version and the English language version of this CIS, the English language version of this CIS shall prevail. </li>
+            </ol>
+        </div>
+    </div>
+</div>
+</body>

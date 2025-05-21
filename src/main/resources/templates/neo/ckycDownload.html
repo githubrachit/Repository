@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Ckyc Document</title>
+    <style type="text/css">
+        table, td, tr {
+        border-collapse: collapse;
+    }
+        table, tr{
+            padding-bottom: 8px;
+
+        }
+    @media print {
+        * {
+            font-size: 6pt !important;
+        }
+
+        .printtext {
+            font-size: 11pt !important;
+        }
+    }
+    </style>
+</head>
+<body style="margin: 0 auto;padding: 7px;">
+<td>
+
+    <table width="100%" border="0" cellspacing="0" cellpadding="0" style="border-collapse: collapse;">
+        <tbody>
+        <tr>
+            <th width="100%" colspan="3" style="background-color: #003770; color: #fff;font-size: 10px; font-family: arial; padding: 2px 4px 5px" align="center">CENTRAL KYC REGISTRY | Know Your Customer(KYC) Form Details</th>
+        </tr>
+        </tbody>
+    </table>
+    <table width="100%" border="0" cellspacing="0" cellpadding="0" style="border-collapse: collapse;">
+        <tbody>
+        <tr>
+            <td>            <table width="100%" border="0" cellspacing="0" cellpadding="0" style="border-collapse: collapse;">
+                <tbody>
+                <tr>
+                    <td width="30%" style="font-weight: bold; padding: 2px 4px 5px; font-size: 10px; font-family: arial;">
+                        CKYC Number:
+                    </td>
+                    <td width="70%" style="font-size: 10px; font-family: arial;padding: 2px 4px;;"
+                        th:text=${ckycNumber}></td>
+
+                </tr>
+                <tr>
+                    <td width="30%" style="font-weight: bold; padding: 2px 4px; font-size: 10px; font-family: arial;">
+                        Account Type:
+                    </td>
+                    <td width="70%" style="font-size: 10px; font-family: arial;padding: 2px 4px;"
+                        th:text=${accountType}></td>
+                </tr>
+                </tbody>
+            </table>
+            </td>
+            <td align='left' width="40%"><img src="classpath:static/logo_ax_max.png" width='120'/></td>
+
+        </tr>
+
+        </tbody>
+    </table>
+
+    <table width="100%" border="0" cellspacing="0" cellpadding="0" style="border-collapse: collapse;">
+        <tbody>
+        <tr>
+            <th width="100%" colspan="3" style="background-color: #003770; color: #fff;font-size: 10px; font-family: arial; padding: 2px 4px 5px" align="left">Personal Details
+            </th>
+        </tr>
+        <tr>
+            <td width="30%" style="font-weight: bold; padding: 2px 4px; font-size: 10px; font-family: arial;">Applicant Name</td>
+            <td width="70%" colspan="1" style="font-size: 10px;padding: 2px 4px; font-family: arial;" th:text="${ckycFullName}">
+            </td>
+        </tr>
+        <tr>
+            <td width="30%" style="font-weight: bold; padding: 2px 4px; font-size: 10px; font-family: arial;">Father's Name</td>
+            <td width="70%" style="font-size: 10px; font-family: arial;padding: 2px 4px;;" th:text="${fatherFullName}"></td>
+        </tr>
+        <tr>
+            <td width="30%" style="font-weight: bold; padding: 2px 4px; font-size: 10px; font-family: arial;">Mother's Name</td>
+            <td width="70%" style="font-size: 10px; font-family: arial;padding: 2px 4px;" th:text="${motherFullName}"></td>
+        </tr>
+        <tr>
+            <td width="30%" style="font-weight: bold; padding: 2px 4px; font-size: 10px; font-family: arial;">Maiden's Name</td>
+            <td width="70%" colspan="1" style="font-size: 10px;padding: 2px 4px; font-family: arial;" th:text="${ckycMaidenFullName}"></td>
+        </tr>
+        <tr>
+            <td width="30%" style="font-weight: bold; padding: 2px 4px; font-size: 10px; font-family: arial;">Date Of Birth*</td>
+            <td width="70%" style="font-size: 10px; font-family: arial;padding: 2px 4px;;" th:text="${ckycDOB}"></td>
+        </tr>
+        <tr>
+            <td width="30%" style="font-weight: bold; padding: 2px 4px; font-size: 10px; font-family: arial;">Gender</td>
+            <td width="70%" style="font-size: 10px; font-family: arial;padding: 2px 4px;;" th:text="${ckycGender}"></td>
+        </tr>
+       <!-- <tr>
+            <td width="30%" style="font-weight: bold; padding: 2px 4px; font-size: 10px; font-family: arial;">Marital Status</td>
+            <td width="70%" style="font-size: 10px; font-family: arial;padding: 2px 4px;;" th:text="${maritialStatus}"></td>
+        </tr>
+        <tr>
+            <td width="30%" style="font-weight: bold; padding: 2px 4px; font-size: 10px; font-family: arial;">Citizenship</td>
+            <td width="70%" style="font-size: 10px; font-family: arial;padding: 2px 4px;;" >Indian</td>
+        </tr>
+        <tr>
+            <td width="30%" style="font-weight: bold; padding: 2px 4px; font-size: 10px; font-family: arial;">Resident Status</td>
+            <td width="70%" style="font-size: 10px; font-family: arial;padding: 2px 4px;;" > Residential</td>
+        </tr>
+        <tr>
+            <td width="30%" style="font-weight: bold; padding: 2px 4px; font-size: 10px; font-family: arial;">Occupation Type</td>
+            <td width="70%" style="font-size: 10px; font-family: arial;padding: 2px 4px 5px;" > Others</td>
+        </tr>-->
+        </tbody>
+    </table>
+    <table width="100%" border="0" cellspacing="0" cellpadding="0" style="border-collapse: collapse;">
+    <tbody>
+    <tr>
+            <th width="100%" colspan="3" style="background-color: #003770; color: #fff;font-size: 10px; font-family: arial; padding: 2px 4px 5px" align="left">Proof Of Identity
+            </th>
+        </tr>
+        <tr>
+            <td width="30%" style="font-weight: bold; padding: 2px 4px; font-size: 10px; font-family: arial;">PAN</td>
+            <td width="70%" style="font-size: 10px; font-family: arial;padding: 2px 4px 5px;" th:text="${pan}"></td>
+        </tr>
+        </tbody>
+    </table>
+    <table width="100%" border="0" cellspacing="0" cellpadding="0" style="border-collapse: collapse;">
+        <tbody>
+        <tr>
+            <th width="100%" colspan="3" style="background-color: #003770; color: #fff;font-size: 10px; font-family: arial; padding: 2px 4px 5px" align="left">Contact Details
+            </th>
+        </tr>
+        <tr>
+            <td width="30%" style="font-weight: bold; padding: 2px 4px; font-size: 10px; font-family: arial;">Tel (off)</td>
+            <td width="70%" style="font-size: 10px; font-family: arial;padding: 2px 4px;;" th:text="${ckycOffTelNumber}"></td>
+        </tr>
+       <!-- <tr>
+            <td width="30%" style="font-weight: bold; padding: 2px 4px; font-size: 10px; font-family: arial;">Fax</td>
+            <td width="70%" style="font-size: 10px; font-family: arial;padding: 2px 4px;;" >  &nbsp;</td>
+        </tr>-->
+        <tr>
+            <td width="30%" style="font-weight: bold; padding: 2px 4px; font-size: 10px; font-family: arial;">Mobile</td>
+            <td width="70%" style="font-size: 10px; font-family: arial;padding: 2px 4px;;" th:text="${ckycMobileNumber}"></td>
+        </tr>
+        <tr>
+            <td width="30%" style="font-weight: bold; padding: 2px 4px; font-size: 10px; font-family: arial;">Email</td>
+            <td width="70%" style="font-size: 10px; font-family: arial;padding: 2px 4px;;" th:text="${ckycEmailAdd}"></td>
+        </tr>
+        <tr>
+            <td width="30%" style="font-weight: bold; padding: 2px 4px; font-size: 10px; font-family: arial;">Residence</td>
+            <td width="70%" style="font-size: 10px; font-family: arial;padding: 2px 4px;;" th:text="${ckycResTelNumber}"></td>
+        </tr>
+        <tr>
+            <th width="100%" colspan="3" style="background-color: #003770; color: #fff;font-size: 10px; font-family: arial; padding: 2px 4px" align="left">Other Details</th>
+        </tr>
+        <tr>
+            <td width="30%" style="font-weight: bold; padding: 2px 4px; font-size: 10px; font-family: arial;">Remarks</td>
+            <td width="70%" style="font-size: 10px; font-family: arial;padding: 2px 4px;;" th:text="${ckycRemarks}"></td>
+        </tr>
+        <tr>
+            <th width="100%" colspan="3" style="background-color: #003770; color: #fff;font-size: 10px; font-family: arial; padding: 2px 4px" align="left">Attestation</th>
+        </tr>
+        <tr>
+            <td width="30%" style="font-weight: bold; padding: 2px 4px; font-size: 10px; font-family: arial;">Kyc Verification Name</td>
+            <td width="70%" style="font-size: 10px; font-family: arial;padding: 2px 4px;;" th:text="${ckycKYCVerificationName}"></td>
+        </tr>
+        <tr>
+            <td width="30%" style="font-weight: bold; padding: 2px 4px; font-size: 10px; font-family: arial;">Kyc Verification Branch</td>
+            <td width="70%" style="font-size: 10px; font-family: arial;padding: 2px 4px 5px ;" th:text="${ckycKYCVerificationBranch}"></td>
+        </tr>
+        <tr>
+            <td width="30%" style="font-weight: bold; padding: 2px 4px; font-size: 10px; font-family: arial;">Kyc Verification EMP Code</td>
+            <td width="70%" style="font-size: 10px; font-family: arial;padding: 2px 4px;;" th:text="${ckycKYCVerificationEmpcode}"></td>
+        </tr>
+        <tr>
+            <td width="30%" style="font-weight: bold; padding: 2px 4px; font-size: 10px; font-family: arial;">Kyc Verification Designation</td>
+            <td width="70%" style="font-size: 10px; font-family: arial;padding: 2px 4px 5px ;" th:text="${ckycKYCVerificationDesg}"></td>
+        </tr>
+        <tr>
+            <td width="30%" style="font-weight: bold; padding: 2px 4px; font-size: 10px; font-family: arial;">Date Of Declaration</td>
+            <td width="70%" style="font-size: 10px; font-family: arial;padding: 2px 4px;;" th:text="${ckycDateofDeclaration}"></td>
+        </tr>
+        <tr>
+            <td width="30%" style="font-weight: bold; padding: 2px 4px; font-size: 10px; font-family: arial;">Kyc Verification Date</td>
+            <td width="70%" style="font-size: 10px; font-family: arial;padding: 2px 4px 5px ;" th:text="${ckycKYCVerificationDate}"></td>
+        </tr>
+        <tr>
+            <td width="30%" style="font-weight: bold; padding: 2px 4px; font-size: 10px; font-family: arial;">Document Submitted</td>
+            <td width="70%" style="font-size: 10px; font-family: arial;padding: 2px 4px;;" th:text="${ckycTypeofDocSubmitted}"></td>
+        </tr>
+        <tr>
+            <td width="30%" style="font-weight: bold; padding: 2px 4px; font-size: 10px; font-family: arial;">Place Of Declaration</td>
+            <td width="70%" style="font-size: 10px; font-family: arial;padding: 2px 4px 5px ;" th:text="${ckycPlaceofDeclaration}"></td>
+        </tr>
+        <tr>
+            <th width="100%" colspan="3" style="background-color: #003770; color: #fff;font-size: 10px; font-family: arial; padding: 2px 4px" align="left">Proof Of Address</th>
+        </tr>
+        <tr><td> &nbsp;</td></tr>
+        <tr>
+            <th width="100%" colspan="3" style="background-color: #003770; color: #fff;font-size: 10px; font-family: arial; padding: 2px 4px" align="left">Permanent Address</th>
+        </tr>
+      <!--  <tr>
+            <td width="30%" style="font-weight: bold; padding: 2px 4px; font-size: 10px; font-family: arial;">Address Type</td>
+            <td width="70%" style="font-size: 10px; font-family: arial;padding: 2px 4px;;" >  NA </td>
+        </tr>-->
+        <tr>
+            <td width="30%" style="font-weight: bold; padding: 2px 4px; font-size: 10px; font-family: arial;">Line 1</td>
+            <td width="70%" style="font-size: 10px; font-family: arial;padding: 2px 4px 5px ;" th:text="${ckycPerAdd1}"></td>
+        </tr> <tr>
+            <td width="30%" style="font-weight: bold; padding: 2px 4px; font-size: 10px; font-family: arial;">Line 2</td>
+            <td width="70%" style="font-size: 10px; font-family: arial;padding: 2px 4px;;" th:text="${ckycPerAdd2}"></td>
+        </tr>
+        <tr>
+            <td width="30%" style="font-weight: bold; padding: 2px 4px; font-size: 10px; font-family: arial;">Line 3</td>
+            <td width="70%" style="font-size: 10px; font-family: arial;padding: 2px 4px 5px ;" th:text="${ckycPerAdd3}"></td>
+        </tr>
+        <tr>
+            <td width="30%" style="font-weight: bold; padding: 2px 4px; font-size: 10px; font-family: arial;">City/Town/Village</td>
+            <td width="70%" style="font-size: 10px; font-family: arial;padding: 2px 4px;;" th:text="${ckycPerAddCity}"></td>
+        </tr>
+        <tr>
+            <td width="30%" style="font-weight: bold; padding: 2px 4px; font-size: 10px; font-family: arial;">Pin Code</td>
+            <td width="70%" style="font-size: 10px; font-family: arial;padding: 2px 4px 5px ;" th:text="${ckycPerAddPin}"></td>
+        </tr>
+        <tr>
+            <td width="30%" style="font-weight: bold; padding: 2px 4px; font-size: 10px; font-family: arial;">District</td>
+            <td width="70%" style="font-size: 10px; font-family: arial;padding: 2px 4px;;" th:text="${ckycPerAddDistrict}"></td>
+        </tr>
+        <tr>
+            <td width="30%" style="font-weight: bold; padding: 2px 4px; font-size: 10px; font-family: arial;">State/UT</td>
+            <td width="70%" style="font-size: 10px; font-family: arial;padding: 2px 4px;;" th:text="${ckycPerAddState}"></td>
+        </tr>
+        <!--<tr>
+            <td width="30%" style="font-weight: bold; padding: 2px 4px; font-size: 10px; font-family: arial;">ISO-3166 Country Code of Residence</td>
+            <td width="70%" style="font-size: 10px; font-family: arial;padding: 2px 4px 5px ;" > NA</td>
+        </tr>-->
+        <tr>
+            <td width="30%" style="font-weight: bold; padding: 2px 4px; font-size: 10px; font-family: arial;">Proof Of Address(POA)</td>
+            <td width="70%" style="font-size: 10px; font-family: arial;padding: 2px 4px;;" th:text="${ckycPerAddPOA}"></td>
+        </tr>
+        <!--<tr>
+            <td width="30%" style="font-weight: bold; padding: 2px 4px; font-size: 10px; font-family: arial;">POA Others</td>
+            <td width="70%" style="font-size: 10px; font-family: arial;padding: 2px 4px 5px ;"> NA</td>
+        </tr>-->
+
+        <tr>
+            <th width="100%" colspan="3" style="background-color: #003770; color: #fff;font-size: 10px; font-family: arial; padding: 2px 4px" align="left">Correspondence Address</th>
+        </tr>
+        <tr>
+            <td width="30%" style="font-weight: bold; padding: 2px 4px; font-size: 10px; font-family: arial;">Line 1</td>
+            <td width="70%" style="font-size: 10px; font-family: arial;padding: 2px 4px 5px ;" th:text="${ckycCorAdd1}"></td>
+        </tr> <tr>
+            <td width="30%" style="font-weight: bold; padding: 2px 4px; font-size: 10px; font-family: arial;">Line 2</td>
+            <td width="70%" style="font-size: 10px; font-family: arial;padding: 2px 4px;;" th:text="${ckycCorAdd2}"></td>
+        </tr>
+        <tr>
+            <td width="30%" style="font-weight: bold; padding: 2px 4px; font-size: 10px; font-family: arial;">Line 3</td>
+            <td width="70%" style="font-size: 10px; font-family: arial;padding: 2px 4px 5px ;" th:text="${ckycCorAdd3}"></td>
+        </tr>
+        <tr>
+            <td width="30%" style="font-weight: bold; padding: 2px 4px; font-size: 10px; font-family: arial;">City/Town/Village</td>
+            <td width="70%" style="font-size: 10px; font-family: arial;padding: 2px 4px;;" th:text="${ckycCorAddCity}"></td>
+        </tr>
+        <tr>
+            <td width="30%" style="font-weight: bold; padding: 2px 4px; font-size: 10px; font-family: arial;">Pin Code</td>
+            <td width="70%" style="font-size: 10px; font-family: arial;padding: 2px 4px 5px ;" th:text="${ckycCorAddPin}"></td>
+        </tr>
+        <tr>
+            <td width="30%" style="font-weight: bold; padding: 2px 4px; font-size: 10px; font-family: arial;">District</td>
+            <td width="70%" style="font-size: 10px; font-family: arial;padding: 2px 4px;;" th:text="${ckycCorAddDistrict}"></td>
+        </tr>
+        <tr>
+            <td width="30%" style="font-weight: bold; padding: 2px 4px; font-size: 10px; font-family: arial;">State/UT</td>
+            <td width="70%" style="font-size: 10px; font-family: arial;padding: 2px 4px;;" th:text="${ckycCorAddState}"></td>
+        </tr>
+    <!--    <tr>
+            <td width="30%" style="font-weight: bold; padding: 2px 4px; font-size: 10px; font-family: arial;">ISO-3166 Country Code of Residence</td>
+            <td width="70%" style="font-size: 10px; font-family: arial;padding: 2px 4px 5px ;" > NA</td>
+        </tr>-->
+
+       <!-- <tr>
+            <td width="30%" style="font-weight: bold; padding: 2px 4px; font-size: 10px; font-family: arial;">Address Line3</td>
+            <td width="70%" style="font-size: 10px; font-family: arial;padding: 2px 4px;;" th:text="${landmark}"></td>
+        </tr>
+        <tr>
+            <td width="30%" style="font-weight: bold; padding: 2px 4px; font-size: 10px; font-family: arial;">City</td>
+            <td width="70%" style="font-size: 10px; font-family: arial;padding: 2px 4px;;" th:text="${city}"></td>
+        </tr>
+        <tr>
+            <td width="30%" style="font-weight: bold; padding: 2px 4px; font-size: 10px; font-family: arial;">State</td>
+            <td width="70%" style="font-size: 10px; font-family: arial;padding: 2px 4px;;" th:text="${state}"></td>
+        </tr>
+        <tr>
+            <td width="30%" style="font-weight: bold; padding: 2px 4px; font-size: 10px; font-family: arial;">PIN</td>
+            <td width="70%" style="font-size: 10px; font-family: arial;padding: 2px 4px;;" th:text="${pinCode}"></td>
+        </tr>
+        <tr>
+            <td width="30%" style="font-weight: bold; padding: 2px 4px; font-size: 10px; font-family: arial;">Country</td>
+            <td width="70%" style="font-size: 10px; font-family: arial;padding: 2px 4px; text-transform: uppercase;" th:text="${country}"></td>
+        </tr>
+
+        <tr>
+            <th width="100%" colspan="3" style="background-color: #003770; color: #fff;font-size: 10px; font-family: arial; padding: 2px 4px" align="left">6. Address in the Jurisdiction details where Applicant is Resident Outside India for Tax Purposes</th>
+        </tr>
+        <tr>
+            <td width="30%" style="font-weight: bold; padding: 2px 4px; font-size: 10px; font-family: arial;">Overseas Address</td>
+            <td width="70%" style="font-size: 10px; font-family: arial;padding: 2px 4px;;" th:text="${overseasAddress}"></td>
+        </tr>
+
+        <tr>
+            <th width="100%" colspan="3" style="background-color: #003770; color: #fff;font-size: 10px; font-family: arial; padding: 2px 4px" align="left">7. Contact Details</th>
+        </tr>
+        <tr>
+            <td width="30%" style="font-weight: bold; padding: 2px 4px; font-size: 10px; font-family: arial;">Mobile Number</td>
+            <td width="70%" style="font-size: 10px; font-family: arial;padding: 2px 4px;;" th:text="${mobileNumber}"></td>
+        </tr>
+        <tr>
+            <td width="30%" style="font-weight: bold; padding: 2px 4px; font-size: 10px; font-family: arial;">Email -ID</td>
+            <td width="70%" style="font-size: 10px; font-family: arial;padding: 2px 4px;;" th:text="${email}"></td>
+        </tr>
+
+        <tr>
+            <th width="100%" colspan="3" style="background-color: #003770; color: #fff;font-size: 10px; font-family: arial; padding: 2px 4px" align="left">8. APPLICATION DECLARATION</th>
+        </tr>
+        <tr>
+            <td colspan="2" style="padding: 2px 4px;border-top-color: #ccc;border-top-style:solid;border-top-width:1px; font-size: 10px; font-family: arial;">
+                <br/>
+                <ul style="list-style-type: square; line-height: 13px; font-size: 10px; text-align: justify-all">
+                    <li>I hereby declare that the details furnished above are true and correct to the best of my knowledge and belief and I undertake to inform you of any change
+                        therein immediately. In case of the above Information is found to be false or untrue or misleading or misrepresenting. I am aware that I am be held liable
+                        for it.</li>
+                    <li>I hereby consent to receiving information from Canral KYC Registry through SMS/Email on the above registered number/email address</li>
+                </ul>
+          </td>
+        </tr>
+        <tr>
+            <th width="100%" colspan="3" style="background-color: #003770; color: #fff;font-size: 10px; font-family: arial; padding: 2px 4px" align="left">Name/Date/Place</th>
+        </tr>
+        <tr>
+            <td width="30%" style="font-weight: bold; padding: 2px 4px; font-size: 10px; font-family: arial;">Name of the applicant</td>
+            <td width="70%" style="font-size: 10px; font-family: arial;padding: 2px 4px;;" th:text="${nameOfApplicant}"></td>
+        </tr>
+        <tr>
+            <td width="30%" style="font-weight: bold; padding: 2px 4px; font-size: 10px; font-family: arial;">Place</td>
+            <td width="70%" style="font-size: 10px; font-family: arial;padding: 2px 4px;;" th:text="${place}"></td>
+        </tr>
+        <tr>
+            <td width="30%" style="font-weight: bold; padding: 2px 4px; font-size: 10px; font-family: arial;">Date</td>
+            <td width="70%" style="font-size: 10px; font-family: arial;padding: 2px 4px;;" th:text="${currentDate}"></td>
+        </tr>
+-->
+        </tbody>
+    </table>
+</td>
+</body>
+</html>

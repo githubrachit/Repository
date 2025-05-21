@@ -1,0 +1,700 @@
+<style xmlns:th="http://www.w3.org/1999/html">
+    body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        margin: 0;
+        font-family: sans-serif;
+    }
+
+    .container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 5pt 40pt 40pt 40pt;
+        padding: 20px;
+        border: none;
+        max-width: 210mm;
+        /* A4 width */
+        box-sizing: border-box;
+        /* Ensure padding and border are included in the width */
+        font-size: 14px;
+
+    }
+
+    .title {
+        font-size: 14px;
+        font-weight: bold;
+        margin-bottom: 10px;
+        text-align: center;
+    }
+
+    .info-table {
+        max-width: 100%;
+        /* Ensure the table does not exceed its container */
+        width: 100%;
+        border-collapse: collapse;
+        table-layout: fixed;
+        /* Ensure columns fit within the table */
+        margin: auto;
+        /* Center the table */
+    }
+
+    .info-table th,
+    .info-table td {
+        padding: 10px;
+        border: 1px solid #000;
+        text-align: left;
+        word-wrap: break-word;
+        /* Ensure text wraps within cells */
+        overflow-wrap: break-word;
+        /* Additional support for wrapping */
+        vertical-align: top;
+
+    }
+
+    .info-table th {
+        background-color: #f2f2f2;
+        font-weight: bold;
+    }
+
+    /* Apply thicker border to the second column */
+    .info-table th:nth-child(3),
+    .info-table td:nth-child(3) {
+        width: 55%;
+        text-align: justify;
+    }
+
+    .info-table th:nth-child(1),
+    .info-table td:nth-child(1) {
+        width: 8%;
+        text-align: justify;
+    }
+
+    .info-table th:nth-child(4),
+    .info-table td:nth-child(4) {
+        width: 15%;
+    }
+</style>
+
+<body>
+<div class="container">
+    <h1 class="title"><u>CUSTOMER INFORMATION SHEET / KNOW YOUR POLICY</u></h1>
+    <p>This document provides key information about your policy. You are also advised to go through your policy
+        document.</p>
+    <table class="info-table">
+        <tbody>
+        <tr>
+            <td><strong>SI. no.</strong></td>
+            <td><strong>Title</strong></td>
+            <td>
+                <span style="font-weight: bold;">Description in Simple Words</span><br>
+                <span style="font-weight: normal;"><i>(Please refer to applicable Policy Clause Number in next
+                                column)</i></span>
+            </td>
+            <td><strong>Policy Clause Number</strong></td>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>Name of the Insurance Product and Unique Identification Number (UIN)</td>
+            <td style="text-align: center;">
+                <span style="font-weight: bold;" th:text="${productName}"></span><br><br>
+                <span th:text="'UIN: ' + ${UIN}"></span>
+            </td>
+            <td>Policy Preamble</td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>Policy Number</td>
+            <td style="text-align: center;"><span th:text="${policyNumber}"></span></td>
+            <td>Policy Schedule</td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td>Type of Insurance Policy</td>
+            <td style="text-align: center;"><strong>A Non-linked Non-Participating Individual General Annuity Savings Plan</strong></td>
+            <td>Policy Preamble</td>
+        </tr>
+        <tr>
+            <td>4</td>
+            <td>Basic Policy details</td>
+            <td>
+                <span style="font-weight: bold;"><span>&#8226;</span> Installment Premium: </span><span th:text="${instalmentPremium}"></span><br>
+                <span style="font-weight: bold;"><span>&#8226;</span> Mode of Premium Payment: </span><span th:text="${premiumPaymentMode}"></span><br>
+                <span style="font-weight: bold;"><span>&#8226;</span> Sum Assured on Death: </span><span th:text="${sumAssuredOnDeath}"></span><br>
+                <span style="font-weight: bold;"><span>&#8226;</span> Sum Assured on Maturity: </span>Not Applicable<br>
+                <span style="font-weight: bold;"><span>&#8226;</span> Policy Term: </span>
+                <span th:if="${#strings.equalsIgnoreCase(annuityType, IA_LIFE_THEREAFTER)}">Till death of the Annuitant or Guaranteed Period chosen at inception of the Policy, whichever is later.</span>
+                <span th:if="${!(#strings.equalsIgnoreCase(annuityType, IA_LIFE_THEREAFTER)) and (annuityOption == 'Single Life')}">Till the death of the Annuitant</span>
+                <span th:if="${!(#strings.equalsIgnoreCase(annuityType, IA_LIFE_THEREAFTER)) and (annuityOption == 'Joint Life')}">Till the death of last surviving Annuitant</span>
+                <br>
+                <span style="font-weight: bold;"><span>&#8226;</span> Premium Payment Term: </span><span th:text="${premiumPaymentTerm}"></span><br>
+            </td>
+            <td>Policy Schedule</td>
+        </tr>
+        <tr>
+            <td rowspan="7">5</td>
+            <td rowspan="7">Policy Coverage/benefits payable</td>
+            <td>
+                <span>&#8226;</span> <strong>Benefits payable on Death:</strong><br>
+                <th:block th:switch="${#strings.toLowerCase(annuityType)}">
+                    <th:block th:case="${#strings.toLowerCase(IMMEDIATE_ANNUITY)}">
+                        <!-- Immediate Annuity, 'SL/JL with no Death Benefit' -->
+                        <th:block th:if="(${(annuityOption == 'Single Life' or annuityOption == 'Joint Life')} and ${#strings.equalsIgnoreCase('no', returnOfPremium)})">
+                            <p>In the event of the Annuitant's death after the Date of Commencement of Risk no Death Benefit shall be payable under the Policy.</p>
+                        </th:block>
+                        <!-- Immediate Annuity, 'Single Life with Death Benefit' -->
+                        <th:block th:if="${annuityOption} == 'Single Life' and ${#strings.equalsIgnoreCase('yes', returnOfPremium)}">
+                            <p>In the event of the Annuitant's death after the Date of Commencement of Risk and Policy is in force, on the death of the Annuitant, We will return of fixed percentage of the Total Premiums Paid (in multiples of 25%), as selected by You at inception of the Policy and specified in the Schedule, to the Claimant and the Policy shall terminate immediately.</p>
+                        </th:block>
+                        <!-- Immediate Annuity, 'Joint Life with Death Benefit' -->
+                        <th:block th:if="${annuityOption} == 'Joint Life' and ${#strings.equalsIgnoreCase('yes', returnOfPremium)}">
+                            <p>In the event of the Annuitant's death after the Date of Commencement of Risk and Policy is in force:</p>
+                            <ol type="i">
+                                <li>In case of first death of either of the Annuitants within first 5 Policy Years, no Death Benefit shall be payable and the Annuity shall continue to be paid to the last surviving Annuitant. On death of the last surviving Annuitant, We will pay 100% of the Total Premiums Paid to the Claimant and Policy will terminate thereafter.</li>
+                                <li>In case of first death of either of the Annuitant after completion of 5 Policy Years, We will return a proportion of the Total Premiums Paid (in multiples of 25%), as selected by You at inception of the Policy and specified in the Schedule, to the last surviving Annuitant.  On the death of the last surviving Annuitant, We will pay the remaining balance of the Total Premiums Paid to the Claimant and Policy will terminate thereafter.</li>
+                            </ol>
+                        </th:block>
+                    </th:block> <!-- case IMMEDIATE_ANNUITY end -->
+                    <th:block th:case="${#strings.toLowerCase(IA_LAST_SURVIVOR)}">
+                        <!-- IA with Chosen Proportion of Annuity to Last Survivor 'Joint Life with no Death Benefit' -->
+                        <th:block th:if="${annuityOption} == 'Joint Life' and ${#strings.equalsIgnoreCase('no', returnOfPremium)}">
+                            <p>In the event of the Annuitant's death after the Date of Commencement of Risk no Death Benefit shall be payable under the Policy.</p>
+                        </th:block>
+                        <!-- 'Joint Life with Death Benefit' -->
+                        <th:block th:if="${annuityOption} == 'Joint Life' and ${#strings.equalsIgnoreCase('yes', returnOfPremium)}">
+                            <p>In the event of the Annuitant's death after the Date of Commencement of Risk We will pay 100% of Total Premiums Paid to the Claimant and Policy will terminate.</p>
+                        </th:block>
+                    </th:block> <!-- case IA_LAST_SURVIVOUR end -->
+                    <th:block th:case="${#strings.toLowerCase(IA_EARLY_ROP)}">
+                        <!-- 'Joint Life with Death Benefit' -->
+                        <th:block th:if="${annuityOption} == 'Single Life' and ${#strings.equalsIgnoreCase('yes', returnOfPremium)}">
+                            <p>In the event of the Annuitant's death after the Date of Commencement of Risk and Policy is in force, We will pay the following Death Benefit to the Claimant:</p>
+                            <ol type="i">
+                                <li>In case of death of the Annuitant before attaining Milestone Age, We will pay 100% of Total Premiums Paid to the Claimant and the Policy shall terminate.</li>
+                                <li>In case of death of the Annuitant post attaining Milestone Age, We will pay 100% of Total Premiums Paid less benefit already paid at the Milestone Age to the Claimant and the Policy will terminate.</li>
+                            </ol>
+                        </th:block>
+                    </th:block> <!-- case IA_EARLY_ROP end -->
+                    <th:block th:case="${#strings.toLowerCase(IA_LIFE_THEREAFTER)}">
+                        <!-- 'Joint Life with Death Benefit' -->
+                        <th:block th:if="${annuityOption == 'Single Life' and #strings.equalsIgnoreCase('no', returnOfPremium)}">
+                            <p>In the event of the Annuitant's death after the Date of Commencement of Risk during the Guaranteed Period, We will pay the Annuity to the Claimant till the end of the Guaranteed Period. The Policy will terminate at the end of Guaranteed Period. On death of the Annuitant after the Guaranteed Period, no Death Benefit will be payable.</p>
+                        </th:block>
+                    </th:block> <!-- case IA_LIFE_THEREAFTER end -->
+                    <th:block th:case="${#strings.toLowerCase(INCREASING_IA)}">
+                        <!-- 'Increasing IA (each year/every 3 year) SL with Death Benefit' -->
+                        <th:block th:if="${annuityOption == 'Single Life' and (increasingAnnuityFrequency == '1' or increasingAnnuityFrequency == '3') and #strings.equalsIgnoreCase('yes', returnOfPremium)}">
+                            <p>In the event of the Annuitant's death after the Date of Commencement of Risk and Policy is in force, We will pay 100% of the Total Premiums Paid to the Claimant and the Policy will terminate.</p>
+                        </th:block>
+                    </th:block> <!-- case INCREASING_IA end -->
+                    <th:block th:case="${#strings.toLowerCase(DEFERRED_ANNUITY)}">
+                        <!-- Deferred Annuity Till Deferment Period -->
+                        <th:block th:if="${deferredPeriod == TILL_DEFERMENT_PERIOD and (premiumType == 'Single Pay' or premiumType == 'Limited Pay') and (annuityOption == 'Single Life' or annuityOption == 'Joint Life')}">
+                            <p>In the event of the Annuitant's death after the Date of Commencement of Risk or upon the death of last survivor in case of joint life Policy, We will pay the following Death Benefit to the Claimant:<p>
+                            <ol type="i" style="font-style:italic">
+                                <li> In case of death during the Deferment Period, We will pay 105% of Total Premiums Paid (including loading of modal premiums, if any) and the Policy will terminate thereafter.</li>
+                                <li>In case of death after the Deferment Period, no Death Benefit shall be payable and the Policy will terminate immediately.</li>
+                            </ol>
+                        </th:block>
+                        <!-- Deferred Annuity For Life -->
+                        <th:block th:if="${deferredPeriod == FOR_LIFE and (premiumType == 'Single Pay' or premiumType == 'Limited Pay') and (annuityOption == 'Single Life' or annuityOption == 'Joint Life')}">
+                            <p>In the event of the Annuitant's death after the Date of Commencement of Risk or upon the death of last survivor in case of joint life Policy, the following Death Benefit will be paid to the Claimant and the Policy will terminate immediately:</p>
+                            <ol type="i" style="font-style:italic">
+                                <li>In case of death during the Deferment Period, we will pay higher of (a) Total Premiums paid (inclusive of loadings of modal premiums, if any) accumulated at 6 % pa compounded on a daily basis till death; or (b) 105% of Total Premiums Paid.
+                                <li>In case of death after the Deferment Period, We will pay higher of (a) Total Premiums paid (inclusive of loadings of modal premiums, if any) accumulated at 6 % pa compounded on a daily basis till end of Deferment Period less total Annuity payout made till the date of death; or (b) 105 % of the Total Premiums Paid.
+                            </ol>
+                        </th:block>
+                    </th:block> <!-- case DEFERRED_ANNUITY end -->
+                </th:block>
+                <!--  ------ N O T E ------  -->
+                <th:block th:unless="${#strings.equalsIgnoreCase('no', returnOfPremium) or (#strings.equalsIgnoreCase(DEFERRED_ANNUITY,annuityType) and (deferredPeriod == TILL_DEFERMENT_PERIOD))}">
+                    <p><strong>Note:</strong></p>
+                    <ol type="i">
+                        <li>If any Annuity is paid by Us after the date of death of the Annuitant or last surviving Annuitant, as the case may be, We will deduct an amount equal to the total of such Annuity paid from the Death Benefit payable under this Policy, if any.</li>
+                        <li>In case of joint life Policy, the Death Benefit (if applicable) shall be payable on death of last surviving Annuitant only to the Claimant.</li>
+                    </ol>
+                </th:block>
+            </td>
+            <td>Clause 1.1 of Part C</td>
+        </tr>
+        <tr>
+            <td>
+                <span>&#8226;</span> <strong>Survival Benefits excluding that payable on maturity:</strong><br>
+                <p><span>&#10146;</span> We will pay the Annuity in accordance with the Policy Contract on the due dates specified in the Schedule as per the frequency of payment, Annuity Variant, sub-variants selected by You provided the Policy is in force, all due Premiums have been paid and the Annuitant is alive on the due date.</p>
+                <th:block th:switch="${#strings.toLowerCase(annuityType)}">
+                    <th:block th:case="${#strings.toLowerCase(IMMEDIATE_ANNUITY)}">
+                        <!-- Single Life with/without Death Benefit -->
+                        <th:block th:if="${(annuityOption == 'Single Life') and (#strings.equalsIgnoreCase(returnOfPremium, 'yes') or #strings.equalsIgnoreCase(returnOfPremium, 'no'))}">
+                            <p><span>&#10146;</span> We will pay an Annuity, in arrears till death of the Annuitant.</p>
+                        </th:block>
+                        <th:block th:if="${(annuityOption == 'Joint Life') and (#strings.equalsIgnoreCase(returnOfPremium, 'yes') or #strings.equalsIgnoreCase(returnOfPremium, 'no'))}">
+                            <p><span>&#10146;</span> We will pay an Annuity, in arrears till death of the last surviving Annuitant.</p>
+                        </th:block>
+                    </th:block> <!-- case IMMEDIATE_ANNUITY end -->
+                    <th:block th:case="${#strings.toLowerCase(IA_LAST_SURVIVOR)}">
+                        <!-- Joint Life with/without Death Benefit -->
+                        <th:block th:if="${(annuityOption == 'Joint Life') and (#strings.equalsIgnoreCase(returnOfPremium, 'yes') or #strings.equalsIgnoreCase(returnOfPremium, 'no'))}">
+                            <p><span>&#10146;</span> We will pay an Annuity, in arrears till both the Annuitants are alive. On first death of either of the Annuitants, Annuity payable shall be revised to the Annuity multiple (as selected by You at inception of the Policy and specified in the Schedule i.e. either 50% or 110%) times the Annuity at Date of Commencement of Risk; and will be paid to the last surviving Annuitant.</p>
+                        </th:block>
+                    </th:block> <!-- case IA_LAST_SURVIVOR end -->
+                    <th:block th:case="${#strings.toLowerCase(IA_EARLY_ROP)}">
+                        <!-- Joint Life with/without Death Benefit -->
+                        <p>
+                            <span>&#10146;</span> We will pay an Annuity, in arrears till death of the Annuitant. On attainment of Milestone Age, We will pay an amount equal to the proportion of Total Premiums Paid (50% or 100%, as selected by You at inception of the Policy and specified in the Schedule) to the Annuitant and Annuity shall continue to be payable till death of the Annuitant.
+                        </p>
+                    </th:block> <!-- case IA_EARLY_ROP end -->
+                    <th:block th:case="${#strings.toLowerCase(IA_LIFE_THEREAFTER)}">
+                        <p>
+                            <span>&#10146;</span> We will pay an Annuity, in arrears till death of the Annuitant or until the end of Guaranteed Period, whichever is later.
+                        </p>
+                    </th:block> <!-- case IA_LIFE_THEREAFTER end -->
+                    <th:block th:case="${#strings.toLowerCase(INCREASING_IA)}">
+                        <!-- Single Life with/without Death Benefit -->
+                        <th:block th:if="${(annuityOption == 'Single Life') and (increasingAnnuityFrequency == '1')}">
+                            <p><span>&#10146;</span> We will pay an increasing Annuity, in arrears till death of the Annuitant. Annuity shall increase every year at a rate as selected by You at inception of the Policy and specified in the Schedule (i.e. 1% to 6% simple increase) of the Annuity at Date of Commencement of Risk.</p>
+                        </th:block>
+                        <th:block th:if="${(annuityOption == 'Single Life') and (increasingAnnuityFrequency == '3')}">
+                            <p><span>&#10146;</span> We will pay an increasing Annuity, in arrears till death of the Annuitant. The Annuity shall increase every 3 years at a rate of 15% (simple increase) of the Annuity at Date of Commencement of Risk.</p>
+                        </th:block>
+                    </th:block> <!-- case INCREASING_IA end -->
+                    <th:block th:case="${#strings.toLowerCase(DEFERRED_ANNUITY)}">
+                        <p>
+                            <span>&#10146;</span> After the expiry of the Deferment Period, We will pay Annuity, in arrears till death of the Annuitant/last surviving Annuitant. <span th:if="${premiumType == 'Limited Pay'}">For Limited Premium variants, Annuity amount shall be equal to the base Annuity plus the Loyalty Annuity.</span>
+                        </p>
+                    </th:block> <!-- case DEFERRED_ANNUITY end -->
+                </th:block><!-- case XX end -->
+            </td>
+            <td>Clause 1.2 of Part C</td>
+        </tr>
+        <tr>
+            <td>
+                <span>&#8226;</span> <strong>Benefits payable on maturity:</strong><br><br>
+                No Maturity Benefit is payable under the Policy.
+            </td>
+            <td>Clause 1.3 of Part C</td>
+        </tr>
+        <tr>
+            <td>
+                <span>&#8226;</span> <strong>Surrender Benefit:</strong><br>
+                <th:block th:unless="${#strings.equalsIgnoreCase(DEFERRED_ANNUITY,annuityType)}">
+                    <th:block th:if="${#strings.equalsIgnoreCase(returnOfPremium,'no')}">
+                        <p><span>&#10146;</span> No Surrender benefit.</p>
+                    </th:block>
+                </th:block>
+                <th:block th:if="${premiumType == 'Single Pay' and #strings.equalsIgnoreCase(returnOfPremium,'yes')}">
+                    <p><span>&#10146;</span> The Policy will acquire Surrender Value immediately after the end of Free look period.</p>
+                    <p>For Deferred Annuity with Death benefit till Deferment period sub variants, Surrender Value is applicable during the Deferment Period only.</p>
+                    <p>You may request in writing to Surrender the Policy at any time but You will get the Surrender Value only if the Policy has acquired the Surrender Value. On receipt of such request, the Surrender Value prevailing on the date of request for the Surrender of this Policy shall be payable by Us and thereafter no other benefit under this Policy shall be payable. Once the Surrender Value is paid, the Policy shall terminate. If the Policy has not acquired Surrender Value, no amount shall be payable by Us.</p>
+                </th:block>
+                <th:block th:if="${#strings.equalsIgnoreCase(DEFERRED_ANNUITY,annuityType)}">
+                    <th:block th:if="${premiumType == 'Limited Pay'}">
+                        <p><span>&#10146;</span> The Policy will acquire Guaranteed Surrender Value on payment of two full years' Premium and may also acquire a Special Surrender Value after completion of first Policy Year provided one full year premium has been received and shall become payable after completion of first Policy Year. The Surrender Value will be higher of Guaranteed Surrender Value and Special Surrender Value.</p>
+                        <p>For Deferred Annuity with Death benefit till Deferment period sub variants, Surrender Value is applicable during the Deferment Period only.</p>
+                        <p>You may request in writing to Surrender the Policy at any time but You will get the Surrender Value only if the Policy has acquired the Surrender Value. On receipt of such request, the Surrender Value prevailing on the date of request for the Surrender of this Policy shall be payable by Us and thereafter no other benefit under this Policy shall be payable. Once the Surrender Value is paid, the Policy shall terminate. If the Policy has not acquired Surrender Value, no amount shall be payable by Us.</p>
+                    </th:block>
+                </th:block> <!-- case DEFERRED_ANNUITY end -->
+            </td>
+            <td>Clause 1 of Part D</td>
+        </tr>
+        <tr>
+            <td>
+                <span>&#8226;</span> <strong>Options to policyholders for availing benefits, if any, covered under the policy:</strong><br>
+                <th:block th:if="${(#strings.equalsIgnoreCase(IMMEDIATE_ANNUITY,annuityType) or #strings.equalsIgnoreCase(IA_LAST_SURVIVOR,annuityType)) and annuityOption == 'Joint Life' and #strings.equalsIgnoreCase('yes', returnOfPremium)}">
+                    <p><strong>Advance Annuity Option</strong></p>
+                    <p>The advance Annuity option may be chosen anytime within 3 months from the date of first death amongst the Annuitants, wherein the last surviving Annuitant will have an option to receive the present value of Annuity payable in next 5 Policy Years as advance Annuity amount, which will be computed as per the below formula:
+                        <br>Advance Annuity amount = 4.00 x Annuity instalment x number of Annuities payable per Policy Year
+                    </p>
+                    <p>Once this option is selected, the advance Annuity amount will be payable immediately in lump sum. It is clarified that the Annuity amount payable, if any, during the Policy Year of exercising this option shall continue as and when due as per the Schedule.</p>
+                    <p>Once the lump sum advance Annuity amount is paid, the Annuity payment during the next 5 Policy Years shall stop from the Policy Anniversary. The regular Annuity payouts shall start after the expiry of the abovesaid 5 Policy Years as per the original terms and conditions of the Policy.</p>
+                     <p>In case of death of the last surviving Annuitant or Surrender of Policy anytime during the above 5 Policy Years, We will pay the applicable Death/Surrender Benefit after adjusting the remaining advance Annuity amount. Remaining advance Annuity amount will be calculated as per the below formula:</p>
+                    <P>Remaining advance Annuity amount = (1- months elapsed during advance Annuity period/60) x advance Annuity amount</P>
+                    <p>For National Pension System subscriber, payment of advance Annuity amount shall be subject to regulations, guidelines or other directions issued by Pension Fund Regulatory and Development Authority, subject to compliance with IRDAI norms.</p>
+                </th:block>
+                <th:block th:unless="${(#strings.equalsIgnoreCase(IMMEDIATE_ANNUITY,annuityType) or #strings.equalsIgnoreCase(IA_LAST_SURVIVOR,annuityType)) and annuityOption == 'Joint Life' and #strings.equalsIgnoreCase('yes', returnOfPremium)}">
+                    Nil
+                </th:block>
+            </td>
+            <td>
+                <th:block th:if="${(#strings.equalsIgnoreCase(IMMEDIATE_ANNUITY,annuityType) or #strings.equalsIgnoreCase(IA_LAST_SURVIVOR,annuityType)) and annuityOption == 'Joint Life' and #strings.equalsIgnoreCase('yes', returnOfPremium)}">
+                    Clause 2 of Part C
+                </th:block>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <span>&#8226;</span> <strong>Other benefits/options payable, specific to the policy, if any: Nil</strong><br>
+            </td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>
+                <span>&#8226;</span> <strong>Lock-in period for Linked Insurance products:</strong><br>
+                <span>&#10146;</span> This is not applicable.
+            </td>
+            <td></td>
+        </tr>
+
+        <tr>
+            <td>6</td>
+            <td>Options available <i>(in case of Linked Insurance Products)</i></td>
+            <td>This is not applicable</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>7</td>
+            <td>Option available (in case of Annuity product)</td>
+            <td>
+                <p>This product is a</p>
+                <table>
+                    <thead style="font-style: italic">
+                        <tr>
+                            <th>Annuity Variant chosen</th>
+                            <th>Sub-variant chosen</th>
+                            <th>
+                                <th:block th:switch="${#strings.toLowerCase(annuityType)}">
+                                    <th:block th:case="${#strings.toLowerCase(IMMEDIATE_ANNUITY)}">Proportion of Total Premiums Paid</th:block>
+                                    <th:block th:case="${#strings.toLowerCase(IA_LAST_SURVIVOR)}">Annuity Multiple</th:block>
+                                    <th:block th:case="${#strings.toLowerCase(IA_EARLY_ROP)}">Return of % of Total Premiums Paid and Milestone Age</th:block>
+                                    <th:block th:case="${#strings.toLowerCase(IA_LIFE_THEREAFTER)}">Guaranteed Period</th:block>
+                                    <th:block th:case="${#strings.toLowerCase(INCREASING_IA)}">Increasing Annuity %</th:block>
+                                    <th:block th:case="${#strings.toLowerCase(DEFERRED_ANNUITY)}">Deferment Period</th:block>
+                                </th:block>
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody style="font-style: italic">
+                    <th:block th:switch="${#strings.toLowerCase(annuityType)}">
+                        <tr th:case="${#strings.toLowerCase(IMMEDIATE_ANNUITY)}">
+                            <td>Immediate Annuity</td>
+                            <td>
+                                <th:block th:if="${(annuityOption == 'Single Life') and #strings.equalsIgnoreCase('no', returnOfPremium)}">Single Life without Death Benefit</th:block>
+                                <th:block th:if="${(annuityOption == 'Joint Life') and #strings.equalsIgnoreCase('no', returnOfPremium)}">Joint Life without Death Benefit</th:block>
+                                <th:block th:if="${(annuityOption == 'Single Life') and #strings.equalsIgnoreCase('yes', returnOfPremium)}">Single Life with Death Benefit</th:block>
+                                <th:block th:if="${(annuityOption == 'Joint Life') and #strings.equalsIgnoreCase('yes', returnOfPremium)}">Joint Life with Death Benefit</th:block>
+                            </td>
+                            <td th:text="${(#strings.equalsIgnoreCase('yes', returnOfPremium) ? (returnOfPremiumPercentage + '%') : 'NA')}"></td>
+                        </tr>
+                        <tr th:case="${#strings.toLowerCase(IA_LAST_SURVIVOR)}">
+                            <td>Immediate Annuity with chosen proportion of Annuity to Last Survivor</td>
+                            <td>
+                                <th:block th:if="${(annuityOption == 'Joint Life') and #strings.equalsIgnoreCase('no', returnOfPremium)}">Joint Life without Death Benefit</th:block>
+                                <th:block th:if="${(annuityOption == 'Joint Life') and #strings.equalsIgnoreCase('yes', returnOfPremium)}">Joint Life with Death Benefit</th:block>
+                            </td>
+                            <td th:text="${proportionOfAnnuityLastSurvivor} + '%'"></td>
+                        </tr>
+                        <tr th:case="${#strings.toLowerCase(IA_EARLY_ROP)}">
+                            <td>Immediate Annuity with Early Return of Premium</td>
+                            <td>Single Life with Death Benefit</td>
+                            <td th:text="'Return of ' + ${earlyROPPercentage} + '% of Total Premiums Paid on attaining Milestone Age of ' + ${milestoneAge} +'yrs.'"></td>
+                        </tr>
+                        <tr th:case="${#strings.toLowerCase(IA_LIFE_THEREAFTER)}">
+                            <td>Immediate Annuity for Guaranteed Period and Life Thereafter</td>
+                            <td>Single Life without Death Benefit</td>
+                            <td th:text="'Guaranteed Period chosen - ' + ${guaranteeAnnuityPeriod} + 'yrs.'"></td>
+                        </tr>
+                        <tr th:case="${#strings.toLowerCase(INCREASING_IA)}">
+                            <td>Increasing Immediate Annuity</td>
+                            <td>
+                                <th:block th:if="${increasingAnnuityFrequency == '1'}">Single Life Increasing Annuity Each Year with Death Benefit</th:block>
+                                <th:block th:if="${increasingAnnuityFrequency == '3'}">Single Life Increasing Annuity Every 3 Years with Death Benefit</th:block>
+                            </td>
+                            <td th:text="'The annuity shall increase at ' + ${increasingAnnuityPercentage} + '%'"></td>
+                        </tr>
+                        <tr th:case="${#strings.toLowerCase(DEFERRED_ANNUITY)}">
+                            <td>Deferred Annuity</td>
+                            <td>
+                                <span th:text="${annuityOption}"></span> with Death Benefit
+                                <span th:if="${deferredPeriod == TILL_DEFERMENT_PERIOD}"> till Deferment Period </span>
+                                <span th:if="${deferredPeriod == FOR_LIFE}"> for Life </span>
+                                <span> - </span>
+                                <span th:if="${premiumType == 'Single Pay'}">Single Premium</span>
+                                <span th:if="${premiumType == 'Limited Pay'}">Limited Premium</span>
+                            </td>
+                            <td th:text="${defermentPeriodInMonth > 0 ? (defermentPeriodMonth + '/' + defermentPeriod) : defermentPeriod}"></td>
+                        </tr>
+                    </th:block>
+                    </tbody>
+                </table>
+
+            </td>
+            <td>Policy Schedule</td>
+        </tr>
+        <tr>
+            <td>8</td>
+            <td>Riders opted, if any</td>
+            <td>None</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>9</td>
+            <td>Exclusions (events where insurance coverage is not payable), if any.</td>
+            <td>
+                <strong>Brief list of the applicable exclusions, if any:</strong><br>
+                No exclusions
+            </td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>10</td>
+            <td>Waiting /lien Period, if any</td>
+            <td><strong>Number of Days</strong>: Not Applicable</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>11</td>
+            <td>Grace period</td>
+            <td>
+                <span th:unless="${premiumType == 'Limited Pay'}">Not Applicable</span>
+                <th:block th:if="${premiumType == 'Limited Pay'}">
+                    <strong>Number of Days</strong>: 15 days where the premium is paid on monthly mode and 30 days in all other cases.
+                </th:block>
+            </td>
+            <td th:text="${premiumType == 'Limited Pay' ? 'Clause 7 of Part C' : ''}"></td>
+        </tr>
+        <tr>
+            <td>12</td>
+            <td>Free Look Period</td>
+            <td><strong>Number of days:</strong> 30 days beginning from the date of receipt of the Policy.</td>
+            <td>Clause 4 of Part D</td>
+        </tr>
+        <th:block th:if="${#strings.equalsIgnoreCase(annuityType, IMMEDIATE_ANNUITY)
+         or #strings.equalsIgnoreCase(annuityType, INCREASING_IA)
+         or #strings.equalsIgnoreCase(annuityType, IA_EARLY_ROP)
+         or #strings.equalsIgnoreCase(annuityType, IA_LAST_SURVIVOR)
+         or #strings.equalsIgnoreCase(annuityType, IA_LIFE_THEREAFTER)
+         or (premiumType == 'Single Pay' and #strings.equalsIgnoreCase(annuityType, DEFERRED_ANNUITY))}">
+            <tr>
+                <td>13</td>
+                <td>Lapse, paid-up and revival of the Policy</td>
+                <td>
+                    Not applicable.
+                </td>
+                <td></td>
+            </tr>
+        </th:block>
+        <th:block th:if="${premiumType == 'Limited Pay' and #strings.equalsIgnoreCase(annuityType, DEFERRED_ANNUITY)}">
+            <tr>
+                <td rowspan="3">13</td>
+                <td rowspan="3">Lapse, paid-up and revival of the Policy</td>
+                <td>
+                    <p><strong>Lapsation of Policy</strong> If You discontinue the payment of Premium before paying a full year Premiums for the first Policy Year, the Policy will become a Lapsed Policy on the expiry of the Grace Period and no benefit under the Policy shall be payable.</p>
+                </td>
+                <td>Clause 7 of Part D</td>
+            </tr>
+            <tr>
+                <td>
+                    <p><strong>Reduced Paid Up Death Benefit</strong></p>
+                    <p>If this Policy has acquired a Surrender Value, in the event of non-payment of the due Premiums by You to Us on the expiry of the Grace Period, this Policy will not become a Lapsed Policy and will continue under Reduced Paid Up Mode unless revived. If this Policy is under Reduced Paid Up Mode, the benefits payable shall be as follows:</p>
+                    <th:block th:if="${#strings.equalsIgnoreCase(annuityType, DEFERRED_ANNUITY) and (premiumType == 'Limited Pay') and (deferredPeriod == TILL_DEFERMENT_PERIOD)}">
+                        <p><span>&#10146;</span><strong> Reduced Paid Up Death Benefit:</strong> In case of a Reduced Paid Up Mode Policy, upon death of the Annuitant in case of single life and upon death of last survivor Annuitant, in case of joint life, We will pay the following:
+                            <ol type="a">
+                                <li>During Deferment Period: 105% of the Total Premiums Paid including loadings for modal Premium, if any.</li>
+                                <li>Post Deferment Period: No Reduced Paid Up Death Benefit shall be payable.</li>
+                            </ol>
+                        </p>
+                    </th:block>
+                    <th:block th:if="${#strings.equalsIgnoreCase(annuityType, DEFERRED_ANNUITY) and (premiumType == 'Limited Pay') and (deferredPeriod == FOR_LIFE)}">
+                        <p><span>&#10146;</span><strong> Reduced Paid Up Death Benefit:</strong> In case of a Reduced Paid Up Mode Policy, upon death of the Annuitant in case of single life and upon death of last survivor Annuitant, in case of joint life, We will pay the following:
+                            <ol type="a">
+                                <li>During Deferment Period: We will pay the higher of (a) Total Premiums Paid including loadings for modal premiums, if any, accumulated at 6% p.a. compounded on a daily basis till date of death; or (b) 105% of the Total Premiums Paid including modal loading, if any.</li>
+                                <li>After Deferment Period: We will pay higher of (a) Total Premiums Paid including loadings for modal premiums, if any, accumulated at 6% p.a. compounded on a daily basis till end of Deferment Period less total Annuity payouts made till date of death; or (b) 105% of the Total Premiums Paid including modal loading, if any.</li>
+                            </ol>
+                        </p>
+                    </th:block>
+                    <p><span>&#10146;</span><strong> Reduced Paid-Up Annuity Benefit:</strong> For a Reduced Paid Up Mode Policy, We will pay the following Reduced Paid Up Annuity Benefit: Reduced Paid-Up Annuity = (Base Annuity amount +50% of Loyalty Annuity) multiplied by [[${'[(Total Premiums Paid plus loadings for modal premiums paid (if any) for Policy) / (total Premiums payable plus loadings for modal premiums payable (if any) for Policy)]'}]]</p>
+                    <p><span>&#10146;</span><strong> Reduced Paid Up Surrender Benefit</strong></p>
+                    <p>For a Reduced Paid Up Policy, the Surrender Value of Reduced Paid Up Mode Policy will be determined using the same methodology of Surrender Value computation as mentioned in Policy Contract.</p>
+                    <p>Note: If the total annuity amount payable under Reduced Paid Up Mode Policy is less than the minimum modal Annuity amount allowed under the Policy, the Surrender Value as at the end of the Revival Period will be paid as a lump sum and the Policy will immediately and automatically terminate.</p>
+                </td>
+                <td>Clause 3 of Part C</td>
+            </tr>
+            <tr>
+                <td>
+                    <p><strong>Revival Period:</strong> It means the period of five consecutive complete years from the date of first unpaid Premium</p>
+                </td>
+                <td>Clause 5 of Part D</td>
+            </tr>
+        </th:block>
+        <tr>
+            <td>14</td>
+            <td>Policy Loan, if applicable</td>
+            <td>
+                <th:block th:switch="${
+                (#strings.equalsIgnoreCase(annuityType, IMMEDIATE_ANNUITY) and (annuityOption == 'Single Life' or annuityOption == 'Joint Life') and #strings.equalsIgnoreCase('no', returnOfPremium) )
+                or (#strings.equalsIgnoreCase(annuityType, IA_LAST_SURVIVOR) and (annuityOption == 'Joint Life') and #strings.equalsIgnoreCase('no', returnOfPremium))
+                or (#strings.equalsIgnoreCase(annuityType, IA_LIFE_THEREAFTER))
+                }">
+                    <th:block th:case="true">Not applicable.</th:block>
+                    <th:block th:case="false">
+                        <p>Once this Policy has acquired the Surrender Value, You will be eligible for grant of loan from Us, provided there is a benefit payable upon death of the Annuitant(s) after the annuity start date.</p>
+                        <p>The minimum amount of loan which can be granted by Us under this Policy is INR 10,000 (Rupees Ten Thousand). The maximum amount of loan which can be granted under this Policy during the Policy Term shall not exceed 80% (Eighty percent) of the Surrender Value payable under this Policy, subject to such terms and conditions as may be determined by Us from time to time.</p>
+                        <p>The loans under the Qualifying Recognized Overseas Pension Scheme (QROPS) Policy may be subject to the deduction of the applicable taxes or charges including the unauthorised member payment surcharge.</p>
+                    </th:block>
+                </th:block>
+
+            </td>
+            <td>
+                <th:block th:switch="${
+                (#strings.equalsIgnoreCase(annuityType, IMMEDIATE_ANNUITY) and (annuityOption == 'Single Life' or annuityOption == 'Joint Life') and #strings.equalsIgnoreCase('no', returnOfPremium) )
+                or (#strings.equalsIgnoreCase(annuityType, IA_LAST_SURVIVOR) and (annuityOption == 'Joint Life') and #strings.equalsIgnoreCase('no', returnOfPremium))
+                or (#strings.equalsIgnoreCase(annuityType, IA_LIFE_THEREAFTER))
+                }">
+                    <th:block th:case="true"> </th:block>
+                    <th:block th:case="false">Clause 2 of Part D</th:block>
+                </th:block>
+            </td>
+        </tr>
+        <tr>
+            <td>15</td>
+            <td>Claims/Claims Procedure</td>
+            <td>
+                <span>&#8226;</span> <strong>Turn Around Time (TAT) for claims settlement: </strong>
+                <span th:text="${tatDays}"></span> days after receipt of entire documents or completion of investigations,
+                if any, whichever is later.<br><br>
+                <span>&#8226;</span> <strong>Brief procedure.</strong><br><br>
+                <span>&#8226;</span> <strong>Notice of Claim</strong> - All cases of death must be notified immediately
+                to us in writing. However, We may condone delay on merit for delayed claims where the reason for delay is
+                proved to be for reasons beyond the control of the Claimant.<br><br>
+                <span>&#10146;</span> Claim forms as required by us must be completed and furnished to us, at the Claimant's
+                expense, within 90 days after the date the insured event happens, unless specified otherwise. A list of
+                primary claim documents listing the normally required documents is attached to the Policy. Submission of
+                the listed documents, forms or other proof, however, shall not be construed as an admission of liabilities
+                by the Company. We reserve the right to require any additional proof and documents in support of the claim.<br><br>
+                <span>&#8226;</span> <strong>Helpline number:</strong><br><br>
+                <span>&#10146;</span> 1860-120-5577 (Call charges apply) or 0124-4219090<br><br>
+                <span>&#8226;</span> <strong>Contact Details of the Insurer:</strong><br><br>
+                <span>&#10146;</span>Axis Max Life Insurance Limited, Plot No. 90C, Udyog Vihar, Sector 18,
+                Gurugram-122015, Haryana, India. Website - <a href="https://www.maxlifeinsurance.com"
+                                                              target="_blank">www.axismaxlifeinsurance.com</a><br><br>
+                <span>&#8226;</span> <strong>Link for downloading claim form and list of documents required
+                including bank account details:</strong><br><br>
+                <span>&#10146;</span> <a href="https://www.maxlifeinsurance.com/downloads"
+                                         target="_blank">https://www.maxlifeinsurance.com/downloads</a><br><br>
+                <span>&#10146;</span> We will require the following documents in case of claim under this Policy:<br><br>
+                <strong>For Death Benefit:</strong>
+                <ul>
+                    <li>Claimant's statement in the prescribed form(death claim application form -form A);</li>
+                    <li>original Policy document;</li>
+                    <li>a copy of death certificate issued by the local/municipal authority (if applicable);</li>
+                    <li>identity proof of the Claimant bearing their photographs and signature; </li>
+                    <li>discharge summary / indoor case papers in case death happened due to medical reasons in a hospital;</li>
+                    <li>medical booklet / CGHS card details in case of defence and central government personnel;</li>
+                    <li>body transfer certificate / embassy documents / postmortem report whichever applicable in case of death in foreign country;</li>
+                    <li>complete passport copy in case of death in foreign country; </li>
+                    <li>other life / health insurance details with claim history details;</li>
+                    <li>employer certificate with complete leave records (Form E);</li>
+                    <li>copy of bank passbook / cancelled cheque of the Claimant; </li>
+                    <li>ITR for last 3 years /  GST certificate in case of self employed;</li>
+                    <li>in case of a medical/natural death of the Life Insured, the attending physician's statement (Form C) and the medical records (admission notes, discharge/death summary, test reports, etc.); </li>
+                    <li>NEFT mandate form attested by bank authorities; and </li>
+                    <li>Bank details of Claimant;</li>
+                    <li>any other documents or information required by Us for assessing and approving the claim request.</li>
+                </ul>
+                <strong>For Survival Benefit:</strong>
+                <ul>
+                    <li>the Annuitant (the last surviving Annuitant in case of death of any annuitant for joint life Annuity) or Appointee in case of minor is required to submit to Us a Living Certificate in the format prescribed by Us at least 30 days before the end of each Policy Year. However, in case You have chosen Immediate/Deferred Annuity with Death Benefit, the Living Certificate, in the format prescribed by Us, is required to be submitted at least 30 days before the end of every 5th Policy Year.</li>
+                    <li>
+                        Notwithstanding above, in case You have chosen 'Immediate Annuity with Early Return of Premium' Annuity Variant:
+                        <ul style="list-style-type:circle;">
+                            <li>For sub-variant with early return of 50% of Total Premiums Paid, the Living Certificate, in the format prescribed by Us, is required to be submitted at least 30 days before the end of every 5th Policy Year.</li>
+                            <li>For sub-variant with early return of 100% of Total Premiums Paid, the Living Certificate, in the format prescribed by Us, is required to be submitted at least 30 days before the end of every 5th Policy Year till the attainment of Milestone Age. After the attainment of Milestone Age, a Living Certificate in the format prescribed by Us at least 30 days before the end of each Policy Year. In case of Annuity for Guaranteed Period and life thereafter, the Claimant should intimate Us in case of death of the Annuitant. Living Certificate would be required to be submitted at least 30 days before the end of every Policy Year only post completion of Guaranteed Period opted by You.</li>
+                        </ul>
+                    </li>
+                    <li>Unless otherwise informed, You will be required to submit the above documents duly signed by a gazetted officer or a Registered Medical Practitioner (who should quote his medical council registration number) or a Scheduled bank branch manager or notary public or any other person as notified by the Company from time to time.</li>
+                    <li>If the foregoing documentation is not received by Us at least 30 days before the end of period as mentioned above, the payment of survival benefit (including arrears, if any) will automatically cease from the commencement of the immediately succeeding Policy Year until the same is submitted to Us.</li>
+                    <li>In certain cases, we may either require the Annuitant (the last surviving Annuitant in case of Joint Annuity variant) to submit the above documents in person or may allow submit the proof of survival via electronic modes.</li>
+                    <li>NEFT Form (if not provided earlier), A cancelled cheque or copy of passbook with pre-printed name and bank account number, for payout through NEFT (if not provided earlier),</li>
+                    <li>Any other document or information required by Us for assessing and approving the claim request. The process may change as per the Company policy.</li>
+                </ul>
+            </td>
+            <td><br><br><br>Clause 3 of Part F</td>
+        </tr>
+        <tr>
+            <td>16</td>
+            <td>Policy Servicing</td>
+            <td>
+                <span>&#8226;</span> <strong>Turn Around Time (TAT): Up to <span
+                    th:text="${turnAroundTime}"></span> days</strong><br><br>
+                <span>&#8226;</span> <strong>Helpline number:</strong><br><br>
+                <span>&#10146;</span> 1860-120-5577 (Call charges apply) or 0124-4219090<br><br>
+                <span>&#8226;</span> <strong>Contact Details of the Insurer:</strong><br><br>
+                <span>&#10146;</span> Axis Max Life Insurance Ltd., Plot No. 90C, Udyog Vihar, Sector 18,
+                Gurugram-122015, Haryana, India. Website - <a href="https://www.maxlifeinsurance.com"
+                                                              target="_blank">www.axismaxlifeinsurance.com</a><br><br>
+                <span>&#8226;</span> <strong>Link for downloading applicable forms and list of documents
+                required including bank account details:</strong><br><br>
+                <span>&#10146;</span> <a href="https://www.maxlifeinsurance.com/downloads"
+                                         target="_blank">https://www.maxlifeinsurance.com/downloads</a><br><br>
+                <span>&#10146;</span> We will require the following documents regarding policy servicing:<br><br>
+                <ul>
+                    <li>Application in the prescribed form;</li>
+                    <li>original Policy document (if any);</li>
+                    <li>identity proofs (such as copy of Passport, PAN card, Voter identity card, Aadhar (UID) card, etc.) of the Policyholder or Life Insured (bearing their photographs and signatures);</li>
+                    <li>NEFT mandate form attested by bank authorities, along with a cancelled cheque or bank account passbook;</li>
+                    <li>any other documents or information required by Us for processing the servicing request.</li>
+                </ul>
+            </td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>17</td>
+            <td>Grievances / Complaints</td>
+            <td>
+                <span>&#8226;</span> <strong>Contact Details of Grievance Redressal Officer of the
+                insurer:</strong>
+                <ul>
+                    <li>Grievance Redressal Officer, Axis Max Life Insurance Ltd., Plot No. 90C, Udyog Vihar, Sector 18, Gurugram-122015, Haryana, India</li>
+                    <li>
+                        <strong> Link for registering the grievance with the insurer's portal</strong><br>
+                        <span>&#10146;</span> <a
+                            href="https://www.maxlifeinsurance.com/customer-service/grievance-redressal"
+                            target="_blank">https://www.maxlifeinsurance.com/customer-service/grievance-redressal</a>
+                    </li>
+                </ul>
+
+                <span>&#8226;</span> <strong>Contact details of Ombudsman:</strong><br><br>
+                <span>&#10146;</span> Refer Annexure A for the Ombudsman details
+            </td>
+            <td>Clause 1 of Part G</td>
+        </tr>
+        </tbody>
+    </table>
+    <div class="declaration">
+        <p><u>Declaration by the Policyholder</u></p>
+        <p>I have read the above and confirm having noted the details.</p>
+
+        <div class="signature-section">
+            <div class="left">
+                <p>Place:<span
+                        style="text-align: center;min-width: 100px;border-bottom-color: #000;border-bottom-style: solid;border-bottom-width: 1px;display: inline-block;padding: 0 18px;font-weight: bold;text-transform:uppercase;"><span
+                        th:text="${place}"></span></span></p>
+                <p>Date:<span
+                        style="text-align: center;min-width: 100px;border-bottom-color: #000;border-bottom-style: solid;border-bottom-width: 1px;display: inline-block;padding: 0 18px;font-weight: bold;text-transform:uppercase;"><span
+                        th:text="${date}"></span></span></p>
+            </div>
+            <div class="signature" style="text-align: right; margin-top: -45px;">
+                <p>(Signature of the Policyholder)</p>
+            </div>
+        </div><br>
+        <div class="note">
+            <p><b>Note:</b></p>
+            <ol type="i">
+                <li>
+                    For the product related documents including the Customer Information Sheet please refer to the
+                    <a href="https://www.maxlifeinsurance.com/retirement-plans/smart-wealth-annuity-guaranteed-pension-plan" target="_blank">
+                        https://www.maxlifeinsurance.com/retirement-plans/smart-wealth-annuity-guaranteed-pension-plan</a>.
+                </li>
+                <li>
+                    In case of any conflict, the terms and conditions mentioned in the Policy document shall prevail.
+                </li>
+                <li>
+                    In the event of any conflict or discrepancy between any translated version and the English language version of this CIS, the English language version of this CIS shall prevail.
+                </li>
+            </ol>
+        </div>
+
+    </div>
+</div>
+</body>

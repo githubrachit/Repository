@@ -1,0 +1,103 @@
+<td>
+	<table border="0" cellspacing="0" cellpadding="0" width="100%" style="border-collapse: collapse;">
+		<tbody>
+		<tr>
+			<th colspan="0" style="background-color: #003770; color: #fff;font-size: 12px; font-family: arial; padding: 3px" align="left">B. Nominee Details
+	<div style="font-size:10px"><i>(Applicable only in case of annuity option selected with death benefit)</i></div>
+			</th>
+		</tr>
+		<th:block th:each="NomineeDetails : ${nomineeDetails}">
+			<tr>
+				<td style="padding: 3px;">
+					<table border="1" cellspacing="0" cellpadding="0" width="100%" style="border-collapse: collapse;">
+						<tbody>
+						<tr>
+							<td width="30%" style="font-weight: bold; padding: 3px; font-size: 10px; font-family: arial;">a. Title</td>
+							<td width="70%" style="font-size: 10px; font-family: arial;padding: 3px;" th:text="${NomineeDetails.title}"></td>
+						</tr>
+						<tr>
+							<td width="30%" style="font-weight: bold; font-size: 10px; font-family: arial;">
+								<table border="0" cellspacing="0" cellpadding="0" width="100%" style="border-collapse: collapse;">
+									<tbody>
+									<tr>
+										<td width="60%" style="font-weight: bold;padding: 3px;font-size: 10px; border-right-color: #808080;border-right-style:solid;border-right-width:1px; font-family: arial;">b. Name</td>
+										<td width="40%" style="font-weight: bold;font-size: 10px; font-family: arial;">
+											<table width="100%" cellspacing="0" border="0" cellpadding="5" style="border-collapse: collapse;">
+												<tbody>
+												<tr>
+													<td height="25" style="font-size: 10px;border-bottom-color: #808080;border-bottom-style:solid;border-bottom-width:1px;font-family: arial;">First</td>
+												</tr>
+												<tr>
+													<td height="25" style="font-size: 10px;border-bottom-color: #808080;border-bottom-style:solid;border-bottom-width:1px;font-family: arial;">Middle</td>
+												</tr>
+												<tr>
+													<td height="25" style="font-size: 10px;border-bottom-color: #808080;border-bottom-style:solid;border-bottom-width:1px;font-family: arial;">Last</td>
+												</tr>
+												</tbody>
+											</table>
+										</td>
+									</tr>
+									</tbody>
+								</table>
+							</td>
+							<td width="70%" style="font-size: 10px; font-family: arial;">
+								<table width="100%" cellspacing="0" cellpadding="5" border="0" style="border-collapse: collapse; vertical-align: top;">
+									<tbody>
+									<tr>
+										<td height="25" style="font-size: 10px;border-bottom-color: #808080;border-bottom-style:solid;border-bottom-width:1px;font-family: arial;text-transform:uppercase;" th:text="${NomineeDetails.firstName}"></td>
+									</tr>
+									<tr>
+										<td height="25" style="font-size: 10px;border-bottom-color: #808080;border-bottom-style:solid;border-bottom-width:1px;font-family: arial;text-transform:uppercase;" th:text="${NomineeDetails.middleName}"></td>
+									</tr>
+									<tr>
+										<td height="25" style="font-size: 10px;border-bottom-color: #808080;border-bottom-style:solid;border-bottom-width:1px;font-family: arial;text-transform:uppercase;" th:text="${NomineeDetails.lastName}"></td>
+									</tr>
+									</tbody>
+								</table>
+							</td>
+						</tr>
+						<tr>
+							<td width="30%" style="font-weight: bold; padding: 3px; font-size: 10px; font-family: arial;">c. Date of Birth</td>
+							<td width="70%" style="font-size: 10px; font-family: arial;padding: 3px;text-transform:uppercase;" th:text="${NomineeDetails.dob}"></td>
+						</tr>
+						<tr>
+							<td width="30%" style="font-weight: bold; padding: 3px; font-size: 10px; font-family: arial;">d .Gender</td>
+							<td width="70%" style="font-size: 10px; font-family: arial;padding: 3px;text-transform:uppercase;" th:text="${NomineeDetails.gender}"></td>
+						</tr>
+						<tr>
+							<td width="30%" style="font-weight: bold; padding: 3px; font-size: 10px; font-family: arial;">e. Percentage</td>
+							<td width="70%" style="font-size: 10px; font-family: arial;padding: 3px;text-transform:uppercase;" th:text="${NomineeDetails.percentageShare}"></td>
+						</tr>
+						<tr>
+							<td width="30%" style="font-weight: bold; padding: 3px; font-size: 10px; font-family: arial;">f. Relationship with Annuitant</td>
+							<td width="70%" style="font-size: 10px; font-family: arial;padding: 3px;text-transform:uppercase;" th:text="${NomineeDetails.relationshipWithProposer}"></td>
+						</tr>
+						<tr th:if="${NomineeDetails.nomineeMinor == 'YES'}">
+							<td width="30%" style="font-weight: bold; padding: 3px; font-size: 10px; font-family: arial;">g. Appointee Full Name
+								<p style="font-size: 9px;margin: 0;text-align: right;"><i>(If nominee is under age 18)</i></p>
+							</td>
+							<td width="70%" style="font-size: 10px; font-family: arial;padding: 3px;text-transform:uppercase;" th:text="${NomineeDetails.guardianName}"></td>
+						</tr>
+						
+						<tr th:if="${NomineeDetails.nomineeMinor == 'YES'}">
+							<td width="30%" style="font-weight: bold; padding: 3px; font-size: 10px; font-family: arial;">h. Appointee relationship to Nominee</td>
+							<td width="70%" style="font-size: 10px; font-family: arial;padding: 3px;text-transform:uppercase;" th:text="${NomineeDetails.guardianRelation}"></td>
+
+						</tr>
+						<tr th:if="${NomineeDetails.nomineeMinor == 'YES'}">
+							<td width="30%" style="font-weight: bold; padding: 3px; font-size: 10px; font-family: arial;">i. Appointee Gender</td>
+							<td width="70%" style="font-size: 10px; font-family: arial;padding: 3px;text-transform:uppercase;"th:text="${NomineeDetails.appointeeGender}"></td>
+						</tr>
+						<tr th:if="${NomineeDetails.nomineeMinor == 'YES'}">
+							<td width="30%" style="font-weight: bold; padding: 3px; font-size: 10px; font-family: arial;">j. Appointee Date of Birth</td>
+							<td width="70%" style="font-size: 10px; font-family: arial;padding: 3px;text-transform:uppercase;"th:text="${NomineeDetails.appointeeDOB}"></td>
+						</tr>
+						
+						</tbody>
+					</table>
+				</td>
+		</th:block>
+		</tr>
+		</tbody>
+	</table>
+</td>

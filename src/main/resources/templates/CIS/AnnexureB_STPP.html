@@ -1,0 +1,178 @@
+<style>
+    body {
+         display: flex;
+         justify-content: center;
+         align-items: center;
+         min-height: 100vh;
+         margin: 0;
+         font-family: sans-serif;
+     }
+     .container {
+         display: flex;
+         flex-direction: column;
+         align-items: center;
+         margin: 10pt 40pt 20pt 40pt;
+         padding: 20px;
+         border : none;
+         max-width: 210mm; /* A4 width */
+         box-sizing: border-box; /* Ensure padding and border are included in the width */
+         font-size:14px;
+
+     }
+     .title {
+         font-size: 20px;
+         font-weight: bold;
+         margin-bottom: 10px;
+         text-align: center;
+     }
+     .info-table {
+         max-width: 100%; /* Ensure the table does not exceed its container */
+         width: 100%;
+         border-collapse: collapse;
+         table-layout: fixed; /* Ensure columns fit within the table */
+         margin: auto; /* Center the table */
+     }
+     .info-table th,
+     .info-table td {
+         padding: 10px;
+         border: 1px solid #000;
+         text-align: left;
+         word-wrap: break-word; /* Ensure text wraps within cells */
+         overflow-wrap: break-word; /* Additional support for wrapping */
+         vertical-align: top;
+
+     }
+     .info-table th {
+         background-color: #f2f2f2;
+         font-weight: bold;
+     }
+     /* Apply thicker border to the second column */
+     .info-table th:nth-child(3),
+     .info-table td:nth-child(3) {
+      width: 55%; /* Adjust the percentage to your needs */
+    }
+    .info-table th:nth-child(1),
+     .info-table td:nth-child(1) {
+      width: 8%; /* Adjust the percentage to your needs */
+    }
+    .info-table th:nth-child(4),
+    .info-table td:nth-child(4) {
+        width: 15%;
+    }
+     .disclaimer {
+         font-size: 12px;
+         margin-top: 10px;
+         text-align: center;
+     }
+
+     /* Style for Roman numerals with parentheses */
+     .roman { list-style-type: none;
+             counter-reset: roman-counter;
+            }
+     .roman li { counter-increment: roman-counter;
+               }
+     .roman li::before { content: "(" counter(roman-counter, lower-roman) ") ";
+                       }
+      /* Style for Roman numerals with parentheses bold */
+    .romanbold { list-style-type: none;
+             counter-reset: roman-counter;
+            }
+     .romanbold li { counter-increment: roman-counter;
+               }
+     .romanbold li::before { content: "(" counter(roman-counter, lower-roman) ") ";
+                          font-weight: bold;
+                       }
+</style>
+<body>
+<div class="container">
+    <h1 class="title"><u>Annexure –B</u></h1>
+    <p><strong>Services parameters and turnaround times:</strong> Policyholder servicing parameters and turnaround times shall be as follows :-</p>
+    <table class="info-table">
+        <tbody>
+        <tr>
+            <td><div align="center"><strong>S. No</strong></div></td>
+            <td><div align="center"><strong>SERVICE</strong></div></td>
+            <td>
+                <div align="center"><span style="font-weight: bold;">DESCRIPTION OF ITEM OF SERVICE</span></div><br>
+            </td>
+            <td><div align="center"><strong>Regulatory Turnaround Time</strong></div></td>
+        </tr>
+        <tr>
+            <td rowspan="2">1</td>
+            <td rowspan="2">New Business Proposal Processing</td>
+            <td>
+                Processing of Insurance Proposal and seeking further requirements for consideration of the proposal Decision on proposal from the date of receipt of proposal or from the date of receipt of additional requirement whichever is later.
+            </td>
+            <td>7 days from receipt of all necessary documents</td>
+        </tr>
+        <tr>
+            <td>Providing copy of the policy along with the proposal form.</td>
+            <td>15 days</td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td >post Policy Service Request</td>
+            <td>Post Policy Service Requests concerning mistakes / corrections in the Policy document</td>
+            <td rowspan="2">7 days from receipt of all necessary documents</td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td>Free-Look Cancellation </td>
+            <td>Free Look Cancellation & Refund from the date of receipt of request (receipt of all necessary documents)<br></td>
+        </tr>
+        <tr>
+            <td rowspan="2">4</td>
+            <td rowspan="2">Policy Servicing (from the date of receipt of request for the service specified)</td>
+            <td>
+                <p>Change of Address (KYC Norms to be complied)</p>
+                <p>Registration /Change of Nomination, Assignment.</p>
+                <p>Inclusion of new member in case of group policy</p>
+                <p>Alteration	in	ORIGINAL POLICY CONDITIONS (where applicable)</p>
+                <p>Policy loan</p>
+                <p>Unit / Index Linked Insurance Policy Switch, Top-up, and other related Services.</p>
+                <p>Decision on Policy Revival after receipt of all requirements.</p>
+                <p>Issue of Premium Payment Certificates (PPC)</p>
+            </td>
+            <td>7 days from receipt of all necessary documents</td>
+        </tr>
+        <tr>
+            <td>
+                <p>Issue of Duplicate Policy</p>
+            </td>
+            <td>7 days</td>
+        </tr>
+
+        <tr>
+            <td rowspan="2">5</td>
+            <td rowspan="2">Death claims </td>
+            <td>
+                Death claims settlements (not requiring investigations)
+            </td>
+            <td>15 days from receipt of all necessary documents</td>
+        </tr>
+        <tr>
+            <td>
+                <p>Early death claims requiring investigations - decision & payment</p>
+            </td>
+            <td>45 days from receipt of all necessary documents</td>
+        </tr>
+        <tr>
+            <td rowspan="2">6</td>
+            <td rowspan="2">Survival, Maturity, annuity payments </td>
+            <td>
+                <p>Settlement of Maturity Claims</p>
+                <p>Settlement of Survival Benefits</p>
+                <p>Annuity payments / Pension Payment</p>
+            </td>
+            <td>On due date</td>
+        </tr>
+        <tr>
+            <td>
+                <p>Surrender or partial withdrawal of Policy</p>
+            </td>
+            <td>7 days from receipt of all necessary documents</td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+</body>

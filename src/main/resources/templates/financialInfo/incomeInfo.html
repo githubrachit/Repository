@@ -1,0 +1,342 @@
+<td>
+                  <table border="1" cellspacing="0" cellpadding="0" width="100%" style="border-collapse: collapse;">
+                     <tbody>
+                        <tr>
+                           <th colspan="2" style="background-color: #003770; color: #fff;font-size: 10px; font-family: arial; padding: 4px" align="left">A. Income Information</th>
+                        </tr>
+                        </tr>
+				<!-- Start of Salary information -->
+				<tr style="width: 100%;">   
+				 <td colspan="3">
+                        <tr>
+                           <!-- <th colspan="0" style="background-color: #003770; color: #fff;font-size: 10px; font-family: arial; padding: 3px" align="left">B. Nominee Details</th> -->
+                        	<th colspan="0" style="font-size: 10px; font-family: arial; padding: 3px" align="left">1. Salary Information</th>
+                        </tr>
+                        
+                        <tr>
+                           <td style="padding: 3px;">
+                              <table border="0" cellspacing="0" cellpadding="0" width="100%" style="border-collapse: collapse;">
+                                 
+                                 <tbody>
+                                    <tr>
+                           <td width="30%" style="font-weight: bold; padding: 4px; font-size: 10px; font-family: arial;">Total</td>
+                           <td width="35%" style="font-size: 10px; font-family: arial;padding: 4px;text-transform:uppercase;" th:text=${incomeInfo.salaryInfo.total}></td>
+                        </tr>
+                        <tr>
+                           <td width="30%" style="font-weight: bold; padding: 4px; font-size: 10px; font-family: arial;">Monthly Average</td>
+                           <td width="35%" style="font-size: 10px; font-family: arial;padding: 4px;text-transform:uppercase" th:text=${incomeInfo.salaryInfo.avgMonthly}></td>
+                        </tr>
+                        <tr>
+                           <td width="30%" style="font-weight: bold; padding: 4px; font-size: 10px; font-family: arial;">Monthly Minimum</td>
+                           <td width="35%" style="font-size: 10px; font-family: arial;padding: 4px;text-transform:uppercase;" th:text=${incomeInfo.salaryInfo.minMonthly}></td>
+                        </tr>
+                        <tr>
+                           <td width="30%" style="font-weight: bold; padding: 4px; font-size: 10px; font-family: arial;">Monthly Maximum</td>
+                           <td width="35%" style="font-size: 10px; font-family: arial;padding: 4px;text-transform:uppercase;" th:text=${incomeInfo.salaryInfo.maxMonthly}></td>
+                        </tr>
+                        <tr>
+                           <td width="30%" style="font-weight: bold; padding: 4px; font-size: 10px; font-family: arial;">Total Transactions</td>
+                           <td width="35%" style="font-size: 10px; font-family: arial;padding: 4px;text-transform:uppercase;" th:text=${incomeInfo.salaryInfo.totalTransactions}></td>
+                        </tr>
+                           </td>
+                           </tr>
+                        
+                     </tbody>
+                  </table>
+				<tr style="width: 100%;">   
+				 <td colspan="3">
+                  <table border="0" cellspacing="0" cellpadding="0" width="100%" style="border-collapse: collapse;">
+                     <tbody>
+                        <tr>
+                           <!-- <th colspan="0" style="background-color: #003770; color: #fff;font-size: 10px; font-family: arial; padding: 3px" align="left">B. Nominee Details</th> -->
+                        	<th colspan="0" style="font-size: 10px; font-family: arial; padding: 3px" align="left">* Transactions</th>
+                        </tr>
+                        
+                        <tr>
+                           <td style="padding: 3px;">
+                              <table border="1" cellspacing="0" cellpadding="0" width="100%" style="border-collapse: collapse;">
+                                 <th:block th:each="transaction : ${incomeInfo.salaryInfo.transactions}">
+                                 <tbody>
+                                    <tr>
+                                       <td width="30%" style="font-weight: bold; padding: 3px; font-size: 10px; font-family: arial;">Linked Account Reference</td>
+                                       <td width="70%" style="font-size: 10px; font-family: arial;padding: 3px;" th:text="${transaction.linkedAccRef}"></td>
+                                    </tr>
+                                    <tr>
+                                       <td width="30%" style="font-weight: bold; padding: 3px; font-size: 10px; font-family: arial;">Masked Account Number</td>
+                                       <td width="70%" style="font-size: 10px; font-family: arial;padding: 3px;" th:text="${transaction.maskedAccNumber}"></td>
+                                    </tr>
+									<tr>
+                                       <td width="30%" style="font-weight: bold; padding: 3px; font-size: 10px; font-family: arial;">Account Type</td>
+                                       <td width="70%" style="font-size: 10px; font-family: arial;padding: 3px;" th:text="${transaction.accountType}"></td>
+                                    </tr>
+									<tr>
+                                       <td width="30%" style="font-weight: bold; padding: 3px; font-size: 10px; font-family: arial;">Transaction Timestamp</td>
+                                       <td width="70%" style="font-size: 10px; font-family: arial;padding: 3px;" th:text="${transaction.transactionTimestamp}"></td>
+                                    </tr>
+									<tr>
+                                       <td width="30%" style="font-weight: bold; padding: 3px; font-size: 10px; font-family: arial;">Value Date</td>
+                                       <td width="70%" style="font-size: 10px; font-family: arial;padding: 3px;" th:text="${transaction.valueDate}"></td>
+                                    </tr>
+									<tr>
+                                       <td width="30%" style="font-weight: bold; padding: 3px; font-size: 10px; font-family: arial;">Transaction Id</td>
+                                       <td width="70%" style="font-size: 10px; font-family: arial;padding: 3px;" th:text="${transaction.txnId}"></td>
+                                    </tr>
+									<tr>
+                                       <td width="30%" style="font-weight: bold; padding: 3px; font-size: 10px; font-family: arial;">Type</td>
+                                       <td width="70%" style="font-size: 10px; font-family: arial;padding: 3px;" th:text="${transaction.type}"></td>
+                                    </tr>
+									<tr>
+                                       <td width="30%" style="font-weight: bold; padding: 3px; font-size: 10px; font-family: arial;">Mode</td>
+                                       <td width="70%" style="font-size: 10px; font-family: arial;padding: 3px;" th:text="${transaction.mode}"></td>
+                                    </tr>
+									<tr>
+                                       <td width="30%" style="font-weight: bold; padding: 3px; font-size: 10px; font-family: arial;">Narration</td>
+                                       <td width="70%" style="font-size: 10px; font-family: arial;padding: 3px;" th:text="${transaction.narration}"></td>
+                                    </tr>
+									<tr>
+                                       <td width="30%" style="font-weight: bold; padding: 3px; font-size: 10px; font-family: arial;">Amount</td>
+                                       <td width="70%" style="font-size: 10px; font-family: arial;padding: 3px;" th:text="${transaction.amount}"></td>
+                                    </tr>
+									<tr>
+                                       <td width="30%" style="font-weight: bold; padding: 3px; font-size: 10px; font-family: arial;">Current Balance</td>
+                                       <td width="70%" style="font-size: 10px; font-family: arial;padding: 3px;" th:text="${transaction.currentBalance}"></td>
+                                    </tr>
+									<tr>
+                                       <td width="30%" style="font-weight: bold; padding: 3px; font-size: 10px; font-family: arial;">Reference</td>
+                                       <td width="70%" style="font-size: 10px; font-family: arial;padding: 3px;" th:text="${transaction.reference}"></td>
+                                    </tr>
+                                 </tbody>
+                                 </th:block>
+                              </table>
+                           </td>
+                           </tr>
+                        
+                     </tbody>
+                  </table>
+               </td>
+           </tr>
+<!-- end of salary information-->
+				  
+<!-- Start of Health and fitness information-->  
+				  <tr style="width: 100%;">   
+				 <td colspan="3">
+                        <tr>
+                           <!-- <th colspan="0" style="background-color: #003770; color: #fff;font-size: 10px; font-family: arial; padding: 3px" align="left">B. Nominee Details</th> -->
+                        	<th colspan="0" style="font-size: 10px; font-family: arial; padding: 3px" align="left">2. Cash Credits</th>
+                        </tr>
+                        
+                        <tr>
+                           <td style="padding: 3px;">
+                              <table border="0" cellspacing="0" cellpadding="0" width="100%" style="border-collapse: collapse;">
+                                 
+                                 <tbody>
+                                    <tr>
+                           <td width="30%" style="font-weight: bold; padding: 4px; font-size: 10px; font-family: arial;">Total</td>
+                           <td width="35%" style="font-size: 10px; font-family: arial;padding: 4px;text-transform:uppercase;" th:text=${incomeInfo.cashCredits.total}></td>
+                        </tr>
+                        <tr>
+                           <td width="30%" style="font-weight: bold; padding: 4px; font-size: 10px; font-family: arial;">Monthly Average</td>
+                           <td width="35%" style="font-size: 10px; font-family: arial;padding: 4px;text-transform:uppercase" th:text=${incomeInfo.cashCredits.avgMonthly}></td>
+                        </tr>
+                        <tr>
+                           <td width="30%" style="font-weight: bold; padding: 4px; font-size: 10px; font-family: arial;">Monthly Minimum</td>
+                           <td width="35%" style="font-size: 10px; font-family: arial;padding: 4px;text-transform:uppercase;" th:text=${incomeInfo.cashCredits.minMonthly}></td>
+                        </tr>
+                        <tr>
+                           <td width="30%" style="font-weight: bold; padding: 4px; font-size: 10px; font-family: arial;">Monthly Maximum</td>
+                           <td width="35%" style="font-size: 10px; font-family: arial;padding: 4px;text-transform:uppercase;" th:text=${incomeInfo.cashCredits.maxMonthly}></td>
+                        </tr>
+                        <tr>
+                           <td width="30%" style="font-weight: bold; padding: 4px; font-size: 10px; font-family: arial;">Total Transactions</td>
+                           <td width="35%" style="font-size: 10px; font-family: arial;padding: 4px;text-transform:uppercase;" th:text=${incomeInfo.cashCredits.totalTransactions}></td>
+                        </tr>
+                           </td>
+                           </tr>
+                        
+                     </tbody>
+                  </table>
+				<tr style="width: 100%;">   
+				 <td colspan="3">
+                  <table border="0" cellspacing="0" cellpadding="0" width="100%" style="border-collapse: collapse;">
+                     <tbody>
+                        <tr>
+                           <!-- <th colspan="0" style="background-color: #003770; color: #fff;font-size: 10px; font-family: arial; padding: 3px" align="left">B. Nominee Details</th> -->
+                        	<th colspan="0" style="font-size: 10px; font-family: arial; padding: 3px" align="left">* Transactions</th>
+                        </tr>
+                        
+                        <tr>
+                           <td style="padding: 3px;">
+                              <table border="1" cellspacing="0" cellpadding="0" width="100%" style="border-collapse: collapse;">
+                                 <th:block th:each="transaction : ${incomeInfo.cashCredits.transactions}">
+                                 <tbody>
+                                    <tr>
+                                       <td width="30%" style="font-weight: bold; padding: 3px; font-size: 10px; font-family: arial;">Linked Account Reference</td>
+                                       <td width="70%" style="font-size: 10px; font-family: arial;padding: 3px;" th:text="${transaction.linkedAccRef}"></td>
+                                    </tr>
+                                    <tr>
+                                       <td width="30%" style="font-weight: bold; padding: 3px; font-size: 10px; font-family: arial;">Masked Account Number</td>
+                                       <td width="70%" style="font-size: 10px; font-family: arial;padding: 3px;" th:text="${transaction.maskedAccNumber}"></td>
+                                    </tr>
+									<tr>
+                                       <td width="30%" style="font-weight: bold; padding: 3px; font-size: 10px; font-family: arial;">Account Type</td>
+                                       <td width="70%" style="font-size: 10px; font-family: arial;padding: 3px;" th:text="${transaction.accountType}"></td>
+                                    </tr>
+									<tr>
+                                       <td width="30%" style="font-weight: bold; padding: 3px; font-size: 10px; font-family: arial;">Transaction Timestamp</td>
+                                       <td width="70%" style="font-size: 10px; font-family: arial;padding: 3px;" th:text="${transaction.transactionTimestamp}"></td>
+                                    </tr>
+									<tr>
+                                       <td width="30%" style="font-weight: bold; padding: 3px; font-size: 10px; font-family: arial;">Value Date</td>
+                                       <td width="70%" style="font-size: 10px; font-family: arial;padding: 3px;" th:text="${transaction.valueDate}"></td>
+                                    </tr>
+									<tr>
+                                       <td width="30%" style="font-weight: bold; padding: 3px; font-size: 10px; font-family: arial;">Transaction Id</td>
+                                       <td width="70%" style="font-size: 10px; font-family: arial;padding: 3px;" th:text="${transaction.txnId}"></td>
+                                    </tr>
+									<tr>
+                                       <td width="30%" style="font-weight: bold; padding: 3px; font-size: 10px; font-family: arial;">Type</td>
+                                       <td width="70%" style="font-size: 10px; font-family: arial;padding: 3px;" th:text="${transaction.type}"></td>
+                                    </tr>
+									<tr>
+                                       <td width="30%" style="font-weight: bold; padding: 3px; font-size: 10px; font-family: arial;">Mode</td>
+                                       <td width="70%" style="font-size: 10px; font-family: arial;padding: 3px;" th:text="${transaction.mode}"></td>
+                                    </tr>
+									<tr>
+                                       <td width="30%" style="font-weight: bold; padding: 3px; font-size: 10px; font-family: arial;">Narration</td>
+                                       <td width="70%" style="font-size: 10px; font-family: arial;padding: 3px;" th:text="${transaction.narration}"></td>
+                                    </tr>
+									<tr>
+                                       <td width="30%" style="font-weight: bold; padding: 3px; font-size: 10px; font-family: arial;">Amount</td>
+                                       <td width="70%" style="font-size: 10px; font-family: arial;padding: 3px;" th:text="${transaction.amount}"></td>
+                                    </tr>
+									<tr>
+                                       <td width="30%" style="font-weight: bold; padding: 3px; font-size: 10px; font-family: arial;">Current Balance</td>
+                                       <td width="70%" style="font-size: 10px; font-family: arial;padding: 3px;" th:text="${transaction.currentBalance}"></td>
+                                    </tr>
+									<tr>
+                                       <td width="30%" style="font-weight: bold; padding: 3px; font-size: 10px; font-family: arial;">Reference</td>
+                                       <td width="70%" style="font-size: 10px; font-family: arial;padding: 3px;" th:text="${transaction.reference}"></td>
+                                    </tr>
+                                 </tbody>
+                                 </th:block>
+                              </table>
+                           </td>
+                           </tr>
+                        
+                     </tbody>
+                  </table>
+               </td>
+           </tr>
+<!-- End of Health and fitness information-->  
+ 
+<!-- Start of Investment and Insurance-->  
+				  <tr style="width: 100%;">   
+				 <td colspan="3">
+                        <tr>
+                           <!-- <th colspan="0" style="background-color: #003770; color: #fff;font-size: 10px; font-family: arial; padding: 3px" align="left">B. Nominee Details</th> -->
+                        	<th colspan="0" style="font-size: 10px; font-family: arial; padding: 3px" align="left">3. Non Cash Credits</th>
+                        </tr>
+                        
+                        <tr>
+                           <td style="padding: 3px;">
+                              <table border="0" cellspacing="0" cellpadding="0" width="100%" style="border-collapse: collapse;">
+                                 
+                                 <tbody>
+                                    <tr>
+                           <td width="30%" style="font-weight: bold; padding: 4px; font-size: 10px; font-family: arial;">Total</td>
+                           <td width="35%" style="font-size: 10px; font-family: arial;padding: 4px;text-transform:uppercase;" th:text=${incomeInfo.nonCashCredits.total}></td>
+                        </tr>
+                        <tr>
+                           <td width="30%" style="font-weight: bold; padding: 4px; font-size: 10px; font-family: arial;">Monthly Average</td>
+                           <td width="35%" style="font-size: 10px; font-family: arial;padding: 4px;text-transform:uppercase" th:text=${incomeInfo.nonCashCredits.avgMonthly}></td>
+                        </tr>
+                        <tr>
+                           <td width="30%" style="font-weight: bold; padding: 4px; font-size: 10px; font-family: arial;">Monthly Minimum</td>
+                           <td width="35%" style="font-size: 10px; font-family: arial;padding: 4px;text-transform:uppercase;" th:text=${incomeInfo.nonCashCredits.minMonthly}></td>
+                        </tr>
+                        <tr>
+                           <td width="30%" style="font-weight: bold; padding: 4px; font-size: 10px; font-family: arial;">Monthly Maximum</td>
+                           <td width="35%" style="font-size: 10px; font-family: arial;padding: 4px;text-transform:uppercase;" th:text=${incomeInfo.nonCashCredits.maxMonthly}></td>
+                        </tr>
+                        <tr>
+                           <td width="30%" style="font-weight: bold; padding: 4px; font-size: 10px; font-family: arial;">Total Transactions</td>
+                           <td width="35%" style="font-size: 10px; font-family: arial;padding: 4px;text-transform:uppercase;" th:text=${incomeInfo.nonCashCredits.totalTransactions}></td>
+                        </tr>
+                           </td>
+                           </tr>
+                        
+                     </tbody>
+                  </table>
+				<tr style="width: 100%;">   
+				 <td colspan="3">
+                  <table border="0" cellspacing="0" cellpadding="0" width="100%" style="border-collapse: collapse;">
+                     <tbody>
+                        <tr>
+                           <!-- <th colspan="0" style="background-color: #003770; color: #fff;font-size: 10px; font-family: arial; padding: 3px" align="left">B. Nominee Details</th> -->
+                        	<th colspan="0" style="font-size: 10px; font-family: arial; padding: 3px" align="left">* Transactions</th>
+                        </tr>
+                        
+                        <tr>
+                           <td style="padding: 3px;">
+                              <table border="1" cellspacing="0" cellpadding="0" width="100%" style="border-collapse: collapse;">
+                                 <th:block th:each="transaction : ${incomeInfo.nonCashCredits.transactions}">
+                                 <tbody>
+                                    <tr>
+                                       <td width="30%" style="font-weight: bold; padding: 3px; font-size: 10px; font-family: arial;">Linked Account Reference</td>
+                                       <td width="70%" style="font-size: 10px; font-family: arial;padding: 3px;" th:text="${transaction.linkedAccRef}"></td>
+                                    </tr>
+                                    <tr>
+                                       <td width="30%" style="font-weight: bold; padding: 3px; font-size: 10px; font-family: arial;">Masked Account Number</td>
+                                       <td width="70%" style="font-size: 10px; font-family: arial;padding: 3px;" th:text="${transaction.maskedAccNumber}"></td>
+                                    </tr>
+									<tr>
+                                       <td width="30%" style="font-weight: bold; padding: 3px; font-size: 10px; font-family: arial;">Account Type</td>
+                                       <td width="70%" style="font-size: 10px; font-family: arial;padding: 3px;" th:text="${transaction.accountType}"></td>
+                                    </tr>
+									<tr>
+                                       <td width="30%" style="font-weight: bold; padding: 3px; font-size: 10px; font-family: arial;">Transaction Timestamp</td>
+                                       <td width="70%" style="font-size: 10px; font-family: arial;padding: 3px;" th:text="${transaction.transactionTimestamp}"></td>
+                                    </tr>
+									<tr>
+                                       <td width="30%" style="font-weight: bold; padding: 3px; font-size: 10px; font-family: arial;">Value Date</td>
+                                       <td width="70%" style="font-size: 10px; font-family: arial;padding: 3px;" th:text="${transaction.valueDate}"></td>
+                                    </tr>
+									<tr>
+                                       <td width="30%" style="font-weight: bold; padding: 3px; font-size: 10px; font-family: arial;">Transaction Id</td>
+                                       <td width="70%" style="font-size: 10px; font-family: arial;padding: 3px;" th:text="${transaction.txnId}"></td>
+                                    </tr>
+									<tr>
+                                       <td width="30%" style="font-weight: bold; padding: 3px; font-size: 10px; font-family: arial;">Type</td>
+                                       <td width="70%" style="font-size: 10px; font-family: arial;padding: 3px;" th:text="${transaction.type}"></td>
+                                    </tr>
+									<tr>
+                                       <td width="30%" style="font-weight: bold; padding: 3px; font-size: 10px; font-family: arial;">Mode</td>
+                                       <td width="70%" style="font-size: 10px; font-family: arial;padding: 3px;" th:text="${transaction.mode}"></td>
+                                    </tr>
+									<tr>
+                                       <td width="30%" style="font-weight: bold; padding: 3px; font-size: 10px; font-family: arial;">Narration</td>
+                                       <td width="70%" style="font-size: 10px; font-family: arial;padding: 3px;" th:text="${transaction.narration}"></td>
+                                    </tr>
+									<tr>
+                                       <td width="30%" style="font-weight: bold; padding: 3px; font-size: 10px; font-family: arial;">Amount</td>
+                                       <td width="70%" style="font-size: 10px; font-family: arial;padding: 3px;" th:text="${transaction.amount}"></td>
+                                    </tr>
+									<tr>
+                                       <td width="30%" style="font-weight: bold; padding: 3px; font-size: 10px; font-family: arial;">Current Balance</td>
+                                       <td width="70%" style="font-size: 10px; font-family: arial;padding: 3px;" th:text="${transaction.currentBalance}"></td>
+                                    </tr>
+									<tr>
+                                       <td width="30%" style="font-weight: bold; padding: 3px; font-size: 10px; font-family: arial;">Reference</td>
+                                       <td width="70%" style="font-size: 10px; font-family: arial;padding: 3px;" th:text="${transaction.reference}"></td>
+                                    </tr>
+                                 </tbody>
+                                 </th:block>
+                              </table>
+                           </td>
+                           </tr>
+                        
+                     </tbody>
+                  </table>
+               </td>
+           </tr>
+<!-- End of Investment and Insurance--> 

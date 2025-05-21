@@ -1,0 +1,381 @@
+<td>
+	<table border="1" cellspacing="0" cellpadding="0" width="100%" style="border-collapse: collapse;">
+		<tbody>
+		<tr>
+			<th width="80%" style="text-align: center; background-color: black;border-color: #222222;border-style:solid;border-width:1px; color: #fff;font-size: 15px; font-family: arial; padding: 2px 2px ">C. INFORMATION OF LIFE TO BE INSURED</th>
+			<th width="10%" style="text-align: center; background-color: black;border-color: #222222;border-style:solid;border-width:1px; font-family: arial; padding: 2px 2px ">
+				<table width="100%" cellpadding="5" cellspacing="0" border="0" style="border-collapse: collapse; vertical-align: top;">
+					<tbody>
+					<tr>
+						<td colspan="2" style="font-weight: bold; text-align: center; font-size: 10px; color: #FFFFFF">Proposer/
+							Joint Life</td>
+					</tr>
+					<tr>
+						<td width="50%" style="font-weight: bold; text-align: center; font-size: 10px; color: #FFFFFF">Yes</td>
+						<td width="50%" style="font-weight: bold; text-align: center; font-size: 10px; color: #FFFFFF">No</td>
+					</tr>
+					</tbody>
+				</table>
+			</th>
+			<th width="10%" style="text-align: center; background-color: Black;border-color: #222222;border-style:solid;border-width:1px; font-family: arial; padding: 2px 2px ">
+				<table width="100%" cellpadding="5" cellspacing="0" border="0" style="border-collapse: collapse; vertical-align: top;">
+					<tbody>
+					<tr>
+						<td colspan="2" style="font-weight: bold; text-align: center; font-size: 10px; color: #FFFFFF">Life to be
+							Insured</td>
+					</tr>
+					<tr>
+						<td width="50%" style="font-weight: bold; text-align: center; font-size: 10px; color: #FFFFFF">Yes</td>
+						<td width="50%" style="font-weight: bold; text-align: center; font-size: 10px; color: #FFFFFF">No</td>
+					</tr>
+					</tbody>
+				</table>
+			</th>
+		</tr>
+		</tbody>
+	</table>
+	<table border="1" cellspacing="0" cellpadding="0" width="100%" style="border-collapse: collapse;">
+		<tbody>
+		<tr>
+			<td width="80%" style="padding: 2px 4px; border-color: #ccc;border-style:solid;border-width:1px; font-size: 10px; font-family: arial;"><span style="font-weight: bold;">1.</span> Do you have any life or Critical Illness insurance policy issued, pending approval from any other
+				insurance companies or has your application for Life/ Health/ Critical Illness insurance or its
+				reinstatement ever been offered at modified terms, rejected or postponed ?</td>
+			<td width="10%" style="padding: 5px; font-size: 10px; font-family: arial;text-align: center">
+				<table width="100%" cellpadding="5" cellspacing="0" border="0" style="border-collapse: collapse; vertical-align: top;">
+					<tbody>
+					<tr>
+						<td width="50%" style="font-weight: bold; text-align: center; font-size: 10px;">
+							<input type="checkbox" th:checked="${everLIIssuedPendingOrRejectedPostponed=='YES'}"></td>
+						</td>
+						<td width="50%" style="font-weight: bold; text-align: center; font-size: 10px;">
+							<input type="checkbox" th:checked="${everLIIssuedPendingOrRejectedPostponed!='YES'}"></td>
+						</td>
+					</tr>
+					</tbody>
+				</table>
+			</td>
+			<td width="10%" style="padding: 5px; font-size: 10px; font-family: arial;text-align: center">
+				<table width="100%" cellpadding="5" cellspacing="0" border="0" style="border-collapse: collapse; vertical-align: top;">
+					<tbody>
+					<tr>
+						<td width="50%" style="font-weight: bold; text-align: center; font-size: 10px;">
+							<input type="checkbox" th:checked="${insuredLIExist=='YES'}"></td>
+						</td>
+						<td width="50%" style="font-weight: bold; text-align: center; font-size: 10px;">
+							<input type="checkbox" th:checked="${insuredLIExist=='NO'}"></td>
+						</td>
+					</tr>
+					</tbody>
+				</table>
+			</td>
+		</tr>
+		</tbody>
+	</table>
+	<table border="1" cellspacing="0" cellpadding="0" width="100%" style="border-collapse: collapse;">
+		<tr>
+			<td width="100%" colspan="1" style="font-size: 10px; font-family: arial;padding:0;">
+				<table width="100%" cellpadding="2" cellspacing="0" border="0" style="border-collapse: collapse; vertical-align: top;">
+					<tbody>
+						<tr>
+							<td width="34%" style="font-size: 10px;padding: 2px 4px; font-family: arial;padding-left:9px;border-right: 1px solid #000">
+								<input type="checkbox">Issued or Pending:-
+								<span style="padding-left: 10px;" th:text="${everLIIssuedPendingLapsed}"></span>
+							</td>
+							<td width="33%" style="font-size: 10px;padding: 2px 4px; font-family: arial;padding-left:9px;border-right: 1px solid #000">
+								LIFE: TOTAL Sum Assured:-
+								<span style="padding-left: 10px;" th:text="${totalSumAssuredLifeIns}"></span>
+							</td>
+							<td width="33%" style="font-size: 10px;padding: 2px 4px; font-family: arial;padding-left:9px;">
+								CI / DD: TOTAL Sum Assured:-
+								<span style="padding-left: 10px;" th:text="${totalSumAssuredCriticalIllness}"></span>
+							</td>
+						</tr>
+						
+						<tr>
+							
+							<td colspan="2" style="font-size: 10px; padding: 2px 4px; font-family: arial;padding-left:9px;border-right: 1px solid #000;border-top: 1px solid #000;">
+								<input type="checkbox"> Offered at modified terms, rejected or postponed 
+								<span style="padding-left: 10px;" th:text="${everLIRejectedPostponed}"></span>
+							</td>
+							
+							<td style="font-size: 10px; padding: 2px 4px; font-family: arial;padding-left:9px;border-top: 1px solid #000;">
+								
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</td>
+		</tr>
+	</table>
+	
+	<table border="1" cellspacing="0" cellpadding="0" width="100%" style="border-collapse: collapse;">
+		<tbody>
+		<tr>
+			<td width="80%" style="padding: 2px 4px; border-color: #ccc;border-style:solid;border-width:0px; font-size: 10px; font-family: arial;"><span style="font-weight: bold;">2.</span> Active Life Insurance Policy SA across all Insurance companies for Spouse and Children _______________________ (in Crs.)</td>
+		
+		<tr>
+			<td style=" width:10%   padding: 2px 4px; border-color: #ccc;border-style:solid;border-width:1px; font-size: 10px; font-family: arial;"><span style="font-weight: bold;">3.</span> In the next 12 months you intend to travel or reside abroad other than on holiday of more than 4 weeks?
+
+				<br>
+			</td>
+			<td width="10%" style="padding: 5px; font-size: 10px; font-family: arial;text-align: center">
+				<table width="100%" cellpadding="5" cellspacing="0" border="0" style="border-collapse: collapse; vertical-align: top;">
+					<tbody>
+					<tr>
+						<td width="50%" style="font-weight: bold; text-align: center; font-size: 10px;">
+							<input type="checkbox" th:checked="${travelAbroad=='YES'}"/></td>
+						</td>
+						<td width="50%" style="font-weight: bold; text-align: center; font-size: 10px;">
+							<input type="checkbox" th:checked="${travelAbroad!='YES'}"/></td>
+						</td>
+					</tr>
+					</tbody>
+				</table>
+			</td>
+			<td width="100" style="padding: 5px; font-size: 10px; font-family: arial;text-align: center">
+				<table width="100%" cellpadding="5" cellspacing="0" border="0" style="border-collapse: collapse; vertical-align: top;">
+					<tbody>
+					<tr>
+						<td width="50%" style="font-weight: bold; text-align: center; font-size: 10px;">
+							<input type="checkbox" th:checked="${insuredhazardousActivity=='YES'}"/></td>
+						</td>
+						<td width="50%" style="font-weight: bold; text-align: center; font-size: 10px;">
+							<input type="checkbox" th:checked="${insuredhazardousActivity=='NO'}"/></td>
+						</td>
+					</tr>
+					</tbody>
+				</table>
+			</td>
+		</tr>
+		<tr>
+			<td style="padding: 2px 4px; border-color: #ccc;border-style:solid;border-width:1px; font-size: 10px; font-family: arial;"><strong style="font-weight: bold;">4.</strong> Do you participate or do you intend to participate in any hazardous activities as part of your Occupation/ Sports/ Hobby?
+				<br>
+				<span style="padding-left: 10px; padding-top: 5px;" th:if="${hazardousActivity=='YES'}">
+					Details: <span style="padding-top: 5px;" th:text="${hazardousActivitesDetails}"></span></span>
+			</td>
+			<td width="100" style="padding: 5px; font-size: 10px; font-family: arial;text-align: center">
+				<table width="100%" cellpadding="5" cellspacing="0" border="0" style="border-collapse: collapse; vertical-align: top;">
+					<tbody>
+					<tr>
+						<td width="50%" style="font-weight: bold; text-align: center; font-size: 10px;">
+							<input type="checkbox" th:checked="${hazardousActivity=='YES'}"/></td>
+						</td>
+						<td width="50%" style="font-weight: bold; text-align: center; font-size: 10px;">
+							<input type="checkbox" th:checked="${hazardousActivity!='YES'}"/></td>
+						</td>
+					</tr>
+					</tbody>
+				</table>
+			</td>
+			<td width="100" style="padding: 5px; font-size: 10px; font-family: arial;text-align: center">
+				<table width="100%" cellpadding="5" cellspacing="0" border="0" style="border-collapse: collapse; vertical-align: top;">
+					<tbody>
+					<tr>
+						<td width="50%" style="font-weight: bold; text-align: center; font-size: 10px;">
+							<input type="checkbox" th:checked="${insuredcriminalCharges=='YES'}"/></td>
+						</td>
+						<td width="50%" style="font-weight: bold; text-align: center; font-size: 10px;">
+							<input type="checkbox" th:checked="${insuredcriminalCharges=='NO'}"/></td>
+						</td>
+					</tr>
+					</tbody>
+				</table>
+			</td>
+		</tr>
+		<tr>
+			<td style="padding: 2px 4px; border-color: #ccc;border-style:solid;border-width:1px; font-size: 10px; font-family: arial;"><strong style="font-weight: bold;">5.</strong> Have you ever been convicted or are you under investigation for any criminal charges?
+				
+				<br>
+				<span style="padding-left: 10px; padding-top: 5px;" th:if="${criminalCharges=='YES'}">
+					Details: <span style="padding-top: 5px;" th:text="${criminalChargesDetails}"></span></span>
+			</td>
+			<td width="100" style="padding: 5px; font-size: 10px; font-family: arial;text-align: center">
+				<table width="100%" cellpadding="5" cellspacing="0" border="0" style="border-collapse: collapse; vertical-align: top;">
+					<tbody>
+					<tr>
+						<td width="50%" style="font-weight: bold; text-align: center; font-size: 10px;">
+							<input type="checkbox" th:checked="${criminalCharges=='YES'}"/></td>
+						</td>
+						<td width="50%" style="font-weight: bold; text-align: center; font-size: 10px;">
+							<input type="checkbox" th:checked="${criminalCharges!='YES'}"/></td>
+						</td>
+					</tr>
+					</tbody>
+				</table>
+			</td>
+			<td width="100" style="padding: 5px; font-size: 10px; font-family: arial;text-align: center">
+				<table width="100%" cellpadding="5" cellspacing="0" border="0" style="border-collapse: collapse; vertical-align: top;">
+					<tbody>
+					<tr>
+						<td width="50%" style="font-weight: bold; text-align: center; font-size: 10px;">
+							<input type="checkbox" th:checked="${insuredcriminalCharges=='YES'}"/></td>
+						</td>
+						<td width="50%" style="font-weight: bold; text-align: center; font-size: 10px;">
+							<input type="checkbox" th:checked="${insuredcriminalCharges=='NO'}"/></td>
+						</td>
+					</tr>
+					</tbody>
+				</table>
+			</td>
+		</tr>
+
+		</tbody>
+	</table>
+	<table border="1" cellspacing="0" cellpadding="0" width="100%" style="border-collapse: collapse;">
+		<tbody>
+			<tr>
+				<td style="padding: 2px 4px;font-size: 10px; font-family: arial;" colspan="2">
+						<span>
+							<strong>6. FOR FEMALE LIFE TO BE INSURED</strong>
+						</span>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<table width="100%" cellpadding="2" cellspacing="0" border="0" style="border-collapse: collapse; vertical-align: top;">
+						<tbody>
+						<tr>
+							<td width="10%" style="font-size: 10px;padding: 2px 4px; font-family: arial;padding-left:9px;"><strong>Spouse Detail:</strong></td>
+							<td width="20%" style="font-size: 10px;padding: 2px 4px; font-family: arial;padding-left:9px;">
+								<span>Occupation: </span>
+								<span style="padding-left: 10px;" th:if="${spouseOccupation!='NA'}" th:text=${spouseOccupation}></span>
+							</td>
+							<td width="20%" style="font-size: 10px;padding: 2px 4px; font-family: arial;padding-left:9px;">
+								<span>Income:</span>
+								<span style="padding-left: 10px;" th:if="${spouseAnnualIncome!='NA'}" th:text=${spouseAnnualIncome}></span>
+							</td>
+							<td width="20%" style="font-size: 10px;padding: 2px 4px; font-family: arial;padding-left:9px;">
+								<span>Insurance Amount:</span>
+								<span style="padding-left: 10px;" th:if="${spouseInsurance!='NA'}" th:text=${spouseInsurance}></span>
+							</td>
+							<td width="30%" style="font-size: 10px;padding: 2px 4px; font-family: arial;padding-left:9px;">
+								<span>Are you pregnant?</span>
+								<span style="padding-left: 10px;">
+									<input type="checkbox" th:checked="${proposerPregnant=='YES'}">Yes</input>
+									<input type="checkbox" th:checked="${proposerPregnant=='NO' || proposerPregnant=='NA'}">No</input>
+								</span>
+							</td>
+						</tr>
+						</tbody>
+					</table>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<table width="100%" cellpadding="2" cellspacing="0" border="0" style="border-collapse: collapse; vertical-align: top;">
+						<tbody>
+						<tr>
+							<td width="25%" style="font-size: 10px;padding: 2px 4px; font-family: arial;padding-left:9px;">
+								<span>If "Yes", how many months? &nbsp;&nbsp; _________ &nbsp; _________</span>
+								<span style="padding-left: 10px;" th:if="${months!='NA'}" th:text=${months}></span>
+							</td>
+							<td width="25%" style="font-size: 10px;padding: 2px 4px; font-family: arial;padding-left:9px;">
+								<span>Do you have any complications related to pregnancy?</span>
+								<span style="padding-left: 10px;" th:if="${anyComplications!='NA'}" th:text=${anyComplications}></span>
+							</td>
+							<td width="55%" style="font-size: 10px;padding: 2px 4px; font-family: arial;padding-left:9px;">
+								<input type="checkbox" th:checked="${proposerPregnant=='YES'}">If 'Yes' give details?</input>
+								<span style="padding-left: 10px;" th:if="${complicationDetails!='NA'}" th:text=${complicationDetails}></span>
+							</td>
+						</tr>
+						</tbody>
+					</table>
+				</td>
+			</tr>
+			<!--<tr>
+				<td>
+					<table width="100%" cellpadding="2" cellspacing="0" border="0" style="border-collapse: collapse; vertical-align: top;">
+						<tbody>
+						<tr>
+							<td width="10%" style="font-size: 10px;padding: 2px 4px; font-family: arial;padding-left:9px;"><strong>Spouse Detail:</strong></td>
+							<td width="30%" style="font-size: 10px;padding: 2px 4px; font-family: arial;padding-left:9px;">
+								<span>Occupation: </span>
+								<span style="padding-left: 10px;" th:if="${spouseOccupation!='NA'}" th:text=${spouseOccupation}></span>
+							</td>
+							<td width="30%" style="font-size: 10px;padding: 2px 4px; font-family: arial;padding-left:9px;">
+								<span>Income:</span>
+								<span style="padding-left: 10px;" th:if="${spouseAnnualIncome!='NA'}" th:text=${spouseAnnualIncome}></span>
+							</td>
+							<td width="30%" style="font-size: 10px;padding: 2px 4px; font-family: arial;padding-left:9px;">
+								<span>Insurance Amount:</span>
+								<span style="padding-left: 10px;" th:if="${spouseInsurance!='NA'}" th:text=${spouseInsurance}></span>
+							</td>
+						</tr>
+						</tbody>
+					</table>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<table width="100%" cellpadding="2" cellspacing="0" border="0" style="border-collapse: collapse; vertical-align: top;">
+						<tbody>
+						<tr>
+							<td width="70%" style="font-size: 10px;padding: 2px 4px; font-family: arial;padding-left:9px;">
+								<span>Have you experienced any complications during a previous pregnancy?</span>
+								<input type="checkbox" th:checked="${preAnyComplications == 'YES'}"> Yes </input>
+								<input type="checkbox" th:checked="${preAnyComplications == 'NO'}"> No </input>
+								<input type="checkbox" th:checked="${preAnyComplications == 'NA'}"> Not Applicable.</input>
+							</td>
+							<td width="30%" style="font-size: 10px;padding: 2px 4px; font-family: arial;padding-left:9px;">
+								<span>If yes, please provide details:</span>
+								<span style="padding-left: 10px;" th:if="${preComplicationDetails!='NA'}" th:text=${preComplicationDetails}></span>
+							</td>
+						</tr>
+						</tbody>
+					</table>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<table width="100%" cellpadding="2" cellspacing="0" border="0" style="border-collapse: collapse; vertical-align: top;">
+						<tbody>
+						<tr>
+							<td width="50%" style="font-size: 10px;padding: 2px 2px; font-family: arial;padding-left:9px;">
+								<span>Are you pregnant?</span>
+								<input type="checkbox" th:checked="${proposerPregnant=='YES'}">Yes</input>
+								<input type="checkbox" th:checked="${proposerPregnant=='NO' || proposerPregnant=='NA'}">No</input>
+							</td>
+							<td width="50%" style="font-size: 10px;padding: 2px 4px; font-family: arial;padding-left:9px;">
+								<span>If "Yes", how many months?</span>
+								<span style="padding-left: 10px;" th:if="${months!='NA'}" th:text=${months}></span>
+							</td>
+						</tr>
+						<tr>
+							<td width="50%" style="font-size: 10px;padding: 2px 4px; font-family: arial;padding-left:9px;">
+								<span>Do you have any complications related to pregnancy?</span>
+								<input type="checkbox" th:checked="${anyComplications=='YES'}"/> Yes </input>
+								<input type="checkbox" th:checked="${anyComplications=='NO'}"/> No </input>
+							</td>
+							<td width="50%" style="font-size: 10px;padding: 2px 4px; font-family: arial;padding-left:9px;">
+								<span>If "Yes", give details:</span>
+								<span style="padding-left: 10px;" th:if="${complicationDetails!='NA'}" th:text=${complicationDetails}></span>
+							</td>
+						</tr>
+						</tbody>
+					</table>
+				</td>
+			</tr>-->
+		</tbody>
+	</table>
+	<table border="1" cellspacing="0" cellpadding="0" width="100%" style="border-collapse: collapse;">
+		<tbody>
+			<tr>
+				<td style="padding: 2px 4px;font-size: 10px; font-family: arial;" colspan="2">
+						<span>
+							<strong>7. FOR MINOR LIFE TO BE INSURED (Age <18 yrs.)</strong>
+						</span>
+				</td>
+			</tr>
+			<tr>
+				<td style="padding: 2px 4px;font-size: 10px; font-family: arial;" width="50%">Parent's Annual Income:-
+						<span></span>
+				</td>
+				<td style="padding: 2px 4px;font-size: 10px; font-family: arial;" width="50%">Parent's - Total insurance cover:-
+						<span th:text=${familyCover}></span>
+				</td>
+			</tr>
+			<!-- Six End-->
+		 </tbody>
+  </table>
+  	<!-- Information of Life to be InsuredEnd here-->
+</td>

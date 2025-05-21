@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="utf-8">
+    <style>
+        table,
+        th,
+        td {
+            border: 1px solid black;
+            border-collapse: collapse;
+        }
+    </style>
+</head>
+
+<body>
+
+<table width="100%" border="1" cellspacing="0" cellpadding="0" style="border-collapse: collapse;">
+
+    <tbody>
+    <tr>
+        <th width="100%" colspan="3" style="background-color: #000000; color: #fff;font-size: 14px; font-family: arial; padding: 2px 4px; text-align: center;"> DOMESTIC HOME VISIT </th>
+    </tr>
+    </tbody>
+
+    <tr>
+        <td width="50%" style="padding: 2px 4px; font-size: 15px; font-family: arial;">Policy Number</td>
+        <td width="50%" style="padding: 2px 4px; font-size: 15px; font-family: arial;">
+            <span style="" th:text=${policyNumber}></span></td>
+    </tr>
+    <tr>
+        <td width="50%" style="padding: 2px 4px; font-size: 15px; font-family: arial;">Equote No.</td>
+        <td width="50%" style="padding: 2px 4px; font-size: 15px; font-family: arial;">
+            <span style="" th:text=${equoteNumber}></span>
+        </td>
+    </tr>
+    <tr>
+        <td width="50%" style="padding: 2px 4px; font-size: 15px; font-family: arial;">Timestamp</td>
+        <td width="50%" style="padding: 2px 4px; font-size: 15px; font-family: arial;">
+            <span style="" th:text=${timeStamp}></span>
+        </td>
+    </tr>
+    <tr>
+        <td width="50%" style="padding: 2px 4px; font-size: 15px; font-family: arial;">Type</td>
+        <td width="50%" style="padding: 2px 4px; font-size: 15px; font-family: arial;">
+            <span style="" th:text=${centerType}></span>
+        </td>
+    </tr>
+    <tr>
+        <td width="50%" style="padding: 2px 4px; font-size: 15px; font-family: arial;">Address</td>
+        <td width="50%" style="padding: 2px 4px; font-size: 15px; font-family: arial;">
+            <span style="" th:text=${address}></span>
+        </td>
+    </tr>
+    <tr>
+        <td width="50%" style="padding: 2px 4px; font-size: 15px; font-family: arial;">Preferred Date</td>
+        <td width="50%" style="padding: 2px 4px; font-size: 15px; font-family: arial;">
+            <span style="" th:text=${prefferedDate}></span>
+        </td>
+    </tr>
+    <tr>
+        <td width="50%" style="padding: 2px 4px; font-size: 15px; font-family: arial;">Preferred Time</td>
+        <td width="50%" style="padding: 2px 4px; font-size: 15px; font-family: arial;">
+            <span style="" th:text=${prefferedTime}></span>
+        </td>
+    </tr>
+    <tr>
+        <td width="50%" style="padding: 2px 4px; font-size: 15px; font-family: arial;">Reason for change</td>
+        <td width="50%" style="padding: 2px 4px; font-size: 15px; font-family: arial;">
+            <span style="" th:text=${reasonForChange}></span>
+        </td>
+    </tr>
+</table>
+</body>
+
+</html>

@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <title></title>
+      <style type="text/css">
+         table,td,tr{
+         border-collapse: collapse;
+         }
+         .pageBreakafter{
+         	page-break-after: always;
+         }
+         .pageBeakBefore{
+         	page-break-before: always;
+         }
+         *{
+            font-family: arial !important;
+            text-align:left;
+         }
+         @media print{
+         *{
+         font-size: 6pt !important;
+         }
+         .printtext{
+         font-size: 11pt !important;
+         }
+         }
+         @page{
+    		margin:20pt;
+    		border-left: solid 1.5pt;
+    		border-top: solid 1.5pt;
+    		border-bottom: solid 1.5pt;
+    		border-right: solid 1.5pt;
+            @bottom-left {
+               content:  url("classpath:static/[[${footer}]]");
+            }
+            @bottom-center {
+               font-family: arial;
+               font-size: 9px;
+               content: counter(page);
+            }
+            @bottom-right {
+               font-family: arial;
+               font-size:9px;
+               content: "TERM_STD_1123_1.0";
+            }
+		}
+      </style>
+   </head>
+   <body style="margin: 0 auto;padding: 0;width: 100%">
+      <table border="1" align="center" cellpadding="0" cellspacing="0" style="border-collapse: collapse;">
+         <tbody>
+            <!-- Main Wrapper Start Here-->
+            <tr>
+               <td>
+                  <table border="0" width="100%" cellpadding="0" cellspacing="0" style="border-collapse: collapse;">
+                     <tbody>
+                        <tr>
+                           <td>
+                              <table width="100%" border="1" cellspacing="0" cellpadding="0" style="border-collapse: collapse;">
+                                 <tbody>
+                                    <tr>
+                                       <td valign="top" width="64%">
+                                          <table style="width: 100%;" cellspacing="0" cellpadding="0">
+                                             <tbody>
+                                                <tr>
+                                                   <td>
+                                                      <table style="width: 100%; float: left;" cellspacing="0" cellpadding="0">
+                                                         <tbody>
+                                                            <tr>
+                                                               <td style="padding: 2px"><img src="classpath:static/logo_ax_max.png" alt="Axis Max Life Insurance" width="auto" height="45"/></td>
+                                                               <td style="padding: 2px">
+                                                                  <div style="font-size: 15px !important; font-family: arial; font-weight: bold;">Axis Max Life Insurance Limited</div>
+                                                                  <div style="font-size: 10px; font-family: arial;">Regd. Office : 419, Bhai Mohan Singh Nagar, Railmajra, Tehsil Balachaur, District Nawanshahr, Punjab, 144533</div>
+                                                                  <div style="font-size: 10px; font-family: arial;">Head Office: 11th & 12th Floor, DLF Square, Jacaranda Marg, DLF City Phase-II, Gurugram - Haryana, 122002</div>
+                                                               </td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td colspan="2">
+                                                                  <table width="100%" border="0" cellspacing="0" cellpadding="2" style="border-collapse: collapse;border-top: 1px solid black">
+                                                                     <tbody>
+                                                                        <tr>
+                                                                           <td>
+                                                                              <table width="100%" border="0" cellspacing="0" cellpadding="0" style="border-collapse: collapse;">
+                                                                                 <tbody>
+                                                                                    <tr>
+                                                                                       <td width="60%">
+                                                                                          <div style="padding-top: 5px; font-size: 14px; font-family: arial; font-weight: bold;"><strong>Non Linked Proposal Form</strong></div>
+                                                                                       </td>
+                                                                                       <td width="40%">
+                                                                                          <div style="padding-top: 5px; font-size: 14px; font-family: arial; font-weight: bold; text-transform: uppercase;"><strong>Proposal Number:</strong><span style="display: inline-block;text-transform:uppercase; font-weight: lighter;" th:text=${proposalNumber}></span></div>
+                                                                                       </td>
+                                                                                    </tr>
+                                                                                 </tbody>
+                                                                              </table>
+                                                                           </td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                           <td>
+                                                                              <table width="100%" border="0" cellspacing="0" cellpadding="1" style="border-collapse: collapse; padding-top: 5px;">
+                                                                                 <tbody>
+                                                                                    <tr>
+                                                                                       <td width="34%" style="padding-top: 8px; font-size: 10px; font-family: arial;"><span style="display: inline-block;padding-right:5px; font-weight: bold;">Combo Proposal Number:</span></td>
+                                                                                       <td width="33%" style="padding-top: 8px; font-size: 10px; font-family: arial;"><span style="display: inline-block;padding-right:5px; font-weight: bold;">GO/CA/Broker Code:</span><span style="display: inline-block;text-transform:uppercase" th:text=${gocaBrokerCode}></span></td>
+                                                                                       <td width="33%" style="padding-top: 8px; font-size: 10px; font-family: arial;"><span style="display: inline-block;padding-right:5px; font-weight: bold;">Customer ID:</span></td>
+                                                                                    </tr>
+                                                                                 </tbody>
+                                                                              </table>
+                                                                           </td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                           <td>
+                                                                              <table width="100%" border="0" cellspacing="0" cellpadding="1" style="border-collapse: collapse; padding-top: 5px;">
+                                                                                 <tbody>
+                                                                                 <tr>
+                                                                                    <td width="100%" style="font-size: 10px; font-family: arial;"><span style="display: inline-block;padding-right:5px; font-weight: bold;">For Traditional Insurance Plans this proposal is solicited by Axis Bank a Corporate Agent of Axis Max Life Insurance Ltd.</span></td>
+                                                                                 </tr>
+                                                                                 </tbody>
+                                                                              </table>
+                                                                           </td>
+                                                                        </tr>
+                                                                     </tbody>
+                                                                  </table>
+                                                               </td>
+                                                            </tr>
+                                                         </tbody>
+                                                      </table>
+                                                   </td>
+                                                </tr>
+                                             </tbody>
+                                          </table>
+                                       </td>
+                                       <td width="18%">
+                                          <img th:src= "${proposerImage}" alt="proposer image not available" width="auto" height="50px"/>
+                                          <div style="font-weight: bold; text-align: center; font-size: 12px;">Proposer/ Joint Life </div><br>
+                                          <div style="text-align: center; font-size: 10px;">Attach Recent Photograph</div>
+                                       </td>
+                                       <td width="18%"><img th:src= "${payorImage}" alt="payor image not available" width="auto" height="50px"/>
+                                          <div style="font-weight: bold; text-align: center; font-size: 12px;">Payor </div><br>
+                                          <div style="text-align: center; font-size: 10px;">Attach Recent Photograph</div>
+                                       </td>
+										
+                                    </tr>
+                                    <td colspan="3" style="font-weight: normal; font-size: 10px; font-family: arial;padding: 2px 4px">Do you have an Axis Max Life Insurance Policy or have currently applied for simultaneous policies?
+                                       <span style="font-weight: normal; font-size: 10px; font-family: arial; padding-left: 15px;">If yes give policy/proposal number?
+                                          <span th:text="${existingCustomer}"></span></span>
+                                       <span style="display: inline-block;" th:if="${existingCustomer=='YES'} and ${existingPolicyNumber!='0'}" th:text="'--('+${existingPolicyNumber}+')'"></span>
+                                    </td>
+                                    </tr>
+                                    <tr>
+                                       <td colspan="3" style="font-weight: normal; font-size: 10px; font-family: arial;padding: 2px 4px">
+                                          <span><b>Purpose of Insurance:</b>&nbsp;&nbsp;Savings</span>
+                                       </td>
+                                    </tr>
+                                    <tr>
+                                       <td colspan="3" style="font-weight: normal; font-size: 10px; font-family: arial;padding: 2px 4px">
+                                          <span><b>Objective of Insurance:</b>&nbsp;&nbsp;Individual</span>
+                                       </td>
+                                    </tr>
+                                    <tr>
+                                       <td width="64%" style="font-size: 10px; font-family: arial;padding: 2px 4px"><span style="display: inline-block;padding-right:5px; font-weight: bold;">Product Solution:</span>
+                                          <span style="display: inline-block;">N/A</span>
+                                       </td>
+                                       <td width="18%" style="font-size: 10px; font-family: arial;padding: 2px 4px"><span style="display: inline-block;padding-right:5px; font-weight: bold;">Affinity Customer:</span>
+                                          <span style="display: inline-block;">N/A</span>
+                                       </td>
+                                       <td width="18%" style="font-size: 10px; font-family: arial;padding: 2px 4px"><span style="display: inline-block;padding-right:5px; font-weight: bold;">Existing Customer:</span>
+                                          <span style="display: inline-block;" th:text=${existingCustomer}></span>
+                                       </td>
+                                    </tr>
+                                    <tr>
+                                 </tbody>
+                              </table>
+                           </td>
+                        </tr>
+                     </tbody>
+                  </table>
+               </td>
+            </tr>
+            <tr width="100%" th:utext=${personalDetails}>
+            </tr>
+            <tr width="100%" th:utext=${coverageDetails}>
+            </tr>
+            <tr width="100%" th:utext=${lifeInsuredDetails}>
+            </tr>
+            <tr width="100%" th:utext=${medicalDetails}>
+            </tr>
+            <tr width="100%" th:utext=${declarationDetails}>
+            </tr>
+            <tr width="100%" th:utext=${ckycDetails}>
+            </tr>
+            <tr width="100%" th:utext=${proposalFormAnnexure}>
+            </tr>
+            <table>
+               <tbody>
+                  <tr>
+                     <td height="40"></td>
+                  </tr>
+               </tbody>
+            </table>
+         </tbody>
+      </table>
+   </body>
+</html>

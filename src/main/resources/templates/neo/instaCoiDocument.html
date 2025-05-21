@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="utf-8">
+    <title>Test Page</title>
+    <style>
+        table,
+        th,
+        td {
+            border: 1px solid black;
+            border-collapse: collapse;
+        }
+
+        #firstTable,
+        th,
+        .test {
+            border: 0px;
+        }
+    </style>
+</head>
+
+<body>
+
+<table id="firstTable">
+    <tr>
+        <td >Policy No :</td><td th:text=${proposalNumber}>13224567</td>
+    </tr>
+    <tr>
+        <td >Plan Name :</td><td th:text=${planName}></td>
+    </tr>
+</table>
+
+<p>Insta COI</p>
+
+<table>
+    <tr>
+        <td><b>
+            <font color="#093caf">Heading</font>
+        </b></td>
+        <td><b>
+            <font color="#093caf">Response - Yes/No</font>
+        </b></td>
+    </tr>
+    <tr>
+        <td>Straight Pass Case</td>
+        <td>No</td>
+    </tr>
+    <tr>
+        <td>Clear Case</td>
+        <td th:text=${instaCoiFlag}></td>
+    </tr>
+</table>
+</body>
+
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <title></title>
+      <style type="text/css">
+         table,td,tr{
+         border-collapse: collapse;
+         }
+         .pageBreakafter{
+         	page-break-after: always;
+         }
+         .pageBeakBefore{
+         	page-break-before: always;
+         }
+         *{
+            font-family: arial !important;
+            text-align:left;
+         }
+         @media print{
+         *{
+         font-size: 6pt !important;
+         }
+         .printtext{
+         font-size: 11pt !important;
+         }
+         }
+         @page{
+    		margin:20pt;
+    		border-left: solid 1.5pt;
+    		border-top: solid 1.5pt;
+    		border-bottom: solid 1.5pt;
+    		border-right: solid 1.5pt;
+    		@bottom-right {
+    			font-family: arial;
+    			font-size:9px;
+        		content: "Page " counter(page) " of " counter(pages);
+    		}
+		}
+      </style>
+   </head>
+   <body style="margin: 0 auto;padding: 0;width: 100%">
+      <table border="1" align="center" cellpadding="0" cellspacing="0" style="border-collapse: collapse;">
+         <tbody>
+            <!-- Income Information-->
+            <tr th:utext=${incomeInfo}>
+				<td></td>
+            </tr>
+            <!-- Expense Information-->
+            <tr th:utext=${expenseInfo}>
+			<td></td>
+            </tr>
+            
+         </tbody>
+      </table>
+	  </br>
+   </body>
+</html>

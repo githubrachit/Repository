@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title></title>
+		<style type="text/css">
+         table,td,tr{
+         border-collapse: collapse;
+         }
+         .pageBreakafter{
+         	page-break-after: always;
+         }
+         .pageBeakBefore{
+         	page-break-before: always;
+         }
+         *{
+            font-family: arial !important;
+            text-align:left;
+         }
+         @media print{
+         *{
+         font-size: 6pt !important;
+         }
+         .printtext{
+         font-size: 11pt !important;
+         }
+         }
+         @page{
+    		margin:20pt;
+    		border-left: solid 1.2pt;
+    		border-top: solid 1.2pt;
+    		border-bottom: solid 1.2pt;
+    		border-right: solid 1.2pt;
+		}
+      </style>
+	</head>
+	<body>
+		<table width="100%" align="center" cellpadding="0" cellspacing="0" style="border-collapse: collapse;">
+			<tbody>
+				<tr>
+					<td>
+						<table width="100%" cellpadding="5" cellspacing="0">
+						<tbody>
+							<td width="100%" align="left"></td>
+							<div>
+								<table>
+									<tbody>
+									<tr>
+										<td style="width:100%"><img src='classpath:static/logo-IRP.png'
+																	alt="Axis Max Life Insurance"
+																	width="100%" height="100"></td>
+										<td>&nbsp;</td>
+									</tr>
+									</tbody>
+								</table>
+							</div>
+							<tr>
+								<td colspan="3" height="10">
+								</td>
+							</tr>
+						</tbody>
+						</table>
+						<table width="100%" cellpadding="5" cellspacing="0">
+						<tbody>
+							<tr>
+								<td style="font-weight: normal; font-size: 11px; font-family: arial;text-align: center;">
+								<div style="border:2px solid #444;text-transform: uppercase;background-color: #ccc;padding: 15px 20px;border-radius: 10px;width: 90%;font-size: 12px;font-weight: bold;margin:0 auto">
+								ADDENDUM (MWPA) TO LIFE INSURANCE PROPOSAL WHERE PROPOSER ISTHE LIFE TO BE INSURED - ON THE LIFE OF MALE PROPOSER
+								</div>
+								</td>
+							</tr>
+							<tr>
+								<td style="font-weight: normal; font-size: 11px; font-family: arial;text-align: center;">Re.: Section 6 of The Married Womenâ€™s Property Act, 1874
+								</td>
+							</tr>
+						</tbody>
+						</table>
+						<table width="100%" cellpadding="5" cellspacing="0">
+						<tbody>
+							<tr>
+							<td height="30">
+							</td>
+							</tr>
+						</tbody>
+						</table>
+						<table width="100%" border="0" cellspacing="0" cellpadding="10" style="font-weight: normal; font-size: 11px; font-family: arial;">
+						<tbody>
+							<tr>
+							<td style="font-weight: normal; font-size: 11px; font-family: arial;"><b>Proposal Number: </b>
+								<span style="display: inline-block;text-transform:uppercase;border-bottom: 1px solid #222" th:text="${mwpaMap.get('proposalNumber')}"></span>
+							</td>
+							</tr>
+							<tr>
+							<td height="15px">
+							</td>
+							</tr>
+							<tr>
+							<td style="font-weight: normal; font-size: 11px; font-family: arial;text-transform: uppercase;">
+								<b>IMPORTANT:</b>
+							</td>
+							</tr>
+						</tbody>
+						</table>
+						<table width="100%" cellpadding="5" cellspacing="0">
+						<tbody>
+							<tr>
+							<td height="15">
+							</td>
+							</tr>
+						</tbody>
+						</table>
+						<table width="100%" border="0" cellspacing="0" cellpadding="10" style="font-weight: normal; font-size: 11px; font-family: arial;">
+						<tbody>
+							<tr>
+								<td style="font-weight: normal; font-size: 11px; font-family: arial;">
+								The terms and conditions and important notes as contained in the Proposal Form to which this is the Addendum,apply to the Addendum. Policies of life insurance that may be effected under the provisions of Section 5 of theMarried Womenâ€™s Property Act, 1874, and Riders that may be attached to Policies so affected will be as per theInsurerâ€™s rules in effect from time to time.
+								</td>
+							</tr>
+							<tr>
+							<td height="15">
+							</td>
+							</tr>
+							<tr>
+								<td>
+									<table width="100%" border="1" cellspacing="0" bordercolor="#222" cellpadding="10" style="font-weight: normal; font-size: 11px; font-family: arial;margin: 0 auto;vertical-align: top;">
+									<tbody>
+									<tr>
+										<td width="30%" align="left" style="vertical-align: top;font-size: 11px; font-family: arial;">1. Full Name of Proposer
+										</td>	
+										<td width="70%" style="vertical-align: top" colspan="2">
+											<table width="100%" border="0" cellspacing="0" cellpadding="10" style="font-weight: normal; font-size: 11px; font-family: arial;text-align: center;">
+											<tbody>
+											<tr>
+												<td style="width: 20px;text-transform: uppercase;" th:text="${mwpaMap.get('title')}"></td>
+												<td style="text-transform: uppercase;" th:text="${mwpaMap.get('firstName')}"></td>
+												<td style="text-transform: uppercase;" th:text="${mwpaMap.get('middleName')}"></td>
+												<td style="text-transform: uppercase;" th:text="${mwpaMap.get('lastName')}"></td>
+											</tr>
+											<tr>
+												<td style="padding: 0;">(Title)</td>
+												<td style="padding: 0;">(First Name)</td>
+												<td style="padding: 0;">(Middle Name)</td>
+												<td style="padding: 0;">(Last Name)</td>
+											</tr>
+											</tbody>
+											</table>
+										</td>								
+									</tr>
+									<tr>
+										<td width="30%" align="left" style="font-size: 11px; font-family: arial;border-right: 1px solid">2. Particulars of beneficiary(ies)
+										</td>
+										<td width="35%" style="font-size: 11px; font-family: arial;">Write full name of Beneficiary</td>
+										<td width="35%" style="font-size: 11px; font-family: arial;">Date of Birth</td>
+									</tr>
+									<tr th:each="NomineeDetails : ${mwpaMap.get('nomineeDetails')}">
+												<td width="30%" align="left" style="font-size: 11px; font-family: arial;">
+												<span style="display: inline-block;width: 20px;border:0;padding-left: 20px;text-transform: uppercase;" th:text="${NomineeDetails.relation}"></span></td>
+												<td align="center" width="35%" style="font-size: 11px;border:0; font-family: arial;text-transform: uppercase;"><span th:text="${NomineeDetails.title}"/> <span th:text="${NomineeDetails.firstName}"/> <span th:text="${NomineeDetails.middleName}"/> <span th:text="${NomineeDetails.lastName}"/></td>
+												<td align="center" width="35%" style="font-size: 11px;border:0; font-family: arial;text-transform: uppercase;" th:text="${NomineeDetails.dob}"></td>
+									</tr>
+									<tr>
+										<td width="30%" style="border-right: 1px solid">[<b>Note:</b>In the case of Hindus, the terms "child" and "Children" means and includes sons and daughter by blood only. if one or more of the Beneficiaries is a minor, please name the Appointee in the Proposal Form. ]</td>
+										<td width="70%" colspan="2"><b style="text-transform: uppercase;width: 100%;text-align: left;">Declaration</b><p>The Policy, if issued pursuant to the above Proposal, is proposed to be effected pursuant to the provisions of section 6 of the married woman's property Act, 1874 ("Act") for the sole and absolute benefit of my above beneficiaries and i declare that the policy, if issued, shall have the same incidents as are prescribed in the said Section 6 of the Act, as if that secction had been incorporated in the policy.</p>
+										</td>
+									</tr>
+									</tbody>
+									</table>
+								</td>
+							</tr>
+							</tbody>
+						</table>
+						<table width="100%" cellpadding="5" cellspacing="0">
+						<tbody>
+							<tr>
+							<td height="15">
+							</td>
+							</tr>
+						</tbody>
+						</table>
+						<table width="100%" border="0" cellspacing="0" cellpadding="10" style="font-weight: normal; font-size: 14px; font-family: arial;text-align: left;"	>
+						<tbody>
+							<tr>
+							<td height="15" style="text-transform: uppercase;"><b>Bank details of beneficiaries:</b>
+							</td>
+							</tr>
+						</tbody>
+						</table>
+						<table width="100%" cellpadding="5" cellspacing="0">
+						<tbody>
+							<tr>
+							<td height="20">
+							</td>
+							</tr>
+						</tbody>
+						</table>
+						<table th:each="NomineeData,nomineeIter : ${mwpaMap.get('nomineeDetails')}" width="100%" border="0" cellspacing="1" cellpadding="10" style="font-weight: normal; font-size: 10px; font-family: arial;text-align: left;">
+						<tbody>
+							<tr>
+								<td style="padding:0 10px;">
+								<table width="100%" border="1" cellspacing="0" cellpadding="0" style="font-weight: normal; font-size: 11px; font-family: arial;">
+								<tbody>
+								<tr>
+									<td width="30%" height= "15px" style="text-transform: uppercase;font-weight: bold;">Beneficiary - #<span th:text="${nomineeIter.count}"></span></td>
+									<td width="70%"></td>
+								</tr>
+								<tr>
+									<td width="30%" style="font-weight: bold;padding: 5px;">1. Full Name</td>
+									<td width="70%">
+									<table width="100%" border="0" cellspacing="0" cellpadding="10" style="font-weight: normal; font-size: 11px; font-family: arial;text-align: center;">
+										<tbody>
+											<tr>
+												<td style="width: 20px;text-transform: uppercase;" th:text="${NomineeData.title}"></td>
+												<td style="text-transform: uppercase;" th:text="${NomineeData.firstName}"></td>
+												<td style="text-transform: uppercase;" th:text="${NomineeData.middleName}"></td>
+												<td style="text-transform: uppercase;" th:text="${NomineeData.lastName}"></td>
+											</tr>
+											<tr>
+												<td style="padding: 1;">(Title)</td>
+												<td style="padding: 0;">(First Name)</td>
+												<td style="padding: 0;">(Middle Name)</td>
+												<td style="padding: 0;">(Last Name)</td>
+											</tr>
+										</tbody>
+									</table>
+									</td>
+								</tr>
+								<tr>
+									<td width="30%" style="font-weight: bold;padding: 5px;">2. Date of Birth</td>
+									<td width="70%" cellpadding="0">
+									<table width="100%" border="1" cellspacing="0" cellpadding="10" style="font-weight: normal; font-size: 11px; font-family: arial;text-align: center;">
+										<tbody>
+											<tr>
+												<td width="30%" th:text="${NomineeData.dob}"></td>
+												<td width="70%" style="font-weight: bold;">3. Nomination Share: <span th:text="${NomineeData.nomineeShare}"></span></td>
+											</tr>
+										</tbody>
+									</table>
+									</td>
+								</tr>
+								<tr>
+									<td width="30%" style="font-weight: bold;padding: 5px;">4. Nationality</td>
+									<td width="70%" style="text-transform: uppercase;padding: 10px;">Indian</td>
+								</tr>
+								<tr>
+									<td width="30%" style="font-weight: bold;padding: 5px;">5. Relationship with proposer</td>
+									<td width="70%" style="padding: 10px;" th:text="${NomineeData.relation}"></td>
+								</tr>
+								<tr>
+									<td width="30%" style="font-weight: bold;padding: 5px;">6. Bank Account Number</td>
+									<td width="70%" style="padding: 0;">
+										<table width="100%" cellspacing="0" cellpadding="10" style="font-weight: normal; font-size: 11px; font-family: arial;text-align: center;">
+										<tbody>
+										<tr>
+											<td width="30%" th:text="${NomineeData.bankAccountNumber}"></td>
+											<td width="70%" style="font-weight: bold;">7. Type of account:
+											<span style="font-weight: normal;" th:text="${NomineeData.typeOfAccount}"></span>
+											</td>
+										</tr>
+										</tbody>
+										</table>
+									</td>
+								</tr>
+								<tr>
+									<td width="30%" style="font-weight: bold;padding: 5px;">8. Account Holder Name</td>
+									<td width="70%" style="text-transform: uppercase;padding: 10px;" th:text="${NomineeData.accountHolderName}"></td>
+								</tr>
+								<tr>
+									<td width="30%" style="font-weight: bold;padding: 5px;">9. IFSC code</td>
+									<td width="70%" style="padding: 0;">
+									<table width="100%" border="1" cellspacing="0" cellpadding="10" style="font-weight: normal; font-size: 11px; font-family: arial;text-align: center;">
+										<tbody>
+										<tr>
+											<td width="30%" th:text="${NomineeData.ifsc}"></td>
+											<td width="70%" style="font-weight: bold;">10.  MICR code: <span style="font-weight: normal;" th:text="${NomineeData.micr}"></span></td>
+										</tr>
+										</tbody>
+									</table>
+									</td>
+								</tr>
+								<tr>
+									<td width="30%" style="font-weight: bold;padding: 5px;">11. Bank Name &amp; Branch</td>
+									<td width="70%" style="padding: 10px;"><span th:text="${NomineeData.bankName}"/> <span th:text="${NomineeData.bankBranch}"/></td>
+								</tr>
+								</tbody>
+								</table>
+								</td>
+							</tr>
+						</tbody>
+						</table>
+						<table width="100%" cellpadding="5" cellspacing="0">
+						<tbody>
+							<tr>
+							<td height="20">
+							</td>
+							</tr>
+						</tbody>
+						</table>	
+						<table width="100%" border="0" cellspacing="0" cellpadding="10" style="font-weight: normal; font-size: 11px; font-family: arial;"> 
+						<tbody>
+							<tr>
+							<td>
+							<table width="100%" border="1" cellspacing="0" bordercolor="#222" cellpadding="10" style="font-weight: normal; font-size: 14px; font-family: arial;">
+							<tbody>
+								<tr>
+								<td style="font-weight: normal; font-size: 11px; font-family: arial;width: 30%;vertical-align: top;text-align: justify;">
+								If the object of insurance is to effect a policy under Section 6 of the Married Women' s Property Act, 1874, who do you wish to appoint as trustee?
+								</td>
+								<td style="font-weight: normal; font-size: 11px; font-family: arial;width: 70%;vertical-align: bottom;">
+									<table width="100%" border="0" cellspacing="0" bordercolor="#222" cellpadding="10" style="font-weight: normal; font-size: 14px; font-family: arial;">
+									<tbody>
+									<tr>
+									<td style="font-weight: normal; font-size: 11px; font-family: arial;vertical-align: bottom;padding-top: 0; text-align: justify;">
+									I further declare that neither I nor my estate shall have any interest in the Policy. I request that the Policy, if issued, be issued under Section 6 of the Married Women' s Property Act, 1874. for the absolute benefit of the beneficiary/ beneficiaries aforesaid, and I (a) do not appoint trustee(s)!(b) hereby appoint
+									<span style="text-align: center;min-width: 180px;border-bottom-color: #000;border-bottom-style: solid;border-bottom-width: 1px;display: inline-block;padding: 0 18px;font-weight: bold;"></span>or failing<span style="text-align: center;min-width: 180px;border-bottom-color: #000;border-bottom-style: solid;border-bottom-width: 1px;display: inline-block;padding: 0 18px;font-weight: bold;"></span>to be trustee to receive the Policy moneys and hold the same in trust for the said beneficiary(ies) under the provisions of the Act and in case the said trust declines or becomes incapable to act or is disqualified to act as trustee under the law or cannot act for any reason whatsoever, then I shall have the power by deed to appoint a new trustee (including the beneficiary, If major) to receive the policy moneys and hold the same In trust for the said beneficiary(ies) under the provisions of the Act.
+									</td>
+									</tr>
+									<tr>
+									<td height="20"></td>
+									</tr>
+									<tr>
+									<td style="font-weight: normal; font-size: 10spx; font-family: arial;vertical-align: bottom;text-align: justify;">
+									I hereby authorize the trustee to obtain loan or loan(s) against the Policy if issued, only from <b>Axis Max Life Insurance Ltd</b>
+									on the surety of the Policy, and solely for the benefit of the above named beneficiary(ies), only when the beneficiary(ies) is/are major and competent to contract at the relevant time. The consent of the aforesaid to act as trustee is endorsed below. I agree to act as trustee as aforesaid.
+									</td>
+									</tr>
+									<tr>
+									<td height="20"></td>
+									</tr>
+									<tr>
+									<td>
+									<span style="text-align: center;width: 180px;border-bottom-color: #000;border-bottom-style: solid;border-bottom-width: 1px;display:block;padding: 0 18px;font-weight: bold;margin-bottom: 15px;"></span>Signature of trustee
+									</td>
+									</tr>
+									<tr>
+									<td>I agree to act as alternate trustee as</td>
+									</tr>
+									<tr>
+									<td>
+									<span style="text-align: center;width: 180px;border-bottom-color: #000;border-bottom-style: solid;border-bottom-width: 1px;display:block;padding: 0 18px;font-weight: bold;margin-bottom: 15px;"></span>Signature of trustee
+									</td>
+									</tr>
+									</tbody>
+									</table>
+								</td>
+								</tr>
+							</tbody>
+							</table>							
+							</td>
+							<td>
+								<table width="100%">
+								<tbody>
+								<tr>
+								<td height="20"></td>
+								</tr>
+								</tbody>
+								</table>
+							</td>
+							</tr>
+						</tbody>
+						</table>
+						<table>
+						<tbody>
+						<tr>
+							<td style="height: 15px;width:300px;" colspan="2">Signed at
+							<span style="text-align: center;min-width: 150px;border-bottom-color: #000;border-bottom-style: solid;border-bottom-width: 1px;display: inline-block;padding: 0 18px;"></span>On
+							<span style="text-align: center;min-width: 150px;border-bottom-color: #000;border-bottom-style: solid;border-bottom-width: 1px;display: inline-block;padding: 0 18px;"></span>
+							</td>
+						</tr>
+						<tr>
+							<td style="height: 15px;width: 430px">
+							<span style="width: 180px;display: inline-block;">Signature of the Proposer:</span>
+							<span style="text-align: center;min-width: 150px;border-bottom-color: #000;border-bottom-style: solid;border-bottom-width: 1px;display: inline-block;padding: 0 18px;"></span>
+							<span style="width: 180px;display: inline-block;">Name of the Proposer :</span>
+							<span style="text-align: center;min-width: 150px;border-bottom-color: #000;border-bottom-style: solid;border-bottom-width: 1px;display: inline-block;padding: 0 18px;"></span>
+							</td>
+						</tr>
+						<tr>
+							<td style="height: 15px;width: 430px">
+							<span style="width: 180px;display: inline-block;">Signature of the Witness:</span>
+							<span style="text-align: center;min-width: 150px;border-bottom-color: #000;border-bottom-style: solid;border-bottom-width: 1px;display: inline-block;padding: 0 18px;"></span>
+							<span style="width: 180px;display: inline-block;">Name of the Witness :</span>
+							<span style="text-align: center;min-width: 150px;border-bottom-color: #000;border-bottom-style: solid;border-bottom-width: 1px;display: inline-block;padding: 0 18px;"></span>
+							</td>
+						</tr>
+						<tr>
+							<td style="height: 15px;width: 430px">
+							<span style="width: 180px;display: inline-block;">Signature of the Witness:</span>
+							<span style="text-align: center;min-width: 150px;border-bottom-color: #000;border-bottom-style: solid;border-bottom-width: 1px;display: inline-block;padding: 0 18px;"></span>
+							</td>
+						</tr>
+						</tbody>
+						</table>
+						<table width="100%">
+						<tr>
+							<td height="20">
+							</td>
+						</tr>
+						</table>
+						<table width="100%" border="0" cellspacing="0" cellpadding="10" style="font-weight: normal; font-size: 11px; font-family: arial;">
+						<tr>
+							<td>In case the Proposer is illiterate, her lett thumb impression should be attested by a person of standing unconnected with the Company but whose identity can easily be established and this declaration should be made by him/her.</td>
+						</tr>
+						</table>
+						<table width="100%">
+						<tr>
+							<td height="20">
+							</td>
+						</tr>
+						</table>
+						<table width="100%" border="0" cellspacing="0" cellpadding="10" style="font-weight: normal; font-size: 11px; font-family: arial;">
+						<tr>
+							<td style="text-align: justify;">Declaration to be made by a person of standing unconnected with the Company but whose identity can easily be established to the effect that the statements and declarations made hereinabove have been explained to the Proposer in vernacular language understood by her and that the signature of the Proposer has been appended after fully understanding the same.</td>
+						</tr>
+						</table>
+						<table width="100%">
+						<tr>
+							<td height="20">
+							</td>
+						</tr>
+						</table>
+						<table width="100%" border="0" cellspacing="0" cellpadding="10" style="font-weight: normal; font-size: 11px; font-family: arial;">
+						<tbody>
+						<tr>
+							<td style="font-weight: normal; font-size: 14px; font-family: arial;width: 60%;vertical-align: top">
+							<table>
+							<tbody>
+								<tr>
+								<td>Declaration by the person filling the form and attesting the correctness and completeness</td>
+								</tr>
+								<tr>
+								<td style="font-weight: normal; font-size: 11px; font-family: arial;width: 66%;vertical-align: top;">Declarantâ€™s name and address</td>
+								<td style="width: 31%"></td>
+								</tr>
+								<tr>
+									<td style="font-weight: normal; font-size: 11px; font-family: arial;width: 100%;vertical-align: top;height: 15px;">
+									<span style="display: inline-block;width: 12%">Name</span>
+									<span style="text-align: center;width: 87%;border-bottom-color: #000;border-bottom-style: solid;border-bottom-width: 1px;display: inline-block;font-weight: bold;"></span></td>
+								</tr>
+								<tr>
+									<td style="font-weight: normal; font-size: 11px; font-family: arial;width: 100%;vertical-align: top;height: 15px;">
+									<span style="display: inline-block;width: 12%">Address</span>
+									<span style="text-align: center;width: 87%;border-bottom-color: #000;border-bottom-style: solid;border-bottom-width: 1px;display: inline-block;font-weight: bold;"></span></td>
+								</tr>
+								<tr>
+									<td style="font-weight: normal; font-size: 11px; font-family: arial;width: 100%;vertical-align: top;height: 15px;">
+									<span style="text-align: center;width: 100%;border-bottom-color: #000;border-bottom-style: solid;border-bottom-width: 1px;display: inline-block;font-weight: bold;"></span></td>
+								</tr>
+							</tbody>
+							</table>
+							</td>
+							<td style="font-weight: normal; font-size: 11px; font-family: arial;width: 40%;vertical-align: top;">
+							<table>
+							<tbody>
+							<tr>
+								<td width="100%" style="text-align: justify;">I hereby declare that I have fully explained the contents of this Addendum to the Proposal to the Proposer in the language understood by the Proposer and that the Proposer/I has/have truthfully recorded the answers given by the Proposer.</td>
+							</tr>
+							<tr>
+								<td height="20"></td>
+							</tr>
+							<tr>
+								<td width="100%" border="0" cellspacing="0" cellpadding="10" style="font-weight: normal; font-size: 11px; font-family: arial;text-align: left;">
+								<span style="width: 12%">Signature</span>
+								<span style="text-align: center;width: 80%;border-bottom-color: #000;border-bottom-style: solid;border-bottom-width: 1px;display: inline-block;font-weight: bold;"></span></td>
+							</tr>
+							</tbody>
+							</table>
+							</td>
+						</tr>
+						</tbody>
+						</table>
+						<table width="100%">
+						<tbody>
+							<tr>
+							<td height="20">
+							</td>
+							</tr>
+						</tbody>
+						</table>
+						<table width="100%">
+						<tbody>
+							<tr>
+							<td height="20">
+							</td>
+							</tr>
+						</tbody>
+						</table>
+						<table width="100%">
+						<tbody>
+							<tr>
+							<td>
+<!--								<div th:if="${isNotYBLProposal}">-->
+<!--									<img src="classpath:static/footer_updated.png" alt="Max Life Insurance" width="150"/>-->
+<!--								</div>-->
+							</td>
+							</tr>
+						</tbody>
+						</table>
+					</td>
+				</tr>
+			</tbody>
+			</table>
+	</body>
+</html>

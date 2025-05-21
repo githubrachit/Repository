@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <title></title>
+        <style type="text/css">.justify {
+            align: justify;
+        }
+
+        .center {
+            text-align: center;
+        }
+
+        .margin20 {
+            margin: 20px;
+        }
+
+        .margin_top40 {
+            margin-top: 40px;
+        }
+
+        .margin_left40 {
+            margin-left: 40px;
+        }
+
+        .margin_left60 {
+            margin-left: 60px;
+        }
+
+        .margin_right60 {
+            margin-right: 60px;
+        }
+
+        .font22 {
+            font-size: 17px;
+        }</style>
+    </head>
+    <body>
+        <p style="margin-top:8px;margin-left:10px;"><img src="classpath:static/logo_ax_max.png"/><br/></p>
+        <div class="margin_right60" align="justify"><p class="margin_left60 font22">Dear <span th:text="${firstName}"></span>,</p>
+            <p class="margin_left60 font22">Axis Max Life Insurance appreciates the trust that you have placed in us. We are one of the leading players in life insurance and
+                have the vision of being the Most Admired Life Insurance Company in India.</p>
+            <p class="margin_left60 font22">We are pleased to acknowledge the receipt of your payment of Rs.&nbsp;<span
+                    style="font-family: Helvetica, sans-serif; font-size: medium; text-align: left; background-color: rgb(255, 255, 255);" th:text="${amount}">&nbsp;</span> on <span th:text="${paymentDate}"></span> towards initial payment for the proposal for <span th:text="${proposalNumber}"></span>.&nbsp;</p>
+            <p class="margin_left60 font22">Please note that the receipt of the initial payment made by you does not create any obligation on us to underwrite the risk
+                and we will not be liable until such time we have underwritten the risk and issued the Policy.</p>
+            <p class="margin_left60 font22">Therefore, as <b>next steps</b>, we request you to:</p>
+            <ol class="margin_left60 font22">
+                <li>Complete the Proposal Form by filling the details online.</li>
+                <li>Provide us self attested scanned copies of the documents mentioned below:<br/>
+                    <ul type="bull">
+                        <li>Photo</li>
+                        <li>Date of Birth Proof</li>
+                        <li>Communication Address Proof</li>
+                        <li>Income Documents</li>
+                        <li>Identity Proof</li>
+                        <li>Pan Acknowledgement</li>
+                        <li>Permanent Address Proof</li>
+                        <li>Medical Documents</li>
+                    </ul>
+                    You can upload the scanned copies of above documents by clicking on <a
+                            href="https://www.axismaxlife.com/continue-your-journey?leadId">Upload Documents</a> or send the same to us via email to
+                    online@axismaxlife.com
+                </li>
+            </ol>
+            <p class="margin_left60 font22">We thank you for choosing Axis Max Life Insurance as your Life Insurance Partner. We take pride in our association and look
+                forward to serving you.</p>
+            <p class="margin_left60 font22">Yours sincerely,</p>
+            <p class="margin_left60 font22">Online Customer Care Team</p>
+            <p class="margin_left60 font22">Axis Max Life Insurance</p>
+            <p class="margin_left60 font22"><b>Note:</b></p>
+            <ul class="margin_left60 font22" type="bull">
+                <li>This is only an interim confirmation and not a receipt. The final receipt will be issued by Axis Max Life Insurance Limited along with the policy
+                    document.
+                </li>
+                <li>The benefits if any under the Income Tax Act, 1961 would be applicable only after the Policy is issued. We request you to please consult with your
+                    tax consultant for more information.
+                </li>
+                <li>If you have opted for standing instruction , the card used for this premium payment will be debited for the amount of the renewal premium(s) by the
+                    due date which is mentioned on your policy contract
+                </li>
+            </ul>
+            <p class="margin_left40" style="color:#003873;"><span class="font22">AXIS MAX LIFE INSURANCE LTD.</span><br/> <span style="font:size:12px;">3rd, 11th and 12th Floor, DLF Square, Jacaranda Marg, DLF City Phase II, Gurgaon, Haryana - 122 002, India.</span>
+                <br/> <span style="font:size:12px;">T +91-124-4159300 F +91-124-4159399 www.axismaxlife.com</span><br/> <span style="font:size:12px;">Registered Office: Max House, 3rd Floor, 1 DrJhaMarg, Okhla, New Delhi 110 020, India.</span>
+            </p></div> &nbsp;
+        <div style="height:45px;background-color:#FFFFFF;margin-left:-10px;margin-right:-10px;"></div>
+    </body>
+</html>
+

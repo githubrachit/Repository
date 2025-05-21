@@ -1,0 +1,331 @@
+<td style="font-family: arial;">
+                  <table cellspacing="0" cellpadding="0" width="100%" style="border-collapse: collapse; border-color: #ccc;border-style:solid;border-width:1px;">
+                     <tbody>
+                        <tr>
+                           <th colspan="2" style="background-color: #003770;border-color: #ccc;border-style:solid;border-width:1px; color: #fff;font-size: 10px; font-family: arial; padding: 3px" align="left">E. DECLARATION AND AUTHORISATION</th>
+                        </tr>
+                        <tr th:if="${visibleVernacular} == true">
+                            <td colspan="2" style="padding: 2px 2px;border-top-color: #ccc;border-top-style:solid;border-top-width:1px; font-size: 9px; font-family: arial;">
+                                <table cellspacing="0" cellpadding="0" width="100%" style="width:100%;padding:0" >
+                                    <tr>
+                                        <td colspan="2" style="border:1px solid #000; padding: 3px; font-size: 12px; font-weight: bold; background-color: #c0c0c0; font-family: arial;">VERNACULAR /ILLITERATE DECLARATION</td>
+                                    </tr>
+<!--                                    <tr>-->
+<!--                                        <td style="padding: 3px;border-color: #222;border-style:solid;border-width:1px; font-size: 12px; font-family: arial;"><strong>VERNACULAR /ILLITERATE DECLARATION</strong></td>-->
+<!--                                    </tr>-->
+                                    <tr>
+                                        <td style="padding: 3px;border-color: #222;border-style:solid;border-width:1px; font-size: 12px; font-family: arial;">
+                                            <p style="line-height: 12px;">(Declaration to be made by a person unconnected with Axis Max life Insurance Limited but whose identify can be easily established.) I hereby declare that I have fully explained the contents of this proposal to the proposer/Life to be Insured in <span style="text-align: center;min-width: 180px;border-bottom-color: #000;border-bottom-style: solid;border-bottom-width: 1px;display: inline-block;padding: 0 18px;font-weight: bold;text-transform:uppercase;"><span th:text="${preferredLanguage}"></span></span>language, as understood by him/her and that the left thumb impression/signature of the proposer/Life to be Insured has been appended/affixed after fully understanding the contents thereof. I have truthfully recorded the answers given by the Proposer/Life to be Insured.I have understood the content of the proposal form as explained to me in <span style="text-align: center;min-width: 180px;border-bottom-color: #000;border-bottom-style: solid;border-bottom-width: 1px;display: inline-block;padding: 0 18px;font-weight: bold;text-transform:uppercase;"><span th:text="${preferredLanguage}"></span></span>language   by the declarant, Mr./Ms. <span style="text-align: center;min-width: 180px;border-bottom-color: #000;border-bottom-style: solid;border-bottom-width: 1px;display: inline-block;padding: 0 18px;font-weight: bold;text-transform:uppercase;"><span th:text="${vernacularDeclarantName}"></span></span> , filling in the proposal form and after the same, I am affixing my signature/thumb-impression.</p>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td style="padding: 3px;border-color: #ccc;border-style:solid;border-width:1px; font-size: 10px; font-family: arial;">
+                                            <table cellspacing="0" border="1" cellpadding="5" width="100%" style="border-collapse: collapse;">
+                                                <tr>
+                                                    <td style="padding: 3px;border-color: #222;border-style:solid;border-width:1px; font-size: 12px; font-family: arial;width: 50%;">
+                                                        <strong>Name of the Declarant:</strong>
+                                                        <span style="padding-left: 10px;"><span th:text="${vernacularDeclarantName}"></span></span>
+                                                    </td>
+                                                    <td style="padding: 3px;border-color: #222;border-style:solid;border-width:1px; font-size: 12px; font-family: arial;width: 50%;">
+                                                        <strong>Address of the Declarant:  </strong>
+                                                        <span style="padding-left: 10px;"><span th:text="${vernacularAddress}"></span></span>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td colspan="2" style="padding: 3px;border-color: #222;border-style:solid;border-width:1px; font-size: 12px; font-family: arial;width: 50%;">
+                                                        I certify that I have understood the content of the proposal form as explained to me in <span style="text-align: center;min-width: 50px;border-bottom-color: #000;border-bottom-style: solid;border-bottom-width: 1px;display: inline-block;padding: 0 18px;font-weight: bold;text-transform:uppercase;"><span th:text="${preferredLanguage}"></span></span> language by the declarant, Mr./Ms. <span style="text-align: center;min-width: 180px;border-bottom-color: #000;border-bottom-style: solid;border-bottom-width: 1px;display: inline-block;padding: 0 18px;font-weight: bold;text-transform:uppercase;"><span th:text="${vernacularDeclarantName}"></span></span>, filling in the proposal form and after the same, I am affixing my signature/thumb-impression.
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td style="padding: 3px;border-color: #222;border-style:solid;border-width:1px; font-size: 12px; font-family: arial;width: 50%;text-align: center;">
+                                                        <span th:text="${policySubmittedDate}"></span>
+                                                    </td>
+                                                    <td style="padding: 3px;border-color: #222;border-style:solid;border-width:1px; font-size: 12px; font-family: arial;width: 50%;text-align: center;">
+                                                        &nbsp;<span th:text="${posvOtpSubmittedDate}"></span>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td style="padding: 3px;border-color: #222;border-style:solid;border-width:1px; font-size: 12px; font-family: arial;text-align: center;width: 50%;">
+                                                        <strong>Signature / OTP Confirmation Date / Thumb Impression / Electronic Signature of Declarant</strong>
+                                                    </td>
+                                                    <td style="padding: 3px;border-color: #222;border-style:solid;border-width:1px; font-size: 12px; font-family: arial;text-align: center;width: 50%;">
+                                                        <strong>Signature / OTP Confirmation Date / Thumb Impression / Electronic Signature of Proposer</strong>
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr>
+                        <tr th:if="${visibleDisabilityDeclaration} == true">
+                            <td colspan="2" style="padding: 2px 2px;border-top-color: #ccc;border-top-style:solid;border-top-width:1px; font-size: 9px; font-family: arial;">
+                                <table cellspacing="0" cellpadding="0" width="100%" style="width:100%;padding:0" >
+                                    <tr>
+                                        <td colspan="2" style="border:1px solid #000; padding: 3px; font-size: 12px; font-weight: bold; background-color: #c0c0c0; font-family: arial;">DISABILITY DECLARATION</td>
+                                    </tr>
+<!--                                    <tr>-->
+<!--                                        <td style="padding: 3px;border-color: #222;border-style:solid;border-width:1px; font-size: 12px; font-family: arial;"><strong>DISABILITY DECLARATION</strong></td>-->
+<!--                                    </tr>-->
+                                    <tr>
+                                        <td style="padding: 3px;border-color: #222;border-style:solid;border-width:1px; font-size: 12px; font-family: arial;">
+                                            <p style="line-height: 12px;">Declaration to be made by authorized representative of the policyholder or prospect, who is a person with disability (unconnected with Axis Max Life Insurance Limited) I hereby declare that I have been fully explained the contents of this proposal form, policy documents, terms and conditions.</p>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td style="padding: 3px;border-color: #ccc;border-style:solid;border-width:1px; font-size: 10px; font-family: arial;">
+                                            <table cellspacing="0" border="1" cellpadding="5" width="100%" style="border-collapse: collapse;">
+                                                <tr>
+                                                    <td style="padding: 3px;border-color: #222;border-style:solid;border-width:1px; font-size: 12px; font-family: arial;width: 50%;">
+                                                        <strong>Name of the Declarant:</strong>
+                                                        <span style="padding-left: 10px;"><span th:text="${disabilityDeclarationName}"></span></span>
+                                                    </td>
+                                                    <td style="padding: 3px;border-color: #222;border-style:solid;border-width:1px; font-size: 12px; font-family: arial;width: 50%;">
+                                                        <strong>Address of the Declarant:  </strong>
+                                                        <span style="padding-left: 10px;"><span th:text="${disabilityDeclarantAddress}"></span></span>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td style="padding: 3px;border-color: #222;border-style:solid;border-width:1px; font-size: 12px; font-family: arial;width: 50%;">
+                                                        <strong>Relationship with the prospect:</strong>
+                                                        <span style="padding-left: 10px;"><span th:text="${relationshipWithProposer}"></span></span>
+                                                    </td>
+                                                    <td style="padding: 3px;border-color: #222;border-style:solid;border-width:1px; font-size: 12px; font-family: arial;width: 50%;">
+                                                        <strong>Contact details of the Declarant:  </strong>
+                                                        <span style="padding-left: 10px;"><span th:text="${disabilityDeclarantcontactNumber}"></span></span>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td colspan="2" style="padding: 3px;border-color: #222;border-style:solid;border-width:1px; font-size: 12px; font-family: arial;width: 50%;">
+                                                        I certify that I have understood the content of the proposal form, policy documents, terms and conditions and the eIA as explained to me and confirm the above by affixing/appending my signature/thumb-impression/ OTP.
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td style="padding: 3px;border-color: #222;border-style:solid;border-width:1px; font-size: 12px; font-family: arial;width: 50%;text-align: center;">
+                                                        <span th:text="${disabilityDeclarantOtpSubmittedDate}"></span>
+                                                    </td>
+                                                    <td style="padding: 3px;border-color: #222;border-style:solid;border-width:1px; font-size: 12px; font-family: arial;width: 50%;text-align: center;">
+                                                        &nbsp;<span th:text="${disabilityDeclarantProposalSignature}"></span>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td style="padding: 3px;border-color: #222;border-style:solid;border-width:1px; font-size: 12px; font-family: arial;text-align: center;width: 50%;">
+                                                        <strong>Signature / OTP Confirmation Date / Thumb Impression / Electronic Signature of Declarant</strong>
+                                                    </td>
+                                                    <td style="padding: 3px;border-color: #222;border-style:solid;border-width:1px; font-size: 12px; font-family: arial;text-align: center;width: 50%;">
+                                                        <strong>Signature / OTP Confirmation Date / Thumb Impression / Electronic Signature of Proposer</strong>
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="2" style="border:1px solid #000; padding: 3px; font-size: 12px; font-weight: bold; background-color: #c0c0c0; font-family: arial;">DECLARATION BY PROPOSER</td>
+                        </tr>
+                        <tr>
+                           <td colspan="2" style="padding: 3px;border-top-color: #ccc;border-top-style:solid;border-top-width:1px; font-size: 10px; font-family: arial;">
+<!--                              <br/>-->
+<!--                              <div style="font-size: 12px"><strong>1. DECLARATION BY PROPOSER</strong></div>-->
+                              <p style="line-height: 12px">I/We hereby declare that I/We fully understand the meaning and scope of the Proposal form and the questions contained above, and I am submitting the completed proposal form of my/our own volition, and confirm that I/We have not been induced by anyone to make the Proposal. I/We have been explained the nature of questions and the importance of disclosing all material information.</p>
+                              <p style="line-height: 12px">I/We further declare that all the statements and declarations herein shall be the basis of a contract between me/us and the Company and that I/We have made complete, true and accurate disclosure of all the facts and circumstances and have not withheld any information that may be relevant to enable the Company to make an informed decision about the acceptability of the Proposal. I agree that in case of any fraud or misstatement, action will be initiated as per Section 45 of Insurance Act, 1938, as amended from time to time. I/We undertake to notify the Company, forthwith in writing, of any change in any of the statements made in the Proposal subsequent to the signing of this proposal and before acceptance of risk and issuance of the Policy by the Company. The first and subsequent year premium will be paid out of legally acquired source of income. I will provide information as and when required by the Company, acting on its own or under any order or instruction received from Statutory Authorities, as regards to the sources of funds or utilizations or withdrawals. I agree that the Company may provide any information related to me in respect of this proposal; as available to the Company at any time, to any Statutory Authority in relation to the any laws including the laws governing prevention of money laundering, applicable in the country. To enable the Company to assess the risk under my/our proposal or for any other purpose in relation to the policy, I/we, my/our heirs, administrators or executors or assignees hereby authorize my past or present employer(s)/business association/medical practitioners /other agencies or governmental and/or any regulatory bodies, insurance repositories, CERSAI/ UIDAI, reinsurers / hospitals or diagnostic centres or TPAs/ other insurance companies/ service providers/ National Health Authority (NHA) through ABHA to disclose and make available to the Company such details/records including financial or medical records, as may be requested by the Company. I understand that I have disclosed my personal information with Axis Max life and I hereby provide consent to Axis Max Life to share, store my information with its authorized service providers for servicing this policy/proposal such as issuance, underwriting renewal and claims process with respect to this policy as per the regulation applicable from time to time. I/We submit the mandate to credit My / Our account towards all payments against the above policy and agree and understand that payouts would be processed through electronic mode of payment and will be affected at select cities as per facilities/ arrangements of Axis Max Life Insurance. I/We authorize Axis Max Life to send all communications by letter, E-mail, SMS. I/ We authorize Axis Max Life to send all communication by electronic means.</p>
+                              <p style="line-height: 12px" align="justify">I do hereby certify that above stated information regarding the nationality and tax residential status is correct in all respects and may be used for all purposes, including   reporting to statutory authorities & compliances, and understand that it is my responsibility to report the changes, if any, to Axis Max Life within 2 weeks of occurrence of such change.</p>
+                           </td>
+                        </tr>
+                        <tr>
+                            <td width="40%" style="padding: 3px;font-size: 12px; border:1px solid #000"><span><strong>Signature / OTP Confirmation Date / Thumb Impression / Electronic Signature of Proposer</strong></span><span style="padding-left: 10px;text-transform:uppercase;" ></span></td>
+                            <td width="60%" style="padding: 3px;font-size: 12px; border:1px solid #000"><span><strong></strong></span><span style="padding-left: 10px;" ></span></td>
+
+                        </tr>
+                        <tr>
+                           <td width="40%" style="padding: 3px;font-size: 12px; border:1px solid #000"><span><strong>Place:</strong></span><span style="padding-left: 10px;text-transform:uppercase;" th:text=${communicationCity}></span></td>
+                           <td width="60%" style="padding: 3px;font-size: 12px;  border:1px solid #000"><span><strong>Date:</strong></span><span style="padding-left: 10px; " th:text=${otpConfirmationDateOnly}></span></td>
+
+                        </tr>
+                        <tr>
+                            <td colspan="2" style="border:1px solid #000; padding: 3px; font-size: 12px; font-weight: bold; background-color: #c0c0c0; font-family: arial;">DECLARATION BY PRINCIPAL OFFICER/AGENT ADVISOR/SPECIFIED PERSON</td>
+                        </tr>
+                        <tr>
+                           <td colspan="2" style="padding: 3px;border-top-color: #ccc;border-top-style:solid;border-top-width:1px; font-size: 10px; font-family: arial;">
+<!--                              <br/>-->
+<!--                              <div style="font-size: 12px"><strong>2. DECLARATION BY PRINCIPAL OFFICER/AGENT ADVISOR/SPECIFIED PERSON</strong></div>-->
+                              <div th:if="${isTelesalesRequest}">
+                                 <p style="line-height: 12px">I <span style="text-align: center;min-width: 220px;border-bottom-color: #000;border-bottom-style: solid;border-bottom-width: 1px;display: inline-block;padding: 0 18px;font-weight: bold;text-transform:uppercase;" th:text=${agentName} ></span>having known the Proposer / Life Insured sold through Telesales do declare that I have explained the nature of the questions contained in this Proposal form to him / her. I have also explained that the answers to the questions form the basis of the contract of the Insurance between the Company and the Proposer / Life Insured and if any untrue statement is contained therein and / or any information that may be relevant to enable the Company make an informed decision, the Company shall have the right to vary the benefits which may be payable and / or treat the policy voidable at the option of the company subject to section 45 of the Insurance Act, 1938 as amended from time to time. I confirm that to the best of my knowledge the Life Insured does not suffer from any physical or mental abnormality or handicap or has / had been hospitalised, undergone any surgery or treatment, or he /she is involved in activities including any hazardous avocation or occupation or any other information material for underwriting this proposal form, unless expressly stated in this Proposal. I also declare and represent to the Company that I am in full compliance with the regulatory requirements applicable to agent / corporate agent / specified person / broker prescribed by the Insurance Act 1938, as amended from time to time and any other regulation, circular, instruction issued by IRDAI from time to time. I confirm that I have verified the identity, current / permanent residential address of the proposer/Insured, the nature of his/her business and his / her financial status basis the AML Axis Max Life moral hazard checklist.</p>
+                              </div>
+                              <div th:unless="${isTelesalesRequest}">
+                                 <p style="line-height: 12px">I do declare and confirm that I have met and explained the Product features, benefits, premium paying term, nature of the questions contained in this Proposal form and other relevant terms and conditions to the Proposer and the Life Insured. I have also explained that the answers to the questions forms the basis of the contract of the Insurance between the Company and the Proposer / Life Insured, and if any untrue statement is contained therein and / or any information that may be relevant to enable the Company make an informed decision, the Company shall have the right to vary the benefits which may be payable and / or treat the policy voidable at the option of the Company subject to section 45 of the Insurance Act, 1938 as amended from time to time. I confirm that to the best of my knowledge the Life Insured does not suffer from any physical or mental abnormality or handicap or has / had been hospitalised, undergone any surgery or treatment, or he /she is involved in activities including any hazardous avocation or occupation or any other information material for underwriting this proposal form, unless expressly stated in this Proposal. I also declare and represent to the Company that I am in full compliance with the regulatory requirements applicable to agent / corporate agent / specified person / broker prescribed by the Insurance Act 1938, as amended from time to time and any other regulation, circular, instruction issued by IRDAI from time to time. I confirm that I have verified the identity, current / permanent residential address of the Proposer/ Life Insured, the nature of his/her business and his / her financial status basis the Axis Max Life AML moral hazard checklist.</p>
+
+                              </div>
+                           </td>
+                        </tr>
+                        <tr>
+                           <td colspan="2" style="padding: 3px;font-size: 12px; border:1px solid #000"><span><strong>Is this a Replacement Sale? If yes, I have adequately explained the consequences of replacement sale to the customer.</strong></span><span style="padding-left: 20px;" th:text=${replacementSale}></span></td>
+                        </tr>
+                     </tbody>
+                  </table>
+                  <table cellspacing="0" cellpadding="0" width="100%" style="border-collapse: collapse; border-color: #ccc;border-style:solid;border-width:1px;">
+                     <tbody>
+                        <tr>
+                           <td width="70%" style="padding: 3px;border-color: #ccc;border-style:solid;border-width:1px; font-size: 10px; font-family: arial;">
+                              <strong>Relationship of Principal Officer/Agent Advisor/Specified Person with the Proposer/Life Insured</strong>
+                           </td>
+                            <td width="30%" style="vertical-align:bottom;border: 1px solid #333; padding: 9px;font-size: 10px;">Customer</td>
+
+                        </tr>
+                        <tr>
+                            <td width="70%" style="padding: 3px;border-color: #ccc;border-style:solid;border-width:1px; font-size: 10px; font-family: arial;">
+                                <strong>Name of Principal Officer/Agent Advisor/Specified Person</strong>
+                            </td>
+                        	<td width="30%" style="vertical-align:bottom;border: 1px solid #333; padding: 9px;font-size: 10px;text-transform:uppercase;" th:text=${agentName}></td>
+                        </tr>
+                        <tr>
+                            <td width="70%" style="padding: 3px;border-color: #ccc;border-style:solid;border-width:1px; font-size: 10px; font-family: arial;">
+                                <strong>Principal Officer/Agent Advisor/Specified Person Code</strong>
+                            </td>
+                            <td width="30%" style="font-size: 10px; font-family: arial;padding: 2px 4px;">
+                                <th:block th:each="CommissionShare : ${agentCount}" >
+                                    <span th:text="${CommissionShare.agentId}+' '"> </span>
+                                </th:block>
+                            </td>
+                        </tr>
+                     </tbody>
+                  </table>
+                  <table cellspacing="0" cellpadding="0" width="100%" style="border-collapse: collapse; border-color: #ccc;border-style:solid;border-width:1px;">
+                     <tbody>
+                        <tr>
+                           <td width="50%" style="padding: 3px;border-color: #ccc;border-style:solid;border-width:1px; font-size: 10px; font-family: arial;">
+                               <strong>Signature / OTP Confirmation Date / Thumb Impression / Electronic Signature of Principal Officer/Agent Advisor/Specified Person : </strong>
+                               <span th:text=${otpConfirmationDate}></span>
+                               <br/><br/><strong><i>This system generated benefit Proposal form shall be treated as signed by me.</i></strong>
+                           </td>
+                           <td style="padding: 3px;border-color: #ccc;border-style:solid;border-width:1px; font-size: 10px; font-family: arial;">
+                               <p th:if="${channel} != 'X'"><strong>Signature / OTP Confirmation Date / Thumb Impression / Electronic Signature of Sales Manager : </strong><span  th:text=${signature}></span></p>
+                              <p th:if="${channel} == 'X' or ${channel} == 'BY'"><strong>Specified Person License Number: </strong><span  th:text=${specifiedPersonCode}></span></p>
+                           </td>
+                        </tr>
+                     </tbody>
+                  </table>
+                  <table cellspacing="0" cellpadding="0" width="100%" style="border-collapse: collapse; border-color: #ccc;border-style:solid;border-width:1px;">
+                     <tbody>
+                        <tr>
+                           <td style="padding: 3px;border-color: #ccc;border-style:solid;border-width:1px; font-size: 10px; font-family: arial;"><strong>Phone No. with STD Code:- </strong><span th:text=${agentMobileNumber}></span></td>
+                        </tr>
+                     </tbody>
+                  </table>
+                  <table cellspacing="0" cellpadding="0" width="100%" style="border-collapse: collapse; border-color: #ccc;border-style:solid;border-width:1px;">
+                     <tbody>
+                        <tr>
+                           <td style="padding: 3px;border-color: #ccc;border-style:solid;border-width:1px; font-size: 10px; font-family: arial;">
+                              <p style="line-height: 12px;font-size: 10px">We confirm that we have made joint efforts in soliciting the prospect and will be jointly responsible for performing the service related to the policy. We further confirm that the objective of sharing the commission is not for qualifying for any contest and/or reward &amp; recognition programs of the company.</p>
+                              <p>(Applicable only if more than one Agent Advisors share the commission)</p>
+                           </td>
+                        </tr>
+                        <tr>
+                           <td style="padding: 3px;border-color: #ccc;border-style:solid;border-width:1px; font-size: 10px; font-family: arial;">
+                              <table cellspacing="0" border="1" cellpadding="5" width="100%" style="border-collapse: collapse;">
+                                 <tbody>
+                                    <tr>
+                                       <th width="25%">Name(s) of Principal Officer/AA/Spec Person</th>
+                                       <th width="25%">Principal Officer/AA/Spec Person Code</th>
+                                       <th width="25%">Principal Officer/AA/Spec Person's Signature / OTP Confirmation Date</th>
+                                       <th width="25%">% Share</th>
+                                    </tr>
+                                    <th:block th:each="CommissionShare : ${agentCount}" >
+                                    <tr>
+                                       <td width="25%" style="text-align:center" th:value= "${CommissionShare.agentName}" th:text=${CommissionShare.agentName}></td>
+                                       <td width="25%" style="text-align:center" th:value= "${CommissionShare.agentId}" th:text=${CommissionShare.agentId}></td>
+                                       <td width="25%" style="text-align:center" th:value= "${otpConfirmationDate}" th:text=${otpConfirmationDate}></td>
+                                       <td width="25%" style="text-align:center" th:value= "${CommissionShare.percentage}" th:text=${CommissionShare.percentage}>%</td>
+                                    </tr>
+                                    </th:block>
+                                 </tbody>
+                              </table>
+                           </td>
+                        </tr>
+                        <tr>
+                            <td colspan="2" style="border:1px solid #000; padding: 3px; font-size: 12px; font-weight: bold; background-color: #c0c0c0; font-family: arial;">Important Notes:</td>
+                        </tr>
+                        <tr>
+                           <td style="padding: 3px;border-color: #ccc;border-style:solid;border-width:1px; font-size: 10px; font-family: arial;">
+                              <p style="line-height: 12px;font-size: 10px">(1) Any payment/s including initial payment accompanying this proposal, cash or by bearer instrument must be made at any of the Company's General Office only. (2) Crossed cheque or bank drafts must be made in favour of AXIS MAX LIFE INSURANCE LIMITED ACCOUNT (Proposal No. as above) may be handed over to the Agent Advisor. (3) The Proposal form will be considered received only after the receipt of all the material information and documents (Refer the list of Documents stated below). Receipt of the Completed Proposal and initial payment does not create any obligations upon the Company to underwrite the risk. The Company shall not be liable until it has underwritten the risk and issued the Policy. If the Policy is sent by post it shall be deemed to have been delivered to and received by you in the ordinary course within 3 (three) days of posting. We draw your attention to Section-39, 45 and 41 of the Insurance Act, 1938, as amended from time to time and Regulation 18 of Insurance Regulatory and Development Authority of India (Protection of Policyholders' Interests, Operations and Allied Matters of Insurers) Regulations, 2024, which reads as follows-</p>
+                               <p style="line-height: 12px;font-size: 10px"><strong>Regulation 18 (1)</strong> No proposal shall be accepted unless nomination is obtained as per section 39 of the Act.</p>
+                              <p style="line-height: 12px;font-size: 10px"><strong>Section 39:</strong>   In case nomination facility is availed, section 39 of the Insurance Act, 1938 as amended from time to time shall apply.</p>
+                              <p style="line-height: 12px;font-size: 10px"><strong>Section 45:</strong>   No policy of life insurance shall be called in question on any ground whatsoever after the expiry of three years from the date of issuance of policy, from the date of the Commencement of Risk or Revival of the policy or the date of the rider to the policy, whichever is later. However, Insurer may question the Policy at any time within three years from the date of issuance of policy, from the date of Commencement of Risk or Revival of the policy or the date of the rider to the policy, whichever is later, on the ground of fraud, in which case insurer shall inform Proposer/Life Insured/legal representatives in writing specifying the grounds and materials on which such decision is based. For other details please referto Section 45 of the Insurance Act, 1938 as amended from time to time.</p>
+                              <p style="line-height: 12px;font-size: 10px"><strong>Section 41:</strong>   (1) No person shall allow or offer to allow, either directly or indirectly, as an inducement to any person to take or renew or continue an insurance in respect of any kind of risk relating to lives or property in India, any rebate of the whole or part of the commission payable or any rebate of the premium shown on the policy, nor shall any person taking out or renewing or continuing a policy accept any rebate, except such rebate as may be allowed in accordance with the published prospectuses or tables of the insurer.</p>
+                               <p style="line-height: 12px;font-size: 10px">  (2) In the event of any conflict or discrepancy between any translated version and the English language version of this form, the English language version shall prevail.</p>
+                              <!--<p style="line-height: 12px;font-size: 10px"><strong>Freelook Clause:</strong>   We shall inform you by a letter forwarding the policy that you have a period of 15 days (30 days if the policy is sourced through distance marketing modes)from the date of receipt of the policy document, to review the terms and conditions of the policy, where if you disagree to any of those terms and conditions, you have the option to return the policy stating the reasons for your objection. You shall be entitled to a refund of the premiums paid, subject only to deduction of a proportionate risk premium for the period of cover charges of stamp duty paid and the expenses incurred on medical examination of the life insured, if any.</p>-->
+                           </td>
+                        </tr>
+                        <tr th:if="${isPaymentFirstNonWipCase}">
+                            <td style="width:100%; padding:5px;">
+                                <div style="display: block; margin-bottom: 5px; font-size: 12px;font-weight: bold; background-color: #d3d3d3; padding: 5px 0px;border-radius: 3px; width:100%">
+                                    <strong style="padding-left:5px;">Additional Declaration</strong>
+                                </div>
+                                <div style="display: -webkit-flex; align-items: -webkit-flex-start; gap: 5px; font-size: 10px;">
+            <span style="display:inline-block;vertical-align: middle;padding-right: 4px;">
+            <input type="checkbox" id="paymentConsentCheckbox"
+                   th:checked="${isPaymentFirstConsent}"
+                   disabled
+                   style="margin-top: 2px;">
+            </span>
+                                    <span for="paymentConsentCheckbox">
+                        I/We declare that for ease of transaction and to avoid undue delay, I/We wish to pay the premium/proposal deposit along with the proposal form, voluntarily and without any influence or obligation. I/We understand that the acceptance of the proposal and premium is subject to underwriting, and in case of any shortfall in the premium amount, I/We will pay the balance upon request.
+                    </span>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td height="8">
+                                &nbsp;
+                            </td>
+                        </tr>
+                     </tbody>
+                  </table>
+
+<!--                  <table cellspacing="0" cellpadding="5" width="100%" style="border-collapse: collapse; border-color: #ccc;border-style:solid;border-width:1px;padding:5px;">-->
+<!--                     <tbody>-->
+<!--                        <tr>-->
+<!--							  <td colspan="2" style="padding: 5px;border-color: #ccc;border-style:solid;border-width:1px; font-size: 10px; font-family: arial;">-->
+<!--							  <br/>-->
+<!--							  <div style="page-break-before: always; page-break-inside: avoid; clear:both;padding:5px;"></div>-->
+<!--							  <h3>Additional Declaration:</h3>-->
+<!--                              <p th:if=${AXIS}-->
+<!--                              style="line-height: 12px;font-size: 10px">I hereby authorize <span th:text=${bancaPartner}></span> to share my last 6 months bank statement/ One Glance Statement (which includes savings, investments and liabilities in Savings account, Current account, Deposits, Overdraft account, Demat Accounts, Investments, Insurance, Credit Cards etc. or other similar document and personal KYC details/documents with Max Life for the purpose of insurance and confirm that the said details can be substantiated with adequate proofs as and when required.</p>-->
+<!--                              <p th:if=${AXIS}-->
+<!--                              style="line-height: 12px;font-size: 10px">I / we understand that this is not a Fixed Deposit but a life insurance plan. I confirm that this proposal for insurance has being solicited independently and not as consideration for any other service provided by <span th:text=${bancaPartner}></span>.</p>-->
+<!--                              <p th:if=${AXIS}-->
+<!--                              style="line-height: 12px;font-size: 10px">I have opted for the Combination Solution voluntarily (wherever applicable) as it would assist me in planning my finances. I also understand that these are different products and can also be purchased separately</p>-->
+<!--                              <p th:if=${YBL}-->
+<!--                              style="line-height: 12px;font-size: 10px">I hereby authorize <span th:text=${bancaPartner}></span> to share with Max Life, my personal details and details of the bank account associated with the Transaction ID stated herein, including the account statements for the last 6 months from the date of this proposal for the purpose of insurance and confirm that the said details can be substantiated with adequate proofs as and when required.</p>-->
+<!--                              <p th:if=${YBL}-->
+<!--                              style="line-height: 12px;font-size: 10px">I / we understand that this is not a Fixed Deposit but a life insurance plan. I confirm that this proposal for insurance has being solicited independently and not as consideration for any other service provided by <span th:text=${bancaPartner}></span>.</p>-->
+<!--                              <p th:if=${YBL}-->
+<!--                              style="line-height: 12px;font-size: 10px">I have opted for the Combination Solution voluntarily (wherever applicable) as it would assist me in planning my finances. I also understand that these are different products and can also be purchased separately</p>-->
+<!--                              <p style="line-height: 12px;font-size: 10px">I am submitting my Electronic Application of my own volition and have understood the contents of the Electronic Application, and the relevant sales literature including product features, benefits, applicable charges and am aware of the investment risk under the Policy.</p>-->
+<!--							  <p style="line-height: 12px;font-size: 10px">I / We are aware that suitability information has been collected from me/us and recommendation on purchase of life insurance product has been made only basis such information and any product selected by me/us that differs from such recommendation is on the basis of my/our personal choice. I / we have seen and understood the benefit illustration shown to me / us on the screen electronically or provided to me / us in physical form, as the case may be. I / we have disclosed all material information and not withheld any information that may be relevant to enable Max Life to take an informed decision about the acceptability of the Electronic Application. I also confirm that the information in the Electronic Application, including the state of health and lifestyle habits of the life to be insured is true and complete. I / we have submitted the confirmation number sent on my mobile number/ email id as a confirmation of the contents of the Electronic Application and the benefit illustration and agreement to the terms therein.</p>-->
+<!--                              <p style="line-height: 12px;font-size: 10px">I/We understand and agree that by submitting the Electronic Application, I / we will be bound by the statements / disclosures of material facts made therein in the same manner, as if I / we have signed and submitted a written proposal for insurance to the Company and these shall be the basis of a contract between me/us and the Company. I / we undertake to notify the Company of any change in statements made in the Electronic Application subsequent to its submission and before acceptance of risk and issuance of the policy by the Company. I / we understand that in case the Company detects any fraud or mis-statement or suppression of fact material to my/our life expectancy, the Company reserves the right to take appropriate action in accordance with Section 45 of the Insurance Act.</p>-->
+<!--                              <p style="line-height: 12px;font-size: 10px">I / we hereby declare and confirm that details provided in Form 60 attached to this Electronic Application (wherever applicable) are true and correct to the best of my knowledge and belief. I declare that I do not have a Permanent Account Number and my/ our estimated total income (including income of spouse, minor child etc. as per section 64 of Income-tax Act, 1961) computed in accordance with the provisions of Income-tax Act, 1961 for the financial year in which the above transaction is held will be less than maximum amount not chargeable to tax.</p>-->
+<!--                              <p style="line-height: 12px;font-size: 10px">I / we understand that the Company will not be liable unless the premium is received and realized by it within the time period stipulated for the same subject to underwriting by it. I / we hereby authorize the Company to conduct screening / confirmation of my / our health status through medical examinations on the basis of which, the Company may accept, decline or offer alternate terms on my proposal. I/we hereby authorize my past and present employer(s) / associate(s) / medical practitioner(s) / any insurer or any other organization to disclose and make available to the Company my/our information.</p>-->
+<!--                              <p style="line-height: 12px;font-size: 10px">I / We have filled the proposal electronically and have received the benefit illustration and filled up proposal form on email and registered mobile OR reviewed it on tablet / desktop and after observing the said copy, I /we confirm that all the content / information therein is correct to the best of my / our knowledge.</p>-->
+<!--                              <p style="line-height: 12px;font-size: 10px">I have opted for the Combination Solution voluntarily (wherever applicable) as it would assist me in planning my finances. I also understand that these are different products and can also be purchased separately.</p>-->
+<!--                              &lt;!&ndash; FUL2-7486 Changes related to FACTA : Added another paragraph &ndash;&gt;-->
+<!--                              <p style="line-height: 12px;font-size: 10px">I do hereby certify that above stated information regarding the nationality and tax residential status is correct in all respects and may be used for all purposes, including reporting to statutory authorities & compliances, and understand that it is my responsibility to report the changes, if any, to Max Life within 2 weeks of occurrence of such change.</p>-->
+<!--                           </td>-->
+<!--                        </tr>-->
+<!--                        <tr>-->
+<!--                            <td width="40%" style="padding: 2px 4px;border-color: #ccc;border-style:solid;border-width:1px; font-size: 10px; font-family: arial;"><strong>Signature / OTP Confirmation Date / Thumb Impression / Electronic-->
+<!--                                Signature of Proposer</strong><span th:text=${otpConfirmationDate}></span></td>-->
+<!--                           <td width="60%" style="padding: 2px 4px;border-color: #ccc;border-style:solid;border-width:1px; font-size: 10px; font-family: arial;">-->
+<!--                              <p><strong>Signature / OTP Confirmation Date / Thumb Impression / Electronic Signature of Sales Manager :</strong><span th:text=${signature}></span></p>-->
+<!--                              <p th:if="${AXIS} or ${YBL}">-->
+<!--                              <strong>Specified Person License Number: </strong><span th:text=${specifiedPersonCode}></span></p>-->
+<!--                           </td>-->
+<!--                        </tr>-->
+<!--                        <tr>-->
+<!--                           <td colspan="2" style="padding: 2px 4px;border-color: #ccc;border-style:solid;border-width:1px; font-size: 10px; font-family: arial;"><strong>Phone No. with STD Code :</strong><span th:text=${agentMobileNumber}></span></td>-->
+<!--                        </tr>-->
+<!--                     </tbody>-->
+<!--                  </table>-->
+               </td>

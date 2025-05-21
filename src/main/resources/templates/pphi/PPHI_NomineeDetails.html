@@ -1,0 +1,968 @@
+<td xmlns:th="http://www.w3.org/1999/xhtml">
+    <table border="1" cellspacing="0" cellpadding="0" style="width: 100%; border-collapse: collapse;"  th:if="${NomineeDetailsView} == true">
+        <tbody>
+        <tr th:if="${isNominee1Present} == true">
+            <td width="100%" height="20px" colspan="3" style="font-size: 10px; font-family: arial;"><span style="padding: 2px 4px;display: inline-block;"><strong>NOMINEE 1 DETAILS: </strong></span></td>
+        </tr>
+        <tr th:if="${isNominee1Present} == true">
+            <td width="100%" colspan="3" style="font-size: 10px; font-family: arial;padding:5px">
+                <table width="100%" cellpadding="5" cellspacing="0" border="1" style="border-collapse: collapse; vertical-align: top;">
+                    <tbody>
+                        <tr>
+                            <td width="100%" colspan="2" style="font-size: 10px;padding: 2px 4px; font-family: arial;padding-left:9px"><strong>COMMUNICATION ADDRESS</strong></td>
+                        </tr>
+                    <tr>
+                        <td width="30%" colspan="1" style="font-size: 10px;padding: 2px 4px; font-family: arial;padding-left:9px">House No./Apt. Name</td>
+                        <td width="70%" colspan="1" style="font-size: 10px; font-family: arial;padding-left:9px;text-transform:uppercase;"><span th:text=${houseNumberCN1}></span></td>
+                    </tr>
+                    <tr>
+                        <td width="30%" colspan="1" style="font-size: 10px; padding: 2px 4px;font-family: arial;padding-left:9px">Society Road/Area/Sector</td>
+                        <td width="70%" colspan="1" style="font-size: 10px; font-family: arial;padding-left:9px;text-transform:uppercase;"><span th:text=${areaCN1}></span></td>
+                    </tr>
+                    <tr>
+                        <td width="30%" colspan="1" style="font-size: 10px;padding: 2px 4px; font-family: arial;padding-left:9px">Landmark</td>
+                        <td width="70%" colspan="1" style="font-size: 10px;padding: 2px 4px; font-family: arial;padding-left:9px;text-transform:uppercase;"><span th:text=${landmarkCN1}></span></td>
+                    </tr>
+                    <tr>
+                        <td width="30%" colspan="1" style="font-size: 10px;padding: 2px 4px; font-family: arial;padding-left:9px">Village/Town</td>
+                        <td width="70%" colspan="1" style="font-size: 10px;padding: 2px 4px; font-family: arial;padding:0;">
+                            <table width="100%" cellpadding="3" cellspacing="0" border="0" style="border-collapse: collapse; vertical-align: top;">
+                                <tbody>
+                                <tr>
+                                    <td style="font-size: 10px;padding: 2px 4px; font-family: arial;padding-left:9px; border-right: 1px solid #000;text-transform:uppercase;"><span th:text=${villageCN1}></span></td>
+                                    <td style="font-size: 10px;padding: 2px 4px; font-family: arial;padding-left:9px;border-right: 1px solid #000"><span>City/District</span></td>
+                                    <td style="font-size: 10px;padding: 2px 4px; font-family: arial;padding-left:9px;border-right: 1px solid #000;text-transform:uppercase;"><span th:text=${cityCN1}></span></td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td width="30%" colspan="1" style="font-size: 10px;padding: 2px 4px; font-family: arial;padding-left:9px">Pin Code</td>
+                        <td width="70%" colspan="1" style="font-size: 10px;padding: 2px 4px; font-family: arial;padding:0;">
+                            <table width="100%" cellpadding="5" cellspacing="0" border="0" style="border-collapse: collapse; vertical-align: top;">
+                                <tbody>
+                                <tr>
+                                    <td style="font-size: 10px;padding: 2px 4px; font-family: arial;padding-left:9px; border-right: 1px solid #000;text-transform:uppercase;"><span th:text=${pinCodeCN1}></span></td>
+                                    <td style="font-size: 10px;padding: 2px 4px; font-family: arial;padding-left:9px;border-right: 1px solid #000"><span>State/U.T.</span></td>
+                                    <td style="font-size: 10px;padding: 2px 4px; font-family: arial;padding-left:9px;border-right: 1px solid #000;text-transform:uppercase;"><span th:text=${stateCN1}></span></td>
+                                    <td style="font-size: 10px;padding: 2px 4px; font-family: arial;padding-left:9px;border-right: 1px solid #000"><span>Country</span></td>
+                                    <td style="font-size: 10px;padding: 2px 4px; font-family: arial;padding-left:9px;text-transform:uppercase;"><span th:text=${countryCN1}></span></td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td width="30%" colspan="1" style="font-size: 10px;padding: 2px 4px; font-family: arial;padding-left:9px">Mobile # 1</td>
+                        <td width="70%" colspan="1" style="font-size: 10px;padding: 2px 4px; font-family: arial;padding-left:9px">
+                            <span th:text=${mobileNumberN1}></span>
+                        </td>
+                    </tr>
+                   <tr>
+                        <td width="30%" colspan="1" style="font-size: 10px;padding: 2px 4px; font-family: arial;padding-left:9px">Email</td>
+                        <td width="70%" colspan="1" style="font-size: 10px;padding: 2px 4px; font-family: arial;padding-left:9px"><span th:text=${emailN1}></span></td>
+                    </tr>
+                    </tbody>
+                </table>
+            </td>
+        </tr>
+        <!-- Permanent Address Start here-->
+        <tr th:if="${isNominee1Present} == true">
+            <td width="100%" colspan="3" style="font-size: 10px; font-family: arial;padding:5px">
+                <table width="100%" cellpadding="5" cellspacing="0" border="1" style="border-collapse: collapse; vertical-align: top;">
+                    <tbody>
+                        <tr>
+                            <td width="100%" colspan="2" style="font-size: 10px;padding: 2px 4px; font-family: arial;padding-left:9px"><strong>PERMANENT RESIDENTIAL ADDRESS</strong></td>
+                        </tr>
+                    <tr>
+                        <td width="30%" colspan="1" style="font-size: 10px;padding: 2px 4px; font-family: arial;padding-left:9px">House No./Apt. Name</td>
+                        <td width="70%" colspan="1" style="font-size: 10px; font-family: arial;padding-left:9px;text-transform:uppercase;"><span th:text=${houseNumberPN1}></span></td>
+                    </tr>
+                    <tr>
+                        <td width="30%" colspan="1" style="font-size: 10px; padding: 2px 4px;font-family: arial;padding-left:9px">Society Road/Area/Sector</td>
+                        <td width="70%" colspan="1" style="font-size: 10px; font-family: arial;padding-left:9px;text-transform:uppercase;"><span th:text=${areaPN1}></span></td>
+                    </tr>
+                    <tr>
+                        <td width="30%" colspan="1" style="font-size: 10px;padding: 2px 4px; font-family: arial;padding-left:9px">Landmark</td>
+                        <td width="70%" colspan="1" style="font-size: 10px;padding: 2px 4px; font-family: arial;padding-left:9px;text-transform:uppercase;"><span th:text=${landmarkPN1}></span></td>
+                    </tr>
+                    <tr>
+                        <td width="30%" colspan="1" style="font-size: 10px;padding: 2px 4px; font-family: arial;padding-left:9px">Village/Town</td>
+                        <td width="70%" colspan="1" style="font-size: 10px;padding: 2px 4px; font-family: arial;padding:0;">
+                            <table width="100%" cellpadding="3" cellspacing="0" border="0" style="border-collapse: collapse; vertical-align: top;">
+                                <tbody>
+                                <tr>
+                                    <td style="font-size: 10px;padding: 2px 4px; font-family: arial;padding-left:9px; border-right: 1px solid #000;text-transform:uppercase;"><span th:text=${villagePN1}></span></td>
+                                    <td style="font-size: 10px;padding: 2px 4px; font-family: arial;padding-left:9px;border-right: 1px solid #000"><span>City/District</span></td>
+                                    <td style="font-size: 10px;padding: 2px 4px; font-family: arial;padding-left:9px;border-right: 1px solid #000;text-transform:uppercase;"><span th:text=${cityPN1}></span></td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td width="30%" colspan="1" style="font-size: 10px;padding: 2px 4px; font-family: arial;padding-left:9px">Pin Code</td>
+                        <td width="70%" colspan="1" style="font-size: 10px;padding: 2px 4px; font-family: arial;padding:0;">
+                            <table width="100%" cellpadding="5" cellspacing="0" border="0" style="border-collapse: collapse; vertical-align: top;">
+                                <tbody>
+                                <tr>
+                                    <td style="font-size: 10px;padding: 2px 4px; font-family: arial;padding-left:9px; border-right: 1px solid #000;text-transform:uppercase;"><span th:text=${pinCodePN1}></span></td>
+                                    <td style="font-size: 10px;padding: 2px 4px; font-family: arial;padding-left:9px;border-right: 1px solid #000"><span>State/U.T.</span></td>
+                                    <td style="font-size: 10px;padding: 2px 4px; font-family: arial;padding-left:9px;border-right: 1px solid #000;text-transform:uppercase;"><span th:text=${statePN1}></span></td>
+                                    <td style="font-size: 10px;padding: 2px 4px; font-family: arial;padding-left:9px;border-right: 1px solid #000"><span>Country</span></td>
+                                    <td style="font-size: 10px;padding: 2px 4px; font-family: arial;padding-left:9px;text-transform:uppercase;"><span th:text=${countryPN1}></span></td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td width="30%" colspan="1" style="font-size: 10px;padding: 2px 4px; font-family: arial;padding-left:9px"><strong>NEFT BANK A/C DETAILS</strong></td>
+                        <td width="70%" colspan="1" style="font-size: 10px;padding: 2px 4px; font-family: arial;padding-left:9px">
+                            <div style="font-style: italic;">All Payouts will be credited to this account through Electronic mode of payment.</div>
+                            <div style="font-style: italic;">(This will be applicable at select cities as per facilities / arrangements of Axis Max Life Insurance).</div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td width="100%" colspan="2" style="font-size: 10px;padding: 2px 4px; font-family: arial;padding-left:9px">
+                            <div style="width: 260px;display: inline-block;">Bank Account Number:-  <span style="padding-right: 50px;" th:text=${bankAccNoN1}></span></div>
+                            Account Holder's Name:- <span th:text=${bankAccHolderNameN1}></span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td width="100%" colspan="2" style="font-size: 10px;padding: 2px 4px; font-family: arial;padding-left:9px">
+                            <div style="width: 260px;display: inline-block;"> MICR Code :-  <span style="padding-right: 50px;" th:text=${bankMicrCodeN1}></span></div>
+                            IFSC Code:- <span th:text=${bankIfscCodeN1}></span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td width="100%" colspan="2" style="font-size: 10px;padding: 2px 4px; font-family: arial;padding-left:9px">
+                            Bank Name & Branch:  <span style="padding-right: 50px;" th:text=${bankNameBranchN1}></span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td width="100%" colspan="2" style="font-size: 10px;padding: 2px 4px; font-family: arial;padding-left:9px;vertical-align: middle;">
+                            Type of Bank Account  
+                            <span style="display:inline-block; vertical-align: middle;padding-right: 20px; "><input style="width: 14px; height: 20px; vertical-align: middle; padding: 0px;" type="checkbox" th:checked="${savingAccTypeN1=='YES'}" />Saving</span>
+                            <span style="display:inline-block; vertical-align: middle;padding-right: 20px; "><input style="width: 14px; height: 20px; vertical-align: middle; padding: 0px;" type="checkbox" th:checked="${currentAccTypeN1=='YES'}" />Current</span>
+                            <span style="display:inline-block; vertical-align: middle;padding-right: 20px; "><input style="width: 14px; height: 20px; vertical-align: middle; padding: 0px;" type="checkbox" th:checked="${otherAccTypeN1=='YES'}" /> Others  <span style="text-align: center;min-width: 80px;border-bottom-color: #000;border-bottom-style: solid;border-bottom-width: 1px;display: inline-block;padding: 0 18px;"><span th:if="${otherTypeTextPresentN1} == true" th:text=${otherTypeTextN1}></span></span></span>
+                            <span style="display:inline-block; vertical-align: middle;padding-right: 20px; ">Banking Since: <span th:text=${bankOpenDateN1}></span> </span>
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+            </td>
+        </tr>
+        <!-- APPOINTEE 1 DETAILS -->
+        <tr th:if="${isAppointee1Present} == true">
+            <td width="100%" height="20px" colspan="3" style="font-size: 10px; font-family: arial;"><span style="padding: 2px 4px;display: inline-block;"><strong>APPOINTEE 1 DETAILS: </strong></span></td>
+        </tr>
+        <tr th:if="${isAppointee1Present} == true">
+            <td width="100%" colspan="3" style="font-size: 10px; font-family: arial;padding:5px">
+                <table width="100%" cellpadding="5" cellspacing="0" border="1" style="border-collapse: collapse; vertical-align: top;">
+                    <tbody>
+                        <tr>
+                            <td width="100%" colspan="2" style="font-size: 10px;padding: 2px 4px; font-family: arial;padding-left:9px"><strong>COMMUNICATION ADDRESS</strong></td>
+                        </tr>
+                    <tr>
+                        <td width="30%" colspan="1" style="font-size: 10px;padding: 2px 4px; font-family: arial;padding-left:9px">House No./Apt. Name</td>
+                        <td width="70%" colspan="1" style="font-size: 10px; font-family: arial;padding-left:9px;text-transform:uppercase;"><span th:text=${houseNumberCA1}></span></td>
+                    </tr>
+                    <tr>
+                        <td width="30%" colspan="1" style="font-size: 10px; padding: 2px 4px;font-family: arial;padding-left:9px">Society Road/Area/Sector</td>
+                        <td width="70%" colspan="1" style="font-size: 10px; font-family: arial;padding-left:9px;text-transform:uppercase;"><span th:text=${areaCA1}></span></td>
+                    </tr>
+                    <tr>
+                        <td width="30%" colspan="1" style="font-size: 10px;padding: 2px 4px; font-family: arial;padding-left:9px">Landmark</td>
+                        <td width="70%" colspan="1" style="font-size: 10px;padding: 2px 4px; font-family: arial;padding-left:9px;text-transform:uppercase;"><span th:text=${landmarkCA1}></span></td>
+                    </tr>
+                    <tr>
+                        <td width="30%" colspan="1" style="font-size: 10px;padding: 2px 4px; font-family: arial;padding-left:9px">Village/Town</td>
+                        <td width="70%" colspan="1" style="font-size: 10px;padding: 2px 4px; font-family: arial;padding:0;">
+                            <table width="100%" cellpadding="3" cellspacing="0" border="0" style="border-collapse: collapse; vertical-align: top;">
+                                <tbody>
+                                <tr>
+                                    <td style="font-size: 10px;padding: 2px 4px; font-family: arial;padding-left:9px; border-right: 1px solid #000;text-transform:uppercase;"><span th:text=${villageCA1}></span></td>
+                                    <td style="font-size: 10px;padding: 2px 4px; font-family: arial;padding-left:9px;border-right: 1px solid #000"><span>City/District</span></td>
+                                    <td style="font-size: 10px;padding: 2px 4px; font-family: arial;padding-left:9px;border-right: 1px solid #000;text-transform:uppercase;"><span th:text=${cityCA1}></span></td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td width="30%" colspan="1" style="font-size: 10px;padding: 2px 4px; font-family: arial;padding-left:9px">Pin Code</td>
+                        <td width="70%" colspan="1" style="font-size: 10px;padding: 2px 4px; font-family: arial;padding:0;">
+                            <table width="100%" cellpadding="5" cellspacing="0" border="0" style="border-collapse: collapse; vertical-align: top;">
+                                <tbody>
+                                <tr>
+                                    <td style="font-size: 10px;padding: 2px 4px; font-family: arial;padding-left:9px; border-right: 1px solid #000;text-transform:uppercase;"><span th:text=${pinCodeCA1}></span></td>
+                                    <td style="font-size: 10px;padding: 2px 4px; font-family: arial;padding-left:9px;border-right: 1px solid #000"><span>State/U.T.</span></td>
+                                    <td style="font-size: 10px;padding: 2px 4px; font-family: arial;padding-left:9px;border-right: 1px solid #000;text-transform:uppercase;"><span th:text=${stateCA1}></span></td>
+                                    <td style="font-size: 10px;padding: 2px 4px; font-family: arial;padding-left:9px;border-right: 1px solid #000"><span>Country</span></td>
+                                    <td style="font-size: 10px;padding: 2px 4px; font-family: arial;padding-left:9px;text-transform:uppercase;"><span th:text=${countryCA1}></span></td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td width="30%" colspan="1" style="font-size: 10px;padding: 2px 4px; font-family: arial;padding-left:9px">Mobile # 1</td>
+                        <td width="70%" colspan="1" style="font-size: 10px;padding: 2px 4px; font-family: arial;padding-left:9px">
+                            <span th:text=${mobileNumberA1}></span>
+                        </td>
+                    </tr>
+                   <tr>
+                        <td width="30%" colspan="1" style="font-size: 10px;padding: 2px 4px; font-family: arial;padding-left:9px">Email</td>
+                        <td width="70%" colspan="1" style="font-size: 10px;padding: 2px 4px; font-family: arial;padding-left:9px"><span th:text=${emailA1}></span></td>
+                    </tr>
+                    </tbody>
+                </table>
+            </td>
+        </tr>
+        <!-- Permanent Address Start here-->
+        <tr th:if="${isAppointee1Present} == true">
+            <td width="100%" colspan="3" style="font-size: 10px; font-family: arial;padding:5px">
+                <table width="100%" cellpadding="5" cellspacing="0" border="1" style="border-collapse: collapse; vertical-align: top;">
+                    <tbody>
+                        <tr>
+                            <td width="100%" colspan="2" style="font-size: 10px;padding: 2px 4px; font-family: arial;padding-left:9px"><strong>PERMANENT RESIDENTIAL ADDRESS</strong></td>
+                        </tr>
+                    <tr>
+                        <td width="30%" colspan="1" style="font-size: 10px;padding: 2px 4px; font-family: arial;padding-left:9px">House No./Apt. Name</td>
+                        <td width="70%" colspan="1" style="font-size: 10px; font-family: arial;padding-left:9px;text-transform:uppercase;"><span th:text=${houseNumberPA1}></span></td>
+                    </tr>
+                    <tr>
+                        <td width="30%" colspan="1" style="font-size: 10px; padding: 2px 4px;font-family: arial;padding-left:9px">Society Road/Area/Sector</td>
+                        <td width="70%" colspan="1" style="font-size: 10px; font-family: arial;padding-left:9px;text-transform:uppercase;"><span th:text=${areaPA1}></span></td>
+                    </tr>
+                    <tr>
+                        <td width="30%" colspan="1" style="font-size: 10px;padding: 2px 4px; font-family: arial;padding-left:9px">Landmark</td>
+                        <td width="70%" colspan="1" style="font-size: 10px;padding: 2px 4px; font-family: arial;padding-left:9px;text-transform:uppercase;"><span th:text=${landmarkPA1}></span></td>
+                    </tr>
+                    <tr>
+                        <td width="30%" colspan="1" style="font-size: 10px;padding: 2px 4px; font-family: arial;padding-left:9px">Village/Town</td>
+                        <td width="70%" colspan="1" style="font-size: 10px;padding: 2px 4px; font-family: arial;padding:0;">
+                            <table width="100%" cellpadding="3" cellspacing="0" border="0" style="border-collapse: collapse; vertical-align: top;">
+                                <tbody>
+                                <tr>
+                                    <td style="font-size: 10px;padding: 2px 4px; font-family: arial;padding-left:9px; border-right: 1px solid #000;text-transform:uppercase;"><span th:text=${villagePA1}></span></td>
+                                    <td style="font-size: 10px;padding: 2px 4px; font-family: arial;padding-left:9px;border-right: 1px solid #000"><span>City/District</span></td>
+                                    <td style="font-size: 10px;padding: 2px 4px; font-family: arial;padding-left:9px;border-right: 1px solid #000;text-transform:uppercase;"><span th:text=${cityPA1}></span></td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td width="30%" colspan="1" style="font-size: 10px;padding: 2px 4px; font-family: arial;padding-left:9px">Pin Code</td>
+                        <td width="70%" colspan="1" style="font-size: 10px;padding: 2px 4px; font-family: arial;padding:0;">
+                            <table width="100%" cellpadding="5" cellspacing="0" border="0" style="border-collapse: collapse; vertical-align: top;">
+                                <tbody>
+                                <tr>
+                                    <td style="font-size: 10px;padding: 2px 4px; font-family: arial;padding-left:9px; border-right: 1px solid #000;text-transform:uppercase;"><span th:text=${pinCodePA1}></span></td>
+                                    <td style="font-size: 10px;padding: 2px 4px; font-family: arial;padding-left:9px;border-right: 1px solid #000"><span>State/U.T.</span></td>
+                                    <td style="font-size: 10px;padding: 2px 4px; font-family: arial;padding-left:9px;border-right: 1px solid #000;text-transform:uppercase;"><span th:text=${statePA1}></span></td>
+                                    <td style="font-size: 10px;padding: 2px 4px; font-family: arial;padding-left:9px;border-right: 1px solid #000"><span>Country</span></td>
+                                    <td style="font-size: 10px;padding: 2px 4px; font-family: arial;padding-left:9px;text-transform:uppercase;"><span th:text=${countryPA1}></span></td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td width="30%" colspan="1" style="font-size: 10px;padding: 2px 4px; font-family: arial;padding-left:9px"><strong>NEFT BANK A/C DETAILS</strong></td>
+                        <td width="70%" colspan="1" style="font-size: 10px;padding: 2px 4px; font-family: arial;padding-left:9px">
+                            <div style="font-style: italic;">All Payouts will be credited to this account through Electronic mode of payment.</div>
+                            <div style="font-style: italic;">(This will be applicable at select cities as per facilities / arrangements of Axis Max Life Insurance).</div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td width="100%" colspan="2" style="font-size: 10px;padding: 2px 4px; font-family: arial;padding-left:9px">
+                            <div style="width: 260px;display: inline-block;">Bank Account Number:-  <span style="padding-right: 50px;" th:text=${bankAccNoA1}></span></div>
+                            Account Holder's Name:- <span th:text=${bankAccHolderNameA1}></span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td width="100%" colspan="2" style="font-size: 10px;padding: 2px 4px; font-family: arial;padding-left:9px">
+                            <div style="width: 260px;display: inline-block;"> MICR Code :-  <span style="padding-right: 50px;" th:text=${bankMicrCodeA1}></span></div>
+                            IFSC Code:- <span th:text=${bankIfscCodeA1}></span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td width="100%" colspan="2" style="font-size: 10px;padding: 2px 4px; font-family: arial;padding-left:9px">
+                            Bank Name & Branch:  <span style="padding-right: 50px;" th:text=${bankNameBranchA1}></span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td width="100%" colspan="2" style="font-size: 10px;padding: 2px 4px; font-family: arial;padding-left:9px;vertical-align: middle;">
+                            Type of Bank Account  
+                            <span style="display:inline-block; vertical-align: middle;padding-right: 20px; "><input style="width: 14px; height: 20px; vertical-align: middle; padding: 0px;" type="checkbox" th:checked="${savingAccTypeA1=='YES'}" />Saving</span>
+                            <span style="display:inline-block; vertical-align: middle;padding-right: 20px; "><input style="width: 14px; height: 20px; vertical-align: middle; padding: 0px;" type="checkbox" th:checked="${currentAccTypeA1=='YES'}" />Current</span>
+                            <span style="display:inline-block; vertical-align: middle;padding-right: 20px; "><input style="width: 14px; height: 20px; vertical-align: middle; padding: 0px;" type="checkbox" th:checked="${otherAccTypeA1=='YES'}" /> Others  <span style="text-align: center;min-width: 80px;border-bottom-color: #000;border-bottom-style: solid;border-bottom-width: 1px;display: inline-block;padding: 0 18px;"><span th:if="${otherTypeTextPresentA1} == true" th:text=${otherTypeTextA1}></span></span></span>
+                            <span style="display:inline-block; vertical-align: middle;padding-right: 20px; ">Banking Since: <span th:text=${bankOpenDateA1}></span> </span>
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+            </td>
+        </tr>
+        <!-- NOMINEE 2 DETAILS -->
+        <tr th:if="${isNominee2Present} == true">
+            <td width="100%" height="20px" colspan="3" style="font-size: 10px; font-family: arial;"><span style="padding: 2px 4px;display: inline-block;"><strong>NOMINEE 2 DETAILS: </strong></span></td>
+        </tr>
+        <tr th:if="${isNominee2Present} == true">
+            <td width="100%" colspan="3" style="font-size: 10px; font-family: arial;padding:5px">
+                <table width="100%" cellpadding="5" cellspacing="0" border="1" style="border-collapse: collapse; vertical-align: top;">
+                    <tbody>
+                        <tr>
+                            <td width="100%" colspan="2" style="font-size: 10px;padding: 2px 4px; font-family: arial;padding-left:9px"><strong>COMMUNICATION ADDRESS</strong></td>
+                        </tr>
+                    <tr>
+                        <td width="30%" colspan="1" style="font-size: 10px;padding: 2px 4px; font-family: arial;padding-left:9px">House No./Apt. Name</td>
+                        <td width="70%" colspan="1" style="font-size: 10px; font-family: arial;padding-left:9px;text-transform:uppercase;"><span th:text=${houseNumberCN2}></span></td>
+                    </tr>
+                    <tr>
+                        <td width="30%" colspan="1" style="font-size: 10px; padding: 2px 4px;font-family: arial;padding-left:9px">Society Road/Area/Sector</td>
+                        <td width="70%" colspan="1" style="font-size: 10px; font-family: arial;padding-left:9px;text-transform:uppercase;"><span th:text=${areaCN2}></span></td>
+                    </tr>
+                    <tr>
+                        <td width="30%" colspan="1" style="font-size: 10px;padding: 2px 4px; font-family: arial;padding-left:9px">Landmark</td>
+                        <td width="70%" colspan="1" style="font-size: 10px;padding: 2px 4px; font-family: arial;padding-left:9px;text-transform:uppercase;"><span th:text=${landmarkCN2}></span></td>
+                    </tr>
+                    <tr>
+                        <td width="30%" colspan="1" style="font-size: 10px;padding: 2px 4px; font-family: arial;padding-left:9px">Village/Town</td>
+                        <td width="70%" colspan="1" style="font-size: 10px;padding: 2px 4px; font-family: arial;padding:0;">
+                            <table width="100%" cellpadding="3" cellspacing="0" border="0" style="border-collapse: collapse; vertical-align: top;">
+                                <tbody>
+                                <tr>
+                                    <td style="font-size: 10px;padding: 2px 4px; font-family: arial;padding-left:9px; border-right: 1px solid #000;text-transform:uppercase;"><span th:text=${villageCN2}></span></td>
+                                    <td style="font-size: 10px;padding: 2px 4px; font-family: arial;padding-left:9px;border-right: 1px solid #000"><span>City/District</span></td>
+                                    <td style="font-size: 10px;padding: 2px 4px; font-family: arial;padding-left:9px;border-right: 1px solid #000;text-transform:uppercase;"><span th:text=${cityCN2}></span></td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td width="30%" colspan="1" style="font-size: 10px;padding: 2px 4px; font-family: arial;padding-left:9px">Pin Code</td>
+                        <td width="70%" colspan="1" style="font-size: 10px;padding: 2px 4px; font-family: arial;padding:0;">
+                            <table width="100%" cellpadding="5" cellspacing="0" border="0" style="border-collapse: collapse; vertical-align: top;">
+                                <tbody>
+                                <tr>
+                                    <td style="font-size: 10px;padding: 2px 4px; font-family: arial;padding-left:9px; border-right: 1px solid #000;text-transform:uppercase;"><span th:text=${pinCodeCN2}></span></td>
+                                    <td style="font-size: 10px;padding: 2px 4px; font-family: arial;padding-left:9px;border-right: 1px solid #000"><span>State/U.T.</span></td>
+                                    <td style="font-size: 10px;padding: 2px 4px; font-family: arial;padding-left:9px;border-right: 1px solid #000;text-transform:uppercase;"><span th:text=${stateCN2}></span></td>
+                                    <td style="font-size: 10px;padding: 2px 4px; font-family: arial;padding-left:9px;border-right: 1px solid #000"><span>Country</span></td>
+                                    <td style="font-size: 10px;padding: 2px 4px; font-family: arial;padding-left:9px;text-transform:uppercase;"><span th:text=${countryCN2}></span></td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td width="30%" colspan="1" style="font-size: 10px;padding: 2px 4px; font-family: arial;padding-left:9px">Mobile # 1</td>
+                        <td width="70%" colspan="1" style="font-size: 10px;padding: 2px 4px; font-family: arial;padding-left:9px">
+                            <span th:text=${mobileNumberN2}></span>
+                        </td>
+                    </tr>
+                   <tr>
+                        <td width="30%" colspan="1" style="font-size: 10px;padding: 2px 4px; font-family: arial;padding-left:9px">Email</td>
+                        <td width="70%" colspan="1" style="font-size: 10px;padding: 2px 4px; font-family: arial;padding-left:9px"><span th:text=${emailN2}></span></td>
+                    </tr>
+                    </tbody>
+                </table>
+            </td>
+        </tr>
+        <!-- Permanent Address Start here-->
+        <tr th:if="${isNominee2Present} == true">
+            <td width="100%" colspan="3" style="font-size: 10px; font-family: arial;padding:5px">
+                <table width="100%" cellpadding="5" cellspacing="0" border="1" style="border-collapse: collapse; vertical-align: top;">
+                    <tbody>
+                        <tr>
+                            <td width="100%" colspan="2" style="font-size: 10px;padding: 2px 4px; font-family: arial;padding-left:9px"><strong>PERMANENT RESIDENTIAL ADDRESS</strong></td>
+                        </tr>
+                    <tr>
+                        <td width="30%" colspan="1" style="font-size: 10px;padding: 2px 4px; font-family: arial;padding-left:9px">House No./Apt. Name</td>
+                        <td width="70%" colspan="1" style="font-size: 10px; font-family: arial;padding-left:9px;text-transform:uppercase;"><span th:text=${houseNumberPN2}></span></td>
+                    </tr>
+                    <tr>
+                        <td width="30%" colspan="1" style="font-size: 10px; padding: 2px 4px;font-family: arial;padding-left:9px">Society Road/Area/Sector</td>
+                        <td width="70%" colspan="1" style="font-size: 10px; font-family: arial;padding-left:9px;text-transform:uppercase;"><span th:text=${areaPN2}></span></td>
+                    </tr>
+                    <tr>
+                        <td width="30%" colspan="1" style="font-size: 10px;padding: 2px 4px; font-family: arial;padding-left:9px">Landmark</td>
+                        <td width="70%" colspan="1" style="font-size: 10px;padding: 2px 4px; font-family: arial;padding-left:9px;text-transform:uppercase;"><span th:text=${landmarkPN2}></span></td>
+                    </tr>
+                    <tr>
+                        <td width="30%" colspan="1" style="font-size: 10px;padding: 2px 4px; font-family: arial;padding-left:9px">Village/Town</td>
+                        <td width="70%" colspan="1" style="font-size: 10px;padding: 2px 4px; font-family: arial;padding:0;">
+                            <table width="100%" cellpadding="3" cellspacing="0" border="0" style="border-collapse: collapse; vertical-align: top;">
+                                <tbody>
+                                <tr>
+                                    <td style="font-size: 10px;padding: 2px 4px; font-family: arial;padding-left:9px; border-right: 1px solid #000;text-transform:uppercase;"><span th:text=${villagePN2}></span></td>
+                                    <td style="font-size: 10px;padding: 2px 4px; font-family: arial;padding-left:9px;border-right: 1px solid #000"><span>City/District</span></td>
+                                    <td style="font-size: 10px;padding: 2px 4px; font-family: arial;padding-left:9px;border-right: 1px solid #000;text-transform:uppercase;"><span th:text=${cityPN2}></span></td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td width="30%" colspan="1" style="font-size: 10px;padding: 2px 4px; font-family: arial;padding-left:9px">Pin Code</td>
+                        <td width="70%" colspan="1" style="font-size: 10px;padding: 2px 4px; font-family: arial;padding:0;">
+                            <table width="100%" cellpadding="5" cellspacing="0" border="0" style="border-collapse: collapse; vertical-align: top;">
+                                <tbody>
+                                <tr>
+                                    <td style="font-size: 10px;padding: 2px 4px; font-family: arial;padding-left:9px; border-right: 1px solid #000;text-transform:uppercase;"><span th:text=${pinCodePN2}></span></td>
+                                    <td style="font-size: 10px;padding: 2px 4px; font-family: arial;padding-left:9px;border-right: 1px solid #000"><span>State/U.T.</span></td>
+                                    <td style="font-size: 10px;padding: 2px 4px; font-family: arial;padding-left:9px;border-right: 1px solid #000;text-transform:uppercase;"><span th:text=${statePN2}></span></td>
+                                    <td style="font-size: 10px;padding: 2px 4px; font-family: arial;padding-left:9px;border-right: 1px solid #000"><span>Country</span></td>
+                                    <td style="font-size: 10px;padding: 2px 4px; font-family: arial;padding-left:9px;text-transform:uppercase;"><span th:text=${countryPN2}></span></td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td width="30%" colspan="1" style="font-size: 10px;padding: 2px 4px; font-family: arial;padding-left:9px"><strong>NEFT BANK A/C DETAILS</strong></td>
+                        <td width="70%" colspan="1" style="font-size: 10px;padding: 2px 4px; font-family: arial;padding-left:9px">
+                            <div style="font-style: italic;">All Payouts will be credited to this account through Electronic mode of payment.</div>
+                            <div style="font-style: italic;">(This will be applicable at select cities as per facilities / arrangements of Axis Max Life Insurance).</div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td width="100%" colspan="2" style="font-size: 10px;padding: 2px 4px; font-family: arial;padding-left:9px">
+                            <div style="width: 260px;display: inline-block;">Bank Account Number:-  <span style="padding-right: 50px;" th:text=${bankAccNoN2}></span></div>
+                            Account Holder's Name:- <span th:text=${bankAccHolderNameN2}></span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td width="100%" colspan="2" style="font-size: 10px;padding: 2px 4px; font-family: arial;padding-left:9px">
+                            <div style="width: 260px;display: inline-block;"> MICR Code :-  <span style="padding-right: 50px;" th:text=${bankMicrCodeN2}></span></div>
+                            IFSC Code:- <span th:text=${bankIfscCodeN2}></span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td width="100%" colspan="2" style="font-size: 10px;padding: 2px 4px; font-family: arial;padding-left:9px">
+                            Bank Name & Branch:  <span style="padding-right: 50px;" th:text=${bankNameBranchN2}></span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td width="100%" colspan="2" style="font-size: 10px;padding: 2px 4px; font-family: arial;padding-left:9px;vertical-align: middle;">
+                            Type of Bank Account  
+                            <span style="display:inline-block; vertical-align: middle;padding-right: 20px; "><input style="width: 14px; height: 20px; vertical-align: middle; padding: 0px;" type="checkbox" th:checked="${savingAccTypeN2=='YES'}" />Saving</span>
+                            <span style="display:inline-block; vertical-align: middle;padding-right: 20px; "><input style="width: 14px; height: 20px; vertical-align: middle; padding: 0px;" type="checkbox" th:checked="${currentAccTypeN2=='YES'}" />Current</span>
+                            <span style="display:inline-block; vertical-align: middle;padding-right: 20px; "><input style="width: 14px; height: 20px; vertical-align: middle; padding: 0px;" type="checkbox" th:checked="${otherAccTypeN2=='YES'}" /> Others  <span style="text-align: center;min-width: 80px;border-bottom-color: #000;border-bottom-style: solid;border-bottom-width: 1px;display: inline-block;padding: 0 18px;" ><span th:if="${otherTypeTextPresentN2} == true" th:text=${otherTypeTextN2}></span></span></span>
+                            <span style="display:inline-block; vertical-align: middle;padding-right: 20px; ">Banking Since: <span th:text=${bankOpenDateN2}></span></span>
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+            </td>
+        </tr>
+        <!-- APPOINTEE 2 DETAILS -->
+        <tr th:if="${isAppointee2Present} == true">
+            <td width="100%" height="20px" colspan="3" style="font-size: 10px; font-family: arial;"><span style="padding: 2px 4px;display: inline-block;"><strong>APPOINTEE 2 DETAILS: </strong></span></td>
+        </tr>
+        <tr th:if="${isAppointee2Present} == true">
+            <td width="100%" colspan="3" style="font-size: 10px; font-family: arial;padding:5px">
+                <table width="100%" cellpadding="5" cellspacing="0" border="1" style="border-collapse: collapse; vertical-align: top;">
+                    <tbody>
+                        <tr>
+                            <td width="100%" colspan="2" style="font-size: 10px;padding: 2px 4px; font-family: arial;padding-left:9px"><strong>COMMUNICATION ADDRESS</strong></td>
+                        </tr>
+                    <tr>
+                        <td width="30%" colspan="1" style="font-size: 10px;padding: 2px 4px; font-family: arial;padding-left:9px">House No./Apt. Name</td>
+                        <td width="70%" colspan="1" style="font-size: 10px; font-family: arial;padding-left:9px;text-transform:uppercase;"><span th:text=${houseNumberCA2}></span></td>
+                    </tr>
+                    <tr>
+                        <td width="30%" colspan="1" style="font-size: 10px; padding: 2px 4px;font-family: arial;padding-left:9px">Society Road/Area/Sector</td>
+                        <td width="70%" colspan="1" style="font-size: 10px; font-family: arial;padding-left:9px;text-transform:uppercase;"><span th:text=${areaCA2}></span></td>
+                    </tr>
+                    <tr>
+                        <td width="30%" colspan="1" style="font-size: 10px;padding: 2px 4px; font-family: arial;padding-left:9px">Landmark</td>
+                        <td width="70%" colspan="1" style="font-size: 10px;padding: 2px 4px; font-family: arial;padding-left:9px;text-transform:uppercase;"><span th:text=${landmarkCA2}></span></td>
+                    </tr>
+                    <tr>
+                        <td width="30%" colspan="1" style="font-size: 10px;padding: 2px 4px; font-family: arial;padding-left:9px">Village/Town</td>
+                        <td width="70%" colspan="1" style="font-size: 10px;padding: 2px 4px; font-family: arial;padding:0;">
+                            <table width="100%" cellpadding="3" cellspacing="0" border="0" style="border-collapse: collapse; vertical-align: top;">
+                                <tbody>
+                                <tr>
+                                    <td style="font-size: 10px;padding: 2px 4px; font-family: arial;padding-left:9px; border-right: 1px solid #000;text-transform:uppercase;"><span th:text=${villageCA2}></span></td>
+                                    <td style="font-size: 10px;padding: 2px 4px; font-family: arial;padding-left:9px;border-right: 1px solid #000"><span>City/District</span></td>
+                                    <td style="font-size: 10px;padding: 2px 4px; font-family: arial;padding-left:9px;border-right: 1px solid #000;text-transform:uppercase;"><span th:text=${cityCA2}></span></td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td width="30%" colspan="1" style="font-size: 10px;padding: 2px 4px; font-family: arial;padding-left:9px">Pin Code</td>
+                        <td width="70%" colspan="1" style="font-size: 10px;padding: 2px 4px; font-family: arial;padding:0;">
+                            <table width="100%" cellpadding="5" cellspacing="0" border="0" style="border-collapse: collapse; vertical-align: top;">
+                                <tbody>
+                                <tr>
+                                    <td style="font-size: 10px;padding: 2px 4px; font-family: arial;padding-left:9px; border-right: 1px solid #000;text-transform:uppercase;"><span th:text=${pinCodeCA2}></span></td>
+                                    <td style="font-size: 10px;padding: 2px 4px; font-family: arial;padding-left:9px;border-right: 1px solid #000"><span>State/U.T.</span></td>
+                                    <td style="font-size: 10px;padding: 2px 4px; font-family: arial;padding-left:9px;border-right: 1px solid #000;text-transform:uppercase;"><span th:text=${stateCA2}></span></td>
+                                    <td style="font-size: 10px;padding: 2px 4px; font-family: arial;padding-left:9px;border-right: 1px solid #000"><span>Country</span></td>
+                                    <td style="font-size: 10px;padding: 2px 4px; font-family: arial;padding-left:9px;text-transform:uppercase;"><span th:text=${countryCA2}></span></td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td width="30%" colspan="1" style="font-size: 10px;padding: 2px 4px; font-family: arial;padding-left:9px">Mobile # 1</td>
+                        <td width="70%" colspan="1" style="font-size: 10px;padding: 2px 4px; font-family: arial;padding-left:9px">
+                            <span th:text=${mobileNumberA2}></span>
+                        </td>
+                    </tr>
+                   <tr>
+                        <td width="30%" colspan="1" style="font-size: 10px;padding: 2px 4px; font-family: arial;padding-left:9px">Email</td>
+                        <td width="70%" colspan="1" style="font-size: 10px;padding: 2px 4px; font-family: arial;padding-left:9px"><span th:text=${emailA2}></span></td>
+                    </tr>
+                    </tbody>
+                </table>
+            </td>
+        </tr>
+        <!-- Permanent Address Start here-->
+        <tr th:if="${isAppointee2Present} == true">
+            <td width="100%" colspan="3" style="font-size: 10px; font-family: arial;padding:5px">
+                <table width="100%" cellpadding="5" cellspacing="0" border="1" style="border-collapse: collapse; vertical-align: top;">
+                    <tbody>
+                        <tr>
+                            <td width="100%" colspan="2" style="font-size: 10px;padding: 2px 4px; font-family: arial;padding-left:9px"><strong>PERMANENT RESIDENTIAL ADDRESS</strong></td>
+                        </tr>
+                    <tr>
+                        <td width="30%" colspan="1" style="font-size: 10px;padding: 2px 4px; font-family: arial;padding-left:9px">House No./Apt. Name</td>
+                        <td width="70%" colspan="1" style="font-size: 10px; font-family: arial;padding-left:9px;text-transform:uppercase;"><span th:text=${houseNumberPA2}></span></td>
+                    </tr>
+                    <tr>
+                        <td width="30%" colspan="1" style="font-size: 10px; padding: 2px 4px;font-family: arial;padding-left:9px">Society Road/Area/Sector</td>
+                        <td width="70%" colspan="1" style="font-size: 10px; font-family: arial;padding-left:9px;text-transform:uppercase;"><span th:text=${areaPA2}></span></td>
+                    </tr>
+                    <tr>
+                        <td width="30%" colspan="1" style="font-size: 10px;padding: 2px 4px; font-family: arial;padding-left:9px">Landmark</td>
+                        <td width="70%" colspan="1" style="font-size: 10px;padding: 2px 4px; font-family: arial;padding-left:9px;text-transform:uppercase;"><span th:text=${landmarkPA2}></span></td>
+                    </tr>
+                    <tr>
+                        <td width="30%" colspan="1" style="font-size: 10px;padding: 2px 4px; font-family: arial;padding-left:9px">Village/Town</td>
+                        <td width="70%" colspan="1" style="font-size: 10px;padding: 2px 4px; font-family: arial;padding:0;">
+                            <table width="100%" cellpadding="3" cellspacing="0" border="0" style="border-collapse: collapse; vertical-align: top;">
+                                <tbody>
+                                <tr>
+                                    <td style="font-size: 10px;padding: 2px 4px; font-family: arial;padding-left:9px; border-right: 1px solid #000;text-transform:uppercase;"><span th:text=${villagePA2}></span></td>
+                                    <td style="font-size: 10px;padding: 2px 4px; font-family: arial;padding-left:9px;border-right: 1px solid #000"><span>City/District</span></td>
+                                    <td style="font-size: 10px;padding: 2px 4px; font-family: arial;padding-left:9px;border-right: 1px solid #000;text-transform:uppercase;"><span th:text=${cityPA2}></span></td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td width="30%" colspan="1" style="font-size: 10px;padding: 2px 4px; font-family: arial;padding-left:9px">Pin Code</td>
+                        <td width="70%" colspan="1" style="font-size: 10px;padding: 2px 4px; font-family: arial;padding:0;">
+                            <table width="100%" cellpadding="5" cellspacing="0" border="0" style="border-collapse: collapse; vertical-align: top;">
+                                <tbody>
+                                <tr>
+                                    <td style="font-size: 10px;padding: 2px 4px; font-family: arial;padding-left:9px; border-right: 1px solid #000;text-transform:uppercase;"><span th:text=${pinCodePA2}></span></td>
+                                    <td style="font-size: 10px;padding: 2px 4px; font-family: arial;padding-left:9px;border-right: 1px solid #000"><span>State/U.T.</span></td>
+                                    <td style="font-size: 10px;padding: 2px 4px; font-family: arial;padding-left:9px;border-right: 1px solid #000;text-transform:uppercase;"><span th:text=${statePA2}></span></td>
+                                    <td style="font-size: 10px;padding: 2px 4px; font-family: arial;padding-left:9px;border-right: 1px solid #000"><span>Country</span></td>
+                                    <td style="font-size: 10px;padding: 2px 4px; font-family: arial;padding-left:9px;text-transform:uppercase;"><span th:text=${countryPA2}></span></td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td width="30%" colspan="1" style="font-size: 10px;padding: 2px 4px; font-family: arial;padding-left:9px"><strong>NEFT BANK A/C DETAILS</strong></td>
+                        <td width="70%" colspan="1" style="font-size: 10px;padding: 2px 4px; font-family: arial;padding-left:9px">
+                            <div style="font-style: italic;">All Payouts will be credited to this account through Electronic mode of payment.</div>
+                            <div style="font-style: italic;">(This will be applicable at select cities as per facilities / arrangements of Axis Max Life Insurance).</div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td width="100%" colspan="2" style="font-size: 10px;padding: 2px 4px; font-family: arial;padding-left:9px">
+                            <div style="width: 260px;display: inline-block;">Bank Account Number:-  <span style="padding-right: 50px;" th:text=${bankAccNoA2}></span></div>
+                            Account Holder's Name:- <span th:text=${bankAccHolderNameA2}></span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td width="100%" colspan="2" style="font-size: 10px;padding: 2px 4px; font-family: arial;padding-left:9px">
+                            <div style="width: 260px;display: inline-block;"> MICR Code :-  <span style="padding-right: 50px;" th:text=${bankMicrCodeA2}></span></div>
+                            IFSC Code:- <span th:text=${bankIfscCodeA2}></span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td width="100%" colspan="2" style="font-size: 10px;padding: 2px 4px; font-family: arial;padding-left:9px">
+                            Bank Name & Branch:  <span style="padding-right: 50px;" th:text=${bankNameBranchA2}></span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td width="100%" colspan="2" style="font-size: 10px;padding: 2px 4px; font-family: arial;padding-left:9px;vertical-align: middle;">
+                            Type of Bank Account  
+                            <span style="display:inline-block; vertical-align: middle;padding-right: 20px; "><input style="width: 14px; height: 20px; vertical-align: middle; padding: 0px;" type="checkbox" th:checked="${savingAccTypeA2=='YES'}" />Saving</span>
+                            <span style="display:inline-block; vertical-align: middle;padding-right: 20px; "><input style="width: 14px; height: 20px; vertical-align: middle; padding: 0px;" type="checkbox" th:checked="${currentAccTypeA2=='YES'}" />Current</span>
+                            <span style="display:inline-block; vertical-align: middle;padding-right: 20px; "><input style="width: 14px; height: 20px; vertical-align: middle; padding: 0px;" type="checkbox" th:checked="${otherAccTypeA2=='YES'}" /> Others  <span style="text-align: center;min-width: 80px;border-bottom-color: #000;border-bottom-style: solid;border-bottom-width: 1px;display: inline-block;padding: 0 18px;"><span th:if="${otherTypeTextPresentA2} == true" th:text=${otherTypeTextA2}></span></span></span>
+                            <span style="display:inline-block; vertical-align: middle;padding-right: 20px; ">Banking Since: <span th:text=${bankOpenDateA2}></span></span>
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+            </td>
+        </tr>
+         <!-- NOMINEE 3 DETAILS -->
+         <tr th:if="${isNominee3Present} == true">
+            <td width="100%" height="20px" colspan="3" style="font-size: 10px; font-family: arial;"><span style="padding: 2px 4px;display: inline-block;"><strong>NOMINEE 3 DETAILS: </strong></span></td>
+        </tr>
+        <tr th:if="${isNominee3Present} == true">
+            <td width="100%" colspan="3" style="font-size: 10px; font-family: arial;padding:5px">
+                <table width="100%" cellpadding="5" cellspacing="0" border="1" style="border-collapse: collapse; vertical-align: top;">
+                    <tbody>
+                        <tr>
+                            <td width="100%" colspan="2" style="font-size: 10px;padding: 2px 4px; font-family: arial;padding-left:9px"><strong>COMMUNICATION ADDRESS</strong></td>
+                        </tr>
+                    <tr>
+                        <td width="30%" colspan="1" style="font-size: 10px;padding: 2px 4px; font-family: arial;padding-left:9px">House No./Apt. Name</td>
+                        <td width="70%" colspan="1" style="font-size: 10px; font-family: arial;padding-left:9px;text-transform:uppercase;"><span th:text=${houseNumberCN3}></span></td>
+                    </tr>
+                    <tr>
+                        <td width="30%" colspan="1" style="font-size: 10px; padding: 2px 4px;font-family: arial;padding-left:9px">Society Road/Area/Sector</td>
+                        <td width="70%" colspan="1" style="font-size: 10px; font-family: arial;padding-left:9px;text-transform:uppercase;"><span th:text=${areaCN3}></span></td>
+                    </tr>
+                    <tr>
+                        <td width="30%" colspan="1" style="font-size: 10px;padding: 2px 4px; font-family: arial;padding-left:9px">Landmark</td>
+                        <td width="70%" colspan="1" style="font-size: 10px;padding: 2px 4px; font-family: arial;padding-left:9px;text-transform:uppercase;"><span th:text=${landmarkCN3}></span></td>
+                    </tr>
+                    <tr>
+                        <td width="30%" colspan="1" style="font-size: 10px;padding: 2px 4px; font-family: arial;padding-left:9px">Village/Town</td>
+                        <td width="70%" colspan="1" style="font-size: 10px;padding: 2px 4px; font-family: arial;padding:0;">
+                            <table width="100%" cellpadding="3" cellspacing="0" border="0" style="border-collapse: collapse; vertical-align: top;">
+                                <tbody>
+                                <tr>
+                                    <td style="font-size: 10px;padding: 2px 4px; font-family: arial;padding-left:9px; border-right: 1px solid #000;text-transform:uppercase;"><span th:text=${villageCN3}></span></td>
+                                    <td style="font-size: 10px;padding: 2px 4px; font-family: arial;padding-left:9px;border-right: 1px solid #000"><span>City/District</span></td>
+                                    <td style="font-size: 10px;padding: 2px 4px; font-family: arial;padding-left:9px;border-right: 1px solid #000;text-transform:uppercase;"><span th:text=${cityCN3}></span></td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td width="30%" colspan="1" style="font-size: 10px;padding: 2px 4px; font-family: arial;padding-left:9px">Pin Code</td>
+                        <td width="70%" colspan="1" style="font-size: 10px;padding: 2px 4px; font-family: arial;padding:0;">
+                            <table width="100%" cellpadding="5" cellspacing="0" border="0" style="border-collapse: collapse; vertical-align: top;">
+                                <tbody>
+                                <tr>
+                                    <td style="font-size: 10px;padding: 2px 4px; font-family: arial;padding-left:9px; border-right: 1px solid #000;text-transform:uppercase;"><span th:text=${pinCodeCN3}></span></td>
+                                    <td style="font-size: 10px;padding: 2px 4px; font-family: arial;padding-left:9px;border-right: 1px solid #000"><span>State/U.T.</span></td>
+                                    <td style="font-size: 10px;padding: 2px 4px; font-family: arial;padding-left:9px;border-right: 1px solid #000;text-transform:uppercase;"><span th:text=${stateCN3}></span></td>
+                                    <td style="font-size: 10px;padding: 2px 4px; font-family: arial;padding-left:9px;border-right: 1px solid #000"><span>Country</span></td>
+                                    <td style="font-size: 10px;padding: 2px 4px; font-family: arial;padding-left:9px;text-transform:uppercase;"><span th:text=${countryCN3}></span></td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td width="30%" colspan="1" style="font-size: 10px;padding: 2px 4px; font-family: arial;padding-left:9px">Mobile # 1</td>
+                        <td width="70%" colspan="1" style="font-size: 10px;padding: 2px 4px; font-family: arial;padding-left:9px">
+                            <span th:text=${mobileNumberN3}></span>
+                        </td>
+                    </tr>
+                   <tr>
+                        <td width="30%" colspan="1" style="font-size: 10px;padding: 2px 4px; font-family: arial;padding-left:9px">Email</td>
+                        <td width="70%" colspan="1" style="font-size: 10px;padding: 2px 4px; font-family: arial;padding-left:9px"><span th:text=${emailN3}></span></td>
+                    </tr>
+                    </tbody>
+                </table>
+            </td>
+        </tr>
+        <!-- Permanent Address Start here-->
+        <tr th:if="${isNominee3Present} == true">
+            <td width="100%" colspan="3" style="font-size: 10px; font-family: arial;padding:5px">
+                <table width="100%" cellpadding="5" cellspacing="0" border="1" style="border-collapse: collapse; vertical-align: top;">
+                    <tbody>
+                        <tr>
+                            <td width="100%" colspan="2" style="font-size: 10px;padding: 2px 4px; font-family: arial;padding-left:9px"><strong>PERMANENT RESIDENTIAL ADDRESS</strong></td>
+                        </tr>
+                    <tr>
+                        <td width="30%" colspan="1" style="font-size: 10px;padding: 2px 4px; font-family: arial;padding-left:9px">House No./Apt. Name</td>
+                        <td width="70%" colspan="1" style="font-size: 10px; font-family: arial;padding-left:9px;text-transform:uppercase;"><span th:text=${houseNumberPN3}></span></td>
+                    </tr>
+                    <tr>
+                        <td width="30%" colspan="1" style="font-size: 10px; padding: 2px 4px;font-family: arial;padding-left:9px">Society Road/Area/Sector</td>
+                        <td width="70%" colspan="1" style="font-size: 10px; font-family: arial;padding-left:9px;text-transform:uppercase;"><span th:text=${areaPN3}></span></td>
+                    </tr>
+                    <tr>
+                        <td width="30%" colspan="1" style="font-size: 10px;padding: 2px 4px; font-family: arial;padding-left:9px">Landmark</td>
+                        <td width="70%" colspan="1" style="font-size: 10px;padding: 2px 4px; font-family: arial;padding-left:9px;text-transform:uppercase;"><span th:text=${landmarkPN3}></span></td>
+                    </tr>
+                    <tr>
+                        <td width="30%" colspan="1" style="font-size: 10px;padding: 2px 4px; font-family: arial;padding-left:9px">Village/Town</td>
+                        <td width="70%" colspan="1" style="font-size: 10px;padding: 2px 4px; font-family: arial;padding:0;">
+                            <table width="100%" cellpadding="3" cellspacing="0" border="0" style="border-collapse: collapse; vertical-align: top;">
+                                <tbody>
+                                <tr>
+                                    <td style="font-size: 10px;padding: 2px 4px; font-family: arial;padding-left:9px; border-right: 1px solid #000;text-transform:uppercase;"><span th:text=${villagePN3}></span></td>
+                                    <td style="font-size: 10px;padding: 2px 4px; font-family: arial;padding-left:9px;border-right: 1px solid #000"><span>City/District</span></td>
+                                    <td style="font-size: 10px;padding: 2px 4px; font-family: arial;padding-left:9px;border-right: 1px solid #000;text-transform:uppercase;"><span th:text=${cityPN3}></span></td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td width="30%" colspan="1" style="font-size: 10px;padding: 2px 4px; font-family: arial;padding-left:9px">Pin Code</td>
+                        <td width="70%" colspan="1" style="font-size: 10px;padding: 2px 4px; font-family: arial;padding:0;">
+                            <table width="100%" cellpadding="5" cellspacing="0" border="0" style="border-collapse: collapse; vertical-align: top;">
+                                <tbody>
+                                <tr>
+                                    <td style="font-size: 10px;padding: 2px 4px; font-family: arial;padding-left:9px; border-right: 1px solid #000;text-transform:uppercase;"><span th:text=${pinCodePN3}></span></td>
+                                    <td style="font-size: 10px;padding: 2px 4px; font-family: arial;padding-left:9px;border-right: 1px solid #000"><span>State/U.T.</span></td>
+                                    <td style="font-size: 10px;padding: 2px 4px; font-family: arial;padding-left:9px;border-right: 1px solid #000;text-transform:uppercase;"><span th:text=${statePN3}></span></td>
+                                    <td style="font-size: 10px;padding: 2px 4px; font-family: arial;padding-left:9px;border-right: 1px solid #000"><span>Country</span></td>
+                                    <td style="font-size: 10px;padding: 2px 4px; font-family: arial;padding-left:9px;text-transform:uppercase;"><span th:text=${countryPN3}></span></td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td width="30%" colspan="1" style="font-size: 10px;padding: 2px 4px; font-family: arial;padding-left:9px"><strong>NEFT BANK A/C DETAILS</strong></td>
+                        <td width="70%" colspan="1" style="font-size: 10px;padding: 2px 4px; font-family: arial;padding-left:9px">
+                            <div style="font-style: italic;">All Payouts will be credited to this account through Electronic mode of payment.</div>
+                            <div style="font-style: italic;">(This will be applicable at select cities as per facilities / arrangements of Axis Max Life Insurance).</div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td width="100%" colspan="2" style="font-size: 10px;padding: 2px 4px; font-family: arial;padding-left:9px">
+                            <div style="width: 260px;display: inline-block;">Bank Account Number:-  <span style="padding-right: 50px;" th:text=${bankAccNoN3}></span></div>
+                            Account Holder's Name:- <span th:text=${bankAccHolderNameN3}></span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td width="100%" colspan="2" style="font-size: 10px;padding: 2px 4px; font-family: arial;padding-left:9px">
+                            <div style="width: 260px;display: inline-block;"> MICR Code :-  <span style="padding-right: 50px;" th:text=${bankMicrCodeN3}></span></div>
+                            IFSC Code:- <span th:text=${bankIfscCodeN3}></span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td width="100%" colspan="2" style="font-size: 10px;padding: 2px 4px; font-family: arial;padding-left:9px">
+                            Bank Name & Branch:  <span style="padding-right: 50px;" th:text=${bankNameBranchN3}></span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td width="100%" colspan="2" style="font-size: 10px;padding: 2px 4px; font-family: arial;padding-left:9px;vertical-align: middle;">
+                            Type of Bank Account  
+                            <span style="display:inline-block; vertical-align: middle;padding-right: 20px; "><input style="width: 14px; height: 20px; vertical-align: middle; padding: 0px;" type="checkbox" th:checked="${savingAccTypeN3=='YES'}" />Saving</span>
+                            <span style="display:inline-block; vertical-align: middle;padding-right: 20px; "><input style="width: 14px; height: 20px; vertical-align: middle; padding: 0px;" type="checkbox" th:checked="${currentAccTypeN3=='YES'}" />Current</span>
+                            <span style="display:inline-block; vertical-align: middle;padding-right: 20px; "><input style="width: 14px; height: 20px; vertical-align: middle; padding: 0px;" type="checkbox" th:checked="${otherAccTypeN3=='YES'}" /> Others  <span style="text-align: center;min-width: 80px;border-bottom-color: #000;border-bottom-style: solid;border-bottom-width: 1px;display: inline-block;padding: 0 18px;"><span th:if="${otherTypeTextPresentN3} == true" th:text=${otherTypeTextN3}></span></span></span>
+                            <span style="display:inline-block; vertical-align: middle;padding-right: 20px; ">Banking Since: <span th:text=${bankOpenDateN3}></span></span>
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+            </td>
+        </tr>
+        <!-- APPOINTEE 3 DETAILS -->
+        <tr th:if="${isAppointee3Present} == true">
+            <td width="100%" height="20px" colspan="3" style="font-size: 10px; font-family: arial;"><span style="padding: 2px 4px;display: inline-block;"><strong>APPOINTEE 3 DETAILS: </strong></span></td>
+        </tr>
+        <tr th:if="${isAppointee3Present} == true">
+            <td width="100%" colspan="3" style="font-size: 10px; font-family: arial;padding:5px">
+                <table width="100%" cellpadding="5" cellspacing="0" border="1" style="border-collapse: collapse; vertical-align: top;">
+                    <tbody>
+                        <tr>
+                            <td width="100%" colspan="2" style="font-size: 10px;padding: 2px 4px; font-family: arial;padding-left:9px"><strong>COMMUNICATION ADDRESS</strong></td>
+                        </tr>
+                    <tr>
+                        <td width="30%" colspan="1" style="font-size: 10px;padding: 2px 4px; font-family: arial;padding-left:9px">House No./Apt. Name</td>
+                        <td width="70%" colspan="1" style="font-size: 10px; font-family: arial;padding-left:9px;text-transform:uppercase;"><span th:text=${houseNumberCA3}></span></td>
+                    </tr>
+                    <tr>
+                        <td width="30%" colspan="1" style="font-size: 10px; padding: 2px 4px;font-family: arial;padding-left:9px">Society Road/Area/Sector</td>
+                        <td width="70%" colspan="1" style="font-size: 10px; font-family: arial;padding-left:9px;text-transform:uppercase;"><span th:text=${areaCA3}></span></td>
+                    </tr>
+                    <tr>
+                        <td width="30%" colspan="1" style="font-size: 10px;padding: 2px 4px; font-family: arial;padding-left:9px">Landmark</td>
+                        <td width="70%" colspan="1" style="font-size: 10px;padding: 2px 4px; font-family: arial;padding-left:9px;text-transform:uppercase;"><span th:text=${landmarkCA3}></span></td>
+                    </tr>
+                    <tr>
+                        <td width="30%" colspan="1" style="font-size: 10px;padding: 2px 4px; font-family: arial;padding-left:9px">Village/Town</td>
+                        <td width="70%" colspan="1" style="font-size: 10px;padding: 2px 4px; font-family: arial;padding:0;">
+                            <table width="100%" cellpadding="3" cellspacing="0" border="0" style="border-collapse: collapse; vertical-align: top;">
+                                <tbody>
+                                <tr>
+                                    <td style="font-size: 10px;padding: 2px 4px; font-family: arial;padding-left:9px; border-right: 1px solid #000;text-transform:uppercase;"><span th:text=${villageCA3}></span></td>
+                                    <td style="font-size: 10px;padding: 2px 4px; font-family: arial;padding-left:9px;border-right: 1px solid #000"><span>City/District</span></td>
+                                    <td style="font-size: 10px;padding: 2px 4px; font-family: arial;padding-left:9px;border-right: 1px solid #000;text-transform:uppercase;"><span th:text=${cityCA3}></span></td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td width="30%" colspan="1" style="font-size: 10px;padding: 2px 4px; font-family: arial;padding-left:9px">Pin Code</td>
+                        <td width="70%" colspan="1" style="font-size: 10px;padding: 2px 4px; font-family: arial;padding:0;">
+                            <table width="100%" cellpadding="5" cellspacing="0" border="0" style="border-collapse: collapse; vertical-align: top;">
+                                <tbody>
+                                <tr>
+                                    <td style="font-size: 10px;padding: 2px 4px; font-family: arial;padding-left:9px; border-right: 1px solid #000;text-transform:uppercase;"><span th:text=${pinCodeCA3}></span></td>
+                                    <td style="font-size: 10px;padding: 2px 4px; font-family: arial;padding-left:9px;border-right: 1px solid #000"><span>State/U.T.</span></td>
+                                    <td style="font-size: 10px;padding: 2px 4px; font-family: arial;padding-left:9px;border-right: 1px solid #000;text-transform:uppercase;"><span th:text=${stateCA3}></span></td>
+                                    <td style="font-size: 10px;padding: 2px 4px; font-family: arial;padding-left:9px;border-right: 1px solid #000"><span>Country</span></td>
+                                    <td style="font-size: 10px;padding: 2px 4px; font-family: arial;padding-left:9px;text-transform:uppercase;"><span th:text=${countryCA3}></span></td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td width="30%" colspan="1" style="font-size: 10px;padding: 2px 4px; font-family: arial;padding-left:9px">Mobile # 1</td>
+                        <td width="70%" colspan="1" style="font-size: 10px;padding: 2px 4px; font-family: arial;padding-left:9px">
+                            <span th:text=${mobileNumberA3}></span>
+                        </td>
+                    </tr>
+                   <tr>
+                        <td width="30%" colspan="1" style="font-size: 10px;padding: 2px 4px; font-family: arial;padding-left:9px">Email</td>
+                        <td width="70%" colspan="1" style="font-size: 10px;padding: 2px 4px; font-family: arial;padding-left:9px"><span th:text=${emailA3}></span></td>
+                    </tr>
+                    </tbody>
+                </table>
+            </td>
+        </tr>
+        <!-- Permanent Address Start here-->
+        <tr th:if="${isAppointee3Present} == true">
+            <td width="100%" colspan="3" style="font-size: 10px; font-family: arial;padding:5px">
+                <table width="100%" cellpadding="5" cellspacing="0" border="1" style="border-collapse: collapse; vertical-align: top;">
+                    <tbody>
+                        <tr>
+                            <td width="100%" colspan="2" style="font-size: 10px;padding: 2px 4px; font-family: arial;padding-left:9px"><strong>PERMANENT RESIDENTIAL ADDRESS</strong></td>
+                        </tr>
+                    <tr>
+                        <td width="30%" colspan="1" style="font-size: 10px;padding: 2px 4px; font-family: arial;padding-left:9px">House No./Apt. Name</td>
+                        <td width="70%" colspan="1" style="font-size: 10px; font-family: arial;padding-left:9px;text-transform:uppercase;"><span th:text=${houseNumberPA3}></span></td>
+                    </tr>
+                    <tr>
+                        <td width="30%" colspan="1" style="font-size: 10px; padding: 2px 4px;font-family: arial;padding-left:9px">Society Road/Area/Sector</td>
+                        <td width="70%" colspan="1" style="font-size: 10px; font-family: arial;padding-left:9px;text-transform:uppercase;"><span th:text=${areaPA3}></span></td>
+                    </tr>
+                    <tr>
+                        <td width="30%" colspan="1" style="font-size: 10px;padding: 2px 4px; font-family: arial;padding-left:9px">Landmark</td>
+                        <td width="70%" colspan="1" style="font-size: 10px;padding: 2px 4px; font-family: arial;padding-left:9px;text-transform:uppercase;"><span th:text=${landmarkPA3}></span></td>
+                    </tr>
+                    <tr>
+                        <td width="30%" colspan="1" style="font-size: 10px;padding: 2px 4px; font-family: arial;padding-left:9px">Village/Town</td>
+                        <td width="70%" colspan="1" style="font-size: 10px;padding: 2px 4px; font-family: arial;padding:0;">
+                            <table width="100%" cellpadding="3" cellspacing="0" border="0" style="border-collapse: collapse; vertical-align: top;">
+                                <tbody>
+                                <tr>
+                                    <td style="font-size: 10px;padding: 2px 4px; font-family: arial;padding-left:9px; border-right: 1px solid #000;text-transform:uppercase;"><span th:text=${villagePA3}></span></td>
+                                    <td style="font-size: 10px;padding: 2px 4px; font-family: arial;padding-left:9px;border-right: 1px solid #000"><span>City/District</span></td>
+                                    <td style="font-size: 10px;padding: 2px 4px; font-family: arial;padding-left:9px;border-right: 1px solid #000;text-transform:uppercase;"><span th:text=${cityPA3}></span></td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td width="30%" colspan="1" style="font-size: 10px;padding: 2px 4px; font-family: arial;padding-left:9px">Pin Code</td>
+                        <td width="70%" colspan="1" style="font-size: 10px;padding: 2px 4px; font-family: arial;padding:0;">
+                            <table width="100%" cellpadding="5" cellspacing="0" border="0" style="border-collapse: collapse; vertical-align: top;">
+                                <tbody>
+                                <tr>
+                                    <td style="font-size: 10px;padding: 2px 4px; font-family: arial;padding-left:9px; border-right: 1px solid #000;text-transform:uppercase;"><span th:text=${pinCodePA3}></span></td>
+                                    <td style="font-size: 10px;padding: 2px 4px; font-family: arial;padding-left:9px;border-right: 1px solid #000"><span>State/U.T.</span></td>
+                                    <td style="font-size: 10px;padding: 2px 4px; font-family: arial;padding-left:9px;border-right: 1px solid #000;text-transform:uppercase;"><span th:text=${statePA3}></span></td>
+                                    <td style="font-size: 10px;padding: 2px 4px; font-family: arial;padding-left:9px;border-right: 1px solid #000"><span>Country</span></td>
+                                    <td style="font-size: 10px;padding: 2px 4px; font-family: arial;padding-left:9px;text-transform:uppercase;"><span th:text=${countryPA3}></span></td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td width="30%" colspan="1" style="font-size: 10px;padding: 2px 4px; font-family: arial;padding-left:9px"><strong>NEFT BANK A/C DETAILS</strong></td>
+                        <td width="70%" colspan="1" style="font-size: 10px;padding: 2px 4px; font-family: arial;padding-left:9px">
+                            <div style="font-style: italic;">All Payouts will be credited to this account through Electronic mode of payment.</div>
+                            <div style="font-style: italic;">(This will be applicable at select cities as per facilities / arrangements of Axis Max Life Insurance).</div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td width="100%" colspan="2" style="font-size: 10px;padding: 2px 4px; font-family: arial;padding-left:9px">
+                            <div style="width: 260px;display: inline-block;">Bank Account Number:-  <span style="padding-right: 50px;" th:text=${bankAccNoA3}></span></div>
+                            Account Holder's Name:- <span th:text=${bankAccHolderNameA3}></span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td width="100%" colspan="2" style="font-size: 10px;padding: 2px 4px; font-family: arial;padding-left:9px">
+                            <div style="width: 260px;display: inline-block;"> MICR Code :-  <span style="padding-right: 50px;" th:text=${bankMicrCodeA3}></span></div>
+                            IFSC Code:- <span th:text=${bankIfscCodeA3}></span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td width="100%" colspan="2" style="font-size: 10px;padding: 2px 4px; font-family: arial;padding-left:9px">
+                            Bank Name & Branch:  <span style="padding-right: 50px;" th:text=${bankNameBranchA3}></span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td width="100%" colspan="2" style="font-size: 10px;padding: 2px 4px; font-family: arial;padding-left:9px;vertical-align: middle;">
+                            Type of Bank Account  
+                            <span style="display:inline-block; vertical-align: middle;padding-right: 20px; "><input style="width: 14px; height: 20px; vertical-align: middle; padding: 0px;" type="checkbox" th:checked="${savingAccTypeA3=='YES'}" />Saving</span>
+                            <span style="display:inline-block; vertical-align: middle;padding-right: 20px; "><input style="width: 14px; height: 20px; vertical-align: middle; padding: 0px;" type="checkbox" th:checked="${currentAccTypeA3=='YES'}" />Current</span>
+                            <span style="display:inline-block; vertical-align: middle;padding-right: 20px; "><input style="width: 14px; height: 20px; vertical-align: middle; padding: 0px;" type="checkbox" th:checked="${otherAccTypeA3=='YES'}" /> Others  <span style="text-align: center;min-width: 80px;border-bottom-color: #000;border-bottom-style: solid;border-bottom-width: 1px;display: inline-block;padding: 0 18px;"><span th:if="${otherTypeTextPresentA3} == true" th:text=${otherTypeTextA3}></span></span></span>
+                            <span style="display:inline-block; vertical-align: middle;padding-right: 20px; ">Banking Since: <span th:text=${bankOpenDateA3}></span></span>
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+    <table border="0" cellspacing="0" cellpadding="0" style="width: 100%; border-collapse: collapse;" th:if="${MaterialListView} == true">
+        <tbody>
+            <tr>
+                <td width="100%" height="20px" colspan="3" style="font-size: 10px; font-family: arial;padding-top: 16px;"><span style="padding: 2px 4px;display: inline-block;"><strong>List of Material Documents:</strong></span>
+                </td>
+            </tr>
+            <tr>
+                <td width="100%" height="20px" colspan="3" style="font-size: 10px; font-family: arial;padding-top: 6px;padding-left: 4px;">
+                    <div style="font-weight: bold;">Proposer/Payor/ Joint Life/ Life to be Insured (as applicable)</div>
+                    <div><strong>Income Documents: </strong> (Latest 2/1 Years ITR along with computation of Income OR Latest Form 16 OR Latest 3 Month Bank Statement (showing salary credit) And Latest 3 month Salary Slip OR 6 Months Bank Statement (showing salary credits)</div>
+                    <div><strong>Signed benefit illustrations and </strong>Customer Information Sheet</div>
+                    <div><strong>Address/ID Proof along with latest photograph:</strong>Aadhaar Card <strong>OR</strong> Voter ID Card <strong>OR</strong> Passport <strong>OR</strong> Driving License <strong>OR</strong> NREGA Job Card</div>
+                    <div><strong>DOB Proof:</strong></div>
+                    <div><strong>PAN card/ Form 60</strong></div>
+                    <div><strong>Verified pre-issuance verification conducted by company</strong></div>
+                    <div><strong>ECS mandate form</strong></div>
+                    <div><strong>Banking details along with proof (cancelled cheque / bank statement/ passbook)</strong></div>
+                    <div><strong>FTIN for Non-Resident of India</strong></div>
+                    <div><strong>NRI Questionnaire for Non-Resident of India</strong></div>
+                    <div><strong>NRE Account Details for Non-Resident of India (If GST waiver required)</strong></div>
+                    <div><strong>International Address Proof for Non-Resident of India</strong></div>
+                    <div><strong>Copy of Passport with latest entry and exit stamp for Non-Resident of India</strong></div>
+                    <div><strong>Customer signed self declaration for Non-Resident of India (If GST waiver required)</strong></div>
+                    <div><strong>Medical Documents:</strong> Last 6 months medical reports/ Medical Test (will be conducted as per board approved underwriting guidelines)</div>
+                    <div><strong>Physical Verification</strong></div>
+                    <div><strong>Juvenile Life:</strong> Vaccination Records, School Going Proof, NOC from parents <i>(if Proposer is Grandparent)</i></div>
+                    <div><strong>Proposer is company (as applicable)</strong></div>
+                    <div><strong>Business Insurance KYC form along proof </strong></div>
+                    <div><strong>Income Documents:</strong>(Latest 2/1 Years ITR along with computation of Income <strong>OR</strong> Latest Form 16 <strong>OR</strong> Latest 3 Month Bank Statement (showing salary credit) <strong>And</strong> Latest 3 months Salary Slip <strong>OR</strong> 6 Months Bank Statement (showing salary credits)</div>
+                    <div><strong>HUF-</strong> a. HUF PAN Card,</div>
+                    <div><strong>Keyman-</strong>a. Board Resolution, b. Article of Association, c. Memorandum of Association, d. Certificate of Incorporation, e. Confirmation from Insured over the key to the operation of the business</div>
+                    <div><strong>Employer Employee- </strong>a. Board Resolution, b. Article of Association, c. Memorandum of Association, d. Certificate of Incorporation,</div>
+                    <div><strong>Partnership –</strong>a. Partnership Deep, b. Certificate of Incorporation, c. NOC if cover is not being taken on all partners</div>
+                    <div><strong>Nominee (for objective as MWPA)</strong></div>
+                    <div><strong>MWPA Addendum Form along with proof</strong></div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</td>

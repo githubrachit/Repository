@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customer Information Sheet</title>
+</head>
+<style>
+    @page{
+        margin:122px 10px 35px 10px;
+        @bottom-right {
+            font-family: arial;
+            font-size:9px;
+            content: "Page " counter(page) " of " counter(pages);
+        }
+        @top-left {
+               content: url("classpath:static/logo_ax_max.png");
+        }
+<!--   NR-8467 Brand Refresh Remove Axis Jv Line -->
+<!--        @bottom-left {-->
+<!--               content:  url("classpath:static/footer_updated.png");-->
+<!--        }-->
+	}
+</style>
+<body>
+<div class>
+    <tr width="100%" th:if=${ciRider} th:utext=${ciRider}>
+    </tr>
+    <tr width="100%" th:if=${wopRider} th:utext=${wopRider}>
+    </tr>
+    <tr width="100%" th:if=${addRider} th:utext=${addRider}>
+    </tr>
+    <tr width="100%" th:utext=${AnnexureB}></tr>
+</div>
+</body>
+</html>

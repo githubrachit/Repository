@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title></title>
+    <style type="text/css">
+    body {
+        margin: 0;
+        padding: 0;
+    }
+
+    table,
+    td,
+    tr {
+        border-collapse: collapse;
+    }
+    </style>
+</head>
+
+<body>
+    <table cellpadding="10" width="100%" style="margin: auto;background: #f9f9f9;padding: 20px">
+        <tr>
+            <td height="10"> </td>
+        </tr>
+        <tr>
+            <td style="font-size: 14px; font-family: arial;text-align: center;"><strong>COVID-19 (Coronavirus) Exposure Questionnaire</strong></td>
+        </tr>
+        <tr>
+            <td style="font-size: 14px; font-family: arial;">Thank you for applying for a policy from Axis Max Life Insurance Limited. To enable us to assess your application, send this
+                questionnaire duly answered and signed by the Life to be Assured and Proposed Policy Holder, if any.
+            </td>
+        </tr>
+        <tr>
+            <td style="font-size: 14px; font-family: arial;padding:0 10px;">(All questions to be acknowledged, sections which are not relevant should be mentioned NA (Not applicable)</td>
+        </tr>
+        <tr>
+            <td height="20"> </td>
+        </tr>
+        <tr>
+            <td style="font-size: 14px; font-family: arial;">
+                <table border="1" cellpadding="10" width="100%" style="margin: auto;">
+                    <tr>
+                        <td style="font-size: 14px; font-family: arial;width: 40%">
+                            Application No.
+                        </td>
+                        <td style="font-size: 14px; font-family: arial;width: 60%;font-weight: bold;" th:text=${applicationNumber}></td>
+                    </tr>
+                    <tr>
+                        <td style="font-size: 14px; font-family: arial;width: 40%" >
+                            Name of Life to be Assured
+                        </td>
+                        <td style="font-size: 14px; font-family: arial;width: 60%;font-weight: bold;" th:text=${lifeInsuredName}></td>
+                    </tr>
+                    <tr>
+                        <td style="font-size: 14px; font-family: arial;width: 40%">
+                            Name of Proposed Policyholder
+                            <div>(if different from Life to be Assured)</div>
+                        </td>
+                        <td style="font-size: 14px; font-family: arial;width: 60%;font-weight: bold" th:text=${proposedPolicyHolder}></td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+        <tr>
+            <td style="font-size: 14px; font-family: arial;" th:if=${covidExposureSection}>
+                <table border="1" cellpadding="10" width="100%" style="margin: auto;">
+                    <tr>
+                        <td style="font-size: 14px; font-family: arial;width: 50%">
+                            <span style="padding-right: 4px">1.</span> Have you or your family member(s) traveled abroad since 01/01/2020?
+                        </td>
+                        <td style="font-size: 14px; font-family: arial;width: 50%;" >
+	                          <strong th:text=${travelAbroad}></strong>
+	                          <div th:if="${travelAbroad=='YES'}">
+                           	<div> If YES,
+                           	    Mention name of the country/countries travelled to <span style="padding: 0 18px;font-weight: bold;"th:text=${travelAbroadCountry} ></span>
+                          	</div>
+                            <div style="padding-top: 6px;">Date of return: <span style="padding: 0 18px;font-weight: bold;" th:text=${travelAbroadReturnDate}></span></div>
+                        </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="font-size: 14px; font-family: arial;width: 50%">
+                            <span style="padding-right: 4px">2.</span> Do you intend to travel abroad within the next 6 months?
+                        </td>
+                        <td style="font-size: 14px; font-family: arial;width: 50%">
+                            <strong style="text-transform: uppercase;"th:text=${intendTravelAbroad}> </strong>
+                            <div th:if="${intendTravelAbroad=='YES'}">
+                            <div style="padding-top: 6px;">
+                                If YES, mention name of the country/ countries<span style="padding: 0 18px;font-weight: bold;"th:text=${intendTravelAbroadCountry}></span>
+                            </div>
+                            <div style="padding-top: 6px;">Intended date of travel: <span style="padding: 0 18px;font-weight: bold;"th:text=${intendTravelAbroadIntendDate}></span></div>
+                            <div style="padding-top: 6px;">Duration of stay: <span style="padding: 0 18px;font-weight: bold;"th:text=${intendTravelAbroadReturnDate}></span></div>
+ 							</div>                       
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="font-size: 14px; font-family: arial;width: 50%">
+                            <span style="padding-right: 4px">3.</span> In the last 3 months, are you currently or your family member(s) suffering from or have suffered from -flu like symptoms, fever, sore throat, runny nose, persistent cough, sore throat, shortness of breath, breathing difficulties, malaise, gastro-intestinal symptoms such as nausea, vomiting, diarrhea, advised to undergo test or awaiting test results for SARS-CoV-2/COVID-19*?
+                        </td>
+                        <td style="font-size: 14px; font-family: arial;width: 50%">
+                            <strong style="text-transform: uppercase;"th:text=${lastThreeMonthHealthCheck}></strong>
+                            <div th:if="${lastThreeMonthHealthCheck=='YES'}">
+                            <div style="padding-top: 6px;">
+                                If YES, mention details: tick appropriately Self
+                                <span style="padding: 0 18px;font-weight: bold;"th:text=${lastThreeMonthHealthCheckSelf}></span>
+                                Family Member <span style="padding: 0 18px;font-weight: bold;"th:text=${lastThreeMonthHealthCheckFamily}></span>
+                            </div>
+                            <div style="padding-top: 6px;">Exact diagnosis: <span style="padding: 0 18px;font-weight: bold;" th:text=${lastThreeMonthHealthCheckDiagnosis}></span></div>
+                            <div style="padding-top: 6px;">Date of diagnosis: <span style="padding: 0 18px;font-weight: bold;" th:text=${lastThreeMonthHealthCheckDiagnosisDate}></span></div>
+                            <div style="padding-top: 6px;">Recovery (tick appropriately Yes: <span style="padding: 0 18px;font-weight: bold;"th:text=${lastThreeMonthHealthCheckRecovery}></span> <!-- No. <span style="text-align: center;min-width: 20px;border-bottom-color: #000;border-bottom-style: solid;border-bottom-width: 1px;display: inline-block;padding: 0 18px;font-weight: bold;"></span> -->
+                            </div>
+                           
+                            <div style="padding-top: 6px;">Date of Recovery: <span style="padding: 0 18px;font-weight: bold;"th:text=${lastThreeMonthHealthCheckRecoveryDate}></span></div>
+                         </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="font-size: 14px; font-family: arial;width: 50%">
+                            <span style="padding-right: 4px">4.</span> Have you had direct contact with someone who has been confirmed or is suspected to SARS-CoV-2/COVID19* positive?
+                            <div style="padding-top: 6px;">Or</div>
+                            <div style="padding-top: 6px;">Have you Tested positive for the novel coronavirus (SARS-CoV-2/COVID-19)?</div>
+                        </td>
+                        <td style="font-size: 14px; font-family: arial;width: 50%">
+                            <strong style="text-transform: uppercase;"th:text=${covidCheck}></strong>
+                            <div th:if="${covidCheck=='YES'}">
+                            <div style="padding-top: 6px;"> If YES, mention details:</div>
+                            <div style="padding-top: 6px;">Date of positive diagnosis for SARS-CoV-2/COVID19* (please mention NA if not applicable) - <span style="padding: 0 18px;font-weight: bold;"th:text=${covidCheckDateOfDiagnosis}></span></div>
+                            <div style="padding-top: 6px;">Specify the name of test done: (please mention NA if not applicable) - <span style="padding: 0 18px;font-weight: bold;"th:text=${covidCheckNameOfTest}></span>
+                            </div>
+                            <div style="padding-top: 6px;">Details of subsequent tests (please mention NA if not applicable)<span style="padding: 0 18px;font-weight: bold;"th:text=${covidCheckSubsequentTest}></span></div>
+                            <div style="padding-top: 6px;"> Did you require admission to hospital?: <strong th:text=${covidCheckAdmitted}></strong></div>
+                            <div th:if="${covidCheckAdmitted=='YES'}">
+                            <div style="padding-top: 6px;">If YES, mention did you require stay in:</div>
+                            
+                            <div style="padding-top: 6px;"><input type="checkbox" th:checked="${covidCheckHDU=='YES'}">High-dependency unit (HDU)</input></div>
+							<div style="padding-top: 6px;"><input type="checkbox" th:checked="${covidCheckICU=='YES'}">intensive care unit (ICU)</input></div>
+							<div style="padding-top: 6px;"><input type="checkbox" th:checked="${covidCheckITU=='YES'}">intensive treatment unit (ITU)</input></div>
+							<div style="padding-top: 6px;"><input type="checkbox" th:checked="${covidCheckCCU=='YES'}">critical care unit (CCU)</input></div>
+                            
+                            <!-- other -->
+                            <div style="padding-top: 6px;"> Others <span style="padding: 0 18px;font-weight: bold;"th:text=${covidCheckOther}></span></div>
+                            </div>
+                            <div style="padding-top: 6px;"> Support of a ventilator <span style="font-weight: bold;"th:text=${covidCheckVentilator}></span></div>
+                            <div style="padding-top: 6px;">Have you made a full physical function recovery, able to perform your normal occupational or daily duties, without any ongoing symptoms or restrictions (i.e. shortness of breath or fatigue)? <span style="font-weight: bold;"th:text=${covidCheckRecovery}></span></div>
+                            <div style="padding-top: 6px;">Date of Recovery<span style="padding: 0 18px;font-weight: bold;"th:text=${covidCheckRecoveryDate}></span></div>
+                       </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="font-size: 14px; font-family: arial;width: 50%">
+                            <span style="padding-right: 4px">5.</span> Are you serving a notice of quarantine in any form imposed by local health authorities or government or airport authority for possible exposure to novel coronavirus (SARS- CoV2/COVID19)?
+                        </td>
+                        <td style="font-size: 14px; font-family: arial;width: 50%">
+                            <strong style="text-transform: uppercase;"th:text=${quarantine}></strong>
+                            <div th:if="${quarantine=='YES'}">
+                            <div style="padding-top: 6px;">
+                                If YES, mention details:</div>
+                            <div style="padding-top: 6px;">Location:<span style="padding: 0 18px;font-weight: bold;"th:text=${quarantineLocation}></span>
+                            </div>
+                            <div style="padding-top: 6px;">Quarantine period: From <span style="padding: 0 18px;font-weight: bold;" th:text=${quarantinePeriodFrom}></span>to <span style="padding: 0 18px;font-weight: bold;" th:text=${quarantinePeriodTo}></span></div>
+                       </div>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+        <tr>
+            <td height="12"> </td>
+        </tr>
+        <tr th:if=${covidExposureSection}>
+            <td style="font-size: 14px; font-family: arial;padding:0 10px;text-align: center;"><strong><u>If answer to Question 3 - 5 is yes please provide all related prescriptions, records and medical reports</u></strong></td>
+        </tr>
+        <tr>
+            <td height="20"> </td>
+        </tr>
+        <tr>
+            <td style="font-size: 14px; font-family: arial;padding:0 10px;text-align: center;text-decoration: underline;" th:if=${areYouCovidWarrior}><strong>COVID-19 (Coronavirus) Exposure Questionnaire for Health Care Workers1</strong></td>
+        </tr>
+        <tr>
+            <td style="font-size: 14px; font-family: arial;" th:if=${areYouCovidWarrior}>
+                <table border="1" cellpadding="10" width="100%" style="margin: auto;">
+                    <tr>
+                        <td style="font-size: 14px; font-family: arial;width: 50%">
+                            <span style="padding-right: 4px">1.</span> Occupation
+                        </td>
+                        <td style="font-size: 14px; font-family: arial;width: 50%">
+                        <strong th:text=${occupationOfHealthWorker}></strong>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="font-size: 14px; font-family: arial;width: 50%">
+                            <span style="padding-right: 4px">2.</span> Medical Specialty (if applicable)
+                        </td>
+                        <td style="font-size: 14px; font-family: arial;width: 50%">
+                        <strong th:text=${medicalSpecialty}></strong>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="font-size: 14px; font-family: arial;width: 50%">
+                            <span style="padding-right: 4px">3.</span> Exact nature of duties (including procedural or non-procedural
+                            duties)
+                        </td>
+                        <td style="font-size: 14px; font-family: arial;width: 50%">
+                        <strong th:text=${natureOfDuty}></strong>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="font-size: 14px; font-family: arial;width: 50%">
+                            <span style="padding-right: 4px">4.</span> Name and address of the healthcare facility or facilities in which
+                            you work.
+                        </td>
+                        <td style="font-size: 14px; font-family: arial;width: 50%">
+                        <strong th:text=${addressOfHealthcareFacility}></strong>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="font-size: 14px; font-family: arial;width: 50%">
+                            <span style="padding-right: 4px">5.</span> Name of the Health Authority under which you are registered.
+                        </td>
+                        <td style="font-size: 14px; font-family: arial;width: 50%">
+                        <strong th:text=${healthAuthorityName}></strong>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="font-size: 14px; font-family: arial;width: 50%">
+                            <span style="padding-right: 4px">6.</span> Does your healthcare facility have sufficient personal protective equipment (PPE) to provide to its workforce?
+                        </td>
+                        <td style="font-size: 14px; font-family: arial;width: 50%">
+                            <strong th:text=${healthcareFacilityHavePPE}></strong>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="font-size: 14px; font-family: arial;width: 50%">
+                            <span style="padding-right: 4px">7.</span> Have you been or do your work duties involve close contact with anyone who has been quarantined or who has been diagnosed with novel coronavirus (SARS-CoV-2/COVID-19)?
+                        </td>
+                        <td style="font-size: 14px; font-family: arial;width: 50%">
+                            <strong th:text=${closeContactWithQuarantined}></strong>
+                            <div style="padding-top: 6px;" th:if="${closeContactWithQuarantined=='YES'}">If yes, please provide details including nature of work for
+                                patients with novel coronavirus (SARS-CoV-2/COVID-19)<span style="padding: 0 18px;font-weight: bold;" th:text=${natureOfWorkForPatients}></span></div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="font-size: 14px; font-family: arial;width: 50%">
+                            <span style="padding-right: 4px">8.</span> Have you ever been on voluntary leave, or placed on compulsory leave of absence/sick leave, due to a possible exposure to novel coronavirus (SARS-CoV-2/COVID-19)?
+                        </td>
+                        <td style="font-size: 14px; font-family: arial;width: 50%">
+                            <strong th:text=${voluntaryOrCompulsoryLeave} ></strong>
+                            <div style="padding-top: 6px;" th:if="${voluntaryOrCompulsoryLeave=='YES'}" >If yes, please provide relevant period/dates <span style="padding: 0 18px;font-weight: bold;" th:text=${dateOfLeave}></span> and details<span style="padding: 0 18px;font-weight: bold;" th:text=${detailLeaveInformation}></span></div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="font-size: 14px; font-family: arial;width: 50%">
+                            <span style="padding-right: 4px">9.</span> Are you currently having any health issues?
+                        </td>
+                        <td style="font-size: 14px; font-family: arial;width: 50%">
+                            <strong th:text=${currentlyGoodHealth} ></strong>
+                            <div style="padding-top: 6px;" th:if="${currentlyGoodHealth=='YES'}">If Yes, please share
+                                details<span style="padding: 0 18px;font-weight: bold;" th:text=${healthDetails}></span></div>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+        <tr>
+            <td height="10"> </td>
+        </tr>
+        <tr>
+            <td style="font-size: 14px; font-family: arial;padding:0 10px;">I hereby declare and agree that the above particulars and answers are complete and true, that I have not held back any relevant facts or details, and that the answers to questionnaire will form part of the application for the desired insurance on my life. </td>
+        </tr>
+        <tr>
+            <td height="10"> </td>
+        </tr>
+        <tr>
+            <td style="font-size: 14px; font-family: arial;padding:0 10px;">Date<span style= "padding:0 10px;font-weight: bold;" th:text=${date}></span></td>
+        </tr>
+        <tr>
+            <td height="30" > </td>
+        </tr>
+        <tr>
+            <td style="font-size: 14px; font-family: arial;padding:0 10px;"><span style="text-align: center;min-width: 200px;border-bottom-color: #000;border-bottom-style: solid;border-bottom-width: 1px;display: inline-block;padding: 0 18px;font-weight: bold;"></span></td>
+        </tr>
+        <tr>
+            <td height="20"> </td>
+        </tr>
+        <tr>
+            <td style="font-size: 14px; font-family: arial;padding:0 10px;font-style: italic; ">1Health care Workers shall mean all registered health care professionals (doctors, nurses, allied health professionals including physiotherapists, pharmacists, phlebotomists etc.) involved in direct patient care</td>
+        </tr>
+        <tr>
+            <td height="10"> </td>
+        </tr>
+    </table>
+</body>
+
+</html>

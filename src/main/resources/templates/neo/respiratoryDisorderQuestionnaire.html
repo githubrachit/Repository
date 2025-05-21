@@ -1,0 +1,56 @@
+<td style="font-family: arial;">
+    <!-- Respiratory disorder reflexive questions start here-->
+    <table cellspacing="0" cellpadding="0" width="100%" style="border-collapse: collapse; border-color: #ccc;border-style:solid;border-width:1px;">
+        <tbody>
+        <tr>
+            <td colspan="6" style="padding: 0px; font-family: arial; font-size:9px; background-color: #000000; border-color: #ccc;border-style:solid;border-width:1px;">
+                <table border="1" cellspacing="0" cellpadding="0" width="100%" style="border-collapse: collapse;">
+                    <tbody>
+                    <tr>
+                        <td colspan="3" style="padding: 2px 4px; font-size: 14px; font-weight: bold; color: #FFFFFF">Respiratory disorder reflexive questions</td>
+                    </tr>
+                    </tbody>
+                </table>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="6" style="padding: 0px; font-family: Arial;">
+                <table width="100%" cellpadding="0" cellspacing="0" border="0" style="border-color: #000000;border-style:solid;border-width:1px;">
+                    <tbody>
+                    <tr>
+                        <th style="padding: 5px 5px 5px 10px; font-size: 12px; border-right: 1px solid #000000; border-bottom: 1px solid #000000; text-align: center;">Information Required</th>
+                        <th style="padding: 5px 5px 5px 10px; font-size: 12px; border-bottom: 1px solid #000000; text-align: center;">Insured's Information</th>
+                    </tr>
+                    <tr>
+                        <td width="50%" style="padding: 5px 5px 5px 10px; font-size: 12px; border-right: 1px solid #000000; border-bottom: 1px solid #000000;">1) When was this condition diagnosed?</td>
+                        <td width="50%" style="padding: 5px 5px 5px 10px; font-size: 12px; border-bottom: 1px solid #000000;" th:text="${respiratoryDisorderDiagnosedDate}"></td>
+                    </tr>
+                    <tr>
+                        <td width="50%" style="padding: 5px 5px 5px 10px; font-size: 12px; border-right: 1px solid #000000; border-bottom: 1px solid #000000;">2) Please describe your symptoms and do your symptoms make you wake up at night?</td>
+                        <td width="50%" style="padding: 5px 5px 5px 10px; font-size: 12px; border-bottom: 1px solid #000000;" th:text="${symptomsDescription}"></td>
+                    </tr>
+                    <tr>
+                        <td width="50%" style="padding: 5px 5px 5px 10px; font-size: 12px; border-right: 1px solid #000000; border-bottom: 1px solid #000000;">3) How frequently do the symptoms occur and when was the last occurrence of the symptom?</td>
+                        <td width="50%" style="padding: 5px 5px 5px 10px; font-size: 12px; border-bottom: 1px solid #000000;">
+                            <span th:if="${followUpsForRespiratoryDisorder == 'others'}" th:text="${followUpsOtherForRespiratoryDisorder}"></span>
+                            <span th:unless="${followUpsForRespiratoryDisorder == 'others'}" th:text="${followUpsForRespiratoryDisorder}"></span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td width="50%" style="padding: 5px 5px 5px 10px; font-size: 12px; border-right: 1px solid #000000; border-bottom: 1px solid #000000;">4) Please provide medication details (currently and in past)</td>
+                        <td width="50%" style="padding: 5px 5px 5px 10px; font-size: 12px; border-bottom: 1px solid #000000;" th:text="${medicationDetails}"></td>
+                    </tr>
+                    <tr>
+                        <td width="50%" style="padding: 5px 5px 5px 10px; font-size: 12px; border-right: 1px solid #000000;">5) Have you ever taken steroids? If Yes, then please provide details</td>
+                        <td width="50%" style="padding: 5px 5px 5px 10px; font-size: 12px;">
+                            <span th:if="${steroidsTaken == 'YES'}" th:text="${steroidsTakenDetail}"></span>
+                            <span th:unless="${steroidsTaken == 'YES'}" th:text="${steroidsTaken}"></span>
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+</td>

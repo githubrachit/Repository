@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title></title>
+		<style type="text/css">
+         table,td,tr{
+         border-collapse: collapse;
+         }
+         .pageBreakafter{
+         	page-break-after: always;
+         }
+         .pageBeakBefore{
+         	page-break-before: always;
+         }
+         *{
+            font-family: arial !important;
+            text-align:left;
+         }
+         @media print{
+         *{
+         font-size: 6pt !important;
+         }
+         .printtext{
+         font-size: 11pt !important;
+         }
+         }
+         @page{
+    		margin:20pt;
+    		border-left: solid 1.2pt;
+    		border-top: solid 1.2pt;
+    		border-bottom: solid 1.2pt;
+    		border-right: solid 1.2pt;
+		}
+      </style>
+	</head>
+	<body>
+		<table width="100%" align="center" cellpadding="0" cellspacing="0" style="border-collapse: collapse;">
+			<tbody>
+				<tr>
+					<td>
+						<table width="100%" cellpadding="5" cellspacing="0">
+						<tbody>
+							<div>
+								<table>
+									<tbody>
+									<tr>
+										<td style="width:100%"><img src='classpath:static/logo-IRP.png'
+																	alt="Axis Max Life Insurance"
+																	width="100%" height="100"></td>
+										<td>&nbsp;</td>
+									</tr>
+									</tbody>
+								</table>
+							</div>
+							<tr>
+								<td colspan="3" height="10">
+								</td>
+							</tr>
+						</tbody>
+						</table>
+						<table width="100%" cellpadding="5" cellspacing="0">
+						<tbody>
+							<tr>
+								<td style="font-weight: normal; font-size: 10px; font-family: arial;text-align: center;">
+								<div style="border:2px solid #444;text-transform: uppercase;background-color: #ccc;padding: 15px 20px;border-radius: 10px;width: 90%;font-size: 12px;font-weight: bold;margin:0 auto">
+								ADDENDUM (MWPA) TO LIFE INSURANCE PROPOSAL WHERE PROPOSER ISTHE LIFE TO BE INSURED - ON THE LIFE OF FEMALE PROPOSER
+								</div>
+								</td>
+							</tr>
+							<tr>
+								<td style="font-weight: normal; font-size: 10px; font-family: arial;text-align: center;">
+									<p style="width: 90%;font-size: 16px; font-weight: bold;margin: 0 auto;">Re.: Section 5 of The Married Women’s Property Act, 1874</p>
+								</td>
+							</tr>
+						</tbody>
+						</table>
+						<table width="100%" cellpadding="5" cellspacing="0">
+						<tbody>
+							<tr>
+							<td height="30">
+							</td>
+							</tr>
+						</tbody>
+						</table>
+						<table width="100%" border="0" cellspacing="0" cellpadding="10" style="font-weight: normal; font-size: 10px; font-family: arial;">
+						<tbody>
+							<tr>
+							<td style="font-weight: normal; font-size: 10px; font-family: arial;"><b>Proposal Number: </b>
+								<span style="display: inline-block;text-transform:uppercase;border-bottom: 1px solid #222;font-size: 10px;" th:text="${mwpaMap.get('proposalNumber')}"></span>
+							</td>
+							</tr>
+							<tr>
+							<td height="15px">
+							</td>
+							</tr>
+							<tr>
+							<td style="font-weight: normal; font-size: 10px; font-family: arial;text-transform: uppercase;">
+								<b>IMPORTANT:</b>
+							</td>
+							</tr>
+						</tbody>
+						</table>
+						<table width="100%" border="0" cellspacing="0" cellpadding="10" style="font-weight: normal; font-size: 10px; font-family: arial;">
+						<tbody>
+							<tr>
+								<td style="font-weight: normal; font-size: 10px; font-family: arial;">
+								The terms and conditions and important notes as contained in the Proposal Form to which this is the Addendum,apply to the Addendum. Policies of life insurance that may be effected under the provisions of Section 5 of theMarried Women’s Property Act, 1874, and Riders that may be attached to Policies so affected will be as per theInsurer’s rules in effect from time to time.
+								</td>
+							</tr>
+							<tr>
+							<td height="15">
+							</td>
+							</tr>
+							<tr>
+								<td>
+									<table width="100%" border="1" cellspacing="0" bordercolor="#222" cellpadding="10" style="font-weight: normal; font-size: 10px; font-family: arial;margin: 0 auto;vertical-align: top;">
+									<tbody>
+									<tr>
+										<td width="30%" align="left" style="vertical-align: top;font-size: 10px; font-family: arial;">1. Full Name of Proposer
+										</td>	
+										<td width="70%" style="vertical-align: top" colspan="2">
+											<table width="100%" border="0" cellspacing="0" cellpadding="10" style="font-weight: normal; font-size: 10px; font-family: arial;text-align: center;">
+											<tbody>
+											<tr>
+												<td style="width: 20px;text-transform: uppercase;" th:text="${mwpaMap.get('title')}"></td>
+												<td style="text-transform: uppercase;" th:text="${mwpaMap.get('firstName')}"></td>
+												<td style="text-transform: uppercase;" th:text="${mwpaMap.get('middleName')}"></td>
+												<td style="text-transform: uppercase;" th:text="${mwpaMap.get('lastName')}"></td>
+											</tr>
+											<tr>
+												<td style="padding: 0;">(Title)</td>
+												<td style="padding: 0;">(First Name)</td>
+												<td style="padding: 0;">(Middle Name)</td>
+												<td style="padding: 0;">(Last Name)</td>
+											</tr>
+											</tbody>
+											</table>
+										</td>								
+									</tr>
+									<tr>
+										<td width="30%" align="left" style="font-size: 10px; font-family: arial;border-right: 1px solid">2. Particulars of beneficiary(ies)
+										</td>
+										<td width="35%" style="font-size: 10px; font-family: arial;">Write full name of Beneficiary</td>
+										<td width="35%" style="font-size: 10px; font-family: arial;">Date of Birth</td>
+									</tr>
+									<tr th:each="NomineeDetails : ${mwpaMap.get('nomineeDetails')}">
+												<td width="30%" align="left" style="font-size: 10px; font-family: arial;border-right: 1px solid">
+												<span style="display: inline-block;width: 20px;padding-left: 20px;text-transform: uppercase;" th:text="${NomineeDetails.relation}"></span></td>
+												<td align="center" width="35%" style="font-size: 10px; font-family: arial;text-transform: uppercase;"><span th:text="${NomineeDetails.title}"/> <span th:text="${NomineeDetails.firstName}"/> <span th:text="${NomineeDetails.middleName}"/> <span th:text="${NomineeDetails.lastName}"/></td>
+												<td align="center" width="35%" style="font-size: 10px; font-family: arial;text-transform: uppercase;" th:text="${NomineeDetails.dob}"></td>
+									</tr>
+									</tbody>
+									</table>
+									<table width="100%" cellpadding="5" cellspacing="0">
+									<tbody>
+										<tr>
+										<td height="15">
+										</td>
+										</tr>
+									</tbody>
+									</table>
+									<table width="100%" border="0" cellspacing="0" cellpadding="10" style="font-weight: normal; font-size: 10px; font-family: arial;text-align: center;">
+									<tbody>
+									<tr>
+										<td style="height: 15px;">Signed at
+										<span style="text-align: center;min-width: 150px;border-bottom-color: #000;border-bottom-style: solid;border-bottom-width: 1px;display: inline-block;padding: 0 10px;font-weight: bold;"> </span>on 
+										<span style="text-align: center;min-width: 150px;border-bottom-color: #000;border-bottom-style: solid;border-bottom-width: 1px;display: inline-block;padding: 0 10px;font-weight: bold;"></span>
+										</td>
+									</tr>
+									<tr>
+										<td style="height: 15px;">
+										<span style="width: 100px;display: inline-block;">Signature of the Proposer:</span>
+										<span style="text-align: center;min-width: 200px;border-bottom-color: #000;border-bottom-style: solid;border-bottom-width: 1px;display: inline-block;padding: 0 10px;font-weight: bold;"></span>
+										<span style="width: 100px;display: inline-block;padding-left:10px;">Name of the Proposer:</span>
+										<span style="text-align: center;min-width: 200px;border-bottom-color: #000;border-bottom-style: solid;border-bottom-width: 1px;display: inline-block;padding: 0 10px;font-weight: bold;"></span>
+										</td>
+									</tr>
+									<tr>
+										<td style="height: 15px;">
+										<span style="width: 100px;display: inline-block;">Signature of the Witness</span>
+										<span style="text-align: center;min-width: 200px;border-bottom-color: #000;border-bottom-style: solid;border-bottom-width: 1px;display: inline-block;padding: 0 10px;font-weight: bold;"></span>
+										<span style="width: 100px;display: inline-block;padding-left:10px;">Name of the Witness:</span>
+										<span style="text-align: center;min-width: 200px;border-bottom-color: #000;border-bottom-style: solid;border-bottom-width: 1px;display: inline-block;padding: 0 10px;font-weight: bold;"></span>
+										</td>
+									</tr>
+									<tr>
+										<td style="height: 15px;">
+										<span style="width: 100px;display: inline-block;">Address of the Witness:</span>
+										<span style="text-align: center;min-width: 200px;border-bottom-color: #000;border-bottom-style: solid;border-bottom-width: 1px;display: inline-block;padding: 0 10px;font-weight: bold;"></span>
+										</td>
+									</tr>
+									</tbody>
+									</table>
+									<table width="100%" cellpadding="5" cellspacing="0">
+									<tbody>
+										<tr>
+										<td height="20">
+										</td>
+										</tr>
+									</tbody>
+									</table>
+									<table width="100%" border="0" cellspacing="0" cellpadding="10" style="font-weight: normal; font-size: 10px; font-family: arial;text-align: center;">
+									<tbody>
+									<tr>
+										<td style="font-weight: normal; font-size: 10px; font-family: arial;">
+										In case the Proposer is illiterate, her left thumb impression should be attested by a person of standing unconnectedwith the Company but whose identity can easily be established and this declaration should be made by him/her</td>
+									</tr>
+									<tr>
+										<td height="20">
+										</td>
+									</tr>
+									<tr>
+										<td style="font-weight: normal; font-size: 10px; font-family: arial;">
+										Declaration to be made by a person of standing unconnected with the Company but whose identity can easily beestablished to the effect that the statements and declarations made hereinabove have been explained to theProposer in vernacular language understood by her and that the signature of the Proposer has been appended afterfully understanding the same</td>
+									</tr>
+									</tbody>
+									</table>
+									<table width="100%" cellpadding="5" cellspacing="0">
+									<tbody>
+										<tr>
+										<td height="20">
+										</td>
+										</tr>
+									</tbody>
+									</table>
+									<table width="100%" border="0" cellspacing="0" cellpadding="10" style="font-weight: normal; font-size: 10px; font-family: arial;text-align: center;">
+									<tbody>
+										<tr>
+											<td style="font-weight: normal; font-size: 10px; font-family: arial;width: 60%;vertical-align: top">
+											Declaration by the person filling the form and attesting the correctness and completeness
+											</td>
+											<td style="font-weight: normal; font-size: 10px; font-family: arial;width: 60%;vertical-align: top">
+											Declaration by the person filling the form and attesting the correctness and completeness. I hereby declare that I have fully explained the contents of this Addendum to the Proposal to the Proposer in the language understood by the Proposer and that the Proposer has affixed her left thumb  impression to this Addendum to the Proposal after fully understanding the contents
+											</td>
+										</tr>
+									</tbody>
+									</table>
+									<table width="100%" border="0" cellspacing="0" cellpadding="10" style="font-weight: normal; font-size: 10px; font-family: arial;">
+									<tbody>
+										<tr>
+										<td style="font-weight: normal; font-size: 14px; font-family: arial;width: 66%;vertical-align: top;">Declarant’s name and address</td>
+										<td style="width: 31%"></td>
+										</tr>
+										<tr>
+										<td style="font-weight: normal; font-size: 14px; font-family: arial;width: 66%;vertical-align: top;height: 15px;">Name</td>
+										<td style="font-weight: normal; font-size: 14px; font-family: arial;width: 66%;vertical-align: top;height: 15px;">
+										<span style="text-align: center;width: 100%;border-bottom-color: #000;border-bottom-style: solid;border-bottom-width: 1px;display: inline-block;font-weight: bold;"></span></td>										
+										</tr>
+										<tr>
+										<td style="font-weight: normal; font-size: 14px; font-family: arial;width: 66%;vertical-align: top;height: 15px;">Address</td>
+										<td style="font-weight: normal; font-size: 14px; font-family: arial;width: 66%;vertical-align: top;height: 15px;">
+										<span style="text-align: center;width: 100%;border-bottom-color: #000;border-bottom-style: solid;border-bottom-width: 1px;display: inline-block;font-weight: bold;"></span></td>										
+										</tr>
+										<tr>
+										<td style="font-weight: normal; font-size: 14px; font-family: arial;width: 66%;vertical-align: top;height: 15px;">Pin</td>
+										<td style="font-weight: normal; font-size: 14px; font-family: arial;width: 66%;vertical-align: top;height: 15px;">
+										<span style="text-align: center;width: 100%;border-bottom-color: #000;border-bottom-style: solid;border-bottom-width: 1px;display: inline-block;font-weight: bold;"></span></td>										
+										</tr>
+									</tbody>
+									</table>
+									<table width="100%" cellpadding="5" cellspacing="0">
+									<tbody>
+										<tr>
+										<td height="20">
+										</td>
+										</tr>
+									</tbody>
+									</table>
+									<table width="100%" cellpadding="5" cellspacing="0">
+									<tbody>
+										<tr>
+										<td width="66%">
+										</td>
+										<td width="31%" border="0" cellspacing="0" cellpadding="10" style="font-weight: normal; font-size: 14px; font-family: arial;text-align: left;">Signature
+										</td>
+										</tr>
+									</tbody>
+									</table>
+									<table width="100%" cellpadding="5" cellspacing="0">
+									<tbody>
+										<tr>
+										<td height="20">
+										</td>
+										</tr>
+									</tbody>
+									</table>
+									<table width="100%" cellpadding="5" cellspacing="0">
+									<tbody>
+										<tr>
+											<td>
+<!--												<div th:if="${isNotYBLProposal}">-->
+<!--													<img src="classpath:static/footer_updated.png" alt="Max Life Insurance" width="100"/>-->
+<!--												</div>-->
+											</td>
+										</tr>
+									</tbody>
+									</table>								
+								</td>
+							</tr>
+						</tbody>
+						</table>
+					</td>
+				</tr>
+			</tbody>
+		</table>
+	</body>
+	
+</html>

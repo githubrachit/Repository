@@ -1,0 +1,115 @@
+<td style="font-family: arial;">
+	<!-- Medical Details Start here-->
+	<table cellspacing="0" cellpadding="0" width="100%" style="border-collapse: collapse; border-color: #ccc;border-style:solid;border-width:1px;">
+		<tbody>
+		<tr>
+			<td colspan="2" style="background-color: #FFFFFF; color: #000000; font-weight: bold; font-family: arial; padding: 2px 4px;">NON MANDATORY QUESTIONS</td>
+		</tr>
+		<tr>
+			<td colspan="2" style="padding: 5px 4px; border-color: #ccc;border-style:solid;border-width:1px; font-size: 12px; font-family: arial; font-weight: bold;">A. PERSONAL DETAILS</td>
+		</tr>
+		<tr>
+			<td colspan="2" style="padding: 2px 4px; border-color: #ccc;border-style:solid;border-width:1px; font-size: 11px; font-family: arial;">
+				<table border="0" cellpadding="0" cellspacing="0">
+					<tr>
+						<td style="padding: 5px 5px 5px 15px; font-family: arial; font-size: 12px;"><strong>1. Nominee Details:</strong></td>
+					</tr>
+					<tr>
+						<td style="padding: 5px 5px 5px 15px; font-family: arial; font-size: 11px;"><strong>i. Gender- </strong>
+							<span th:text="${nomineeDetails[0].gender}"></span>
+						</td>
+					</tr>
+					<tr>
+						<td style="padding: 5px 5px 5px 15px; font-family: arial; font-size: 11px;"><strong>ii. Father's/Husband Name- </strong>
+							<span th:if="${!#strings.isEmpty(nomineeDetails[0].fatherLastName)}">
+								<span th:text="${nomineeDetails[0].fatherFirstName}+' '+${nomineeDetails[0].fatherLastName}"></span>
+							</span>
+							<span th:unless="${!#strings.isEmpty(nomineeDetails[0].fatherLastName)}">
+								<span th:if="${!#strings.isEmpty(nomineeDetails[0].fatherFirstName)}" th:text="${nomineeDetails[0].fatherFirstName}"></span>
+							</span>
+						</td>
+					</tr>
+					<tr>
+						<td style="padding: 5px 5px 5px 15px; font-family: arial; font-size: 11px;"><strong>iii. Guardian (If nominee is under age 18) name an adult (the "Guardian") to receive the policy proceeds.</strong>
+							<span th:text="${nomineeDetails[0].guardianName}"></span>
+							<br>
+							Relationship to Life Insured <span th:text="${nomineeDetails[0].guardianRelation}"></span>
+						</td>
+					</tr>
+				</table>
+			</td>
+		</tr>
+		<tr>
+			<td colspan="2" style="padding: 2px 4px; border-color: #ccc;border-style:solid;border-width:1px; font-size: 11px; font-family: arial;">
+				<table border="0" cellpadding="0" cellspacing="0">
+					<tr>
+						<td style="padding: 5px 5px 5px 15px; font-family: arial; font-size: 12px;"><strong>2. Proposer details</strong></td>
+					</tr>
+					<tr>
+						<td style="padding: 5px 5px 5px 15px; font-family: arial; font-size: 11px;"><strong>i. Job Title &amp; Nature of Duties / Business- </strong>
+							<span th:text="${jobTitle}"></span>
+						</td>
+					</tr>
+					<tr>
+						<td style="padding: 5px 5px 5px 15px; font-family: arial; font-size: 11px;"><strong>ii. Name of entity / employer- </strong>
+							<span th:if="${employerName!='NA'}" th:text="${employerName}"></span>
+						</td>
+					</tr>
+				</table>
+			</td>
+		</tr>
+		<tr>
+			<td colspan="2" style="padding: 2px 4px; border-color: #ccc;border-style:solid;border-width:1px; font-size: 11px; font-family: arial;">
+				<table border="0" cellpadding="0" cellspacing="0">
+					<tr>
+						<td colspan="2" style="padding: 5px 5px 5px 15px; font-family: arial; font-size: 12px;"><strong>3. Preferred language of communication:</strong></td>
+					</tr>
+					<tr>
+						<td colspan="2" style="padding: 5px 5px 5px 15px; font-family: arial; font-size: 11px;">
+							<input style="padding-left: 20px;" type="checkbox" th:checked="${true}">English</input>
+							<input type="checkbox">Hindi</input>
+							<input type="checkbox">Punjabi</input>
+							<input type="checkbox">Gujarati</input>
+							<input type="checkbox">Marathi</input>
+							<input type="checkbox">Tamil</input>
+							<input type="checkbox">Malayalam</input>
+							<input type="checkbox">Kannada</input>
+							<input type="checkbox">Oriya</input>
+							<input type="checkbox">Telugu</input>
+							<input type="checkbox">Bengali</input>
+						</td>
+					</tr>
+				</table>
+			</td>
+		</tr>
+		<tr>
+			<td colspan="2" style="padding: 5px 4px; border-color: #ccc;border-style:solid;border-width:1px; font-size: 12px; font-family: arial; font-weight: bold;">B. INFORMATION OF LIFE INSURED</td>
+		</tr>
+		<tr>
+			<td colspan="2" style="padding: 2px 4px; border-color: #ccc;border-style:solid;border-width:1px; font-size: 11px; font-family: arial; font-weight: bold;">1. For Female Life Insured</td>
+		</tr>
+		<tr>
+			<td colspan="2" style="padding: 2px 4px; border-color: #ccc;border-style:solid;border-width:1px; font-size: 11px; font-family: arial;">
+				<table border="1" cellpadding="0" cellspacing="0" width="100%">
+					<tr>
+						<td width="20%" style="padding: 5px 5px 5px 15px; font-family: arial; font-size: 11px;">a. Spouse Details:</td>
+						<td width="20%" style="padding: 5px 5px 5px 15px; font-family: arial; font-size: 11px;">Occupation</td>
+						<td width="20%" style="padding: 5px 5px 5px 15px; font-family: arial; font-size: 11px;"><span th:if="${spouseOccupation!='NA'}" th:text="${spouseOccupation}"></span></td>
+						<td width="20%" style="padding: 5px 5px 5px 15px; font-family: arial; font-size: 11px;">Annual Income</td>
+						<td width="20%" style="padding: 5px 5px 5px 15px; font-family: arial; font-size: 11px;"><span th:if="${spouseIncome!='NA'}" th:text="${spouseIncome}"></span></td>
+					</tr>
+					<tr>
+						<td width="20%" style="padding: 5px 5px 5px 15px; font-family: arial; font-size: 11px;"></td>
+						<td width="20%" style="padding: 5px 5px 5px 15px; font-family: arial; font-size: 11px;">Policy No. with Axis Max Life</td>
+						<td width="20%" style="padding: 5px 5px 5px 15px; font-family: arial; font-size: 11px;"><span th:if=${policyNumberWithMLI!='0'} th:text="${policyNumberWithMLI}"></span></td>
+						<td width="20%" style="padding: 5px 5px 5px 15px; font-family: arial; font-size: 11px;">Total cancer/critical illness/Dreaded
+							Disease insurance with Axis Max Life &amp; Other
+							Insurers</td>
+						<td width="20%" style="padding: 5px 5px 5px 15px; font-family: arial; font-size: 11px;"><span th:text="${spouseInsurance}"></span></td>
+					</tr>
+				</table>
+			</td>
+		</tr>
+		</tbody>
+	</table>
+</td>

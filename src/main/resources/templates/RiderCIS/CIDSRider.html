@@ -1,0 +1,362 @@
+<style>
+    body {
+         display: flex;
+         justify-content: center;
+         align-items: center;
+         min-height: 100vh;
+         margin: 0;
+         font-family: sans-serif;
+     }
+     .container {
+         display: flex;
+         flex-direction: column;
+         align-items: center;
+         margin: 5pt 40pt 40pt 40pt;
+         padding: 20px;
+         border : none;
+         max-width: 210mm; /* A4 width */
+         box-sizing: border-box; /* Ensure padding and border are included in the width */
+         font-size:14px;
+     }
+     .title {
+         font-size: 14px;
+         font-weight: bold;
+         margin-bottom: 10px;
+         text-align: center;
+     }
+     .info-table {
+         max-width: 100%; /* Ensure the table does not exceed its container */
+         width: 100%;
+         border-collapse: collapse;
+         table-layout: fixed; /* Ensure columns fit within the table */
+         margin: auto; /* Center the table */
+     }
+     .info-table th,
+     .info-table td {
+         padding: 10px;
+         border: 1px solid #000;
+         text-align: left;
+         word-wrap: break-word; /* Ensure text wraps within cells */
+         overflow-wrap: break-word; /* Additional support for wrapping */
+         vertical-align: top;
+
+     }
+     .info-table th {
+         background-color: #f2f2f2;
+         font-weight: bold;
+     }
+     /* Apply thicker border to the second column */
+     .info-table th:nth-child(3),
+     .info-table td:nth-child(3) {
+      width: 55%; /* Adjust the percentage to your needs */
+    }
+    .info-table th:nth-child(1),
+     .info-table td:nth-child(1) {
+      width: 6%; /* Adjust the percentage to your needs */
+    }
+    /* Apply thicker border to the second column */
+     .info-table th:nth-child(2),
+     .info-table td:nth-child(2) {
+      width: 24%; /* Adjust the percentage to your needs */
+    }
+    .info-table th:nth-child(4),
+    .info-table td:nth-child(4) {
+        width: 15%;
+    }
+     .disclaimer {
+         font-size: 12px;
+         margin-top: 10px;
+         text-align: center;
+     }
+</style>
+
+<body>
+<div class="container">
+    <h1 style="font-size: 14px;" class="title"><u>CUSTOMER INFORMATION SHEET (CIS) /KNOW YOUR RIDER</u></h1>
+    <p><strong>This document provides key information about your Rider. You are also advised to go through your Rider document.</strong></p>
+    <table class="info-table">
+        <tbody>
+        <tr>
+            <td style="text-align: center;"><strong>SI No</strong></td>
+            <td style="text-align: center;"><strong>Title</strong></td>
+            <td style="text-align: center;">
+                <span style="font-weight: bold;">Description</span><br>
+                <span style="font-weight: normal;">(Please refer to applicable Rider Clause Number in next column)</span>
+            </td>
+            <td style="text-align: center;"><strong>Rider Document Clause Number</strong></td>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>Name of Insurance Product / Rider </td>
+            <td style="text-align: center;">
+                <span style="font-weight: bold;" th:text="${riderName}"></span><br>
+                <span>(A Unit Linked Non-Participating Individual Pure Risk Health Insurance Rider)</span><br>
+            </td>
+            <td>Rider Preamble</td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>Rider number</td>
+            <td style="text-align: center;"><span th:text="${policyNumber}"></span></td>
+            <td>Cover page of the Rider</td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td>Type of Insurance Product / Policy/ Rider</td>
+            <td style="text-align: center;">Benefit Rider (where an insurance policy pays a fixed amount under the Policy on the occurrence
+                of the covered event)</td>
+            <td>Cover page of the Ride</td>
+        </tr>
+        <tr>
+            <td>4</td>
+            <td>Sum Insured (Basis) (Along with amount)</td>
+            <td style="text-align: center;"> Individual Sum Assured - <span th:text="${sumAssuredOnDeath}"></span></td>
+            <td>Rider schedule</td>
+        </tr>
+        <tr>
+            <td>5</td>
+            <td>Policy Coverage (What the policy covers?)<br> (Rider Clause Number/s)</td>
+            <td>
+                <div>The Benefit under the Rider will be paid on happening of any of the below mentioned Insured events, subject to exclusions:</div>
+                <ol class="nuberList">
+                    <li><strong>Critical Illness</strong><i>(Applicable only for Gold Variant, Gold Plus Variant, Platinium Variant and Platinum Plus Variant):</i> offers Coverage against listed Critical Illnesses and in case the Life Insured is Diagnosed with a Major Critical Illness after completion of the Waiting Period during the Rider Term, the Rider Sum Assured will be payable in accordance with the Rider T&C. However, in case of Diagnosis of a Minor Critical Illness, We will pay the lower of 25% of the Rider Sum Assured Or Rs.5 lacs, upon the Life Insured surviving through the Survival Period (refer Annexure 2 for details)<br><br> </li>
+                    <li><strong>Total & Permanent Disability Benefit</strong><i>(Applicable only if You have chosen either Gold Plus Variant, Platinum Plus Variant or Total and Permanent Disability Variant):</i> <strong>offers coverage against the total and permanent disability</strong> as a result of accidental bodily injury, sickness or disease whereby the Life Insured (a) Has the inability to perform at least 3 of the Activities of Daily Living, either with or without the use of mechanical equipment, special devices or other aids and adaptations in use for disabled persons for a continuous period of at least 6 months: or (b) Suffers physical impairment causing: (i) Total and irrecoverable loss of sight of both eyes. The blindness must be confirmed by a Medical Practitioner; or (ii) Loss of use or loss by severance of two or more limbs at or above wrists or ankles; or (iii) The total and irrecoverable loss of sight of one eye and loss of use or loss by severance of one limb at or above wrist or ankle.
+                        <div style="padding-top: 10px;">The above disability must have lasted, without interruption, for at least 6 (six) consecutive months from the date of Diagnosis or Accident and must, in the opinion of a qualified Medical Practitioner, be deemed permanent.</div><br>
+                    </li>
+                    <li><strong>Axis Max Fit Program:</strong> To promote good health and wellbeing of the Life Insured under the Rider, a wellness program is offered to the Life Insured wherein a subscription will be available to the Life Insured only for the first 5 years of Rider Term from the Date of Commencement of Risk under Rider for calculation number of steps completed by the Life Insured to arive at the Healthy Weeks.</li>
+                </ol>
+            </td>
+            <td>Clause 1 of Part C, Rider Benefits</td>
+
+        <tr>
+            <td rowspan="3" style="vertical-align:top ;">6</td>
+            <td rowspan="3" style="vertical-align:top ;">Exclusions<br> (what the policy does not cover)</td>
+            <td style="vertical-align:top ;">
+                <div>Exclusions for Critical Illness benefit </div>
+                <ol type="1">
+                    <li>No benefit of Critical Illness shall be payable:
+                        <ol type="a" style="padding-top: 10px;">
+                            <li>If the Life Insured dies within the Survival Period.</li>
+                            <li>If any Major Critical Illness is Diagnosed within the Waiting Period.</li>
+                            <li>If Critical Illness that was Diagnosed before the Date of Commencement of Risk under Rider.</li>
+                        </ol>
+
+                    </li>
+                </ol>
+            </td>
+            <td style="vertical-align:top ;">Clause 1 (A) b of Part C</td>
+        </tr>
+        <tr>
+            <td><div><strong>For Other exclusions to Critical Illness benefit:</strong> Please refer to Annexure 3</div></td>
+            <td>Clause 1(A)c of Part C </td>
+        </tr>
+        <tr>
+            <td>
+                <ol type="1" start="2">
+                    <li><strong>Exclusions to Total and Permanent Disability Benefit:</strong> Please refer to Annexure 4</li>
+                </ol>
+            </td>
+            <td>Clause 1(B), of Part C </td>
+        </tr>
+        <tr>
+            <td style="vertical-align:top ;">7</td>
+            <td>Waiting period <br>
+                <span>&#8226;</span> Time period during which specified diseases/treatments are not covered<br>
+                <span>&#8226;</span> It is counted from the beginning of the policy coverage.<br>
+            </td>
+            <td>
+                <b>Waiting Period:</b> It is the period of 90 (Ninety) days from the Date of Issuance of Rider / Revival of this Rider in case of Major Critical Illness/ Total and Permanent Disability claim or 180 (One Hundred Eighty) from the Date of Issuance of Rider / Revival of this Rider in case of a Minor Critical Illness claim.
+            </td>
+            <td>PART B, Definitions and Clause 1 of Part C</td>
+        </tr>
+        <tr>
+            <td rowspan="4">8</td>
+            <td>Financial limits of coverage <br>
+                i. Sub-limit<br> (It is a pre-defined limit and the insurance company will not pay any amount in excess of this limit) <br><br>
+            </td>
+            <td style="vertical-align:top ;">
+                <strong>Sub- Limit:</strong>
+                <div>The policy will pay only up to the limits specified hereunder	for the following diseases/procedures.</div>
+                <ol type="A">
+                    <li><strong>Critical Illness Benefit: </strong>
+                        <ol type="i">
+                            <li>In case the Life Insured is Diagnosed with a Major Critical Illness after completion of the Waiting Period during the Rider Term, shall pay the applicable Rider Sum Assured. </li>
+                            <li>In case of Diagnosis of a Minor Critical Illness, We will pay the lower of 25% of the Rider Sum Assured Or Rs.5 lacs, upon the Life Insured surviving through the Survival Period.</li>
+                            <li>In case of Gold Variant or Gold Plus Variant, only the claim for Angioplasty under Minor Critical Illness conditions shall be allowed. In case of Platinium Variant and Platinum Plus Variant, maximum of three claims towards five different Minor Critical Illness conditions can be made under this Rider. However, in case of Platinium Variant and Platinum Plus Variant for multiple Minor Critical Illness claims, the cooling off period of one year must have elapsed between the date of the Diagnosis of two (2) Minor Critical Illness. It is clarified that no cooling off period is applicable in case of the Major Critical Illness claim.</li>
+                            <li>For any Critical Illness claim to be valid under this Rider, the incidence of the Critical Illness must be the first occurrence in the lifetime of the Life Insured and conform to Survival Period. </li>
+                            <li>Multiple claims against the same Critical Illness are not allowed.</li>
+                        </ol>
+                    </li>
+                    <li><strong>Total & Permanent Disability Benefit:</strong> Rider Sum Assured shall be payable on a valid Total and Permanent Disability claim during the Rider Term, subject to Rider benefit being in force.</li>
+                </ol>
+            </td>
+            <td> Clause 1 of Part C </td>
+        </tr>
+        <tr>
+            <td>ii. Co-payment<br> (It is a specified amount/percentage of the admissible claim amount to be paid by policyholder/insured).</td>
+            <td><b>Co-payment: NA</b></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>iii. Deductible<br> (It is a specified amount: <br><br> - up to which an insurance company will not pay any claim, and<br><br> - which will be deducted from total claim amount (if claim amount is more than the specified amount)  <br><br></td>
+            <td><b>Deductible: NA </b></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>iv. Any other limit<br> (as applicable) <br><br></td>
+            <td> <b>Any Other Limit: NA</b></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td style="vertical-align:top ;">9</td>
+            <td style="vertical-align:top ;">Claims/Claims Procedure</td>
+            <td style="vertical-align:top ;">
+                <strong>Turn Around Time (TAT) for claims settlement: 30 days after receipt of entire documents or completion of investigations, if any, whichever is later </strong>
+                <div style="padding-top: 20px;">
+
+                    <strong>Brief procedure</strong>
+                    <div>A Claimant claiming benefits under this Rider shall endeavor to notify Us of the same, in writing, within 90 (Ninety) days from the Diagnosis of the Critical Illness.</div><br>
+                    <ol type="1">
+                        <li>We will require the following documents in case of claim under this Rider:</li>
+                        <li>claimant’s statement in the prescribed form (death claim application form -form A);</li>
+                        <li>original Rider document; a copy of police complaint/ first information report (only in the case of death by accident or unnatural death or suicidal death of the Life Insured);</li>
+                        <li>a copy of duly certified post mortem report, autopsy and a copy of the final police investigation report /charge sheet along with viscera/ histopathology report (wherever applicable) (only in the case of death by accident or unnatural death or suicidal death of the Life Insured);</li>
+                        <li>original/ attested copy of death certificate issued by the local/municipal authority authority (only in the case of death of the Life Insured).</li>
+                        <li>discharge summary / indoor case papers in case death happened due to medical reasons in a hospital;</li>
+                        <li>medical booklet / CGHS card details in case of defence and central government personnel; </li>
+                        <li>body transfer certificate / embassy documents / postmortem report whichever applicable in case of death in foreign country;</li>
+                        <li>complete passport copy in case of death in foreign country;</li>
+                        <li>identity proofs of the Claimants bearing their photographs and signatures (only in case of death of the Life Insured)</li>
+                        <li>other life / health insurance details with claim history details;attending physician's statement;</li>
+                        <li>employer's certificate with complete leave records (Form E);</li>
+                        <li>copy of bank passbook / cancelled cheque of the claimant; </li>
+                        <li>ITR for last 3 years / GST certificate in case of self-employed;</li>
+                        <li>in case of a medical/natural death of the Life Insured, the attending physician’s statement (Form C) and the medical records (admission notes, discharge/death summary, test reports, etc.);</li>
+                        <li>NEFT mandate form attested by bank authorities;</li>
+                        <li>Bank statement of last 2 years of the Life Insured; certificate by a Medical Practitioner confirming Diagnosis of Critical Illness of the Life Insured;</li>
+                        <li>All medical/ hospital records (including diagnostic records) pertaining to Critical illness/ Total and Permanent Disability Diagnosis and treatment.</li>
+                        <li>identity proof of the Claimant including nominee(s) bearing their photographs and signatures and
+                            any other documents/information required by Us for assessing and approving the claim request.</li>
+                    </ol>
+                    <div style="padding-top: 10px;">A Claimant can download the claim request documents from Our website <a href="https://www.maxlifeinsurance.com" target="_blank">www.axismaxlifeinsurance.com</a> or can obtain the same from any of Our branches.</div>
+                </div>
+            </td>
+            <td style="vertical-align:top ;">Clause 3 of Part F</td>
+        </tr>
+
+        <tr>
+            <td style="vertical-align:top ;">10</td>
+            <td style="vertical-align:top ;">Policy Servicing</td>
+            <td style="vertical-align:top ;">
+                <div>Helpline No. – 1860 120 5577 or (0124) 4219090</div>
+                <div>Email: <a href="mailto:service.helpdesk@maxlifeinsurance.com">service.helpdesk@maxlifeinsurance.com</a></div>
+                <div style="padding-top: 10px;">Chief Customer Officer</div>
+                <div>Axis Max Life Insurance Ltd., Plot No. 90C, Udyog Vihar, Sector 18, Gurugram-122015, Haryana, India. Website - <a href="https://www.maxlifeinsurance.com" target="_blank">www.axismaxlifeinsurance.com</a></div>
+            </td>
+            <td style="vertical-align:top ;"></td>
+        </tr>
+        <tr>
+            <td style="vertical-align:top ;">11</td>
+            <td style="vertical-align:top ;">Grievances/ Complaints</td>
+            <td style="vertical-align:top ;">
+                <div>Grievance Redressal Officer, Axis Max Life Insurance Ltd., Plot No. 90C, Udyog Vihar, Sector 18, Gurugram, 122015, Haryana, India</div> <div>Helpline No. – 1860 120 5577 or (0124) 4219090</div>
+                <div style="padding-bottom: 10px; ">Email: <a href="mailto:manager.services@maxlifeinsurance.com">manager.services@maxlifeinsurance.com;</a></div>
+                <strong>Contact details of Ombudsman</strong>
+                <div style="padding-top: 10px;">Ombudsman : Please Refer to Annexure A</div>
+            </td>
+            <td style="vertical-align:top ;">Part G</td>
+        </tr>
+        <tr>
+            <td rowspan="2" style="vertical-align:top ;">12</td>
+            <td rowspan="2" style="vertical-align:top ;">Things To remember</td>
+            <td style="vertical-align:top ;">
+                <ol type="a">
+                    <li><strong>Free Look cancellation:</strong> You may cancel the insurance Rider, if you do not want it, within 30 days from the beginning of the date of receipt of Rider.
+                        <div style="padding-top: 10px;">  If You disagree to any of those terms and conditions of the Rider document or otherwise, and have not made any claim, You have the option to cancel the Rider by sending a written request to Us, by stating the reasons for the same. Upon receipt of Your request and if no claim has been made under the Rider, the Rider will terminate immediately and all rights, benefits and interests under the Rider will cease immediately. You shall be entitled to a refund of the Rider Premiums received by Us after deducting the proportionate risk premium for the period of cover, charges of stamp duty paid and the expenses incurred by Us on medical examination of the Life Insured, if any, irrespective of the reasons mentioned.</div></li>
+                </ol>
+            </td>
+            <td style="vertical-align:top ;">Clause 6 of Part D</td>
+        </tr>
+        <tr>
+            <td style="vertical-align:top ;">
+                <ol type="a" start="1">
+                    <li style="visibility: hidden;opacity: 0;height: 0;"></li>
+                    <li><strong>Rider Revival: </strong>Except on grounds of fraud, moral hazard or misrepresentation or non-cooperation, renewal of your rider shall not be denied, provided the Rider is not withdrawn. Revival of the policy will be as specified in the Base Policy.</li></ol></td>
+            <td style="vertical-align:top ;">Clause 3 of Part D</td>
+        </tr>
+        <tr>
+            <td rowspan="5">13</td>
+            <td rowspan="5">Your Obligations</td>
+            <td>
+                <ul><li>Please disclose all pre-existing disease/s or condition/s before buying a policy. Non-disclosure may affect the claim settlement. Disclosure of other material information during the policy period.</li></ul>
+            </td>
+            <td>Definition- Part B and Clause 1.A(c)(2) and Clause 1.B (II)2 of Part C</td>
+        </tr>
+        <tr>
+            <td>
+                <ul>
+                    <li>If the Premium is not received by the expiry of the Grace Period, the rider will automatically lapse and no benefits will be payable under the rider.</li>
+                </ul>
+            </td>
+            <td>Clause 5 Part C </td>
+        </tr>
+        <tr>
+            <td>
+                <ul>
+                    <li>Fraud, misrepresentation and forfeiture would be dealt with in accordance with provisions of Section 45 of the Insurance Act, 1938 as amended from time to time.</li>
+                </ul>
+            </td>
+            <td>Clause 5 of Part F  </td>
+        </tr>
+        <tr>
+            <td>
+                <ul>
+                    <li>Nomination is allowed as per Section 39 of the Insurance Act, 1938 as amended from time to time.</li>
+                </ul>
+            </td>
+            <td>Clause 6 of Part F</td>
+        </tr>
+        <tr>
+        <td>
+            <ul>
+                <li>Assignment is allowed as per Section 38 of the Insurance Act, 1938 as amended from time to time</li>
+            </ul>
+        </td>
+        <td>Clause 7 of Part F</td>
+        </tr>
+        </tbody>
+    </table>
+    <div class="declaration">
+        <p><u>Declaration by the Policyholder;</u></p>
+        <p>I have read the above and confirm having noted the details.</p>
+
+        <div class="signature-section">
+            <div class="left">
+                <p>Place:<span
+                        style="text-align: center;min-width: 100px;border-bottom-color: #000;border-bottom-style: solid;border-bottom-width: 1px;display: inline-block;padding: 0 18px;font-weight: bold;text-transform:uppercase;"><span
+                        th:text="${place}"></span></span></p>
+                <p>Date:<span
+                        style="text-align: center;min-width: 100px;border-bottom-color: #000;border-bottom-style: solid;border-bottom-width: 1px;display: inline-block;padding: 0 18px;font-weight: bold;text-transform:uppercase;"><span
+                        th:text="${date}"></span></span></p>
+            </div>
+            <div class="signature" style="text-align: right; margin-top: -45px;">
+                <p>(Signature of the Policyholder)</p>
+            </div>
+        </div><br>
+        <div class="note">
+            <p><b>Note:</b></p>
+
+            <ol type="i">
+                <li>For the rider related documents including the Customer Information sheet please refer to the
+                    <a href="https://www.maxlifeinsurance.com"
+                       target="_blank">https://www.axismaxlifeinsurance.com</a>.
+                </li>
+                <li>In case of any conflict, the terms and conditions mentioned in the Rider document shall prevail.
+                </li>
+                <li>Sum Assured on Death is subject to underwriting, for actual Sum Assured details, please refer to the Policy document.</li>
+                <li>In the event of any conflict or discrepancy between any translated version and the English language version of this CIS, the English language version of this CIS shall prevail. </li>
+            </ol>
+        </div>
+    </div>
+</div>
+</body>

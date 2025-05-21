@@ -1,0 +1,133 @@
+<td style="font-family: arial;">
+    <!-- High blood sugar and diabetes reflexive questions start here-->
+    <table cellspacing="0" cellpadding="0" width="100%" style="border-collapse: collapse; border-color: #ccc;border-style:solid;border-width:1px;">
+        <tbody>
+        <tr>
+            <td colspan="6" style="padding: 0px; font-family: arial; font-size:9px; background-color: #000000; border-color: #ccc;border-style:solid;border-width:1px;">
+                <table border="1" cellspacing="0" cellpadding="0" width="100%" style="border-collapse: collapse;">
+                    <tbody>
+                    <tr>
+                        <td colspan="3" style="padding: 2px 4px; font-size: 12px; font-weight: bold; color: #FFFFFF">High Blood Sugar or Diabetes reflexive questions</td>
+                    </tr>
+                    </tbody>
+                </table>
+            </td>
+        </tr>
+        <tr>
+            <td style="padding: 0px; font-family: Arial;">
+                <table width="100%" cellpadding="0" cellspacing="0" border="0" style="border-color: #000000;border-style:solid;border-width:1px;">
+                    <tbody>
+                    <tr>
+                        <td width="35%" style="padding: 5px 5px 5px 10px; font-size: 12px; border-right: 1px solid #000000;  text-align: center;">Information Required</td>
+                        <td width="30%" style="padding: 5px 5px 5px 10px; font-size: 12px; border-right: 1px solid #000000;  text-align: center;">Proposer/Joint Life</td>
+                        <td width="30%" style="padding: 5px 5px 5px 10px; font-size: 12px; border-right: 1px solid #000000;  text-align: center;"> Insured's Information
+                    </tr>
+                    </tbody>
+                </table>
+            </td>
+        </tr>
+        <tr>
+            <td style="padding: 0px; font-family: Arial;">
+                <table width="100%" cellpadding="0" cellspacing="0" border="0" style="border-color: #000000;border-style:solid;border-width:1px;">
+                    <tbody>
+                    <tr>
+                        <td width="35%" style="padding: 5px 5px 5px 10px; font-size: 12px; border-right: 1px solid #000000;  text-align: left;">1) When was Diabetes/ High Blood Sugar Diagnosed?</td>
+                        <td width="30%" style="padding: 5px 5px 5px 10px; font-size: 12px; border-right: 1px solid #000000;  text-align: center;" th:text="${diabetesDiagnosedDate}"></td>
+                        <td width="30%" style="padding: 5px 5px 5px 10px; font-size: 12px; border-right: 1px solid #000000;  text-align: center;" th:text="${lIDataMap.diabetesDiagnosedDate}"></td>
+                    </tr>
+                    </tbody>
+                </table>
+            </td>
+        </tr>
+        <tr>
+            <td style="padding: 0px; font-family: Arial;">
+                <table width="100%" cellpadding="0" cellspacing="0" border="0" style="border-color: #000000;border-style:solid;border-width:1px;">
+                    <tbody>
+                    <tr>
+                        <td width="35%" style="padding: 5px 5px 5px 10px; font-size: 12px; border-right: 1px solid #000000;  text-align: left;">2) Are you on Insulin/Tablets or both? Please give details of medication and dosage.</td>
+                        <td width="30%" style="padding: 5px 5px 5px 10px; font-size: 12px; border-right: 1px solid #000000;  text-align: center;" th:text="${areYouOnInsulin}"></td>
+                        <td width="30%" style="padding: 5px 5px 5px 10px; font-size: 12px; border-right: 1px solid #000000;  text-align: center;" th:text="${lIDataMap.areYouOnInsulin}"></td>
+                    </tr>
+                    </tbody>
+                </table>
+            </td>
+        </tr>
+        <tr>
+            <td style="padding: 0px; font-family: Arial;">
+                <table width="100%" cellpadding="0" cellspacing="0" border="0" style="border-color: #000000;border-style:solid;border-width:1px;">
+                    <tbody>
+                    <tr>
+                        <td width="35%" style="padding: 5px 5px 5px 10px; font-size: 12px; border-right: 1px solid #000000;  text-align: left;">3) Do you follow a strict diet?</td>
+                        <td width="30%" style="padding: 5px 5px 5px 10px; font-size: 12px; border-right: 1px solid #000000;  text-align: center;">
+                            <span th:if="${strictDiet == 'YES'}">
+                                <span th:if="${!#strings.isEmpty(strictDietDetail)}" th:text="${'Yes, '+strictDietDetail}"></span>
+                                <span th:unless="${!#strings.isEmpty(strictDietDetail)}">Yes</span>
+                            </span>
+                            <span th:unless="${strictDiet == 'YES'}" th:text="${strictDiet}"></span>
+                        </td>
+                        <td width="30%" style="padding: 5px 5px 5px 10px; font-size: 12px; border-right: 1px solid #000000;  text-align: center;">
+                            <span th:if="${lIDataMap.strictDiet == 'YES'}">
+                                <span th:if="${!#strings.isEmpty(lIDataMap.strictDietDetail)}" th:text="${'Yes, '+lIDataMap.strictDietDetail}"></span>
+                                <span th:unless="${!#strings.isEmpty(lIDataMap.strictDietDetail)}">Yes</span>
+                            </span>
+                            <span th:unless="${lIDataMap.strictDiet == 'YES'}" th:text="${lIDataMap.strictDiet}"></span>
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+            </td>
+        </tr>
+        <tr>
+            <td style="padding: 0px; font-family: Arial;">
+                <table width="100%" cellpadding="0" cellspacing="0" border="0" style="border-color: #000000;border-style:solid;border-width:1px;">
+                    <tbody>
+                    <tr>
+                        <td width="35%" style="padding: 5px 5px 5px 10px; font-size: 12px; border-right: 1px solid #000000;  text-align: left;">4) How often do you attend for follow ups and when was your last consultation?</td>
+                        <td width="30%" style="padding: 5px 5px 5px 10px; font-size: 12px; border-right: 1px solid #000000;  text-align: center;" >
+                            <span th:if="${followUps == 'others'}" th:text="${followUpsOther}"></span>
+                            <span th:unless="${followUps == 'others'}" th:text="${followUps}"></span>
+                        </td>
+                        <td width="30%" style="padding: 5px 5px 5px 10px; font-size: 12px; border-right: 1px solid #000000;  text-align: center;">
+                            <span th:if="${lIDataMap.followUps == 'others'}" th:text="${lIDataMap.followUpsOther}"></span>
+                            <span th:unless="${lIDataMap.followUps == 'others'}" th:text="${lIDataMap.followUps}"></span>
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+            </td>
+        </tr>
+        <tr>
+            <td style="padding: 0px; font-family: Arial;">
+                <table width="100%" cellpadding="0" cellspacing="0" border="0" style="border-color: #000000;border-style:solid;border-width:1px;">
+                    <tbody>
+                    <tr>
+                        <td width="35%" style="padding: 5px 5px 5px 10px; font-size: 12px; border-right: 1px solid #000000;  text-align: left;">5) What was your last Blood Sugar Values( Fasting Blood Sugar, HbA1c etc)?</td>
+                        <td width="30%" style="padding: 5px 5px 5px 10px; font-size: 12px; border-right: 1px solid #000000;  text-align: center;" th:text="${lastBloodTestReport}"></td>
+                        <td width="30%" style="padding: 5px 5px 5px 10px; font-size: 12px; border-right: 1px solid #000000;  text-align: center;" th:text="${lIDataMap.lastBloodTestReport}"></td>
+                    </tr>
+                    </tbody>
+                </table>
+            </td>
+        </tr>
+        <tr>
+            <td style="padding: 0px; font-family: Arial;">
+                <table width="100%" cellpadding="0" cellspacing="0" border="0" style="border-color: #000000;border-style:solid;border-width:1px;">
+                    <tbody>
+                    <tr>
+                        <td width="35%" style="padding: 5px 5px 5px 10px; font-size: 12px; border-right: 1px solid #000000;  text-align: left;">6) Have you ever had numbness or tingling in your feet/ legs? If yes, provide details ?</td>
+                        <td width="30%" style="padding: 5px 5px 5px 10px; font-size: 12px; border-right: 1px solid #000000;  text-align: center;">
+                            <span th:if="${numbnessInFeet == 'YES'}" th:text="${numbnessInFeetDetail}"></span>
+                            <span th:unless="${numbnessInFeet == 'YES'}" th:text="${numbnessInFeet}"></span>
+                        </td>
+                        <td width="30%" style="padding: 5px 5px 5px 10px; font-size: 12px; border-right: 1px solid #000000;  text-align: center;">
+                            <span th:if="${lIDataMap.numbnessInFeet == 'YES'}" th:text="${lIDataMap.numbnessInFeetDetail}"></span>
+                            <span th:unless="${lIDataMap.numbnessInFeet == 'YES'}" th:text="${lIDataMap.numbnessInFeet}"></span>
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+</td>

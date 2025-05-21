@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title></title>
+    <style type="text/css">
+    table,
+    td,
+    tr {
+        border-collapse: collapse;
+    }
+    </style>
+</head>
+
+<body>
+    <table cellpadding="10" style="margin: auto;width: 100%;">
+        <tr>
+            <td style="font-size: 14px; font-family: arial;">
+                <table width="100%">
+                    <tr>
+                        <td width="100%"> <img src="classpath:static/logo_ax_max.png" width="100" /> </td>
+                    </tr>
+                     <tr>
+            <td style="height: 40px">&nbsp;</td>
+        </tr>
+                    <tr>
+                        <td style="font-weight: bold;">“Declaration of Branch Head on Sale of Life Insurance Policy to PROPOSER whose age is 60 years and above”</td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+        
+        <tr>
+            <td style="font-size: 14px; font-family: arial;">Branch Name: <strong th:text="${branchName}"></strong></td>
+        </tr>
+        <tr>
+            <td style="font-size: 14px; font-family: arial;">Sol ID: <strong th:text="${solId}"></strong></td>
+        </tr>
+        <tr>
+            <td style="font-size: 14px; font-family: arial;">Name of the Branch Head:  <strong th:text="${nameOfTheBranchHead}"></strong></td>
+        </tr>
+        <tr>
+            <td style="font-size: 14px; font-family: arial;">Emp Code of the Seller: <strong th:text="${empCodeOfTheSeller}"></strong></td>
+        </tr>
+        <tr>
+            <td style="font-size: 14px; font-family: arial;">Is customer existing customer: <strong th:text="${existingCustomerBH}"></strong></td>
+        </tr>
+        <tr>
+            <td style="font-size: 14px; font-family: arial;">Proposer Customer ID: <strong th:text="${proposerCustomerId}"></strong></td>
+        </tr>
+        <tr>
+            <td style="font-size: 14px; font-family: arial;">Proposer Name: <strong th:text="${proposerName}"></strong></td>
+        </tr>
+        <tr>
+            <td style="font-size: 14px; font-family: arial;">Life Insured Name (If different from Proposer ): <strong th:text="${lifeInsuredName}"></strong></td>
+        </tr>
+        <tr>
+            <td style="font-size: 14px; font-family: arial;">BM Met/spoke to customer date: <strong th:text="${BmMet_spokeToCustomerDateBH}"></strong></td>
+        </tr>
+        <tr>
+            <td style="font-size: 14px; font-family: arial;">Life Insurance Company Name: <strong>Axis Max Life Insurance</strong></td>
+        </tr>
+        <tr>
+            <td style="font-size: 14px; font-family: arial;">Policy no.: <strong th:text="${policyNo}"></strong></td>
+        </tr>
+        <tr>
+            <td style="font-size: 14px; font-family: arial;">Plan Name: <strong th:text="${planName}"></strong></td>
+        </tr>
+        <tr>
+            <td style="font-size: 14px; font-family: arial;">Premium Amount: <strong th:text="${premiumAmount}"></strong></td>
+        </tr>
+        <tr>
+            <td style="font-size: 14px; font-family: arial;">Premium Payment Term: <strong th:text="${premiumPaymentTerm}"></strong></td>
+        </tr>
+        <tr>
+            <td style="font-size: 14px; font-family: arial;">Policy Term: <strong th:text="${policyTerm}"></strong></td>
+        </tr>
+        <tr>
+            <td style="font-size: 14px; font-family: arial;">CRM Lead ID: <strong th:text="${crmLeadId}"></strong></td>
+        </tr>
+        <tr>
+            <td style="font-size: 14px; font-family: arial;">SP Name: <strong th:text="${spName}"></strong></td>
+        </tr>
+        <tr>
+            <td style="font-size: 14px; font-family: arial;">SP Code: <strong th:text="${spCode}"></strong></td>
+        </tr>
+        <tr>
+            <td style="font-size: 14px; font-family: arial;">
+                <p>Declaration – I,  <strong th:text="${nameOfTheBranchHead}"></strong>  hereby confirm that I have <strong th:text="${met_spokeBH}">met/spoken</strong> on <strong th:text="${BmMet_spokeToCustomerDateBH}"></strong> to the Sr. Citizen <strong th:text="${proposerName}"></strong> with the registered mobile no <strong th:text="${proposerMobileNo}"></strong> to confirm that the proposer is fully aware of the above said Life Insurance Product features, Terms and Conditions. I further confirm that life assured (if major) for this proposal has also been explained on the important features and Terms of this product and both of them have fully understood the terms and have willingly purchased this policy. </p>
+                <p>
+                    Date and time stamp of approval – <strong th:text="${approvalDateTimeBH}"></strong>
+                    <br/>
+                    Phone/Email – <strong th:text="${phoneBH}"></strong> / <strong th:text="${emailBH}"></strong>
+                </p>
+            </td>
+        </tr>
+
+            <tr>
+                <td style="height: 20px">&nbsp;</td>
+            </tr>
+            <tr>
+                <td style="font-weight: bold;">“Approval from Cluster Head on Sale of Life Insurance Policy to PROPOSER whose age is 60 years and above”</td>
+            </tr>
+            <tr>
+                <td style="font-size: 14px; font-family: arial;">Branch Name: <strong th:if="${strategicBranch}" th:text="NA"></strong><strong th:if="${not strategicBranch}" th:text="${branchName}"></strong></td>
+            </tr>
+            <tr>
+                <td style="font-size: 14px; font-family: arial;">Sol ID: <strong th:if="${strategicBranch}" th:text="NA"></strong><strong th:if="${not strategicBranch}" th:text="${solId}"></strong></td>
+            </tr>
+            <tr>
+                <td style="font-size: 14px; font-family: arial;">Name of the Branch Head: <strong th:if="${strategicBranch}" th:text="NA"></strong> <strong th:if="${not strategicBranch}" th:text="${nameOfTheClusterHead}"></strong></td>
+            </tr>
+            <tr>
+                <td style="font-size: 14px; font-family: arial;">Emp Code of the Seller: <strong th:if="${strategicBranch}" th:text="NA"></strong> <strong th:if="${not strategicBranch}" th:text="${empCodeOfTheSeller}"></strong></td>
+            </tr>
+            <tr>
+                <td style="font-size: 14px; font-family: arial;">Is customer existing customer: <strong th:if="${strategicBranch}" th:text="NA"></strong> <strong th:if="${not strategicBranch}" th:text="${existingCustomerCH}"></strong></td>
+            </tr>
+            <tr>
+                <td style="font-size: 14px; font-family: arial;">Proposer Customer ID: <strong th:if="${strategicBranch}" th:text="NA"></strong> <strong th:if="${not strategicBranch}" th:text="${proposerCustomerId}"></strong></td>
+            </tr>
+            <tr>
+                <td style="font-size: 14px; font-family: arial;">Proposer Name: <strong th:if="${strategicBranch}" th:text="NA"></strong> <strong th:if="${not strategicBranch}" th:text="${proposerName}"></strong></td>
+            </tr>
+            <tr>
+                <td style="font-size: 14px; font-family: arial;">Life Insured Name (If different from Proposer ): <strong th:if="${strategicBranch}" th:text="NA"></strong> <strong th:if="${not strategicBranch}" th:text="${lifeInsuredName}"></strong></td>
+            </tr>
+            <tr>
+                <td style="font-size: 14px; font-family: arial;">BM Met/spoke to customer date: <strong th:if="${strategicBranch}" th:text="NA"></strong> <strong th:if="${not strategicBranch}" th:text="${BmMet_spokeToCustomerDateCH}"></strong></td>
+            </tr>
+            <tr>
+                <td style="font-size: 14px; font-family: arial;">Life Insurance Company Name: <strong th:if="${strategicBranch}" >NA</strong> <strong th:if="${not strategicBranch}" >Axis Max Life Insurance</strong></td>
+            </tr>
+            <tr>
+                <td style="font-size: 14px; font-family: arial;">Policy no.: <strong th:if="${strategicBranch}" th:text="NA"></strong> <strong th:if="${not strategicBranch}" th:text="${policyNo}"></strong></td>
+            </tr>
+            <tr>
+                <td style="font-size: 14px; font-family: arial;">Plan Name: <strong th:if="${strategicBranch}" th:text="NA"></strong> <strong th:if="${not strategicBranch}" th:text="${planName}"></strong></td>
+            </tr>
+            <tr>
+                <td style="font-size: 14px; font-family: arial;">Premium Amount: <strong th:if="${strategicBranch}" th:text="NA"></strong> <strong th:if="${not strategicBranch}" th:text="${premiumAmount}"></strong></td>
+            </tr>
+            <tr>
+                <td style="font-size: 14px; font-family: arial;">Premium Payment Term: <strong th:if="${strategicBranch}" th:text="NA"></strong> <strong th:if="${not strategicBranch}" th:text="${premiumPaymentTerm}"></strong></td>
+            </tr>
+            <tr>
+                <td style="font-size: 14px; font-family: arial;">Policy Term: <strong th:if="${strategicBranch}" th:text="NA"></strong> <strong th:if="${not strategicBranch}" th:text="${policyTerm}"></strong></td>
+            </tr>
+            <tr>
+                <td style="font-size: 14px; font-family: arial;">CRM Lead ID: <strong th:if="${strategicBranch}" th:text="NA"></strong> <strong th:if="${not strategicBranch}" th:text="${crmLeadId}"></strong></td>
+            </tr>
+            <tr>
+                <td style="font-size: 14px; font-family: arial;">SP Name: <strong th:if="${strategicBranch}" th:text="NA"></strong> <strong th:if="${not strategicBranch}" th:text="${spName}"></strong></td>
+            </tr>
+            <tr>
+                <td style="font-size: 14px; font-family: arial;">SP Code: <strong th:if="${strategicBranch}" th:text="NA"></strong> <strong th:if="${not strategicBranch}" th:text="${spCode}"></strong></td>
+            </tr>
+            <tr>
+                <td style="font-size: 14px; font-family: arial;">
+                    <p>I <strong th:text="${nameOfCH}"></strong> hereby approve the processing of mentioned proposal form for Axis Max Life Insurance <strong th:text="${policyNumber}"></strong>
+                    </p>
+                    <p>
+                        Date and time stamp of Approval – <strong th:if="${strategicBranch}" th:text="NA"></strong>  <strong th:if="${not strategicBranch}" th:text="${approvalDateTimeCH}"></strong>
+                        <br/>
+                        Phone/Email – <strong th:if="${strategicBranch}" th:text="NA"></strong> <strong th:if="${not strategicBranch}" th:text="${phoneCH}"></strong> / <strong th:if="${not strategicBranch}" th:text="${emailCH}"></strong>
+                    </p>
+                </td>
+            </tr>
+
+        <tr>
+            <td style="height: 40px">&nbsp;</td>
+        </tr>
+        
+       
+    </table>
+</body>
+
+</html>

@@ -1,0 +1,509 @@
+<style xmlns="http://www.w3.org/1999/html">
+    body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        margin: 0;
+        font-family: sans-serif;
+    }
+    * {
+        font-size: 11pt;
+    }
+    .container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 20px;
+        padding: 20px;
+        border : none;
+        max-width: 210mm; /* A4 width */
+        box-sizing: border-box; /* Ensure padding and border are included in the width */
+        font-size:11pt;
+
+    }
+    .title {
+        font-size: 11pt;
+        font-weight: bold;
+        margin-bottom: 10px;
+        text-align: center;
+    }
+    .info-table {
+        max-width: 100%; /* Ensure the table does not exceed its container */
+        width: 100%;
+        border-collapse: collapse;
+        table-layout: fixed; /* Ensure columns fit within the table */
+        margin: auto; /* Center the table */
+    }
+    .info-table th,
+    .info-table td {
+        padding: 10px;
+        border: 1px solid #000;
+        text-align: left;
+        word-wrap: break-word; /* Ensure text wraps within cells */
+        overflow-wrap: break-word; /* Additional support for wrapping */
+        vertical-align: top;
+
+    }
+    .info-table th {
+        background-color: #f2f2f2;
+        font-weight: bold;
+    }
+    /* Apply thicker border to the second column */
+    .info-table th:nth-child(3),
+    .info-table td:nth-child(3) {
+        width: 55%; /* Adjust the percentage to your needs */
+    }
+    .info-table th:nth-child(1),
+    .info-table td:nth-child(1) {
+        width: 8%; /* Adjust the percentage to your needs */
+    }
+    .info-table th:nth-child(4),
+    .info-table td:nth-child(4) {
+        width: 15%;
+    }
+    .disclaimer {
+        font-size: 11pt;
+        margin-top: 10px;
+        text-align: center;
+    }
+    .small-table {
+        border: 1px solid black;
+        border-collapse: collapse;
+    }
+    .small-table th,
+    .small-table td {
+        padding: 10px;
+        border: 1px solid #000;
+        text-align: left;
+        word-wrap: break-word; /* Ensure text wraps within cells */
+        overflow-wrap: break-word; /* Additional support for wrapping */
+        vertical-align: top;
+
+    }
+    .small-table th {
+        background-color: #dcf6ff;
+        font-weight: bold;
+        text-align: center;
+    }
+    .dot {
+        height: 5px;
+        width: 5px;
+        background-color: skyblue;
+        border-radius: 50%;
+        display: inline-block;
+    }
+    .annexure{
+        font-size:11pt;
+        font-family: sans-serif;
+        page-break-before: always;
+    }
+</style>
+<body>
+<div class="annexure">
+    <p style="text-align: center;"><strong>Annexure - A</strong></p>
+    <h1 class="title">CUSTOMER INFORMATION SHEET/KNOW YOUR RIDER </h1>
+    <p><strong>Customer Information Sheet reference no. </strong><span th:text="${policyNumber}"></span></p>
+    <strong>This document provides key information about your Rider. You are also advised to go through your Rider
+        document.</strong>
+    <table class="info-table">
+        <tr>
+            <th>Sl. no.</th>
+            <th>Title</th>
+            <th>Description<br>(Please refer to applicable Rider Clause Number in next column)
+            </th>
+            <th>Rider Document Clause Number</th>
+        </tr>
+        <tbody>
+        <tr>
+            <td><strong>1</strong></td>
+            <td>Name of Insurance Product / Rider</td>
+            <td><span th:text="${wopRider} "></span><br></td>
+            <td>Rider Preamble</td>
+        </tr>
+        <tr>
+            <td><strong>2</strong></td>
+            <td>Rider Number</td>
+            <td><span th:text="${wopRiderNumber}"></span></td>
+            <td>Rider Schedule</td>
+        </tr>
+        <tr>
+            <td><strong>3</strong></td>
+            <td>Type of Insurance Product / Policy/Rider</td>
+            <td>Benefit Rider</td>
+            <td>Rider Preamble</td>
+        </tr>
+        <tr>
+            <td><strong>4</strong></td>
+            <td>Sum Insured (Basis) (Along with amount)</td>
+            <td> Individual Sum Assured - <strong>NA</strong></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td><strong>5</strong></td>
+            <td>Policy Coverage (What the policy covers?)(Policy Clause Number/s)</td>
+            <td>
+                1. The benefit shall be payable in form of Waiver of all the Specified Premiums Due till the earliest of
+                the expiry of the Policy Term or the expiry of the Premium Payment Term under the base Policy or the
+                termination of the base Policy due to happening of any insured event / surrender or the end of the
+                Policy Anniversary on which You attain the age of 70 (Seventy) years on the occurrence of the first of
+                the following events when this Rider and the base Policy are in force: <br><br>
+                <span>a) Dismemberment;</span><br>
+                <span> b) Diagnosis with a Critical Illness; or </span><br>
+                <span>c) Death (if You are not the Life Insured under the base Policy). </span><br><br>
+                2. Once the claim under the Rider is accepted and Specified Premiums Due are waived; then in case of
+                termination of base Policy due to happening of any insured event or surrender (only if surrender value
+                is available under the base Policy), We will pay: <br> <br>
+                <span>d) all applicable benefits under the base Policy; and </span><br>
+                <span>e) the present value of the future Premium (including Rider Premium, if any) to be waived, discounted at the rate of 6.5% p.a.</span>
+                <br>
+            </td>
+            <td>Clause 2 of Part C, Rider Benefits</td>
+        </tr>
+        <tr>
+            <td rowspan="3"><strong>6</strong></td>
+            <td rowspan="3">Exclusions (what the policy does not cover)</td>
+            <td>Exclusions Applicable to this rider <br><br>
+                1. No benefit under this rider shall be payable: <br><br>
+                <span>a) If the Critical Illness is Diagnosed within 90 (Ninety) days from the Date of Commencement of Risk under Rider or the date of revival of the Rider ("Waiting Period"). </span><br>
+                <span>b) If Life assured dies within a period of 30 (Thirty) days from Diagnosis of Critical Illness.  </span><br>
+                <span>c) In case any Critical Illness is Diagnosed or You suffer Dismemberment before the Date of Commencement of Risk under Rider.</span><br>
+            </td>
+            <td>Clause 3.1 to 3.3 of Part C, Rider Benefit</td>
+            <br><br>
+        </tr>
+        <tr>
+            <td style="border: none">
+                <strong>2. For Other exclusions to Waiver of Premium Plus benefit:</strong> Please refer to Annexure 2 <br><br>
+            </td>
+            <td style="border-bottom-style: hidden">Clause 3.4 of Part C, Rider Benefit</td>
+            <br><br>
+        </tr>
+        <tr>
+        </tr>
+        <tr>
+            <td><strong>7</strong></td>
+            <td>Waiting period<br>
+                &#8226; Time period during which specified diseases/treatments are not covered <br>
+                &#8226;It is counted from the beginning of the policy coverage.
+            </td>
+            <td>
+                <span>It is the period of 90 (Ninety) days from the Date of Commencement of Risk under Rider / Revival of this Rider.</span><br>
+            </td>
+            <td>Clause 3.1 of Part C, Rider Benefits</td>
+        </tr>
+        <tr>
+            <td><strong>8</strong></td>
+            <td>Financial limits of coverage<br>
+                i. Sub-limit
+                (It is a pre defined limit and the insurance company will not pay any amount in excess of this limit)
+            </td>
+            <td><strong>Sub- Limit:</strong><br>
+                <span>The maximum waiver of annual Premiums, under all the Policy(ies) and all other applicable riders in force, shall not exceed a sum of Rs. 25,00,000/- (inclusive of Underwriting Extra Premium and applicable taxes). </span>
+            </td>
+            <td>Clause 1.6 of Part C</td>
+        </tr>
+        <tr>
+            <td></td>
+            <td>ii. Co-payment<br><br>
+                (It is a specified amount/percentage of the admissible claim amount to be paid by policyholder
+                /insured).
+            </td>
+            <td><strong>Co-payment: NA</strong></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td>iii. Deductible<br><br>
+                (It is a specified amount:<br><br>
+                &#8211; up to which an insurance company will not pay any claim, and<br><br>
+                &#8211; which will be deducted from total claim amount (if claim amount is more than the specified
+                amount)
+            </td>
+            <td><strong>Deductible: NA</strong></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td>iv. Any other limit (as applicable)<br><br></td>
+            <td><strong>Any Other Limit: NA</strong></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td><strong>9</strong></td>
+            <td>Claims/Claims Procedure</td>
+            <td>
+                <strong>Turn Around Time (TAT) for claims settlement: Please refer to Annexure -B for details</strong><br><br>
+                <span>&#8226;</span> <strong> Brief procedure:</strong><br><br>
+                <span>I. The Claimant is required to produce the following in case of  Policyholders death (if You are not the Life Insured under the base Policy): </span><br>
+                <strong>1. </strong>claimant's statement in the prescribed form (death claim application form -form A)
+                <br>
+                <strong>2. </strong>original Rider document<br>
+                <strong>3. </strong>original/ attested copy of death certificate issued by the local/municipal authority
+                <br>
+                <strong>4. </strong>attending Medical Practitioner's statement confirming Diagnosis of the Life Insured
+                and <br>
+                <strong>5. </strong>any other documents/information required by Us for assessing and approving the
+                claim.<br><br>
+                <span>II. You are required to produce the following in case of Dismemberment or Critical Illness </span><br>
+                <strong>1. </strong>claimant's statement in the prescribed form prescribed by Us<br>
+                <strong>2. </strong>original Rider document;<br>
+                <strong>3. </strong>attending Medical Practitioner's statement confirming Diagnosis of the Life Insured;<br>
+                <strong>4. </strong>copies of all recent treatment/hospitalization records<br>
+                <strong>5. </strong>certificate by a Medical Practitioner confirming Your Dismemberment or Critical
+                Illness; and<br>
+                <strong>6. </strong>any other documents/information required by Us for assessing and approving the claim<br><br>
+                A Claimant can download the claim request documents from Our website <a
+                    href="https://www.axismaxlife.com" target="_blank">www.axismaxlife.com</a> or can obtain
+                the same from any of Our branches.
+            </td>
+            <td>Clause 3 (Claim Procedure) of Part F</td>
+        </tr>
+        <tr>
+            <td><strong>10</strong></td>
+            <td>Policy Servicing</td>
+            <td>Helpline No. - 1860 120 5577 or (0124) 4219090
+                Email:<a href="service.helpdesk@axismaxlife.com" target="_blank">service.helpdesk@axismaxlife.com</a><br>
+                <br>
+                Head - Customer Care
+            </td>
+            <td>Clause 1.1 (Dispute Redressal process under policy) - Part G</td>
+        </tr>
+        <tr>
+            <td><strong>11</strong></td>
+            <td>Grievances/ Complaints</td>
+            <td>Grievance Redressal Officer, Axis Max Life Insurance Limited, Plot No. 90C, Udyog Vihar, Sector 18,
+                Gurugram, 122015, Haryana, India
+                Helpline No. – 1860 120 5577 or (0124) 4219090
+                Email:<a href="manager.services@axismaxlife.com" target="_blank">manager.services@axismaxlife.com;</a><br><br>
+                Ombudsman : Please Refer to Annexure 1 <br><br><br>
+            </td>
+            <td>Clause 1.2 (Dispute Redressal process under policy) - Part G</td>
+        </tr>
+        <tr>
+            <td rowspan="2"><strong>12</strong></td>
+            <td rowspan="2">Things To remember</td>
+            <td style="border: none"><strong>a. Free Look cancellation: </strong>You may cancel the insurance Rider, if
+                you do not want it, within 30 days from the beginning of the date of receipt of Rider.<br><br>
+                If You disagree to any of those terms and conditions of the Rider document or otherwise, and have not
+                made any claim, You have the option to cancel the Rider by sending a written request to Us, by stating
+                the reasons for the same. Upon receipt of Your request and if no claim has been made under the Rider,
+                the Rider will terminate immediately and all rights, benefits and interests under the Rider will cease
+                immediately. You shall be entitled to a refund of the Rider Premiums received by Us after deducting the
+                proportionate risk premium for the period of cover, charges of stamp duty paid and the expenses incurred
+                by Us on medical examination of the Life Insured, if any, irrespective of the reasons mentioned.
+            </td>
+            <td>Cover Letter, Part A</td>
+        </tr>
+        <tr>
+            <td><strong>b. Rider Revival: </strong>A Lapsed Rider can be revived within the Revival Period subject
+                to:<br>
+                <span>1. Receipt of written request to revive the Rider along with the base Policy.</span><br>
+                <span>2. Producing an evidence of insurability (in form of declaration of health condition and/or relevant medical reports) at your own cost which is acceptable to Us</span><br>
+                <span>3. Payment of all overdue Rider Premiums with late fee and/or interest at such rate as may be determined from time to time </span><br>
+            </td>
+            <td>Clause 3.1 of Part D, Revival of rider</td>
+        </tr>
+        <tr>
+            <td rowspan="5"><strong>13</strong></td>
+            <td rowspan="5">Your Obligations</td>
+            <td>
+                <span>&#8226; </span>If the Rider Premium or the premium under the base policy is not received by the
+                expiry of the Grace Period, the rider will automatically lapse and no benefits will be payable under the
+                rider.<br>
+            </td>
+            <td>Clause 5 Part C (Lapsation of Rider)</td>
+        </tr>
+        <tr>
+            <td>
+                <span>&#8226; </span>Fraud, misrepresentation and forfeiture would be dealt with in accordance with
+                provisions of Section 45 of the Insurance Act, 1938 as amended from time to time.<br>
+            </td>
+            <td>Clause 5 of Part F</td>
+        </tr>
+        <tr>
+            <td>
+                <span>&#8226; </span>Nomination is allowed as per Section 39 of the Insurance Act, 1938 as amended from
+                time to time.<br><br>
+            </td>
+            <td>Clause 8 of Part F</td>
+        </tr>
+        <tr>
+            <td>
+                <span>&#8226; </span>Assignment is allowed as per Section 38 of the Insurance Act, 1938 as amended from
+                time to time.<br><br>
+            </td>
+            <td>Clause 9 of Part F</td>
+        </tr>
+        </tbody>
+    </table>
+    <br><br>
+    <div class="declaration">
+        <p><u>Declaration by the Policyholder</u></p>
+        <p>I have read the above and confirm having noted the details.</p>
+
+        <div class="signature-section">
+            <div class="left">
+                <p>Place:<span
+                        style="text-align: center;min-width: 100px;border-bottom-color: #000;border-bottom-style: solid;border-bottom-width: 1px;display: inline-block;padding: 0 18px;font-weight: bold;text-transform:uppercase;"><span
+                        th:text="${place}"></span></span></p>
+                <p>Date:<span
+                        style="text-align: center;min-width: 100px;border-bottom-color: #000;border-bottom-style: solid;border-bottom-width: 1px;display: inline-block;padding: 0 18px;font-weight: bold;text-transform:uppercase;"><span
+                        th:text="${date}"></span></span></p>
+            </div>
+            <div class="signature" style="text-align: right; margin-top: -45px;">
+                <p>(Signature of the Policyholder)</p>
+            </div>
+        </div>
+        <br>
+        <div class="note">
+            <p><b>Note:</b></p>
+            <p>i. For the product related documents including the Customer Information sheet please refer to the <a
+                    href="https://www.axismaxlife.com/content/dam/corporate/Riders/Max-Life-Waiver-of-Premium-Plus/max-life-waiver-of-premium-plus-rider-prospectus.pdf"
+                    target="_blank">https://www.axismaxlife.com/content/dam/corporate/Riders/Max-Life-Waiver-of-Premium-Plus/max-life-waiver-of-premium-plus-rider-prospectus.pdf </a>
+            </p>
+            <p>ii. In case of any conflict, the terms and conditions mentioned in the Policy document shall prevail.</p>
+            <p>iii. Base Sum Assured is subject to underwriting, for actual Sum Assured details & updated UIN number (in case of modification), please refer to the Policy document.</p>
+            <p> iv. In the event of any conflict or discrepancy between any translated version and the English language
+                version of this CIS, the English language version of this CIS shall prevail.</p>
+        </div>
+        <br>
+    </div>
+    <div class="annexure">
+        <tr style="width: 100%">
+            <p style="text-align: center;"><u><b>Annexure A: List of Insurance Ombudsman</b></u></p>
+            <div class="ombudsman-list">
+                <div class="ombudsman">
+                    <b>AHMEDABAD</b> - Office of the Insurance Ombudsman, 6<sup>th</sup> Floor, Jeevan Prakash Bldg,
+                    Tilak Marg, Relief Road, Ahmedabad-380 001. Tel.:- 079-25501201/02/05/06 Email: <a
+                        href="mailto:bimalokpal.ahmedabad@cioins.co.in">bimalokpal.ahmedabad@cioins.co.in</a> (State of
+                    Gujarat and Union Territories of Dadra & Nagar Haveli and Daman and Diu.)
+                </div>
+                <div class="ombudsman">
+                    <b>BENGALURU</b> - Office of the Insurance Ombudsman, Jeevan Soudha Bldg., PID No. 57-27-N-19,
+                    Ground Floor, 19/19, 24<sup>th</sup> Main Road, JP Nagar, 1<sup>st</sup> Phase, Bengaluru – 560 078.
+                    Tel.: 080-26652049/26652048 Email: <a href="mailto:bimalokpal.bengaluru@cioins.co.in">bimalokpal.bengaluru@cioins.co.in</a>
+                    (State of Karnataka).
+                </div>
+                <div class="ombudsman">
+                    <b>BHOPAL</b> - Office of the Insurance Ombudsman, 1<sup>st</sup> Floor, Jeevan Shikha, 60-B,
+                    Hoshangabad Road, Opp. Gayatri Mandir, Bhopal-462 011. Tel.:- 0755-2769201/2769202 Email: <a
+                        href="mailto:bimalokpal.bhopal@cioins.co.in">bimalokpal.bhopal@cioins.co.in</a> (States of
+                    Madhya Pradesh and Chhattisgarh.)
+                </div>
+                <div class="ombudsman">
+                    <b>BHUBANESHWAR</b> - Office of the Insurance Ombudsman, 62, Forest Park, Bhubaneswar - 751 009.
+                    Tel.:- 0674-2596461/2596455 Email: <a href="mailto:bimalokpal.bhubaneswar@cioins.co.in">bimalokpal.bhubaneswar@cioins.co.in</a>
+                    (State of Odisha.)
+                </div>
+                <div class="ombudsman">
+                    <b>CHANDIGARH</b> - Office of the Insurance Ombudsman, S.C.O. No. 20-27, Ground Floor, Jeevan Deep
+                    Building, Sector 17-A, Chandigarh-160017. Tel.:- 0172-4646394/2706468 Email: <a
+                        href="mailto:bimalokpal.chandigarh@cioins.co.in">bimalokpal.chandigarh@cioins.co.in</a> [States
+                    of Punjab, Haryana (excluding 4 districts viz, Gurugram, Faridabad, Sonepat and Bahadurgarh)
+                    Himachal Pradesh, Union Territories of Jammu & Kashmir, Ladakh and Chandigarh]
+                </div>
+                <div class="ombudsman">
+                    <b>CHENNAI</b> - Office of the Insurance Ombudsman, Fatima Akhtar Court, 4<sup>th</sup> Floor, 453,
+                    Anna Salai, Teynampet, Chennai-600 018. Tel.:- 044-24333668 / 24333678 Email: <a
+                        href="mailto:bimalokpal.chennai@cioins.co.in">bimalokpal.chennai@cioins.co.in</a> [State of
+                    Tamil Nadu and Union Territories - Puducherry Town and Karaikal (which are part of Union Territory
+                    of Puducherry).]
+                </div>
+                <div class="ombudsman">
+                    <b>DELHI</b> - Office of the Insurance Ombudsman, 2/2 A, Universal Insurance Building, Asaf Ali
+                    Road, New Delhi-110 002. Tel.:- 011-23237539 Email: <a href="mailto:bimalokpal.delhi@cioins.co.in">bimalokpal.delhi@cioins.co.in</a>
+                    (State of Delhi, 4 districts of Haryana viz, Gurugram, Faridabad, Sonepat and Bahadurgarh)
+                </div>
+                <div class="ombudsman">
+                    <b>KOCHI</b> - Office of the Insurance Ombudsman, 10<sup>th</sup> Floor, Jeevan Prakash, LIC
+                    Building, Opp. to Maharaja’s College Ground, M.G. Road, Kochi 682011. Tel : 0484-2358759 Email: <a
+                        href="mailto:bimalokpal.ernakulam@cioins.co.in">bimalokpal.ernakulam@cioins.co.in</a> (State of
+                    Kerala and Union Territory of (a) Lakshadweep (b) Mahe-a part of Union Territory of Puducherry.)
+                </div>
+                <div class="ombudsman">
+                    <b>GUWAHATI</b> - Office of the Insurance Ombudsman, “Jeevan Nivesh”, 5<sup>th</sup> Floor, Nr.
+                    Panbazar over bridge, S. Road, Guwahati-781 001(ASSAM) Tel.:- 0361-2632204/2602205 Email: <a
+                        href="mailto:bimalokpal.guwahati@cioins.co.in">bimalokpal.guwahati@cioins.co.in</a> (States of
+                    Assam, Meghalaya, Manipur, Mizoram, Arunachal Pradesh, Nagaland and Tripura.)
+                </div>
+                <div class="ombudsman">
+                    <b>HYDERABAD</b> - Office of the Insurance Ombudsman, 6-2-46, 1<sup>st</sup> Floor, Moin Court, Lane
+                    Opp. Saleem Function Palace,A.C. Guards, Lakdi-Ka-Pool, Hyderabad-500 004. Tel : 040-23312122 Email:
+                    <a href="mailto:bimalokpal.hyderabad@cioins.co.in">bimalokpal.hyderabad@cioins.co.in</a> (State of
+                    Andhra Pradesh, Telangana and Yanam and part of the Union Territory of Puducherry.)
+                </div>
+                <div class="ombudsman">
+                    <b>JAIPUR</b> - Office of the Insurance Ombudsman, Ground Floor, Jeevan Nidhi II Bldg, Bhawani Singh
+                    Marg, Jaipur – 302005 Tel : 0141-2740363/2740798 Email: <a
+                        href="mailto:bimalokpal.jaipur@cioins.co.in">bimalokpal.jaipur@cioins.co.in</a> (State of
+                    Rajasthan)
+                </div>
+                <div class="ombudsman">
+                    <b>KOLKATA</b> - Office of the Insurance Ombudsman, Hindustan Building. Annexe, 7<sup>th</sup>
+                    Floor, 4, C.R. Avenue, Kolkata-700 072. Tel : 033-22124339/22124341 Email: <a
+                        href="mailto:bimalokpal.kolkata@cioins.co.in">bimalokpal.kolkata@cioins.co.in</a> (States of
+                    West Bengal, Sikkim, and Union Territories of Andaman and Nicobar Islands.)
+                </div>
+                <div class="ombudsman">
+                    <b>LUCKNOW</b> - Office of the Insurance Ombudsman, 6<sup>th</sup> Floor, Jeevan Bhawan, Phase-2,
+                    Nawal Kishore Road, Hazratganj, Lucknow-226 001. Tel.: 0522-4002082/3500613 Email: <a
+                        href="mailto:bimalokpal.lucknow@cioins.co.in">bimalokpal.lucknow@cioins.co.in</a> (Following
+                    Districts of Uttar Pradesh: Lalitpur, Jhansi, Mahoba, Hamirpur, Banda, Chitrakoot, Allahabad,
+                    Mirzapur, Sonbhabdra, Fatehpur, Pratapgarh, Jaunpur, Varanasi, Gazipur, Jalaun, Kanpur, Lucknow,
+                    Unnao, Sitapur, Lakhimpur, Bahraich, Barabanki, Raebareli, Sravasti, Gonda, Faizabad, Amethi,
+                    Kaushambi, Balrampur, Basti, Ambedkarnagar, Sultanpur, Maharajgang, Santkabirnagar, Azamgarh,
+                    Kushinagar, Gorkhpur, Deoria, Mau, Ghazipur, Chandauli, Ballia, Sidharathnagar.)
+                </div>
+                <div class="ombudsman">
+                    <b>MUMBAI</b> - Office of the Insurance Ombudsman, 3<sup>rd</sup> Floor, Jeevan Seva Annexe, S.V.
+                    Road, Santacruz(W), Mumbai 400054. Tel : 022-69038800/27/29/31/32/33 Email: <a
+                        href="mailto:bimalokpal.mumbai@cioins.co.in">bimalokpal.mumbai@cioins.co.in</a> (State of Goa
+                    and Mumbai Metropolitan Region excluding areas of Navi Mumbai and Thane)
+                </div>
+                <div class="ombudsman">
+                    <b>NOIDA</b> - Office of the Insurance Ombudsman, 4<sup>th</sup> Floor, Bhagwan Sahai Palace, Main
+                    Road, Naya Bans, Sector-15, Distt: Gautam Buddh Nagar, U.P. - 201301. Tel: 0120-2514252/2514253
+                    Email: <a href="mailto:bimalokpal.noida@cioins.co.in">bimalokpal.noida@cioins.co.in</a> (State of
+                    Uttarakhand and the following Districts of Uttar Pradesh: Agra, Aligarh, Bagpat, Bareilly, Bijnor,
+                    Budaun, Bulandshehar, Etah, Kannauj, Mainpuri, Mathura, Meerut, Moradabad, Muzaffarnagar, Oraiyya,
+                    Pilibhit, Etawah, Farrukhabad, Firozbad, Gautam Buddh nagar, Ghaziabad, Hardoi, Shahjahanpur, Hapur,
+                    Shamli, Rampur, Kashganj, Sambhal, Amroha, Hathras, Kanshiramnagar, Saharanpur.)
+                </div>
+                <div class="ombudsman">
+                    <b>PATNA</b> - Office of the Insurance Ombudsman, 2<sup>nd</sup> floor, Lalit Bhawan, Bailey Road,
+                    Patna - 800001 Tel No: 0612-2547068, Email: <a href="mailto:bimalokpal.patna@cioins.co.in">bimalokpal.patna@cioins.co.in</a>
+                    (State of Bihar, Jharkhand.)
+                </div>
+                <div class="ombudsman">
+                    <b>PUNE</b> - Office of the Insurance Ombudsman, 3<sup>rd</sup> Floor, Jeevan Darshan Bldg, C.T.S.
+                    Nos. 195 to 198, N.C. Kelkar Road, Narayan Peth, Pune – 411030. Tel.: 020-24471175 Email: <a
+                        href="mailto:bimalokpal.pune@cioins.co.in">bimalokpal.pune@cioins.co.in</a> (State of
+                    Maharashtra including Navi Mumbai and Thane and excluding Mumbai Metropolitan Region.)
+                </div>
+            </div>
+        </tr>
+    </div>
+    <div class="annexure">
+        <br><strong>Annexure 2: Other exclusions to Waiver of Premium Plus benefit </strong><br>
+        <p>If Your Critical Illness or Dismemberment is directly or indirectly, caused, occasioned, accelerated or
+            aggravated directly or indirectly, by any of the following:</p>
+        <p>i) suicide or attempted suicide or self-inflicted injury, whether You are medically sane or insane</p>
+        <p>ii) committing an assault, a criminal offence, an illegal activity or any breach of law with criminal
+            intent</p>
+        <p>iii) any congenital condition </p>
+        <p>iv) alcohol or solvent abuse or taking of drugs, narcotics or psychotropic substances unless taken in
+            accordance with the lawful directions and prescription of a Medical Practitioner</p>
+        <p>v) war, invasion, act of foreign enemy, hostilities (whether war be declared or not), armed or unarmed truce,
+            civil war, mutiny, rebellion, revolution, insurrection, military or usurped power, riot, civil commotion or
+            strikes</p>
+        <p>vi) participation by You in any flying activity other than as a bona fide passenger (whether paying or not),
+            pilots and cabin crew in a licensed scheduled aircraft</p>
+        <p>vii) engaging in or taking part in professional sport(s) or any hazardous pursuits, including but not limited
+            to, diving or riding or any kind of race; underwater activities involving the use of breathing apparatus or
+            not, martial arts, hunting, mountaineering, parachuting, bungee-jumping; or</p>
+        <p>viii) nuclear contamination, the radioactive, explosive or hazardous nature of nuclear fuel materials or
+            property contaminated by nuclear fuel materials or accident arising from such nature</p>
+    </div>
+</div>
+</body>

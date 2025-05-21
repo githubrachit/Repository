@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <style type="text/css">
+        table, td, tr {
+            border-collapse: collapse;
+        }
+
+        .pageBreakafter {
+            page-break-after: always;
+        }
+
+        .pageBeakBefore {
+            page-break-before: always;
+        }
+
+        * {
+            font-family: arial !important;
+            text-align: left;
+        }
+
+        @media print {
+            * {
+                font-size: 6pt !important;
+            }
+
+            .printtext {
+                font-size: 11pt !important;
+            }
+        }
+
+        @page {
+            margin: 20pt;
+            border-left: solid 0.5pt;
+            border-top: solid 0.5pt;
+            border-bottom: solid 0.5pt;
+            border-right: solid 0.5pt;
+<!--   NR-8467 Brand Refresh Remove Axis Jv Line -->
+<!--            @bottom-left {-->
+<!--                content: url("classpath:static/[[${footer}]]");-->
+<!--            }-->
+            @bottom-center {
+                font-family: arial;
+                font-size: 9px;
+                content: "-" counter(page) "-";
+            }
+            @bottom-right {
+                font-family: arial;
+                font-size: 9px;
+                content: "TRAD_STD_0523_5.10";
+            }
+        }
+    </style>
+</head>
+<body style="margin: 0 auto;padding: 0;width: 100%">
+<table align="center" border="1" cellpadding="0" cellspacing="0" style="border-collapse: collapse;">
+    <tbody>
+    <!-- Main Wrapper Start Here-->
+    <tr>
+        <td>
+            <table border="0" cellpadding="0" cellspacing="0" style="border-collapse: collapse;" width="100%">
+                <tbody>
+                <tr>
+                    <td>
+                        <table border="1" cellpadding="0" cellspacing="0" style="border-collapse: collapse;"
+                               width="100%">
+                            <tbody>
+                            <tr>
+                                <td valign="top" width="60%">
+                                    <table cellpadding="0" cellspacing="0" style="width: 100%;">
+                                        <tbody>
+                                        <tr>
+                                            <td>
+                                                <table cellpadding="0" cellspacing="0"
+                                                       style="width: 100%; float: left;">
+                                                    <tbody>
+                                                    <tr>
+                                                        <td style="padding: 2px" width="75px"><img
+                                                                alt="Axis Max Life Insurance" height="45"
+                                                                src="classpath:static/logo_ax_max.png" width="auto"/></td>
+                                                        <td style="padding: 2px">
+                                                            <div style="font-size: 15px !important; font-family: arial; font-weight: bold;">
+                                                                Axis Max Life Insurance Limited
+                                                            </div>
+                                                            <div style="font-size: 10px; font-family: arial;">Regd.
+                                                                Office : 419, Bhai Mohan Singh Nagar, Railmajra, Tehsil
+                                                                Balachaur, District Nawanshahr, Punjab, 144533
+                                                            </div>
+                                                            <div style="font-size: 10px; font-family: arial;">Head
+                                                                Office: 11th & 12th Floor, DLF Square, Jacaranda Marg,
+                                                                DLF City Phase-II, Gurugram - Haryana, 122002
+                                                            </div>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td colspan="2">
+                                                            <table border="0" cellpadding="2" cellspacing="0"
+                                                                   style="border-collapse: collapse;border-top: 1px solid black"
+                                                                   width="100%">
+                                                                <tbody>
+                                                                <tr>
+                                                                    <td>
+                                                                        <table border="0" cellpadding="0" cellspacing="0"
+                                                                               style="border-collapse: collapse;"
+                                                                               width="100%">
+                                                                            <tbody>
+                                                                            <tr>
+                                                                                <td width="60%">
+                                                                                    <div style="font-size: 10px; font-family: arial; font-weight: bold;">
+                                                                                        <strong>NON-LINKED
+                                                                                            NON-PARTICIPATING INDIVIDUAL
+                                                                                            GENERAL ANNUITY SAVINGS
+                                                                                            PLAN</strong></div>
+                                                                                </td>
+                                                                            <tr>
+                                                                                <td style="font-weight: normal; font-size: 10px; font-family: arial; text-align: right;">
+                                                                                    <span style="display: inline-block;padding-right:5px;"><b>Agent Assisted </b></span>
+                                                                                    <span>
+                                                     <input th:checked="${agentAssisted=='YES'}"
+                                                            type="checkbox">Yes</input>
+                                                                                        <input th:checked="${agentAssisted=='NO'}"
+                                                                                               type="checkbox">No.</input>
+                                                </span>
+                                                                                </td>
+                                                                            </tr>
+
+
+                                                                            </tr>
+                                                                            </tbody>
+                                                                        </table>
+                                                                    </td>
+                                                                </tr>
+                                                                <!--<tr>
+                                                                    <td>
+                                                                        <table border="0" cellpadding="1" cellspacing="0"
+                                                                               style="border-collapse: collapse; padding-top: 5px;"
+                                                                               width="100%">
+                                                                            <tbody>
+                                                                            <tr>
+                                                                                <td style="font-weight: normal; font-size: 12px; font-family: arial;"
+                                                                                    width="60%">
+                                                                                    <span style="display: inline-block;padding-right:5px;"><b>Proposal Number:</b></span><span
+                                                                                        style="display: inline-block;text-transform:uppercase"
+                                                                                        th:text=${proposalNumber}></span>
+                                                                                </td>
+                                                                                <td style="font-size: 10px; font-family: arial;"
+                                                                                    width="20%">
+                                                                                    <span style="display: inline-block;padding-right:5px;">GO/CA/Broker Code:</span><span
+                                                                                        style="display: inline-block;text-transform:uppercase"
+                                                                                        th:text=${gocaBrokerCode}></span>
+                                                                                </td>
+                                                                                <td style="font-size: 10px; font-family: arial;"
+                                                                                    width="20%">
+                                                                                    <span style="display: inline-block;padding-right:5px;">GO received Date:</span><span
+                                                                                        style="display: inline-block;text-transform:uppercase"
+                                                                                        th:text=${gocaBrokerCode}></span>
+                                                                                </td>
+
+                                                                            </tr>
+                                                                            </tr>
+                                                                            </tbody>
+                                                                        </table>
+                                                                    </td>
+                                                                </tr>-->
+                                                                </tbody>
+                                                            </table>
+                                                        </td>
+                                                    </tr>
+                                                    </tbody>
+                                                </table>
+                                            </td>
+                                        </tr>
+                                        </tbody>
+                                    </table>
+                                </td>
+                                <td width="25px;">
+                                    <img alt="image not available" height="50px" th:src="${proposerImage}"
+                                         width="auto"/>
+                                    <div style="font-weight: bold; text-align: center; font-size: 12px;">First
+                                        Annuitant
+                                    </div>
+                                    <br>
+                                    <div style="text-align: center; font-size: 10px;">Attach Recent Photograph</div>
+                                </td>
+                                <td width="25px;"><img alt="image not available" height="50px" th:src="${payorImage}"
+                                                       width="auto"/>
+                                    <div style="font-weight: bold; text-align: center; font-size: 12px;">Proposer/
+                                        Second Annuitant
+                                    </div>
+                                    <br>
+                                    <div style="text-align: center; font-size: 10px;">Attach Recent Photograph</div>
+                                </td>
+
+                            </tr>
+                            <tr>
+                                <td colspan="3">
+                                    <table border="0" cellpadding="1" cellspacing="0"
+                                           style="border-collapse: collapse; padding-top: 5px;"
+                                           width="100%">
+                                        <tbody>
+                                        <tr>
+                                            <td style="font-weight: normal; font-size: 12px; font-family: arial;"
+                                                width="60%">
+                                                <span style="display: inline-block;padding-right:5px;"><b>Proposal Number:</b></span><span
+                                                    style="display: inline-block;text-transform:uppercase"
+                                                    th:text=${proposalNumber}></span>
+                                            </td>
+                                            <td style="font-size: 10px; font-family: arial;"
+                                                width="20%">
+                                                <span style="display: inline-block;padding-right:5px;">GO/CA/Broker Code:</span><span
+                                                    style="display: inline-block;text-transform:uppercase"
+                                                    th:text=${gocaBrokerCode}></span>
+                                            </td>
+                                            <td style="font-size: 10px; font-family: arial;"
+                                                width="20%">
+                                                <span style="display: inline-block;padding-right:5px;">GO received Date:</span><span
+                                                    style="display: inline-block;text-transform:uppercase"
+                                                    th:text=${gocaBrokerCode}></span>
+                                            </td>
+                                        </tr>
+                                        </tbody>
+                                    </table>
+                                </td>
+                            </tr>
+                            <td colspan="3"
+                                style="font-weight: normal; font-size: 10px; font-family: arial;padding: 2px 4px">
+                                <strong style="font-size: 12px">IMPORTANT NOTES:</strong>
+                                <p style="line-height: 12px;font-size: 10px;margin: 0;">1. &nbsp;You are
+                                    required to
+                                    disclose All material facts and circumstances in this proposal,
+                                    which shall from
+                                    the basis of the contract, failing which the single premium contract
+                                    issued
+                                    shall be voidable at the option of the company subject to section 45
+                                    of the
+                                    insurance Act as amended from time to time.</p>
+                                <p style="line-height: 12px;font-size: 10px;margin: 0;">2. &nbsp;Payment
+                                    of Single
+                                    premium must accompany this proposal by a crossed cheque/demand
+                                    draft. The
+                                    cheque must be issued in favour of <strong>Axis Max Life Insurance
+                                        LIMITED</strong> account (Policy No. as above. In case your
+                                    purchase price
+                                    is already with Axis Max Life Insurance Ltd., this form must state
+                                    the
+                                    instructions to use it for providing a single premium to you.</p>
+                                <p style="line-height: 12px;font-size: 10px;margin: 0;">3. &nbsp;Please
+                                    provide AML
+                                    & KYC documents (copy of PAN id, regular income proof etc.)</p>
+                                <p style="line-height: 12px;font-size: 10px;margin: 0;">4. &nbsp;The
+                                    Annuity will be
+                                    payable to you at the end of your chosen frequency/mode.</p>
+                                <p style="line-height: 12px;font-size: 10px;margin: 0;">5. &nbsp;Nominee
+                                    should be
+                                    different from annuitant.</p>
+                            </td>
+                            </tr>
+                            <td colspan="3"
+                                style="font-weight: normal; font-size: 10px; font-family: arial;padding: 2px 4px">Do you
+                                have an Axis Max Life Insurance Policy or have currently applied simultaneous policies?
+                                <input th:checked="${existingCustomerComboSale=='YES'}" type="checkbox">Yes</input>
+                                <input th:checked="${existingCustomerComboSale=='NO'}" type="checkbox">No.</input>
+                                <span style="font-weight: normal; font-size: 10px; font-family: arial; padding-left: 20px;">If yes give Policy/Proposal number  </span>
+                                <span style="display: inline-block; padding-left: 5px;"
+                                      th:if=${existingPolicyNumberComboSale!='0'}
+                                      th:text=${existingPolicyNumberComboSale}></span>
+                                <p style="text-align: right; padding-right: 15px;" th:if="${existingPolicyNumber!='0'}"
+                                   th:text="${existingPolicyNumber}"></p>
+                            </td>
+                            </tr>
+                            <tr>
+                                <td colspan="3"
+                                    style="font-weight: normal; font-size: 10px; font-family: arial;padding: 2px 4px">
+                                    <span style="padding-right:5px;">Are you a NPS subscriber? </span>
+                                    <span>
+                                                     <input th:checked="${isNPSCustomer=='YES'}"
+                                                            type="checkbox">Yes</input>
+                                        <input th:checked="${isNPSCustomer=='NO'}" type="checkbox">No.</input>
+                                                </span>
+                                    <p colspan="3"
+                                       style="font-weight: normal; font-size: 10px; font-family: arial; margin : 0px;">
+                                        Please provide your Permanent Retirement Account Number (PRAN) &nbsp; &nbsp;<span
+                                            style="display: inline-block;text-transform:uppercase"
+                                            th:text=${pranNumber}></span></p>
+                                    <div style="margin: 0; padding: 0px; text-align: left; font-size: 9px;">
+                                        <i>(Mandatory
+                                            if NPS subscriber)</i></div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td colspan="3"
+                                    style="font-weight: normal; font-size: 10px; font-family: arial;padding: 2px 4px">
+                                    <span style="display: inline-block;padding-right:5px;"><b>Objective of Insurance</b></span>
+                                    <input type="checkbox">E/E</input>
+                                    <input type="checkbox">MWPA</input>
+                                    <input type="checkbox">HUF</input>
+                                    <input type="checkbox">CEIP</input>
+                                    <input type="checkbox">Keyman</input>
+                                    <input type="checkbox">Partnership</input>
+                                    <input th:checked="${true}" type="checkbox">Individual</input>
+                                </td>
+                            </tr>
+                            <tr>
+                            </tbody>
+                        </table>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+        </td>
+    </tr>
+    <tr th:utext=${personalDetails} width="100%">
+    </tr>
+    <tr th:utext=${nomineeDetails} width="100%">
+    </tr>
+    <tr th:utext=${coverageDetails} width="100%">
+    </tr>
+    <tr th:utext=${declarationDetails} width="100%">
+    </tr>
+    <tr th:utext=${ckycDetails} width="100%">
+    </tr>
+    </tbody>
+</table>
+
+
+</body>
+</html>

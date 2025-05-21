@@ -1,0 +1,87 @@
+<td style="font-family: arial;">
+    <!-- High blood pressure reflexive questions start here-->
+    <table cellspacing="0" cellpadding="0" width="100%" style="border-collapse: collapse; border-color: #ccc;border-style:solid;border-width:1px;">
+        <tbody>
+        <tr>
+            <td colspan="6" style="padding: 0px; font-family: arial; font-size:9px; background-color: #000000; border-color: #ccc;border-style:solid;border-width:1px;">
+                <table border="1" cellspacing="0" cellpadding="0" width="100%" style="border-collapse: collapse; text-align: center">
+                    <tbody>
+                    <tr>
+                        <td colspan="3" style="padding: 2px 4px; font-size: 14px; font-weight: bold; color: #FFFFFF">High blood pressure reflexive questions</td>
+                    </tr>
+                    </tbody>
+                </table>
+            </td>
+        </tr>
+        <tr>
+            <td style="padding: 0px; font-family: Arial;">
+                <table width="100%" cellpadding="0" cellspacing="0" border="0" style="border-color: #000000;border-style:solid;border-width:1px;">
+                    <tbody>
+                    <tr>
+                        <td width="35%" style="padding: 5px 5px 5px 10px; font-size: 12px; border-right: 1px solid #000000;  text-align: center;">Information Required</td>
+                        <td width="30%" style="padding: 5px 5px 5px 10px; font-size: 12px; border-right: 1px solid #000000;  text-align: center;">Proposer/Joint Life</td>
+                        <td width="30%" style="padding: 5px 5px 5px 10px; font-size: 12px; border-right: 1px solid #000000;  text-align: center;"> Insured's Information
+                    </tr>
+                    </tbody>
+                </table>
+            </td>
+        </tr>
+        <tr>
+            <td style="padding: 0px; font-family: Arial;">
+                <table width="100%" cellpadding="0" cellspacing="0" border="0" style="border-color: #000000;border-style:solid;border-width:1px;">
+                    <tbody>
+                    <tr>
+                        <td width="35%" style="padding: 5px 5px 5px 10px; font-size: 12px; border-right: 1px solid #000000;  text-align: left;">1) When was High Blood Pressure Diagnosed?</td>
+                        <td width="30%" style="padding: 5px 5px 5px 10px; font-size: 12px; border-right: 1px solid #000000;  text-align: center;" th:text="${highBloodPressureDiagnosedDate}"></td>
+                        <td width="30%" style="padding: 5px 5px 5px 10px; font-size: 12px; border-right: 1px solid #000000;  text-align: center;" th:text="${lIDataMap.highBloodPressureDiagnosedDate}"></td>
+                    </tr>
+                    </tbody>
+                </table>
+            </td>
+        </tr>
+        <tr>
+            <td style="padding: 0px; font-family: Arial;">
+                <table width="100%" cellpadding="0" cellspacing="0" border="0" style="border-color: #000000;border-style:solid;border-width:1px;">
+                    <tbody>
+                    <tr>
+                        <td width="35%" style="padding: 5px 5px 5px 10px; font-size: 12px; border-right: 1px solid #000000;  text-align: left;">2) Please provide the details of the medication ?</td>
+                        <td width="30%" style="padding: 5px 5px 5px 10px; font-size: 12px; border-right: 1px solid #000000;  text-align: center;" th:text="${medicationDetails}"></td>
+                        <td width="30%" style="padding: 5px 5px 5px 10px; font-size: 12px; border-right: 1px solid #000000;  text-align: center;" th:text="${lIDataMap.medicationDetails}"></td>
+                    </tr>
+                    </tbody>
+                </table>
+            </td>
+        </tr>
+        <tr>
+            <td style="padding: 0px; font-family: Arial;">
+                <table width="100%" cellpadding="0" cellspacing="0" border="0" style="border-color: #000000;border-style:solid;border-width:1px;">
+                    <tbody>
+                    <tr>
+                        <td width="35%" style="padding: 5px 5px 5px 10px; font-size: 12px; border-right: 1px solid #000000;  text-align: left;">3) How often do you attend for follow ups and when was your last consultation?</td>
+                        <td width="30%" style="padding: 5px 5px 5px 10px; font-size: 12px; border-right: 1px solid #000000;  text-align: center;" >
+                            <span th:if="${followUps == 'others'}" th:text="${followUpsOther}"></span>
+                            <span th:unless="${followUps == 'others'}" th:text="${followUps}"></span></td>
+                        <td width="30%" style="padding: 5px 5px 5px 10px; font-size: 12px; border-right: 1px solid #000000;  text-align: center;">
+                            <span th:if="${lIDataMap.followUps == 'others'}" th:text="${lIDataMap.followUpsOther}"></span>
+                            <span th:unless="${lIDataMap.followUps == 'others'}" th:text="${lIDataMap.followUps}"></span></td>
+                    </tr>
+                    </tbody>
+                </table>
+            </td>
+        </tr>
+        <tr>
+            <td style="padding: 0px; font-family: Arial;">
+                <table width="100%" cellpadding="0" cellspacing="0" border="0" style="border-color: #000000;border-style:solid;border-width:1px;">
+                    <tbody>
+                    <tr>
+                        <td width="35%" style="padding: 5px 5px 5px 10px; font-size: 12px; border-right: 1px solid #000000;  text-align: left;">4)What was your last Blood Pressure Reading?</td>
+                        <td width="30%" style="padding: 5px 5px 5px 10px; font-size: 12px; border-right: 1px solid #000000;  text-align: center;" th:text="${lastBloodPressureReading}"></td>
+                        <td width="30%" style="padding: 5px 5px 5px 10px; font-size: 12px; border-right: 1px solid #000000;  text-align: center;" th:text="${lIDataMap.lastBloodPressureReading}"></td>
+                    </tr>
+                    </tbody>
+                </table>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+</td>

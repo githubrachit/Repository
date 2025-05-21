@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+	<title>EBCC</title>     <style type="text/css">
+	     table,         td,         tr {             border-collapse: collapse;         }
+	                      .page-break-after {             page-break-after: always;
+	                               page-break-inside: avoid;             clear: both;         }
+	                                              .page-break-before {             page-break-before: always;
+	                                                          page-break-inside: avoid;
+	                                                                      clear: both;         }
+@media print {             * {                 font-size: 6pt !important;             }
+            .printtext {                 font-size: 11pt !important;             }         }
+</style>
+</head>
+<body style="margin: 0 auto;padding: 0;">
+<div>
+	<table>
+		<tbody>
+		<tr>
+			<td style="width:100%"><img src='classpath:static/logo-IRP.png'
+										alt="Axis Max Life Insurance"
+										width="100%" height="100"></td>
+			<td>&nbsp;</td>
+		</tr>
+		</tbody>
+	</table>
+</div>
+<table border="0" align="center" cellpadding="0" cellspacing="0"
+			 style="border-collapse: collapse;width: 98%;margin-top: 10px">
+	<tbody>             <!-- Main Wrapper Start Here-->
+	<!--<tr>
+		<td align='left'><img src='classpath:static/Logo_Pathway_MaxIS.png' width='100'></td>
+		<td>&nbsp;</td>
+	</tr>-->
+	<tr>
+		<td height="32">                     &nbsp;                 </td>
+	</tr>
+	<tr>
+		<td style="padding: 5px 10px; font-size: 20px; font-family: arial;
+		text-align: center;width: auto;color: #013873;font-weight: 600;">Third Party KYC document</td>
+	</tr>
+	<tr>
+		<td height="10">                     &nbsp;                 </td>
+	</tr>
+	<tr>
+		<td style="padding: 5px 10px; font-size: 16px; font-family: arial;">Document Generated on
+			<span style="font-weight: 600;"><i th:text="${timeStamp}">&nbsp;</i></span>
+	</tr>
+	<tr>
+		<td height="20">                     &nbsp;                 </td>
+	</tr>
+	<tr>
+		<td style="padding: 5px 10px; font-size: 16px; font-family: arial;">
+			Following details have been provided by Axis Bank as per Customer’s account details - </td>
+	</tr>
+	<tr>
+		<td style="padding: 5px 10px; font-size: 14px; font-family: arial; width: 100%;">
+			<table border="1" width="100%" cellspacing="0" style="border-collapse: collapse;">
+				<tbody>
+				<tr>
+					<td style="padding: 5px 10px; font-size: 14px; font-family: arial;
+					font-weight: bold;background:#efefef;">
+						KYC flag                                 </td>
+					<td style="padding: 5px 10px; font-size: 14px; font-family: arial;text-align: left;">
+						Y                                 </td>
+					<td style="padding: 5px 10px; font-size: 14px; font-family: arial;text-align: left;">
+					</td>
+				</tr>
+				<tr>
+					<td style="padding: 5px 10px; font-size: 14px; font-family: arial;
+					font-weight: bold;background:#efefef;  ">
+						Name of Customer                                 </td>
+					<td style="padding: 5px 10px; font-size: 14px; font-family: arial;text-align: left;">
+						<i th:text="${customerFullName}">&nbsp;</i>                                 </td>
+					<td style="padding: 5px 10px; font-size: 14px; font-family: arial;text-align: left;">
+						<i th:text="${nameStatus}">&nbsp;</i>                                </td>
+				</tr>
+				<tr>
+					<td style="padding: 5px 10px; font-size: 14px;
+					font-family: arial;font-weight: bold;background:#efefef;  ">
+						Date of Birth/Date of Incorporation                                 </td>
+					<td style="padding: 5px 10px; font-size: 14px; font-family: arial;text-align: left;">
+						<i th:text="${dob}">&nbsp;</i>                                 </td>
+					<td style="padding: 5px 10px; font-size: 14px; font-family: arial;text-align: left;">
+						<i th:text="${dobStatus}">&nbsp;</i>                                </td>                             </tr>
+				<tr>
+					<td style="padding: 5px 10px; font-size: 14px; font-family: arial;font-weight:bold;background:#efefef;  ">
+						Communication Address                                 </td>
+					<td style="padding: 5px 10px; font-size: 14px; font-family: arial;text-align: left;">
+						<i th:text="${communicationAddress}">&nbsp;</i>                                 </td>
+					<td style="padding: 5px 10px; font-size: 14px; font-family: arial;text-align: left;">
+						<i th:text="${commAddStatus}">&nbsp;</i>                               </td>
+				</tr>
+<tr>        <td style="padding: 5px 10px; font-size: 14px; font-family: arial;font-weight: bold;background:#efefef;  ">
+	Permanent Address                                 </td>
+	<td style="padding: 5px 10px; font-size: 14px; font-family: arial;text-align: left;">
+		<i th:text="${permanentAddress}">&nbsp;</i>                                </td>
+</tr>
+				<tr>
+					<td style="padding: 5px 10px; font-size: 14px; font-family: arial;font-weight: bold;background:#efefef;  ">
+						PAN Card Number                                 </td>
+					<td style="padding: 5px 10px; font-size: 14px; font-family: arial;text-align: left;">
+						<i th:text="${panCard}">&nbsp;</i>                                </td>
+
+					<td style="padding: 5px 10px; font-size: 14px; font-family: arial;text-align: left;">
+						<i th:text="${panStatus}">&nbsp;</i>                                </td>
+				</tr>
+				</tbody>
+			</table>
+		</td>
+	</tr>
+	<tr>
+		<td height="10">                     &nbsp;                 </td>
+	</tr>
+	<tr>
+		<td style="padding: 5px 10px; font-size: 14px; font-family: arial;">
+			The supporting documents for the above information will be provided by Axis Bank as and when requested including copy of PAN Card.
+		</td>
+	</tr>
+	<tr>
+		<td height="10">                     &nbsp;                 </td>
+	</tr>              <tr>                <td style="padding: 5px 10px; font-size: 14px; font-family: arial;">
+		This document is generated basis KYC flag provided by Axis Bank. It suffices as proof for Date of Birth / Identity, Address & PAN (If passed from Axis Bank).
+	</td>
+	</tr>
+	<tr>
+		<td height="30">                     &nbsp;                 </td>
+	</tr>
+	<tr>
+		<!--<td>
+			<img src="classpath:static/footer.png" />
+		</td>-->
+	</tr>
+	</tbody>
+</table>
+</body>
+</html>

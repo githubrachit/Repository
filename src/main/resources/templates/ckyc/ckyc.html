@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title></title>
+		<style type="text/css">table,td,tr{
+border-collapse: collapse;
+}</style>
+	</head>
+	<body style="margin: 0 auto;padding: 0;">
+		<table border="1" align="center" cellpadding="0" cellspacing="0" style="border-collapse: collapse;">
+			<tbody>
+				<!-- CKYC Section Start here-->
+				<table align="center" cellpadding="0" cellspacing="0" style="border-collapse: collapse;border-width:1px; border-color:#333;border-style:solid;">
+					<tbody>
+						<tr>
+							<td height="15"></td>
+						</tr>
+						<tr>
+							<td align="center" style="padding: 3px; font-size: 24px; font-family: arial;">
+								<strong>CENTRAL KYC ANNEXURE</strong>
+							</td>
+						</tr>
+						<tr>
+							<td height="15"></td>
+						</tr>
+						<tr>
+							<td>
+								<table cellspacing="0" cellpadding="0" width="100%" style="border-collapse: collapse; border-width:1px; border-color:#333;border-style:solid;">
+									<tbody>
+										<tr>
+											<th colspan="6" style="background-color: #003770;border-width:1px; border-color:#333;border-style:solid; color: #fff;font-size: 10px; font-family: arial; padding: 3px" align="left">1. Central KYC Registry</th>
+										</tr>
+										<tr>
+											<td width="50%" style="font-weight: bold; padding: 3px;border-width:1px; border-color:#333;border-style:solid; font-size: 10px; font-family: arial;">Application Type: </td>
+											<td width="50%" style="padding: 3px; font-size: 10px; font-family: arial;border-width:1px; border-color:#333;border-style:solid;">
+												<i th:text="${applicationType}"></i>
+											</td>
+										</tr>
+										<tr>
+											<td width="50%" style="font-weight: bold; padding: 3px;border-width:1px; border-color:#333;border-style:solid; font-size: 10px; font-family: arial;">KYC Number: </td>
+											<td width="50%" style="padding: 3px; font-size: 10px; font-family: arial;border-width:1px; border-color:#333;border-style:solid;">
+												<i th:text="${ckycNumber}"></i>
+											</td>
+										</tr>
+									</tbody>
+								</table>
+							</td>
+						</tr>
+						<tr>
+							<td height="20"></td>
+						</tr>
+						<tr>
+							<td>
+								<table cellspacing="0" cellpadding="0" width="100%" style="border-collapse: collapse; border-width:1px; border-color:#333;border-style:solid;">
+									<tbody>
+										<tr>
+											<th colspan="6" style="background-color: #003770;border-width:1px; border-color:#333;border-style:solid; color: #fff;font-size: 10px; font-family: arial; padding: 3px" align="left">2. Personal Details</th>
+										</tr>
+										<tr>
+											<td width="50%" style="font-weight: bold; border-bottom-width:1px; border-bottom-color:#333;border-bottom-style:solid;padding: 3px; font-size: 10px; font-family: arial;"></td>
+											<td style="padding: 3px;border-bottom-width:1px; border-bottom-color:#333;border-bottom-style:solid; font-size: 10px; font-family: arial;">
+												<table cellspacing="0" cellpadding="0" width="100%" style="border-collapse: collapse;">
+													<tbody>
+														<tr>
+															<td width="25%">Prefix</td>
+															<td width="25%">First Name</td>
+															<td width="25%">Middle Name</td>
+															<td width="25%">Last Name</td>
+														</tr>
+													</tbody>
+												</table>
+											</td>
+										</tr>
+										<tr>
+											<td colspan="2">
+												<table cellspacing="0" cellpadding="0" width="100%">
+													<tbody>
+														<tr>
+															<td width="50%" style="font-weight: bold;border: 1px solid black; padding: 3px; font-size: 10px; font-family: arial;">Name(Same as ID Proof): </td>
+															<td style="padding: 3px;border-bottom-width:1px; border-bottom-color:#333;border-bottom-style:solid;font-size: 10px; font-family: arial;">
+																<table cellspacing="0" cellpadding="0" width="100%" style="border-collapse: collapse;">
+																	<tbody>
+																		<tr>
+																			<td width="25%" style="text-transform:uppercase;">
+																				<i th:text="${title}"></i>
+																			</td>
+																			<td width="25%" style="text-transform:uppercase;">
+																				<i th:text="${firstName}"></i>
+																			</td>
+																			<td width="25%" style="text-transform:uppercase;">
+																				<i th:text="${middleName}"></i>
+																			</td>
+																			<td width="25%" style="text-transform:uppercase;">
+																				<i th:text="${lastName}"></i>
+																			</td>
+																		</tr>
+																	</tbody>
+																</table>
+															</td>
+														</tr>
+														<tr>
+															<td width="50%" style="font-weight: bold;border: 1px solid black; padding: 3px; font-size: 10px; font-family: arial;">Maiden Name(If any): </td>
+															<td style="padding: 3px;border-bottom-width:1px; border-bottom-color:#333;border-bottom-style:solid; font-size: 10px; font-family: arial;">
+																<i>&nbsp;</i>
+															</td>
+														</tr>
+														<tr>
+															<td width="50%" style="font-weight: bold;border: 1px solid black; padding: 3px; font-size: 10px; font-family: arial;"> Father/ Spouse Name: </td>
+															<td style="padding: 3px; font-size: 10px;border-bottom-width:1px; border-bottom-color:#333;border-bottom-style:solid; font-family: arial;text-transform:uppercase;">
+																<i th:text="${fatherName}">&nbsp;</i>
+															</td>
+														</tr>
+														<tr>
+															<td width="50%" style="font-weight: bold;border: 1px solid black; padding: 3px; font-size: 10px; font-family: arial;"> Mother Name: </td>
+															<td style="padding: 3px; font-size: 10px;border-bottom-width:1px; border-bottom-color:#333;border-bottom-style:solid; font-family: arial;text-transform:uppercase;">
+																<i th:text="${motherName}">&nbsp;</i>
+															</td>
+														</tr>
+														<tr>
+															<td width="50%" colspan="2" style="font-weight: bold;border-bottom-width:1px; border-bottom-color:#333;border-bottom-style:solid; padding: 3px; font-size: 10px; font-family: arial;">&nbsp;</td>
+														</tr>
+													</tbody>
+												</table>
+											</td>
+										</tr>
+										<tr>
+											<td width="50%" style="font-weight: bold; border: 1px solid black;border-bottom-width:1px; border-bottom-color:#333;border-bottom-style:solid;padding: 3px; font-size: 10px; font-family: arial;">Gender</td>
+											<td style="padding: 3px;border-bottom-width:1px; border-bottom-color:#333;border-bottom-style:solid; font-size: 10px; font-family: arial;text-transform:uppercase;">
+												<i th:text="${gender}">&nbsp;</i>
+											</td>
+										</tr>
+										<tr>
+											<td width="50%" style="font-weight: bold; border: 1px solid black;border-bottom-width:1px; border-bottom-color:#333;border-bottom-style:solid;padding: 3px; font-size: 10px; font-family: arial;">Date of Birth</td>
+											<td style="padding: 3px;border-bottom-width:1px; border-bottom-color:#333;border-bottom-style:solid; font-size: 10px; font-family: arial;text-transform:uppercase;">
+												<i th:text="${dob}">&nbsp;</i>
+											</td>
+										</tr>
+										
+									</tbody>
+								</table>
+							</td>
+						</tr>
+						<!-- Regidence Tax Start-->
+						<tr>
+							<td height="20"></td>
+						</tr>
+					
+						<!-- Regidence Tax End-->
+						<!-- Proof of Identity Start-->
+						<tr>
+							<td height="20"></td>
+						</tr>
+						<tr>
+							<td>
+								<table cellspacing="0" cellpadding="0" width="100%" style="border-collapse: collapse; border-width:1px; border-color:#333;border-style:solid;">
+									<tbody>
+										<tr>
+											<th colspan="6" style="background-color: #003770;border-width:1px; border-color:#333;border-style:solid; color: #fff;font-size: 10px; font-family: arial; padding: 3px" align="left">3. Proof of Identity(PoI)</th>
+										</tr>
+										<tr>
+											<td width="50%" style="font-weight: bold; padding: 3px;border-width:1px; border-color:#333;border-style:solid; font-size: 10px; font-family: arial;">ID Proof Name: </td>
+											<td width="50%" style="padding: 3px; font-size: 10px; font-family: arial;border-width:1px; border-color:#333;border-style:solid;text-transform:uppercase;">
+												<i th:text="${identityProofDetails.proofName}"></i>
+											</td>
+										</tr>
+										<tr>
+											<td width="50%" style="font-weight: bold; padding: 3px;border-width:1px; border-color:#333;border-style:solid; font-size: 10px; font-family: arial;">ID Proof Number </td>
+											<td width="50%" style="padding: 3px; font-size: 10px; font-family: arial;border-width:1px; border-color:#333;border-style:solid;text-transform:uppercase;">
+												<i th:text="${identityProofDetails.proofNumber}"></i>
+											</td>
+										</tr>
+										<tr>
+											<td width="50%" style="font-weight: bold; padding: 3px;border-width:1px; border-color:#333;border-style:solid; font-size: 10px; font-family: arial;">ID Expire Date: </td>
+											<td width="50%" style="padding: 3px; font-size: 10px; font-family: arial;border-width:1px; border-color:#333;border-style:solid;text-transform:uppercase;">
+												<i th:text="${identityProofDetails.proofExpiryDate}"></i>
+											</td>
+										</tr>
+									</tbody>
+								</table>
+							</td>
+						</tr>
+						<!-- Proof of Identity End-->
+						<!-- Proof of Address Start-->
+						<tr>
+							<td height="20"></td>
+						</tr>
+						<tr>
+							<td>
+								<table cellspacing="0" cellpadding="0" width="100%" style="border-collapse: collapse; border-width:1px; border-color:#333;border-style:solid;">
+									<tbody>
+										<tr>
+											<th colspan="6" style="background-color: #003770;border-width:1px; border-color:#333;border-style:solid; color: #fff;font-size: 10px; font-family: arial; padding: 3px" align="left">4. Proof of Address(PoA)</th>
+										</tr>
+										<tr>
+											<td width="50%" style="font-weight: bold; padding: 3px;border-width:1px; border-color:#333;border-style:solid; font-size: 10px; font-family: arial;">Address Proof Name: </td>
+											<td style="padding: 3px; font-size: 10px; font-family: arial;border-width:1px; border-color:#333;border-style:solid;text-transform:uppercase;">
+												<i th:text="${communicationAddress.get('communicationAddressProofType')}"></i>
+											</td>
+										</tr>
+										<tr>
+											<td width="50%" style="font-weight: bold; padding: 3px;border-width:1px; border-color:#333;border-style:solid; font-size: 10px; font-family: arial;">Address Proof Number: </td>
+											<td style="padding: 3px; font-size: 10px; font-family: arial;border-width:1px; border-color:#333;border-style:solid;text-transform:uppercase;">
+												<i th:text="${communicationAddress.get('adressProofNumber')}"></i>
+											</td>
+										</tr>
+										<tr>
+											<td width="50%" style="font-weight: bold; padding: 3px;border-width:1px; border-color:#333;border-style:solid; font-size: 10px; font-family: arial;">Address Proof Expiry Date: </td>
+											<td style="padding: 3px; font-size: 10px; font-family: arial;border-width:1px; border-color:#333;border-style:solid;text-transform:uppercase;">
+												<i th:text="${communicationAddress.get('addressProofExpiryDate')}"></i>
+											</td>
+										</tr>
+										<tr>
+											<td width="50%" style="font-weight: bold; padding: 3px;border-width:1px; border-color:#333;border-style:solid; font-size: 10px; font-family: arial;">Address Line 1: </td>
+											<td style="padding: 3px; font-size: 10px; font-family: arial;border-width:1px; border-color:#333;border-style:solid;text-transform:uppercase;">
+												<i th:text="${communicationAddress.get('houseNo')}"></i>
+											</td>
+										</tr>
+										<tr>
+											<td width="50%" style="font-weight: bold; padding: 3px;border-width:1px; border-color:#333;border-style:solid; font-size: 10px; font-family: arial;">Address Line 2: </td>
+											<td style="padding: 3px; font-size: 10px; font-family: arial;border-width:1px; border-color:#333;border-style:solid;text-transform:uppercase;">
+												<i th:text="${communicationAddress.get('area')}"></i>
+											</td>
+										</tr>
+										<tr>
+											<td width="50%" style="font-weight: bold; padding: 3px;border-width:1px; border-color:#333;border-style:solid; font-size: 10px; font-family: arial;">Address Line 3: </td>
+											<td style="padding: 3px; font-size: 10px; font-family: arial;border-width:1px; border-color:#333;border-style:solid;text-transform:uppercase;">
+												<i th:text="${communicationAddress.get('landmark')}"></i>
+											</td>
+										</tr>
+										<tr>
+											<td width="50%" style="font-weight: bold; padding: 3px;border-width:1px; border-color:#333;border-style:solid; font-size: 10px; font-family: arial;">City: </td>
+											<td style="padding: 3px; font-size: 10px; font-family: arial;border-width:1px; border-color:#333;border-style:solid;text-transform:uppercase;">
+												<i th:text="${communicationAddress.get('city')}"></i>
+											</td>
+										</tr>
+										<tr>
+											<td width="50%" style="font-weight: bold; padding: 3px;border-width:1px; border-color:#333;border-style:solid; font-size: 10px; font-family: arial;">State: </td>
+											<td style="padding: 3px; font-size: 10px; font-family: arial;border-width:1px; border-color:#333;border-style:solid;text-transform:uppercase;">
+												<i th:text="${communicationAddress.get('state')}"></i>
+											</td>
+										</tr>
+										<tr>
+											<td width="50%" style="font-weight: bold; padding: 3px;border-width:1px; border-color:#333;border-style:solid; font-size: 10px; font-family: arial;">PIN: </td>
+											<td style="padding: 3px; font-size: 10px; font-family: arial;border-width:1px; border-color:#333;border-style:solid;text-transform:uppercase;">
+												<i th:text="${communicationAddress.get('pinCode')}"></i>
+											</td>
+										</tr>
+										<tr>
+											<td width="50%" style="font-weight: bold; padding: 3px;border-width:1px; border-color:#333;border-style:solid; font-size: 10px; font-family: arial;">Country: </td>
+											<td style="padding: 3px; font-size: 10px; font-family: arial;border-width:1px; border-color:#333;border-style:solid;text-transform:uppercase;">
+												<i th:text="${communicationAddress.get('country')}"></i>
+											</td>
+										</tr>
+									</tbody>
+								</table>
+							</td>
+						</tr>
+						<!-- Proof of Address End-->
+						<tr>
+							<td height="20"></td>
+						</tr>
+						
+						<!-- Contact Details Start-->
+						<tr>
+							<td height="20"></td>
+						</tr>
+						<tr>
+							<td>
+								<table cellspacing="0" cellpadding="0" width="100%" style="border-collapse: collapse; border-width:1px; border-color:#333;border-style:solid;">
+									<tbody>
+										<tr>
+											<th colspan="6" style="background-color: #003770;border-width:1px; border-color:#333;border-style:solid; color: #fff;font-size: 10px; font-family: arial; padding: 3px" align="left">5. Contact Details</th>
+										</tr>
+										<tr>
+											<td width="50%" style="font-weight: bold; padding: 3px;border-width:1px; border-color:#333;border-style:solid; font-size: 10px; font-family: arial;">Mobile Number: </td>
+											<td style="padding: 3px; font-size: 10px; font-family: arial;border-width:1px; border-color:#333;border-style:solid;text-transform:uppercase;">
+												<i th:text="${communicationAddress.get('mobileNumber1')}"></i>
+											</td>
+										</tr>
+										<tr>
+											<td width="50%" style="font-weight: bold; padding: 3px;border-width:1px; border-color:#333;border-style:solid; font-size: 10px; font-family: arial;">Email ID: </td>
+											<td style="padding: 3px; font-size: 10px; font-family: arial;border-width:1px; border-color:#333;border-style:solid;">
+												<i th:text="${communicationAddress.get('email')}"></i>
+											</td>
+										</tr>
+									</tbody>
+								</table>
+							</td>
+						</tr>
+						<!-- Contact Details End-->
+						<!-- Application Declaration Start-->
+						<tr>
+							<td height="20"></td>
+						</tr>
+						<tr>
+							<td>
+								<table cellspacing="0" cellpadding="0" width="100%" style="border-collapse: collapse; border-width:1px; border-color:#333;border-style:solid;">
+									<tbody>
+										<tr>
+											<th style="background-color: #003770;border-width:1px; border-color:#333;border-style:solid; color: #fff;font-size: 10px; font-family: arial; padding: 3px" align="left">6. Application Declaration</th>
+										</tr>
+										<tr>
+											<td style="padding: 3px; font-size: 10px; font-family: arial;border-width:1px; border-color:#333;border-style:solid;">
+												<ul>
+													<li>I hereby declare that the details furnished above are true and correct to the best of my knowledge and belief, and I undertake to inform�you of any changes therein, immediately. In case any of the above information is found to be false or�untrue or misleading or�misrepresenting, I am aware that I may be held liable for it.</li>
+													<br/>
+														<li>I hereby consent to receiving information from Central KYC Registry through SMS/Email on the above registered number/email address.</li>
+														<br/>
+														</ul>
+													</td>
+												</tr>
+											</tbody>
+										</table>
+									</td>
+								</tr>
+								<!-- Application Declaration End-->
+								<!-- Name/Date/Place-->
+								<tr>
+									<td height="20"></td>
+								</tr>
+								<tr>
+									<td>
+										<table cellspacing="0" cellpadding="0" width="100%" style="border-collapse: collapse; border-width:1px; border-color:#333;border-style:solid;">
+											<tbody>
+												<tr>
+													<th colspan="6" style="background-color: #003770;border-width:1px; border-color:#333;border-style:solid; color: #fff;font-size: 10px; font-family: arial; padding: 3px" align="left">Name/Date/Place</th>
+												</tr>
+												<tr>
+													<td width="50%" style="font-weight: bold; padding: 3px;border-width:1px; border-color:#333;border-style:solid; font-size: 10px; font-family: arial;">Name of the Applicant: </td>
+													<td width="50%" style="padding: 3px; font-size: 10px; font-family: arial;border-width:1px; border-color:#333;border-style:solid;text-transform:uppercase;">
+														<i th:text="${firstName}"><span th:text="${lastName}"/></i>
+													</td>
+												</tr>
+												<tr>
+													<td width="50%" style="font-weight: bold; padding: 3px;border-width:1px; border-color:#333;border-style:solid; font-size: 10px; font-family: arial;">Place: </td>
+													<td width="50%" style="padding: 3px; font-size: 10px; font-family: arial;border-width:1px; border-color:#333;border-style:solid;text-transform:uppercase;">
+												<i th:text="${communicationAddress.get('city')}"></i>
+													</td>
+												</tr>
+												<tr>
+													<td width="50%" style="font-weight: bold; padding: 3px;border-width:1px; border-color:#333;border-style:solid; font-size: 10px; font-family: arial;">Date: </td>
+													<td width="50%" style="padding: 3px; font-size: 10px; font-family: arial;border-width:1px; border-color:#333;border-style:solid;text-transform:uppercase;">
+														<i th:text="${date}"></i>
+													</td>
+												</tr>
+											</tbody>
+										</table>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</tbody>
+				</table>
+			</body>
+		</html>

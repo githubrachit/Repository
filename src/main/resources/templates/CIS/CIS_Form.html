@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customer Information Sheet</title>
+</head>
+<style>
+    @page {
+        margin: 85pt 0pt 20pt 0pt;   /* Top 100pt, right, bottom, and left 20pt */
+        @top-center {
+            content: url("classpath:static/axisMaxLifeCISHeader.png");
+        }
+
+        @bottom-right {
+            font-family: arial;
+            font-size: 9px;
+            content: "Page " counter(page) " of " counter(pages);
+            margin-right: 20pt;
+        }
+    }
+</style>
+<body>
+<div>
+    <table width="100%">
+        <tr>
+            <td th:utext="${htmlForm}"></td>
+        </tr>
+    </table>
+</div>
+<div style="page-break-before: always;" th:if="${isNotSTARProduct}">
+    <table width="100%">
+        <tr>
+            <td th:utext="${Annexure}"></td>
+        </tr>
+    </table>
+<!--    <footer style="padding: 3px" th:if="${isNotYBLProposal}">-->
+<!--        <img src="classpath:static/footer_updated.png" alt="Max Life Insurance footer"/>-->
+<!--    </footer>-->
+</div>
+<div style="page-break-before: always;" th:if="${isVisibleOrNot}">
+    <table width="100%">
+        <tr>
+            <td th:utext="${AnnexureB}"></td>
+        </tr>
+    </table>
+</div>
+<div style="page-break-before: always;" th:if="${isAnnexure2VisibleOrNot}">
+    <table width="100%">
+        <tr>
+            <td th:utext="${Annexure2}"></td>
+        </tr>
+    </table>
+</div>
+<div style="page-break-before: always;" th:if="${isCIDSRAnnexure2VisibleOrNot}">
+    <table width="100%">
+        <tr>
+            <td th:utext="${CIDSR_Annexure2}"></td>
+        </tr>
+    </table>
+</div>
+<div style="page-break-before: always;" th:if="${isCIDSRAnnexure3VisibleOrNot}">
+    <table width="100%">
+        <tr>
+            <td th:utext="${CIDSR_Annexure3}"></td>
+        </tr>
+    </table>
+</div>
+<div style="page-break-before: always;" th:if="${isCIDSRAnnexure4VisibleOrNot}">
+    <table width="100%">
+        <tr>
+            <td th:utext="${CIDSR_Annexure4}"></td>
+        </tr>
+    </table>
+</div>
+<div style="page-break-before: always;" th:if="${isAnnexureVisibleForSewa}">
+    <table width="100%">
+        <tr>
+            <td th:utext="${AnnexureB_SEWA}"></td>
+        </tr>
+    </table>
+</div>
+<div style="page-break-before: always;" th:if="${isAnnexureVisibleForSewa}">
+    <table width="100%">
+        <tr>
+            <td th:utext="${AnnexureC}"></td>
+        </tr>
+    </table>
+</div>
+<div style="page-break-before: always;" th:if="${isAnnexureVisibleForSTPP}">
+    <table width="100%">
+        <tr>
+            <td th:utext="${AnnexureB_STPP}"></td>
+        </tr>
+    </table>
+</div>
+</body>
+</html>

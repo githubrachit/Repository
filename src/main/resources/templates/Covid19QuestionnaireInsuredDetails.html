@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title></title>
+   <style type="text/css">
+    body {
+        margin: 0;
+        padding: 0;
+        font-family: arial;
+    }
+
+    table,
+    td,
+    tr {
+        border-collapse: collapse;
+    }
+    p{
+        margin: 6px 0;
+    }
+    ul{
+        list-style: none;
+        padding-left: 16px;
+    }
+    </style>
+</head>
+
+<body>
+    <table cellpadding="10" width="100%" style="margin: auto;background: #f9f9f9;padding: 20px">
+        <tr>
+            <td height="10"> </td>
+        </tr>
+        <tr>
+            <td style="font-size: 14px; font-family: arial;text-align: center;"><strong>COVID-19 (Coronavirus) Exposure Questionnaire</strong></td>
+        </tr>
+        <tr>
+            <td style="font-size: 14px; font-family: arial;">Thank you for applying for a policy from Axis Max Life Insurance Limited. To enable us to assess your application, send this
+                questionnaire duly answered and signed by the Life to be Assured and Proposed Policy Holder, if any.
+            </td>
+        </tr>
+        <tr>
+            <td style="font-size: 14px; font-family: arial;padding:0 10px;">(All questions to be acknowledged, sections which are not relevant should be mentioned NA (Not applicable)</td>
+        </tr>
+        <tr>
+            <td height="20"> </td>
+        </tr>
+        <tr>
+            <td style="font-size: 14px; font-family: arial;">
+                <table border="1" cellpadding="10" width="100%" style="margin: auto;">
+                    <tr>
+                        <td style="font-size: 14px; font-family: arial;width: 40%">
+                            Application No.
+                        </td>
+                        <td style="font-size: 14px; font-family: arial;width: 60%" th:text=${applicationNumber}></td>
+                    </tr>
+                    <tr>
+                        <td style="font-size: 14px; font-family: arial;width: 40%">
+                            Name of Life to be Assured
+                        </td>
+                        <td style="font-size: 14px; font-family: arial;width: 60%" th:text=${lifeInsuredName}></td>
+                    </tr>
+                    <tr>
+                        <td style="font-size: 14px; font-family: arial;width: 40%">
+                            Name of Proposed Policyholder
+                            <div>(if different from Life to be Assured)</div>
+                        </td>
+                        <td style="font-size: 14px; font-family: arial;width: 60%" th:text=${proposedPolicyHolder}></td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+        <tr>
+            <td style="font-size: 14px; font-family: arial;">
+                <table border="1" cellpadding="10" width="100%" style="margin: auto;">
+                    <tr>
+                        <td style="font-size: 14px; font-family: arial;width: 30%">
+                            
+                        </td>
+                        <td style="font-size: 14px; font-family: arial;width: 35%">
+                            <strong style="text-transform: uppercase;">Proposer</strong>
+                            
+                        </td>
+                        <td style="font-size: 14px; font-family: arial;width: 35%">
+                            <strong style="text-transform: uppercase;">Insured</strong>
+                            
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+        <tr>
+            <td style="font-size: 14px; font-family: arial;">
+                <table border="1" cellpadding="10" width="100%" style="margin: auto;">
+                    <tr>
+                        <td style="font-size: 14px; font-family: arial;width: 30%">
+                             <span style="padding-right: 4px">1.</span> Have you ever tested positive for the coronavirus (SARS-CoV-2/COVID-19)?
+                        </td>
+                        <td style="font-size: 14px; font-family: arial;width: 35%">
+                             <strong th:text=${covidTestPositiveCheck}></strong>
+                            <div th:if=${covidTestPositiveCheck=='YES'}>
+                            <ul> 
+                                <li style="padding-left: 16px;">
+                                    <p><span style="padding-right:6px">a)</span>Have you made full-functional recovery: <strong th:text=${fullFunctionalRecovery}></strong></p>
+                                
+                                </li>
+                                <li style="padding-left: 16px;">
+                                    <p><span style="padding-right:6px">b)</span>Date of last positive diagnosis MM/YYYY: <span style="text-align: center;min-width: 60px;border-bottom-color: #000;border-bottom-style: solid;border-bottom-width: 1px;display: inline-block;padding: 0 18px;font-weight: bold;" th:text=${lastPositiveDiagnosis}></span></p>
+                                </li>
+                                <li style="padding-left: 16px;">
+                                    <p><span style="padding-right:6px">c)</span>Mode of treatment: 
+                                            <input style="width: 20px;height: 18px;vertical-align:middle;" type="checkbox" th:checked="${hospitalized=='YES'}">Hospitalized
+                                        <input style="width: 20px;height: 18px;vertical-align:middle;" type="checkbox" th:checked="${homeQuarantine=='YES'}" >Home Quarantine/ Asymptomatic
+                                    </p>
+                                        
+                                </li>
+                                 <li style="padding-left: 16px;" >
+                                    <p><span style="padding-right:6px">d)</span>Recovery Period:<Strong th:text=${recoveryPeriod}> months</Strong></p>
+                                </li>
+                                <li style="padding-left: 16px;">
+                                    <p><span style="padding-right:6px">e)</span>Did you suffer / are you suffering from any COVID-19 related Complications?: <strong th:text=${sufferFromCovid19}></strong></p>
+                                    <p style="font-size: 12px;">*For e.g (complications involving organs like Lungs, Heart, Liver, Kidney, Brain / Stroke/ Hypertension/Diabetes (Newly diagnosed) / Neurological symptoms/Mental issues /Septic shock / Any other) </p>
+                                    
+                                    <p style="padding-left:26px" th:if=${sufferFromCovid19=='YES'}>Please provide details: <span style="text-align: center;min-width: 160px;border-bottom-color: #000;border-bottom-style: solid;border-bottom-width: 1px;display: inline-block;padding: 0 18px;font-weight: bold;" th:text=${provideDetails}></span></p>
+                                </li>
+                            </ul>
+                            </div>
+                        </td>
+                        <td style="font-size: 14px; font-family: arial;width: 35%">
+                             <strong th:text=${covidTestPositiveCheckInsured}></strong>
+                            <div th:if=${covidTestPositiveCheckInsured=='YES'}>
+                            <ul> 
+                                <li style="padding-left: 16px;">
+                                    <p><span style="padding-right:6px">a)</span>Have you made full-functional recovery: <strong th:text=${fullFunctionalRecoveryInsured}></strong></p>
+                                
+                                </li>
+                                <li style="padding-left: 16px;">
+                                    <p><span style="padding-right:6px">b)</span>Date of last positive diagnosis MM/YYYY: <span style="text-align: center;min-width: 60px;border-bottom-color: #000;border-bottom-style: solid;border-bottom-width: 1px;display: inline-block;padding: 0 18px;font-weight: bold;" th:text=${lastPositiveDiagnosisInsured}></span></p>
+                                </li>
+                                <li style="padding-left: 16px;">
+                                    <p><span style="padding-right:6px">c)</span>Mode of treatment: 
+                                            <input style="width: 20px;height: 18px;vertical-align:middle;" type="checkbox" th:checked="${hospitalizedInsured=='YES'}">Hospitalized
+                                        <input style="width: 20px;height: 18px;vertical-align:middle;" type="checkbox" th:checked="${homeQuarantineInsured=='YES'}">Home Quarantine/ Asymptomatic
+                                    </p>
+                                        
+                                </li>
+                                 <li style="padding-left: 16px;">
+                                    <p><span style="padding-right:6px">d)</span>Recovery Period:<Strong th:text=${recoveryPeriodInsured}> months</Strong></p>
+                                </li>
+                                <li style="padding-left: 16px;">
+                                    <p><span style="padding-right:6px">e)</span>Did you suffer / are you suffering from any COVID-19 related Complications?: <strong th:text=${sufferFromCovid19Insured}></strong></p>
+                                    <p style="font-size: 12px;">*For e.g (complications involving organs like Lungs, Heart, Liver, Kidney, Brain / Stroke/ Hypertension/Diabetes (Newly diagnosed) / Neurological symptoms/Mental issues /Septic shock / Any other) </p>
+                                    
+                                    <p style="padding-left:26px" th:if=${sufferFromCovid19Insured=='YES'}>Please provide details: <span style="text-align: center;min-width: 160px;border-bottom-color: #000;border-bottom-style: solid;border-bottom-width: 1px;display: inline-block;padding: 0 18px;font-weight: bold;" th:text=${provideDetailsInsured}></span></p>
+                                </li>
+                            </ul>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="font-size: 14px; font-family: arial;width: 30%;vertical-align:top;">
+                            <span style="padding-right: 4px">2.</span> Have you been fully vaccinated for COVID-19? (two doses)
+                        </td>
+                        <td style="font-size: 14px; font-family: arial;width: 35%">
+                            <strong th:text=${vaccinatedForCovid19}></strong>
+                            
+                        </td>
+                        <td style="font-size: 14px; font-family: arial;width: 35%">
+                            <strong th:text=${vaccinatedForCovid19Insured}></strong>
+                            
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+        <tr>
+            <td height="20"> </td>
+        </tr>
+
+         
+        <tr>
+            <td height="10"> </td>
+        </tr>
+        <tr>
+            <td style="font-size: 14px; font-family: arial;padding:0 10px;">#Please share all past medical records including Hospital discharge report / Investigation reports (HRCT/Blood test) /treatment and up to date follow up reports / consultation papers and date of complete recovery </td>
+        </tr>
+        <tr>
+            <td height="10"> </td>
+        </tr>
+        <tr>
+            <td style="font-size: 14px; font-family: arial;padding:0 10px;">I hereby declare and agree that the above particulars and answers are complete and true, that I have not held back any relevant facts or details, and that the answers to questionnaire will form part of the application for the desired insurance on my life. </td>
+        </tr>
+        <tr>
+            <td height="10"> </td>
+        </tr>
+        <tr>
+            <td style="font-size: 14px; font-family: arial;padding:0 10px;">Date<span style="text-align: center;min-width: 24px;border-bottom-color: #000;border-bottom-style: solid;border-bottom-width: 1px;display: inline-block;padding: 0 18px;font-weight: bold;" th:text=${date}></span></td>
+        </tr>
+        <tr>
+            <td height="30"> </td>
+        </tr>
+        <tr>
+            <td height="10"> </td>
+        </tr>
+        <tr>
+            <td style="font-size: 14px; font-family: arial;padding:0 10px;text-align: center;">This is a system generated document, hence signatures not required.</td>
+        </tr>
+        <tr>
+            <td height="30"> </td>
+        </tr>
+      
+        <tr>
+            <td height="10"> </td>
+        </tr>
+    </table>
+</body>
+
+</html>

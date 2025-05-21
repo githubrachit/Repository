@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/html">
+	<head>
+		<title></title>
+		<style type="text/css">table,td,tr{
+			border-collapse: collapse;
+		}
+		</style>
+	</head>
+	<body style="margin: 0 auto;padding: 0;">
+				<table width="100%" align="center" cellpadding="0" cellspacing="0" style="border-collapse: collapse;">
+					<tbody>
+						<tr>
+							<td style="padding: 3px;">
+								<img src="classpath:static/logo_ax_max.png" alt="Axis Max Life Insurance" width="100"/>
+							</td>
+						</tr>
+						<tr>
+							<td align="center" style="padding: 3px; font-size: 18px; font-family: arial;">
+								<strong>e – INSURANCE ACCOUNT FORM (For Individuals)</strong>
+							</td>
+						</tr>
+						<tr>
+							<td width="100"></td>
+						</tr>
+					</tbody>
+				</table>
+				<table>
+					<tbody>
+						<tr>
+							<td height="20"></td>
+						</tr>
+					</tbody>
+				</table>
+				 <div class="inputrow11 inputrows" style="margin-top: -15px; height: 35px;">
+                <ul class="listInput info"
+                    style="color: gray; text-align: center; list-style: none; margin: 0px; padding: 10px 0px 0px;">
+                    <li style="margin-top: 15px; float: left; min-width: 20px;"><label
+                            style="padding: 0px 15px 0px 4px;">(Please fill this form in ENGLISH and
+                        in BLOCK LETTERS. Fields marked with asterisk</label></li>
+                    <li class="marg10" style="margin-top: 15px; float: left; min-width: 20px; width: 480px;"><label
+                            style="padding: 0px 15px 0px 4px; margin-left: -355px;">(*) are compulsory)</label></li>
+                </ul>
+            </div>
+				<table width="100%" cellpadding="0" cellspacing="0" border = "1" style="border-collapse: collapse;">
+					<tbody>
+						<tr>
+							<td width="20%" style="padding: 3px; font-size: 10px; font-family: arial;">
+							<strong>Insurance Repository:</strong>
+							</td>
+							<td width="65%" style="padding: 3px; font-size: 10px; font-family: arial; text-transform:uppercase;" th:text="${repositoryName}">
+							</td>
+							<td width="15%" rowspan="7" style="padding: 3px">
+								Paste
+                                your recentcolour photo
+                                (Not mandatory)
+							</td>
+						</tr>
+						<tr>
+							<td width="20%" style="padding: 3px; font-size: 10px; font-family: arial;">
+							</td>
+							<td width="30%" style="padding: 3px; font-size: 10px; font-family: arial; text-transform:uppercase;">
+							 <div class="inputrow2 inputrows" style="margin-top: -6px; height: 35px;">
+                <ul class="listInput" style="list-style: none; margin: 0px; padding: 10px 0px 0px;">
+                    <li class="checkType borderBlack"
+                        style="height: 20px; border: 1px solid rgb(0, 0, 0); float: left; min-width: 20px;"><span
+                            style="color: rgb(84, 84, 84); font-family: arial, sans-serif; font-size: small; line-height: 18.2px; background-color: rgb(255, 255, 255);">&#10003;</span>
+                    </li>
+                    <li style="float: left; min-width: 20px;"><label style="padding: 0px 15px 0px 4px;">Basic&nbsp;<br/>&nbsp;Services</label>
+                    </li>
+                    <li class="checkType marleft75 borderBlack"
+                        style="margin-left: 75px; height: 20px; border: 1px solid rgb(0, 0, 0); float: left; min-width: 20px;">
+                        <span style="font-size: 14pt;">&nbsp;</span>
+                    </li>
+                    <li class="" style="float: left; min-width: 20px;"><label style="padding: 0px 15px 0px 4px;">&nbsp;
+                        Minimum&nbsp;<br/>&nbsp; Services</label>
+                    </li>
+                    <li style="float: left; min-width: 20px;"></li>
+                    <li class="checkType marleft48 borderBlack"
+                        style="margin-left: 48px; height: 20px; border: 1px solid rgb(0, 0, 0); float: left; min-width: 20px;"></li>
+                    <li style="float: left; min-width: 20px;"><label style="padding: 0px 15px 0px 4px;">&nbsp;Premium&nbsp;<br/>&nbsp;
+                        Services</label></li>
+                    <li style="float: left; min-width: 20px;"></li>
+                </ul>
+            </div>
+							</td>
+						</tr>
+						<tr>
+							<td width="20%" style="padding: 3px; font-size: 10px; font-family: arial;">
+							<strong>Type of eIA:</strong>
+							</td>
+							<td width="30%" style="padding: 3px; font-size: 10px; font-family: arial; text-transform:uppercase;" th:text="${eiaType}">
+							</td>
+						</tr>
+						<tr>
+							<td width="20%" style="padding: 3px; font-size: 10px; font-family: arial;">
+							<strong>Application No.:</strong>
+							</td>
+							<td width="30%" style="padding: 3px; font-size: 10px; font-family: arial; text-transform:uppercase;" th:text="${policyNumber}">
+							</td>
+						</tr>
+						<tr>
+							<td width="20%" style="padding: 3px; font-size: 10px; font-family: arial;">
+							<strong>Insurance Co:</strong>
+							</td>
+							<td width="30%" style="padding: 3px; font-size: 10px; font-family: arial; text-transform:uppercase;">Axis Max Life Insurance Limited &nbsp;</td>
+						</tr>
+						<tr>
+							<td width="20%" style="padding: 3px; font-size: 10px; font-family: arial;">
+							<strong>AP Code:</strong>
+							</td>
+							<td width="30%" style="padding: 3px; font-size: 10px; font-family: arial; text-transform:uppercase;">&nbsp;</td>
+						</tr>
+						<tr>
+							<td width="20%" style="padding: 3px; font-size: 10px; font-family: arial;">
+							<strong>Employee:</strong>
+							</td>
+							<td width="30%" style="padding: 3px; font-size: 10px; font-family: arial; text-transform:uppercase;" th:text="${occupation}">
+							</td>
+						</tr>
+						<tr>
+							<td width="20%" height="20px" style="padding: 3px; font-size: 10px; font-family: arial;">
+							<strong>PAN Number*:</strong>
+							</td>
+							<td width="65%" style="padding: 3px; font-size: 10px; font-family: arial; text-transform:uppercase;" th:text="${panNumber}">
+							</td>
+							<td width="15%" rowspan="6" style="padding: 3px">
+								Sign here
+							</td>
+						</tr>
+						<tr>
+							<td width="20%" height="20px" style="padding: 3px; font-size: 10px; font-family: arial;">
+							<strong>UID Number*:</strong>
+							</td>
+							<td width="30%" style="padding: 3px; font-size: 10px; font-family: arial; text-transform:uppercase;" th:text="${uidNumber}">
+							</td>
+						</tr>
+						<tr>
+							<td width="20%" height="20px" style="padding: 3px; font-size: 10px; font-family: arial;">
+							<strong>Mobile No.* :</strong>
+							</td>
+							<td width="30%" style="padding: 3px; font-size: 10px; font-family: arial; text-transform:uppercase;" th:text="${currentAddress.get('mobileNumber1')}">
+							</td>
+						</tr>
+						<tr>
+							<td width="20%" height="20px" style="padding: 3px; font-size: 10px; font-family: arial;">
+							<strong>Date of Birth*:</strong>
+							</td>
+							<td width="30%" style="padding: 3px; font-size: 10px; font-family: arial; text-transform:uppercase;" th:text="${dob}">
+							</td>
+						</tr>
+						<tr>
+							<td width="20%" height="20px" style="padding: 3px; font-size: 10px; font-family: arial;">
+							<strong>ID Proof. *:</strong>
+							</td>
+							<td width="30%" style="padding: 3px; font-size: 10px; font-family: arial; text-transform:uppercase;">As submitted with Documents
+							</td>
+						</tr>
+						<tr>
+							<td width="20%" height="20px" style="padding: 3px; font-size: 10px; font-family: arial;">
+							<strong>Email*:</strong>
+							</td>
+							<td width="30%" style="padding: 3px; font-size: 10px; font-family: arial; text-transform:uppercase;" th:text="${email}">
+							</td>
+						</tr>
+					</tbody>
+				</table>
+				<table>
+					<tbody>
+						<tr>
+							<td height="20"></td>
+						</tr>
+					</tbody>
+				</table>
+				<table width="100%" cellpadding="5" cellspacing="0" border = "1" style="border-collapse: collapse;">
+					<tbody>	
+						<tr>
+							<td width="100%" height="20px" colspan="3" style="font-size: 10px; font-family: arial;background-color: #f0f0f0;">
+							<strong>Applicant Details</strong></td>
+						</tr>
+						<tr>
+							<td width="30%" height="20px" style="font-size: 10px; font-family: arial;">
+							<strong>First Name*:</strong>
+							<span style="padding-left: 3px; text-transform:uppercase;" th:text="${firstName}"></span></td>
+							<td width="30%" height="20px" style="font-size: 10px; font-family: arial;">
+							<strong>Middle Name:</strong>
+							<span style="padding-left: 3px; text-transform:uppercase;" th:text="${middleName}"></span></td>
+							<td width="30%" height="20px" style="font-size: 10px; font-family: arial;">
+							<strong>Last Name:</strong>
+							<span style="padding-left: 3px; text-transform:uppercase;" th:text="${lastName}"></span></td>
+						</tr>
+						<tr>
+							<td width="30%" height="20px" colspan="1" style="font-size: 10px; font-family: arial;">
+							<strong>Gender*:</strong>
+							<span style="padding-left: 3px; text-transform:uppercase;" th:text="${gender}"></span>
+							</td>
+							<td width="70%" height="20px" colspan="2" style="font-size: 10px; font-family: arial;">
+								<strong>Nationality:</strong>
+								<span style="padding-left: 3px;">
+									<input type="checkbox" th:checked="${nationality=='Indian'}">Indian</input>
+									<input type="checkbox" th:checked="${nationality=='NRI' || nationality=='Others'}">NRI</input>
+									<input type="checkbox" th:checked="${nationality=='PIO' || nationality=='PIO/OCI'}">PIO</input>
+								</span>
+							</td>
+						</tr>
+						<tr>
+							<td width="30%" height="20px" colspan="3" style="font-size: 10px; font-family: arial;">
+							<strong>Father / Spouse:</strong>
+							<span style="padding-left: 3px; text-transform:uppercase;" th:text="${fatherName}"></span>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+				<table>
+					<tbody>
+						<tr>
+							<td height="20"></td>
+						</tr>
+					</tbody>
+				</table>
+				<table width="100%" cellpadding="5" cellspacing="0" border="1" style="border-collapse: collapse;border-color: #ccc;border-style:solid;border-width:1px;font-size: 14px;font-family: arial;">
+				<tbody>
+						<tr>
+							<td width="100%" height="20px" colspan="4" style="padding: 3px; font-size: 10px; font-family: arial;background-color: #f0f0f0;">
+							<strong>Correspondence Address</strong></td>
+						</tr>
+						<tr>
+							<td width="20%" height="20px" style="padding: 3px; font-size: 10px; font-family: arial;">
+							<strong>Address Line 1*:</strong>
+							</td>
+							<td width="80%" colspan = "3" style="font-size: 10px; font-family: arial; text-transform:uppercase;" th:text="${currentAddress.get('houseNo')}">
+							</td>
+						</tr>
+						<tr>
+							<td width="20%" height="20px" style="padding: 3px; font-size: 10px; font-family: arial;">
+							<strong>Address Line 2:</strong>
+							</td>
+							<td width="80%" colspan = "3" style="font-size: 10px; font-family: arial; text-transform:uppercase;" th:text="${currentAddress.get('area')}">
+							</td>
+						</tr>
+						<tr>
+							<td width="20%" height="20px" style="padding: 3px; font-size: 10px; font-family: arial;">
+							<strong>Landmark:</strong>
+							</td>
+							<td width="30%" style="font-size: 10px; font-family: arial; text-transform:uppercase;" th:text="${currentAddress.get('landmark')}">
+							</td>
+							<td width="20%" height="20px" style="padding: 3px; font-size: 10px; font-family: arial;">
+							<strong>City*:</strong>
+							</td>
+							<td width="30%" style="font-size: 10px; font-family: arial; text-transform:uppercase;" th:text="${currentAddress.get('city')}">
+							</td>
+						</tr>
+						<tr>
+							<td width="40%" height="20px" style="padding: 3px; font-size: 10px; font-family: arial;">
+							<strong>Pin Code*:</strong>
+							</td>
+							<td width="60%" colspan = "3" style="font-size: 10px; font-family: arial;">
+								<table width="100%" border="0" cellspacing="0" cellpadding="0">
+									<tr>
+										<td width="30%" style="font-size: 10px; font-family: arial; text-transform:uppercase;" th:text="${currentAddress.get('pinCode')}"></td>
+										<td width="35%" style="font-size: 10px; font-family: arial;">
+											<strong>State*:</strong>
+											<span style="padding-left: 5px; text-transform:uppercase;" th:text="${currentAddress.get('state')}"></span></td>
+										</td>
+										<td width="35%" style="font-size: 10px; font-family: arial;">
+											<strong>Country*:</strong>
+											<span style="padding-left: 5px; text-transform:uppercase;" th:text="${currentAddress.get('country')}"></span></td>
+										</td>
+									</tr>
+								</table>
+							</td>
+						</tr>
+						<tr>
+					
+							<td width="40%" height="20px" style="padding: 3px; font-size: 10px; font-family: arial;">
+							<strong>Address Proof*:</strong>
+							</td>
+							<td width="60%" colspan = "3" style="font-size: 10px; font-family: arial; text-transform:uppercase;">
+								As submitted with Documents
+							</td>
+						</tr>
+				</tbody>
+				</table>
+				<table>
+					<tbody>
+						<tr>
+							<td height="20"></td>
+						</tr>
+					</tbody>
+				</table>
+				<table width="100%" cellpadding="5" cellspacing="0" border="1" style="border-collapse: collapse;border-color: #111111;border-style:solid;border-width:1px;font-size: 14px;font-family: arial;">
+					<tbody>
+					<tr>
+						<td width="100%" height="20px" colspan="4" style="padding: 3px; font-size: 10px; font-family: arial;background-color: #f0f0f0;">
+							<strong>Policy Details for Electronic Conversion</strong></td>
+					</tr>
+					<tr>
+						<td width="100%" height="20px" colspan="4" style="padding: 3px; font-size: 10px; font-family: arial;background-color: #f0f0f0;">
+							<strong>Please find here with my Insurance Policy numbers under various Insurance Companies for conversion</strong></td>
+					</tr>
+					<tr>
+						<td width="30%" height="10px" style="font-size: 10px; font-family: arial; text-align: center;">
+							<strong>Insurance Company</strong></td>
+						<td width="40%" height="10px" style="font-size: 10px; font-family: arial; text-align: center;">
+							<strong>Policy Number</strong></td>
+						<td width="30%" height="10px" style="font-size: 10px; font-family: arial; text-align: center;">
+							<strong></strong></td>
+					</tr>
+					<tr>
+						<td width="30%" height="15px" style="font-size: 10px; font-family: arial; text-align: center;" th:text="${i}">
+						<td width="40%" height="15px" style="font-size: 10px; font-family: arial; text-align: center;" th:text="${i}">
+						<td width="30%" height="15px" style="font-size: 10px; font-family: arial; text-align: center;" th:text="${i}">
+					</tr>
+					<tr>
+						<td width="30%" height="15px" style="font-size: 10px; font-family: arial; text-align: center;" th:text="${i}">
+						<td width="40%" height="15px" style="font-size: 10px; font-family: arial; text-align: center;" th:text="${i}">
+						<td width="30%" height="15px" style="font-size: 10px; font-family: arial; text-align: center;" th:text="${i}">
+					</tr>
+					</tbody>
+				</table>
+				  <table>
+					<tbody>
+						<tr>
+							<td height="20"></td>
+						</tr>
+					</tbody>
+				</table>
+				<table width="100%" style="font-size: 14px;font-family: arial;">
+					<tbody>
+					<tr>
+						<td width="50%">
+							<table>
+								<tbody>
+									<tr>
+										<td height="20px" style="padding: 3px; font-size: 10px; font-family: arial;"><strong>Name:</strong>
+											<span style="padding-left: 5px; text-transform:uppercase;" th:text="${fullName}"> </span></td>
+									</tr>
+									<tr>
+										<td height="20px" style="padding: 3px; font-size: 10px; font-family: arial;"><strong>Place:</strong><span style="padding-left: 3px; text-transform:uppercase;" th:text="${currentAddress.get('city')}"></span></td>
+									</tr>
+									<tr>
+										<td height="20px" style="padding: 3px; font-size: 10px; font-family: arial;"><strong>Date:</strong><span style="padding-left: 3px; text-transform:uppercase;" th:text="${date}"></span></td>
+									</tr>
+								</tbody>
+							</table>
+						</td>
+						<td width="50%" height="20px" style="padding: 3px; font-size: 10px; font-family: arial;">
+							<strong>Signature</strong><div style="padding-left: 5px; border: 1px solid #000; height: 60px; width: 300px;"></div>
+						</td>
+					</tr>
+				</tbody>
+				</table>
+				<table>
+					<tbody>
+						<tr>
+							<td height="20"></td>
+						</tr>
+					</tbody>
+				</table>
+				<table>
+					<tbody>
+						<tr>
+							<td height="20"></td>
+						</tr>
+					</tbody>
+				</table>
+	</body>
+</html>

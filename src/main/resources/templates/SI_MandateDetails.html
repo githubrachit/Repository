@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <title>YBL Data freeze and SP Declaration</title>
+    <style type="text/css">table,td,tr{
+         border-collapse: collapse;
+         }
+         .page-break-after {
+         page-break-after: always;
+         page-break-inside: avoid;
+         clear:both;
+         }
+         .page-break-before {
+         page-break-before: always;
+         page-break-inside: avoid;
+         clear:both;
+         }
+         @media print{
+         *{
+         font-size: 6pt !important;
+         }
+         .printtext{
+         font-size: 11pt !important;
+         }
+         }
+      </style>
+</head>
+<body style="margin: 0 auto;padding: 0;">
+<table border="0" align="center" cellpadding="0" cellspacing="0" style="border-collapse: collapse;width: 98%;margin-top: 10px">
+    <tbody>
+    <!-- Main Wrapper Start Here-->
+    <tr>
+        <td align='left'><img src='classpath:static/logo_ax_max.png' width='120'></td>
+        <td>&nbsp;</td>
+    </tr>
+    <tr>
+        <td height="60">
+            &nbsp;
+        </td>
+    </tr>
+    <tr>
+        <td style="padding: 5px; font-size: 16px; font-family: arial;text-align: center;width: auto;">SI-CREDIT CARD MANDATE FORM</td>
+    </tr>
+    <tr>
+    <tr>
+        <td style="padding: 5px; font-size: 16px; font-family: arial;font-weight: bold;">Mandate Reference Details</td>
+    </tr>
+    <tr>
+        <td  style="padding: 5px; font-size: 14px; font-family: arial; width: 100%;">
+            <table border="1" width="100%" cellspacing="0" style="border-collapse: collapse;">
+                <tbody>
+                <tr>
+                    <td style="padding: 5px; font-size: 14px; font-family: arial;font-weight: bold;background:#efefef;width:30% ">
+                        Policy Holder
+                    </td>
+                    <td style="padding: 5px; font-size: 14px; font-family: arial;text-align: center;"th:text=${PolicyHolder}></td>
+                </tr>
+                <tr>
+                    <td style="padding: 5px; font-size: 14px; font-family: arial;font-weight: bold;background:#efefef;">
+                        Policy No./ Application No.
+                    </td>
+                    <td style="padding: 5px; font-size: 14px; font-family: arial;text-align: center;"th:text=${PolicyNo}></td>
+                </tr>
+                <tr>
+                    <td style="padding: 5px; font-size: 14px; font-family: arial;font-weight: bold;background:#efefef;">
+                        Axis Max Life Ref. No
+                    </td>
+                    <td style="padding: 5px; font-size: 14px; font-family: arial;text-align: center;"th:text=${MaxRefNo}></td>
+                </tr>
+                <tr>
+                    <td style="padding: 5px; font-size: 14px; font-family: arial;font-weight: bold;background:#efefef;">
+                        CCSI Amount
+                    </td>
+                    <td style="padding: 5px; font-size: 14px; font-family: arial;text-align: center;"th:text=${Amount}></td>
+                </tr>
+                <tr>
+                    <td style="padding: 5px; font-size: 14px; font-family: arial;font-weight: bold;background:#efefef;">
+                        Bill DeskTxn. Ref. No.
+                    </td>
+                    <td style="padding: 5px; font-size: 14px; font-family: arial;text-align: center;"th:text=${BillDeskTransactionNo}></td>
+                </tr>
+                <tr>
+                    <td style="padding: 5px; font-size: 14px; font-family: arial;font-weight: bold;background:#efefef;">
+                        Bill Desk Bank Code
+                    </td>
+                    <td style="padding: 5px; font-size: 14px; font-family: arial;text-align: center;"th:text=${BillDeskBankCode}></td>
+                </tr>
+                </tbody>
+            </table>
+        </td>
+    </tr>
+    <tr>
+        <td height="100">
+            &nbsp;
+        </td>
+    </tr>
+    <tr>
+        <td>
+<!--            <div th:if="${isNotYBLProposal}">-->
+<!--                <img src="classpath:static/footer_updated.png" />-->
+<!--            </div>-->
+        </td>
+    </tr>
+    </tbody>
+</table>
+</body>
+</html>

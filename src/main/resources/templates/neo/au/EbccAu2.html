@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>EBCC AU Ebcc Document</title>
+    <style type="text/css">table, td, tr {
+        border-collapse: collapse;
+    }
+
+    @media print {
+        * {
+            font-size: 6pt !important;
+        }
+
+        .printtext {
+            font-size: 11pt !important;
+        }
+    }
+    </style>
+</head>
+<body style="margin: 0 auto;padding: 0;">
+<table border="0" align="center" cellpadding="0" cellspacing="0"
+       style="border-collapse: collapse;width: 98%;margin-top: 10px">
+    <tbody>
+    <!-- Main Wrapper Start Here-->
+    <tr>
+        <td width="100%">
+            <table border="0" width="100%" cellspacing="0" style="border-collapse: collapse;">
+                <tbody>
+                <tr>
+                    <td align='left' width="40%"><img src="classpath:static/logo_ax_max.png" width='120'/></td>
+                    <td style="font-weight: bold;font-family: Times New Roman;color: #000080;">
+                        <span style="font-size:16px;border-bottom: 0px solid #222;font-weight: bold;">Bank Confirmation Certificate</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td height="60">
+                        &nbsp;
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2" style="padding: 5px; font-size: 14px; font-family: arial;"><b>Document Generation
+                        Date/Time:</b><i th:text=${todaysDate}></i></td>
+                </tr>
+                <tr>
+                    <td height="20" style="padding:25px 1px 12px; font-size: 14px; font-family: arial;">Sir/Madam,
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2" style="padding: 5px; font-size: 14px; font-family: Times New Roman;">
+                        This is to certify that <b th:text=${customerName}></b> is a AU Small Finance Bank account holder. As per the records, following are the particulars of the customer.
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+        </td>
+    </tr>
+    <tr>
+        <td style="padding: 5px; font-size: 14px; font-family: arial; width: 100%; ">
+            <table border="1" width="700px" cellspacing="0" style="border-collapse: collapse;margin-top: 5px;">
+                <tbody>
+                <tr>
+                    <td style="padding: 5px; font-size: 14px; font-family: arial;font-weight: bold;background:#efefef;width:50%;">
+                        Title of Customer:
+                    </td>
+                    <td style="padding: 5px; font-size: 14px; font-family: arial;text-align: center;width:50%;">
+                        <i th:text=${tagName}></i>
+                    </td>
+                    <td style="padding: 0px 12px 0px 12px"><i th:text=${ebccGenderModify}></i>
+                    </td>
+
+                </tr>
+                <tr>
+                    <td style="padding: 5px; font-size: 14px; font-family: arial;font-weight: bold;background:#efefef;width:50%;">
+                        Name of Customer:
+                    </td>
+                    <td style="padding: 5px; font-size: 14px; font-family: arial;text-align: center;width:50%;">
+                        <i th:text=${customerName}></i>
+                    </td>
+                    <td style="padding: 0px 12px 0px 12px"><i th:text=${ebccNameModify}></i>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="padding: 5px; font-size: 14px; font-family: arial;font-weight: bold;background:#efefef;width:50%;">
+                        Date of Birth/Date of Incorporation:
+                    </td>
+                    <td style="padding: 5px; font-size: 14px; font-family: arial;text-align: center;width:50%;">
+                        <i th:text=${customerDob}></i>
+                    </td>
+                    <td style="padding: 0px 12px 0px 12px"><i th:text=${ebccDobModify}></i>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="padding: 5px; font-size: 14px; font-family: arial;font-weight: bold;background:#efefef;width:50%;">
+                        Communication Address:
+                    </td>
+                    <td style="padding: 5px; font-size: 14px; font-family: arial;text-align: center;width:50%;">
+                        <i th:text=${commuAddress}></i>
+                    </td>
+                    <td style="padding: 0px 12px 0px 12px"><i th:text=${ebccAddModify}></i>
+                    </td>
+                </tr>
+                <tr th:if="${permanentAddressPresent == 'YES'}">
+                    <td style="padding: 5px; font-size: 14px; font-family: arial;font-weight: bold;background:#efefef;width:50%;">
+                        Permanent Address:
+                    </td>
+                    <td style="padding: 5px; font-size: 14px; font-family: arial;text-align: center;width:50%;">
+                        <i th:text=${permaAddress}></i>
+                    </td>
+                    <td style="padding: 0px 12px 0px 12px"><i th:text=${ebccAddModify}></i>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="padding: 5px; font-size: 14px; font-family: arial;font-weight: bold;background:#efefef;width:50%;">
+                        PAN Card Number:
+                    </td>
+                    <td style="padding: 5px; font-size: 14px; font-family: arial;text-align: center;width:50%;">
+                        <i th:text=${customerPan}></i>
+                    </td>
+                    <td style="padding: 0px 12px 0px 12px"><i th:text=${ebccPanModify}></i>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td style="padding: 5px; font-size: 14px; font-family: arial;font-weight: bold;background:#efefef;width:50%;">
+                        PAN Aadhaar linking:
+                    </td>
+                    <td style="padding: 5px; font-size: 14px; font-family: arial;text-align: center;width:50%;">
+                        Aadhaar seeding - Successful
+                    </td>
+                    <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</i>
+                    </td>
+                </tr>
+
+                </tbody>
+            </table>
+        </td>
+    </tr>
+    <tr>
+        <td width="100%">
+            <table border="0" width="100%" cellspacing="0" style="border-collapse: collapse;">
+                <tbody>
+
+                <tr>
+                    <td height="20">
+                        &nbsp;
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2" style="padding: 5px; font-size: 14px; font-family: arial;">
+                        <p>The supporting documents for the above information will be provided as and when requested.</p>
+                        <p style="padding: 40px; font-size: 14px; font-family: arial;">
+                            This is a system generated document & suffices for Date of Birth, PAN copy and address proof requirement</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td height="60">
+                        &nbsp;
+                    </td>
+                </tr>
+                <tr>
+                   <!-- <td>
+                        <img src="classpath:static/footer.png"/>
+                    </td>-->
+                </tr>
+                </tbody>
+            </table>
+        </td>
+    </tr>
+
+    </tbody>
+</table>
+</body>
+</html>

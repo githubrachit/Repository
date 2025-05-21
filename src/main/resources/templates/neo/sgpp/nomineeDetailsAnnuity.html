@@ -1,0 +1,303 @@
+<td>
+	<table border="0" cellspacing="0" cellpadding="0" width="100%" style="border-collapse: collapse;">
+		<tbody>
+		<tr>
+			<th colspan="0" style="background-color: #d5d5d8; color: #000000;font-size: 12px; font-family: arial; text-align: center; padding: 3px" >B. Nominee Details
+	<div style="font-size:8px; text-align: center;"><i>(Applicable only in case of annuity option selected with death benefit)</i></div>
+			</th>
+		</tr>
+		<tr>
+		<td>
+			<table border="0" cellspacing="0" cellpadding="0" width="100%" style="border-collapse: collapse;">
+				<tbody>
+				<tr>
+					<td>
+						<table border="1" cellspacing="0" cellpadding="0" width="100%" style="border-collapse: collapse;">
+							<tbody>
+							<tr>
+								<td width="20%" style="font-weight: bold; padding: 2px 4px; font-size: 10px; font-family: arial;">NOMINEE DETAILS</td>
+								<td width="28%" style="font-weight: bold; padding: 2px 4px; font-size: 10px; font-family: arial; text-align: center;">Nominee 1 (Mandatory)</td>
+								<td width="26%" style="font-weight: bold; padding: 2px 4px; font-size: 10px; font-family: arial; text-align: center;">Nominee 2 (Optional)</td>
+								<td width="26%" style="font-weight: bold; padding: 2px 4px; font-size: 10px; font-family: arial; text-align: center;">Nominee 3 (Optional)</td>
+							</tr>
+							<tr>
+
+								<td width="20%" style="font-weight: bold; padding: 2px 4px; font-size: 10px; font-family: arial;">a. Title</td>
+								<td width="28%" style="font-size: 10px; font-family: arial;padding: 2px 4px;">
+                                                <span th:if="${#lists.size(nomineeDetailsCount) > 0}">
+                                                   <span th:text="${nomineeDetailsCount[0].title}"/>
+                                                </span>
+								</td>
+								<td width="26%" style="font-size: 10px; font-family: arial;padding: 2px 4px;">
+                                                <span th:if="${#lists.size(nomineeDetailsCount) > 1}">
+                                                   <span th:text="${nomineeDetailsCount[1].title}"/>
+                                                </span>
+								</td>
+								<td width="26%" style="font-size: 10px; font-family: arial;padding: 2px 4px;">
+                                                <span th:if="${#lists.size(nomineeDetailsCount) > 2}">
+                                                   <span th:text="${nomineeDetailsCount[2].title}"/>
+                                                </span>
+								</td>
+							</tr>
+							<tr>
+								<td width="20%" style="font-weight: bold; font-size: 10px; font-family: arial;">
+									<table border="0" cellspacing="0" cellpadding="0" width="100%" style="border-collapse: collapse;">
+										<tbody>
+										<tr>
+											<td width="60%" style="font-weight: bold;padding: 2px 4px;font-size: 10px; border-right-color: #808080;border-right-style:solid;border-right-width:1px; font-family: arial;">b. Name</td>
+											<td width="40%" style="font-weight: bold;font-size: 10px; font-family: arial;">
+												<table width="100%" cellspacing="0" border="0" cellpadding="5" style="border-collapse: collapse;">
+													<tbody>
+													<tr>
+														<td height="25" style="font-size: 10px;border-bottom-color: #808080;border-bottom-style:solid;border-bottom-width:1px;font-family: arial;">First</td>
+													</tr>
+													<tr>
+														<td height="25" style="font-size: 10px;border-bottom-color: #808080;border-bottom-style:solid;border-bottom-width:1px;font-family: arial;">Middle</td>
+													</tr>
+													<tr>
+														<td height="25" style="font-size: 10px;font-family: arial;">Last</td>
+													</tr>
+													</tbody>
+												</table>
+											</td>
+										</tr>
+										</tbody>
+									</table>
+								</td>
+								<td width="28%" style="font-size: 10px; font-family: arial;">
+									<table width="100%" cellspacing="0" cellpadding="5" border="0" style="border-collapse: collapse; vertical-align: top;">
+										<tbody>
+										<tr>
+											<td height="25" style="font-size: 10px;border-bottom-color: #808080;border-bottom-style:solid;border-bottom-width:1px;font-family: arial;">
+                                                         <span th:if="${#lists.size(nomineeDetailsCount) > 0}">
+                                                            <span th:text="${nomineeDetailsCount[0].firstName}"/>
+                                                         </span>
+											</td>
+										</tr>
+										<tr>
+											<td height="25" style="font-size: 10px;border-bottom-color: #808080;border-bottom-style:solid;border-bottom-width:1px;font-family: arial;">
+                                                         <span th:if="${#lists.size(nomineeDetailsCount) > 0}">
+                                                            <span th:text="${nomineeDetailsCount[0].middleName}"/>
+                                                         </span>
+											</td>
+										</tr>
+										<tr>
+											<td height="25" style="font-size: 10px;font-family: arial;">
+                                                         <span th:if="${#lists.size(nomineeDetailsCount) > 0}">
+                                                            <span th:text="${nomineeDetailsCount[0].lastName}"/>
+                                                         </span>
+											</td>
+										</tr>
+										</tbody>
+									</table>
+								</td>
+								<td width="26%" style="font-size: 10px; font-family: arial;">
+									<table width="100%" cellspacing="0" cellpadding="5" border="0" style="border-collapse: collapse; vertical-align: top;">
+										<tbody>
+										<tr>
+											<td height="25" style="font-size: 10px;border-bottom-color: #808080;border-bottom-style:solid;border-bottom-width:1px;font-family: arial;">
+                                                         <span th:if="${#lists.size(nomineeDetailsCount) > 1}">
+                                                            <span th:text="${nomineeDetailsCount[1].firstName}"/>
+                                                         </span>
+											</td>
+										</tr>
+										<tr>
+											<td height="25" style="font-size: 10px;border-bottom-color: #808080;border-bottom-style:solid;border-bottom-width:1px;font-family: arial;">
+                                                         <span th:if="${#lists.size(nomineeDetailsCount) > 1}">
+                                                            <span th:text="${nomineeDetailsCount[1].middleName}"/>
+                                                         </span>
+											</td>
+										</tr>
+										<tr>
+											<td height="25" style="font-size: 10px;font-family: arial;">
+                                                         <span th:if="${#lists.size(nomineeDetailsCount) > 1}">
+                                                            <span th:text="${nomineeDetailsCount[1].lastName}"/>
+                                                         </span>
+											</td>
+										</tr>
+										</tbody>
+									</table>
+								</td>
+								<td width="26%" style="font-size: 10px; font-family: arial;">
+									<table width="100%" cellspacing="0" cellpadding="5" border="0" style="border-collapse: collapse; vertical-align: top;">
+										<tbody>
+										<tr>
+											<td height="25" style="font-size: 10px;border-bottom-color: #808080;border-bottom-style:solid;border-bottom-width:1px;font-family: arial;">
+                                                         <span th:if="${#lists.size(nomineeDetailsCount) > 2}">
+                                                            <span th:text="${nomineeDetailsCount[2].firstName}"/>
+                                                         </span>
+											</td>
+										</tr>
+										<tr>
+											<td height="25" style="font-size: 10px;border-bottom-color: #808080;border-bottom-style:solid;border-bottom-width:1px;font-family: arial;">
+                                                         <span th:if="${#lists.size(nomineeDetailsCount) > 2}">
+                                                            <span th:text="${nomineeDetailsCount[2].middleName}"/>
+                                                         </span>
+											</td>
+										</tr>
+										<tr>
+											<td height="25" style="font-size: 10px;font-family: arial;">
+                                                         <span th:if="${#lists.size(nomineeDetailsCount) > 2}">
+                                                            <span th:text="${nomineeDetailsCount[2].lastName}"/>
+                                                         </span>
+											</td>
+										</tr>
+										</tbody>
+									</table>
+								</td>
+							</tr>
+							<tr>
+								<td width="20%" style="font-weight: bold; padding: 2px 4px; font-size: 10px; font-family: arial;">c. Date of Birth</td>
+								<td width="28%" style="font-size: 10px; font-family: arial;padding: 2px 4px;">
+                                                         <span th:if="${#lists.size(nomineeDetailsCount) > 0}">
+                                                            <span th:text="${nomineeDetailsCount[0].dob}"/>
+                                                         </span>
+								</td>
+								<td width="26%" style="font-size: 10px; font-family: arial;padding: 2px 4px;">
+                                                         <span th:if="${#lists.size(nomineeDetailsCount) > 1}">
+                                                            <span th:text="${nomineeDetailsCount[1].dob}"/>
+                                                         </span>
+								</td>
+								<td width="26%" style="font-size: 10px; font-family: arial;padding: 2px 4px;">
+                                                         <span th:if="${#lists.size(nomineeDetailsCount) > 2}">
+                                                            <span th:text="${nomineeDetailsCount[2].dob}"/>
+                                                         </span>
+								</td>
+							</tr>
+							<tr>
+								<td width="20%" style="font-weight: bold; padding: 2px 4px; font-size: 10px; font-family: arial;">d. Gender</td>
+								<td width="28%" style="font-size: 10px; font-family: arial;padding: 2px 4px;">1b. &nbsp;
+                                                         <span th:if="${#lists.size(nomineeDetailsCount) > 0}">
+                                                            <span th:text="${nomineeDetailsCount[0].gender}"/>
+                                                         </span>
+								</td>
+								<td width="26%" style="font-size: 10px; font-family: arial;padding: 2px 4px;">
+                                                         <span th:if="${#lists.size(nomineeDetailsCount) > 1}">
+                                                            <span th:text="${nomineeDetailsCount[1].gender}"/>
+                                                         </span>
+								</td>
+								<td width="26%" style="font-size: 10px; font-family: arial;padding: 2px 4px;">
+                                                         <span th:if="${#lists.size(nomineeDetailsCount) > 2}">
+                                                            <span th:text="${nomineeDetailsCount[2].gender}"/>
+                                                         </span>
+								</td>
+							</tr>
+							<tr>
+								<td width="20%" style="font-weight: bold; padding: 2px 4px; font-size: 10px; font-family: arial;">e. Percentage of Share</td>
+								<td width="28%" style="font-size: 10px; font-family: arial;padding: 2px 4px; text-align: center;">
+                                                         <span th:if="${#lists.size(nomineeDetailsCount) > 0}">
+                                                            <span th:text="${nomineeDetailsCount[0].percentageShare}+' %'"/>
+                                                         </span>
+									<span th:unless="${#lists.size(nomineeDetailsCount) > 0}">
+                                                            <span>_ _%</span>
+                                                         </span>
+								</td>
+								<td width="26%" style="font-size: 10px; font-family: arial;padding: 2px 4px; text-align: center;">
+                                                         <span th:if="${#lists.size(nomineeDetailsCount) > 1}">
+                                                            <span th:text="${nomineeDetailsCount[1].percentageShare}+' %'"/>
+                                                         </span>
+									<span th:unless="${#lists.size(nomineeDetailsCount) > 1}">
+                                                            <span>_ _%</span>
+                                                         </span>
+								</td>
+								<td width="26%" style="font-size: 10px; font-family: arial;padding: 2px 4px; text-align: center;">
+                                                         <span th:if="${#lists.size(nomineeDetailsCount) > 2}">
+                                                            <span th:text="${nomineeDetailsCount[2].percentageShare}+' %'"/>
+                                                         </span>
+									<span th:unless="${#lists.size(nomineeDetailsCount) > 2}">
+                                                            <span>_ _%</span>
+                                                         </span>
+								</td>
+							</tr>
+							<tr>
+								<td width="20%" style="font-weight: bold; padding: 2px 4px; font-size: 10px; font-family: arial;">f. Relationship with Proposer/Joint Life</td>
+								<td width="28%" style="font-size: 10px; font-family: arial;padding: 2px 4px;">
+                                                         <span th:if="${#lists.size(nomineeDetailsCount) > 0}">
+                                                            <input type="checkbox" th:checked="${nomineeDetailsCount[0].relationshipWithProposer=='Spouse'}">Spouse</input>
+															 <input type="checkbox" th:checked="${nomineeDetailsCount[0].relationshipWithProposer=='Parent'}">Parents</input>
+															 <input type="checkbox" th:checked="${nomineeDetailsCount[0].relationshipWithProposer=='Others'}">Other</input>
+															 <span style="padding-left: 10px;" th:if="${nomineeDetailsCount[0].relationshipWithProposer=='Others'}" th:text="${nomineeDetailsCount[0].specifyRelationship}"></span>
+                                                            <span style="padding-left: 10px;" th:unless="${nomineeDetailsCount[0].relationshipWithProposer=='Others'}"> ------</span>
+                                                         </span>
+									<span th:unless="${#lists.size(nomineeDetailsCount) > 0}">
+                                                            <input type="checkbox">Spouse</input>
+										<input type="checkbox">Parents</input>
+										<input type="checkbox">Other ------</input>
+                                                         </span>
+								</td>
+								<td width="26%" style="font-size: 10px; font-family: arial;padding: 2px 4px;">
+                                                         <span th:if="${#lists.size(nomineeDetailsCount) > 1}">
+                                                            <input type="checkbox" th:checked="${nomineeDetailsCount[1].relationshipWithProposer=='Spouse'}">Spouse</input>
+															 <input type="checkbox" th:checked="${nomineeDetailsCount[1].relationshipWithProposer=='Parent'}">Parents</input>
+															 <input type="checkbox" th:checked="${nomineeDetailsCount[1].relationshipWithProposer=='Others'}">Other</input>
+															 <span style="padding-left: 10px;" th:if="${nomineeDetailsCount[1].relationshipWithProposer=='Others'}" th:text="${nomineeDetailsCount[1].specifyRelationship}"></span>
+                                                            <span style="padding-left: 10px;" th:unless="${nomineeDetailsCount[1].relationshipWithProposer=='Others'}"> ------</span>
+                                                         </span>
+									<span th:unless="${#lists.size(nomineeDetailsCount) > 1}">
+                                                            <input type="checkbox">Spouse</input>
+										<input type="checkbox">Parents</input>
+										<input type="checkbox">Other ------</input>
+                                                         </span>
+								</td>
+								<td width="26%" style="font-size: 10px; font-family: arial;padding: 2px 4px;">
+                                                         <span th:if="${#lists.size(nomineeDetailsCount) > 2}">
+                                                            <input type="checkbox" th:checked="${nomineeDetailsCount[2].relationshipWithProposer=='Spouse'}">Spouse</input>
+															 <input type="checkbox" th:checked="${nomineeDetailsCount[2].relationshipWithProposer=='Parent'}">Parents</input>
+															 <input type="checkbox" th:checked="${nomineeDetailsCount[2].relationshipWithProposer=='Others'}">Other</input>
+															 <span style="padding-left: 10px;" th:if="${nomineeDetailsCount[2].relationshipWithProposer=='Others'}" th:text="${nomineeDetailsCount[2].specifyRelationship}"></span>
+                                                            <span style="padding-left: 10px;" th:unless="${nomineeDetailsCount[2].relationshipWithProposer=='Others'}"> ------</span>
+                                                         </span>
+									<span th:unless="${#lists.size(nomineeDetailsCount) > 2}">
+                                                            <input type="checkbox">Spouse</input>
+										<input type="checkbox">Parents</input>
+										<input type="checkbox">Other ------</input>
+                                                         </span>
+								</td>
+							</tr>
+							<tr>
+								<td width="20%" style="font-weight: bold; padding: 2px 4px; font-size: 10px; font-family: arial;">g. Appointee Full Name <span style="font-style: italic; font-weight: normal;">(if nominee is under age 18)</span></td>
+								<td width="28%" style="font-size: 10px; font-family: arial;padding: 2px 4px;">
+                                                         <span th:if="${#lists.size(nomineeDetailsCount) > 0}">
+                                                            <span th:text="${nomineeDetailsCount[0].guardianName}"/>
+                                                         </span>
+								</td>
+								<td width="26%" style="font-size: 10px; font-family: arial;padding: 2px 4px;">
+                                                         <span th:if="${#lists.size(nomineeDetailsCount) > 1}">
+                                                            <span th:text="${nomineeDetailsCount[1].guardianName}"/>
+                                                         </span>
+								</td>
+								<td width="26%" style="font-size: 10px; font-family: arial;padding: 2px 4px;">
+                                                         <span th:if="${#lists.size(nomineeDetailsCount) > 2}">
+                                                            <span th:text="${nomineeDetailsCount[2].guardianName}"/>
+                                                         </span>
+								</td>
+							</tr>
+							<tr>
+								<td width="20%" style="font-weight: bold; padding: 2px 4px; font-size: 10px; font-family: arial;">h. Appointee relationship to Nominee</td>
+								<td width="28%" style="font-size: 10px; font-family: arial;padding: 2px 4px;">
+                                                         <span th:if="${#lists.size(nomineeDetailsCount) > 0}">
+                                                            <span th:text="${nomineeDetailsCount[0].guardianRelation}"/>
+                                                         </span>
+								</td>
+								<td width="26%" style="font-size: 10px; font-family: arial;padding: 2px 4px;">
+                                                         <span th:if="${#lists.size(nomineeDetailsCount) > 1}">
+                                                            <span th:text="${nomineeDetailsCount[1].guardianRelation}"/>
+                                                         </span>
+								</td>
+								<td width="26%" style="font-size: 10px; font-family: arial;padding: 2px 4px;">
+                                                         <span th:if="${#lists.size(nomineeDetailsCount) > 2}">
+                                                            <span th:text="${nomineeDetailsCount[2].guardianRelation}"/>
+                                                         </span>
+								</td>
+							</tr>
+							</tbody>
+						</table>
+					</td>
+				</tr>
+				</tbody>
+			</table>
+		</td>
+		</tr>
+		</tbody>
+	</table>
+</td>

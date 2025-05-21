@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1" name="viewport">
+    <title></title>
+</head>
+<body style="margin-left: 5%;margin-right: 10%;">
+<img align="right" src="classpath:static/logo_ax_max.png" alt="Axis Max Life Insurance" width="100"/>
+<h2 style="text-align: center;"><u>Waiver Summary Document</u></h2>
+<table cellpadding="0" cellspacing="0" style="width: 100%;border: 1px solid black;border-collapse: collapse; font-size: 10px;">
+    <tbody>
+    <tr>
+        <th style="width: 20%;border: 1px solid black;border-collapse: collapse;background-color: lightblue">Consumer
+            Details
+        </th>
+        <td style="width: 40%;border: 1px solid black;border-collapse: collapse">
+            <table style="width: 100%;border: 1px solid black;border-collapse: collapse">
+                <tbody>
+                <tr>
+                    <td style="width: 40%;border: 1px solid black;border-collapse: collapse;background-color: yellow">
+                        Name
+                    </td>
+                    <td style="width: 60%;border: 1px solid black;border-collapse: collapse" th:text="${name}"></td>
+                </tr>
+                <tr>
+                    <td style="width: 40%;border: 1px solid black;border-collapse: collapse;background-color: yellow">
+                        Age
+                    </td>
+                    <td style="width: 60%;border: 1px solid black;border-collapse: collapse" th:text="${age}"></td>
+                </tr>
+                <tr>
+                    <td style="width: 40%;border: 1px solid black;border-collapse: collapse;background-color: yellow">
+                        SA
+                    </td>
+                    <td style="width: 60%;border: 1px solid black;border-collapse: collapse" th:text="${sa}"></td>
+                </tr>
+                <tr>
+                    <td style="width: 40%;border: 1px solid black;border-collapse: collapse;background-color: yellow">
+                        MSA
+                    </td>
+                    <td style="width: 60%;border: 1px solid black;border-collapse: collapse" th:text="${msa}"></td>
+                </tr>
+                </tbody>
+            </table>
+        </td>
+        <td style="width: 5%;border-collapse: collapse"></td>
+        <td style="width: 35%;border-collapse: collapse">
+            <table style="width: 100%;border: 1px solid black;border-collapse: collapse">
+                <tbody>
+                <tr>
+                    <td style="width: 40%;border: 1px solid black;border-collapse: collapse;background-color: limegreen">
+                        Channel
+                    </td>
+                    <td style="width: 60%;border: 1px solid black;border-collapse: collapse" th:text="${channel}"></td>
+                </tr>
+                <tr>
+                    <td style="width: 40%;border: 1px solid black;border-collapse: collapse;background-color: limegreen">
+                        Existing customer
+                    </td>
+                    <td style="width: 60%;border: 1px solid black;border-collapse: collapse"
+                        th:text="${existingCustomer}"></td>
+                </tr>
+                <tr>
+                    <td style="width: 40%;border: 1px solid black;border-collapse: collapse;background-color: limegreen">
+                        Existing employee
+                    </td>
+                    <td style="width: 60%;border: 1px solid black;border-collapse: collapse"
+                        th:text="${existingEmployee}"></td>
+                </tr>
+                <tr>
+                    <td style="width: 40%;border: 1px solid black;border-collapse: collapse;background-color: limegreen">
+                        NRI/PIO
+                    </td>
+                    <td style="width: 60%;border: 1px solid black;border-collapse: collapse" th:text="${nri}"></td>
+                </tr>
+                </tbody>
+            </table>
+        </td>
+    </tr>
+    </tbody>
+</table>
+<br/>
+<table cellpadding="0" cellspacing="0" style="width: 100%;border: 1px solid black;border-collapse: collapse; font-size: 10px;">
+    <tbody>
+    <tr>
+        <th style="width: 20%;border: 1px solid black;border-collapse: collapse;background-color: lightblue">Halt
+            Flags
+        </th>
+        <td style="width: 40%;border: 1px solid black;border-collapse: collapse">
+            <table style="width: 100%;border: 1px solid black;border-collapse: collapse">
+                <tbody>
+                <tr>
+                    <td style="width: 40%;border: 1px solid black;border-collapse: collapse;background-color: yellow">
+                        IsHaltMedicalWaiver
+                    </td>
+                    <td style="width: 60%;border: 1px solid black;border-collapse: collapse"
+                        th:text="${isHaltMedicalWaiver}"></td>
+                </tr>
+                <tr>
+                    <td style="width: 40%;border: 1px solid black;border-collapse: collapse;background-color: yellow">
+                        IsHaltIncomeProofWaiver
+                    </td>
+                    <td style="width: 60%;border: 1px solid black;border-collapse: collapse"
+                        th:text="${isHaltIncomeProofWaiver}"></td>
+                </tr>
+                </tbody>
+            </table>
+        </td>
+        <td style="width: 5%"></td>
+        <td style="width: 35%">
+            <table style="width: 100%;border: 1px solid black;border-collapse: collapse">
+                <tbody>
+                <tr>
+                    <td style="width: 40%;border: 1px solid black;border-collapse: collapse;background-color: limegreen">
+                        MedicalTest
+                    </td>
+                    <td style="width: 60%;border: 1px solid black;border-collapse: collapse"
+                        th:text="${medicalTest}"></td>
+                </tr>
+                <tr>
+                    <td style="width: 40%;border: 1px solid black;border-collapse: collapse;background-color: limegreen">Is Medical Skip</td>
+                    <td style="width: 60%;border: 1px solid black;border-collapse: collapse" th:text="${medicalSuppress}"></td>
+                </tr>
+                </tbody>
+            </table>
+        </td>
+    </tr>
+    <tr>
+        <th style="width: 20%;background-color: lightblue"></th>
+        <td style="width: 40%;border: 1px solid black;border-collapse: collapse">
+            <table style="width: 100%;border: 1px solid black;border-collapse: collapse">
+                <tbody>
+                <tr>
+                    <td style="width: 40%;border: 1px solid black;border-collapse: collapse;background-color: yellow">
+                        VideoMER
+                    </td>
+                    <td style="width: 60%;border: 1px solid black;border-collapse: collapse" th:text="${videoMer}"></td>
+                </tr>
+                </tbody>
+            </table>
+        </td>
+        <td style="width: 5%;border: 1px solid black;border-collapse: collapse"></td>
+        <td style="width: 35%;border: 1px solid black;border-collapse: collapse">
+            <table style="height: 100%;width: 100%;border: 1px solid black;border-collapse: collapse">
+                <tbody>
+                <tr>
+                    <td style="width: 40%;border: 1px solid black;border-collapse: collapse;background-color: limegreen">Medical Skip Reason</td>
+                    <td style="width: 60%;border: 1px solid black;border-collapse: collapse" th:text="${reasonForSuppress}"></td>
+                </tr>
+                </tbody>
+            </table>
+        </td>
+    </tr>
+    </tbody>
+</table>
+<br/>
+<table cellpadding="0" cellspacing="0" style="width: 100%;border: 1px solid black;border-collapse: collapse; font-size: 10px;">
+    <tbody>
+    <tr>
+        <th style="width: 20%;border: 1px solid black;border-collapse: collapse;background-color: lightblue">Waivers
+        </th>
+        <td style="width: 80%;border: 1px solid black;border-collapse: collapse">
+            <table style="width: 100%;border: 1px solid black;border-collapse: collapse">
+                <tbody>
+                <tr>
+                    <td style="width: 30%;border: 1px solid black;border-collapse: collapse;background-color: yellow">
+                        IsDOBWaiver
+                    </td>
+                    <td style="width: 10%;border: 1px solid black;border-collapse: collapse"
+                        th:text="${isDobWaiver}"></td>
+                    <td style="width: 5%;border: 1px solid black;border-collapse: collapse"></td>
+                    <td style="width: 25%;border: 1px solid black;border-collapse: collapse;background-color: limegreen">
+                        DOBWaiverSource
+                    </td>
+                    <td style="width: 30%;border: 1px solid black;border-collapse: collapse"
+                        th:text="${dobWaiverSource}"></td>
+                </tr>
+                <tr>
+                    <td height="15" colspan="5"></td>
+                </tr>
+                <tr>
+                    <td colspan="1" style="border: 1px solid black;border-collapse: collapse;background-color: yellow">
+                        IsPANWaiver
+                    </td>
+                    <td colspan="1" style="border: 1px solid black;border-collapse: collapse"
+                        th:text="${isPanWaiver}"></td>
+                    <td colspan="1" style="border: 1px solid black;border-collapse: collapse"></td>
+                    <td colspan="1" style="border: 1px solid black;border-collapse: collapse;background-color: limegreen">
+                        PANWaiverSource
+                    </td>
+                    <td colspan="1" style="border: 1px solid black;border-collapse: collapse"
+                        th:text="${panWaiverSource}"></td>
+                </tr>
+                <tr>
+                    <td height="15" colspan="5"></td>
+                </tr>
+                <tr>
+                    <td colspan="1" style="border: 1px solid black;border-collapse: collapse;background-color: yellow">
+                        IsIncomeWaiver
+                    </td>
+                    <td colspan="1" style="border: 1px solid black;border-collapse: collapse"
+                        th:text="${isIncomeWaiver}"></td>
+                    <td colspan="1" style="border: 1px solid black;border-collapse: collapse"></td>
+                    <td colspan="1" style="border: 1px solid black;border-collapse: collapse;background-color: limegreen">
+                        IncomeWaiverSource
+                    </td>
+                    <td colspan="1" style="border: 1px solid black;border-collapse: collapse"
+                        th:text="${incomeWaiverSource}"></td>
+                </tr>
+                <tr>
+                    <td colspan="1" style="border: 1px solid black;border-collapse: collapse"></td>
+                    <td colspan="1" style="border: 1px solid black;border-collapse: collapse"></td>
+                    <td colspan="1" style="border: 1px solid black;border-collapse: collapse"></td>
+                    <td colspan="1" style="border: 1px solid black;border-collapse: collapse;background-color: limegreen">
+                        CIBIL_score
+                    </td>
+                    <td colspan="1" style="border: 1px solid black;border-collapse: collapse"
+                        th:text="${cibilScore}"></td>
+                </tr>
+                <tr>
+                    <td colspan="1" style="border: 1px solid black;border-collapse: collapse"></td>
+                    <td colspan="1" style="border: 1px solid black;border-collapse: collapse"></td>
+                    <td colspan="1" style="border: 1px solid black;border-collapse: collapse"></td>
+                    <td colspan="1" style="border: 1px solid black;border-collapse: collapse;background-color: limegreen">
+                        CRIF_score
+                    </td>
+                    <td colspan="1" style="border: 1px solid black;border-collapse: collapse"
+                        th:text="${crifScore}"></td>
+                </tr>
+                <tr>
+                    <td colspan="1" style="border: 1px solid black;border-collapse: collapse"></td>
+                    <td colspan="1" style="border: 1px solid black;border-collapse: collapse"></td>
+                    <td colspan="1" style="border: 1px solid black;border-collapse: collapse"></td>
+                    <td colspan="1" style="border: 1px solid black;border-collapse: collapse;background-color: limegreen">
+                        IncomeWaiver_Age
+                    </td>
+                    <td colspan="1" style="border: 1px solid black;border-collapse: collapse"
+                        th:text="${incomeWaiverAge}"></td>
+                </tr>
+                <tr>
+                    <td colspan="1" style="border: 1px solid black;border-collapse: collapse"></td>
+                    <td colspan="1" style="border: 1px solid black;border-collapse: collapse"></td>
+                    <td colspan="1" style="border: 1px solid black;border-collapse: collapse"></td>
+                    <td colspan="1" style="border: 1px solid black;border-collapse: collapse;background-color: limegreen">
+                        IncomeWaiver_FSA
+                    </td>
+                    <td colspan="1" style="border: 1px solid black;border-collapse: collapse"
+                        th:text="${incomeWaiverFsa}"></td>
+                </tr>
+                <tr>
+                    <td colspan="1" style="border: 1px solid black;border-collapse: collapse"></td>
+                    <td colspan="1" style="border: 1px solid black;border-collapse: collapse"></td>
+                    <td colspan="1" style="border: 1px solid black;border-collapse: collapse"></td>
+                    <td colspan="1" style="border: 1px solid black;border-collapse: collapse;background-color: limegreen">
+                        IncomeWaiver_Income
+                    </td>
+                    <td colspan="1" style="border: 1px solid black;border-collapse: collapse"
+                        th:text="${incomeWaiverIncome}"></td>
+                </tr>
+                <tr>
+                    <td colspan="1" style="border: 1px solid black;border-collapse: collapse"></td>
+                    <td colspan="1" style="border: 1px solid black;border-collapse: collapse"></td>
+                    <td colspan="1" style="border: 1px solid black;border-collapse: collapse"></td>
+                    <td colspan="1" style="border: 1px solid black;border-collapse: collapse;background-color: limegreen">
+                        IncomeProofWaiver_Occupation
+                    </td>
+                    <td colspan="1" style="border: 1px solid black;border-collapse: collapse"
+                        th:text="${incomeProofWaiverOccupation}"></td>
+                </tr>
+                <tr>
+                    <td colspan="1" style="border: 1px solid black;border-collapse: collapse"></td>
+                    <td colspan="1" style="border: 1px solid black;border-collapse: collapse"></td>
+                    <td colspan="1" style="border: 1px solid black;border-collapse: collapse"></td>
+                    <td colspan="1" style="border: 1px solid black;border-collapse: collapse;background-color: limegreen">
+                        IncomeProofWaiver_Education
+                    </td>
+                    <td colspan="1" style="border: 1px solid black;border-collapse: collapse"
+                        th:text="${incomeProofWaiverEducation}"></td>
+                </tr>
+                <tr>
+                    <td height="15" colspan="5"></td>
+                </tr>
+                <tr>
+                    <td colspan="1" style="border: 1px solid black;border-collapse: collapse;background-color: yellow">
+                        IsCRAWaiver
+                    </td>
+                    <td colspan="1" style="border: 1px solid black;border-collapse: collapse"
+                        th:text="${isCraWaiver}"></td>
+                    <td colspan="1" style="border: 1px solid black;border-collapse: collapse"></td>
+                    <td colspan="1" style="border: 1px solid black;border-collapse: collapse;background-color: limegreen">
+                        CRAWaiverSource
+                    </td>
+                    <td colspan="1" style="border: 1px solid black;border-collapse: collapse"
+                        th:text="${craWaiverSource}"></td>
+                </tr>
+                <tr>
+                    <td colspan="1" style="border: 1px solid black;border-collapse: collapse"></td>
+                    <td colspan="1" style="border: 1px solid black;border-collapse: collapse"></td>
+                    <td colspan="1" style="border: 1px solid black;border-collapse: collapse"></td>
+                    <td colspan="1" style="border: 1px solid black;border-collapse: collapse;background-color: limegreen">
+                        IsCRAWaivedByAML
+                    </td>
+                    <td colspan="1" style="border: 1px solid black;border-collapse: collapse"
+                        th:text="${isCraWaivedByAml}"></td>
+                </tr>
+                <tr>
+                    <td colspan="1" style="border: 1px solid black;border-collapse: collapse"></td>
+                    <td colspan="1" style="border: 1px solid black;border-collapse: collapse"></td>
+                    <td colspan="1" style="border: 1px solid black;border-collapse: collapse"></td>
+                    <td colspan="1" style="border: 1px solid black;border-collapse: collapse;background-color: limegreen">
+                        CRA Pincode By Consumer
+                    </td>
+                    <td colspan="1" style="border: 1px solid black;border-collapse: collapse"
+                        th:text="${craPincodeByConsumer}"></td>
+                </tr>
+                <tr>
+                    <td colspan="1" style="border: 1px solid black;border-collapse: collapse"></td>
+                    <td colspan="1" style="border: 1px solid black;border-collapse: collapse"></td>
+                    <td colspan="1" style="border: 1px solid black;border-collapse: collapse"></td>
+                    <td colspan="1" style="border: 1px solid black;border-collapse: collapse;background-color: limegreen">
+                        CRA Pincode By CKYC
+                    </td>
+                    <td colspan="1" style="border: 1px solid black;border-collapse: collapse"
+                        th:text="${craPincodeByCkyc}"></td>
+                </tr>
+                <tr>
+                    <td colspan="1" style="border: 1px solid black;border-collapse: collapse"></td>
+                    <td colspan="1" style="border: 1px solid black;border-collapse: collapse"></td>
+                    <td colspan="1" style="border: 1px solid black;border-collapse: collapse"></td>
+                    <td colspan="1" style="border: 1px solid black;border-collapse: collapse;background-color: limegreen">
+                        CRA City By CKYC
+                    </td>
+                    <td colspan="1" style="border: 1px solid black;border-collapse: collapse"
+                        th:text="${craCityByCkyc}"></td>
+                </tr>
+                <tr>
+                    <td height="15" colspan="5"></td>
+                </tr>
+                <tr>
+                    <td colspan="1" style="border: 1px solid black;border-collapse: collapse;background-color: yellow">
+                        IsPRAWaiver
+                    </td>
+                    <td colspan="1" style="border: 1px solid black;border-collapse: collapse"
+                        th:text="${isPraWaiver}"></td>
+                    <td colspan="1" style="border: 1px solid black;border-collapse: collapse"></td>
+                    <td colspan="1" style="border: 1px solid black;border-collapse: collapse;background-color: limegreen">
+                        PRAWaiverSource
+                    </td>
+                    <td colspan="1" style="border: 1px solid black;border-collapse: collapse"
+                        th:text="${praWaiverSource}"></td>
+                </tr>
+                <tr>
+                    <td colspan="1" style="border: 1px solid black;border-collapse: collapse"></td>
+                    <td colspan="1" style="border: 1px solid black;border-collapse: collapse"></td>
+                    <td colspan="1" style="border: 1px solid black;border-collapse: collapse"></td>
+                    <td colspan="1" style="border: 1px solid black;border-collapse: collapse;background-color: limegreen">
+                        IsPRAWaivedByAML
+                    </td>
+                    <td colspan="1" style="border: 1px solid black;border-collapse: collapse"
+                        th:text="${isPraWaivedByAml}"></td>
+                </tr>
+                <tr>
+                    <td colspan="1" style="border: 1px solid black;border-collapse: collapse"></td>
+                    <td colspan="1" style="border: 1px solid black;border-collapse: collapse"></td>
+                    <td colspan="1" style="border: 1px solid black;border-collapse: collapse"></td>
+                    <td colspan="1" style="border: 1px solid black;border-collapse: collapse;background-color: limegreen">
+                        PRA Pincode By Consumer
+                    </td>
+                    <td colspan="1" style="border: 1px solid black;border-collapse: collapse"
+                        th:text="${praPincodeByConsumer}"></td>
+                </tr>
+                <tr>
+                    <td colspan="1" style="border: 1px solid black;border-collapse: collapse"></td>
+                    <td colspan="1" style="border: 1px solid black;border-collapse: collapse"></td>
+                    <td colspan="1" style="border: 1px solid black;border-collapse: collapse"></td>
+                    <td colspan="1" style="border: 1px solid black;border-collapse: collapse;background-color: limegreen">
+                        PRA Pincode By CKYC
+                    </td>
+                    <td colspan="1" style="border: 1px solid black;border-collapse: collapse"
+                        th:text="${praPincodeByCkyc}"></td>
+                </tr>
+                <tr>
+                    <td colspan="1" style="border: 1px solid black;border-collapse: collapse"></td>
+                    <td colspan="1" style="border: 1px solid black;border-collapse: collapse"></td>
+                    <td colspan="1" style="border: 1px solid black;border-collapse: collapse"></td>
+                    <td colspan="1" style="border: 1px solid black;border-collapse: collapse;background-color: limegreen">
+                        PRA City By CKYC
+                    </td>
+                    <td colspan="1" style="border: 1px solid black;border-collapse: collapse"
+                        th:text="${praCityByCkyc}"></td>
+                </tr>
+                <tr>
+                    <td colspan="1" style="border: 1px solid black;border-collapse: collapse;background-color: yellow">
+                        Is Pan Aadhaar Linked
+                    </td>
+                    <td colspan="1" style="border: 1px solid black;border-collapse: collapse"
+                        th:text="${isPanAadhaarLinked}"></td>
+                </tr>
+                <tr>
+                    <td colspan="1" style="border: 1px solid black;border-collapse: collapse;background-color: yellow">
+                        IS COMBO PLAN
+                    </td>
+                    <td colspan="5" style="border: 1px solid black;border-collapse: collapse"
+                        th:text="${isComboSale}"></td>
+                </tr>
+                <tr>
+                    <td colspan="1" style="border: 1px solid black;border-collapse: collapse;background-color: yellow">
+                        Bank Account Verified
+                    </td>
+                    <td colspan="5" style="border: 1px solid black;border-collapse: collapse"
+                        th:text="${isBankAccountVerified}"></td>
+                </tr>
+                </tbody>
+            </table>
+        </td>
+    </tr>
+    </tbody>
+</table>
+</body>
+</html>

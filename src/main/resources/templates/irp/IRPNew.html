@@ -1,0 +1,1311 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>IRP</title>
+    <style type="text/css">
+        table,
+        td,
+        tr {
+            border-collapse: collapse;
+        }
+
+        table td input {
+            margin: 0;
+        }
+
+        .page-break-before {
+            page-break-before: always;
+            page-break-inside: avoid;
+            clear: both;
+        }
+
+        @media print {
+            * {
+                font-size: 6pt !important;
+                font-family: Calibri, sans-serif;
+            }
+
+            .printtext {
+                font-size: 11pt !important;
+            }
+        }
+
+        @page {
+            size: A4;
+            margin: 10px;
+            padding-top: 10px;
+        }
+    </style>
+</head>
+
+<body style="padding: 0;">
+<div>
+    <table>
+        <tbody>
+        <tr>
+            <td style="width:100%"><img src='classpath:static/logo-IRP.png'
+                                        alt="Axis Max Life Insurance"
+                                        width="100%" height="100"></td>
+            <td>&nbsp;</td>
+        </tr>
+        <tr>
+            <td style="text-align:right;padding:10px;font-family:Calibri;font-size:11pt">Version 22.0 Output form<br/>April 13, 2025</td>
+            <td>&nbsp;</td>
+        </tr>
+        <tr>
+            <td height="5">
+                &nbsp;
+            </td>
+        </tr>
+        <tr>
+            <td style="padding: 10px 0; font-size: 11pt; font-family: calibri; width: 100%;border:none;">
+                <table border="0" width="100%" cellspacing="0" style="border-collapse: collapse; text-align: center; width:100%">
+                    <tr>
+                        <td style="font-family: Calibri;font-size: 11pt;text-align: center;">
+                            <div style="font-weight: bold;text-transform: capitalize;font-size: 11pt;">INVESTOR RISK PROFILE
+                                - REPORT
+                            </div>
+                            <div style="font-style: italic;font-size: 11pt;">(Mandatory for unit linked insurance plans)
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+<table width="100%" align="center" cellpadding="0" cellspacing="0" style="border-collapse: collapse;">
+    <tbody>
+    <!-- Main Wrapper Start Here-->
+    <tr>
+        <td height="12">
+            &nbsp;
+        </td>
+    </tr>
+    <tr>
+        <td colspan="2" style="padding: 0; font-weight: normal;font-size: 11pt;">
+            <table width='100%'>
+                <tr>
+                    <td style="font-family: Calibri;font-size: 11pt;text-align: left;">The objective of this exercise
+                        is to help you assess your risk appetite so that we may suggest appropriate fund types for you.
+                    </td>
+                </tr>
+            </table>
+        </td>
+    </tr>
+    <tr>
+        <td height="2">
+            &nbsp;
+        </td>
+    </tr>
+    <tr>
+        <td colspan="2" style="padding: 0; font-weight: bold;text-align: left;font-size: 11pt;">
+            <table width='100%'>
+                <tr>
+                    <td style="font-family: Calibri;padding:2px 4px;">Risk assessment</td>
+                </tr>
+            </table>
+        </td>
+    </tr>
+    <tr>
+        <td colspan="2" style="padding: 0; font-weight: normal;text-align: left;font-size: 11pt;">
+            <table width='100%' border="1">
+                <tr>
+                    <th
+                            style="font-family: Calibri;padding:4px;width:20px;vertical-align: top;text-align: center;">
+                        A
+                    </th>
+                    <th style="font-family: Calibri;padding:4px;text-align:left;">As an investor, how do you describe
+                        your willingness to take financial risk?
+                        <table width="100%" border="1"
+                               style="margin-top: 10px;font-weight: normal;text-align: left;">
+                            <tr th:switch="${riskSelection1}">
+                                <td style="font-family: Calibri;padding:2px 4px;width:20px;text-align: center;">a
+                                </td>
+                                <td style="font-family: Calibri;padding:2px 4px;text-align: left;"> I am comfortable
+                                    taking on a higher level of risk, knowing it may mean higher returns (score – 5)
+                                </td>
+                                <td style="font-family: Calibri;padding:2px 4px;text-align: center;" th:case="5">
+                                    <input style="width: 20px;height: 18px" type="checkbox" checked disabled/>
+                                </td>
+                                <td style="font-family: Calibri;padding:2px 4px;text-align: center;" th:case="*">
+                                    <input style="width: 20px;height: 18px" type="checkbox" disabled/>
+                                </td>
+                            </tr>
+                            <tr th:switch="${riskSelection1}">
+                                <td style="font-family: Calibri;padding:2px 4px;width:20px;text-align: center;">b
+                                </td>
+                                <td style="font-family: Calibri;padding:2px 4px;text-align: left;">I am willing to take
+                                    calculated risks, knowing it may mean higher returns (score - 4)
+                                </td>
+                                <td style="font-family: Calibri;padding:2px 4px;text-align: center;width: 80px"
+                                    th:case="4">
+                                    <input style="width: 20px;height: 18px" type="checkbox" checked disabled/>
+                                </td>
+                                <td style="font-family: Calibri;padding:2px 4px;text-align: center;width: 80px"
+                                    th:case="*">
+                                    <input style="width: 20px;height: 18px" type="checkbox" disabled/>
+                                </td>
+                            </tr>
+                            <tr th:switch="${riskSelection1}">
+                                <td style="font-family: Calibri;padding:2px 4px;width:20px;text-align: center;">c
+                                </td>
+                                <td style="font-family: Calibri;padding:2px 4px;text-align: left;">
+                                    I am happy with a moderate level of risk (score – 3)
+                                </td>
+                                <td style="font-family: Calibri;padding:2px 4px;text-align: center;" th:case="3">
+                                    <input style="width: 20px;height: 18px" type="checkbox" checked disabled/>
+                                </td>
+                                <td style="font-family: Calibri;padding:2px 4px;text-align: center;" th:case="*">
+                                    <input style="width: 20px;height: 18px" type="checkbox" disabled/>
+                                </td>
+                            </tr>
+                            <tr th:switch="${riskSelection1}">
+                                <td style="font-family: Calibri;padding:2px 4px;width:20px;text-align: center;">d
+                                </td>
+                                <td style="font-family: Calibri;padding:2px 4px;text-align: left;">
+                                    I am fairly conservative, but can take on a small level of risk (score – 2)
+                                </td>
+                                <td style="font-family: Calibri;padding:2px 4px;text-align: center;" th:case="2">
+                                    <input style="width: 20px;height: 18px" type="checkbox" checked disabled/>
+                                </td>
+                                <td style="font-family: Calibri;padding:2px 4px;text-align: center;" th:case="*">
+                                    <input style="width: 20px;height: 18px" type="checkbox" disabled/>
+                                </td>
+                            </tr>
+                            <tr th:switch="${riskSelection1}">
+                                <td style="font-family: Calibri;padding:2px 4px;width:20px;text-align: center;">e
+                                </td>
+                                <td style="font-family: Calibri;padding:2px 4px;text-align: left;">
+                                    I am a conservative investor and I am completely risk-averse (score – 1)
+                                </td>
+                                <td style="font-family: Calibri;padding:2px 4px;text-align: center;" th:case="1">
+                                    <input style="width: 20px;height: 18px" type="checkbox" checked disabled/>
+                                </td>
+                                <td style="font-family: Calibri;padding:2px 4px;text-align: center;" th:case="*">
+                                    <input style="width: 20px;height: 18px" type="checkbox" disabled/>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td colspan="2"
+                                    style="font-family: Calibri;padding:2px 4px;font-size: 11pt;font-weight: 600;height: 22px;background: #eeeeee;text-align: center;">
+                                    Score
+                                </td>
+                                <td style="font-family: Calibri;padding:2px 4px;text-align: center;font-size: 11pt;font-weight: 600;border:none;background: #eeeeee"
+                                    th:text=${riskSelection1}>
+                                </td>
+                            </tr>
+                        </table>
+                    </th>
+                </tr>
+                <tr>
+                    <th
+                            style="font-family: Calibri;padding:4px;width:20px;vertical-align: top;text-align: center;">
+                        B
+                    </th>
+                    <th style="font-family: Calibri;padding:4px;text-align: left;">Which of the following mix of
+                        investments do
+                        you find most appealing for your portfolio?
+                        <table width="100%" border="1"
+                               style="margin-top: 10px;font-weight: normal;text-align: left;">
+                            <tr>
+                                <th style="font-family: Calibri;padding:2px 4px;width:90px;text-align: left;">
+                                </th>
+                                <th style="font-family: Calibri;padding:2px 4px;text-align: center;">
+                                    Expected higher risk & return (e.g. Equity market)
+                                </th>
+                                <th style="font-family: Calibri;padding:2px 4px;text-align: center;">
+                                    Expected lower risk & return
+                                    (e.g. PF, FD)
+                                </th>
+                                <th style="font-family: Calibri;padding:2px 4px;text-align: center;">
+                                    Score
+                                </th>
+                                <th style="font-family: Calibri;padding:2px 4px;text-align: left;width: 80px">
+                                </th>
+                            </tr>
+                            <tr th:switch="${riskSelection2}">
+                                <td style="font-family: Calibri;padding:2px 4px;text-align: left;">
+                                    (a) Portfolio 1
+                                </td>
+                                <td style="font-family: Calibri;padding:2px 4px;text-align: center;"> 100%</td>
+                                <td style="font-family: Calibri;padding:2px 4px;text-align: center;">0%</td>
+                                <td style="font-family: Calibri;padding:2px 4px;text-align: center;">5</td>
+
+                                <td style="font-family: Calibri;padding:2px 4px;text-align: center;" th:case="5">
+                                    <input style="width: 20px;height: 18px" type="checkbox" checked disabled/>
+                                </td>
+                                <td style="font-family: Calibri;padding:2px 4px;text-align: center;" th:case="*">
+                                    <input style="width: 20px;height: 18px" type="checkbox" disabled/>
+                                </td>
+                            </tr>
+                            <tr th:switch="${riskSelection2}">
+                                <td style="font-family: Calibri;padding:2px 4px;text-align: left;">
+                                    (b) Portfolio 2
+                                </td>
+                                <td style="font-family: Calibri;padding:2px 4px;text-align: center;">75%</td>
+                                <td style="font-family: Calibri;padding:2px 4px;text-align: center;">25%</td>
+                                <td style="font-family: Calibri;padding:2px 4px;text-align: center;">4</td>
+
+                                <td style="font-family: Calibri;padding:2px 4px;text-align: center;" th:case="4">
+                                    <input style="width: 20px;height: 18px" type="checkbox" checked disabled/>
+                                </td>
+                                <td style="font-family: Calibri;padding:2px 4px;text-align: center;" th:case="*">
+                                    <input style="width: 20px;height: 18px" type="checkbox" disabled/>
+                                </td>
+                            </tr>
+                            <tr th:switch="${riskSelection2}">
+                                <td style="font-family: Calibri;padding:2px 4px;text-align: left;">
+                                    (c) Portfolio 3
+                                </td>
+                                <td style="font-family: Calibri;padding:2px 4px;text-align: center;"> 50%</td>
+                                <td style="font-family: Calibri;padding:2px 4px;text-align: center;">50%</td>
+                                <td style="font-family: Calibri;padding:2px 4px;text-align: center;">3</td>
+
+                                <td style="font-family: Calibri;padding:2px 4px;text-align: center;" th:case="3">
+                                    <input style="width: 20px;height: 18px" type="checkbox" checked disabled/>
+                                </td>
+                                <td style="font-family: Calibri;padding:2px 4px;text-align: center;" th:case="*">
+                                    <input style="width: 20px;height: 18px" type="checkbox" disabled/>
+                                </td>
+                            </tr>
+                            <tr th:switch="${riskSelection2}">
+                                <td style="font-family: Calibri;padding:2px 4px;text-align: left;">
+                                    (d) Portfolio 4
+                                </td>
+                                <td style="font-family: Calibri;padding:2px 4px;text-align: center;">25%</td>
+                                <td style="font-family: Calibri;padding:2px 4px;text-align: center;">75%</td>
+                                <td style="font-family: Calibri;padding:2px 4px;text-align: center;">2</td>
+
+                                <td style="font-family: Calibri;padding:2px 4px;text-align: center;" th:case="2">
+                                    <input style="width: 20px;height: 18px" type="checkbox" checked disabled/>
+                                </td>
+                                <td style="font-family: Calibri;padding:2px 4px;text-align: center;" th:case="*">
+                                    <input style="width: 20px;height: 18px" type="checkbox" disabled/>
+                                </td>
+                            </tr>
+                            <tr th:switch="${riskSelection2}">
+                                <td style="font-family: Calibri;padding:2px 4px;text-align: left;">
+                                    (e) Portfolio 5
+                                </td>
+                                <td style="font-family: Calibri;padding:2px 4px;text-align: center;"> 0%</td>
+                                <td style="font-family: Calibri;padding:2px 4px;text-align: center;">100%</td>
+                                <td style="font-family: Calibri;padding:2px 4px;text-align: center;">1</td>
+
+                                <td style="font-family: Calibri;padding:2px 4px;text-align: center;" th:case="1">
+                                    <input style="width: 20px;height: 18px" type="checkbox" checked disabled/>
+                                </td>
+                                <td style="font-family: Calibri;padding:2px 4px;text-align: center;" th:case="*">
+                                    <input style="width: 20px;height: 18px" type="checkbox" disabled/>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td colspan="4"
+                                    style="font-family: Calibri;padding:2px 4px;font-size: 11pt;font-weight: 600;height: 22px;background: #eeeeee;text-align:center;">
+                                    Score
+                                </td>
+                                <td style="font-family: Calibri;padding:2px 4px;text-align: center;font-size: 11pt;font-weight: 600;border:none;background: #eeeeee"
+                                    th:text=${riskSelection2}>
+                                </td>
+                            </tr>
+                        </table>
+                    </th>
+                </tr>
+                <tr>
+                    <th
+                            style="font-family: Calibri;padding:4px;width:20px;vertical-align: top;text-align: center;">
+                        C
+                    </th>
+                    <th style="font-family: Calibri;padding:4px;text-align: left;">Investments can go up or down in
+                        value. By how much could the total value of your investments go down before you begin to feel
+                        uncomfortable? (Investments include stocks, mutual funds, property, etc.)
+                        <table width="100%" border="1" style="margin-top: 10px;font-weight: normal;">
+                            <tr th:switch="${riskSelection3}">
+                                <td style="font-family: Calibri;padding:2px 4px;width:20px;text-align: center;">a
+                                </td>
+                                <td style="font-family: Calibri;padding:2px 4px;text-align: left;">35% or more (score
+                                    -5)
+                                </td>
+                                <td style="font-family: Calibri;padding:2px 4px;text-align: center;width: 80px"
+                                    th:case="5">
+                                    <input style="width: 20px;height: 18px" type="checkbox" checked disabled/>
+                                </td>
+                                <td style="font-family: Calibri;padding:2px 4px;text-align: center;width: 80px"
+                                    th:case="*">
+                                    <input style="width: 20px;height: 18px" type="checkbox" disabled/>
+                                </td>
+                            </tr>
+                            <tr th:switch="${riskSelection3}">
+                                <td style="font-family: Calibri;padding:2px 4px;width:20px;text-align: center;">b
+                                </td>
+                                <td style="font-family: Calibri;padding:2px 4px;text-align: left;">30% (score -4)</td>
+                                <td style="font-family: Calibri;padding:2px 4px;text-align: center;width: 80px"
+                                    th:case="4">
+                                    <input style="width: 20px;height: 18px" type="checkbox" checked disabled/>
+                                </td>
+                                <td style="font-family: Calibri;padding:2px 4px;text-align: center;width: 80px"
+                                    th:case="*">
+                                    <input style="width: 20px;height: 18px" type="checkbox" disabled/>
+                                </td>
+                            </tr>
+                            <tr th:switch="${riskSelection3}">
+                                <td style="font-family: Calibri;padding:2px 4px;width:20px;text-align: center;">c
+                                </td>
+                                <td style="font-family: Calibri;padding:2px 4px;text-align: left;">20% (score -3)</td>
+                                <td style="font-family: Calibri;padding:2px 4px;text-align: center;width: 80px"
+                                    th:case="3">
+                                    <input style="width: 20px;height: 18px" type="checkbox" checked disabled/>
+                                </td>
+                                <td style="font-family: Calibri;padding:2px 4px;text-align: center;width: 80px"
+                                    th:case="*">
+                                    <input style="width: 20px;height: 18px" type="checkbox" disabled/>
+                                </td>
+                            </tr>
+                            <tr th:switch="${riskSelection3}">
+                                <td style="font-family: Calibri;padding:2px 4px;width:20px;text-align: center;">d
+                                </td>
+                                <td style="font-family: Calibri;padding:2px 4px;text-align: left;">10% (score -2)</td>
+                                <td style="font-family: Calibri;padding:2px 4px;text-align: center;width: 80px"
+                                    th:case="2">
+                                    <input style="width: 20px;height: 18px" type="checkbox" checked disabled/>
+                                </td>
+                                <td style="font-family: Calibri;padding:2px 4px;text-align: center;width: 80px"
+                                    th:case="*">
+                                    <input style="width: 20px;height: 18px" type="checkbox" disabled/>
+                                </td>
+                            </tr>
+                            <tr th:switch="${riskSelection3}">
+                                <td style="font-family: Calibri;padding:2px 4px;width:20px;text-align: center;">e
+                                </td>
+                                <td style="font-family: Calibri;padding:2px 4px;text-align: left;">Any fall would make
+                                    me uncomfortable (score -1)
+                                </td>
+                                <td style="font-family: Calibri;padding:2px 4px;text-align: center;width: 80px"
+                                    th:case="1">
+                                    <input style="width: 20px;height: 18px" type="checkbox" checked disabled/>
+                                </td>
+                                <td style="font-family: Calibri;padding:2px 4px;text-align: center;width: 80px"
+                                    th:case="*">
+                                    <input style="width: 20px;height: 18px" type="checkbox" disabled/>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td colspan="2"
+                                    style="font-family: Calibri;padding:2px 4px;font-size: 11pt;font-weight: 600;height: 22px;background: #eeeeee;text-align:center;">
+                                    Score
+                                </td>
+                                <td style="font-family: Calibri;padding:2px 4px;text-align: center;font-size: 11pt;font-weight: 600;border:none;background: #eeeeee"
+                                    th:text=${riskSelection3}>
+                                </td>
+                            </tr>
+                        </table>
+                    </th>
+                </tr>
+            </table>
+        </td>
+    </tr>
+    <tr>
+        <td height="12">
+            &nbsp;
+        </td>
+    </tr>
+    <tr>
+        <td colspan="2" style="padding: 0; font-weight: normal;text-align: left;font-size: 11pt;padding-bottom: 4px;">
+            <table width='100%'>
+                <tr>
+                    <td style="font-family: Calibri;padding:2px 4px;text-align: left;">
+                        Add up the scores against questions A, B & C to get the total score
+                    </td>
+                    <td
+                            style="font-family: Calibri;padding:2px 4px;text-align: left;font-size: 11pt;font-weight: 600;border: 1px solid #000;">
+                        Total score
+                        <span th:text=${totalRisk}></span> :
+                        <span th:text=${riskProfile}></span>
+                    </td>
+                </tr>
+            </table>
+        </td>
+    </tr>
+    <tr>
+        <td colspan="2" style="padding: 0 6px; font-weight: normal;text-align: left;font-size: 11pt;">
+            <table width='100%' border="1" cellpadding="10">
+                <tr>
+                    <td style="font-family: Calibri;padding:2px 10px;text-align: center;">Total
+                        score:
+                    </td>
+                    <td style="font-family: Calibri;padding:2px 10px;font-weight: bold;"
+                        th:style="${totalRisk} &gt; 2 AND ${totalRisk} &lt; 7 ? 'background-color: #adabab;border-width:1px;border-style: solid; border-color: #333;' : 'border-width:1px;border-style: solid; border-color: #333;'">
+                        3-6: Conservative
+                    </td>
+                    <td style="font-family: Calibri;padding:2px 10px;font-weight: bold;"
+                        th:style="${totalRisk} &gt; 6 AND ${totalRisk} &lt; 12 ? 'background-color: #adabab;border-width:1px;border-style: solid; border-color: #333;' : 'border-width:1px;border-style: solid; border-color: #333;'">
+                        7-11: Balanced
+                    </td>
+                    <td style="font-family: Calibri;padding:2px 10px;font-weight: bold;"
+                        th:style="${totalRisk} &gt; 11 AND ${totalRisk} &lt; 14 ? 'background-color: #adabab;border-width:1px;border-style: solid; border-color: #333;' : 'border-width:1px;border-style: solid; border-color: #333;'">
+                        12-13: Aggressive
+                    </td>
+                    <td style="font-family: Calibri;padding:2px 10px;font-weight: bold;"
+                        th:style="${totalRisk} &gt; 13 ? 'background-color: #adabab;border-width:1px;border-style: solid; border-color: #333;' : 'border-width:1px;border-style: solid; border-color: #333;'">
+                        14-15: Very aggressive
+                    </td>
+                </tr>
+            </table>
+        </td>
+    </tr>
+    <tr>
+        <td height="10">
+            &nbsp;
+        </td>
+    </tr>
+    <!-- <tr>
+        <td colspan="2" style="padding: 0; font-weight: normal;text-align: left;font-size: 11pt;">
+            <table width='100%' border="1">
+                <tr>
+                    <td colspan="2"
+                        style="font-family: Calibri;padding:2px 4px;font-size: 11pt;font-weight: 600;height: 22px;background: #eeeeee;text-align:center;">
+                        Total Score
+                    </td>
+                    <td
+                        style="font-family: Calibri;padding:2px 4px;text-align: center;font-size: 11pt;font-weight: 600;border:none;background: #eeeeee">
+                        <span th:text=${totalRisk}></span> :
+                        <span th:text=${riskProfile}></span>
+                    </td>
+                </tr>
+            </table>
+        </td>
+    </tr> -->
+    <tr>
+        <td height="12">
+            &nbsp;
+        </td>
+    </tr>
+    <tr th:if="${journeyType !='J3'}">
+        <td colspan="2" style="padding: 0; font-weight: normal;text-align: left;font-size: 11pt;">
+            <table width='100%' border="1">
+                <tr>
+                    <th
+                            style="font-family: Calibri;padding:4px;width:20px;vertical-align: top;text-align: center;">
+                        D
+                    </th>
+                    <th style="font-family: Calibri;padding:4px;text-align: left;">How best would you describe
+                        your saving habits
+                        over the years?
+                        <table width="100%" border="1"
+                               style="margin-top: 10px;font-weight: normal;text-align: left;">
+                            <tr th:switch="${riskSelection4}">
+                                <td style="font-family: Calibri;padding:2px 4px;width:20px;text-align: center;">a
+                                </td>
+                                <td style="font-family: Calibri;padding:2px 4px;text-align: left;"> After covering
+                                    living expenses, I am
+                                    able to save substantial amounts regularly.
+                                </td>
+                                <td style="font-family: Calibri;padding:2px 4px;text-align: center;" th:case="5">
+                                    <input style="width: 20px;height: 18px" type="checkbox" checked disabled/>
+                                </td>
+                                <td style="font-family: Calibri;padding:2px 4px;text-align: center;" th:case="*">
+                                    <input style="width: 20px;height: 18px" type="checkbox" disabled/>
+                                </td>
+                            </tr>
+                            <tr th:switch="${riskSelection4}">
+                                <td style="font-family: Calibri;padding:2px 4px;width:20px;text-align: center;">b
+                                </td>
+                                <td style="font-family: Calibri;padding:2px 4px;text-align: left;">After covering
+                                    living expenses, I am
+                                    able to save some amount regularly.
+                                </td>
+                                <td style="font-family: Calibri;padding:2px 4px;text-align: center;" th:case="4">
+                                    <input style="width: 20px;height: 18px" type="checkbox" checked disabled/>
+                                </td>
+                                <td style="font-family: Calibri;padding:2px 4px;text-align: center;" th:case="*">
+                                    <input style="width: 20px;height: 18px" type="checkbox" disabled/>
+                                </td>
+                            </tr>
+                            <tr th:switch="${riskSelection4}">
+                                <td style="font-family: Calibri;padding:2px 4px;width:20px;text-align: center;">c
+                                </td>
+                                <td style="font-family: Calibri;padding:2px 4px;text-align: left;">After covering
+                                    living expenses, I am
+                                    only able to save some amount on an ad hoc basis.
+                                </td>
+                                <td style="font-family: Calibri;padding:2px 4px;text-align: center;" th:case="3">
+                                    <input style="width: 20px;height: 18px" type="checkbox" checked disabled/>
+                                </td>
+                                <td style="font-family: Calibri;padding:2px 4px;text-align: center;" th:case="*">
+                                    <input style="width: 20px;height: 18px" type="checkbox" disabled/>
+                                </td>
+                            </tr>
+                            <tr th:switch="${riskSelection4}">
+                                <td style="font-family: Calibri;padding:2px 4px;width:20px;text-align: center;">d
+                                </td>
+                                <td style="font-family: Calibri;padding:2px 4px;text-align: left;">After covering
+                                    living expenses, I am
+                                    hardly able to save.
+                                </td>
+                                <td style="font-family: Calibri;padding:2px 4px;text-align: center;" th:case="2">
+                                    <input style="width: 20px;height: 18px" type="checkbox" checked disabled/>
+                                </td>
+                                <td style="font-family: Calibri;padding:2px 4px;text-align: center;" th:case="*">
+                                    <input style="width: 20px;height: 18px" type="checkbox" disabled/>
+                                </td>
+                            </tr>
+                            <tr th:switch="${riskSelection4}">
+                                <td style="font-family: Calibri;padding:2px 4px;width:20px;text-align: center;">e
+                                </td>
+                                <td style="font-family: Calibri;padding:2px 4px;text-align: left;">I am not able
+                                    to save at all.
+                                </td>
+                                <td style="font-family: Calibri;padding:2px 4px;text-align: center;" th:case="1">
+                                    <input style="width: 20px;height: 18px" type="checkbox" checked disabled/>
+                                </td>
+                                <td style="font-family: Calibri;padding:2px 4px;text-align: center;" th:case="*">
+                                    <input style="width: 20px;height: 18px" type="checkbox" disabled/>
+                                </td>
+                            </tr>
+                        </table>
+                    </th>
+                </tr>
+            </table>
+        </td>
+    </tr>
+    <!-- <tr th:if="${journeyType =='J3'}">
+        <td style="font-family: Calibri;padding:25px 10px 25px 40px;text-align: left;">
+            <input style="width: 20px;height: 18px" type="checkbox" checked disabled />
+            After covering living expenses, I am able to save substantial amount regularly.
+        </td>
+    </tr> -->
+    <tr th:if="${journeyType !='J3'}">
+        <td colspan="2" style="padding:10px 0 0; font-weight: normal;text-align: left;font-size: 11pt;">
+            <table width='100%' border="0">
+                <tr>
+                    <td style="font-family: Calibri;padding:2px 4px;font-size: 11pt;text-align: left;">If your
+                        response to question D
+                        is (c) or (d) or (e), we recommend you to review your decision to go for unit linked
+                        insurance plans.
+                    </td>
+                </tr>
+            </table>
+        </td>
+    </tr>
+    <tr>
+        <td height="12">
+            &nbsp;
+        </td>
+    </tr>
+    <td colspan="2" style="padding: 0; font-weight: normal;text-align: left;font-size: 11pt;">
+        <table width='100%' style="font-size: 11pt;margin-bottom: 11pt;">
+            <tr>
+                <td
+                        style="font-family: Calibri;padding:2px 4px;font-size: 11pt;font-weight: bold;text-align: center; ">
+                    Fund options and investment strategy (mandatory for all ULIPs)
+                </td>
+            </tr>
+        </table>
+        <table width='100%' border="1" style="font-size: 11pt;">
+            <tr>
+                <th style="font-family: Calibri;padding:2px 4px;text-align: center;width: 172px">Risk profile
+                    <span style="display: block;">(Circle customer risk profile)</span>
+                </th>
+                <th style="font-family: Calibri;padding:2px 4px;text-align: center;">Investment strategy / Funds
+                    chosen
+                </th>
+                <th style="font-family: Calibri;padding:2px 4px;text-align: center;width: 60px;">Selection</th>
+                <th style="font-family: Calibri;padding:2px 4px;text-align: center;width: 132px">Chosen allocation
+                    %
+                </th>
+            </tr>
+            <tr>
+                <td style="font-family: Calibri;padding:2px 4px;text-align: center;" rowspan="16">Very aggressive
+                </td>
+                <td style="font-family: Calibri;padding:2px 4px;text-align: center;">Systematic Transfer Plan</td>
+                <td style="font-family: Calibri;padding:2px 4px;text-align: center;">
+                    <input th:if="${stp != '' and stp != false}" style="width: 20px;height: 18px"
+                           type="checkbox" checked disabled="">
+                    <input th:if="${stp == '' or stp == false}" style="width: 20px;height: 18px" type="checkbox"
+                           disabled="">
+                </td>
+                <td style="font-family: Calibri;padding:2px 4px;text-align: center;">NA</td>
+            </tr>
+            <tr>
+                <td style="font-family: Calibri;padding:2px 4px;text-align: center;">Dynamic Fund Allocation</td>
+                <td style="font-family: Calibri;padding:2px 4px;text-align: center;">
+                    <input th:if="${dfa != '' and dfa != false}" style="width: 20px;height: 18px"
+                           type="checkbox" checked disabled="">
+                    <input th:if="${dfa == '' or dfa == false}" style="width: 20px;height: 18px" type="checkbox"
+                           disabled="">
+                </td>
+                <td style="font-family: Calibri;padding:2px 4px;text-align: center;">NA</td>
+            </tr>
+            <tr>
+                <td style="font-family: Calibri;padding:2px 4px;text-align: center;">Lifecycle Based Portfolio (Only for FWP, STAR ULIP & FWAP)</td>
+                <td style="font-family: Calibri;padding:2px 4px;text-align: center;">
+                    <input th:if="${lcs != '' and lcs != false}" style="width: 20px;height: 18px" type="checkbox" checked disabled="">
+                    <input th:if="${lcs == '' or lcs == false}" style="width: 20px;height: 18px" type="checkbox" disabled="">
+                </td>
+                <td style="font-family: Calibri;padding:2px 4px;text-align: center;">As per proposal form</td>
+            </tr>
+            <tr>
+                <td style="font-family: Calibri;padding:2px 4px;text-align: center;">Trigger Based Portfolio (Only for FWP, STAR ULIP & FWAP)</td>
+                <td style="font-family: Calibri;padding:2px 4px;text-align: center;">
+                    <input th:if="${tbs != '' and tbs != false}" style="width: 20px;height: 18px"
+                           type="checkbox" checked disabled="">
+                    <input th:if="${tbs == '' or tbs == false}" style="width: 20px;height: 18px" type="checkbox"
+                           disabled="">
+                </td>
+                <td style="font-family: Calibri;padding:2px 4px;text-align: center;">As per proposal form</td>
+            </tr>
+            <tr>
+                <td style="font-family: Calibri;padding:2px 4px;text-align: center;">High Growth Fund</td>
+                <td style="font-family: Calibri;padding:2px 4px;text-align: center;">
+                    <input th:if="${highGrowthFund != 0}" style="width: 20px;height: 18px" type="checkbox"
+                           checked disabled="">
+                    <input th:if="${highGrowthFund == 0}" style="width: 20px;height: 18px" type="checkbox"
+                           disabled="">
+                </td>
+                <td style="font-family: Calibri;padding:2px 4px;text-align: center;">
+                    <span th:text="${highGrowthFund}"></span>
+                </td>
+            <tr>
+                <td style="font-family: Calibri;padding:2px 4px;text-align: center;">Diversified Equity Fund (Only for FWP, FWAP, PWP, OSP, STAR ULIP & FTS)</td>
+                <td style="font-family: Calibri;padding:2px 4px;text-align: center;">
+                    <input th:if="${diversifiedEquityFund != 0}" style="width: 20px;height: 18px"
+                           type="checkbox" checked disabled="">
+                    <input th:if="${diversifiedEquityFund == 0}" style="width: 20px;height: 18px"
+                           type="checkbox" disabled="">
+                </td>
+                <td style="font-family: Calibri;padding:2px 4px;text-align: center;">
+                    <span th:text="${diversifiedEquityFund}"></span>
+                </td>
+            </tr>
+            <tr>
+                <td style="font-family: Calibri;padding:2px 4px;text-align: center;">Growth Super Fund</td>
+                <td style="font-family: Calibri;padding:2px 4px;text-align: center;">
+                    <input th:if="${growthSuperFund != 0}" style="width: 20px;height: 18px" type="checkbox"
+                           checked disabled="">
+                    <input th:if="${growthSuperFund == 0}" style="width: 20px;height: 18px" type="checkbox"
+                           disabled="">
+                </td>
+                <td style="font-family: Calibri;padding:2px 4px;text-align: center;">
+                    <span th:text="${growthSuperFund}"></span>
+                </td>
+            </tr>
+            <tr>
+                <td style="font-family: Calibri;padding:2px 4px;text-align: center;">Sustainable Equity Fund (Only for FWP, FWAP, PWP, OSP, STAR ULIP & FTS)</td>
+                <td style="font-family: Calibri;padding:2px 4px;text-align: center;">
+                    <input th:if="${sustainableEquityFund != 0}" style="width: 20px;height: 18px"
+                           type="checkbox" checked disabled="">
+                    <input th:if="${sustainableEquityFund == 0}" style="width: 20px;height: 18px"
+                           type="checkbox" disabled="">
+                </td>
+                <td style="font-family: Calibri;padding:2px 4px;text-align: center;">
+                    <span th:text="${sustainableEquityFund}"></span>
+                </td>
+            </tr>
+            <!-- <tr>
+<td style="font-family: Calibri;padding:2px 4px;text-align: center;">Pension Maximiser Option (Only for FYPP)</td>
+<td style="font-family: Calibri;padding:2px 4px;text-align: center;">
+<input th:if="${pensionMaximiserFund != 0}" style="width: 20px;height: 18px" type="checkbox" checked disabled="">
+<input th:if="${pensionMaximiserFund == 0}" style="width: 20px;height: 18px" type="checkbox" disabled="">
+</td>
+<td style="font-family: Calibri;padding:2px 4px;text-align: center;">
+<span th:text="${pensionMaximiserFund}"></span>
+</td>
+</tr>-->
+            <tr>
+                <td style="font-family: Calibri;padding:2px 4px;text-align: center;">Pure Growth Fund (Only for FWP, FWAP, PWP, OSP, STAR ULIP & FTS)</td>
+                <td style="font-family: Calibri;padding:2px 4px;text-align: center;">
+                    <input th:if="${pureGrowthFund != 0}" style="width: 20px;height: 18px" type="checkbox"
+                           checked disabled="">
+                    <input th:if="${pureGrowthFund == 0}" style="width: 20px;height: 18px" type="checkbox"
+                           disabled="">
+                </td>
+                <td style="font-family: Calibri;padding:2px 4px;text-align: center;">
+                    <span th:text="${pureGrowthFund}"></span>
+                </td>
+            </tr>
+            <tr>
+                <td style="font-family: Calibri;padding:2px 4px;text-align: center;">NIFTY Smallcap Quality Index
+                    Fund
+                </td>
+                <td style="font-family: Calibri;padding:2px 4px;text-align: center;">
+                    <input th:if="${niftySmallcapIndexFund != 0}" style="width: 20px;height: 18px"
+                           type="checkbox" checked disabled="">
+                    <input th:if="${niftySmallcapIndexFund == 0}" style="width: 20px;height: 18px"
+                           type="checkbox" disabled="">
+                </td>
+                <td style="font-family: Calibri;padding:2px 4px;text-align: center;">
+                    <span th:text="${niftySmallcapIndexFund}"></span>
+                </td>
+            </tr>
+            </tr>
+            <td style="font-family: Calibri;padding:2px 4px;text-align: center;">Midcap Momentum Index Fund</td>
+            <td style="font-family: Calibri;padding:2px 4px;text-align: center;">
+                <input th:if="${midcapMomentumIndexFund != 0}" style="width: 20px;height: 18px" type="checkbox"
+                       checked disabled="">
+                <input th:if="${midcapMomentumIndexFund == 0}" style="width: 20px;height: 18px" type="checkbox"
+                       disabled="">
+            </td>
+            <td style="font-family: Calibri;padding:2px 4px;text-align: center;">
+                <span th:text="${midcapMomentumIndexFund}"></span>
+            </td>
+            </tr>
+            <tr>
+                <td style="font-family: Calibri;padding:2px 4px;text-align: center;">Nifty Alpha 50 Fund</td>
+                <td style="font-family: Calibri;padding:2px 4px;text-align: center;">
+                    <input th:if="${niftyAlphaFund != 0}" style="width: 20px;height: 18px" type="checkbox"
+                           checked disabled="">
+                    <input th:if="${niftyAlphaFund == 0}" style="width: 20px;height: 18px" type="checkbox"
+                           disabled="">
+                </td>
+                <td style="font-family: Calibri;padding:2px 4px;text-align: center;">
+                    <span th:text="${niftyAlphaFund}"></span>
+                </td>
+            </tr>
+            <tr>
+                <td style="font-family: Calibri;padding:2px 4px;text-align: center;">Nifty 500 Momentum 50 Fund
+                </td>
+                <td style="font-family: Calibri;padding:2px 4px;text-align: center;">
+                    <input th:if="${niftyMomentumFund != 0}" style="width: 20px;height: 18px" type="checkbox"
+                           checked disabled="">
+                    <input th:if="${niftyMomentumFund == 0}" style="width: 20px;height: 18px" type="checkbox"
+                           disabled="">
+                </td>
+                <td style="font-family: Calibri;padding:2px 4px;text-align: center;">
+                    <span th:text="${niftyMomentumFund}"></span>
+                </td>
+            </tr>
+            <tr>
+                <td style="font-family: Calibri;padding:2px 4px;text-align: center;">NIFTY Momentum Quality 50
+                    Fund
+                </td>
+                <td style="font-family: Calibri;padding:2px 4px;text-align: center;">
+                    <input th:if="${niftyMomentumQualityFund != 0}" style="width: 20px;height: 18px"
+                           type="checkbox" checked disabled="">
+                    <input th:if="${niftyMomentumQualityFund == 0}" style="width: 20px;height: 18px"
+                           type="checkbox" disabled="">
+                </td>
+                <td style="font-family: Calibri;padding:2px 4px;text-align: center;">
+                    <span th:text="${niftyMomentumQualityFund}"></span>
+                </td>
+            </tr>
+            <tr>
+                <td style="font-family: Calibri;padding:2px 4px;text-align: center;">Sustainable Wealth 50 Index Fund (Only for OSP, FTS, FWAP & STAR ULIP)</td>
+                <td style="font-family: Calibri;padding:2px 4px;text-align: center;">
+                    <input th:if="${axisMaxLifeSustainableWealthFund != 0}" style="width: 20px;height: 18px"
+                           type="checkbox" checked disabled="">
+                    <input th:if="${axisMaxLifeSustainableWealthFund == 0}" style="width: 20px;height: 18px"
+                           type="checkbox" disabled="">
+                </td>
+                <td style="font-family: Calibri;padding:2px 4px;text-align: center;">
+                    <span th:text="${axisMaxLifeSustainableWealthFund}"></span>
+                </td>
+            </tr>
+            <tr>
+                <td style="font-family: Calibri;padding:2px 4px;text-align: center;">Smart Innovation Fund (nly for SPS, STAR ULIP, OSP
+                    & FWAP)</td>
+                <td style="font-family: Calibri;padding:2px 4px;text-align: center;">
+                    <input th:if="${smartInnovationFund != 0}" style="width: 20px;height: 18px" type="checkbox" checked disabled="">
+                    <input th:if="${smartInnovationFund == 0}" style="width: 20px;height: 18px" type="checkbox" disabled="">
+                </td>
+                <td style="font-family: Calibri;padding:2px 4px;text-align: center;">
+                    <span th:text="${smartInnovationFund}"></span>
+                </td>
+            </tr>
+
+            <tr>
+                <td colspan="4" style="background: #eee; height: 1px;padding: 0;">&nbsp;</td>
+            </tr>
+            <tr>
+                <td style="font-family: Calibri;padding:2px 4px;text-align: center;" rowspan="9">Aggressive</td>
+                <td style="font-family: Calibri;padding:2px 4px;text-align: center;">Systematic Transfer Plan</td>
+                <td style="font-family: Calibri;padding:2px 4px;text-align: center;">
+                    <input th:if="${stp != '' and stp != false}" style="width: 20px;height: 18px"
+                           type="checkbox" checked disabled="">
+                    <input th:if="${stp == '' or stp == false}" style="width: 20px;height: 18px" type="checkbox"
+                           disabled="">
+                </td>
+                <td style="font-family: Calibri;padding:2px 4px;text-align: center;">NA</td>
+            </tr>
+            <tr>
+                <td style="font-family: Calibri;padding:2px 4px;text-align: center;">Dynamic Fund Allocation</td>
+                <td style="font-family: Calibri;padding:2px 4px;text-align: center;">
+                    <input th:if="${dfa != '' and dfa != false}" style="width: 20px;height: 18px"
+                           type="checkbox" checked disabled="">
+                    <input th:if="${dfa == '' or dfa == false}" style="width: 20px;height: 18px" type="checkbox"
+                           disabled="">
+                </td>
+                <td style="font-family: Calibri;padding:2px 4px;text-align: center;">NA</td>
+            </tr>
+            <tr>
+                <td style="font-family: Calibri;padding:2px 4px;text-align: center;">Lifecycle Based Portfolio* (Only for FWP, STAR ULIP & FWAP)</td>
+                <td style="font-family: Calibri;padding:2px 4px;text-align: center;">
+                    <input th:if="${lcs != '' and lcs != false}" style="width: 20px;height: 18px"
+                           type="checkbox" checked disabled="">
+                    <input th:if="${lcs == '' or lcs == false}" style="width: 20px;height: 18px" type="checkbox"
+                           disabled="">
+                </td>
+                <td style="font-family: Calibri;padding:2px 4px;text-align: center;">NA</td>
+            </tr>
+            <tr>
+                <td style="font-family: Calibri;padding:2px 4px;text-align: center;">Trigger Based Portfolio* (Only for FWP, STAR ULIP & FWAP)</td>
+                <td style="font-family: Calibri;padding:2px 4px;text-align: center;">
+                    <input th:if="${tbs != '' and tbs != false}" style="width: 20px;height: 18px"
+                           type="checkbox" checked disabled="">
+                    <input th:if="${tbs == '' or tbs == false}" style="width: 20px;height: 18px" type="checkbox"
+                           disabled="">
+                </td>
+                <td style="font-family: Calibri;padding:2px 4px;text-align: center;">NA</td>
+            </tr>
+            <tr>
+                <td style="font-family: Calibri;padding:2px 4px;text-align: center;">Growth Super Fund</td>
+                <td style="font-family: Calibri;padding:2px 4px;text-align: center;">
+                    <input th:if="${growthSuperFund != 0}" style="width: 20px;height: 18px" type="checkbox"
+                           checked disabled="">
+                    <input th:if="${growthSuperFund == 0}" style="width: 20px;height: 18px" type="checkbox"
+                           disabled="">
+                </td>
+                <td style="font-family: Calibri;padding:2px 4px;text-align: center;">
+                    <span th:text="${growthSuperFund}"></span>
+                </td>
+            </tr>
+            <tr>
+                <td style="font-family: Calibri;padding:2px 4px;text-align: center;">Diversified Equity Fund (Only for FWP, FWAP, PWP, OSP, STAR ULIP & FTS)</td>
+                <td style="font-family: Calibri;padding:2px 4px;text-align: center;">
+                    <input th:if="${diversifiedEquityFund != 0}" style="width: 20px;height: 18px"
+                           type="checkbox" checked disabled="">
+                    <input th:if="${diversifiedEquityFund == 0}" style="width: 20px;height: 18px"
+                           type="checkbox" disabled="">
+                </td>
+                <td style="font-family: Calibri;padding:2px 4px;text-align: center;">
+                    <span th:text="${diversifiedEquityFund}"></span>
+                </td>
+            </tr>
+            <tr>
+                <td style="font-family: Calibri;padding:2px 4px;text-align: center;">Growth Fund</td>
+                <td style="font-family: Calibri;padding:2px 4px;text-align: center;">
+                    <input th:if="${growthFund != 0}" style="width: 20px;height: 18px" type="checkbox" checked
+                           disabled="">
+                    <input th:if="${growthFund == 0}" style="width: 20px;height: 18px" type="checkbox"
+                           disabled="">
+                </td>
+                <td style="font-family: Calibri;padding:2px 4px;text-align: center;">
+                    <span th:text="${growthFund}"></span>
+                </td>
+            </tr>
+            <tr>
+                <td style="font-family: Calibri;padding:2px 4px;text-align: center;">Sustainable Equity Fund (Only for FWP, FWAP, PWP, OSP, STAR ULIP & FTS)</td>
+                <td style="font-family: Calibri;padding:2px 4px;text-align: center;">
+                    <input th:if="${sustainableEquityFund != 0}" style="width: 20px;height: 18px"
+                           type="checkbox" checked disabled="">
+                    <input th:if="${sustainableEquityFund == 0}" style="width: 20px;height: 18px"
+                           type="checkbox" disabled="">
+                </td>
+                <td style="font-family: Calibri;padding:2px 4px;text-align: center;">
+                    <span th:text="${sustainableEquityFund}"></span>
+                </td>
+            </tr>
+            <!-- <tr>
+<td style="font-family: Calibri;padding:2px 4px;text-align: center;">Pension Maximiser Option (Only for FYPP)</td>
+<td style="font-family: Calibri;padding:2px 4px;text-align: center;">
+<input th:if="${pensionMaximiserFund != 0}" style="width: 20px;height: 18px" type="checkbox" checked disabled="">
+<input th:if="${pensionMaximiserFund == 0}" style="width: 20px;height: 18px" type="checkbox" disabled="">
+</td>
+<td style="font-family: Calibri;padding:2px 4px;text-align: center;">
+<span th:text="${pensionMaximiserFund}"></span>
+</td>
+</tr>-->
+            <tr>
+                <td style="font-family: Calibri;padding:2px 4px;text-align: center;">Pure Growth Fund (Only for FWP, FWAP, PWP, OSP, STAR ULIP & FTS)</td>
+                <td style="font-family: Calibri;padding:2px 4px;text-align: center;">
+                    <input th:if="${pureGrowthFund != 0}" style="width: 20px;height: 18px" type="checkbox"
+                           checked disabled="">
+                    <input th:if="${pureGrowthFund == 0}" style="width: 20px;height: 18px" type="checkbox"
+                           disabled="">
+                </td>
+                <td style="font-family: Calibri;padding:2px 4px;text-align: center;">
+                    <span th:text="${pureGrowthFund}"></span>
+                </td>
+            </tr>
+
+            <tr>
+                <td colspan="4" style="background: #eee; height: 1px;padding: 0;">&nbsp;</td>
+            </tr>
+            <tr>
+                <td style="font-family: Calibri;padding:2px 4px;text-align: center;" rowspan="5">Balanced</td>
+                <td style="font-family: Calibri;padding:2px 4px;text-align: center;">Growth Fund</td>
+                <td style="font-family: Calibri;padding:2px 4px;text-align: center;">
+                    <input th:if="${growthFund != 0}" style="width: 20px;height: 18px" type="checkbox" checked
+                           disabled="">
+                    <input th:if="${growthFund == 0}" style="width: 20px;height: 18px" type="checkbox"
+                           disabled="">
+                </td>
+                <td style="font-family: Calibri;padding:2px 4px;text-align: center;">
+                    <span th:text="${growthFund}"></span>
+                </td>
+            </tr>
+            <tr>
+                <td style="font-family: Calibri;padding:2px 4px;text-align: center;">Balanced Fund</td>
+                <td style="font-family: Calibri;padding:2px 4px;text-align: center;">
+                    <input th:if="${balancedFund != 0}" style="width: 20px;height: 18px" type="checkbox" checked
+                           disabled="">
+                    <input th:if="${balancedFund == 0}" style="width: 20px;height: 18px" type="checkbox"
+                           disabled="">
+                </td>
+                <td style="font-family: Calibri;padding:2px 4px;text-align: center;">
+                    <span th:text="${balancedFund}"></span>
+                </td>
+            </tr>
+            <tr>
+                <td style="font-family: Calibri;padding:2px 4px;text-align: center;">Conservative Fund (Only for SPS, FWP, FWAP, FTS, PWP & STAR ULIP)</td>
+                <td style="font-family: Calibri;padding:2px 4px;text-align: center;">
+                    <input th:if="${conservativeFund != 0}" style="width: 20px;height: 18px" type="checkbox"
+                           checked disabled="">
+                    <input th:if="${conservativeFund == 0}" style="width: 20px;height: 18px" type="checkbox"
+                           disabled="">
+                </td>
+                <td style="font-family: Calibri;padding:2px 4px;text-align: center;">
+                    <span th:text="${conservativeFund}"></span>
+                </td>
+            </tr>
+            <tr>
+                <td style="font-family: Calibri;padding:2px 4px;text-align: center;">Systematic Transfer Plan</td>
+                <td style="font-family: Calibri;padding:2px 4px;text-align: center;">
+                    <input th:if="${stp != '' and stp != false}" style="width: 20px;height: 18px"
+                           type="checkbox" checked disabled="">
+                    <input th:if="${stp == '' or stp == false}" style="width: 20px;height: 18px" type="checkbox"
+                           disabled="">
+                </td>
+                <td style="font-family: Calibri;padding:2px 4px;text-align: center;">NA</td>
+            </tr>
+            <tr>
+                <td style="font-family: Calibri;padding:2px 4px;text-align: center;">Dynamic Bond Fund (Only for FWP, FWAP, PWP, OSP, STAR ULIP & FTS)</td>
+                <td style="font-family: Calibri;padding:2px 4px;text-align: center;">
+                    <input th:if="${dynamicBondFund != 0}" style="width: 20px;height: 18px" type="checkbox"
+                           checked disabled="">
+                    <input th:if="${dynamicBondFund == 0}" style="width: 20px;height: 18px" type="checkbox"
+                           disabled="">
+                </td>
+                <td style="font-family: Calibri;padding:2px 4px;text-align: center;">
+                    <span th:text="${dynamicBondFund}"></span>
+                </td>
+            </tr>
+            <!-- <tr>
+<td style="font-family: Calibri;padding:2px 4px;text-align: center;">Pension Maximiser Option (Only for FYPP)</td>
+<td style="font-family: Calibri;padding:2px 4px;text-align: center;">
+<input th:if="${pensionMaximiserFund != 0}" style="width: 20px;height: 18px" type="checkbox" checked disabled="">
+<input th:if="${pensionMaximiserFund == 0}" style="width: 20px;height: 18px" type="checkbox" disabled="">
+</td>
+<td style="font-family: Calibri;padding:2px 4px;text-align: center;">
+<span th:text="${pensionMaximiserFund}"></span>
+</td>
+</tr>
+<tr>
+<td style="font-family: Calibri;padding:2px 4px;text-align: center;">Pension Preserver Option (Only for FYPP)</td>
+<td style="font-family: Calibri;padding:2px 4px;text-align: center;">
+<input th:if="${pensionPreserverFund != 0}" style="width: 20px;height: 18px" type="checkbox" checked disabled="">
+<input th:if="${pensionPreserverFund == 0}" style="width: 20px;height: 18px" type="checkbox" disabled="">
+</td>
+<td style="font-family: Calibri;padding:2px 4px;text-align: center;">
+<span th:text="${pensionPreserverFund}"></span>
+</td>
+</tr>-->
+            <tr>
+                <td colspan="4" style="background: #eee; height: 1px;padding: 0;">&nbsp;</td>
+            </tr>
+            <tr>
+                <td style="font-family: Calibri;padding:2px 4px;text-align: center;" rowspan="7">Conservative</td>
+                <td style="font-family: Calibri;padding:2px 4px;text-align: center;">Balanced Fund</td>
+                <td style="font-family: Calibri;padding:2px 4px;text-align: center;">
+                    <input th:if="${balancedFund != 0}" style="width: 20px;height: 18px" type="checkbox" checked
+                           disabled="">
+                    <input th:if="${balancedFund == 0}" style="width: 20px;height: 18px" type="checkbox"
+                           disabled="">
+                </td>
+                <td style="font-family: Calibri;padding:2px 4px;text-align: center;">
+                    <span th:text="${balancedFund}"></span>
+                </td>
+            </tr>
+            <tr>
+                <td style="font-family: Calibri;padding:2px 4px;text-align: center;">Conservative Fund (Only for SPS, FWP, FWAP, FTS, PWP & STAR ULIP)</td>
+                <td style="font-family: Calibri;padding:2px 4px;text-align: center;">
+                    <input th:if="${conservativeFund != 0}" style="width: 20px;height: 18px" type="checkbox"
+                           checked disabled="">
+                    <input th:if="${conservativeFund == 0}" style="width: 20px;height: 18px" type="checkbox"
+                           disabled="">
+                </td>
+                <td style="font-family: Calibri;padding:2px 4px;text-align: center;">
+                    <span th:text="${conservativeFund}"></span>
+                </td>
+            </tr>
+            <tr>
+                <td style="font-family: Calibri;padding:2px 4px;text-align: center;">Secure Fund</td>
+                <td style="font-family: Calibri;padding:2px 4px;text-align: center;">
+                    <input th:if="${secureFund != 0}" style="width: 20px;height: 18px" type="checkbox" checked
+                           disabled="">
+                    <input th:if="${secureFund == 0}" style="width: 20px;height: 18px" type="checkbox"
+                           disabled="">
+                </td>
+                <td style="font-family: Calibri;padding:2px 4px;text-align: center;">
+                    <span th:text="${secureFund}"></span>
+                </td>
+            </tr>
+            <tr>
+                <td style="font-family: Calibri;padding:2px 4px;text-align: center;">Money Market Fund II (Only for FWP, FWAP, PWP, OSP, STAR ULIP & FTS)</td>
+                <td style="font-family: Calibri;padding:2px 4px;text-align: center;">
+                    <input th:if="${moneyMarketFundII != 0}" style="width: 20px;height: 18px" type="checkbox"
+                           checked disabled="">
+                    <input th:if="${moneyMarketFundII == 0}" style="width: 20px;height: 18px" type="checkbox"
+                           disabled="">
+                </td>
+                <td style="font-family: Calibri;padding:2px 4px;text-align: center;">
+                    <span th:text="${moneyMarketFundII}"></span>
+                </td>
+            </tr>
+            <tr>
+                <td style="font-family: Calibri;padding:2px 4px;text-align: center;">Dynamic Bond Fund (Only for FWP, FWAP, PWP, OSP, STAR ULIP & FTS)</td>
+                <td style="font-family: Calibri;padding:2px 4px;text-align: center;">
+                    <input th:if="${dynamicBondFund != 0}" style="width: 20px;height: 18px" type="checkbox"
+                           checked disabled="">
+                    <input th:if="${dynamicBondFund == 0}" style="width: 20px;height: 18px" type="checkbox"
+                           disabled="">
+                </td>
+                <td style="font-family: Calibri;padding:2px 4px;text-align: center;">
+                    <span th:text="${dynamicBondFund}"></span>
+                </td>
+            </tr>
+            <!-- <tr>
+<td style="font-family: Calibri;padding:2px 4px;text-align: center;">Pension Maximiser Option (Only for FYPP)</td>
+<td style="font-family: Calibri;padding:2px 4px;text-align: center;">
+<input th:if="${pensionMaximiserFund != 0}" style="width: 20px;height: 18px" type="checkbox" checked disabled="">
+<input th:if="${pensionMaximiserFund == 0}" style="width: 20px;height: 18px" type="checkbox" disabled="">
+</td>
+<td style="font-family: Calibri;padding:2px 4px;text-align: center;">
+<span th:text="${pensionMaximiserFund}"></span>
+</td>
+</tr>
+<tr>
+<td style="font-family: Calibri;padding:2px 4px;text-align: center;">Pension Preserver Option (Only for FYPP)</td>
+<td style="font-family: Calibri;padding:2px 4px;text-align: center;">
+<input th:if="${pensionPreserverFund != 0}" style="width: 20px;height: 18px" type="checkbox" checked disabled="">
+<input th:if="${pensionPreserverFund == 0}" style="width: 20px;height: 18px" type="checkbox" disabled="">
+</td>
+<td style="font-family: Calibri;padding:2px 4px;text-align: center;">
+<span th:text="${pensionPreserverFund}"></span>
+</td>
+</tr>-->
+        </table>
+    </td>
+    </tr>
+    <tr>
+        <td height="12">
+            &nbsp;
+        </td>
+    </tr>
+    <tr>
+        <td colspan="2" style="padding: 0; font-weight: normal;text-align: left;font-size: 11pt;">
+            <table width='100%' border="0">
+                <tr>
+                    <td
+                            style="font-family: Calibri;padding:2px 4px;font-size: 11pt;font-weight: bold;text-align: left; font-style: italic;">
+                        *Please get in touch with your sales representative for the fund options available under
+                        Trigger Portfolio Strategy and Lifecycle Portfolio Strategy.
+                    </td>
+                </tr>
+                <tr>
+                    <td
+                            style="font-family: Calibri;padding:2px 4px;font-size: 11pt;font-weight: bold;text-align: left;font-style: italic; ">
+                        Following are the descriptions of the investment strategies.
+                    </td>
+                </tr>
+                <tr>
+                    <td
+                            style="font-family: Calibri;padding:6px 4px 2px;font-size: 11pt;font-weight: bold;text-align:left; ">
+                        Dynamic Fund Allocation
+                    </td>
+                </tr>
+                <tr>
+                    <td style="font-family: Calibri;padding:2px 4px;font-size: 11pt;text-align: left; ">
+                        This is a standardized & systematic approach of maintaining debt-equity ratio throughout
+                        the policy term. It strikes right balance between risk & return with respect to years
+                        remaining to maturity in your policy and a hassle free investment (Allocation, Switches,
+                        Redirection are taken care of automatically). It also hedges against capital erosion in
+                        later years & is ideal for less savvy investors.
+                    </td>
+                </tr>
+                <tr>
+                    <td
+                            style="font-family: Calibri;padding:6px 4px 2px;font-size: 11pt;font-weight: bold;text-align: left; ">
+                        Systematic Transfer Plan
+                    </td>
+                </tr>
+                <tr>
+                    <td style="font-family: Calibri;padding:2px 4px;font-size: 11pt;text-align: left; ">
+                        Systematic Transfer Plan helps you replicate a rupee cost averaging method on your
+                        Annualized Premium. Where you have chosen the “Systematic Transfer Plan” option, the
+                        Annualized/Single Premium received net of Premium Allocation Charge shall be allocated
+                        first to the Secure Plus Fund to purchase Units. Immediately thereafter and on each
+                        subsequent monthly anniversary, Fund Value of [1/(13-month number in the policy year)]
+                        of the Units available at the beginning of the month shall be Switched to Growth Super
+                        Fund automatically by cancelling Units in the Secure Plus Fund till availability of
+                        Units in the Secure Plus Fund, and purchasing Units in the Growth Super Fund.
+                    </td>
+                </tr>
+                <tr>
+                    <td
+                            style="font-family: Calibri;padding:2px 4px;font-size: 11pt;font-weight: bold;text-align: left;padding:6px 4px 2px; ">
+                        Lifecycle Portfolio
+                    </td>
+                </tr>
+                <tr>
+                    <td style="font-family: Calibri;padding:2px 4px;font-size: 11pt;text-align: left; ">
+                        This is a standardized & systematic approach of maintaining debt-equity ratio throughout
+                        the policy term. It rebalances the portfolio with the changing age of policy holder on
+                        annual basis. It offers hassle free investment (Allocation, Switches, Redirection are
+                        taken care of automatically). It also has an inbuilt fund conservation while approaching
+                        maturity to safeguard your invested and grown money.
+                    </td>
+                </tr>
+                <tr>
+                    <td
+                            style="font-family: Calibri;padding:2px 4px;font-size: 11pt;font-weight: bold;text-align: left;padding:6px 4px 2px; ">
+                        Trigger Based Portfolio
+                    </td>
+                </tr>
+                <tr>
+                    <td style="font-family: Calibri;padding:2px 4px;font-size: 11pt;text-align: left; ">
+                        This strategy works on the principle of securing your gains upon a market rise by
+                        rebalancing your portfolio upon a trigger chosen by you. On occurrence of the trigger
+                        event, any Equity fund which is in excess of three times the Debt fund is considered as
+                        gains and is switched to the Debt fund. This ensures that your gains are capitalized,
+                        while maintaining the asset allocation between Equity:Debt in the proportion of 75:25.
+                    </td>
+                </tr>
+            </table>
+        </td>
+    </tr>
+    <tr>
+        <td colspan="2" style="padding: 0; font-weight: normal;text-align: left;font-size: 11pt;">
+            <table width='100%' border="0">
+                <tr>
+                    <td
+                            style="font-family: Calibri;padding:2px 4px;font-size: 11pt;font-weight: bold;text-align: left;padding:6px 4px 2px; ">
+                        Customer declaration(If fund opted is different from risk profile)
+                    </td>
+                </tr>
+                <tr>
+                    <td style="font-family: Calibri;padding:2px 4px;font-size: 11pt;text-align: left; ">
+                        I have gone through the risk profiler and understood the risks associated with
+                        investments in the above funds. Basis my financial goals and needs, I have made a
+                        conscious decision to allocate premium as given above.
+                    </td>
+                </tr>
+            </table>
+        </td>
+    </tr>
+    <tr>
+        <td height="12">
+            &nbsp;
+        </td>
+    </tr>
+    <tr>
+        <td colspan="2" style="padding: 0; font-weight: normal;text-align: left;font-size: 11pt;">
+            <table width='100%' border="0">
+                <tr>
+                    <td
+                            style="font-family: Calibri;padding:2px 4px;font-size: 11pt;font-weight: bold;text-align: center; ">
+                        <u> Mandatory field for all customers</u></td>
+                </tr>
+            </table>
+        </td>
+    </tr>
+    <tr>
+        <td height="12">
+            &nbsp;
+        </td>
+    </tr>
+    <tr>
+        <td colspan="2" style="padding: 0; font-weight: normal;text-align: left;font-size: 11pt;">
+            <table width='100%' border="1">
+                <tr>
+                    <td
+                            style="font-family: Calibri;padding:2px 4px;font-size: 11pt;font-weight: normal;text-align: left;width: 20%;">
+                        Customer Name
+                    </td>
+                    <td colspan="3"
+                        style="font-family: Calibri;padding:2px 4px;font-size: 11pt;font-weight: normal;text-align: left; text-transform: uppercase"
+                        th:text=${name}>&nbsp;
+                    </td>
+                </tr>
+                <tr>
+                    <td
+                            style="font-family: Calibri;padding:2px 4px;font-size: 11pt;font-weight: normal;text-align: left;width: 22%;">
+                        Proposal no(s)<p style="font-size: 11pt;margin: 0">(If proposal is applied)</p>
+                    </td>
+                    <td style="font-family: Calibri;padding:2px 4px;font-size: 11pt;font-weight: normal;text-align: left; "
+                        th:text=${policyNumber}>&nbsp;
+                    </td>
+                    <td
+                            style="font-family: Calibri;padding:2px 4px;font-size: 11pt;font-weight: normal;text-align: left;width: 22%;">
+                        Date
+                    </td>
+                    <td
+                            style="font-family: Calibri;padding:2px 4px;font-size: 11pt;font-weight: normal;text-align: left; ">
+                        &nbsp;<span th:text="${date}"></span></td>
+                </tr>
+                <tr>
+                    <td
+                            style="font-family: Calibri;padding:2px 4px;font-size: 11pt;font-weight: normal;text-align: left;width: 22%;">
+                        Customer Signature
+                        <p style="font-size: 11pt;margin: 0">(OTP confirmation date / Thumb impression /
+                            Electronic signature of prospect/ policyholder )</p>
+                    </td>
+                    <td style="font-family: Calibri;padding:2px 4px;font-size: 11pt;font-weight: normal;text-align: left; "
+                        th:text=${otpConfirmationDate}>&nbsp;
+                    </td>
+                    <td
+                            style="font-family: Calibri;padding:2px 4px;font-size: 11pt;font-weight: normal;text-align: left;width: 22%;">
+                        Seller Signature
+                        <p style="font-size: 11pt;margin: 0">(This system generated investor risk profiler shall
+                            be treated as signed by me)
+                    </td>
+                    <td style="font-family: Calibri;padding:2px 4px;font-size: 11pt;font-weight: normal;text-align: left; "
+                        th:text="${sellerSignature}">&nbsp;
+                    </td>
+                </tr>
+            </table>
+        </td>
+    </tr>
+    <tr>
+        <td height="30">
+            &nbsp;
+        </td>
+    </tr>
+    <!-- <tr>
+        <td>
+            <table width="100%" cellpadding="4" cellspacing="0" border="0" style="border-collapse: collapse;">
+                <tbody>
+                    <tr>
+
+                        <td align="center" valign="top" style="font-weight: bold;padding-top: 12px;"></td>
+                        <td align="right" width="300" style="font-size: 11pt; font-family: Calibri;">
+                            <p>mPRO/IRP/Ver 18.0/<span th:text="${year}"></span></p>
+                            <p><strong>Date:</strong><span th:text="${date}"></span></p>
+                            <p><strong>Time:</strong><span th:text="${time}"></span></p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </td>
+    </tr> -->
+    <tr>
+        <td height="5">
+            &nbsp;
+        </td>
+    </tr>
+    </tbody>
+</table>
+</body>
+
+</html>

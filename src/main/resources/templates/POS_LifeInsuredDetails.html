@@ -1,0 +1,87 @@
+<td>
+    <table cellspacing="0" cellpadding="0" width="100%" style="border-collapse: collapse;border-color: #ccc;border-style:solid;border-width:1px;">
+        <tbody>
+        <tr>
+            <th colspan="6" style="background-color: #003770;border-color: #ccc;border-style:solid;border-width:1px; color: #fff;font-size: 9px; font-family: arial; padding: 2px 2px" align="left">C. Information of Life to be Insured</th>
+        </tr>
+        <tr>
+            <td style="padding: 5px 5px 5px 15px;border-color: #888;border-style:solid;border-width:1px; font-weight: bold;font-size:9px;" width="80%"></strong></td>
+            <td style="padding: 2px 4px;text-align: center;border-color: #ccc;border-style:solid;border-width:1px;font-size: 10px;" width="10%"><strong>Proposer</strong>
+            </td>
+            <td style="padding: 2px 4px;text-align: center;border-color: #ccc;border-style:solid;border-width:1px;font-size: 10px;" width="10%">
+                <strong>Life to be Insured</strong>
+            </td>
+        </tr>
+
+        <div th:if="${isSJB == false}">
+            <tr>
+                <td width="80%" style="font-weight: bold; padding: 5px 5px 5px 15px;border-color: #ccc;border-style:solid;border-width:1px; font-size: 9px; font-family: arial;">1. Has any proposal/reinstatement for life or health Insurance ever been refused, modified, postponed or offered with extra premium (Reason, Month, Year and Name of the Insurance Company) ?Give details below</td>
+                <td width="10%" style="padding: 2px 2px; font-size: 9px; font-family: arial;text-transform:uppercase;text-align: center;border-color: #ccc;border-style:solid;border-width:1px;" th:text="${((schemeAorB == 'schemeA' or iibFormAndPartyType == 'dependent') ? (jointLifeIibDataMatches != null and !#lists.isEmpty(jointLifeIibDataMatches)) : (iibDataMatches != null and !#lists.isEmpty(iibDataMatches))) and iibFormAndPartyType != '' ? 'YES' : ciPolicy}">
+                </td>
+                <td width="10%" style="padding: 2px 2px; font-size: 9px; font-family: arial;text-transform:uppercase;text-align: center;border-color: #ccc;border-style:solid;border-width:1px;" th:text="${((schemeAorB == 'schemeA' or iibFormAndPartyType == 'dependent') ? (iibDataMatches != null and !#lists.isEmpty(iibDataMatches)) : (jointLifeIibDataMatches != null and !#lists.isEmpty(jointLifeIibDataMatches))) and iibFormAndPartyType != '' ? 'YES' : insurerciPolicy}">
+                </td>
+            </tr>
+            <div>
+                <tr th:if="${isLIExist == 'YES' and (iibDataMatches == null or #lists.isEmpty(iibDataMatches) or jointLifeIibDataMatches == null or #lists.isEmpty(jointLifeIibDataMatches) or iibFormAndPartyType == '')}">
+                    <td colspan="2" style="padding: 5px 5px 5px 15px;border-color: #ccc;border-style:solid;border-width:1px; font-size: 9px; font-family: arial;">
+										<span>
+											<strong>Issued or Pending:</strong>
+										</span>
+                        <span style="padding-left: 10px;text-transform:uppercase;"th:text=${issued}></span>
+                    </td>
+                </tr>
+                <tr th:if="${isLIExist == 'YES' and (iibDataMatches == null or #lists.isEmpty(iibDataMatches) or jointLifeIibDataMatches == null or #lists.isEmpty(jointLifeIibDataMatches) or iibFormAndPartyType == '')}">
+                    <td colspan="2" style="padding: 5px 5px 5px 15px;border-color: #ccc;border-style:solid;border-width:1px; font-size: 9px; font-family: arial;">
+										<span>
+											<strong>Offered at modified terms, rejected or postponed:</strong>
+										</span>
+                        <span style="padding-left: 10px;text-transform:uppercase;"th:text=${rejected}></span>
+                    </td>
+                </tr>
+                <tr th:if="${isLIExist == 'YES' and (iibDataMatches == null or #lists.isEmpty(iibDataMatches) or jointLifeIibDataMatches == null or #lists.isEmpty(jointLifeIibDataMatches) or iibFormAndPartyType == '')}">
+                    <td colspan="2" style="padding: 5px 5px 5px 15px;border-color: #ccc;border-style:solid;border-width:1px; font-size: 9px; font-family: arial;">
+										<span>
+											<strong>Total Sum Assured for Life Insurance:</strong>
+										</span>
+                        <span style="padding-left: 10px;text-transform:uppercase;"th:text=${totalSumAssured}></span>
+                    </td>
+                </tr>
+                <tr th:if="${isLIExist == 'YES' and (iibDataMatches == null or #lists.isEmpty(iibDataMatches) or jointLifeIibDataMatches == null or #lists.isEmpty(jointLifeIibDataMatches) or iibFormAndPartyType == '')}">
+                    <td colspan="2" style="padding: 5px 5px 5px 15px;border-color: #ccc;border-style:solid;border-width:1px; font-size: 9px; font-family: arial;">
+										<span>
+											<strong>Total Sum Assured for Critical illness:</strong>
+										</span>
+                        <span style="padding-left: 10px;text-transform:uppercase;"th:text=${totalSumAssuredCI}></span>
+                    </td>
+                </tr>
+                <tr th:replace="fragments/iibResultTable :: iibResultTable(${iibDataMatches}, ${iibFormAndPartyType}, '1')"></tr>
+                <tr th:replace="fragments/iibResultTable :: iibResultTable(${jointLifeIibDataMatches}, ${iibFormAndPartyType}, '2')"></tr>
+            </div>
+        </div>
+
+
+        <tr>
+            <td width="80%" style="font-weight: bold; padding: 5px 5px 5px 15px;border-color: #ccc;border-style:solid;border-width:1px; font-size: 9px; font-family: arial;">2. Do you participate or do you intend to participate in any hazardous activities such as Parachuting/Hang Gliding/Scuba Diving/Mountaineering/Car Racing/Flying(other than as passenger)? Give details below</td>
+            <td width="10%" style="padding: 2px 2px; font-size: 9px; font-family: arial;text-transform:uppercase;text-align: center;border-color: #ccc;border-style:solid;border-width:1px;" th:text = ${hazardousActivity}></td>
+            <td width="10%" style="padding: 2px 2px; font-size: 9px; font-family: arial;text-transform:uppercase;text-align: center;border-color: #ccc;border-style:solid;border-width:1px;" th:text = ${insuredhazardousActivity}></td>
+        </tr>
+
+
+        <tr>
+            <!--								FUL2-147869 Incorrect question reflected in PF-->
+            <td width="80%" style="font-weight: bold; padding: 5px 5px 5px 15px;border-color: #ccc;border-style:solid;border-width:1px; font-size: 9px; font-family: arial;">3. In the next 12 months do you intend to travel or reside abroad other than on holiday of more than four weeks? If yes,give full details including countries, cities, purpose and duration of stay. Give details below</td>
+            <td width="10%" style="padding: 2px 2px; font-size: 9px; font-family: arial;text-transform:uppercase;text-align: center;border-color: #ccc;border-style:solid;border-width:1px;" th:text = ${travelAbroad}></td>
+            <td width="10%" style="padding: 2px 2px; font-size: 9px; font-family: arial;text-transform:uppercase;text-align: center;border-color: #ccc;border-style:solid;border-width:1px;" th:text = ${insuredtravelAbroad}></td>
+        </tr>
+        <tr th:if="${travelAbroad == 'YES' || insuredtravelAbroad == 'YES'}">
+            <td style="padding: 5px;border-color: #ccc;border-style:solid;border-width:1px; font-size: 9px; font-family: arial;">
+											<span>
+												<strong>2. i) Visited Countries</strong>
+											</span>
+            </td>
+            <td style="padding: 5px;text-align: center;text-transform:uppercase;"th:text=${visitedCountries}></td>
+            <td style="padding: 5px;text-align: center;text-transform:uppercase;"th:text=${insuredvisitedCountries}></td>
+        </tr>
+        </tbody>
+    </table>
+</td>

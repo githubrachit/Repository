@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.w3.org/1999/xhtml">
+
+<head>
+    <title>EBCC</title>
+    <style type="text/css">
+    table,
+    td,
+    tr {
+        border-collapse: collapse;
+    }
+
+    .page-break-after {
+        page-break-after: always;
+        page-break-inside: avoid;
+        clear: both;
+    }
+
+    .page-break-before {
+        page-break-before: always;
+        page-break-inside: avoid;
+        clear: both;
+    }
+
+    @media print {
+        * {
+            font-size: 6pt !important;
+        }
+
+        .printtext {
+            font-size: 11pt !important;
+        }
+    }
+    </style>
+</head>
+
+<body style="margin: 0 auto;padding: 0;">
+    <table border="0" align="center" cellpadding="0" cellspacing="0" style="border-collapse: collapse;width: 98%;margin-top: 10px">
+        <tbody>
+            <!-- Main Wrapper Start Here-->
+            <tr>
+                <td align='left'><img src='classpath:static/logo_ax_max.png' width='100'></td>
+                <td>&nbsp;</td>
+            </tr>
+            <tr>
+                <td height="32"> &nbsp; </td>
+            </tr>
+            <tr>
+                <td style="padding: 5px 10px; font-size: 20px; font-family: arial;
+		text-align: center;width: auto;color: #013873;font-weight: 600;">Third Party Bank Account Verification Document</td>
+            </tr>
+            <tr>
+                <td height="10"> &nbsp; </td>
+            </tr>
+            <tr>
+                <td style="padding: 5px 10px; font-size: 16px; font-family: arial;">Document Generated on :
+                    <span style="font-weight: 600;"><i th:text="${timeStamp}">&nbsp;</i></span>
+            </tr>
+            <tr>
+                <td height="20"> &nbsp; </td>
+            </tr>
+            <tr>
+                <td style="padding: 5px 10px; font-size: 16px; font-family: arial;">
+                    Following Customer’s account details have been verified by Karza through PennyDrop Service - </td>
+            </tr>
+            <tr>
+                <td style="padding: 5px 10px; font-size: 14px; font-family: arial; width: 100%;">
+                    <table border="1" width="100%" cellspacing="0" style="border-collapse: collapse;">
+                        <tbody>
+                            <tr>
+                                <td style="padding: 5px 10px; font-size: 14px; font-family: arial;
+					font-weight: bold;background:#efefef;">
+                                    Policy Number </td>
+                                <td style="padding: 5px 10px; font-size: 14px; font-family: arial;text-align: left;">
+                                    <i th:text="${policyNumber}">&nbsp;</i> </td>
+                            </tr>
+                            <tr>
+                                <td style="padding: 5px 10px; font-size: 14px; font-family: arial;
+					font-weight: bold;background:#efefef;  ">
+                                    Proposer Name </td>
+                                <td style="padding: 5px 10px; font-size: 14px; font-family: arial;text-align: left;">
+                                    <i th:text="${proposerFullName}">&nbsp;</i> </td>
+                            </tr>
+                            <tr>
+                                <td style="padding: 5px 10px; font-size: 14px; font-family: arial;
+					font-weight: bold;background:#efefef;  ">
+                                    Bank Account Number </td>
+                                <td style="padding: 5px 10px; font-size: 14px; font-family: arial;text-align: left;">
+                                    <i th:text="${bankAccountNumber}">&nbsp;</i> </td>
+                            </tr>
+                            <tr>
+                                <td style="padding: 5px 10px; font-size: 14px; font-family: arial;
+					font-weight: bold;background:#efefef;  ">
+                                    MICR Code </td>
+                                <td style="padding: 5px 10px; font-size: 14px; font-family: arial;text-align: left;">
+                                    <i th:text="${micrCode}">&nbsp;</i> </td>
+                            </tr>
+                            <tr>
+                                <td style="padding: 5px 10px; font-size: 14px; font-family: arial;
+					font-weight: bold;background:#efefef;  ">
+                                    IFSC Code </td>
+                                <td style="padding: 5px 10px; font-size: 14px; font-family: arial;text-align: left;">
+                                    <i th:text="${ifscCode}">&nbsp;</i> </td>
+                            </tr>
+                            <tr>
+                                <td style="padding: 5px 10px; font-size: 14px; font-family: arial;
+					font-weight: bold;background:#efefef;  ">
+                                    Branch Name </td>
+                                <td style="padding: 5px 10px; font-size: 14px; font-family: arial;text-align: left;">
+                                    <i th:text="${branchName}">&nbsp;</i> </td>
+                            </tr>
+                            <tr>
+                                <td style="padding: 5px 10px; font-size: 14px; font-family: arial;
+					font-weight: bold;background:#efefef;  ">
+                                    Bank Account Verified </td>
+                                <td style="padding: 5px 10px; font-size: 14px; font-family: arial;text-align: left;">
+                                    <i> Yes </i> </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </td>
+            </tr>
+            <tr>
+                <td height="10"> &nbsp; </td>
+            </tr>
+            <tr>
+                <td style="padding: 5px 10px; font-size: 14px; font-family: arial;">
+                    This is a system generated document basis account verification through Karza Penny Drop service.
+                </td>
+            </tr>
+            <tr>
+                <td height="30"> &nbsp; </td>
+            </tr>
+            <tr>
+                <td>
+                    <img src="classpath:static/footer.png" />
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+
+</html>

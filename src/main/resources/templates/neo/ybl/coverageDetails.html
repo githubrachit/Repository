@@ -1,0 +1,288 @@
+<td>
+	<table border="1" cellspacing="0" cellpadding="0" width="100%" style="border-collapse: collapse;">
+		<tbody>
+			<tr>
+				<td colspan="6" style="background-color: #FFFFFF; color: #000000; font-weight: bold; font-family: arial; padding: 2px 4px;">B. COVERAGE INFORMATION - Type of Coverage</td>
+			</tr>
+			<tr>
+				<td colspan="6" style="padding: 2px 4px;">
+					<table border="1" cellspacing="0" cellpadding="0" width="100%" style="border-collapse: collapse;">
+						<tbody>
+							<tr></tr>
+							<tr>
+								<td width="20%" style="text-align: center; font-weight: bold; padding: 2px 4px; font-size: 11px; font-family: arial;">1. Base Plan</td>
+								<td width="25%" style="text-align: center; font-weight: bold; padding: 2px 4px; font-size: 11px; font-family: arial;">Coverage Till age</td>
+								<td width="15%" style="text-align: center; font-weight: bold; font-size: 11px; font-family: arial; padding: 2px 4px; ">Amount</td>
+								<td width="25%" style="text-align: center; font-weight: bold; font-size: 11px; font-family: arial; padding: 2px 4px; ">Premium Payment Term</td>
+								<td width="15%" style="text-align: center; font-weight: bold; font-size: 11px; font-family: arial; padding: 2px 4px; ">Modal Premium (Rs.) <br><span style="font-weight: normal;">(to be filled by agent)</span></td>
+							</tr>
+							<tr>
+								<td width="20%" style="text-align: center; padding: 2px 4px; font-size: 11px; font-family: arial;"th:text=${basePlan}></td>
+								<td width="25%" style="text-align: center; padding: 2px 4px; font-size: 11px; font-family: arial;"th:text=${coverageTillAge}></td>
+								<td width="15%" style="text-align: center; padding: 2px 4px; font-size: 11px; font-family: arial;"th:text=${sumAssured}></td>
+								<td width="25%" style="text-align: center; padding: 2px 4px; font-size: 11px; font-family: arial;"th:text=${premimumPayingTerm}></td>
+								<td width="15%" style="text-align: center; padding: 2px 4px; font-size: 11px; font-family: arial;"></td>
+							</tr>
+						</tbody>
+					</table>
+				</td>
+			</tr>
+			<tr>
+				<td colspan="6" style="padding: 2px 4px;">
+					<table border="1" cellspacing="0" cellpadding="0" width="100%" style="border-collapse: collapse;">
+						<tbody>
+						<tr></tr>
+						<tr>
+							<td width="34%" style="text-align: center; font-weight: bold; padding: 2px 4px; font-size: 11px; font-family: arial;">Modal Premium without GST* and Cess</td>
+							<td width="33%" style="text-align: center; font-weight: bold; padding: 2px 4px; font-size: 11px; font-family: arial;">GST* and applicable Cess</td>
+							<td width="33%" style="text-align: center; font-weight: bold; font-size: 11px; font-family: arial; padding: 2px 4px; ">Total Premium paid</td>
+						</tr>
+						<tr>
+							<td width="34%" style="text-align: center; padding: 2px 4px; font-size: 11px; font-family: arial;"th:text=${modalPremium}></td>
+							<td width="33%" style="text-align: center; padding: 2px 4px; font-size: 11px; font-family: arial;"th:text=${GSTCess}></td>
+							<td width="33%" style="text-align: center; padding: 2px 4px; font-size: 11px; font-family: arial;"th:text=${totalPremium}></td>
+						</tr>
+						</tbody>
+					</table>
+				</td>
+			</tr>
+			<tr>
+				<td colspan="6" style="font-size: 10px; font-family: arial; padding: 2px 4px; font-weight: bold;">*GST shall comprise of CGST, SGST/UTGST or IGST (whichever is applicable) including cesses and levies, if any. All applicable taxes, cesses and levies, as per prevailing laws, shall be borne by you.</td>
+			</tr>
+			<tr>
+				<td style="padding: 2px 4px;font-size: 10px; font-family: arial;" colspan="6">
+					<table border="0" cellspacing="0" cellpadding="0" width="100%" style="border-collapse: collapse;font-size: 10px; font-family: arial;">
+						<tbody>
+						<tr>
+							<td style="padding: 2px 4px;font-size: 11px; font-family: arial;" colspan="2">
+									<span>
+										<strong>2. PREMIUM PAYMENT DETAILS</strong>
+									</span>
+							</td>
+						</tr>
+						<tr>
+							<td colspan="2" style="padding: 2px 4px;">
+									<span>
+										<strong>Amount in Words</strong>
+									</span>
+									<span style="padding-left: 9px;" th:text=${amountWords}></span>
+							</td>
+						</tr>
+						<tr>
+							<td style="padding: 2px 4px;">
+									<span>
+										<strong>Paid Rs.</strong>
+										<span style="padding-left: 9px;"th:text=${totalPremium}></span>
+									</span>
+							</td>
+							<td style="padding: 2px 4px;">
+								<strong> By</strong>
+								<input style="margin-left: 20px;" type="checkbox" th:checked="${paymentMode=='DIRECT DEBIT'}">Cash</input>
+								<input style="margin-left: 20px;" type="checkbox" th:checked="${paymentMode=='cheque' || renewalPremium=='CHEQUE'}">Cheque</input>
+								<input style="margin-left: 20px;" type="checkbox" th:checked="${paymentMode=='DEMAND DRAFT'}">Demand Draft</input>
+								<input style="margin-left: 20px;" type="checkbox" th:checked="${paymentMode=='Credit Card' || renewalPremium=='Credit Card / Debit Card'}">Credit Card</input>
+								<span style="padding-left: 50px;" th:if="${paymentMode!='DIRECT DEBIT' && paymentMode!='Credit Card' && paymentMode!='cheque'&& paymentMode!='DEMAND DRAFT'}" th:text="${paymentMode}"></span>
+							</td>
+							<td style="padding: 2px 4px;"></td>
+						</tr>
+						<tr>
+							<td style="padding: 2px 4px;">
+									<span>
+										<strong>Cheque / Draft No.</strong>
+									</span>
+								<span style="padding-left: 9px;"></span>
+								<!--									<span style="padding-left: 9px;"th:text=${transactionNumber}></span>-->
+							</td>
+							<td style="padding: 2px 4px;">
+									<span>
+										<strong>Date:</strong>
+										<span style="padding-left: 9px;"th:text=${paymentDate}></span>
+									</span>
+							</td>
+							<td style="padding: 2px 4px;">
+									<span>
+										<strong>Bank Name &amp; Branch</strong>
+										<span style="padding-left: 9px;"></span>
+										<!--										<span style="padding-left: 9px;"th:text=${paymentBank}></span>-->
+									</span>
+								<span style="padding-left: 9px;"></span>
+							</td>
+						</tr>
+						</tbody>
+					</table>
+				</td>
+			</tr>
+			<tr>
+				<td colspan="6" style="padding-left: 5px; padding-right: 5px; padding-top: 9px; padding-bottom: 5px;font-size: 10px; font-family: arial;">
+					<table border="1" cellspacing="0" cellpadding="0" width="100%" style="border-collapse: collapse; font-size: 10px;">
+						<tbody>
+							<tr>
+								<table border="0" cellspacing="0" cellpadding="0" width="100%">
+									<tr>
+										<td width="40%" style="padding: 2px 4px;">
+											<span style="font-weight: bold; font-size: 11px;">3. NEFT BANK A/C DETAILS OF PROPOSER</span>
+										</td>
+										<td width="60%" style="padding: 2px 4px; font-size: 10px;">All Payouts will be credited to this account through Electronic mode of payment. (This will be applicable at select
+											cities as per facilities / arrangements of Axis Max Life Insurance). Please submit proofs of bank account for example
+											cancelled cheque/ first page of passbook.</td>
+									</tr>
+								</table>
+							</tr>
+							<tr>
+								<table border="1" cellspacing="0" cellpadding="0" width="100%" style="border-collapse: collapse; font-size: 11px;">
+									<tr>
+										<td width="50%" style="padding: 3px 7px;">Bank Account Number:-
+											<span style="padding-left: 9px;text-transform:uppercase;"th:text=${accountNumber}></span>
+										</td>
+										<td width="50%" style="padding: 3px 7px;">Account Holder's Name:-
+											<span style="padding-left: 9px;text-transform:capitalize;"th:text=${accountHolderName}></span>
+										</td>
+									</tr>
+									<tr>
+										<td width="50%" style="padding: 3px 7px;">MICR Code:-
+											<span style="padding-left: 9px;text-transform:uppercase;"th:text=${micrCode}></span>
+										</td>
+										<td width="50%" style="padding: 3px 7px;">IFSC Code:-
+											<span style="padding-left: 9px;text-transform:uppercase;"th:text=${IFSCCode}></span>
+										</td>
+									</tr>
+									<tr>
+										<td colspan="2" style="padding: 3px 7px;">Bank Name &amp; Branch:
+											<span style="padding-left: 9px;"th:text=${bankNameBranch}></span>
+										</td>
+									</tr>
+									<tr>
+										<td width="50%" style="padding: 3px 7px;">Type of Bank Account:
+											<span style="padding-left: 9px;text-transform:capitalize;">
+												<input style="margin-left: 5%;" type="checkbox" th:checked="${typeOfAcc=='02'}">Saving</input>
+												<input style="margin-left: 5%;" type="checkbox" th:checked="${typeOfAcc=='01'}">Current</input>
+												<input style="margin-left: 5%;" type="checkbox" th:checked="${typeOfAcc=='03'}">Others</input>
+											</span>
+										</td>
+										<td width="50%" style="padding: 3px 7px;">Banking since (month &amp; year)
+											<span style="padding-left: 9px;"th:text=${bankingSince}></span>
+										</td>
+									</tr>
+									<tr>
+										<td width="50%" style="padding: 2px 4px; border-right: 0px solid;">
+											<span style="font-size: 11px; font-family: arial; font-weight: bold;">4. PERMANENT ACCOUNT NUMBER (PAN)</span>
+											<span style="padding-left: 12px; font-size: 11px; font-family: arial;" th:if="${pan!='NO' && pan!='YES'}" th:text=${pan}></span>
+										</td>
+										<td width="50%" style="padding: 3px 7px; border-left: 0px solid;">
+											<table border="0" cellspacing="0" cellpadding="0" width="100%">
+												<tr>
+													<td width="50%">
+														<span style="font-size: 11px; font-family: arial;">______ Applied for Form 49A required</span>
+													</td>
+													<td width="50%">
+														<span style="font-size: 11px; font-family: arial;">______ Not Applicable Form 60/61 required</span>
+													</td>
+												</tr>
+											</table>
+										</td>
+									</tr>
+									<tr>
+										<td colspan="2">
+											<table border="0" cellspacing="0" cellpadding="0">
+												<tr>
+													<td colspan="2" style="padding: 2px 4px; font-size: 11px; font-family: arial; font-weight: bold;">5. AADHAAR CARD NUMBER
+														<span style="padding-left: 9px;"th:text=${isaadhar}></span>
+													</td>
+												</tr>
+												<tr>
+													<td colspan="2" style="padding: 4px 4px; font-size: 10px; font-family: arial;">Note :  TDS may be applicable  for resident policyholder, in accordance to provisions of section 194DA under Income Tax Act, 1961. TDS would be deducted      @2%. In case valid PAN is available otherwise 20% will be deducted as per prevailing provisions of law.
+													</td>
+												</tr>
+											</table>
+										</td>
+									</tr>
+									<tr>
+										<td colspan="2" style="padding: 5px; font-size: 10px; font-family: arial;">
+											<div>
+												<input type="checkbox" th:checked="${appliedForPan=='YES'}"> a. I do not have PAN Number as I have applied for PAN
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<td colspan="2" style="padding: 5px; font-size: 10px; font-family: arial;">
+											<div>
+												<input type="checkbox" th:checked="${panNotRequired=='YES'}"> b. I am exempt from the requirement of PAN under the following provision of the IT act, 1961:
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<td style="padding: 5px; font-size: 10px; font-family: arial;" colspan="2">
+											<input type="checkbox"> Section 139A: Neither my income nor the income of any other person in respect of which I am assessable under the act was in excess of the maximum amount not
+												chargeable to income tax in any previous year
+											<span style="padding-left: 10px;"></span>
+										</td>
+									</tr>
+									<tr>
+										<td style="padding: 5px; font-size: 10px; font-family: arial;" colspan="2">
+											<input type="checkbox"> Rule 114C: I am having only agricultural income and am not in receipt of any other income chargeable to income-tax
+											<span style="padding-left: 10px;"></span>
+										</td>
+									</tr>
+									<tr>
+										<td colspan="2" style="padding: 5px; font-size: 11px; font-family: arial;">
+											<span><strong>6. MODE OF PAYMENT</strong></span>
+											<input style="margin-left: 10px;" type="checkbox" th:checked="${modeOfPayment=='Annual'}">Annual</input>
+											<input style="margin-left: 10px;" type="checkbox" th:checked="${modeOfPayment=='Semi-Annual'}">Semi-Annual</input>
+											<input style="margin-left: 10px;" type="checkbox" th:checked="${modeOfPayment=='Quarterly'}">Quarterly</input>
+											<input style="margin-left: 10px;" type="checkbox" th:checked="${modeOfPayment=='Monthly'}">Monthly (Direct Debit)</input>
+										</td>
+									</tr>
+									<tr>
+										<td colspan="2" style="padding: 5px; font-size: 11px; font-family: arial;">
+											<span><strong>7. RENEWAL PREMIUM BY</strong></span>
+											<input style="margin-left: 10px;" type="checkbox" th:checked="${true}">Cash</input>
+											<input style="margin-left: 10px;" type="checkbox">Cheque/DD</input>
+											<input style="margin-left: 10px;" type="checkbox">Direct Debit</input>
+											<input style="margin-left: 10px;" type="checkbox">Credit Card</input>
+											<input style="margin-left: 10px;" type="checkbox">List Billing</input>
+										</td>
+									</tr>
+									<tr>
+										<td colspan="2" style="padding: 5px; font-size: 11px; font-family: arial;">
+											<span><strong>8. IS PAYOR IF DIFFERENT FROM THE PROPOSER?</strong></span>
+											<input style="margin-left: 5%;" type="checkbox" th:checked="${payorDiffFromProposer=='YES'}">Yes</input>
+											<input style="margin-left: 5%;" type="checkbox" th:checked="${payorDiffFromProposer=='NO'}">No</input>
+										</td>
+									</tr>
+									<tr>
+										<td colspan="1" style="font-size: 10px; font-family: arial; padding: 5px; ">Name: <span style="padding-left: 10px;"th:text=${payorName}></span></td>
+										<td colspan="1" style="font-size: 10px; font-family: arial; padding: 5px; ">Gender: <span style="padding-left: 10px;"th:text=${payorGender}></span></td>
+									</tr>
+									<tr>
+										<td colspan="1" style="font-size: 10px; font-family: arial; padding: 5px; ">DOB: <span style="padding-left: 10px;"th:text=${payorDOB}></span></td>
+										<td colspan="1" style="font-size: 10px; font-family: arial; padding: 5px; ">PAN: <span style="padding-left: 10px;"th:text=${payorPan}></span></td>
+									</tr>
+									<tr>
+										<td colspan="1" style="font-size: 10px; font-family: arial; padding: 5px; ">Address: <span style="padding-left: 10px;"th:text=${payoraddress}></span></td>
+										<td colspan="1" style="font-size: 10px; font-family: arial; padding: 5px; ">Income: <span style="padding-left: 10px;"th:text=${payorAnnualIncome}></span></td>
+									</tr>
+									<tr>
+										<td colspan="1" style="font-size: 10px; font-family: arial; padding: 5px; ">Relationship to Proposer: <span style="padding-left: 10px;"th:text=${relationShipwithProposer}></span></td>
+										<td colspan="1" style="font-size: 10px; font-family: arial; padding: 5px; ">Banking Since: <span style="padding-left: 10px;"th:text=${bankingSince}></span></td>
+									</tr>
+									<tr>
+										<td colspan="2" style="font-size: 10px; font-family: arial; padding: 5px; ">
+											<span>
+												<strong>BANK ACCOUNT DETAILS OF THE PAYOR </strong>
+												(If applicable, chose only one) Not Applicable for plans that offer Reversionary Bonus
+											</span>
+										</td>
+									</tr>
+									<tr>
+										<td colspan="1" style="font-size: 10px; font-family: arial; padding: 5px; ">Bank Account Number: <span style="padding-left: 10px;"th:text=${payorAccountNumber}></span></td>
+										<td colspan="1" style="font-size: 10px; font-family: arial; padding: 5px; ">Bank Name & Branch: <span style="padding-left: 10px;"th:text=${payorBankBranch}></span></td>
+									</tr>
+								</table>
+							</tr>
+						</tbody>
+					</table>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</td>

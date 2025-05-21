@@ -1,0 +1,811 @@
+<td colspan="3">
+    <table border="1" cellspacing="0" cellpadding="0" style="width: 100%; border-collapse: collapse;">
+        <tbody>
+        <tr>
+            <table colspan="3" width="100%" border="0" cellspacing="0">
+                <thead  >
+                <th colspan="3" width="40%" style="background-color: #003770;border-color:#003770;border-style:solid;border-width:1px; color: #fff;font-size: 10px; font-family: arial; padding: 0px" align="center"></th>
+                <th colspan="3"  width="60%"  style="background-color: #003770;border-color: #003770;border-style:solid;border-width:1px; color: #fff;font-size: 10px; font-family: arial; padding: 0px; align: center;">A. PERSONAL DETAILS</th>
+
+                </thead>
+            </table>
+        </tr>
+        <tr>
+            <td width="30%"></td>
+            <td style="width: 35%; font-weight: bold; padding: 2px 4px; font-size: 10px; font-family: arial;">PROPOSER</span></td>
+            <td style="width: 35%; font-weight: bold; font-size: 10px; font-family: arial; padding: 2px 4px; ">LIFE TO BE INSURED<span style="font-weight: normal;"><i>(if other than proposer)</i></span></td>
+        </tr>
+        <tr>
+            <td style="width: 30%; font-weight: bold; padding: 2px 4px; font-size: 10px; font-family: arial;">1. Title</td>
+            <td style="width: 35%; font-size: 10px; font-family: arial;padding: 2px 4px;text-transform:uppercase;" th:text=${proposerTitle}></td>
+            <td style="width: 35%; font-size: 10px; font-family: arial;padding: 2px 4px;text-transform:uppercase;"th:text=${insuredTitle}></td>
+        </tr>
+        <tr>
+            <td style="width: 30%; font-weight: bold; font-size: 10px; font-family: arial;">
+                <table border="0" cellspacing="0" cellpadding="0" width="100%" style="border-collapse: collapse;">
+                    <tbody>
+                    <tr>
+                        <td style="width: 60%; font-weight: bold;padding: 2px 4px;font-size: 10px;border-right-color: #808080;border-right-style:solid;border-right-width:1px;font-family: arial;">2. Name</td>
+                        <td style="width: 40%;font-size: 10px; font-family: arial;">
+                            <table cellspacing="0" border="0" cellpadding="5" style="width: 100%; border-collapse: collapse;">
+                                <!--FUL2- 144664-->
+                                <tbody>
+                                <tr>
+                                    <td height="25" style="font-size: 10px;padding-left:4px ;border-bottom-color: #808080;border-bottom-style:solid;border-bottom-width:1px; font-weight:400">First</td>
+                                </tr>
+                                <tr>
+                                    <td height="25" style="font-size: 10px;border-bottom-color: #808080;border-bottom-style:solid;border-bottom-width:1px;font-family: arial; font-weight:400">Middle </td>
+                                </tr>
+                                <tr>
+                                    <td height="25" style="font-size: 10px;border-bottom-color: #808080;border-bottom-style:solid;border-bottom-width:1px;font-family: arial; font-weight:400">Last</td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+            </td>
+            <td style="width: 40%; font-size: 10px; font-family: arial;">
+                <table cellspacing="0" cellpadding="5" border="0" style="width: 100%; border-collapse: collapse; vertical-align: top;text-transform:uppercase;">
+                    <tbody>
+                    <tr>
+                        <td height="25" style="font-size: 10px;border-bottom-color: #808080;border-bottom-style:solid;border-bottom-width:1px;font-family: arial;" th:text=${proposerFirstName}></td>
+                    </tr>
+                    <tr>
+                        <td height="25" style="font-size: 10px;border-bottom-color: #808080;border-bottom-style:solid;border-bottom-width:1px;font-family: arial;" th:text=${proposerMiddleName}></td>
+                    </tr>
+                    <tr>
+                        <td height="25" style="font-size: 10px;border-bottom-color: #808080;border-bottom-style:solid;border-bottom-width:1px;font-family: arial;" th:text=${proposerLastName}></td>
+                    </tr>
+                    </tbody>
+                </table>
+            </td>
+            <td style="width: 40%; font-size: 10px; font-family: arial;">
+                <table cellspacing="0" cellpadding="5" border="0" style="width: 100%; border-collapse: collapse; vertical-align: top;text-transform:uppercase;">
+                    <tbody>
+                    <tr>
+                        <td height="25" style="font-size: 10px;border-bottom-color: #808080;border-bottom-style:solid;border-bottom-width:1px;font-family: arial;"th:text=${insuredFirstName}></td>
+                    </tr>
+                    <tr>
+                        <td height="25" style="font-size: 10px;border-bottom-color: #808080;border-bottom-style:solid;border-bottom-width:1px;font-family: arial;"th:text=${insuredMiddleName}></td>
+                    </tr>
+                    <tr>
+                        <td height="25" style="font-size: 10px;border-bottom-color: #808080;border-bottom-style:solid;border-bottom-width:1px;font-family: arial;" th:text=${insuredLastName}></td>
+                    </tr>
+                    </tbody>
+                </table>
+            </td>
+        </tr>
+        <tr>
+            <td style="width: 20%; font-weight: bold; font-size: 10px; font-family: arial;">
+                <table border="0" cellspacing="0" cellpadding="0" width="100%" style="border-collapse: collapse;">
+                    <tbody>
+                    <tr>
+                        <td style="width: 60%; font-weight: bold;padding: 2px 4px;font-size: 10px; border-right-color: #808080;border-right-style:solid;border-right-width:1px; font-family: arial;">3. Father's / Husband Name</td>
+                        <td style="width: 40%; font-weight: bold;font-size: 10px; font-family: arial;">
+                            <table cellspacing="0" border="0" cellpadding="5" style="width: 100%; border-collapse: collapse;">
+                                <tbody>
+                                <tr>
+                                    <td height="25" style="font-size: 10px;border-bottom-color: #808080;border-bottom-style:solid;border-bottom-width:1px;font-family: arial; font-weight:400">First</td>
+                                </tr>
+                                <tr>
+                                    <td height="25" style="font-size: 10px;border-bottom-color: #808080;border-bottom-style:solid;border-bottom-width:1px;font-family: arial; font-weight:400" >Last</td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+            </td>
+            <td style="width: 40%; font-size: 10px; font-family: arial;">
+                <table cellspacing="0" cellpadding="5" border="0" style="width: 100%; border-collapse: collapse; vertical-align: top;text-transform:uppercase;">
+                    <tbody>
+                    <tr>
+                        <td height="25" style="font-size: 10px;border-bottom-color: #808080;border-bottom-style:solid;border-bottom-width:1px;font-family: arial;"th:text=${proposerFatherFirstName}></td>
+                    </tr>
+                    <tr>
+                        <td height="25" style="font-size: 10px;border-bottom-color: #808080;border-bottom-style:solid;border-bottom-width:1px;font-family: arial;" th:text=${proposerFatherLastName}></td>
+                    </tr>
+                    </tbody>
+                </table>
+            </td>
+            <td style="width: 40%; font-size: 10px; font-family: arial;">
+                <table cellspacing="0" cellpadding="5" border="0" style="width: 100%; border-collapse: collapse; vertical-align: top;text-transform:uppercase;">
+                    <tbody>
+                    <tr>
+                        <td style="font-size: 10px;border-bottom-color: #808080;border-bottom-style:solid;border-bottom-width:1px;font-family: arial;" th:text=${insuredFatherFirstName}></td>
+                    </tr>
+                    <tr>
+                        <td style="font-size: 10px;border-bottom-color: #808080;border-bottom-style:solid;border-bottom-width:1px;font-family: arial;" th:text=${insuredFatherLastName}></td>
+                    </tr>
+                    </tbody>
+                </table>
+            </td>
+        </tr>
+        <tr>
+            <td style="width: 30%; font-weight: bold; padding: 2px 4px; font-size: 10px; font-family: arial;">4. Date of Birth</td>
+            <td style="width: 35%; font-size: 10px; font-family: arial;padding: 2px 4px;text-transform:uppercase;"th:text=${proposerDob}></td>
+            <td style="width: 35%; font-size: 10px; font-family: arial;padding: 2px 4px;text-transform:uppercase;"th:text=${insuredDob}></td>
+        </tr>
+        <tr>
+            <td style="width: 30%; font-weight: bold; padding: 2px 4px; font-size: 10px; font-family: arial;">5. Gender</td>
+            <td style="width: 35%; font-size: 10px; font-family: arial;padding: 2px 4px;text-transform:uppercase"th:text=${proposerGender}></td>
+            <td style="width: 35%; font-size: 10px; font-family: arial;padding: 2px 4px;text-transform:uppercase;"th:text=${insuredGender}></td>
+        </tr>
+        <tr>
+            <td style="width: 30%; font-weight: bold; padding: 2px 4px; font-size: 10px; font-family: arial;">6. Nationality</td>
+            <td style="width: 35%; font-size: 10px; font-family: arial;padding: 2px 4px;text-transform:uppercase;"th:text=${proposerNationality}></td>
+            <td style="width: 35%; font-size: 10px; font-family: arial;padding: 2px 4px;text-transform:uppercase;"th:text=${insuredNationality}></td>
+
+        </tr>
+        <tr th:if="${nationality!='indian'}">
+            <td style="width: 30%; font-weight: bold; padding: 2px 4px; font-size: 10px; font-family: arial;">6a. Residing Country</td>
+            <td style="width: 35%; font-size: 10px; font-family: arial;padding: 2px 4px;text-transform:uppercase;"th:text=${proposerResidingCountry}></td>
+            <td style="width: 35%; font-size: 10px; font-family: arial;padding: 2px 4px;text-transform:uppercase;"th:text=${insuredResidingCountry}></td>
+
+        </tr>
+        <tr th:if="${nationality!='indian'}">
+            <!-- FUL2-7486 Changes related to FACTA : Changed field name from Residing country to Residence for Tax purposes in Jurisdiction(s) outside India -->
+            <td style="width: 30%; font-weight: bold; padding: 2px 4px; font-size: 10px; font-family: arial;">6b. Residence for Tax purposes in Jurisdiction(s) outside India</td>
+            <td style="width: 35%; font-size: 10px; font-family: arial;padding: 2px 4px;text-transform:uppercase;"th:text=${proposerCountryByTaxLaw}></td>
+            <td style="width: 35%; font-size: 10px; font-family: arial;padding: 2px 4px;text-transform:uppercase;"th:text=${insuredCountryByTaxLaw}></td>
+
+        </tr>
+        <tr>
+            <td style="width: 30%; font-weight: bold; padding: 2px 4px; font-size: 10px; font-family: arial;">7. Marital Status</td>
+            <td style="width: 35%; font-size: 10px; font-family: arial;padding: 2px 4px;text-transform:uppercase;"th:text=${proposerMaritialStatus}></td>
+            <td style="width: 35%; font-size: 10px; font-family: arial;padding: 2px 4px;text-transform:uppercase;"th:text=${insuredMaritialStatus}></td>
+        </tr>
+        <tr>
+            <td style="width: 30%; font-weight: bold; padding: 2px 4px; font-size: 10px; font-family: arial;">8. Education</td>
+            <td style="width: 35%; font-size: 10px; font-family: arial;padding: 2px 4px;text-transform:uppercase;"th:text=${proposerEducation}></td>
+            <td style="width: 35%; font-size: 10px; font-family: arial;padding: 2px 4px;text-transform:uppercase;"th:text=${insuredEducation}></td>
+        </tr>
+        <tr>
+            <td style="width: 30%; font-weight: bold; padding: 2px 4px; font-size: 10px; font-family: arial;">9. Relationship with Proposer</td>
+            <td style="width: 35%; font-size: 10px; font-family: arial;padding: 2px 4px;text-transform:uppercase;"th:text=${proposerRelationshipWithProposer}></td>
+            <td style="width: 35%; font-size: 10px; font-family: arial;padding: 2px 4px;text-transform:uppercase;"th:text=${insuredRelationshipWithProposer}></td>
+        </tr>
+        <tr>
+            <td style="width: 30%; font-weight: bold; font-size: 10px; font-family: arial;">
+                <table border="0" cellspacing="0" cellpadding="0" style="width: 100%; border-collapse: collapse;">
+                    <tbody>
+                    <tr>
+                        <td style="width: 100%; font-weight: bold;padding: 2px 4px;font-size: 10px;font-family: arial;">10. Industry Type</td>
+                    </tr>
+                    </tbody>
+                </table>
+            </td>
+            <td style="width: 35%; font-size: 10px; font-family: arial;text-transform:uppercase;vertical-align:top;border-collapse: collapse;">
+                <table cellspacing="0" cellpadding="0" border="1" style="width: 100%; border-collapse: collapse; vertical-align: top;text-transform:uppercase;">
+                    <tbody>
+                    <tr>
+                        <td height="20"
+                            style="font-size: 10px; font-family: arial;padding: 2px 4px;text-transform:uppercase;" th:text=${proposerIndustryType}>&nbsp;</td>
+                    </tr>
+                    <tr>
+                        <td th:if=${proposerMining}
+                            height="50" width="100%" style="padding: 2px 4px;font-size: 10px; font-family: arial;"><span style="display: inline-block;"><strong>Does the Proposer's work involve going inside any kind of mine ?</strong></span><span style="font-size: 10px; font-family: arial;padding: 2px 4px;text-transform:uppercase;"th:text=${proposerMiningReflexive1}></span>&nbsp;</td>
+                    </tr>
+                    <tr>
+                        <td th:if=${proposerMining}
+                            height="50" width="100%" style="font-size: 10px; font-family: arial;padding: 2px 4px;"><span style="display: inline-block;"><strong>Did the Proposer ever have any illness related to his occupation ?</strong></span><span style="font-size: 10px; font-family: arial;padding: 2px 4px;text-transform:uppercase;"th:text=${proposerMiningReflexive2}></span>&nbsp;</td>
+                    </tr>
+
+                    <tr>
+                        <td th:if=${proposerDefence}
+                            height="50" width="100%" style="padding: 2px 4px;font-size: 10px; font-family: arial;"><span style="display: inline-block;"><strong>Is the Proposer currently posted in any sensitive/ border location ?</strong></span><span style="font-size: 10px; font-family: arial;padding: 2px 4px;text-transform:uppercase;"th:text=${proposerDefenceReflexive1}></span>&nbsp;</td>
+                    </tr>
+
+                    <tr>
+                        <td th:if=${proposerDefence}
+                            height="50" width="100%" style="font-size: 10px; font-family: arial;padding: 2px 4px;"><span style="display: inline-block;"><strong>Nature of job/role</strong></span><span style="font-size: 10px; font-family: arial;padding: 2px 4px;text-transform:uppercase;"th:text=${proposerDefenceReflexive2}></span>&nbsp;</td>
+                    </tr>
+
+                    <tr>
+                        <td th:if=${proposerDiving}
+                            height="50" width="100%" style="padding: 2px 4px;font-size: 10px; font-family: arial;"><span style="display: inline-block;"><strong>Is Proposer a Professional Diver ?</strong></span><span style="font-size: 10px; font-family: arial;padding: 2px 4px;text-transform:uppercase;"th:text=${proposerDivingReflexive1}></span>&nbsp;</td>
+                    </tr>
+                    <tr>
+                        <td th:if="${proposerDivingReflexive1 == 'YES'}"
+                            height="50" width="100%" style="font-size: 10px; font-family: arial;padding: 2px 4px;"><span style="display: inline-block;"><strong>Where do you dive ?</strong></span><span style="font-size: 10px; font-family: arial;padding: 2px 4px;text-transform:uppercase;"th:text=${proposerDivingReflexive2}></span>&nbsp;</td>
+                    </tr>
+
+                    <tr>
+                        <td th:if=${proposerNavy}
+                            height="50" width="100%" style="padding: 2px 4px;font-size: 10px; font-family: arial;"><span style="display: inline-block;"><strong>Type of vessel where working ?</strong></span><span style="font-size: 10px; font-family: arial;padding: 2px 4px;text-transform:uppercase;"th:text=${proposerNavyReflexive1}></span>&nbsp;</td>
+                    </tr>
+
+                    <tr>
+                        <td th:if=${proposerOil}
+                            height="50" width="100%" style="padding: 2px 4px;font-size: 10px; font-family: arial;"><span style="display: inline-block;"><strong>Is the Proposer based at offshore location or does his job involves travelling to any offshores locations ?</strong></span><span style="font-size: 10px; font-family: arial;padding: 2px 4px;text-transform:uppercase;"th:text=${proposerOilReflexive1}></span>&nbsp;</td>
+                    </tr>
+
+                    <tr>
+                        <td th:if=${proposerAirforce}
+                            height="50" width="100%" style="padding: 2px 4px;font-size: 10px; font-family: arial;"><span style="display: inline-block;"><strong>Exact Nature of Duties:</strong></span><span style="font-size: 10px; font-family: arial;padding: 2px 4px;text-transform:uppercase;"th:text=${proposerAirforceReflexive1}></span>&nbsp;</td>
+                    </tr>
+                    <tr>
+                        <td th:if="${proposerAirforceReflexive1 == 'YES'}"
+                            height="50" width="100%" style="font-size: 10px; font-family: arial;padding: 2px 4px;"><span style="display: inline-block;"><strong>What do you fly ?</strong></span><span style="font-size: 10px; font-family: arial;padding: 2px 4px;text-transform:uppercase;"th:text=${proposerAirforceReflexive2}></span>&nbsp;</td>
+                    </tr>
+                    </tbody>
+                </table>
+            </td>
+
+            <td width="35%" style="font-size: 10px; font-family: arial;text-transform:uppercase;vertical-align:top;border-collapse: collapse;">
+                <table width="100%" cellspacing="0" cellpadding="0" border="1" style="border-collapse: collapse; vertical-align: top;text-transform:uppercase;">
+                    <tbody>
+                    <tr>
+                        <td height="20"
+                            style="font-size: 10px; font-family: arial;padding: 2px 4px;text-transform:uppercase;" th:text=${insuredIndustryType}>&nbsp;</td>
+                    </tr>
+                    <tr>
+                        <td th:if=${insuredMining}
+                            height="50" width="100%" style="padding: 2px 4px;font-size: 10px; font-family: arial;"><span style="display: inline-block;"><strong>Does the Life to be Insured's work involve going inside any kind of mine ?</strong></span><span style="font-size: 10px; font-family: arial;padding: 2px 4px;text-transform:uppercase;"th:text=${insuredMiningReflexive1}></span>&nbsp;</td>
+                    </tr>
+                    <tr>
+                        <td th:if=${insuredMining}
+                            height="50" width="100%" style="font-size: 10px; font-family: arial;padding: 2px 4px;"><span style="display: inline-block;"><strong>Did the Life to be Insured ever have any illness related to his occupation ?</strong></span><span style="font-size: 10px; font-family: arial;padding: 2px 4px;text-transform:uppercase;"th:text=${insuredMiningReflexive2}></span>&nbsp;</td>
+                    </tr>
+                    <tr>
+                        <td th:if=${insuredDefence}
+                            height="50" width="100%" style="padding: 2px 4px;font-size: 10px; font-family: arial;"><span style="display: inline-block;"><strong>Is the Life to be Insured currently posted in any sensitive/ border location ?</strong></span><span style="font-size: 10px; font-family: arial;padding: 2px 4px;text-transform:uppercase;"th:text=${insuredDefenceReflexive1}></span>&nbsp;</td>
+                    </tr>
+
+                    <tr>
+                        <td th:if=${insuredDefence}
+                            height="50" width="100%" style="font-size: 10px; font-family: arial;padding: 2px 4px;"><span style="display: inline-block;"><strong>Nature of job/role</strong></span><span style="font-size: 10px; font-family: arial;padding: 2px 4px;text-transform:uppercase;"th:text=${insuredDefenceReflexive2}></span>&nbsp;</td>
+                    </tr>
+
+                    <tr>
+                        <td th:if=${insuredDiving}
+                            height="50" width="100%" style="padding: 2px 4px;font-size: 10px; font-family: arial;"><span style="display: inline-block;"><strong>Is Life to be Insured a Professional Diver ?</strong></span><span style="font-size: 10px; font-family: arial;padding: 2px 4px;text-transform:uppercase;"th:text=${insuredDivingReflexive1}></span>&nbsp;</td>
+                    </tr>
+                    <tr>
+                        <td th:if="${insuredDivingReflexive1 == 'YES'}"
+                            height="50" width="100%" style="font-size: 10px; font-family: arial;padding: 2px 4px;"><span style="display: inline-block;"><strong>Where do you dive ?</strong></span><span style="font-size: 10px; font-family: arial;padding: 2px 4px;text-transform:uppercase;"th:text=${insuredDivingReflexive2}></span>&nbsp;</td>
+                    </tr>
+
+                    <tr>
+                        <td th:if=${insuredNavy}
+                            height="50" width="100%" style="padding: 2px 4px;font-size: 10px; font-family: arial;"><span style="display: inline-block;"><strong>Type of vessel where working ?</strong></span><span style="font-size: 10px; font-family: arial;padding: 2px 4px;text-transform:uppercase;"th:text=${insuredNavyReflexive1}></span>&nbsp;</td>
+                    </tr>
+
+                    <tr>
+                        <td th:if=${insuredOil}
+                            height="50" width="100%" style="padding: 2px 4px;font-size: 10px; font-family: arial;"><span style="display: inline-block;"><strong>Is the Life to be Insured based at offshore location or does his job involves travelling to any offshores locations ?</strong></span><span style="font-size: 10px; font-family: arial;padding: 2px 4px;text-transform:uppercase;"th:text=${insuredOilReflexive1}></span>&nbsp;</td>
+                    </tr>
+                    <tr>
+                        <td th:if=${insuredAirforce}
+                            height="50" width="100%" style="padding: 2px 4px;font-size: 10px; font-family: arial;"><span style="display: inline-block;"><strong>Exact Nature of Duties:</strong></span><span style="font-size: 10px; font-family: arial;padding: 2px 4px;text-transform:uppercase;"th:text=${insuredAirforceReflexive1}></span>&nbsp;</td>
+                    </tr>
+                    <tr>
+                        <td th:if="${insuredAirforceReflexive1 == 'YES'}"
+                            height="50" width="100%" style="font-size: 10px; font-family: arial;padding: 2px 4px;"><span style="display: inline-block;"><strong>What do you fly ?</strong></span><span style="font-size: 10px; font-family: arial;padding: 2px 4px;text-transform:uppercase;"th:text=${insuredAirforceReflexive2}></span>&nbsp;</td>
+                    </tr>
+                    </tbody>
+                </table>
+            </td>
+        </tr>
+        <tr>
+            <td style="width: 30%; font-weight: bold; padding: 2px 4px; font-size: 10px; font-family: arial;">11. Organisation Type</td>
+            <td style="width: 35%; font-size: 10px; font-family: arial;padding: 2px 4px;text-transform:uppercase;"th:text=${proposerOrganisationType}></td>
+            <td style="width: 35%; font-size: 10px; font-family: arial;padding: 2px 4px;text-transform:uppercase;"th:text=${insuredOrganisationType}></td>
+        </tr>
+        <tr>
+            <td style="width: 30%; font-weight: bold; padding: 2px 4px; font-size: 10px; font-family: arial;">12. Occupation/Job Title</td>
+            <td style="width: 35%; font-size: 10px; font-family: arial;padding: 2px 4px;text-transform:uppercase;"th:text=${proposerOccupation}></td>
+            <td style="width: 35%; font-size: 10px; font-family: arial;padding: 2px 4px;text-transform:uppercase;"th:text=${insuredOccupation}></td>
+        </tr>
+        <tr>
+            <td style="width: 30%; font-weight: bold; padding: 2px 4px; font-size: 10px; font-family: arial;">13. Name of entity / employer</td>
+            <td style="width: 35%; font-size: 10px; font-family: arial;padding: 2px 4px;text-transform:uppercase;" th:text=${proposerEmployerName}></td>
+            <td style="width: 35%; font-size: 10px; font-family: arial;padding: 2px 4px;text-transform:uppercase;"th:text=${insuredEmployerName}></td>
+        </tr>
+        <tr>
+            <td style="width: 30%; font-weight: bold; padding: 2px 4px; font-size: 10px; font-family: arial;">14. Nature of business</td>
+            <td style="width: 35%; font-size: 10px; font-family: arial;padding: 2px 4px;text-transform:uppercase;"th:text=${proposerNatureOfDuties}></td>
+            <td style="width: 35%; font-size: 10px; font-family: arial;padding: 2px 4px;text-transform:uppercase;"th:text=${insuredNatureOfDuties}></td>
+        </tr>
+        <tr>
+            <td style="width: 30%; font-weight: bold; padding: 2px 4px; font-size: 10px; font-family: arial;">15. Annual Income (Rs)</td>
+            <td style="width: 35%; font-size: 10px; font-family: arial;padding: 2px 4px;text-transform:uppercase;"th:text=${proposerAnnualIncome}></td>
+            <td style="width: 35%; font-size: 10px; font-family: arial;padding: 2px 4px;text-transform:uppercase;"th:text=${insuredAnnualIncome}></td>
+        </tr>
+        <tr>
+            <td width="100%" colspan="3" style="font-size: 10px; font-family: arial;padding: 4px;"><span><strong>16. Is the Life to be Insured / Proposer / Nominee / Payor a Politically Exposed Person ?      </strong></span><span style="text-transform:uppercase;" th:text=${isPEP}></span></td>
+
+        </tr>
+        <tr th:if=${pep}>
+            <td	width="100%" colspan="3" style="font-size: 10px; font-family: arial;padding:5px">
+                <table width="100%" cellpadding="5" cellspacing="0" border="1" style="border-collapse: collapse; vertical-align: top;">
+                    <tbody>
+                    <tr>
+                        <td width="70%" style="padding-left: 15px">
+                            <strong>a. Which of the following persons in PEP (Tick as applicable):</strong>
+                        </td>
+                        <td width="30%">&nbsp;</td>
+                    </tr>
+                    <tr>
+                        <td width="70%" style="padding-left: 15px">
+                            <strong>Life to be Insured:</strong>
+                        </td>
+                        <td style="text-transform:uppercase;" width="30%" th:text=${isLIPep}></td>
+                    </tr>
+                    <tr>
+                        <td width="70%" style="padding-left: 15px">
+                            <strong>Family Member of Life to be Insured:</strong>
+                        </td>
+                        <td style="text-transform:uppercase;" width="30%" th:text=${isFamilyPep}></td>
+                    </tr>
+                    <tr th:if="${formType} == 'DEPENDENT'">
+                        <td width="70%" style="padding-left: 15px">
+                            <strong>Proposer:</strong>
+                        </td>
+                        <td style="text-transform:uppercase;" width="30%" th:text=${isProposerPEP}></td>
+                    </tr>
+                    <tr th:if="${formType} == 'SELF'">
+                        <td width="70%" style="padding-left: 15px">
+                            <strong>Nominee:</strong>
+                        </td>
+                        <td style="text-transform:uppercase;" width="30%" th:text=${isNomineePep}></td>
+                    </tr>
+                    <tr>
+                        <td width="70%" style="padding-left: 15px">
+                            <strong>Payor:</strong>
+                        </td>
+                        <td style="text-transform:uppercase;" width="30%" th:text=${isPayor}></td>
+                    </tr>
+                    <tr th:if="${isFamilyPep} == 'YES'">
+                        <td width="70%" style="padding-left: 15px">
+                            <strong>Please Specify Which Family Member:</strong>
+                        </td>
+                        <td style="text-transform:uppercase;" width="30%" th:text="${specifyMember}">&nbsp;</td>
+                    </tr>
+                    <tr>
+                        <td width="70%" style="padding-left: 15px">
+                            <strong>b. Please specify the extend of Political involvement:</strong>
+                        </td>
+                        <td width="30%"></td>
+                    </tr>
+                    <tr>
+                        <td width="70%" style="padding-left: 15px">
+                            <strong>1. Political Experience (Years):-</strong>
+                        </td>
+                        <td style="text-transform:uppercase;" width="30%" th:text=${politicalExperience}></td>
+                    </tr>
+                    <tr>
+                        <td width="70%" style="padding-left: 15px">
+                            <strong>2. Affiliation to Political Party:-</strong>
+                        </td>
+                        <td style="text-transform:uppercase;" width="30%" th:text=${affiliation}></td>
+                    </tr>
+                    <tr>
+                        <td width="70%" style="padding-left: 15px">
+                            <strong>3. Role in Political Party:-</strong>
+                        </td>
+                        <td style="text-transform:uppercase;" width="30%" th:text=${role}></td>
+                    </tr>
+                    <tr th:if="${role} == 'OTHERS'">
+                        <td width="70%" style="padding-left: 15px">
+                            <strong>Please Specify Role:</strong>
+                        </td>
+                        <td style="text-transform:uppercase;" width="30%" th:text=${specifyRoleOther}></td>
+                    </tr>
+                    <tr>
+                        <td width="70%" style="padding-left: 15px">
+                            <strong>4. Portfolio Handled:-</strong>
+                        </td>
+                        <td style="text-transform:uppercase;" width="30%" th:text=${portfolio}></td>
+                    </tr>
+                    <tr>
+                        <td width="70%" style="padding-left: 15px">
+                            <strong>5. Whether Party in Power:-</strong>
+                        </td>
+                        <td style="text-transform:uppercase;" width="30%" th:text=${power}></td>
+                    </tr>
+                    <tr>
+                        <td width="70%" style="padding-left: 15px">
+                            <strong>c. Whether the concerned PEP has ever been posted in foreign office/portfolio?:</strong>
+                        </td>
+                        <td style="text-transform:uppercase;" width="30%" th:text=${foreignOffice}></td>
+                    </tr>
+                    <tr>
+                        <td width="70%" style="padding-left: 15px">
+                            <strong>Please Specify PEP Office:</strong>
+                        </td>
+                        <td style="text-transform:uppercase;" width="30%" th:text=${pepOffice}></td>
+                    </tr>
+                    <tr>
+                        <td width="70%" style="padding-left: 15px">
+                            <strong>d. Please specify all sources of income of concerned PEP?:-</strong>
+                        </td>
+                        <td style="text-transform:uppercase;" width="30%" th:text=${sourceOfIncome}></td>
+                    </tr>
+                    <tr>
+                        <td width="70%" style="padding-left: 15px">
+                            <strong>e. Has the concerned PEP ever been convicted or is under any investigation for any crime punishable by 3 or more years of imprisonment?:</strong>
+                        </td>
+                        <td style="text-transform:uppercase;" width="30%" th:text=${criminalCharges}></td>
+                    </tr>
+                    <tr th:if="${criminalCharges} == 'YES'">
+                        <td width="70%" style="padding-left: 15px">
+                            <strong>Please Provide Conviction Details:</strong>
+                        </td>
+                        <td style="text-transform:uppercase;" width="30%" th:text=${convictionDetails}></td>
+                    </tr>
+                    </tbody>
+                </table>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="3">
+                <table border="1" cellspacing="0" cellpadding="0" style="width: 100%; border-collapse: collapse;">
+                    <tr >
+                        <td width="25%" style="color: #333;font-size: 10px; font-family: arial; padding: 2px 4px" align="left"><strong>17. NOMINEE DETAILS</strong>&nbsp;&nbsp;&nbsp;&nbsp;</td>
+                        <th:block th:each="ProposalNomineDetails1,iterStat : ${nomineeDetailsCount}" >
+                            <td th:if ="${iterStat.count == 1}" width="25%"  style=" font-weight: bold;font-size: 10px; font-family: arial; padding: 2px 4px; text-transform:uppercase;" align="center" th:text="'Nominee '+${ iterStat.count } +' (Mandatory)'"/>
+                            <td th:if ="${iterStat.count == 2}"  width="25%"  style=" font-weight: bold;font-size: 10px; font-family: arial; padding: 2px 4px;text-transform:uppercase;" align="center" th:text="'Nominee '+${ iterStat.count }+' (Optional)'"/>
+                            <td th:if ="${iterStat.count == 3}" width="25%"  style=" font-weight: bold;font-size: 10px; font-family: arial; padding: 2px 4px;text-transform:uppercase;" align="center" th:text="'Nominee '+${ iterStat.count } +' (Optional)'"/>
+
+
+                        </th:block>
+
+                    </tr>
+                    <tr>
+                        <td width="25%"  style="color: #333;font-size: 10px; font-family: arial; padding: 2px 4px; font-weight: bold;" align="left">a. Title</td>
+                        <th:block th:each="ProposalNomineDetails2 : ${nomineeDetailsCount}" >
+                            <td width="25%"  style="color: #333;font-size: 10px; font-family: arial; padding: 2px 4px; text-transform:uppercase;" align="center" th:text="${ProposalNomineDetails2?.title}"/>
+                        </th:block>
+                    </tr>
+
+                    <tr>
+                        <td colspan="4">
+                            <table width="100%"  border="1" cellspacing="0" cellpadding="0" style="width: 100%; border-collapse: collapse;">
+                                <tr>
+                                    <td width="12.5%" style="font-weight: bold;padding: 2px 4px;font-size: 10px; border-right-color: #808080;border-right-style:solid;border-right-width:1px; font-family: arial;">b. Name</td>
+                                    <td width="12.5%" style="font-size: 10px;border-bottom-color: #808080;border-bottom-style:solid;border-bottom-width:1px;font-family: arial; font-weight:400;padding: 2px 4px;">First</td>
+                                    <th:block th:each="ProposalNomineeDetails3 : ${nomineeDetailsCount}" >
+                                        <td height="25" width="25%"  style="color: #333;font-size: 10px; font-family: arial; padding: 2px 4px; text-transform:uppercase;" align="center" th:text="${ProposalNomineeDetails3?.firstName}"/>
+                                    </th:block>
+
+                                </tr>
+                                <tr>
+                                    <td width="12.5%" style="font-weight: bold;padding: 2px 4px;font-size: 10px; border-right-color: #808080;border-right-style:solid;border-right-width:1px; font-family: arial;"></td>
+                                    <td width="12.5%" style="font-size: 10px;border-bottom-color: #808080;border-bottom-style:solid;border-bottom-width:1px;font-family: arial; font-weight:400; padding: 2px 4px;">Middle</td>
+                                    <th:block th:each="ProposalNomineeDetails3 : ${nomineeDetailsCount}" >
+                                        <td height="25" width="25%"  style="font-size: 10px;border-bottom-color: #808080;border-bottom-style:solid;border-bottom-width:1px;font-family: arial; padding: 2px 4px; text-transform:uppercase;"  align="center" th:text="${ProposalNomineeDetails3?.middleName}"/>
+                                    </th:block>
+
+                                </tr>
+                                <tr>
+                                    <td width="12.5%" style="font-weight: bold;padding: 2px 4px;font-size: 10px; border-right-color: #808080;border-right-style:solid;border-right-width:1px; font-family: arial;"></td>
+                                    <td width="12.5%" style="font-size: 10px;border-bottom-color: #808080;border-bottom-style:solid;border-bottom-width:1px;font-family: arial; font-weight:400; padding: 2px 4px;">Last</td>
+                                    <th:block th:each="ProposalNomineeDetails3 : ${nomineeDetailsCount}" >
+                                        <td height="25" width="25%"  style="font-size: 10px;border-bottom-color: #808080;border-bottom-style:solid;border-bottom-width:1px;font-family: arial; padding: 2px 4px; text-transform:uppercase;" align="center" th:text="${ProposalNomineeDetails3?.lastName}"/>
+                                    </th:block>
+
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td width="25%" style="font-weight: bold; padding: 2px 4px; font-size: 10px; font-family: arial;">c. Date of Birth</td>
+                        <th:block th:each="ProposalNomineeDetails6 : ${nomineeDetailsCount}" >
+                            <td width="25%" style="font-size: 10px; font-family: arial;padding: 2px 4px;text-transform:uppercase;"  align="center" th:text="${ProposalNomineeDetails6?.dob}"/>
+                        </th:block>
+
+
+                    </tr>
+                    <tr>
+                        <td width="25%" style="font-weight: bold; padding: 2px 4px; font-size: 10px; font-family: arial;">d. Gender</td>
+                        <th:block th:each="ProposalNomineeDetails7 : ${nomineeDetailsCount}" >
+                            <td width="25%" style="font-size: 10px; font-family: arial;padding: 2px 4px;text-transform:uppercase;" align="center"  th:text="${ProposalNomineeDetails7?.gender}"/>
+                        </th:block>
+
+                    </tr>
+                    <tr>
+                        <td width="25%" style="font-weight: bold; padding: 2px 4px; font-size: 10px; font-family: arial;">e. Percentage of Share</td>
+                        <th:block th:each="ProposalNomineeDetails8 : ${nomineeDetailsCount}" >
+                            <td width="25%" style="font-size: 10px; font-family: arial;padding: 2px 4px;text-transform:uppercase;" align="center"  th:text="${(ProposalNomineeDetails8.percentageShare==0)? 'NA':ProposalNomineeDetails8.percentageShare}"/>
+                        </th:block>
+
+                    </tr>
+                    <tr>
+                        <td width="25%" style="font-weight: bold; padding: 2px 4px; font-size: 10px; font-family: arial;">f. Relationship with Proposer</td>
+                        <th:block th:each="ProposalNomineeDetails9 : ${nomineeDetailsCount}" >
+                            <td width="25%" style="font-size: 10px; font-family: arial;padding: 2px 4px;text-transform:uppercase;"  align="center" th:text="${ProposalNomineeDetails9?.relationshipWithProposer}"/>
+                        </th:block>
+                    </tr>
+                    <tr>
+                        <td width="25%" style="font-weight: bold; padding: 2px 4px; font-size: 10px; font-family: arial;">g. Appointee Full Name <span style="font-size:9px ;font-weight: 300;">(If nominee is under age 18)</span></td>
+                        <th:block th:each="ProposalNomineeDetails12 : ${nomineeDetailsCount}" >
+                            <td width="25%" style="font-size: 10px; font-family: arial; padding: 2px 4px; text-transform:uppercase;" align="center"   th:text=" (${ProposalNomineeDetails12.nomineeMinor =='YES'}) ? ${ProposalNomineeDetails12?.guardianName} : ${ProposalNomineeDetails12.nomineeMinor}"/>
+                        </th:block>
+                    </tr>
+
+                    <tr >
+                        <td width="25%" style="font-weight: bold; padding: 2px 4px; font-size: 10px; font-family: arial;">h. Appointee relationship to Nominee</td>
+                        <th:block th:each="ProposalNomineeDetails13 : ${nomineeDetailsCount}" >
+                            <td width="25%" style="font-size: 10px; font-family: arial; padding: 2px 4px; text-transform:uppercase;" align="center"  th:text=" (${ProposalNomineeDetails13.nomineeMinor =='YES'}) ? ${ProposalNomineeDetails13?.guardianRelation} :${ProposalNomineeDetails13.nomineeMinor}"/>
+                        </th:block>
+
+
+                    </tr>
+                    
+<!-- Removed Appointee Gender and DoB as it is not present in HSA_STD_0923_1.0 Sample PF
+                    <tr >
+                        <td width="25%"
+                            style="font-weight: bold; padding: 2px 4px; font-size: 10px; font-family: arial;">
+                            i. Appointee Gender
+                        </td>
+                        <th:block th:each="ProposalNomineeDetails14 : ${nomineeDetailsCount}" >
+                            <td width="25%"
+                                style="font-size: 10px; font-family: arial; padding: 2px 4px; text-transform:uppercase;"align="center"
+                                th:text="(${ProposalNomineeDetails14.nomineeMinor =='YES'}) ? ${ProposalNomineeDetails14?.appointeeGender} :${ProposalNomineeDetails14.nomineeMinor}"/>
+                        </th:block>
+                    </tr>
+
+                    <tr >
+                        <td width="25%"
+                            style="font-weight: bold; padding: 2px 4px; font-size: 10px; font-family: arial;">j. Appointee Date of Birth
+                        </td>
+                        <th:block th:each="ProposalNomineeDetails14 : ${nomineeDetailsCount}" >
+                            <td width="25%"
+                                style="font-size: 10px; font-family: arial; padding: 2px 4px; text-transform:uppercase;"align="center"
+                                th:text="(${ProposalNomineeDetails14.nomineeMinor =='YES'}) ? ${ProposalNomineeDetails14?.appointeeDOB} :${ProposalNomineeDetails14.nomineeMinor}"/>
+                        </th:block>
+                    </tr>
+-->
+
+                </table>
+            </td>
+        </tr>
+        <td th:if="${formType == 'SELF'}"
+            style="padding: 2px 4px;" colspan="3">
+            <div class="col-md-3">
+                <table border="0" cellspacing="0" cellpadding="0" width="100%" style="border-collapse: collapse;">
+                    <th:block th:each="ProposalNomineeDetails : ${nomineeDetailsCount}" >
+                        <tbody>
+                        <tr>
+                            <td >
+                                <table border="1" cellspacing="0" cellpadding="0" width="100%" style="border-collapse: collapse;">
+                                    <tbody>
+
+                                    </tbody>
+                                </table>
+
+                            </td>
+                        </tr>
+                        </tbody>
+                    </th:block>
+                </table>
+
+                <table border="1" cellspacing="0" cellpadding="0" width="100%" style="border-collapse: collapse;">
+                    <tbody th:if="${isChildDetailsRequired == 'YES'}">
+                    <tr>
+                        <td colspan="3" style="color: #333;font-size: 10px; font-family: arial; padding: 2px 4px" align="left"><strong>Child Details</strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+                    </tr>
+                    <tr>
+                        <td width="30%" style="font-weight: bold; padding: 2px 4px; font-size: 10px; font-family: arial;">Child Name:</td>
+                        <td width="70%" style="font-size: 10px; font-family: arial;padding: 2px 4px;text-transform:uppercase;"th:text=${childName}/>
+                    </tr>
+                    <tr>
+                        <td width="30%" style="font-weight: bold; padding: 2px 4px; font-size: 10px; font-family: arial;">Child Dob:</td>
+                        <td width="70%" style="font-size: 10px; font-family: arial;padding: 2px 4px;text-transform:uppercase;"th:text=${childDob}/>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+
+
+
+
+
+        </td>
+        <!-- Communication Address Start here-->
+        <tr>
+            <td width="100%" height="20px" colspan="3" style="font-size: 10px"><span style="padding: 2px 4px;display: inline-block;"><strong>18. CURRENT RESIDENTIAL ADDRESS</strong></span></td>
+        </tr>
+        <tr>
+            <td width="100%" colspan="3" style="font-size: 10px; font-family: arial;padding:5px">
+                <table width="100%" cellpadding="5" cellspacing="0" border="1" style="border-collapse: collapse; vertical-align: top;">
+                    <tbody>
+                    <tr>
+                        <td width="30%" colspan="1" style="font-size: 10px;padding: 2px 4px; font-family: arial;padding-left:9px">House No./Apt. Name</td>
+                        <td width="70%" colspan="1" style="font-size: 10px; font-family: arial;padding-left:9px;text-transform:uppercase;"><span th:text=${commHouseNo}></span></td>
+                    </tr>
+                    <tr>
+                        <td width="30%" colspan="1" style="font-size: 10px; padding: 2px 4px;font-family: arial;padding-left:9px">Society Road/Area/Sector</td>
+                        <td width="70%" colspan="1" style="font-size: 10px; font-family: arial;padding-left:9px;text-transform:uppercase;"><span th:text=${commArea}></span></td>
+                    </tr>
+                    <tr>
+                        <td width="30%" colspan="1" style="font-size: 10px;padding: 2px 4px; font-family: arial;padding-left:9px">Landmark</td>
+                        <td width="70%" colspan="1" style="font-size: 10px;padding: 2px 4px; font-family: arial;padding-left:9px;text-transform:uppercase;"><span th:text=${commLandmark}></span></td>
+                    </tr>
+                    <tr>
+                        <td width="30%" colspan="1" style="font-size: 10px;padding: 2px 4px; font-family: arial;padding-left:9px">Village/Town</td>
+                        <td width="70%" colspan="1" style="font-size: 10px;padding: 2px 4px; font-family: arial;padding:0;">
+                            <table width="100%" cellpadding="5" cellspacing="0" border="0" style="border-collapse: collapse; vertical-align: top;">
+                                <tbody>
+                                <tr>
+                                    <td style="font-size: 10px;padding: 2px 4px; font-family: arial;padding-left:40px; border-right: 1px solid #000;text-transform:uppercase;"><span th:text=${commVillage}></span></td>
+                                    <td style="font-size: 10px;padding: 2px 4px; font-family: arial;padding-left:9px;border-right: 1px solid #000"><span>City/District</span></td>
+                                    <td style="font-size: 10px;padding: 2px 4px; font-family: arial;padding-left:9px;padding-right:40px ;border-right: 1px solid #000;text-transform:uppercase;"><span  th:text=${commCity}></span></td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </td>
+
+                    </tr>
+                    <tr>
+                        <td width="30%" colspan="1" style="font-size: 10px;padding: 2px 4px; font-family: arial;padding-left:9px">Pin Code</td>
+                        <td width="70%" colspan="1" style="font-size: 10px;padding: 2px 4px; font-family: arial;padding:0;">
+                            <table width="100%" cellpadding="5" cellspacing="0" border="0" style="border-collapse: collapse; vertical-align: top;">
+                                <tbody>
+                                <tr>
+                                    <td style="font-size: 10px;padding: 2px 4px; font-family: arial;padding-left:9px; border-right: 1px solid #000;text-transform:uppercase;"><span th:text=${commPincode}></span></td>
+                                    <td style="font-size: 10px;padding: 2px 4px; font-family: arial;padding-left:9px;border-right: 1px solid #000"><span>State/UT</span></td>
+                                    <td style="font-size: 10px;padding: 2px 4px; font-family: arial;padding-left:9px;border-right: 1px solid #000;text-transform:uppercase;"><span th:text=${commState}></span></td>
+                                    <td style="font-size: 10px;padding: 2px 4px; font-family: arial;padding-left:9px;border-right: 1px solid #000"><span>Country</span></td>
+                                    <td style="font-size: 10px;padding: 2px 4px; font-family: arial;padding-left:9px;text-transform:uppercase;"><span th:text=${commCountry}></span></td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td width="30%" colspan="1" style="font-size: 10px;padding: 2px 4px; font-family: arial;padding-left:9px">Mobile No. 1</td>
+                        <td width="70%" colspan="1" style="font-size: 10px;padding: 2px 4px; font-family: arial;padding:0;">
+                            <table width="100%" cellpadding="5" cellspacing="0" border="0" style="border-collapse: collapse; vertical-align: top;">
+                                <tbody>
+                                <tr>
+                                    <td style="font-size: 10px;padding: 2px 4px; font-family: arial;padding-left:9px; border-right: 1px solid #000;"><span th:text=${mobileNumber}></span></td>
+                                    <td style="font-size: 10px;padding: 2px 4px; font-family: arial;padding-left:9px;border-right: 1px solid #000"><span>Mobile No. 2</span></td>
+                                    <td style="font-size: 10px;padding: 2px 4px; font-family: arial;padding-left:9px;border-right: 1px solid #000"><span th:text=${alternateMobileNo}></span></td>
+                                    <td style="font-size: 10px;padding: 2px 4px; font-family: arial;padding-left:9px;border-right: 1px solid #000"><span>Std Code</span></td>
+                                    <td width="100px" style="font-size: 10px;padding: 2px 4px; font-family: arial;padding-left:9px;border-right: 1px solid #000"><span th:text=${stdIsdCode}></span></td>
+                                    <td style="font-size: 10px;padding: 2px 4px; font-family: arial;padding-left:9px;border-right: 1px solid #000"><span>Telephone#</span></td>
+                                    <td style="font-size: 10px;padding: 2px 4px; font-family: arial;padding-left:9px;"><span th:text=${landlineNo}></span></td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td width="30%" colspan="1" style="font-size: 10px;padding: 2px 4px; font-family: arial;padding-left:9px"><strong>E-mail ID</strong></td>
+                        <td width="70%" colspan="1" style="font-size: 10px;padding: 2px 4px; font-family: arial;padding-left:9px"><span th:text=${email}></span></td>
+                        <!-- Communication Address End here-->
+                    </tr>
+
+                    <!-- Insured person contact details-->
+                    <th:block th:if="${isInsurerMajor == 'YES'}">
+                        <tr>
+                            <td width="30%" colspan="1" style="font-size: 10px;padding: 2px 4px; font-family: arial;padding-left:9px"><strong>Insured Mobile Number</strong></td>
+                            <td width="70%" colspan="1" style="font-size: 10px;padding: 2px 4px; font-family: arial;padding-left:9px"><span th:text=${insuredMobileNumber}></span></td>
+                        </tr>
+                        <tr>
+                            <td width="30%" colspan="1" style="font-size: 10px;padding: 2px 4px; font-family: arial;padding-left:9px"><strong>Insured E-mail ID</strong></td>
+                            <td width="70%" colspan="1" style="font-size: 10px;padding: 2px 4px; font-family: arial;padding-left:9px"><span th:text=${insuredEmail}></span></td>
+                        </tr>
+                    </th:block>
+
+                    </tbody>
+                </table>
+            </td>
+        </tr>
+        <!-- Permanent Address Start here-->
+        <tr>
+            <td width="100%" height="20px" colspan="3" style="font-size: 10px"><span style="padding: 2px 4px;display: inline-block;"><strong>19. PERMANENT RESIDENTIAL ADDRESS </strong><i>(optional)</i></span></td>
+        </tr>
+        <tr>
+            <td width="100%" colspan="3" style="font-size: 10px; font-family: arial;padding:5px">
+                <table width="100%" cellpadding="5" cellspacing="0" border="1" style="border-collapse: collapse; vertical-align: top;">
+                    <tbody>
+                    <tr>
+                        <td width="30%" colspan="1" style="font-size: 10px;padding: 2px 4px; font-family: arial;padding-left:9px">House No./Apt. Name</td>
+                        <td width="70%" colspan="1" style="font-size: 10px;padding: 2px 4px; font-family: arial;padding-left:9px;text-transform:uppercase;"><span th:text=${permHouseNo}></span></td>
+                    </tr>
+                    <tr>
+                        <td width="30%" colspan="1" style="font-size: 10px;padding: 2px 4px; font-family: arial;padding-left:9px">Society Road/Area/Sector</td>
+                        <td width="70%" colspan="1" style="font-size: 10px;padding: 2px 4px; font-family: arial;padding-left:9px;text-transform:uppercase;"><span th:text=${permArea}></span></td>
+                    </tr>
+                    <tr>
+                        <td width="30%" colspan="1" style="font-size: 10px;padding: 2px 4px; font-family: arial;padding-left:9px">Landmark</td>
+                        <td width="70%" colspan="1" style="font-size: 10px;padding: 2px 4px; font-family: arial;padding-left:9px;text-transform:uppercase;"><span th:text=${permLandmark}></span></td>
+                    </tr>
+                    <tr>
+                        <td width="30%" colspan="1" style="font-size: 10px;padding: 2px 4px; font-family: arial;padding-left:9px">Village/Town</td>
+                        <td width="70%" colspan="1" style="font-size: 10px;padding: 2px 4px; font-family: arial;padding:0;">
+                            <table width="100%" cellpadding="5" cellspacing="0" border="0" style="border-collapse: collapse; vertical-align: top;">
+                                <tbody>
+                                <tr>
+                                    <td style="font-size: 10px;padding: 2px 4px; font-family: arial;padding-left:40px; border-right: 1px solid #000;text-transform:uppercase;"><span th:text=${permVillage}></span></td>
+                                    <td style="font-size: 10px;padding: 2px 4px; font-family: arial;padding-left:9px;border-right: 1px solid #000"><span>City/District</span></td>
+                                    <td style="font-size: 10px;padding: 2px 4px; font-family: arial;padding-left:9px;padding-right:40px ;border-right: 1px solid #000;text-transform:uppercase;"><span  th:text=${permCity}></span></td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </td>
+
+                    </tr>
+                    <tr>
+                        <td width="30%" colspan="1" style="font-size: 10px;padding: 2px 4px; font-family: arial;padding-left:9px">Pin Code</td>
+                        <td width="70%" colspan="1" style="font-size: 10px;padding: 2px 4px; font-family: arial;padding:0;">
+                            <table width="100%" cellpadding="5" cellspacing="0" border="0" style="border-collapse: collapse; vertical-align: top;">
+                                <tbody>
+                                <tr>
+                                    <td style="font-size: 10px;padding: 2px 4px; font-family: arial;padding-left:9px; border-right: 1px solid #000;"><span th:text=${permPincode}></span></td>
+                                    <td style="font-size: 10px;padding: 2px 4px; font-family: arial;padding-left:9px;border-right: 1px solid #000"><span>State/UT</span></td>
+                                    <td style="font-size: 10px;padding: 2px 4px; font-family: arial;padding-left:9px;border-right: 1px solid #000;text-transform:uppercase;"><span th:text=${permState}></span></td>
+                                    <td style="font-size: 10px;padding: 2px 4px; font-family: arial;padding-left:9px;border-right: 1px solid #000"><span>Country</span></td>
+                                    <td style="font-size: 10px;padding: 2px 4px; font-family: arial;padding-left:9px;border-right: 1px solid #000;text-transform:uppercase;"><span th:text=${permCountry}></span></td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+            </td>
+        </tr>
+        <tr>
+            <td width="70%" colspan="2" style="font-size: 10px; font-family: arial;"><span style="padding: 2px 4px;display: inline-block;"><strong>19 a. I/We agree to receive regular promotional updates / alerts from Axis Max life from time to time.</strong></span></td>
+            <td width="30%" colspan="1" style="font-size: 10px; font-family: arial;"><span style="padding: 4px;display: inline-block;" th:text="${customerReminderConsent}"></span></td>
+        </tr>
+       </tr>
+        <tr>
+            <td width="70%" colspan="2" style="font-size: 10px; font-family: arial;"><span style="padding: 2px 4px;display: inline-block;"><strong>20. Preferred Mailing Address</strong></span></td>
+            <td width="30%" colspan="1" style="font-size: 10px; font-family: arial; padding-left: 9px"><span style="padding: 2px 4px;display: inline-block;">Current Residential</span></td>
+        </tr>
+        <!-- <tr>
+           <td width="70%" colspan="2" style="font-size: 10px; font-family: arial;"><span style="padding: 2px 4px;display: inline-block;"><strong>20. Preferred language of communication:</strong></span></td>
+           <td width="30%" colspan="1" style="font-size: 10px; font-family: arial; padding-left: 9px;text-transform:uppercase;"><span style="padding: 2px 4px;display: inline-block;" th:text=${languageComm}></span></td>
+        </tr> -->
+        <tr>
+            <td width="70%" colspan="2" style="font-size: 10px; font-family: arial;"><span style="padding: 2px 4px;display: inline-block;"><strong>21. Do you wish to hold for this policy electronically under e-Insurance ?</strong></span></td>
+            <td width="30%" colspan="1" style="font-size: 10px; font-family: arial;padding-left: 9px;"><span style="padding: 2px 4px;display: inline-block; text-transform:uppercase;" th:text=${isEIA}></span></td>
+        </tr>
+        <!--<tr th:if ="${isEIA == 'YES'}">
+                       <td width="100%" colspan="3" style="font-size: 10px; font-family: arial;padding-left: 10px;">
+                           <span style="padding: 5px;display: inline-block;">
+                               <strong>a. Provide existing E - insurance Account Number:</strong>
+                           </span>
+                           <span th:text=${EAccNumberExist}></span>
+                       </td>
+                   </tr>
+                   <tr th:if ="${isEIA == 'YES'}">
+                       <td width="100%" colspan="3" style="font-size: 10px; font-family: arial;padding-left: 10px;">
+                           <span style="padding: 5px;display: inline-block;">
+                               <strong>b. e - insurance Account Number:</strong>
+                           </span>
+                           <span th:text=${insuranceRepositoryExist}></span>
+                       </td>
+                   </tr>-->
+        <tr th:if="${isEIA == 'YES'}">
+            <td width="100%" colspan="3" style="font-size: 10px; font-family: arial;">
+										<span style="padding: 5px;display: inline-block;">
+											<strong>a. e-Insurance Account No. (if available): </strong>
+										</span>
+                <span th:text=${existingEIANumber}></span>
+                <span style="padding: 5px;display: inline-block;">
+											<strong> and Insurance Repository Name </strong>
+										</span>
+                <span style="text-transform:uppercase;" th:if="${EIANumberExist == 'YES'}" th:text=${existingRepoName}></span>
+            </td>
+        </tr>
+        <tr th:if="${isEIA == 'YES'}">
+            <td width="100%" colspan="3" style="font-size: 10px; font-family: arial;">
+										<span style="padding: 5px;display: inline-block;">
+											<strong>b. Preferred Insurance Repository you would like to have your e-Insurance Account.</strong>
+										</span>
+                <span style="text-transform:uppercase;" th:if="${EIANumberExist == 'NO'}" th:text=${preferredRepoName}></span>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+</td>

@@ -1,0 +1,47 @@
+package com.mli.mpro.common.models;
+
+import javax.validation.Valid;
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.mli.mpro.utils.Utility;
+
+public class Request {
+    @JsonProperty("metadata")
+    private Metadata metadata;
+    @JsonProperty("requestData")
+    @Valid
+    private RequestData requestData;
+
+    public Request() {
+
+    }
+
+    public Request(Metadata metadata, RequestData requestData) {
+	super();
+	this.metadata = metadata;
+	this.requestData = requestData;
+    }
+
+    public Metadata getMetadata() {
+	return metadata;
+    }
+
+    public void setMetadata(Metadata metadata) {
+	this.metadata = metadata;
+    }
+
+    public RequestData getRequestData() {
+	return requestData;
+    }
+
+    public void setRequestData(RequestData requestData) {
+	this.requestData = requestData;
+    }
+
+    @Override
+    public String toString() {
+        if(Utility.isCalledFromLogs(Thread.currentThread())){
+           return Utility.toString(this);
+        }
+	return "Request [metadata=" + metadata + ", requestData=" + requestData + "]";
+    }
+}

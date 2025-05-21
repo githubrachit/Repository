@@ -1,0 +1,342 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "properties": {
+    "request": {
+      "type": "object",
+      "properties": {
+        "metadata": {
+          "type": "null"
+        },
+        "requestData": {
+          "type": "object",
+          "properties": {
+            "requestPayload": {
+              "type": "object",
+              "properties": {
+                "productRestrictionPayload": {
+                  "type": "object",
+                  "properties": {
+                    "education": {
+                      "type": "string",
+                      "enum": [
+                        "Senior School",
+                        "High School",
+                        "Graduate",
+                        "Post Graduate",
+                        "Professional",
+                        "Diploma",
+                        "Illiterate",
+                        "Primary School"
+                      ]
+                    },
+                    "insurerEducation": {
+                      "type": [
+                        "string",
+                        "null"
+                      ]
+                    },
+                    "income": {
+                      "type": "string",
+                      "pattern": "^[1-9][0-9]{0,8}$"
+                    },
+                    "insurerAnnualIncome": {
+                      "type": [
+                        "string",
+                        "null"
+                      ]
+                    },
+                    "occupation": {
+                      "type": "string",
+                      "enum": [
+                        "Salaried",
+                        "Self Employed",
+                        "Housewife",
+                        "Professional",
+                        "Student",
+                        "Self Employed From Home",
+                        "Agriculture",
+                        "Retired",
+                        "Others"
+                      ]
+                    },
+                    "insurerOccupation": {
+                      "type": [
+                        "string",
+                        "null"
+                      ]
+                    },
+                    "sumAssured": {
+                      "type": "string",
+                      "pattern": "^[1-9][0-9]{0,8}$"
+                    },
+                    "objectiveOfInsurance": {
+                      "type": [
+                        "string",
+                        "null"
+                      ]
+                    },
+                    "isJointLife": {
+                      "type": "string",
+                      "enum" : [
+                        "yes",
+                        "no"
+                      ]
+                    },
+                    "premiumType": {
+                      "type": "string",
+                      "enum": [
+                        "Single Pay",
+                        "Limited Pay",
+                        "Pay Till 60",
+                        "Regular Pay"
+                      ]
+                    },
+                    "spouseAnnualIncome": {
+                      "type": [
+                        "string",
+                        "null"
+                      ]
+                    },
+                    "spouseTotalInsuranceCover": {
+                      "type": [
+                        "string",
+                        "null"
+                      ]
+                    },
+                    "customerCode": {
+                      "type": [
+                        "string",
+                        "null"
+                      ]
+                    },
+                    "industryType": {
+                      "type": [
+                        "string",
+                        "null"
+                      ]
+                    },
+                    "productId": {
+                      "type": "string"
+                    },
+                    "agentId": {
+                      "type": "string"
+                    },
+                    "panNumber": {
+                      "type": [
+                        "string",
+                        "null"
+                      ]
+                    },
+                    "gender": {
+                      "type": "string",
+                      "enum": [
+                        "Male",
+                        "Female",
+                        "Transgender"
+                      ]
+                    },
+                    "formType": {
+                      "type": "string",
+                      "enum": [
+                        "dependent",
+                        "self",
+                        "businessInsurance"
+                      ]
+                    },
+                    "communicationPinCode": {
+                      "type": "string"
+                    },
+                    "communicationCountry": {
+                      "type": "string",
+                      "pattern": "^(?!\\s)(?!.*\\s{2})[^\\s].*[^\\s](?!\\s)$"
+                    },
+                    "agentRole": {
+                      "type": "string"
+                    },
+                    "communicationCity": {
+                      "type": "string",
+                      "minLength": 1,
+                      "maxLength": 50,
+                      "pattern": "^(?!\\s)(?!.*\\s{2})[^\\s].*[^\\s](?!\\s)$"
+                    },
+                    "isSmoker": {
+                      "type": "boolean"
+                    },
+                    "nationality": {
+                      "type": "string",
+                      "enum": [
+                        "Indian",
+                        "NRI",
+                        "PIO/OCI",
+                        "Foreign National"
+                      ]
+                    },
+                    "dateOfBirth": {
+                      "type": "string"
+                    },
+                    "channel": {
+                      "type": "string"
+                    },
+                    "residentialStatus": {
+                      "type": "string"
+                    },
+                    "isDedupeValidated": {
+                      "type": "string"
+                    },
+                    "isWOPPlusRider": {
+                      "type": "boolean"
+                    },
+                    "isCIRider": {
+                      "type": "boolean"
+                    },
+                    "isACORider": {
+                      "type": "boolean"
+                    },
+                    "isACIRider": {
+                      "type": "boolean"
+                    },
+                    "isTermPlusRider": {
+                      "type": "boolean"
+                    },
+                    "isAccidentalDeathAndDismembermentRider" : {
+                      "type": "boolean"
+                    },
+                    "isPosSeller" : {
+                      "type": "boolean"
+                    },
+                    "currentCIRiderSumAssured" : {
+                      "type": [
+                        "string",
+                        "null"
+                      ]
+                    },
+                    "termPlusAddAmount" : {
+                      "type": [
+                        "string",
+                        "null"
+                      ]
+                    },
+                    "currentACIRiderSumAssured" : {
+                      "type": [
+                        "string",
+                        "null"
+                      ]
+                    },
+                    "currentACORiderSumAssured" : {
+                      "type": [
+                        "string",
+                        "null"
+                      ]
+                    },
+                    "permanentCountry": {
+                      "type": "string"
+                    },
+                    "isDiabetic": {
+                      "type": "boolean"
+                    },
+                    "transactionId": {
+                      "type": [
+                        "integer",
+                        "null"
+                      ]
+                    },
+                    "policyTerm" : {
+                      "type": [
+                        "string"
+                      ]
+                    },
+                    "premiumPaymentTerm" : {
+                      "type": [
+                        "string"
+                      ]
+                    },
+                    "limitedTerm" : {
+                      "type" : "string"
+                    },
+                    "isPCB" : {
+                      "type" : "string",
+                      "enum": [
+                        "yes",
+                        "no"
+                      ]
+                    },
+                    "variant" : {
+                      "type": "string",
+                      "enum": [
+                        "Short Term Income",
+                        "Lump Sum",
+                        "Long Term Income",
+                        "Whole Life Income"
+                      ]
+
+                    },
+                    "premiumCommitment" : {
+                      "type": [
+                        "string",
+                        "null"
+                      ]
+                    },
+                    "accidentalDeathAddAmount" : {
+                      "type": [
+                        "string",
+                        "null"
+                      ]
+                    }
+                  },
+                  "required": [
+                    "education",
+                    "income",
+                    "occupation",
+                    "sumAssured",
+                    "productId",
+                    "agentId",
+                    "formType",
+                    "isCIRider",
+                    "isWOPPlusRider",
+                    "isACORider",
+                    "isACIRider",
+                    "isTermPlusRider",
+                    "isAccidentalDeathAndDismembermentRider",
+                    "policyTerm",
+                    "premiumPaymentTerm",
+                    "communicationPinCode",
+                    "communicationCountry",
+                    "agentRole",
+                    "variant",
+                    "communicationCity",
+                    "isSmoker",
+                    "nationality",
+                    "dateOfBirth",
+                    "isPCB",
+                    "limitedTerm",
+                    "premiumType",
+                    "channel",
+                    "residentialStatus",
+                    "isDedupeValidated",
+                    "permanentCountry",
+                    "isDiabetic",
+                    "isPosSeller"
+                  ]
+                }
+              },
+              "required": [
+                "productRestrictionPayload"
+              ]
+            }
+          },
+          "required": [
+            "requestPayload"
+          ]
+        }
+      },
+      "required": [
+        "metadata",
+        "requestData"
+      ]
+    }
+  },
+  "required": [
+    "request"
+  ]
+}

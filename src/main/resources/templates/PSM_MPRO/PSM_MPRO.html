@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.w3.org/1999/xhtml">
+
+<head>
+	<title>PSM</title>
+	<style type="text/css">
+        table,
+        td,
+        tr {
+            border-collapse: collapse;
+			font-size: 11pt;
+        }
+
+        .page-break-after {
+            page-break-after: always;
+            page-break-inside: avoid;
+            clear: both;
+        }
+
+        .page-break-before {
+            page-break-before: always;
+            page-break-inside: avoid;
+            clear: both;
+        }
+
+        @media print {
+            * {
+                font-size: 6pt !important;
+            }
+            .printtext {
+                font-size: 11pt !important;
+            }
+        }
+<!--        FUL2-250915 -->
+		@page :first {
+		margin-top: 85pt;
+        @top-center {
+            content: url("classpath:static/axisMaxLifeCISHeader.png");
+        }
+		}
+		@page{
+        margin: 30pt 0pt 30pt 0pt; /* Top 30pt, right, bottom, and left 0pt */
+         }
+    </style>
+</head>
+
+<body style="margin: 0 auto;padding: 0;">
+<table border="0" align="center" cellpadding="0" cellspacing="0" style="border-collapse: collapse;width: 98%;margin-top: 10px;margin-left:40pt;margin-right:35pt;">
+	<tbody>
+	<!-- Main Wrapper Start Here-->
+	<tr>
+		<td style="text-align:right;padding:10px;font-family:Calibri;font-size:11pt">Version 22.0 Output form<br/>April 13, 2025</td>
+		<td>&nbsp;</td>
+	</tr>
+	<!--<tr>
+		<td height="5">
+			&nbsp;
+		</td>
+	</tr>
+
+	<tr>
+		<td height="5">
+			&nbsp;
+		</td>
+	</tr>-->
+	<tr>
+		<td style="padding: 10px 0; font-size: 11pt; font-family: calibri; width: 100%;border:none;">
+			<table border="0" width="100%" cellspacing="0" style="border-collapse: collapse;">
+				<tr>
+					<td style="font-family: calibri;padding: 5px; font-weight: bold;">
+						<div>Need analysis for<span
+                        style="text-align: center;min-width: 180px;border-bottom-color: #000;border-bottom-style: solid;border-bottom-width: 1px;display: inline-block;padding: 0 18px;font-weight: bold;text-transform:uppercase;margin-right: 20px;"><span
+                            th:text=${NeedForAnalysis}></span></span>
+							Age: <span
+							style="text-align: center;min-width: 100px;border-bottom-color: #000;border-bottom-style: solid;border-bottom-width: 1px;display: inline-block;padding: 0 18px;font-weight: bold;text-transform:uppercase;"><span
+								th:text=${Age}></span></span>
+						</div>
+						<div style="padding-top: 10px;">
+							Occupation: <span
+							style="text-align: center;min-width: 100px;border-bottom-color: #000;border-bottom-style: solid;border-bottom-width: 1px;display: inline-block;padding: 0 18px;font-weight: bold;text-transform:uppercase;"><span
+								th:text=${Occupation}></span></span> (Salaried/ Self-employed/others)
+						</div>
+					</td>
+				</tr>
+			</table>
+		</td>
+	</tr>
+	<tr>
+		<td style="padding: 0; font-size: 11pt; font-family: calibri; width: 100%;border:none;">
+			<table border="0" width="100%" cellspacing="0" style="border-collapse: collapse;text-align: left;">
+				<tr>
+					<td style="font-family: calibri;padding: 0 0 10px;">(Details of prospect are <strong>mandatory</strong>)</td>
+				</tr>
+			</table>
+		</td>
+	</tr>
+	<tr>
+		<td style="padding: 10px 0; font-size: 11pt; font-family: calibri; width: 100%;border:none;">
+			<table border="1" width="100%" cellspacing="0" style="border-collapse: collapse;text-align: left;">
+				<tr>
+					<td colspan="5" style="font-family: calibri;padding: 5px 8px;"><strong> Life stage: </strong> Select basis personal information of the customer <strong>(mandatory)</strong></td>
+				</tr>
+				<tr>
+					<td style="padding: 5px 8px;font-size: 11pt;text-align: center;">Single</td>
+					<td style="padding: 5px 8px;font-size: 11pt;text-align: center;">Married with no children</td>
+					<td style="padding: 5px 8px;font-size: 11pt;text-align: center;">Single with Children</td>
+					<td style="padding: 5px 8px;font-size: 11pt;text-align: center;">Married with children</td>
+					<td style="padding: 5px 8px;font-size: 11pt;text-align: center;">Close to retirement or retired(Prospect age >= 45 years)</td>
+				</tr>
+
+				<tr>
+					<td style="font-family: Calibri;padding:2px 4px;text-align: center; width:100px" >
+						<input style="width: 20px;height: 18px" type="checkbox" th:checked="${LifeStage == 'Single'}" disabled />
+					</td>
+					<td style="font-family: Calibri;padding:2px 4px;text-align: center;" >
+						<input style="width: 20px;height: 18px" type="checkbox" th:checked="${LifeStage == 'Married with no children'}" disabled />
+					</td>
+					<td style="font-family: Calibri;padding:2px 4px;text-align: center;">
+						<input style="width: 20px;height: 18px" type="checkbox" th:checked="${LifeStage == 'Single with Children'}" disabled />
+					</td>
+					<td style="font-family: Calibri;padding:2px 4px;text-align: center;">
+						<input style="width: 20px;height: 18px" type="checkbox" th:checked="${LifeStage == 'Married with children'}" disabled />
+					</td>
+					<td style="font-family: Calibri;padding:2px 4px;text-align: center;">
+						<input style="width: 20px;height: 18px" type="checkbox" th:checked="${LifeStage == 'Close to retirement or retired'}" disabled />
+					</td>
+				</tr>
+			</table>
+		</td>
+	</tr>
+	<tr>
+		<td style="padding: 10px 0; font-size: 11pt; font-family: calibri; width: 100%;border:none;">
+			<table border="1" width="100%" cellspacing="0" style="border-collapse: collapse;text-align: left;">
+				<tr>
+
+					<td style="font-family: calibri;padding: 5px 8px;font-weight: bold;">Gross annual income (Rs.) (mandatory)</td>
+					<td style="font-family: calibri;padding: 5px 8px;" th:text=${GrossAnnualIncome}></td>
+				</tr>
+			</table>
+		</td>
+	</tr>
+	<tr>
+		<td style="padding: 10px 0; font-size: 11pt; font-family: calibri; width: 100%;border:none;">
+			<table border="1" width="100%" cellspacing="0" style="border-collapse: collapse;text-align: left;">
+				<tr>
+					<td colspan="6" style="font-family: calibri;padding: 5px 8px;"><strong>Purpose of Insurance (mandatory,</strong> maximum 1 goal at a time) </td>
+				</tr>
+				<tr>
+					<td style="padding: 5px 8px;font-size: 11pt;text-align: center;background-color: #F1F1F1;">Insurance need / Investment objective</td>
+					<td style="padding: 5px 8px;font-size: 11pt;text-align: center;background-color: #F1F1F1;">Protection</td>
+					<td style="padding: 5px 8px;font-size: 11pt;text-align: center;background-color: #F1F1F1;">Children&rsquo;s marriage/ education</td>
+					<td style="padding: 5px 8px;font-size: 11pt;text-align: center;background-color: #F1F1F1;">Retirement</td>
+					<td style="padding: 5px 8px;font-size: 11pt;text-align: center;background-color: #F1F1F1;">Wealth accumulation/ Investment</td>
+					<td style="padding: 5px 8px;font-size: 11pt;text-align: center;background-color: #F1F1F1;">Regular income</td>
+				</tr>
+				<tr>
+					<td style="padding: 5px 8px;font-size: 11pt;text-align: center;height: 18px;background-color: #F1F1F1;">Tick the one applicable</td>
+					<td style="font-family: Calibri;padding:2px 4px;text-align: center;" >
+						<input style="width: 20px;height: 18px" type="checkbox" th:checked="${PurposeOfInsurance == 'Protection'}" disabled />
+					</td>
+					<td style="font-family: Calibri;padding:2px 4px;text-align: center;">
+						<input style="width: 20px;height: 18px" type="checkbox" th:checked="${PurposeOfInsurance == 'Children’s marriage/education'}" disabled />
+					</td>
+					<td style="font-family: Calibri;padding:2px 4px;text-align: center;">
+						<input style="width: 20px;height: 18px" type="checkbox" th:checked="${PurposeOfInsurance == 'Retirement'}" disabled />
+					</td>
+					<td style="font-family: Calibri;padding:2px 4px;text-align: center;">
+						<input style="width: 20px;height: 18px" type="checkbox" th:checked="${PurposeOfInsurance == 'Wealth accumulation/Investment'}" disabled />
+					</td>
+					<td style="font-family: Calibri;padding:2px 4px;text-align: center;">
+						<input style="width: 20px;height: 18px" type="checkbox" th:checked="${PurposeOfInsurance == 'Regular income'}" disabled />
+					</td>
+				</tr>
+			</table>
+		</td>
+	</tr>
+	<tr>
+		<td style="padding: 10px 0; font-size: 11pt; font-family: calibri; width: 100%;border:none;">
+			<table border="1" width="100%" cellspacing="0" style="border-collapse: collapse;text-align: left;">
+				<tr>
+					<td colspan="2" style="font-family: calibri;padding: 5px 8px;font-weight: bold;vertical-align: middle;">
+						Any existing life insurance cover already held(mandatory)  
+					<span style="padding-left:40px;">
+						<span style="padding-left: 6px;">
+						<input style="margin: 0;" type="checkbox" th:checked="${ExistingLifeCover == 'Yes'}" disabled />Yes
+					</span>
+					<span style="padding-left: 6px;">
+						<input style="margin: 0;" type="checkbox" th:checked="${ExistingLifeCover != 'Yes'}" disabled />No
+					</span>
+					</span>
+					</td>
+				</tr>
+				<tr>
+					<td style="font-family: calibri;padding: 5px 8px;">Total sum assured (if answer to the above question is yes) </td>
+					<td style="font-family: calibri;padding: 5px 8px;" th:if="${ExistingLifeCover == 'Yes'}" th:text=${TotalSumAssured}></td>
+				
+				</tr>
+
+			</table>
+		</td>
+	</tr>
+	<tr>
+		<td style="padding: 10px 0; font-size: 11pt; font-family: calibri; width: 100%;border:none;">
+			<table border="1" width="100%" cellspacing="0" style="border-collapse: collapse;text-align: left;">
+				<tr>
+					<th style="font-family: calibri;padding: 5px; font-weight: bold;background-color: #F1F1F1;">Recommended products (as per standard product suitability matrix)</th>
+				</tr>
+				<tr>
+					<td style="font-family: calibri;padding: 5px;"th:text=${RecommendedProducts}>&nbsp;</td>
+				</tr>
+			</table>
+		</td>
+	</tr>
+	<tr>
+		<td style="padding: 10px 0; font-size: 11pt; font-family: calibri; width: 100%;border:none;">
+			<table border="1" width="100%" cellspacing="0" style="border-collapse: collapse;text-align: left;">
+				<tr>
+					<th style="font-family: calibri;padding: 5px; font-weight: bold;background-color: #F1F1F1">Selected product</th>
+				</tr>
+				<tr>
+					<td style="font-family: calibri;padding: 5px;"th:text=${SelectedProduct}>&nbsp;</td>
+				</tr>
+			</table>
+		</td>
+	</tr>
+	<tr>
+		<td style="padding: 10px 0; font-size: 11pt; font-family: calibri; width: 100%;border:none;">
+			<table border="1" width="100%" cellspacing="0" style="border-collapse: collapse;text-align: left;">
+				<tr>
+					<th style="font-family: calibri;padding: 5px; font-weight: bold;background-color: #F1F1F1">Nature of the selected product</th>
+				</tr>
+				<tr>
+					<td style="font-family: calibri;padding: 5px;vertical-align: middle;">
+						<span style="display: inline-block;text-align: center;">
+							<input style="margin: 0;" type="checkbox" th:checked="${NatureOfProduct== 'Traditional'}" disabled /> Traditional
+						</span>	
+						<span style="padding-left: 60px;display: inline-block;text-align: center;">
+							<input style="margin: 0;" type="checkbox" th:checked="${NatureOfProduct== 'ULIP'}" disabled /> ULIP
+						</span>	
+						<span style="padding-left: 60px;display: inline-block;text-align: center;">
+							<input style="margin: 0;" type="checkbox" th:checked="${NatureOfProduct== 'Combo'}" disabled /> Combo
+						</span>
+						<span style="padding-left: 60px;display: inline-block;text-align: center;">
+							<input style="margin: 0;" type="checkbox" th:checked="${NatureOfProduct== 'Annuity'}" disabled /> Annuity
+						</span>
+					</td>
+				</tr>
+			</table>
+		</td>
+	</tr>
+	<tr>
+		<td style="padding: 10px 0; font-size: 11pt; font-family: calibri; width: 100%;border:none;">
+			<table border="1" width="100%" cellspacing="0" style="border-collapse: collapse;text-align: left;">
+				<tr>
+					<th style="font-family: calibri;padding: 5px; font-weight: bold;background-color: #F1F1F1;width: 33%;">Premium payment term
+						<div style="font-weight: normal; padding: 4px 0;">(recommended for selected product)</div>
+					</th>
+					<th style="font-family: calibri;padding: 5px; font-weight: bold;background-color: #F1F1F1;width: 33%;">Policy term
+						<div style="font-weight: normal; padding: 4px 0;">(recommended for selected product)</div>
+					</th>
+					<th style="font-family: calibri;padding: 5px; font-weight: bold;background-color: #F1F1F1;width: 33%;">Mode of premium payment
+						<div style="font-weight: normal; padding: 4px 0;">(recommended for selected product)</div>
+					</th>
+				</tr>
+				<tr>
+					<td style="font-family: calibri;padding: 5px;"th:text=${PremiumPaymentTerm}></td>
+					<td style="font-family: calibri;padding: 5px;"th:text=${PolicyTerm}></td>
+					<td style="font-family: calibri;padding: 5px;"th:text=${ModeOfPayment}></td>
+				</tr>
+			</table>
+		</td>
+	</tr>
+	<tr>
+		<td class="page-break-after"></td>
+	</tr>
+	<tr>
+		<td class="page-break-before"></td>
+	</tr>
+	<tr>
+		<td style="padding: 16px 0; font-size: 11pt; font-family: calibri; width: 100%;font-weight: 600;text-align: center;">Mandatory field for all customers</td>
+	</tr>
+	<tr>
+		<td style="padding: 10px 0; font-size: 11pt; font-family: calibri; width: 100%;border:none;font-weight: 400;text-align: center;">
+			<table border="1" width="100%" cellspacing="0" style="border-collapse: collapse;text-align: left;">
+				<tr>
+					<td colspan="1" style="font-family: calibri;padding: 5px;width: 20%">Customer Name</td>
+					<td colspan="3" style="font-family: calibri;padding: 5px;width: 80%"th:text=${CustomerName}>&nbsp;</td>
+
+				</tr>
+				<tr>
+					<td colspan="1" style="font-family: calibri;padding: 5px;width: 20%">Proposal no(s)<div>(If proposal is applied)</div></td>
+					<td colspan="1" style="font-family: calibri;padding: 5px;width: 26.6%"th:text=${ProposalNo}> </td>
+					<td colspan="1" style="font-family: calibri;padding: 5px;width: 26.6%">PSM Date</td>
+					<td colspan="1" style="font-family: calibri;padding: 5px;width: 26.6%"th:text=${Date}>&nbsp;</td>
+				</tr>
+				<tr>
+					<td colspan="4" style="font-family: calibri;padding: 5px;">I / We are aware that suitability information has been collected from me/us and recommendation on purchase of life insurance product has been made only basis such information and any product selected by me/us that differs from such recommendation is on the basis of my/our personal choice.</td>
+				</tr>
+				<tr>
+					<td colspan="1" style="font-family: calibri;padding: 5px;width: 28%">Customer signature
+						<p style="margin: 0;font-size: 11pt;margin:0">(OTP confirmation date / Thumb impression / Electronic signature of prospect/ policyholder )</p>
+					</td>
+					<td colspan="1" style="font-family: calibri;padding: 5px;width: 22%"th:text=${OTPConfirmationDate}>&nbsp;</td>
+					<td colspan="1" style="font-family: calibri;padding: 5px;width: 28%">Seller signature
+						<p style="margin: 0;font-size: 11pt">(This system generated form shall be treated as signed by me)</p>
+					</td>
+					<td colspan="1" style="font-family: calibri;padding: 5px;width: 22%"th:text="${sellerSignature}">&nbsp;</td>
+				</tr>
+			</table>
+		</td>
+	</tr>
+
+	
+	<tr>
+		<td height="5">
+			&nbsp;
+		</td>
+	</tr>
+	</tbody>
+</table>
+</body>
+
+</html>

@@ -1,0 +1,342 @@
+               <td style="font-family: arial;">
+                  <!-- Medical Details Start here-->
+                  <table cellspacing="0" cellpadding="0" width="100%" style="border-collapse: collapse; border-color: #ccc;border-style:solid;border-width:1px;">
+                     <tbody>
+                        <tr>
+                           <td colspan="2" style="background-color: #FFFFFF; color: #000000; font-weight: bold; font-family: arial; padding: 2px 4px;">MEDICAL INFORMATION</td>
+                        </tr>
+                        <tr>
+                           <td colspan="2" style="padding: 0px;font-family: arial;font-size:9px;">
+                              <table width="100%" cellpadding="0" cellspacing="0" border="0" style="border-color: #ccc;border-style:solid;border-width:1px;">
+                                 <tbody>
+                                 <tr>
+                                    <td width="30%;" style="padding: 5px 5px 5px 15px; border-color: #ccc;border-style:solid;border-width:1px; font-size: 10px; font-family: arial;"><strong>1.</strong></td>
+                                    <td width="35%;" style="padding: 5px 5px 5px 15px;border-color: #ccc;border-style:solid;border-width:1px; font-size: 10px; font-family: arial; text-align: center;"><strong>Proposer</strong></td>
+                                    <td width="35%;" style="padding: 5px 5px 5px 15px;border-color: #ccc;border-style:solid;border-width:1px; font-size: 10px; font-family: arial; text-align: center;"><strong>Life To Be Insured</strong></td>
+                                 </tr>
+                                 <tr>
+                                    <td width="30%;" style="padding: 5px 5px 5px 15px;border-color: #ccc;border-style:solid;border-width:1px; font-size: 10px; font-family: arial;"><strong>Height</strong></td>
+                                    <td width="35%;" style="font-size: 10px; font-family: arial;">
+                                       <table width="100%" cellpadding="0", cellspacing="0" border="0">
+                                          <tbody>
+                                          <tr>
+                                             <td width="33px;" style="padding: 5px 5px 5px 15px;border-color: #ccc;border-style:solid;border-width:1px; font-size: 10px; font-family: arial;">
+                                                <span th:text="${proposerHeightCm}"></span>
+                                                <span style="">cms</span>
+                                             </td>
+                                             <td width="33px;" style="padding: 5px 5px 5px 15px;border-color: #ccc;border-style:solid;border-width:1px; font-size: 10px; font-family: arial;">
+                                                <span th:text="${proposerHeightFt}"></span>
+                                                <span style="">feet</span>
+                                             </td>
+                                             <td width="34px;" style="padding: 5px 5px 5px 15px;border-color: #ccc;border-style:solid;border-width:1px; font-size: 10px; font-family: arial;">
+                                                <span th:text="${proposerHeightIn}"></span>
+                                                <span style="">inch</span>
+                                             </td>
+                                          </tr>
+                                          </tbody>
+                                       </table>
+                                    </td>
+                                    <td width="35%;" style="font-size: 10px; font-family: arial;">
+                                       <table width="100%" cellpadding="0", cellspacing="0" border="0">
+                                          <tbody>
+                                          <tr>
+                                             <td width="33px;" style="padding: 5px 5px 5px 15px;border-color: #ccc;border-style:solid;border-width:1px; font-size: 10px; font-family: arial;">
+                                                <span th:text="${insuredHeight}"></span>
+                                                <span style="">cms</span>
+                                             </td>
+                                             <td width="33px;" style="padding: 5px 5px 5px 15px;border-color: #ccc;border-style:solid;border-width:1px; font-size: 10px; font-family: arial;">
+                                                <span th:text="${insuredHeight}"></span>
+                                                <span style="">feet</span>
+                                             </td>
+                                             <td width="34px;" style="padding: 5px 5px 5px 15px;border-color: #ccc;border-style:solid;border-width:1px; font-size: 10px; font-family: arial;">
+                                                <span th:text="${insuredHeight}"></span>
+                                                <span style="">inch</span>
+                                             </td>
+                                          </tr>
+                                          </tbody>
+                                       </table>
+                                    </td>
+                                 </tr>
+                                 <tr>
+                                    <td width="30%;" style="padding: 5px 5px 5px 15px;border-color: #ccc;border-style:solid;border-width:1px; font-size: 10px; font-family: arial;"><strong>Weight</strong></td>
+                                    <td width="35%;" style="padding: 5px 5px 5px 15px; border-color: #ccc;border-style:solid;border-width:1px; font-size: 10px; font-family: arial;">
+                                       <span style="padding-left: 5px;" th:text="${proposerWeight}"></span> Kgs.</td>
+                                    <td width="35%;" style="padding: 5px 5px 5px 15px; border-color: #ccc;border-style:solid;border-width:1px; font-size: 10px; font-family: arial;">
+                                       <span th:text="${insuredWeight}"></span> kgs.
+                                    </td>
+                                 </tr>
+                                 </tbody>
+                              </table>
+                           </td>
+                        </tr>
+                        <!-- WOP Starts -->
+                        <tr>
+                           <td colspan="2" style="padding: 0px;font-family: arial;font-size:9px;">
+                              <table width="100%" cellpadding="0" cellspacing="0" border="0" style="border-color: #ccc;border-style:solid;border-width:1px;">
+                                 <tbody>
+                                    <tr>
+                                       <td style="padding: 5px 5px 5px 15px; border-color: #ccc;border-style:solid;border-width:1px; font-size: 10px; font-weight: bold;" colspan="2">2. Have you ever been investigated/ diagnosed or treated for any of the following? Check all that apply
+                                       </td>
+                                    </tr>
+                                    <tr>
+                                       <td width="80%">
+                                          <table border="0" cellpadding="0" cellspacing="0">
+                                             <tr>
+                                                <td style="padding: 5px 5px 5px 15px; font-family: arial; font-size: 11px;" width="80%"><strong>ia.</strong> Have you suffered from or received investigation or treatment for any form of Cancer, sarcoma, tumor, or pre-cancerous
+                                                   conditions? If yes, please give details</td>
+                                             </tr>
+                                             <tr>
+                                                <td style="padding: 5px 5px 5px 15px; font-family: arial; font-size: 11px;" width="80%"><strong>ib.</strong> Have any of your parents (below age 60 years), sisters or brothers suffered from any form cancer or tumors?
+                                                   If yes, please give details</td>
+                                             </tr>
+                                          </table>
+                                       </td>
+                                       <td width="20%" style="padding: 2px 4px;text-align: center;border-color: #ccc;border-style:solid;border-width:1px;font-size: 10px;">
+                                          <table width="100%" cellpadding="5" cellspacing="0" border="0" style="border-collapse: collapse; vertical-align: top;">
+                                             <tbody>
+                                             <tr>
+                                                <td width="50%" style="text-align: center; font-size: 11px;">
+                                                   <input type="checkbox" th:checked="${everBeenHospitalized=='YES'}"> Yes
+                                                </td>
+                                                <td width="50%" style="text-align: center; font-size: 11px;">
+                                                   <input type="checkbox" th:checked="${everBeenHospitalized!='YES'}"> No
+                                                </td>
+                                             </tr>
+                                             </tbody>
+                                          </table>
+                                       </td>
+									</tr>
+                                    <tr>
+                                       <td style="padding: 5px 5px 5px 15px;border-color: #ccc;border-style:solid;border-width:1px; font-family: arial; font-size: 11px;" width="80%">ii. Are you Suffering from or ever suffered from Hepatitis B, Hepatitis C, Liver disease, fatty liver due to alcohol Barrett's Oesophagus, Crohn's Disease, Peptic Ulcer, Ulcerative Colitis, HIV/AIDs, Chronic Glomerulonephritis, Chronic Kidney Disease, Polycystic
+                                          Kidney Disease, Anaemia? If yes please give details</td>
+                                       <td width="20%" style="padding: 2px 4px;text-align: center;border-color: #ccc;border-style:solid;border-width:1px;font-size: 10px;">
+                                          <table width="100%" cellpadding="5" cellspacing="0" border="0" style="border-collapse: collapse; vertical-align: top;">
+                                             <tbody>
+                                             <tr>
+                                                <td width="50%" style="text-align: center; font-size: 11px;">
+                                                   <input type="checkbox" th:checked="${everBeenHospitalized=='YES'}"> Yes
+                                                </td>
+                                                <td width="50%" style="text-align: center; font-size: 11px;">
+                                                   <input type="checkbox" th:checked="${everBeenHospitalized!='YES'}"> No
+                                                </td>
+                                             </tr>
+                                             </tbody>
+                                          </table>
+                                       </td>
+                                    </tr>
+                                    <tr>
+                                       <td width="80%" style="border-color: #ccc;border-style:solid;border-width:1px;">
+                                          <table border="0" cellpadding="0" cellspacing="0">
+                                             <tr>
+                                                <td style="padding: 5px 5px 5px 15px; font-size: 11px; font-family: arial;" width="80%">iii. Have you suffered from or been investigated for any of the following in the past 1 months? If yes please give details</td>
+                                             </tr>
+                                             <tr>
+                                                <td style="padding: 5px 5px 5px 30px; font-size: 11px; font-family: arial;" width="80%">a) Recurrent cough, hoarseness of voice, or difficulty in swallowing for a Continuous period of 15 days?</td>
+                                             </tr>
+                                             <tr>
+                                                <td style="padding: 5px 5px 5px 30px; font-size: 11px; font-family: arial;" width="80%">b) Any Persistent loss of blood or unusual discharge from any part of the body?</td>
+                                             </tr>
+                                             <tr>
+                                                <td style="padding: 5px 5px 5px 30px; font-size: 11px; font-family: arial;" width="80%">c) Weight loss more than 5Kg within 6 months?</td>
+                                             </tr>
+                                             <tr>
+                                                <td style="padding: 5px 5px 5px 30px; font-size: 11px; font-family: arial;" width="80%">d) Any ulceration, growth, nodule, cyst or lump in any part of the body?</td>
+                                             </tr>
+                                          </table>
+                                       </td>
+                                       <td width="20%" style="padding: 2px 4px;text-align: center;border-color: #ccc;border-style:solid;border-width:1px;font-size: 10px;">
+                                          <table width="100%" cellpadding="5" cellspacing="0" border="0" style="border-collapse: collapse; vertical-align: top;">
+                                             <tbody>
+                                             <tr>
+                                                <td width="50%" style="text-align: center; font-size: 11px;">
+                                                   <input type="checkbox" th:checked="${everBeenHospitalized=='YES'}"> Yes
+                                                </td>
+                                                <td width="50%" style="text-align: center; font-size: 11px;">
+                                                   <input type="checkbox" th:checked="${everBeenHospitalized!='YES'}"> No
+                                                </td>
+                                             </tr>
+                                             </tbody>
+                                          </table>
+                                       </td>
+                                    </tr>
+                                    <tr>
+                                       <td width="80%" style="border-color: #ccc;border-style:solid;border-width:1px;">
+                                          <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                                             <tr>
+                                                <td style="padding: 5px 5px 5px 15px; font-size: 11px; font-family: arial;" colspan="3">iv. Have you undergone any of the listed investigations below or have had abnormal findings in the last 12 months?
+                                                   If yes please give details (if applicable) --</td>
+                                             </tr>
+                                             <tr>
+                                                <td style="padding: 5px 5px 5px 30px; font-size: 11px; font-family: arial;" width="33%">
+                                                   <input type="checkbox" th:checked="${isUltrasound=='YES'}">Ultrasound
+                                                </td>
+                                                <td style="padding: 5px 5px 5px 30px; font-size: 11px; font-family: arial;" width="33%">
+                                                   <input type="checkbox">Endoscopy/Colonoscopy
+                                                </td>
+                                                <td style="padding: 5px 5px 5px 30px; font-size: 11px; font-family: arial;" width="33%">
+                                                   <input type="checkbox" th:checked="${isMriScan=='YES'}">CT SCAN / MRI / PET SCAN
+                                                </td>
+                                             </tr>
+                                             <tr>
+                                                <td style="padding: 5px 5px 5px 30px; font-size: 11px; font-family: arial;" width="33%">
+                                                   <input type="checkbox">Biopsy/FNAC
+                                                </td>
+                                                <td style="padding: 5px 5px 5px 30px; font-size: 11px; font-family: arial;" width="33%">
+                                                   <input type="checkbox">PAP Smear
+                                                </td>
+                                                <td style="padding: 5px 5px 5px 30px; font-size: 11px; font-family: arial;" width="33%">
+                                                   <input type="checkbox">Mammography
+                                                </td>
+                                             </tr>
+                                             <tr>
+                                                <td style="padding: 5px 5px 5px 30px; font-size: 11px; font-family: arial;" width="33%">
+                                                   <input type="checkbox">Blood test for cancer diagnosis (Tumor Marker)
+                                                </td>
+                                                <td style="padding: 5px 5px 5px 30px; font-size: 11px; font-family: arial;" width="33%"></td>
+                                                <td style="padding: 5px 5px 5px 30px; font-size: 11px; font-family: arial;" width="33%"></td>
+                                             </tr>
+                                          </table>
+                                       </td>
+                                       <td width="20%" style="padding: 2px 4px;text-align: center;border-color: #ccc;border-style:solid;border-width:1px;font-size: 10px;">
+                                          <table width="100%" cellpadding="5" cellspacing="0" border="0" style="border-collapse: collapse; vertical-align: top;">
+                                             <tbody>
+                                             <tr>
+                                                <td width="50%" style="text-align: center; font-size: 11px;">
+                                                   <input type="checkbox" th:checked="${everBeenHospitalized=='YES'}"> Yes
+                                                </td>
+                                                <td width="50%" style="text-align: center; font-size: 11px;">
+                                                   <input type="checkbox" th:checked="${everBeenHospitalized!='YES'}"> No
+                                                </td>
+                                             </tr>
+                                             </tbody>
+                                          </table>
+                                       </td>
+                                    </tr>
+                                    <tr>
+                                       <td style="padding: 5px 5px 5px 15px;border-color: #ccc;border-style:solid;border-width:1px; font-family: arial; font-size: 11px;" width="80%">v. Tobacco/Alcohol/Drugs Consumption</td>
+                                       <td width="20%" style="padding: 2px 4px;text-align: center;border-color: #ccc;border-style:solid;border-width:1px;font-size: 10px;">
+                                          <table width="100%" cellpadding="5" cellspacing="0" border="0" style="border-collapse: collapse; vertical-align: top;">
+                                             <tbody>
+                                             <tr>
+                                                <td width="50%" style="text-align: center; font-size: 11px;">
+                                                   <input type="checkbox" th:checked="${isSmoker=='YES'}"> Yes
+                                                </td>
+                                                <td width="50%" style="text-align: center; font-size: 11px;">
+                                                   <input type="checkbox" th:checked="${isSmoker!='YES'}"> No
+                                                </td>
+                                             </tr>
+                                             </tbody>
+                                          </table>
+                                       </td>
+                                    </tr>
+                                    <tr>
+                                       <td colspan="2" style="padding: 0px;font-family: arial;font-size:9px;">
+                                          <table width="100%" cellpadding="0" cellspacing="0" border="0" style="border-color: #ccc;border-style:solid;border-width:1px;">
+                                             <tbody>
+                                             <tr>
+                                                <td width="35%;" style="padding: 5px 5px 5px 15px; border-color: #ccc;border-style:solid;border-width:1px; font-size: 10px; font-family: arial;"></td>
+                                                <td width="30%;" style="padding: 5px 5px 5px 15px;border-color: #ccc;border-style:solid;border-width:1px; font-size: 10px; font-family: arial; text-align: center;"><strong>Proposer</strong></td>
+                                                <td width="30%;" style="padding: 5px 5px 5px 15px;border-color: #ccc;border-style:solid;border-width:1px; font-size: 10px; font-family: arial; text-align: center;"><strong>Life Insured</strong></td>
+                                             </tr>
+                                             <tr>
+                                                <td width="35%;" style="padding: 5px 5px 5px 15px;border-color: #ccc;border-style:solid;border-width:1px; font-size: 10px; font-family: arial; text-align: center;">Substance</td>
+                                                <td width="30%;" style="font-size: 10px; font-family: arial;">
+                                                   <table width="100%" cellpadding="0", cellspacing="0" border="0">
+                                                      <tbody>
+                                                         <tr>
+                                                            <td width="33px;" style="text-align: center; padding: 5px 5px 5px 15px;border-color: #ccc;border-style:solid;border-width:1px; font-size: 10px; font-family: arial;">Frequency</td>
+                                                            <td width="33px;" style="text-align: center; padding: 5px 5px 5px 15px;border-color: #ccc;border-style:solid;border-width:1px; font-size: 10px; font-family: arial;">Qty./Day</td>
+                                                            <td width="34px;" style="text-align: center; padding: 5px 5px 5px 15px;border-color: #ccc;border-style:solid;border-width:1px; font-size: 10px; font-family: arial;">For no. of Yrs</td>
+                                                         </tr>
+                                                      </tbody>
+                                                   </table>
+                                                </td>
+                                                <td width="30%;" style="font-size: 10px; font-family: arial;">
+                                                   <table width="100%" cellpadding="0", cellspacing="0" border="0">
+                                                      <tbody>
+                                                      <tr>
+                                                         <td width="33px;" style="text-align: center; padding: 5px 5px 5px 15px;border-color: #ccc;border-style:solid;border-width:1px; font-size: 10px; font-family: arial;">Frequency</td>
+                                                         <td width="33px;" style="text-align: center; padding: 5px 5px 5px 15px;border-color: #ccc;border-style:solid;border-width:1px; font-size: 10px; font-family: arial;">Qty./Day</td>
+                                                         <td width="34px;" style="text-align: center; padding: 5px 5px 5px 15px;border-color: #ccc;border-style:solid;border-width:1px; font-size: 10px; font-family: arial;">For no. of Yrs</td>
+                                                      </tr>
+                                                      </tbody>
+                                                   </table>
+                                                </td>
+                                             </tr>
+                                             <tr>
+                                                <td width="35%;" style="padding: 5px 5px 5px 15px;border-color: #ccc;border-style:solid;border-width:1px; font-size: 10px; font-family: arial;">
+                                                   <table width="100%" cellpadding="0", cellspacing="0" border="0">
+                                                      <tbody>
+                                                         <tr>
+                                                            <td style="padding: 5px 5px 5px 15px;font-size: 10px; font-family: arial; ">Do you consume or have ever consumed Tobacco/Nicotine
+                                                               Products in the last 12 Months.</td>
+                                                         </tr>
+                                                         <tr>
+                                                            <td width="35%;" style="padding: 5px 5px 5px 15px;font-size: 10px; font-family: arial; ">Quit smoking since ____________________________months/years</td>
+                                                         </tr>
+                                                      </tbody>
+                                                   </table>
+                                                </td>
+                                                <td width="30%;" style="font-size: 10px; font-family: arial; border-color: #ccc;border-style:solid;border-width:1px;">
+                                                   <table width="100%" cellpadding="0", cellspacing="0" border="0">
+                                                      <tbody>
+                                                      <tr th:if="${isSmoker=='YES'} and ${#lists.size(tobaccoConsumptionDetailsList) > 0}">
+                                                         <td width="33px;" style="text-align: center; padding: 5px 5px 5px 15px;border-color: #ccc;border-style:solid;border-width:1px; font-size: 10px; font-family: arial;" th:text="${tobaccoConsumptionDetailsList[0].frequency}"></td>
+                                                         <td width="33px;" style="text-align: center; padding: 5px 5px 5px 15px;border-color: #ccc;border-style:solid;border-width:1px; font-size: 10px; font-family: arial;" th:text="${tobaccoConsumptionDetailsList[0].quantity}"></td>
+                                                         <td width="34px;" style="text-align: center; padding: 5px 5px 5px 15px;border-color: #ccc;border-style:solid;border-width:1px; font-size: 10px; font-family: arial;" th:text="${tobaccoConsumptionDetailsList[0].numberOfYears}"></td>
+                                                      </tr>
+                                                      </tbody>
+                                                   </table>
+                                                </td>
+                                                <td width="30%;" style="font-size: 10px; font-family: arial; border-color: #ccc;border-style:solid;border-width:1px;"></td>
+                                             </tr>
+                                             <tr>
+                                                <td width="35%;" style="padding: 5px 5px 5px 15px;border-color: #ccc;border-style:solid;border-width:1px; font-size: 10px; font-family: arial;">
+                                                   <table width="100%" cellpadding="0", cellspacing="0" border="0">
+                                                      <tbody>
+                                                      <tr>
+                                                         <td style="padding: 5px 5px 5px 15px;font-size: 10px; font-family: arial; ">Do you consume or have ever consumed Alcohol; such as
+                                                            Beer/Wine/Hard Liquor?</td>
+                                                      </tr>
+                                                      <tr>
+                                                         <td width="35%;" style="padding: 5px 5px 5px 15px;font-size: 10px; font-family: arial; ">Quit smoking since ____________________________months/years</td>
+                                                      </tr>
+                                                      </tbody>
+                                                   </table>
+                                                </td>
+                                                <td width="30%;" style="font-size: 10px; font-family: arial; border-color: #ccc;border-style:solid;border-width:1px;">
+                                                   <table width="100%" cellpadding="0", cellspacing="0" border="0">
+                                                      <tbody>
+                                                      <tr th:if="${isSmoker=='YES'} and ${#lists.size(alcoholConsumptionDetailsList) > 0}">
+                                                         <td width="33px;" style="text-align: center; padding: 5px 5px 5px 15px;border-color: #ccc;border-style:solid;border-width:1px; font-size: 10px; font-family: arial;" th:text="${alcoholConsumptionDetailsList[0].frequency}"></td>
+                                                         <td width="33px;" style="text-align: center; padding: 5px 5px 5px 15px;border-color: #ccc;border-style:solid;border-width:1px; font-size: 10px; font-family: arial;" th:text="${alcoholConsumptionDetailsList[0].quantity}"></td>
+                                                         <td width="34px;" style="text-align: center; padding: 5px 5px 5px 15px;border-color: #ccc;border-style:solid;border-width:1px; font-size: 10px; font-family: arial;" th:text="${alcoholConsumptionDetailsList[0].numberOfYears}"></td>
+                                                      </tr>
+                                                      </tbody>
+                                                   </table>
+                                                </td>
+                                                <td width="30%;" style="font-size: 10px; font-family: arial; border-color: #ccc;border-style:solid;border-width:1px;"></td>
+                                             </tr>
+                                             </tbody>
+                                          </table>
+                                       </td>
+                                    </tr>
+                                    <tr>
+                                       <td colspan="2">
+                                          <table border="0" cellpadding="0" cellspacing="0">
+                                             <tr>
+                                                <td style="padding: 5px 5px 5px 15px; font-family: arial; font-size: 11px;"><strong>Details</strong></td>
+                                             </tr>
+                                             <tr>
+                                                <td style="padding: 5px 5px 5px 15px; font-family: arial; font-size: 11px;"><strong>Code Applicable for Banca &amp; PD</strong></td>
+                                             </tr>
+                                          </table>
+                                       </td>
+                                    </tr>
+                                 </tbody>
+                              </table>
+                           </td>
+                        </tr>
+                     </tbody>
+                  </table>
+               </td>

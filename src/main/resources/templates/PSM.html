@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title></title>
+		<style type="text/css">table,td,tr{
+border-collapse: collapse;
+}</style>
+	</head>
+	<body style="padding: 0;">
+		<!-- Main Wrapper Start Here-->
+		<!-- Header Start here-->
+		<table width="100%" align="center" cellpadding="0" cellspacing="0" style="border-collapse: collapse;">
+			<tbody>
+				<tr>
+					<td width="100" style="padding: 5px;">
+						<img src="classpath:static/logo_ax_max.png" width="100">
+						</td>
+						<td align="center" style="padding: 5px; font-size: 20px; font-family: arial;">
+							<strong>SUMMARY OF NEED ANALYSIS</strong>
+						</td>
+						<td width="100"></td>
+					</tr>
+				</tbody>
+			</table>
+			<!-- Header End here-->
+			<table>
+				<tbody>
+					<tr>
+						<td height="10"></td>
+					</tr>
+				</tbody>
+			</table>
+			<table width="100%" cellpadding="0" cellspacing="0" border="0" style="border-collapse: collapse;">
+				<tbody>
+					<tr>
+						<td style="font-size: 14px; font-family: arial;">
+							<table cellspacing="0" cellpadding="5" border="1" width="100%" style="border-collapse: collapse;">
+								<tbody>
+									<tr>
+										<td>
+											<strong>Customer Name:</strong>
+										</td>
+										<td style="text-transform:uppercase;">
+										<i th:text=${CustomerName}></i>
+										</td>
+										<td>
+											<strong>Date:</strong>
+										</td>
+										<td style="text-transform:uppercase;">
+										<i th:text=${currentDate}></i>
+										</td>
+									</tr>
+									<tr>
+										<td>
+											<strong>Transaction ID:</strong>
+										</td>
+										<td style="text-transform:uppercase;">
+										<i th:text=${transactionId}></i>
+										</td>
+										<td>
+											<strong>Proposal Number:</strong>
+										</td>
+										<td style="text-transform:uppercase;">
+										<i th:text=${policyNumber}></i>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+			<table>
+				<tbody>
+					<tr>
+						<td height="10"></td>
+					</tr>
+				</tbody>
+			</table>
+			<table cellspacing="0" cellpadding="0" border="1" width="100%" style="border-collapse: collapse;">
+				<tbody>
+					<tr bgcolor="#f0f0f0">
+						<td colspan="3" style="padding: 5px;font-size: 14px; font-family: arial;">
+							<strong>1.INCOME</strong>
+						</td>
+					</tr>
+					<tr>
+						<td align="center" style="padding: 5px;font-size: 14px; font-family: arial;">
+							<strong>< 5 LAKHS p.a
+							</strong>
+						</td>
+						<td align="center" style="padding: 5px;font-size: 14px; font-family: arial;">
+							<strong>5 TO 10 LAKHS p.a</strong>
+						</td>
+						<td align="center" style="padding: 5px;font-size: 14px; font-family: arial;">
+							<strong>> 10 LAKHS p.a</strong>
+						</td>
+					</tr>
+					<tr>
+						<td height="20" align="center" style="padding: 5px;font-size: 14px; font-family: arial;"></td>
+						<img th:src=${checkBox1} width="20px">
+							</td>
+						<td height="20" align="center" style="padding: 5px;font-size: 14px; font-family: arial;">
+							<img th:src=${checkBox2} width="20px">
+							</td>
+						<td height="20" align="center" style="padding: 5px;font-size: 14px; font-family: arial;">
+							<img th:src=${checkBox3} width="20px">
+							</td>
+						</tr>
+					</tbody>
+				</table>
+				<table>
+					<tbody>
+						<tr>
+							<td height="10"></td>
+						</tr>
+					</tbody>
+				</table>
+				<table cellspacing="0" cellpadding="0" border="1" width="100%" style="border-collapse: collapse;">
+					<tbody>
+						<tr bgcolor="#f0f0f0">
+							<td style="padding: 5px;font-size: 14px; font-family: arial;">
+								<strong>2.LIFE STAGE</strong>
+							</td>
+							<td style="padding: 5px;font-size: 14px; font-family: arial;">
+								<strong>3.GOALS</strong>
+							</td>
+						</tr>
+						<tr>
+							<td width="30%" height="20" style="padding: 5px;font-size: 14px; font-family: arial;text-transform:uppercase;" th:text=${LifeStage}></td>
+							<td width="30%" height="20" style="padding: 5px;font-size: 14px; font-family: arial;text-transform:uppercase;" th:text=${Goals}></td>
+						</tr>
+					</tbody>
+				</table>
+				<table>
+					<tbody>
+						<tr>
+							<td height="10"></td>
+						</tr>
+					</tbody>
+				</table>
+				<table cellspacing="0" cellpadding="0" border="1" width="100%" style="border-collapse: collapse;">
+					<tbody>
+						<tr bgcolor="#f0f0f0">
+							<td style="padding: 5px;font-size: 12px; font-family: arial;">
+								<strong>4.PRODUCTS RECOMMENDED</strong>
+							</td>
+							<td style="padding: 5px;font-size: 12px; font-family: arial;">
+								<strong>5.PRODUCTS SELECTED</strong>
+							</td>
+						</tr>
+						<tr>
+							<td width="50%" height="30" style="padding: 5px;font-size: 14px; font-family: arial;text-transform:uppercase;" th:text=${productsRecomm}></td>
+							<td width="20%" height="30" style="padding: 5px;font-size: 14px; font-family: arial;text-transform:uppercase;" th:text=${ProductSelected}></td>
+						</tr>
+					</tbody>
+				</table>
+				<table>
+					<tbody>
+						<tr>
+							<td height="10"></td>
+						</tr>
+					</tbody>
+				</table>
+				<table cellspacing="0" cellpadding="0" border="1" width="100%" style="border-collapse: collapse;">
+					<tbody>
+						<tr bgcolor="#f0f0f0">
+							<td colspan="2" style="padding: 5px;font-size: 14px; font-family: arial;">
+								<strong>6. GOAL CALCULATOR</strong>
+							</td>
+						</tr>
+						<tr>
+							<td width="30%" height="15" style="padding: 5px;font-size: 14px; font-family: arial;">Current Age (Yrs)</td>
+							<td width="30%" height="15" style="padding: 5px;font-size: 14px; font-family: arial;" th:text=${age}></td>
+						</tr>
+						<tr>
+							<td width="30%" height="15" style="padding: 5px;font-size: 14px; font-family: arial;">Current Cost for the Goal (Rs.)</td>
+							<td width="30%" height="15" style="padding: 5px;font-size: 14px; font-family: arial;" th:text=${CostForGoal}></td>
+						</tr>
+						<tr>
+							<td width="30%" height="15" style="padding: 5px;font-size: 14px; font-family: arial;">Period of the Goal</td>
+							<td width="30%" height="15" style="padding: 5px;font-size: 14px; font-family: arial;"th:text=${Periodofgoal}></td>
+						</tr>
+						<tr>
+							<td width="30%" height="15" style="padding: 5px;font-size: 14px; font-family: arial;">Payment Period</td>
+							<td width="30%" height="15" style="padding: 5px;font-size: 14px; font-family: arial;" th:text=${paymentperiod}></td>
+						</tr>
+						<tr>
+							<td width="30%" height="15" style="padding: 5px;font-size: 14px; font-family: arial;">Lump sum Savings for the Goal</td>
+							<td width="30%" height="15" style="padding: 5px;font-size: 14px; font-family: arial;" th:text=${LumpSum}></td>
+						</tr>
+						<tr>
+							<td width="30%" height="15" style="padding: 5px;font-size: 14px; font-family: arial;">Recurring monthly Savings for the Goal</td>
+							<td width="30%" height="15" style="padding: 5px;font-size: 14px; font-family: arial;" th:text=${MonthlySavings}></td>
+						</tr>
+						<tr>
+							<td width="30%" height="15" style="padding: 5px;font-size: 14px; font-family: arial;">Expected Annual Rate of Inflation</td>
+							<td width="30%" height="15" style="padding: 5px;font-size: 14px; font-family: arial;" th:text=${annualRate}></td>
+						</tr>
+						<tr>
+							<td width="30%" height="15" style="padding: 5px;font-size: 14px; font-family: arial;">Expected Annual Return On Investment</td>
+							<td width="30%" height="15" style="padding: 5px;font-size: 14px; font-family: arial;" th:text=${annualReturn}></td>
+						</tr>
+					</tbody>
+				</table>
+				<table>
+					<tbody>
+						<tr>
+							<td height="10"></td>
+						</tr>
+					</tbody>
+				</table>
+				<table cellspacing="0" cellpadding="0" border="1" width="100%" style="border-collapse: collapse;">
+					<tbody>
+						<tr bgcolor="#f0f0f0">
+							<td colspan="2" align="center" style="padding: 5px;font-size: 14px; font-family: arial;">
+								<strong>Net Suggested Savings</strong>
+							</td>
+						</tr>
+						<tr>
+							<td width="30%" height="15" style="padding: 5px;font-size: 14px; font-family: arial;">Future Cost of Goal</td>
+							<td width="30%" height="15" style="padding: 5px;font-size: 14px; font-family: arial;" th:text=${futureCost}></td>
+						</tr>
+						<tr>
+							<td width="30%" height="15" style="padding: 5px;font-size: 14px; font-family: arial;">Suggested Savings p.a.</td>
+							<td width="30%" height="15" style="padding: 5px;font-size: 14px; font-family: arial;" th:text=${suggestedSavings}></td>
+						</tr>
+						<tr>
+							<td width="30%" height="15" style="padding: 5px;font-size: 14px; font-family: arial;">Commitment p.a.</td>
+							<td width="30%" height="15" style="padding: 5px;font-size: 14px; font-family: arial;" th:text=${commitment}></td>
+						</tr>
+					</tbody>
+				</table>
+				<table>
+					<tbody>
+						<tr>
+							<td height="10"></td>
+						</tr>
+					</tbody>
+				</table>
+				<table width="100%" cellpadding="0" cellspacing="0" border="0" style="border-collapse: collapse;font-family: arial;font-size: 14px;">
+				<tbody>
+					<tr>
+						<td>
+							<strong>Seller Name :</strong>&nbsp;<span th:text=${sellerName}></span>
+						</td>
+						<td>
+							<strong>Seller Code :</strong>&nbsp;<span th:text=${sellerCode}></span>
+						</td>
+					</tr>
+				</tbody>
+				</table>
+				<br>
+				<table width="100%" cellpadding="0" cellspacing="0" border="0" style="border-collapse: collapse;font-family: arial;font-size: 14px;">
+					<tbody>
+					<tr>
+							<td>
+								<strong>Seller Declarations:-</strong>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<strong>This system generated PSM shall be treated as signed by me.</strong>
+							</td>
+						</tr>
+						<tr>
+							<td style="height:10px">&nbsp;</td>
+						</tr>
+						<tr>
+							<td>
+								<strong>This document is computer generated and does not require signature</strong>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+				<table>
+					<tbody>
+						<tr>
+							<td height="10"></td>
+						</tr>
+					</tbody>
+				</table>
+				<!-- Footer Start here-->
+				<table width="100%" cellpadding="5" cellspacing="0" border="0" style="border-collapse: collapse;">
+					<tbody>
+						<tr>
+							<td align="left" valign="top">
+<!--								<div th:if="${isNotYBLProposal}">-->
+<!--									<img src="classpath:static/footer_updated.png">-->
+<!--								</div>-->
+								</td>
+							</tr>
+						</tbody>
+					</table>
+					<!-- Footer End here-->
+				</body>
+			</html>

@@ -1,0 +1,884 @@
+<style xmlns="http://www.w3.org/1999/html">
+    body {
+         display: flex;
+         justify-content: center;
+         align-items: center;
+         min-height: 100vh;
+         margin: 0;
+         font-family: sans-serif;
+     }
+    * {
+        font-size: 11pt;
+    }
+     .container {
+         display: flex;
+         flex-direction: column;
+         align-items: center;
+         margin: 20px;
+         padding: 20px;
+         border: none;
+         max-width: 210mm; /* A4 width */
+         box-sizing: border-box; /* Ensure padding and border are included in the width */
+         font-size: 11pt;
+     }
+
+    .container table {
+        width: 100%;
+    }
+
+    .container td {
+        white-space: normal; /* Allow wrapping but don't enforce it */
+        max-width: 150px; /* Set a max width to prevent overflow */
+    }
+     .title {
+         font-size: 11pt;
+         font-weight: bold;
+         margin-bottom: 10px;
+         text-align: center;
+     }
+     .info-table {
+         max-width: 100%; /* Ensure the table does not exceed its container */
+         width: 100%;
+         border-collapse: collapse;
+         table-layout: fixed; /* Ensure columns fit within the table */
+         margin: auto; /* Center the table */
+     }
+     .info-table th,
+     .info-table td {
+         padding: 10px;
+         border: 1px solid #000;
+         text-align: left;
+         word-wrap: break-word; /* Ensure text wraps within cells */
+         overflow-wrap: break-word; /* Additional support for wrapping */
+         vertical-align: top;
+        }
+     .info-table th {
+         background-color: #f2f2f2;
+         font-weight: bold;
+     }
+     /* Apply thicker border to the second column */
+     .info-table th:nth-child(3),
+     .info-table td:nth-child(3) {
+      width: 55%; /* Adjust the percentage to your needs */
+    }
+    .info-table th:nth-child(1),
+     .info-table td:nth-child(1) {
+      width: 8%; /* Adjust the percentage to your needs */
+    }
+    .info-table th:nth-child(4),
+    .info-table td:nth-child(4) {
+        width: 15%;
+    }
+     .disclaimer {
+         font-size: 11pt;
+         margin-top: 10px;
+         text-align: center;
+     }
+</style>
+<body>
+<div class="container">
+    <h1 class="title"><u>CUSTOMER INFORMATION SHEET / KNOW YOUR POLICY</u></h1>
+    <p><strong>Customer Information Sheet reference no. </strong><span th:text="${policyNumber}"></span></p>
+    <p>This document provides key information about your policy. You are also advised to go through your policy
+        document.</p>
+    <table class="info-table">
+        <thead>
+        <tr>
+            <th>SI. no.</th>
+            <th>Title</th>
+            <th>Description in Simple Words<br><i>(Please refer to applicable Policy Clause Number in next column)</i>
+            </th>
+            <th>Policy Clause Number</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td>1</td>
+            <td>Name of the Insurance Product and Unique Identification Number (UIN)</td>
+            <td style="text-align: center; vertical-align: middle;">
+                <strong><span th:text="${productName} "></span></strong><br>
+                <span th:text="'UIN- ' + ${UIN}"></span></td>
+            <td>Policy Preamble</td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>Policy Number</td>
+            <td><span th:text="${policyNumber}"></span></td>
+            <td>Policy Schedule</td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td>Type of Insurance Policy</td>
+            <td><strong>Non-linked Non-Participating Individual Pure Risk Life Insurance Plan</strong></td>
+            <td>Policy Preamble</td>
+        </tr>
+        <tr>
+            <td>4</td>
+            <td>Basic Policy details</td>
+            <td>
+                <span style="font-weight: bold;"><span>&#8226;</span> Instalment Premium: </span>
+                <span th:text="${instalmentPremium}"></span><br>
+                <span style="font-weight: bold;"><span>&#8226;</span> Mode of Premium Payment: </span>
+                <span th:text="${premiumPaymentMode}"></span><br>
+                <span style="font-weight: bold;"><span>&#8226;</span> Sum Assured on Death: </span>
+                <span th:text="${sumAssuredOnDeath}"></span><br>
+                <span style="font-weight: bold;">&#8226; Sum Assured on Maturity: </span>
+                NA<br>
+                <span style="font-weight: bold;"><span>&#8226;</span> Policy Term: </span>
+                <span th:text="${policyTerm}"></span><br>
+                <span style="font-weight: bold;"><span>&#8226;</span> Premium Payment Term: </span>
+                <span th:text="${premiumPaymentTerm}"></span><br>
+            </td>
+            <td>Policy Schedule</td>
+        </tr>
+        <tr>
+            <td rowspan="12">5</td>
+            <td rowspan="12">Policy Coverage/benefits payable</td>
+            </td>
+            <td>
+                <span>&#8226;</span> <strong>Benefits payable on Death:</strong><br><br>
+                <span>&#10146;</span> If the Policy is in force and is not under Reduced Paid Up Mode, then, upon
+                death of the Life Insured, during the Policy Term, We will pay "Guaranteed Death Benefit"
+                (in case Terminal Illness Benefit has been paid, then the Guaranteed Death Benefit shall be reduced to
+                the extent of the Terminal Illness Benefit already paid) to the Claimant which will be highest of the
+                following:<br>
+                <dd>(i) <strong><u>For Single Premium Payment Variant</u></strong> - 1.25 times of the sum of single Premium and
+                    Underwriting Extra Premium, if any;  </dd><br>
+                <dd><strong><u>For all other Premium payment variants</u></strong> - 10 times the sum of Annualised
+                    Premium and Underwriting Extra Premium, if any; or</dd><br>
+                <dd>(ii) 105% of sum of Total Premiums Paid, Underwriting Extra Premium and loadings for modal premiums,
+                    if any, received till the date of death of the Life Insured; or</dd><br>
+                <dd>(iii) "Absolute Amount Assured to be Paid on Death" which shall be the Sum Assured on Death payable as
+                    per the Cover Option chosen by You. </dd><br>
+            </td>
+            <td>Clause 1.1.1 of Part C </td>
+        </tr>
+        <tr>
+            <td>
+                <span>&#10146;</span> The Claimant will have the option to choose from one of the following payout
+                options at claims stage. In case no payout option is selected by the Claimant, then the payout option 1
+                (lump sum Guaranteed Death Benefit) will be considered as the default payout option:  <br>
+                <dd>(i) <strong><u>Payout option 1 -</u></strong> lump sum Guaranteed Death Benefit - 100% of the Guaranteed Death
+                    Benefit will be paid as lump sum. </dd><br>
+                <dd>(ii) <strong><u>Payout option 2 -</u></strong> monthly income - monthly payment for a fixed period of 10 years starting from the
+                    next monthly anniversary following the date of intimation of death ("Payout Period") shall be
+                    calculated as per the formula given under Clause 1.1.2. in Part C of the Policy.</dd><br>
+                <dd>(iii) <strong><u>Payout option 3 -</u></strong> partial Guaranteed Death Benefit plus part monthly income- If the Claimant chooses
+                    this payment option, We will pay the proportion as may be selected by the Claimant of the Guaranteed
+                    Death Benefit as lump sum and the remaining Guaranteed Death Benefit would be payable as monthly
+                    income. </dd><br><br>
+                <strong>Note:</strong> In case monthly payout option has been selected whether under (ii) or (iii), above then during
+                the Payout Period, the Claimant may commute the outstanding monthly income. In such case We will pay
+                the present value of the outstanding monthly income at the same interest rate used to determine
+                the monthly income.<br>
+            </td>
+            <td>Clause 1.1.2 of Part C </td>
+        </tr>
+        <tr>
+            <td>
+                <span>&#10146;</span> In case Terminal Illness Benefit claim has been paid, then the Guaranteed Death
+                Benefit shall be reduced to the extent of the Terminal Illness Benefit already paid.  <br>
+            </td>
+            <td>Clause 1.1.3 of Part C </td>
+        </tr>
+        <tr>
+            <td>
+                <span>&#10146;</span><strong>Point of Sale:</strong><br><br>
+                In case this Policy is sourced as a point of sale Policy, in case of death of the Life Insured, death
+                benefit will be payable as noted in Clause A of the Policy. However, in case the Life Insured dies
+                during the waiting period of 90 days from Date of Commencement of Risk due to any reason other than
+                an Accident, We will refund 100% of the Total Premiums Paid till the date of death of the Life Insured
+                and no other benefit will be payable and the Policy will terminate.
+            </td>
+            <td>Clause 1.1.4 of Part C </td>
+        </tr>
+
+
+        <tr>
+            <td>
+                <span>&#8226;</span> In the event of death of Life Insured due to an Accident, the waiting period of
+                90 days as specified above shall not be applicable and the death benefit shall be payable in
+                accordance with Clause 1.1.1. in the Policy<br>
+            </td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>
+                <strong><span>&#8226;</span> Terminal Illness Benefits:</strong><br><br>
+                <span>&#10146;</span> If the Policy is in force and is not under Reduced Paid Up Mode, then, upon
+                Diagnosis of Life Insured with a Terminal Illness, during the Policy Term, We will pay 100% of the
+                Guaranteed Death Benefit (subject to maximum of Rs. 1 Crore) as accelerated Terminal Illness Benefit
+                to the Claimant. Only one valid Terminal Illness Benefit is payable during the Policy Term and once a
+                Terminal Illness claim is paid, the sum of Guaranteed Death Benefit and Voluntary Sum Assured Top-Up,
+                if opted, will be reduced by the Terminal Illness Benefit paid and the Policy will continue.<br>
+                <span>&#10146;</span> The Terminal Illness Benefit does not provide additional benefit but only
+                accelerates the Guaranteed Death Benefit payable under this Policy, subject to maximum of Rs. 1 Crore.<br>
+                <span>&#10146;</span>The claim payout under the Terminal Illness Benefit would be made in lump sum
+                only. The Claimant shall not have the options to receive or convert the lump sum claim amount into
+                monthly income<br>
+                <span>&#10146;</span> In case the claim against the Terminal Illness has been raised, We may request
+                the Life Insured to undertake a medical examination or test at Our cost, which in Our opinion, is
+                reasonable to determine the Terminal Illness. We shall not accept a claim if the Member does not
+                undertake any medical examination or test which We consider reasonable or necessary to determine
+                the Terminal Illness.<br>
+                <span>&#10146;</span> After the payment of the claim in respect of Terminal Illness of the Life Insured,
+                all Premiums (including the Premium for base Policy and optional benefits i.e. Premium Break Option,
+                Joint Life Cover Option and/or Voluntary Sum Assured Top-Up Option) falling due from the date of
+                Diagnosis of Terminal Illness would be waived off and the Policy shall continue till death of the
+                Life Insured or the end of the Policy Term, whichever is earlier. However, in case You have opted for
+                Joint Life Cover Option and the Secondary Life survives on the date of Diagnosis of Terminal Illness
+                of the Life Insured then the Policy will continue till Death or Diagnosis of Terminal illness of the
+                Secondary Life or end of the Policy Term, whichever is earlier.<br>
+                <span>&#10146;</span> Accidental Death benefit shall terminate post Diagnosis of Terminal Illness.<br>
+                <span>&#10146;</span> Post the Diagnosis of Terminal Illness of the Life Insured, You are allowed to
+                surrender the Policy in accordance with Clause 1 of Part D in the Policy.<br>
+                <span>&#10146;</span> Terminal Illness Benefit will be available in case of Policy is sourced
+                as a point of sale policy.<br>
+            </td>
+            <td>Clause 1.2 of Part C</td>
+        </tr>
+        <tr>
+            <td>
+                <strong><span>&#8226;</span> Accidental Death Benefits</strong><br><br>
+                <span>&#10146;</span> In case the Accidental Death benefit option is chosen, subject to the Policy being
+                in force and the Life Insured dies due to an Accident, 100% of Accidental Death Benefit Sum Assured will
+                be payable as lump sum irrespective of the Cover Option chosen by You, whereupon the Accidental Death
+                benefit option will terminate and no further benefit shall be paid under this Accidental Death benefit
+                option. In a scenario where Accident happened during the Accidental Death Benefit Term and death due to
+                the same Accident happens after the Accidental Death Benefit Term, but within 180 days from the date of
+                the Accident, the Accidental Death Benefit Sum Assured shall be payable. <br>
+                <span>&#10146;</span> You may choose to opt for an Accidental Death benefit option at the Date of
+                Inception of Policy or at any point of time during the Policy Term, subject to the Policy being Premium
+                paying and remaining Policy Term being more than 5 (Five Years), subject to our Underwriting Policy. A
+                pro-rata basis additional Premium for the Accidental Death benefit option will be charged in case the
+                benefit is added during the middle of a Policy Year and full Premium for the Accidental Death benefit
+                option will be charged starting from next Policy Anniversary. However, in case Premium Break Option has
+                been selected then Accidental Death benefit option cannot be chosen after the Date of Commencement of
+                Risk.<br>
+                <span>&#10146;</span> Maximum Accidental Death Benefit Sum Assured available under Accidental Death
+                benefit option is Rs. 1 Cr, however in no case shall the Accidental Death Sum Assured be higher than
+                three times Guaranteed Death Benefit prevailing at the time of opting for the Accidental Death
+                benefit cover.<br>
+                <span>&#10146;</span> You may at any time during the Policy Term choose to opt out of/discontinue the
+                Accidental Death benefit option, upon which, the total Premium to be paid will be reduced by the
+                Accidental Death benefit Premium and only the Premium corresponding to the death benefit or
+                Riders/optional benefits (if any) will continued to be payable. It is clarified that, once
+                Accidental Death benefit option is discontinued, the benefit cannot be again opted for.<br>
+                <span>&#10146;</span> The Accidental Death benefit option is not available under Single
+                Premium Payment Variant.<br>
+                <span>&#10146;</span> The Accidental Death benefit will always be paid as a lump sum benefit.<br>
+                <span>&#10146;</span> This benefit shall be available under any point of sale Policy only when the
+                Policyholder has selected this Accidental Death benefit option.<br>
+            </td>
+            <td>Clause 1.3 of Part C</td>
+        </tr>
+        <tr>
+            <td>
+                <strong><span>&#8226;</span> Maturity Benefits</strong><br><br>
+                <span>&#10146;</span> No Maturity Benefit is payable except where Return of Premium Option has been
+                chosen by You at Date of Inception of Policy. This option cannot be selected at later stage during
+                the Policy Term. Under this option, if the Life Insured survives throughout the Policy Term, 100% of
+                the sum of Total Premiums Paid, Underwriting Extra Premiums and loadings for modal premiums received
+                under the Policy (corresponding to the Guaranteed Death Benefit and any Voluntary Top Sum Assured)
+                will be paid to You, on maturity <b>("Return of Premium Option")</b>. Additional premium charged for optional
+                benefits such as Accidental Death benefit option, Secondary Life benefit under Joint Life Cover or
+                towards Riders, if any, will not be returned on maturity under the Return of Premium Option. If there
+                is a discount applicable under the Policy, only 100% of the discounted Premiums received (corresponding
+                to the Guaranteed Death Benefit and any Voluntary Top Sum Assured) under the Policy would be returned
+                on maturity of the Policy. It is clarified that in case You have opted for the Joint Life Cover Option
+                the Maturity Benefit will be paid only if the Life Insured is alive on the Maturity Date, irrespective
+                of the Secondary Life being alive or not.<br>
+            </td>
+            <td>Clause 1.4 of Part C</td>
+        </tr>
+        <tr>
+            <td>
+                <span>&#8226;</span> <strong>Voluntary Sum Assured Top - Up: </strong><br><br>
+                <span>&#10146;</span> Post completion of waiting period of 1 year from the Date of Commencement of Risk
+                and subject to receipt of Your written request and medical and financial underwriting by Us, We may
+                allow You to increase the Sum Assured on Death on Premium which will be determined by Us basis the Age
+                of the Life Insured at the time of exercising Voluntary Sum Assured Top-Up Option, once during the
+                Policy. Such increase in the Sum Assured on Death shall in no case exceed 100% of the Sum Assured on
+                Death as on the Date of Commencement of Risk. Once this Voluntary Sum Assured Top-Up Option is
+                exercised, it shall remain level throughout the remaining Policy Term. The Sum Assured on Death can be
+                increased in multiples of Rs.10 lakh only.<br>
+                <span>&#10146;</span> The Voluntary Sum Assured Top-Up Option can be exercised only if the Policy is
+                in force and the following conditions are satisfied: <br>
+                <span>&#10146;</span> the Age of the Life Insured does not exceed 50 years;<br>
+                <span>&#10146;</span> Increasing Cover Option or Premium Break Option have not been opted;<br>
+                <span>&#10146;</span> The Sum Assured on Death under the Policy as chosen at Date of Inception of
+                Policy, is equal to or greater than Rs.50 Lacs; and <br>
+                <span>&#10146;</span> The minimum Premium Payment Term & Policy Term under for this option are
+                5 years and 10 years respectively.<br>
+                <span>&#10146;</span> In case of death of the Life Insured, the Top Up Sum Assured shall be payable
+                alongwith the Guaranteed Death Benefit as per Clause 1.1 of Part C in the Policy<br>
+                <span>&#10146;</span> In case the Life Insured is Diagnosed with Terminal Illness, the Top Up Sum
+                Assured shall be payable along with the Terminal Illness Benefit as per Clause 1.2 of Part C of the
+                Policy subject to total benefit payable not exceeding Rs.1 Crore.<br>
+                <span>&#10146;</span> Voluntary Sum Assured Top-Up Option will not be allowed if Premium Break Option
+                has been opted for.<br>
+                <span>&#10146;</span> Voluntary Sum Assured Top-Up will not impact the Accidental Death Benefit
+                Sum Assured, if opted for.<br>
+                <span>&#10146;</span> For a Joint Life Cover Option, Voluntary Sum Assured Top-Up Option will be
+                applicable only for You i.e. top-up will not be allowed on Secondary Life.<br>
+                <span>&#10146;</span> You shall be allowed to surrender the Top-Up Sum Assured anytime as per Your
+                convenience. The Surrender Value shall be different for each Sum Assured on Death and Top-Up Sum
+                assured which shall be determined basis the duration elapsed since the commencement of first
+                Premium payment for each Sum Assured on Death.<br>
+                <span>&#10146;</span> Return of Premium Option at maturity shall also be available for the Premium paid
+                to enhance the Sum Assured on Death under this Voluntary Sum Assured Top-Up Option. <br>
+                <span>&#10146;</span> The Voluntary Sum Assured Top-Up Option shall be identical to the base plan
+                variant. i.e. If You have chosen Return of Premium Option, the same shall also apply to Premium paid
+                towards Voluntary Sum Assured Top-Up Option. However, if You have not chosen Return of Premium Option
+                at Date of Inception of Policy, then the same cannot be applied to Premium paid toward Voluntary Sum
+                Assured Top-Up Option. <br>
+                <span>&#10146;</span> The Premium rates for Voluntary Sum Assured Top-Up Option will be determined
+                basis the Sum Assured on Death band of the Policy applicable to the Sum Assured inclusive of the
+                Voluntary Sum Assured Top-Up. <br>
+                <span>&#10146;</span> The minimum outstanding base Policy Term to exercise this option is 10 years,
+                subject to the other boundary condition of maximum attained Age. <br>
+                <span>&#10146;</span> The Policy Term of this option shall be same as the outstanding Policy Term of
+                the base Policy cover and the Premium Payment Term shall be the maximum Premium Payment Term available
+                at the time of opting for this option but not exceeding the base cover Premium Payment Term. <br>
+                <span>&#10146;</span> Waiver of Premium Plus Rider will also be applicable for Voluntary Sum Assured
+                Top-Up i.e. if You have opted for Waiver of Premium Plus rider and later exercise the Voluntary Sum
+                Assured Top-Up then Waiver of Premium Plus Rider benefit would be payable for the additional Premium
+                corresponding to the Voluntary Sum Assured Top-Up. <br>
+                <span>&#10146;</span> Voluntary Sum Assured Top-Up will not be available in case of Policy is sourced
+                as a point of sale policy. <br>
+            </td>
+            <td>Clause 1.5 of Part C</td>
+        </tr>
+        <tr>
+            <td>
+                <span>&#8226;</span> <strong>Options to policyholders for availing benefits, if any, covered
+                under the policy: </strong><br><br>
+                <span>&#8226;</span> <strong>Joint Life Cover Option: </strong><br><br>
+                <span>&#10146;</span> If You have opted for Joint Life Cover Option at Date of Inception of Policy,
+                to cover Your spouse ("Secondary Life") under this Policy, then in case of either death or Diagnosis
+                with Terminal Illness of the Secondary Life:<br>
+                <span>&#10146;</span> Before the death or Diagnosis with Terminal Illness of Life Insured, then,
+                We will pay an amount of Rs. 10 (Ten) lacs to You as guaranteed death benefit and cover on the
+                life of the Secondary Life will end, however the cover of life of the Life Insured continues with
+                Premium reduced to the extent to the Premium payable with respect to Joint Life Cover Option and with
+                applicable Guaranteed Death Benefit. <br>
+                <span>&#10146;</span> After the death or Diagnosis with Terminal Illness of Life Insured, We will pay
+                an amount of Rs.50 (Fifty) lacs to the Claimant as guaranteed death benefit.<br>
+                <span>&#10146;</span> Premium payable under the Policy with respect to Joint Life Cover Option including
+                applicable of loadings for modal premiums and taxes) will be waived off when the Life Insured dies or
+                is Diagnosed with Terminal Illness, whichever is earlier.<br>
+                <span>&#10146;</span> Joint Life Cover Option will be available only where You have taken the Policy on
+                your own life and the Guaranteed Death Benefit under the Policy is greater than or equal to Rs.1 Crore. <br>
+                <span>&#10146;</span> Maximum Age at maturity of Secondary Life cannot be more than 85 years, accordingly
+                the Joint Life Cover Option for Secondary Life will automatically terminate on the Policy Anniversary
+                immediately following his/her 85th birthday irrespective of the cover in respect of Life Insured still
+                being in force.<br>
+                <span>&#10146;</span> In case You have chosen Increasing Cover Option, the Guaranteed Death Benefit
+                only in respect of the Life Insured shall increase and it will not impact the life cover towards
+                Secondary Life. Further all other optional benefits under this Policy including Accidental Death
+                benefit cover, Voluntary Sum Assured Top-Up Option and available Riders shall applicable only on the
+                life cover provided to the Life Insured and will not available for Secondary Life.<br>
+                <span>&#10146;</span> In the event of simultaneous death or Diagnosis of Terminal Illness of both the
+                Life Insured and Secondary Life or death of Life Insured and Diagnosis of Terminal Illness of Secondary
+                Life or vice versa, an amount of Rs.50,00,000 will be paid to the Claimant towards Secondary Life in
+                addition to the Guaranteed Death Benefit payable in respect of the Life Insured.<br>
+                <span>&#10146;</span> In the earlier event of death of the Life Insured prior to Secondary Life,
+                the Secondary Life will become the policyholder under the Policy.<br>
+                <span>&#10146;</span> The benefits under this Joint Life Cover Option can be surrendered by You anytime
+                during the Policy Term. However, the Secondary Life cannot surrender benefits under this Joint Life
+                Cover Option or the Policy upon the death of the Life Insured. <br>
+                <span>&#10146;</span> In case of death of Secondary Life due to suicide within 12 months from the Date
+                of Commencement of Risk or Date of Inception of Policy or the date of Revival of the Policy, whichever
+                is later, provisions as per Clause 6 of Part F of the Policy will be applicable and Secondary
+                Life benefit will terminate. Cover for Life Insured will continue with reduced Premium along with the
+                other additional options like Accidental Death benefit cover, Voluntary Sum Assured Top-Up Option and
+                available Riders, if any.<br>
+                <span>&#10146;</span> Joint Life Cover Option will not be available in case of Policy is sourced as a
+                point of sale policy<br>
+            </td>
+            <td>Clause 1.6 of Part C</td>
+        </tr>
+        <tr>
+            <td>
+                <span>&#8226;</span> <strong>Premium Break Option: </strong><br><br>
+                <span>&#10146;</span> You shall be allowed to opt for the Premium Break Option on payment of extra
+                Premium on the Date of Inception of Policy only. Once opted for, You are allowed to take two annual
+                Premium breaks (or its equivalent as per Clause 1.7.4 of Part C of the Policy) from paying the Premiums
+                under the Policy after completion of 10 Policy Years provided all due Premiums have been paid
+                ("Premium Break"). The duration of one Premium Break shall be 12 Policy months and the Premium which
+                shall be waived shall include the Premium to be paid towards base Policy cover and Accidental Death
+                benefit Premium inclusive of Underwriting Extra Premium, loadings for modal premiums, if any, and any
+                applicable taxes thereon. The second Premium Break can be exercised only after a minimum gap of 10
+                years from end of the first Premium Break period. <br>
+                <span>&#10146;</span> During the Premium Break, the Policy will remain in force with the full risk cover
+                as per terms and condition of the Policy. <br>
+                <span>&#10146;</span> This Premium Break Option is available only if you have opted for Regular Premium
+                Payment Variant or Pay Till 60 Premium Payment Variant and where the Policy Term is greater than 30
+                years and Premium Payment Term greater than 21 years<br>
+                <span>&#10146;</span> Once the Premium Break Option is in force, it shall continue for 12 consecutive
+                Policy months i.e. one Premium Break shall mean 1 annual Premium or 2 half-yearly Premiums or 4
+                quarterly Premium or 12 monthly Premiums.<br>
+                <span>&#10146;</span> This Premium Break Option can be exercised from the next Premium anniversary,
+                independent of the Policy Anniversary. For example, for a monthly mode Policy, a You after having paid
+                125 monthly premiums may choose not to pay the next monthly Premium upto a maximum of 12 month Premiums. <br>
+                <span>&#10146;</span> If You have exercised the first Premium Break in the last 10 years of the Policy,
+                then the second Premium Break shall be by default the last Policy Year Premium as applicable. <br>
+                <span>&#10146;</span> In case You do not voluntarily exercise the Premium Break benefit during the
+                Premium Payment Term, We will waive off the last two Policy Year Premiums (last Policy Year Premium
+                if partly exercised earlier) as applicable.<br>
+                <span>&#10146;</span> For exercising a Premium Break Option, You will be required to intimate Us, at
+                least 30 days (15 days in case of Premium payment mode is monthly) before next Premium due date. Thus
+                if a Premium is unpaid with no prior intimation, then at the end of the Grace Period the Policy shall
+                become Lapsed Policy / Reduced Paid Up, as the case may be.<br>
+                <span>&#10146;</span> If You discontinue Premium payment immediately post exercising one or both the
+                Premium Break, the Revival Period will be considered to start from the due date of Premium payable after
+                the end of the Premium Break period.<br>
+                <span>&#10146;</span> You cannot opt for Premium Break Option if You have chosen Joint Life Cover option.<br>
+                <span>&#10146;</span> If Premium Break Option has been opted for then Accidental Death benefit can only
+                be opted at Date of Inception of Policy and not later in the Policy Term. <br>
+                <span>&#10146;</span> Voluntary Sum Assured Top-Up option is not available with Premium Break Option.<br>
+                <span>&#10146;</span> No Rider will be available with Premium Break Option.<br>
+                <span>&#10146;</span> You can surrender the Policy anytime along with this option even during the
+                Premium Break period, however, the surrender can be done along with the base Policy only
+                and not separately. <br>
+                <span>&#10146;</span> Premium Break Option will only be applicable on the base Policy Premium
+                (including Return of Premium Option) and Accidental Death Benefit Premium.<br>
+                <span>&#10146;</span> Premium Break Option will not be available in case of Policy is sourced as a
+                point of sale policy.<br>
+            </td>
+            <td>Clause 1.7 of Part C</td>
+        </tr>
+        <tr>
+            <td>
+                <span>&#8226;</span> <strong>Termination of Accidental Death benefit option: </strong><br>
+                The Accidental Death benefit option will terminate immediately upon the occurrence
+                of any of the following events, whichever is earliest:<br>
+                (i) On the expiry of the Accidental Death Benefit Term;<br>
+                (ii) On payment of 100% of the Accidental Death Benefit Sum Assured;<br>
+                (iii) On cancellation or surrender of the Policy;<br>
+                (iv) On death of the Life Insured;<br>
+                (v) Life Insured being diagnosed with Terminal Illness;<br>
+                (vi) On Your failure to revive the Policy within the Revival Period of the Policy; or<br>
+                (vii) You opting out of or discontinuing the Accidental Death benefit option.<br><br>
+                <strong><span>&#8226;</span> Other benefits/options payable, specific to the policy, if any:</strong><br><br>
+                <div style="text-align: center;">This is not applicable</div><br>
+                <strong><span>&#8226;</span> Lock-in period for Linked Insurance products:</strong><br><br>
+                <div style="text-align: center;">This is not applicable</div> <br>
+            </td>
+            <td>Clause 1.3.8 of Part C</td>
+        </tr>
+        <tr>
+            <td>6</td>
+            <td>Options available (in case of Linked Insurance Products)</td>
+            <td>
+                <div style="text-align: center;">This is not applicable</div><br>
+            </td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>7</td>
+            <td><div style="display: inline-block; max-width: 100%;">Option available (in case of Annuity product)</div></td>
+            <td style="text-align: center;">This is not applicable</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>8</td>
+            <td>Riders opted, if any</td>
+            <td>
+                1. <strong>Axis Max Life Waiver of Premium Plus Rider (UIN:104B029V05):</strong> This rider provides waiver
+                of all future premiums under a policy and all other attaching riders on earlier happening of
+                insured events.<br><br>
+
+                2. <strong>Axis Max Life Critical Illness and Disability Rider (UIN: 104B033V02):</strong> This rider
+                provides benefit upon diagnosis of any of the critical illnesses covered<br>
+            </td>
+            <td>Policy Schedule</td>
+        </tr>
+        <tr>
+            <td rowspan="2">9</td>
+            <td rowspan="2">Exclusions (events where insurance coverage is not payable), if any.</td>
+            <td>
+                <strong>Brief list of the applicable exclusions, if any:</strong><br><br>
+                <span>&#8226;</span><strong> Exclusions applicable to Accidental Death Benefit: </strong><br><br>
+                <span>&#10146;</span> In case the death of the Life Insured has occurred directly or indirectly due to
+                or caused, occasioned, accelerated or aggravated by any of the following, no Accidental Death benefit
+                shall be payable:<br>
+                i. Suicide or self-inflicted Injury, whether the Life Insured is medically sane or insane.<br>
+                ii. War, terrorism, invasion, act of foreign enemy, hostilities, civil war, martial law, rebellion,
+                revolution, insurrection, military or usurper power, riot or civil commotion. War means any war
+                whether declared or not.<br>
+                iii. Taking part in any naval, military or air force operation during peace time.<br>
+                iv. Any condition that is pre-existing at the time of later of Date of Commencement of Risk or
+                Date of Inception of Policy<br>
+                v. Committing an assault, a criminal offence, an illegal activity or any breach of law with
+                criminal intent.<br>
+                vi. Alcohol or solvent abuse or taking of drugs, narcotics or psychotropic substances unless taken in
+                accordance with the lawful directions and prescription of a Medical Practitioner<br>
+                vii. Poison, gas or fumes (voluntary or involuntarily, accidentally or otherwise taken,
+                administered, absorbed or inhaled).<br>
+                viii. Service in the armed forces, or any police organization, of any country at war or service in any
+                force of an international body<br>
+                ix. Participation in aviation other than as a fare-paying passenger in an aircraft that is authorised
+                by the relevant regulations to carry such passengers between established aerodromes.<br>
+                x. Taking part in professional sport(s) or any adventurous pursuits or hobbies including any kind of
+                racing (other than on foot or swimming), potholing, rock climbing (except on man-made walls), hunting,
+                mountaineering or climbing requiring the use of ropes or guides, any underwater activities involving
+                the use of underwater breathing apparatus including deep sea diving, sky diving, cliff diving,
+                bungee jumping, paragliding, hand gliding and parachuting.<br>
+                xi. Nuclear contamination; the radioactive, explosive or hazardous nature of nuclear fuel materials or
+                property contaminated by nuclear fuel materials or Accident arising from such nature.<br>
+            </td>
+            <td>Clause 1.3.9 of Part C</td>
+        </tr>
+        <tr>
+            <td>
+                <span>&#8226;</span><strong> Suicide Exclusion </strong><br><br>
+                <span>&#10146;</span> Notwithstanding anything stated herein, if the Life Insured commits suicide,
+                within 12 (Twelve) months from the Date of Commencement of Risk of Policy or from the date of Revival
+                of this Policy, as applicable, all risks and benefits under this Policy shall cease immediately and We shall only pay the following to the Claimant, provided that the Policy is in force:
+                Higher of the Surrender Value as on the date of death or the sum of (Total Premiums Paid plus loadings for modal premiums and Underwriting Extra Premium, if any, paid till the date of death).<br><br>
+                <span>&#10146;</span> If You chose to increase Sum Assured on Death under the Voluntary Sum Assured
+                Top-Up Benefit, the above suicide clause provisions will be applicable on the increased Sum Assured on
+                Death as well. Hence, if the Life Insured commits suicide within 12 months, whether minor or major,
+                whether sane or insane, from the date of increase in Sum Assured on Death benefit due to Voluntary
+                Sum Assured Top-Up Benefit Option, the Claimant will receive higher of Surrender Value or the Sum
+                Assured on Death under the base Policy (subject to the Clause above) plus return of sum of additional
+                Total Premiums Paid, loading for modal premium and Underwriting Extra Premium, that was received
+                towards increase the Sum Assured on Death under Voluntary Sum Assured Top-Up Benefit Option. The
+                increased Sum Assured on Death due to Voluntary Sum Assured Top-Up Benefit Option will not be paid as
+                suicide happened within 12 months of increase in Sum Assured on Death.<br>
+            </td>
+            <td>Clause 6 of Part F</td>
+        </tr>
+        <tr>
+            <td>10</td>
+            <td>Waiting /lien Period, if any</td>
+            <td>90 days, in case, the Policy is sourced through Point of Sale and 1 year in case of Voluntary Sum Assured Top Up starting from the Date of Commencement of Risk or Date of Issuance of Policy or date of Revival, whichever is later.
+            </td>
+            <td>Clause 68 of Part B </td>
+        </tr>
+        <tr>
+            <td>11</td>
+            <td>Grace period</td>
+            <td><strong>Number of Days :</strong>
+                <span th:text="${gracePeriod}"></span><br>
+            </td>
+            <td>Clause 18 of Part B</td>
+        </tr>
+        <tr>
+            <td>12</td>
+            <td>Free Look Period</td>
+            <td><strong>Number of days:</strong> 30 days beginning from the date of receipt of the Policy</td>
+            <td>Clause 6 of Part D</td>
+        </tr>
+        <tr>
+            <td rowspan="10">13</td>
+            <td rowspan="10">Lapse, paid-up and revival of the Policy</td>
+            <td>
+                <span>&#8226;</span> <strong>Grace Period:</strong><br><br>
+                <span>&#10146;</span> The Premium is due and payable by the due date specified in the Schedule. If the
+                Premium is not paid by the due date, You may pay the same during the Grace Period without any penalty
+                or late fee.<br><br>
+                <span>&#10146;</span> The insurance coverage continues during the Grace Period. However, if the overdue
+                Premium is not paid even in the Grace Period and the Life Insured dies, then, We will pay the death
+                benefit after deducting the unpaid premium (if any) till date of death.<br>
+            </td>
+            <td>Clause 3 of Part C</td>
+        </tr>
+        <tr>
+            <td>
+                <span>&#8226;</span> <strong>Lapse Period</strong><br><br>
+                <span>&#10146;</span> A Policy which has not acquired Surrender Value /Early Exit Value and where the due Premium has not been received as per Clause 1.1 of Part D of the Policy, if you have not opted for Return of Premium Option and as per Clause 1.2 and 1.3 of Part D of the Policy, if You have opted for Return of Premium Option. <br><br>
+            </td>
+            <td>Clause 24 of Part B</td>
+        </tr>
+        <tr>
+            <td>
+                <span>&#8226;</span> <strong> Policy Renewal </strong><br><br>
+                <span>&#10146;</span> The Premium is due and payable by the due date as specified
+                in the Policy Schedule. The Policy will be renewed only upon
+                receipt of due Premium. <br><br>
+            </td>
+            <td>Policy
+                Schedule</td>
+        </tr>
+        <tr>
+            <td>
+                <span>&#8226;</span> <strong> Revival Period:</strong><br><br>
+                <span>&#10146;</span> It means the period of five consecutive complete years from the date of first
+                unpaid Premium<br><br>
+            </td>
+            <td>Clause 50 of Part B</td>
+        </tr>
+        <tr>
+            <td>
+                <span>&#8226;</span> <strong>Reduced Paid Up Benefits:</strong><br><br>
+                <span>&#10146;</span> If Return of Premium Option was chosen by You at the Date of Inception of Policy
+                and Policy has acquired a Surrender Value as specified under Clause 1 of Part D of the Policy, then, in
+                the event of non-payment of the due Premiums by You to Us, on the expiry of the Grace Period, this
+                Policy will not become a Lapsed Policy and by default will continue under Reduced Paid-Up Mode unless
+                revived. A Reduced Paid-Up Policy can be revived within a Revival Period, subject to conditions,
+                for revival of Lapsed Policy mentioned in Part D. If a Reduced Paid-Up Mode Policy is not revived
+                within Revival Period, then the Policy cannot be revived and the Policy will continue as Reduced
+                Paid-Up Policy for the remaining Policy Term. Policy under the Reduced Paid-Up Mode will be free from
+                all liabilities of payment of future Premiums to Us. If this Policy is under Reduced Paid-Up Mode,
+                then, the benefits payable shall be as follows:<br>
+            </td>
+            <td>Clause 1.8 of Part C</td>
+        </tr>
+        <tr>
+            <td>
+                <span>&#10146;</span> <strong>Reduced Paid -Up Death Benefit:</strong><br>
+                <strong>(i)</strong> In the event of the death of the Life Insured during Policy Term when the Policy
+                is under Reduced Paid-Up Mode, the death benefit, in case of Level Cover Option, will be reduced as
+                per the formula given under Clause 1.8.1 (i) of Part C of the Policy.<br>
+                <strong>(ii)</strong> In case of the Increasing Cover Option, the future increase in Reduced Paid-Up
+                death benefit post the Policy becomes Reduced Paid-Up will also get reduced as per the proportionate
+                Premiums formula given under Clause 1.8.1 (b) of Part C of the Policy.<br>
+                <strong>iii)</strong> It is clarified that for the purpose of above calculations Total Premium Paid
+                towards base death benefit would only be considered.<br>
+            </td>
+            <td>Clause 1.8.1 of Part C</td>
+        </tr>
+        <tr>
+            <td>
+                <span>&#10146;</span> <strong>Reduced Paid -Up Terminal Illness Benefit:</strong>In the event the Life
+                Insured is Diagnosed with a Terminal Illness during Policy
+                Term, when the Policy is under Reduced Paid-Up Mode, a benefit equal to the Reduced Paid-Up Mode death
+                benefit as noted in Clause 1.8.1 of Part C of the Policy, subject to a maximum limit of Rs.1 Crore
+                shall be payable. Upon payment of Reduced Paid-Up Terminal Illness Benefit, the Reduced Paid-Up Death
+                Benefit will be reduced by the amount of the benefit paid.<br>
+            </td>
+            <td>Clause 1.8.2 of Part C</td>
+        </tr>
+        <tr>
+            <td>
+                <span>&#10146;</span> <strong>Reduced Paid -Up Maturity Benefit:</strong>Under the Return of Premium
+                Option, if the Life Insured has survived until the Maturity Date, 100% of the Sum of Total Premiums
+                Paid, Underwriting Extra Premium and loadings for modal premiums, if any (corresponding to base Policy
+                cover, Premium Break Option and Voluntary Sum Assured Top-Up Option) will be paid at end of Policy Term.
+                Please note that any additional Premium charged for optional benefits (Accidental Death benefit cover
+                option and Joint Life Cover) or Riders, will not be returned back at maturity under this option.<br>
+            </td>
+            <td>Clause 1.8.3 of Part C</td>
+        </tr>
+        <tr>
+            <td>
+                <span>&#10146;</span> <strong>Reduced Paid -Up Surrender Value:</strong>The Surrender Value of Reduced
+                Paid-Up Policy will be as calculated in accordance with Clause 1 of Part D of the Policy
+                (Surrender / Early Exit Value). The Policy which has acquired the Surrender Value shall lapse if the
+                reduced paid up sum insured under the Policy is less than Rs. 2500/-. In case the reduced paid up sum
+                assured of the Policy is less than Rs. 2500/, the Policy may be terminated after expiry of Revival
+                Period by paying the applicable Surrender Value.<br>
+            </td>
+            <td>Clause 1.8.4 of Part C</td>
+        </tr>
+        <tr>
+            <td>
+                <span>&#10146;</span> No benefit will be paid towards Accidental Death benefit cover or Secondary Life (in case Joint life
+                Cover Option has been opted) once the Policy has moved into Reduced Paid Up mode.<br>
+            </td>
+            <td>Clause 1.8.5 of Part C</td>
+        </tr>
+        <tr>
+            <td>14</td>
+            <td>Policy Loan, if applicable</td>
+            <td>
+                <span>&#8226;</span> <strong>Brief description</strong><br><br>
+                <span>&#10146;</span> If You have opted for Return of Premium Option and once this Policy has acquired the
+                Surrender Value, then, You will be eligible for grant of loans from Us.<br><br>
+                <span>&#10146;</span> The minimum amount of loan which can be granted by Us under this Policy is
+                INR 10,000 (Rupees Ten Thousand). In no event shall the maximum amount of loan which can be granted
+                under this Policy during the Policy Term exceed 75% (Seventy-Five percent) of the Surrender Value
+                payable under this Policy, subject to such terms and conditions as may be determined by Us
+                from time to time.<br><br>
+                <span>&#10146;</span> Upon grant of a loan under this Policy, this Policy shall automatically be assigned
+                in Our favour, till the time the entire loan amount including interest, any fees or dues towards such
+                loan has been repaid to Us. On repayment of the entire loan and accumulated interest to Us, if any,
+                this Policy will be reassigned to You.<br><br>
+                <span>&#10146;</span> If You have obtained a loan under this Policy, then,You are required to pay
+                interest on such loan. The interest on the loan will be compounded and applied annually on the Policy
+                Anniversary at the rates as prescribed by Us at the time of taking the loan. <br><br>
+                <span>&#10146;</span> The loan interest rate shall be equal to applicable 'RBI Bank Rate' plus 3.0%.
+                The current loan interest rate is 9.75% p.a. compounded annually and is based on 'RBI Bank Rate' of
+                6.75% p.a. prevailing as at 31st March 2024.  The 'RBI Bank Rate' for the financial year ending
+                31st March (every year) will be considered for determining the loan interest rate and the same shall
+                be made effective w.e.f. 01st July every year. The loan interest rate is revised only if the
+                'RBI Bank Rate' changes by 1% or more from the 'RBI Bank Rate' used to determine the prevailing loan
+                interest rate (reviewed on every 31st March). <br><br>
+                <span>&#10146;</span> For Reduced Paid Up Mode policies, if the outstanding loan amount granted to
+                You and accumulated interest on such loan exceed the Surrender Value, the Policy will terminate. In
+                case outstanding loan amount including accumulated interest on such loan exceeds 95% of the Surrender
+                Value or the remaining Policy Term is 6 months (whichever is earlier), We will send You a communication
+                for repayment of loan along with the accrued interest.<br><br>
+                <span>&#10146;</span> If You have not opted for Return of Premium Option, You are not entitled to any
+                loans under this Policy.<br>
+
+            </td>
+            <td>Clause 2 of Part D</td>
+        </tr>
+        <tr>
+            <td rowspan="2">15</td>
+            <td rowspan="2">Claims/Claims Procedure</td>
+            <td>
+                <span>&#8226;</span><strong>Turn Around Time (TAT) for claims settlement: Please refer to Annexure -B for details</strong><br><br>
+                <span>&#8226;</span> <strong> Brief procedure:</strong><br><br>
+                Notice of Claim - All cases of death must be notified immediately to us in writing. However, We may
+                condone delay on merit for delayed claims where the reason for delay is proved to be for reasons beyond
+                the control of the Claimant.<br><br>
+                <span>&#10146;</span> Please note that all death claims will be payable to the nominee/legal heir of the
+                Policyholder.<br><br>
+                <span>&#10146;</span> Claim forms as required by us must be completed and furnished to us, at the
+                Claimant's expense, within 90 days after the date the insured event happens, unless specified otherwise.
+                A list of primary claim documents listing the normally required documents is attached to the Policy.
+                Submission of the listed documents, forms or other proof, however, shall not be construed as an
+                admission of liabilities by the Company. We reserve the right to require any additional proof and
+                documents in support of the claim.<br><br>
+                <span>&#8226;</span> <strong>Helpline number:</strong><br><br>
+                1860-120-5577 (Call charges apply) or 0124-4219090<br><br>
+                <span>&#8226;</span> <strong>Contact Details of the Insurer:</strong><br><br>
+                Axis Max Life Insurance Company Limited, Plot No. 90C, Udyog Vihar, Sector 18,
+                Gurugram, 122015, Haryana, India. Website - <a href="https://www.axismaxlife.com" target="_blank">www.axismaxlife.com</a><br><br>
+                <span>&#8226;</span> Link for downloading claim form and list of documents required including
+                bank account details:<br><br>
+                <span>&#10146;</span> <a href="https://www.axismaxlife.com/downloads" target="_blank">https://www.axismaxlife.com/
+                <wbr>
+                downloads</a><br><br>
+                We will require the following documents in case of claim under this Policy regarding the death of the
+                Life Insured:<br><br>
+                <span>&#8226;</span> claimant's statement in the prescribed form (death claim application form -form A);<br>
+                <span>&#8226;</span> original Policy document;<br>
+                <span>&#8226;</span> a copy of police complaint/ first information report (in the case of death by accident or unnatural
+                death or suicidal death of the Life Insured);<br>
+                <span>&#8226;</span> All medical/ hospital records (including diagnostic records) in case of
+                hospitalisation;<br>
+                <span>&#8226;</span> a copy of duly certified post mortem report, autopsy/viscera report and a copy of
+                the final police investigation report /charge sheet (in the case of death by accident or unnatural
+                death or suicidal death of the Life Insured);<br>
+                <span>&#8226;</span>  original/ attested copy of death certificate issued by the local/municipal
+                authority (only in the case of death of the Life Insured); <br>
+                <span>&#8226;</span> discharge summary / indoor case papers in case death happened due to medical
+                reasons in a hospital; <br>
+                <span>&#8226;</span> medical booklet / CGHS card details in case of defence and central government
+                personnel;<br>
+                <span>&#8226;</span> body transfer certificate / embassy documents / postmortem report whichever
+                applicable in case of death in foreign country;<br>
+                <span>&#8226;</span> complete passport copy in case of death in foreign country;<br>
+                <span>&#8226;</span> a self-attested copy of identity proof of the Claimant including Nominee(s)
+                bearing their photographs and signatures (only in the case of the death of the Life Insured);<br>
+                <span>&#8226;</span> other life / health insurance details with claim history details;<br>
+                <span>&#8226;</span> employer certificate with complete leave records (Form E);<br>
+                <span>&#8226;</span> ITR for last 3 years / GST certificate in case of self-employed;<br>
+                <span>&#8226;</span> in case of a medical/natural death of the Life Insured, the attending physician's
+                statement (Form C) and the medical records
+                (admission notes, discharge/death summary, test reports, etc.);<br>
+                <span>&#8226;</span> NEFT mandate form attested by bank authorities <br>
+                <span>&#8226;</span> Bank details of Claimant;<br>
+                <span>&#8226;</span> any other document or information required by Us for assessing and approving the
+                claim request.<br>
+            </td>
+            <td><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+                <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>Clause 3 of Part F</td>
+        </tr>
+        <tr>
+            <td>
+                <strong><span>&#8226;</span> In case of claim with towards Terminal Illness:</strong><br><br>
+                <span>&#8226;</span> Claimant's statement in the prescribed form;<br>
+                <span>&#8226;</span> a copy of police complaint/ first information report (wherever applicable);<br>
+                <span>&#8226;</span> attending physician's statement;<br>
+                <span>&#8226;</span> certificate by a Medical Practitioner confirming Diagnosis of Terminal Illness
+                of the Life Insured/ Secondary Life;<br>
+                <span>&#8226;</span> All medical/ hospital records (including diagnostic records) pertaining to Terminal
+                Illness and treatment.<br>
+                <span>&#8226;</span> a self-attested copy of identity proof of the Claimant including Nominee(s),
+                if any, bearing their photographs and signatures; and<br>
+                <span>&#8226;</span> any other documents/information required by Us for assessing and approving
+                the claim request.<br><br>
+                <strong><span>&#8226;</span> In case of Maturity claim:</strong><br><br>
+                <span>&#8226;</span> NEFT Form (if not provided earlier)<br>
+                <span>&#8226;</span> a cancelled cheque or copy of passbook with pre-printed name and bank account
+                number, for payout through NEFT (if not provided earlier)<br>
+                <span>&#8226;</span> a self-attested photo ID proof<br>
+            </td>
+            <td>Clause 3.1.20 of Part F</td>
+        </tr>
+        <tr>
+            <td>16</td>
+            <td>Policy Servicing</td>
+            <td>
+                <span>&#8226;</span> <strong>Turn Around Time (TAT) : Please refer to Annexure-B for
+                details </strong><br><br>
+                <span>&#8226;</span> <strong>Helpline number:</strong><br><br>
+                <span>&#10146;</span> 1860-120-5577 (Call charges apply) or 0124-4219090<br><br>
+                <span>&#8226;</span> <strong>Contact Details of the Insurer:</strong><br><br>
+                <span>&#10146;</span> Axis Max Life Insurance Company Limited, Plot No. 90C, Udyog Vihar, Sector 18,
+                Gurugram, 122015, Haryana, India. Website - <a href="https://www.axismaxlife.com" target="_blank">www.axismaxlife.com</a><br><br>
+                <span>&#8226;</span> <strong>Link for downloading applicable forms and list of documents required
+                including bank account details:</strong><br><br>
+                <span>&#10146;</span> <a href="https://www.axismaxlife.com/downloads" target="_blank">https://www.axismaxlife.com/
+                <wbr>
+                downloads</a><br><br>
+                <span>&#10146;</span> We will require the following documents in case of policy servicing under this
+                Policy regarding the death of the Life Insured:<br><br>
+                <span>&#8226;</span> Application in the prescribed form;<br>
+                <span>&#8226;</span> original Policy document (if any);<br>
+                <span>&#8226;</span> identity proofs (such as copy of Passport, PAN card, Voter identity card, Aadhar
+                (UID) card, etc.) of the Policyholder or Life Insured (bearing their photographs and signatures);<br>
+                <span>&#8226;</span> NEFT mandate form attested by bank authorities, along with a cancelled cheque or bank account passbook;<br>
+                <span>&#8226;</span> any other documents or information required by Us for assessing and approving the
+                claim request;<br>
+            </td>
+            <td></td>
+        </tr>
+        <tr>
+            <td rowspan="2">17</td>
+            <td rowspan="2">Grievances / Complaints</td>
+            <td>
+                <strong><span>&#8226;</span> Contact Details of Grievance Redressal Officer of the insurer:</strong><br>
+                <span>&#8226;</span> Grievance Redressal Officer, Axis Max Life Insurance Limited, Plot No. 90C,
+                Udyog Vihar, Sector 18, Gurugram, 122015, Haryana, India<br><br>
+                <strong><span>&#8226;</span> Link for registering the grievance with the insurer's
+                    portal</strong><br><br>
+                <span>&#10146;</span> <a href="https://www.axismaxlife.com/customer-service/grievance-redressal"
+                                         target="_blank">https://www.axismaxlife.com/customer-service/grievance-redressal</a><br><br>
+            </td>
+            <td>Clause 1 of Part G</td>
+        </tr>
+        <tr>
+            <td>
+                <span>&#8226;</span> <strong>Contact details of Ombudsman:</strong><br><br>
+                <span>&#10146;</span> Refer Annexure A for the Ombudsman details
+            </td>
+            <td>As per Annexure A</td>
+        </tr>
+        </tbody>
+    </table>
+    <div class="declaration">
+        <p><u>Declaration by the Policyholder</u></p>
+        <p>I have read the above and confirm having noted the details.</p>
+
+        <div class="signature-section">
+            <div class="left">
+                <p>Place:<span
+                        style="text-align: center;min-width: 100px;border-bottom-color: #000;border-bottom-style: solid;border-bottom-width: 1px;display: inline-block;padding: 0 18px;font-weight: bold;text-transform:uppercase;"><span
+                        th:text="${place}"></span></span></p>
+                <p>Date:<span
+                        style="text-align: center;min-width: 100px;border-bottom-color: #000;border-bottom-style: solid;border-bottom-width: 1px;display: inline-block;padding: 0 18px;font-weight: bold;text-transform:uppercase;"><span
+                        th:text="${date}"></span></span></p>
+            </div>
+            <div class="signature" style="text-align: right; margin-top: -45px;">
+                <p>(Signature of the Policyholder)</p>
+            </div>
+        </div>
+        <br>
+        <div class="note">
+            <p><strong>Note:</strong></p>
+            <p>i. For the product related documents including the Customer Information sheet please refer to the <a href="https://www.axismaxlife.com/term-insurance-plans/smart-secure-plus-plan" target="_blank">https://www.axismaxlife.com/term-insurance-plans/smart-secure-plus-plan</a>. </p>
+            <p>ii. In case of any conflict, the terms and conditions mentioned in the Policy document shall prevail.</p>
+            <p>iii. Sum Assured on Death is subject to underwriting, for actual Sum Assured details & updated UIN number (in case of modification), please refer to the Policy document.</p>
+            <p> iv. In the event of any conflict or discrepancy between any translated version and the English language version of this CIS, the English language version of this CIS shall prevail.  </p>
+
+        </div>
+    </div>
+</div>
+</body>

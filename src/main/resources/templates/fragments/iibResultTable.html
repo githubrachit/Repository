@@ -1,0 +1,44 @@
+<tr th:fragment="iibResultTable (listVariable, iibFormAndPartyType, header)" th:if="${listVariable != null and !#lists.isEmpty(listVariable) and iibFormAndPartyType != ''}">
+    <td colspan="3">
+        <table style="width: 100%; margin-top: 0px; border-collapse: collapse;">
+            <tr>
+                <td height="0">&nbsp;</td>
+            </tr>
+            <tr>
+                <td th:if="${iibFormAndPartyType == 'self' or ((iibFormAndPartyType == 'JOINT' or iibFormAndPartyType == 'JOINT_PROPOSER') and header == '1')}" style="color: #282828; padding: 5px; font-size: 14px; font-family: arial; font-weight: 600; text-align: center;">IIB Result - Proposer</td>
+                <td th:if="${iibFormAndPartyType == 'dependent' or ((iibFormAndPartyType == 'JOINT' or iibFormAndPartyType == 'JOINT_INSURED') and header == '2')}" style="color: #282828; padding: 5px; font-size: 14px; font-family: arial; font-weight: 600; text-align: center;">IIB Result - Insured</td>
+                <td th:if="${iibFormAndPartyType == 'businessInsurance' and header == '1'}" style="color: #282828; padding: 5px; font-size: 14px; font-family: arial; font-weight: 600; text-align: center;">IIB Result - Business Insurance</td>
+            </tr>
+            <tr>
+                <td>
+                    <table border="1" style="margin: 0 auto; width: 100%; border-collapse: collapse;" cellspacing="0">
+                        <thead>
+                        <tr>
+                            <th style="padding: 5px; font-size: 11px; font-family: arial; color: #282828; text-align: center; border: 1px solid #888;">Policy No.</th>
+                            <th style="padding: 5px; font-size: 11px; font-family: arial; color: #282828; text-align: center; border: 1px solid #888;">Insurer</th>
+                            <th style="padding: 5px; font-size: 11px; font-family: arial; color: #282828; text-align: center; border: 1px solid #888;">Status</th>
+                            <th style="padding: 5px; font-size: 11px; font-family: arial; color: #282828; text-align: center; border: 1px solid #888;">Sum Assured</th>
+                            <th style="padding: 5px; font-size: 11px; font-family: arial; color: #282828; text-align: center; border: 1px solid #888;">Policy Type</th>
+                            <th style="padding: 5px; font-size: 11px; font-family: arial; color: #282828; text-align: center; border: 1px solid #888;">Policy Belongs to Customer</th>
+                            <th style="padding: 5px; font-size: 11px; font-family: arial; color: #282828; text-align: center; border: 1px solid #888;">Comments</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr th:each="looper, iterStat : ${listVariable}" th:if="${iterStat.index < 20}">
+                            <td style="padding: 5px; font-size: 10px; font-family: arial; text-align: center; border: 1px solid #888;" th:text="${looper.questDBNo} ?: ''"></td>
+                            <td style="padding: 5px; font-size: 10px; font-family: arial; text-align: center; border: 1px solid #888;" th:text="${looper.questCompanyNumber} ?: ''"></td>
+                            <td style="padding: 5px; font-size: 10px; font-family: arial; text-align: center; border: 1px solid #888;" th:text="${looper.questPolicyStatus} ?: ''"></td>
+                            <td style="padding: 5px; font-size: 10px; font-family: arial; text-align: center; border: 1px solid #888;" th:text="${looper.questSumAssured} ?: ''"></td>
+                            <td style="padding: 5px; font-size: 10px; font-family: arial; text-align: center; border: 1px solid #888;" th:text="${looper.productType} ?: ''"></td>
+                            <td style="padding: 5px; font-size: 10px; font-family: arial; text-align: center; border: 1px solid #888;" th:text="${looper.policyBelongsToUser} ?: ''"></td>
+                            <td style="padding: 5px; font-size: 10px; font-family: arial; text-align: center; border: 1px solid #888;">
+                                <span th:if="${looper.policyBelongsToUser == 'Yes'}" th:text="${looper.rejectDesc} ?: ''"></span>
+                            </td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </td>
+            </tr>
+        </table>
+    </td>
+</tr>
